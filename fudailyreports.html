@@ -1,0 +1,2635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        /* Loading Spinner */
+        .spinner{margin:0;width:70px;height:18px;margin:-35px 0 0 -9px;position:absolute;top:50%;left:50%;text-align:center}.spinner > div{width:18px;height:18px;background-color:#333;border-radius:100%;display:inline-block;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both}.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}@-webkit-keyframes bouncedelay{0%,80%,100%{-webkit-transform:scale(0.0)}40%{-webkit-transform:scale(1.0)}}@keyframes bouncedelay{0%,80%,100%{transform:scale(0.0);-webkit-transform:scale(0.0)}40%{transform:scale(1.0);-webkit-transform:scale(1.0)}}
+    </style>
+
+
+    <meta charset="UTF-8">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<title> 360 Clinic | Admin Panel </title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Favicons -->
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/icons/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/icons/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/icons/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/images/icons/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="assets/images/icons/favicon.png">
+
+
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+
+
+<!-- HELPERS -->
+
+<link rel="stylesheet" type="text/css" href="assets/helpers/animate.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/backgrounds.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/boilerplate.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/border-radius.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/grid.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/page-transitions.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/spacing.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/typography.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/utils.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/colors.css">
+
+<!-- ELEMENTS -->
+
+<link rel="stylesheet" type="text/css" href="assets/elements/badges.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/buttons.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/content-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/dashboard-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/forms.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/images.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/info-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/invoice.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/loading-indicators.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/menus.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/panel-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/response-messages.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/responsive-tables.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/ribbon.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/social-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/tables.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/tile-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/timeline.css">
+
+<!-- ICONS -->
+
+<link rel="stylesheet" type="text/css" href="assets/icons/fontawesome/fontawesome.css">
+<link rel="stylesheet" type="text/css" href="assets/icons/linecons/linecons.css">
+<link rel="stylesheet" type="text/css" href="assets/icons/spinnericon/spinnericon.css">
+
+
+<!-- WIDGETS -->
+
+<link rel="stylesheet" type="text/css" href="assets/widgets/accordion-ui/accordion.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/calendar/calendar.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/carousel/carousel.css">
+
+<link rel="stylesheet" type="text/css" href="assets/widgets/charts/justgage/justgage.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/charts/morris/morris.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/charts/piegage/piegage.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/charts/xcharts/xcharts.css">
+
+<link rel="stylesheet" type="text/css" href="assets/widgets/chosen/chosen.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/colorpicker/colorpicker.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/datatable/datatable.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/datepicker/datepicker.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/datepicker-ui/datepicker.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/daterangepicker/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/dialog/dialog.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/dropdown/dropdown.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/dropzone/dropzone.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/file-input/fileinput.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch-alt.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/ionrangeslider/ionrangeslider.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/jcrop/jcrop.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/jgrowl-notifications/jgrowl.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/loading-bar/loadingbar.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/maps/vector-maps/vectormaps.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/markdown/markdown.css">
+ 
+<link rel="stylesheet" type="text/css" href="assets/widgets/multi-select/multiselect.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/multi-upload/fileupload.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/nestable/nestable.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/noty-notifications/noty.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/popover/popover.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/pretty-photo/prettyphoto.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/progressbar/progressbar.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/range-slider/rangeslider.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/slidebars/slidebars.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/slider-ui/slider.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/summernote-wysiwyg/summernote-wysiwyg.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/tabs-ui/tabs.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/theme-switcher/themeswitcher.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/timepicker/timepicker.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/tocify/tocify.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/tooltip/tooltip.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/touchspin/touchspin.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/uniform/uniform.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/wizard/wizard.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/xeditable/xeditable.css">
+
+<!-- SNIPPETS -->
+
+<link rel="stylesheet" type="text/css" href="assets/snippets/chat.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/files-box.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/login-box.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/notification-box.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/progress-box.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/todo.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/user-profile.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/mobile-navigation.css">
+
+<!-- APPLICATIONS -->
+
+<link rel="stylesheet" type="text/css" href="assets/applications/mailbox.css">
+
+<!-- Admin theme -->
+
+<link rel="stylesheet" type="text/css" href="assets/themes/admin/layout.css">
+<link rel="stylesheet" type="text/css" href="assets/themes/admin/color-schemes/default.css">
+
+<!-- Components theme -->
+
+<link rel="stylesheet" type="text/css" href="assets/themes/components/default.css">
+<link rel="stylesheet" type="text/css" href="assets/themes/components/border-radius.css">
+
+<!-- Admin responsive -->
+
+<link rel="stylesheet" type="text/css" href="assets/helpers/responsive-elements.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/admin-responsive.css">
+
+    <!-- JS Core -->
+
+    <script type="text/javascript" src="assets/js-core/jquery-core.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-core.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-widget.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-mouse.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-position.js"></script>
+    <!--<script type="text/javascript" src="assets/js-core/transition.js"></script>-->
+    <script type="text/javascript" src="assets/js-core/modernizr.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-cookie.js"></script>
+
+
+
+
+
+    <script type="text/javascript">
+        $(window).load(function(){
+            setTimeout(function() {
+                $('#loading').fadeOut( 400, "linear" );
+            }, 300);
+        });
+    </script>
+
+
+
+</head>
+
+
+    <body>
+    <div id="sb-site">
+    <div id="loading">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div id="page-wrapper">
+        <div id="page-header" class="bg-gradient-9">
+            <div id="mobile-navigation">
+                <button id="nav-toggle" class="collapsed" data-toggle="collapse" data-target="#page-sidebar"><span></span></button>
+                <a href="index.html" class="logo-content-small" title="MonarchUI"></a>
+            </div>
+            <div id="header-logo" class="logo-bg">
+                <a href="index.html" class="" >
+                    <img src="assets/image-resources/logo.png" alt="" class="logoimg"> 
+                    <br>
+                    <label for="">SIPMD</label>
+                </a>
+                <a href="index.html" class="logo-content-small" title="MonarchUI">
+                    <img src="assets/image-resources/logo.png" alt="" class="logoimg"> 
+                    <br>
+                    <label for="">SIPMD</label>
+                </a>
+                <a id="close-sidebar" href="#" title="Close sidebar">
+                    <i class="glyph-icon icon-angle-left"></i>
+                </a>
+            </div>
+            <div id="header-nav-left">
+                <label for=""class="text-white networklabel" ><h1 class="font-weight-bold">Julie's Dashboard</h1></label>
+            </div><!-- #header-nav-left -->
+        
+            <div id="header-nav-right">
+                <div class="dropdown" id="dashnav-btn">
+                    <a href="#" data-toggle="dropdown" data-placement="bottom" class="popover-button-header tooltip-button" title="Dashboard Quick Menu">
+                        <i class="glyph-icon icon-linecons-cog"></i>
+                    </a>
+                    <div class="dropdown-menu float-right">
+                        <div class="box-sm">
+                            <div class="pad5T pad5B pad10L pad10R dashboard-buttons clearfix">
+                                <a href="networks.html" class="btn vertical-button remove-border btn-blue-alt" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-sitemap opacity-80 font-size-20"></i>
+                                    </span>
+                                    Network
+                                </a>
+                                <a href="patients.html" class="btn vertical-button remove-border btn-success" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-users opacity-80 font-size-20"></i>
+                                    </span>
+                                    Patients
+                                </a>
+                                <a href="editprofile.html" class="btn vertical-button remove-border btn-azure" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-user opacity-80 font-size-20"></i>
+                                    </span>
+                                    Edit Profile
+                                </a>
+                                <a href="" class="btn vertical-button remove-border btn-primary" data-toggle="modal" data-target="#signModal">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-lock opacity-80 font-size-20"></i>
+                                    </span>
+                                    Upload Signature
+                                </a>
+                                <a href="" class="btn vertical-button remove-border btn-danger" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-sign-out opacity-80 font-size-20"></i>
+                                    </span>
+                                    Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="header-btn" id="logout-btn" href="lockscreen-3.html" title="Lockscreen page example">
+                    <i class="glyph-icon icon-linecons-lock"></i>
+                </a>
+            </div><!-- #header-nav-right -->
+        
+        </div>
+
+
+
+        <div id="page-sidebar">
+                <div class="scroll-sidebar">
+            
+                <ul id="sidebar-menu">
+                    <li class="header">
+                        <span>Administration</span>
+                    </li>
+                    <li>
+                        <a href="networks.html" title="Elements">
+                            <i class="glyph-icon icon-sitemap"></i>
+                            <span>Networks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" >
+                            <i class="glyph-icon icon-cog"></i>
+                            <span>Intake</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li><a href="locations.html" ><span>Testing Locations</span></a></li>
+                                <li><a href="products.html" ><span>Products</span></a></li>
+                                <li><a href="consents.html" ><span>Consents</span></a></li>
+                                <li><a href="paymenttypes.html" ><span>Payment Types</span></a></li>
+                                <li><a href="demo.html" ><span>Demo</span></a></li>
+                                <li><a href="questionnaire.html" ><span>Questionnaire</span></a></li>
+                                <li><a href="lab.html" ><span>Labs</span></a></li>
+                                <li><a href="emailconfirmation.html" ><span>Email Confirmation</span></a></li>
+                                <li><a href="resultDelivery.html" ><span>Result Delivery</span></a></li>
+                            </ul>
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+                    <!--<li>
+                        <a href="followUp.html" title="Elements">
+                            <i class="glyph-icon icon-clipboard"></i>
+                            <span>Follow Up</span>
+                        </a>
+                    </li>-->
+                    <li>
+                        <a href="" >
+                            <i class="glyph-icon icon-cog"></i>
+                            <span>Soap Notes</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li><a href="soapNotes.html" ><span>Soap Notes</span></a></li>
+                                <li><a href="questionnaireQuestion.html" ><span>Questionnaire Questions</span></a></li>
+                                <li><a href="physicalExam.html" ><span>Physical Exam</span></a></li>
+                                <li><a href="assessment.html" ><span>Assessment</span></a></li>
+                                <li><a href="planofCare.html" ><span>Plan of Care</span></a></li>
+                                <li><a href="cpt.html" ><span>CPT</span></a></li>
+                                <li><a href="icd.html" ><span>ICD</span></a></li>
+                                <li><a href="modifiers.html" ><span>Modifiers</span></a></li>
+                            </ul>
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-cogs"></i>
+                            <span>Settings</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                            <ul>
+                                <li><a href="users.html" ><span>Users</span></a></li>
+                                <li><a href="patientPortal.html" ><span>Patient Portal</span></a></li>
+                                <li><a href="roles.html" ><span>Roles</span></a></li>
+                                <li><a href="uploadHere.html" ><span>Upload Here</span></a></li>
+                                <li><a href="uploadhistory.html" ><span>Upload History</span></a></li>
+                                <li><a href="auditlog.html" ><span>Audit Log</span></a></li>
+                            </ul>
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-sign-out"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+        
+                    <li class="header"><span>Operations</span></li>
+                    <li>
+                        <a href="index.html" title="Admin Dashboard">
+                            <i class="glyph-icon icon-tachometer"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="patients.html" >
+                            <i class="glyph-icon icon-users"></i>
+                            <span>Patients</span>
+                            <span class="bs-badge badge-success">68</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-calendar"></i>
+                            <span>Check-In</span>
+                            <span class="bs-badge badge-info">53</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="onsiteactivation.html" >
+                                        <span class="font-weight-bold">Onsite Activation</span>
+                                        <span class="bs-badge badge-danger" >3</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="checkedIn.html" >
+                                        <span>Checked-In</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="missed.html" >
+                                        <span>Missed</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="cancelled.html" >
+                                        <span>Cancelled</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-calendar"></i>
+                            <span>Soap Note</span>
+                            <span class="bs-badge badge-info">53</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="clinicalassessment.html" >
+                                        <span>Clinical Assessment</span>
+                                        <span class="bs-badge badge-danger" >3</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <!--<li>
+                                    <a href="clinicianreview.html" >
+                                        <span>Clinical Review</span>
+                                        <span class="bs-badge badge-danger" >3</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>-->
+                                <li>
+                                    <a href="signedoff.html" >
+                                        <span>Signed Off</span>
+                                        <span class="bs-badge badge-danger" >3</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="subsignedoff.html" >
+                                        <span>Sup Signed Off</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="StandingOrder.html" >
+                                        <span>Standing Order</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-bitbucket"></i>
+                            <span>Result Delivery</span>
+                            <span class="bs-badge badge-yellow">33</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li><a href="kitassignment.html" ><span>Kit Assignment</span><span class="bs-badge badge-danger">5</span><span class="bs-badge badge-yellow">8</span></a></li>
+                                <li><a href="waitingQueue.html" ><span>Waiting Queue</span><span class="bs-badge badge-danger">5</span><span class="bs-badge badge-yellow">8</span></a></li>
+                                <li><a href="tobesent.html" ><span>To Be Sent</span><span class="bs-badge badge-danger">3</span><span class="bs-badge badge-yellow">3</span></a></li>
+                                <li><a href="waitingresults.html" ><span>Waiting Results</span><span class="bs-badge badge-yellow">23</span></a></li>
+                                <li><a href="pendingnotification.html" ><span>Pending Notification</span><span class="bs-badge badge-danger">3</span></a></li>
+                                <li><a href="retest.html" ><span>Re-Test</span></a></li>
+                                <li><a href="notdetected1.html" ><span>Not Detected</span></a></li>
+                                <li><a href="detected.html" ><span>Detected</span></a></li>
+                            </ul>
+                
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-phone"></i>
+                            <span>Telemedicine</span>
+                            <span class="bs-badge badge-yellow">33</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li><a href="telemedicineTobeseen.html" ><span>To Be Seen</span></a></li>
+                                <li><a href="telemedicineSeen.html" ><span>Seen</span></a></li>
+                            </ul>
+                
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+                    
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-warning"></i>
+                            <span>Follow Up</span>
+                            <span class="bs-badge badge-yellow">33</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li><a href="fuscheduled.html" ><span>FU Scheduled</span></a></li>
+                                <li><a href="fuMiss.html" ><span>FU Missed</span></a></li>
+                                <li><a href="fucancelled.html" ><span>FU Cancelled</span></a></li>
+                                <li><a href="fusignedoff.html" ><span>FU Signed off</span></a></li>
+                                <li><a href="fusupsignedoff.html" ><span>FU Sup Signed off</span></a></li>
+                            </ul>
+                
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-money"></i>
+                            <span>Billing</span>
+                            <span class="bs-badge badge-yellow">33</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li><a href="readytobill.html" ><span>Ready To Bill</span></a></li>
+                                <li><a href="missinginformation.html" ><span>Missing Information</span></a></li>
+                                <li><a href="cleanandclear.html" ><span>Clean & Clear</span></a></li>
+                                <li><a href="submittedclaims.html" ><span>Submitted Claims</span></a></li>
+                                <!--<li><a href="followupneeded.html" ><span>Follow up Needed</span></a></li>
+                                <li><a href="patientresponsibility.html" ><span>Patient Responsibility</span></a></li>
+                                <li><a href="denied.html" ><span>Denied</span></a></li>
+                                <li><a href="paid.html" ><span>Paid</span></a></li>-->
+                            </ul>
+                
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+
+                    <li class="header"><span>Reports</span></li>  
+                    <li>
+                        <a href="" title="">
+                            <i class="glyph-icon icon-sitemap"></i>
+                            <span>Network</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="networksdailyreports.html" >
+                                        <span class="">Daily Reports</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="networksdailypaymentreports.html" >
+                                        <span class="">Daily Payment Report </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="netpatients.html">
+                                        <span>Patients</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointmentsdailylocationtotal.html" >
+                                        <span class="">Daily Location Total</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointments12monthlocationtotal.html" >
+                                        <span class="">12 Month Location Total</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <i class="glyph-icon icon-calendar"></i>
+                            <span>Appointments</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="appointmentsdailyreports.html" >
+                                        <span class="">Daily Reports</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointmentsdailyphysiciantotal.html" >
+                                        <span class="">Daily Physician Total</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointments12monthphysiciantotal.html" >
+                                        <span class="">12 Month Physician Total</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointmentsdailyoutstandingcharts.html" >
+                                        <span class="">Daily Outstanding Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointments12monthoutstandingcharts.html" >
+                                        <span class="">12 Month Outstanding Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointmentsdailymissingcharts.html" >
+                                        <span class="">Daily Missing Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointments12monthmissingcharts.html" >
+                                        <span class="">12 Month Missing Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointmentsstagesum.html" >
+                                        <span class="">Stage Summary</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <i class="glyph-icon icon-bitbucket"></i>
+                            <span>Result Delivery</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="rddailyreports.html" >
+                                        <span class="">Daily Reports</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rddailydeliverytotalproducts.html" >
+                                        <span class="">Daily Delivery Total/Product</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rd12monthdeliverytotalproducts.html" >
+                                        <span class="">12 Month Delivery Total/Product</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rddailydeliverytotalresults.html" >
+                                        <span class="">Daily Delivery Total/Result</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rd12monthdeliverytotalresults.html" >
+                                        <span class="">12 Month Delivery Total/Result</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rdstagesum.html" >
+                                        <span class="">Stage Summary</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <i class="glyph-icon icon-warning"></i>
+                            <span>Follow up</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="fudailyreports.html" >
+                                        <span class="">Daily Reports</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followupdailyphysiciantotal.html" >
+                                        <span class="">Daily Physician Total</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followup12monthphysiciantotal.html" >
+                                        <span class="">12 Month Physician Total</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followupdailyoutstandingcharts.html" >
+                                        <span class="">Daily Outstanding Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followup12monthoutstandingcharts.html" >
+                                        <span class="">12 Month Outstanding Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followupdailymissingcharts.html" >
+                                        <span class="">Daily Missing Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followup12monthmissingcharts.html" >
+                                        <span class="">12 Month Missing Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="fustagesum.html" >
+                                        <span class="">Stage Summary</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <i class="glyph-icon icon-money"></i>
+                            <span>Billing</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="bsdailyreports.html" >
+                                        <span class="">Daily Reports</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="bsstagesum.html" >
+                                        <span class="">Stage Summary</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div><!-- .sidebar-submenu -->
+                    </li>
+
+                </ul><!-- #sidebar-menu -->
+            
+            
+                </div>
+        </div>
+
+
+        
+        <div id="page-content-wrapper">
+            <div id="page-content">
+
+                    <div class="container">
+
+
+<!-- Data tables -->
+
+<!--<link rel="stylesheet" type="text/css" href="assets/widgets/datatable/datatable.css">-->
+<script type="text/javascript" src="assets/widgets/datatable/datatable.js"></script>
+<script type="text/javascript" src="assets/widgets/datatable/datatable-bootstrap.js"></script>
+<script type="text/javascript" src="assets/widgets/datatable/datatable-responsive.js"></script>
+<script type="text/javascript" src="assets/widgets/datatable/datatable-tabletools.js"></script>
+
+<script type="text/javascript">
+
+    /* Datatables responsive */
+
+    $(document).ready(function() {
+        $('#datatable-responsive').DataTable( {
+            responsive: true
+            
+        } );
+    } );
+
+    $(document).ready(function() {
+        $('.dataTables_filter input').attr("placeholder", "Search...");
+    });
+
+</script>
+
+<div id="page-title">
+    
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-xl-4 col-md-4">
+        <legend class="font-weight-bold">Daily Reports</legend>
+    </div>
+
+    <div class="col-xl-4 col-md-4">
+    </div>
+
+      <div class="col-xl-4 col-md-4 text-right" style="padding: 5px;">
+          <div id="daterangepicker-custom" class="btn btn-primary" title="" data-toggle="dropdown" data-tip="Appointment Date">
+            <i class="glyph-icon icon-calendar"></i>
+            <span></span>
+          </div>
+      </div>
+
+      <!--<div class="col-xl-4 col-md-4">
+        <div data-tip="Location Name - Product Name" style="padding-bottom: 5px;">
+            <select name="" multiple data-placeholder="Choose Locations/Products" class="chosen-select">
+                <optgroup label="Products">
+                    <option>Test Vaccines</option>
+                    <option>TEST 1</option>
+                    <option>TEST 2</option>
+                    <option>TEST FLU</option>
+                </optgroup>
+                <optgroup label="Locations">
+                    <option>OC FAIR GROUND</option>
+                    <option>AMBRY GENETICS</option>
+                    <option>ANAHEIM CONVENTION CENTER</option>
+                    <option>Assisted Living Facility</option>
+
+                </optgroup>
+            </select>
+        </div>
+      </div>-->
+
+    </div>
+
+    <div class="row">
+    <div class="col-8"></div>
+    </div>
+</div>
+
+</div>
+
+<div class="panel">
+<div class="panel-body">
+<div class="example-box-wrapper">
+            <!--Add Account Button-->
+            <div class="row">
+                <div class="col modalbutton">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success float-right dropdown-toggle" data-toggle="dropdown" style="margin-bottom: -35px;">
+                        Admin
+                    </button>
+                    <ul class="dropdown-menu float-right menufloat" role="menu">
+                        <li><a href="#" data-toggle="modal" data-target="" class="onsiteact-csv-started onsiteact-csv-success onsiteact-csv-failed">CSV</a></li>
+                    <!-- Button trigger modal -->
+                </div>
+            </div>
+        <!--Add Account Button-->
+<table id="datatable-responsive" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+
+    <thead>
+        <tr>
+            <th>Appointment ID</th>
+            <th>Confirmation No</th>
+            <th>Patient ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>DOB</th>
+            <th>Product</th>
+            <th>Follow Up Status</th>
+        </tr>
+    </thead>
+        
+    <tfoot>
+        <tr>
+            <th>Appointment ID</th>
+            <th>Confirmation No</th>
+            <th>Patient ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>DOB</th>
+            <th>Product</th>
+            <th>Follow Up Status</th>
+        </tr>
+    </tfoot>
+        
+    <tbody>
+        <tr>
+            <td>APTID-1-1</td>
+            <td>X34G56</td>
+            <td>PTID-1-2</td>
+            <td>Shakir</td>
+            <td>Ansari</td>
+            <td>11/29/1986</td>
+            <!--<td style="width: 300px;">
+                <ul class="list-unstyled">
+                    <li>Authorize.net</li>
+                    <li>254125874584</li>
+                    <li>$45.00</li>
+                </ul>
+            </td>-->
+            <td>Covid</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>APTID-1-2</td>
+            <td>TR45H4</td>
+            <td>PTID-1-3</td>
+            <td>Saimun</td>
+            <td>Hasan</td>
+            <td>04/25/1994</td>
+            <td>Flu</td>
+            <td>Follow Up Status</td>
+        </tr>
+    </tbody>
+        
+</table>
+</div>
+</div>
+</div>
+
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+
+<!-- Profile Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Shakir Ansari - 11/29/1986 <i>(PT-1-2)</i></h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body --> 
+      <div class="modal-body">
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover patient-update-started patient-update-success patient-update-failed"><span >Update Patient</span><i class="glyph-icon icon-arrow-right"></i></button>
+        <form enctype="multipart/form-data" method="post" siq_id="">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="example-box-wrapper">
+                        <ul class="nav-responsive nav nav-tabs">
+                                    <li class="active"><a href="#tab1" data-toggle="tab">Demo</a></li>
+                                    <li><a href="#tab2" data-toggle="tab">Custom Demo Fields</a></li>
+                                    <li><a href="#tab3" data-toggle="tab">Payment type</a></li>
+                                    <li><a href="#tab4" data-toggle="tab">Visit History</a></li>
+                                    <li><a href="#tab5" data-toggle="tab">Payment History</a></li> 
+                        </ul>
+                        <div class="tab-content">
+
+                                    <div class="tab-pane active" id="tab1">
+
+                                        <div class="col-xl-12">
+                                         <fieldset class="fieldset-border">
+                                            <legend class="legendtitle">Your Information</legend>
+                                             <div class="row">
+                                                <div class="col-md-6">
+                                                    <!-- First Name -->
+                                                    <div class="form-group">
+                                                        <label for="firstname">First Name<span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                        <input name="firstname" class="form-control" id="firstname" required="" type="text">
+                                                    </div>
+                                                    <!-- First Name -->
+                                                </div>
+        
+                                                <div class="col-md-6">
+                                                    <!-- Last Name -->
+                                                    <div class="form-group">
+                                                        <label for="lastname">Last Name<span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                        <input name="lastname" class="form-control" id="lastname" required="" type="text">
+                                                    </div>
+                                                    <!-- Last Name -->
+                                                </div>
+        
+                                                <div class="col-md-6">
+                                                    <!-- Date -->
+                                                    <div class="form-group">
+                                                        <label for="date">Date Of Birth<span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                        <input type="date" class="form-control" name="date" id="date" placeholder="mm-dd-yyyy" required="">
+                                                        <span id="error_sc_date"></span>
+                                                    </div>
+                                                    <!-- Date -->
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <!-- Gender -->
+                                                    <div class="form-group">
+                                                        <label for="gender">Gender*</label>
+                                                            <select name="gender" id="gender" class="form-control">
+                                                                <option selected="" disabled="" value="">Select Gender</option>
+                                                                <option value="">Male</option>
+                                                                <option value="">Female</option>
+                                                                <option value="">Others</option>
+                                                            </select>
+                                                        </div>
+                                                    <!-- Gender --> 
+                                                </div>
+                                             </div>
+                                         </fieldset>
+                                        </div>
+        
+                                        <div class="col-xl-12">
+                                         <fieldset class="fieldset-border">
+                                           <legend class="legendtitle">Address</legend>
+                                            <div class="row">
+                                             <div class="col-4">
+                                                <!-- street -->
+                                                <div class="form-group">
+                                                    <label for="street">Street</label>
+                                                    <input name="street" class="form-control" id="street" required="" type="text">
+                                                </div>
+                                                <!-- street -->
+                                             </div>
+        
+                                             <div class="col-4">
+                                                <!-- city -->
+                                                <div class="form-group">
+                                                    <label for="city">City</label>
+                                                    <input name="city" class="form-control" id="city" required="" type="text">
+                                                </div>
+                                                <!-- city -->
+                                             </div>
+        
+                                             <div class="col-4">
+                                                <!-- State -->
+                                                <label>State</label>
+                                                <select name="state" class="form-control" required="">
+                                                    <option value="" selected="">Choose Your Option</option>
+                                                    <option value="FL">FL</option>
+                                                    <option value="AL">AL</option>
+                                                    <option value="AK">AK</option>
+                                                    <option value="AZ">AZ</option>
+                                                    <option value="AR">AR</option>
+                                                    <option value="CA">CA</option>
+                                                    <option value="CO">CO</option>
+                                                    <option value="CT">CT</option>
+                                                    <option value="DE">DE</option>
+                                                    <option value="GA">GA</option>
+                                                    <option value="HI">HI</option>
+                                                    <option value="ID">ID</option>
+                                                    <option value="IL">IL</option>
+                                                    <option value="IN">IN</option>
+                                                    <option value="IA">IA</option>
+                                                    <option value="KS">KS</option>
+                                                    <option value="KY">KY</option>
+                                                    <option value="ME">ME</option>
+                                                    <option value="MD">MD</option>
+                                                    <option value="MA">MA</option>
+                                                    <option value="MI">MI</option>
+                                                    <option value="MN">MN</option>
+                                                    <option value="MS">MS</option>
+                                                    <option value="MO">MO</option>
+                                                    <option value="MT">MT</option>
+                                                    <option value="NE">NE</option>
+                                                    <option value="NV">NV</option>
+                                                    <option value="NH">NH</option>
+                                                    <option value="NJ">NJ</option>
+                                                    <option value="NM">NM</option>
+                                                    <option value="NY">NY</option>
+                                                    <option value="NC">NC</option>
+                                                    <option value="ND">ND</option>
+                                                    <option value="OH">OH</option>
+                                                    <option value="OK">OK</option>
+                                                    <option value="OR">OR</option>
+                                                    <option value="PA">PA</option>
+                                                    <option value="RI">RI</option>
+                                                    <option value="SC">SC</option>
+                                                    <option value="SD">SD</option>
+                                                    <option value="TN">TN</option>
+                                                    <option value="TX">TX</option>
+                                                    <option value="UT">UT</option>
+                                                    <option value="VT">VT</option>
+                                                    <option value="VA">VA</option>
+                                                    <option value="WA">WA</option>
+                                                    <option value="WV">WV</option>
+                                                    <option value="WI">WI</option>
+                                                    <option value="WY">WY</option>
+                                                </select>
+                                                <!-- State -->
+                                             </div>
+        
+                                             <div class="col-4">
+                                                <!-- Zip -->
+                                                <div class="form-group">
+                                                    <label for="Zip">Zip</label>
+                                                    <input name="zip" class="form-control" id="Zip" required="" type="text">
+                                                </div>
+                                                <!-- Zip -->
+                                             </div>
+                                            </div>
+                                         </fieldset>
+                                        </div>
+        
+                                        <div class="col-xl-12">
+                                         <fieldset class="fieldset-border">
+                                           <legend class="legendtitle">Contact Information</legend>
+                                           <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- phonetype -->
+                                                <div class="form-group">
+                                                    <label for="phonetype">Phone Type*</label>
+                                                        <select name="phonetype" id="phonetype" class="form-control">
+                                                            <option selected="" disabled="" value="">Select phonetype</option>
+                                                            <option value="">Option 01</option>
+                                                            <option value="">Option 02</option>
+                                                            <option value="">Option 03</option>
+                                                        </select>
+                                                </div>
+                                                <!-- phonetype -->
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <!--Phone Number-->
+                                                <div class="form-group">
+                                                    <label for="phoneNumber">Phone Number</label>
+                                                    <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
+                                                    <input  style="margin-top: 13px;" type="checkbox" data-on-color="btn-success" name="" class="checkbox-success" checked data-size="medium" data-on-text="And" data-off-text="Or" style="display: inline-block;">
+                                                    <label for="">SMS Notification</label>
+                                                </div>
+                                                <!--Phone Number-->
+                                            </div>
+        
+                                            <div class="col-md-4">
+                                                <!--Email-->
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input name="email" class="form-control" id="email" required="" type="text">
+                                                </div>
+                                                <!--Email-->
+                                            </div>
+        
+                                            
+                                           </div>
+                                         </fieldset>
+                                        </div>     
+                                    </div>
+
+                                    <div class="tab-pane" id="tab2">
+
+                                        <div class="col-xl-12">
+                                         <fieldset class="fieldset-border">
+                                            <legend class="legendtitle">Custom Demo Fields</legend>
+                                             <div class="row">
+                                                
+        
+                                                <div class="col-4">
+                                                    <!-- Gender Indentity -->
+                                                    <div class="form-group">
+                                                        <label for="genderindentity">Gender Indentity</label>
+                                                        <input name="genderindentity" class="form-control" id="genderindentity" required="" type="text">
+                                                    </div>
+                                                    <!-- Gender Indentity -->
+                                                </div>
+        
+                                                <div class="col-4">
+                                                    <!-- Sexual Orientation -->
+                                                    <div class="form-group">
+                                                        <label for="sexualorientation">Sexual Orientation</label>
+                                                        <input name="sexualorientation" class="form-control" id="sexualorientation" required="" type="text">
+                                                    </div>
+                                                    <!-- Sexual Orientation -->
+                                                </div>
+        
+                                                <div class="col-4">
+                                                    <!-- race -->
+                                                    <div class="form-group">
+                                                        <label for="race">race*</label>
+                                                            <select name="race" id="race" class="form-control">
+                                                                <option selected="" disabled="" value="">Select Race</option>
+                                                                <option value="">Option 01</option>
+                                                                <option value="">Option 02</option>
+                                                                <option value="">Option 03</option>
+                                                            </select>
+                                                        </div>
+                                                    <!-- race --> 
+                                                </div>
+        
+                                                <div class="col-4">
+                                                    <!-- ethinicity -->
+                                                    <div class="form-group">
+                                                        <label for="ethinicity">Ethinicity*</label>
+                                                            <select name="ethinicity" id="ethinicity" class="form-control">
+                                                                <option selected="" disabled="" value="">Select ethinicity</option>
+                                                                <option value="">Option 01</option>
+                                                                <option value="">Option 02</option>
+                                                                <option value="">Option 03</option>
+                                                            </select>
+                                                        </div>
+                                                    <!-- ethinicity --> 
+                                                </div>
+                                             </div>
+                                         </fieldset>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab3">
+                                        <div class="col-xl-12">
+
+                                         <fieldset class="fieldset-border">
+                                          <legend class="legendtitle">Primary Insurance</legend>
+                                           <div class="row">
+                                               <div class="col-4">
+                                                <!-- Insurance Provider -->
+                                                <div class="form-group">
+                                                    <label for="insuranceprovider">Primary Insurance Provider <span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                    <input name="insuranceprovider" class="form-control" id="insuranceprovider" required="" type="text">
+                                                </div>
+                                                <!-- Insurance Provider -->
+                                               </div>
+                                               
+                                               <div class="col-4">
+                                                <!-- Insurance Member ID -->
+                                                <div class="form-group">
+                                                    <label for="insurancememberid">Primary Insurance Member ID<span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                    <input name="insurancememberid" class="form-control" id="insurancememberid" required="" type="text">
+                                                </div>
+                                                <!-- Insurance Member ID -->
+                                               </div>
+                                               
+                                               <div class="col-4">
+                                                <!-- Pverify Status -->
+                                                <div class="form-group">
+                                                    <label for="pverifystatus">Primary Pverify Status</label>
+                                                    <input name="pverifystatus" class="form-control" id="pverifystatus" required="" type="text">
+                                                </div>
+                                                <!-- Pverify Status -->
+                                               </div>
+                                               
+                                               <div class="col-4">
+                                                <!-- Insurance Group Number -->
+                                                <div class="form-group">
+                                                    <label for="insurancegroupnumber">Primary Insurance Group Number</label>
+                                                    <input name="insurancegroupnumber" class="form-control" id="insurancegroupnumber" required="" type="text">
+                                                </div>
+                                                <!-- Insurance Group Number -->
+                                               </div>
+                                               
+                                               <div class="col-4">
+                                                <!-- Relationship to this insured -->
+                                                <div class="form-group">
+                                                    <label for="relationshiptothisinsured">Primary Relationship to this insured</label>
+                                                    <input name="relationshiptothisinsured" class="form-control" id="relationshiptothisinsured" required="" type="text">
+                                                </div>
+                                                <!-- Relationship to this insured -->
+                                               </div>
+                                               
+                                               <div class="col-4">
+                                                <!-- Insurance Int -->
+                                                <div class="form-group">
+                                                    <label for="insuranceint">Primary Insurance Int</label>
+                                                    <input name="insuranceint" class="form-control" id="insuranceint" required="" type="text">
+                                                </div>
+                                                <!-- Insurance Int -->
+                                               </div>
+                                           </div>
+                                         </fieldset>
+
+
+
+
+
+                                         <fieldset class="fieldset-border">
+                                          <legend class="legendtitle">Secondary Insurance</legend>
+                                           <div class="row">
+                                               <div class="col-4">
+                                                <!-- Insurance Provider -->
+                                                <div class="form-group">
+                                                    <label for="insuranceprovider">Secondary Insurance Provider <span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                    <input name="insuranceprovider" class="form-control" id="insuranceprovider" required="" type="text">
+                                                </div>
+                                                <!-- Insurance Provider -->
+                                               </div>
+                                               
+                                               <div class="col-4">
+                                                <!-- Insurance Member ID -->
+                                                <div class="form-group">
+                                                    <label for="insurancememberid">Secondary Insurance Member ID<span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                    <input name="insurancememberid" class="form-control" id="insurancememberid" required="" type="text">
+                                                </div>
+                                                <!-- Insurance Member ID -->
+                                               </div>
+                                               
+                                               <div class="col-4">
+                                                <!-- Pverify Status -->
+                                                <div class="form-group">
+                                                    <label for="pverifystatus">Secondary Pverify Status</label>
+                                                    <input name="pverifystatus" class="form-control" id="pverifystatus" required="" type="text">
+                                                </div>
+                                                <!-- Pverify Status -->
+                                               </div>
+                                               
+                                               <div class="col-4">
+                                                <!-- Insurance Group Number -->
+                                                <div class="form-group">
+                                                    <label for="insurancegroupnumber">Secondary Insurance Group Number</label>
+                                                    <input name="insurancegroupnumber" class="form-control" id="insurancegroupnumber" required="" type="text">
+                                                </div>
+                                                <!-- Insurance Group Number -->
+                                               </div>
+                                               
+                                               <div class="col-4">
+                                                <!-- Relationship to this insured -->
+                                                <div class="form-group">
+                                                    <label for="relationshiptothisinsured">Secondary Relationship to this insured</label>
+                                                    <input name="relationshiptothisinsured" class="form-control" id="relationshiptothisinsured" required="" type="text">
+                                                </div>
+                                                <!-- Relationship to this insured -->
+                                               </div>
+                                               
+                                               <div class="col-4">
+                                                <!-- Insurance Int -->
+                                                <div class="form-group">
+                                                    <label for="insuranceint">Secondary Insurance Int</label>
+                                                    <input name="insuranceint" class="form-control" id="insuranceint" required="" type="text">
+                                                </div>
+                                                <!-- Insurance Int -->
+                                               </div>
+                                           </div>
+                                         </fieldset>
+
+
+                                        </div>
+        
+                                        <div class="col-xl-12">
+                                         <fieldset class="fieldset-border">
+                                          <legend class="legendtitle">Identification</legend>
+                                           <div class="row">
+                                             <div class="col-4">
+                                                 <!-- Identification Type -->
+                                                    <div class="form-group">
+                                                        <label for="identificationtype">Identification Type*</label>
+                                                            <select name="identificationtype" id="Identification Type" class="form-control">
+                                                                <option selected="" disabled="" value="">Select Identification Type</option>
+                                                                <option value="">Option 01</option>
+                                                                <option value="">Option 02</option>
+                                                                <option value="">Option 03</option>
+                                                            </select>
+                                                        </div>
+                                                 <!-- Identification Type --> 
+                                             </div>
+                                             <div class="col-4">
+                                                <!-- Identification Number -->
+                                                <div class="form-group">
+                                                    <label for="identificationnumber">Identification Number</label>
+                                                    <input name="identificationnumber" class="form-control" id="identificationnumber" required="" type="text">
+                                                </div>
+                                                <!-- Identification Number -->
+                                             </div>
+                                             <div class="col-4">
+                                                <!-- Identification Upload -->
+                                                <div class="form-group">
+                                                    <label for="identificationupload"> Identification Upload </label>
+                                                    <input name="identificationupload" class="form-control" id="identificationupload" required="" type="file">
+                                                </div>
+                                                <!-- Identification Upload -->
+                                             </div>
+                                             <div class="col-4">
+                                                 <!-- Identification Type -->
+                                                    <div class="form-group">
+                                                        <label for="identificationtype">Identification Type*</label>
+                                                            <select name="identificationtype" id="Identification Type" class="form-control">
+                                                                <option selected="" disabled="" value="">Select Identification Type</option>
+                                                                <option value="">Option 01</option>
+                                                                <option value="">Option 02</option>
+                                                                <option value="">Option 03</option>
+                                                            </select>
+                                                        </div>
+                                                 <!-- Identification Type --> 
+                                             </div>
+                                             <div class="col-4">
+                                                <!-- Identification Number -->
+                                                <div class="form-group">
+                                                    <label for="identificationnumber">Identification Number</label>
+                                                    <input name="identificationnumber" class="form-control" id="identificationnumber" required="" type="text">
+                                                </div>
+                                                <!-- Identification Number -->
+                                             </div>
+                                             <div class="col-4">
+                                                <!-- Identification Upload -->
+                                                <div class="form-group">
+                                                    <label for="identificationupload"> Identification Upload </label>
+                                                    <input name="identificationupload" class="form-control" id="identificationupload" required="" type="file">
+                                                </div>
+                                                <!-- Identification Upload -->
+                                             </div>
+                                             <div class="col-4">
+                                                 <!-- Identification Type -->
+                                                    <div class="form-group">
+                                                        <label for="identificationtype">Identification Type*</label>
+                                                            <select name="identificationtype" id="Identification Type" class="form-control">
+                                                                <option selected="" disabled="" value="">Select Identification Type</option>
+                                                                <option value="">Option 01</option>
+                                                                <option value="">Option 02</option>
+                                                                <option value="">Option 03</option>
+                                                            </select>
+                                                        </div>
+                                                 <!-- Identification Type --> 
+                                             </div>
+                                             <div class="col-4">
+                                                <!-- Identification Number -->
+                                                <div class="form-group">
+                                                    <label for="identificationnumber">Identification Number</label>
+                                                    <input name="identificationnumber" class="form-control" id="identificationnumber" required="" type="text">
+                                                </div>
+                                                <!-- Identification Number -->
+                                             </div>
+                                             <div class="col-4">
+                                                <!-- Identification Upload -->
+                                                <div class="form-group">
+                                                    <label for="identificationupload"> Identification Upload </label>
+                                                    <input name="identificationupload" class="form-control" id="identificationupload" required="" type="file">
+                                                </div>
+                                                <!-- Identification Upload -->
+                                             </div>
+                                           </div>
+                                         </fieldset>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab4">
+                                        <div class="text-right mb-3">
+                                          <div id="daterangepicker-custom" class="btn btn-primary" title="" data-toggle="dropdown" data-tip="Appointment Date">
+                                            <i class="glyph-icon icon-calendar"></i>
+                                            <span></span>
+                                          </div>
+                                        </div>
+                                        
+                                        <table id="datatable-responsive" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%"> 
+        
+                                            <thead>
+                                                <tr>
+                                                    <th>Appt Date</th>
+                                                    <th>DOS</th>
+                                                    <th>Check In Status</th>
+                                                    <th>Soap Status</th>
+                                                    <th>Result Status</th>
+                                                    <th>Follow up Status</th>
+                                                    <th>Billing Status</th>
+                                                </tr>
+                                            </thead>
+                                                
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Appt Date</th>
+                                                    <th>DOS</th>
+                                                    <th>Check In Status</th>
+                                                    <th>Soap Status</th>
+                                                    <th>Result Status</th>
+                                                    <th>Follow up Status</th>
+                                                    <th>Billing Status</th>
+                                                </tr>
+                                            </tfoot>
+                                                
+                                            <tbody>
+                                                <tr>
+                                                    <td>10/22/2020</td>
+                                                    <td>10/23/2020</td>
+                                                    <td>Signed Off</td>
+                                                    <td>Physical Exam</td>
+                                                    <td>Waiting Notification</td>
+                                                    <td>Follow Up Needed</td>
+                                                    <td>Ready to Bill</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10/22/2020</td>
+                                                    <td>10/23/2020</td>
+                                                    <td>Signed Off</td>
+                                                    <td>Physical Exam</td>
+                                                    <td>Waiting Notification</td>
+                                                    <td>Follow Up Needed</td>
+                                                    <td>Ready to Bill</td>
+                                                </tr>
+                                            </tbody>
+                                                
+                                        
+                                        </table>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab5">
+                                        <div class="text-right mb-3">
+                                          <div id="daterangepicker-custom" class="btn btn-primary" title="" data-toggle="dropdown" data-tip="Appointment Date">
+                                            <i class="glyph-icon icon-calendar"></i>
+                                            <span></span>
+                                          </div>
+                                        </div>
+
+                                        <table id="datatable-responsive" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%"> 
+        
+                                            <thead>
+                                                <tr>
+                                                    <th>Appointment Date</th>
+                                                    <th>DOS</th>
+                                                    <th>Collection Date</th>
+                                                    <th>Payment Type</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+                                                
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Appointment Date</th>
+                                                    <th>DOS</th>
+                                                    <th>Collection Date</th>
+                                                    <th>Payment Type</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </tfoot>
+                                                
+                                            <tbody>
+                                                <tr>
+                                                    <th>Appointment Date</th>
+                                                    <th>DOS</th>
+                                                    <th>Collection Date</th>
+                                                    <th>Payment Type</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </tbody>
+                                                
+                                        
+                                        </table>
+                                    </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+      </div>
+      <!--body -->
+
+      </div>
+    </div>
+</div>
+<!-- Profile Modal -->
+
+<!-- merge Modal -->
+<div class="modal fade" id="mergeModal" tabindex="-1" role="dialog" aria-labelledby="mergeModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Merge Patient</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover patient-merge2-started patient-merge2-success patient-merge2-failed"><span >Merge Patient</span><i class="glyph-icon icon-arrow-right"></i></button>
+        <form enctype="multipart/form-data" method="post" siq_id="">
+
+            <table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>PTID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>DOB</th>
+                    <th>Phone</th>
+                    <th>Street</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                </tr>
+                </thead>
+  
+                <tbody>
+                    <tr>
+                        <td>PTID-1-1</td>
+                        <td>Shakir</td>
+                        <td>Ansari</td>
+                        <td>10/10/1990</td>
+                        <td>9173595860</td>
+                        <td>Street</td>
+                        <td>City</td>
+                        <td>State</td>
+                        <td>Zip</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="panel">
+                <div class="panel-body">
+                <div class="example-box-wrapper">
+                <table id="datatable-row-highlight" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>PTID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>DOB</th>
+                    <th>Phone</th>
+                    <th>Street</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                </tr>
+                </thead>
+  
+                <tfoot>
+                <tr>
+                    <th>PTID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>DOB</th>
+                    <th>phone</th>
+                    <th>street</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                </tr>
+                </tfoot>
+  
+                <tbody>
+                    <tr>
+                        <td>PTID-1-1</td>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>DOB</td>
+                        <td>Phone</td>
+                        <td>Street</td>
+                        <td>City</td>
+                        <td>State</td>
+                        <td>Zip</td>
+                    </tr>
+                    <tr>
+                        <td>PTID-1-2</td>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>DOB</td>
+                        <td>Phone</td>
+                        <td>Street</td>
+                        <td>City</td>
+                        <td>State</td>
+                        <td>Zip</td>
+                    </tr>
+                </tbody>
+                </table>
+              </div>
+              </div>
+            </div>
+           
+        </form>
+      </div>
+      <!--body -->
+      
+      </div>
+    </div>
+</div>
+<!-- merge Modal -->
+
+<!-- Checkin Modal -->
+<div class="modal fade" id="checkinModal" tabindex="-1" role="dialog" aria-labelledby="checkinModalLabel">
+    <div class="modal-dialog  " role="document">
+      <div class="modal-content">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4 text-white">PTID-1-2 Ansari, Shakir 11/29/1986</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body --> 
+      <div class="modal-body">
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btncheckin btn-hover patient-checkin-started patient-checkin-success patient-checkin-failed" ><span >Check-In</span><i class="glyph-icon icon-arrow-right"></i></button>
+        <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
+            <div class="panel">
+                        <div class="panel-body">
+                            <div class="example-box-wrapper">
+                                <ul class="nav-responsive nav nav-tabs">
+                                    <li class="active"><a href="#tab6" data-toggle="tab">Product</a></li>
+                                    <li><a href="#tab7" data-toggle="tab">Payment type</a></li>
+                                    <li><a href="#tab8" data-toggle="tab">Demo</a></li>
+                                    <li><a href="#tab9" data-toggle="tab">Custom Demo Fields</a></li>
+                                    <li><a href="#tab10" data-toggle="tab">Questionnaire</a></li>
+                                </ul>
+                                <div class="tab-content">
+
+                                    <div class="tab-pane active" id="tab6">
+                                        <div class="col-xl-12">
+                                            <fieldset class="fieldset-border">
+                                               <legend class="legendtitle">Product</legend>
+                                                <div class="row">
+                                                   <div class="col-2">
+                                                            <button class="btn btn-success">Covid 19</button>
+                                                   </div>
+                                                   <div class="col-2">
+                                                            <button class="btn btn-success">X-Ray</button>
+                                                    </div>
+                                                    <div class="col-2">
+                                                            <button class="btn btn-success">Flu</button>
+                                                    </div>
+                                                   </div>
+                                            </fieldset>
+                                        </div>      
+                                    </div>
+
+                                    <div class="tab-pane" id="tab7">
+                                        <div class="col-xl-12">
+                                            <fieldset class="fieldset-border">
+                                             <legend class="legendtitle">Primary Insurance <button class="btn btn-info btn-sm mb-2">Verify</button> </legend>
+                                              <div class="row">
+                                                  <div class="col-4">
+                                                   <!-- Insurance Provider -->
+                                                   <div class="form-group">
+                                                       <label for="insuranceprovider">Primary Insurance Provider <span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                       <input name="insuranceprovider" class="form-control" id="insuranceprovider" required="" type="text">
+                                                   </div>
+                                                   <!-- Insurance Provider -->
+                                                  </div>
+                                                  
+                                                  <div class="col-4">
+                                                   <!-- Insurance Member ID -->
+                                                   <div class="form-group">
+                                                       <label for="insurancememberid">Primary Insurance Member ID<span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                       <input name="insurancememberid" class="form-control" id="insurancememberid" required="" type="text">
+                                                   </div>
+                                                   <!-- Insurance Member ID -->
+                                                  </div>
+                                                  
+                                                  <div class="col-4">
+                                                   <!-- Pverify Status -->
+                                                   <div class="form-group">
+                                                       <label for="pverifystatus">Primary Pverify Status</label>
+                                                       <input name="pverifystatus" class="form-control" id="pverifystatus" required="" type="text">
+                                                   </div>
+                                                   <!-- Pverify Status -->
+                                                  </div>
+                                                  
+                                                  <div class="col-4">
+                                                   <!-- Insurance Group Number -->
+                                                   <div class="form-group">
+                                                       <label for="insurancegroupnumber">Primary Insurance Group Number</label>
+                                                       <input name="insurancegroupnumber" class="form-control" id="insurancegroupnumber" required="" type="text">
+                                                   </div>
+                                                   <!-- Insurance Group Number -->
+                                                  </div>
+                                                  
+                                                  <div class="col-4">
+                                                   <!-- Relationship to this insured -->
+                                                   <div class="form-group">
+                                                       <label for="relationshiptothisinsured">Primary Relationship to this insured</label>
+                                                       <input name="relationshiptothisinsured" class="form-control" id="relationshiptothisinsured" required="" type="text">
+                                                   </div>
+                                                   <!-- Relationship to this insured -->
+                                                  </div>
+                                                  
+                                                  <div class="col-4">
+                                                   <!-- Insurance Int -->
+                                                   <div class="form-group">
+                                                       <label for="insuranceint">Primary Insurance Int</label>
+                                                       <input name="insuranceint" class="form-control" id="insuranceint" required="" type="text">
+                                                   </div>
+                                                   <!-- Insurance Int -->
+                                                  </div>
+                                              </div>
+                                            </fieldset>
+
+
+
+
+
+                                            <fieldset class="fieldset-border">
+                                             <legend class="legendtitle">Secondary Insurance <button class="btn btn-info btn-sm mb-2">Verify</button></legend>
+                                              <div class="row">
+                                                  <div class="col-4">
+                                                   <!-- Insurance Provider -->
+                                                   <div class="form-group">
+                                                       <label for="insuranceprovider">Secondary Insurance Provider <span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                       <input name="insuranceprovider" class="form-control" id="insuranceprovider" required="" type="text">
+                                                   </div>
+                                                   <!-- Insurance Provider -->
+                                                  </div>
+                                                  
+                                                  <div class="col-4">
+                                                   <!-- Insurance Member ID -->
+                                                   <div class="form-group">
+                                                       <label for="insurancememberid">Secondary Insurance Member ID<span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                       <input name="insurancememberid" class="form-control" id="insurancememberid" required="" type="text">
+                                                   </div>
+                                                   <!-- Insurance Member ID -->
+                                                  </div>
+                                                  
+                                                  <div class="col-4">
+                                                   <!-- Pverify Status -->
+                                                   <div class="form-group">
+                                                       <label for="pverifystatus">Secondary Pverify Status</label>
+                                                       <input name="pverifystatus" class="form-control" id="pverifystatus" required="" type="text">
+                                                   </div>
+                                                   <!-- Pverify Status -->
+                                                  </div>
+                                                  
+                                                  <div class="col-4">
+                                                   <!-- Insurance Group Number -->
+                                                   <div class="form-group">
+                                                       <label for="insurancegroupnumber">Secondary Insurance Group Number</label>
+                                                       <input name="insurancegroupnumber" class="form-control" id="insurancegroupnumber" required="" type="text">
+                                                   </div>
+                                                   <!-- Insurance Group Number -->
+                                                  </div>
+                                                  
+                                                  <div class="col-4">
+                                                   <!-- Relationship to this insured -->
+                                                   <div class="form-group">
+                                                       <label for="relationshiptothisinsured">Secondary Relationship to this insured</label>
+                                                       <input name="relationshiptothisinsured" class="form-control" id="relationshiptothisinsured" required="" type="text">
+                                                   </div>
+                                                   <!-- Relationship to this insured -->
+                                                  </div>
+                                                  
+                                                  <div class="col-4">
+                                                   <!-- Insurance Int -->
+                                                   <div class="form-group">
+                                                       <label for="insuranceint">Secondary Insurance Int</label>
+                                                       <input name="insuranceint" class="form-control" id="insuranceint" required="" type="text">
+                                                   </div>
+                                                   <!-- Insurance Int -->
+                                                  </div>
+                                              </div>
+                                            </fieldset>
+                                        </div>
+           
+                                        <div class="col-xl-12">
+                                            <fieldset class="fieldset-border">
+                                             <legend class="legendtitle">Identification <button class="btn btn-info btn-sm mb-2">Validated</button></legend>
+                                              <div class="row">
+                                                <div class="col-4">
+                                                    <!-- Identification Type -->
+                                                       <div class="form-group">
+                                                           <label for="identificationtype">Identification Type*</label>
+                                                               <select name="identificationtype" id="Identification Type" class="form-control">
+                                                                   <option selected="" disabled="" value="">Select Identification Type</option>
+                                                                   <option value="">Option 01</option>
+                                                                   <option value="">Option 02</option>
+                                                                   <option value="">Option 03</option>
+                                                               </select>
+                                                           </div>
+                                                    <!-- Identification Type --> 
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- Identification Number -->
+                                                   <div class="form-group">
+                                                       <label for="identificationnumber">Identification Number</label>
+                                                       <input name="identificationnumber" class="form-control" id="identificationnumber" required="" type="text">
+                                                   </div>
+                                                   <!-- Identification Number -->
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- Identification Upload -->
+                                                   <div class="form-group">
+                                                       <label for="identificationupload"> Identification Upload </label>
+                                                       <input name="identificationupload" class="form-control" id="identificationupload" required="" type="file">
+                                                   </div>
+                                                   <!-- Identification Upload -->
+                                                </div>
+                                                <div class="col-4">
+                                                    <!-- Identification Type -->
+                                                       <div class="form-group">
+                                                           <label for="identificationtype">Identification Type*</label>
+                                                               <select name="identificationtype" id="Identification Type" class="form-control">
+                                                                   <option selected="" disabled="" value="">Select Identification Type</option>
+                                                                   <option value="">Option 01</option>
+                                                                   <option value="">Option 02</option>
+                                                                   <option value="">Option 03</option>
+                                                               </select>
+                                                           </div>
+                                                    <!-- Identification Type --> 
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- Identification Number -->
+                                                   <div class="form-group">
+                                                       <label for="identificationnumber">Identification Number</label>
+                                                       <input name="identificationnumber" class="form-control" id="identificationnumber" required="" type="text">
+                                                   </div>
+                                                   <!-- Identification Number -->
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- Identification Upload -->
+                                                   <div class="form-group">
+                                                       <label for="identificationupload"> Identification Upload </label>
+                                                       <input name="identificationupload" class="form-control" id="identificationupload" required="" type="file">
+                                                   </div>
+                                                   <!-- Identification Upload -->
+                                                </div>
+                                                <div class="col-4">
+                                                    <!-- Identification Type -->
+                                                       <div class="form-group">
+                                                           <label for="identificationtype">Identification Type*</label>
+                                                               <select name="identificationtype" id="Identification Type" class="form-control">
+                                                                   <option selected="" disabled="" value="">Select Identification Type</option>
+                                                                   <option value="">Option 01</option>
+                                                                   <option value="">Option 02</option>
+                                                                   <option value="">Option 03</option>
+                                                               </select>
+                                                           </div>
+                                                    <!-- Identification Type --> 
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- Identification Number -->
+                                                   <div class="form-group">
+                                                       <label for="identificationnumber">Identification Number</label>
+                                                       <input name="identificationnumber" class="form-control" id="identificationnumber" required="" type="text">
+                                                   </div>
+                                                   <!-- Identification Number -->
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- Identification Upload -->
+                                                   <div class="form-group">
+                                                       <label for="identificationupload"> Identification Upload </label>
+                                                       <input name="identificationupload" class="form-control" id="identificationupload" required="" type="file">
+                                                   </div>
+                                                   <!-- Identification Upload -->
+                                                </div>
+                                              </div>
+                                            </fieldset>
+                                        </div>
+           
+                                        <div class="col-xl-12">
+                                            <fieldset class="fieldset-border">
+                                             <legend class="legendtitle">Authorize.net <button class="btn btn-info btn-sm mb-2">Charge Card</button></legend>
+                                              <div class="row">
+                                                <div class="col-4">
+                                                   <!-- Name On Card -->
+                                                   <div class="form-group">
+                                                       <label for="nameoncard">Name On Card</label>
+                                                       <input name="nameoncard" class="form-control" id="nameoncard" required="" type="text">
+                                                   </div>
+                                                   <!-- Name On Card -->
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- Billing Zip -->
+                                                   <div class="form-group">
+                                                       <label for="billingzip">Billing Zip</label>
+                                                       <input name="billingzip" class="form-control" id="billingzip" required="" type="text">
+                                                   </div>
+                                                   <!-- Billing Zip -->
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- Charge Card -->
+                                                   <div class="form-group">
+                                                       <label for="ccn"> Charge Card </label> <br>
+                                                       <input name="" class="btn btn-success" type="submit" value="Charge Card">
+                                                   </div>
+                                                   <!-- Charge Card -->
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- Credit Card Number -->
+                                                   <div class="form-group">
+                                                       <label for="ccn"> Credit Card Number </label>
+                                                       <input name="ccn" class="form-control" id="ccn" required="" type="text">
+                                                   </div>
+                                                   <!-- Credit Card Number -->
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- Date -->
+                                                   <div class="form-group">
+                                                       <label for="date">Expiration Date</label>
+                                                       <input type="date" class="form-control" name="date" id="date" placeholder="mm-dd-yyyy" required="">
+                                                       <span id="error_sc_date"></span>
+                                                   </div>
+                                                   <!-- Date -->
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- CCV -->
+                                                   <div class="form-group">
+                                                       <label for="ccv">CCV</label>
+                                                       <input name="ccv" class="form-control" id="ccv" required="" type="text">
+                                                   </div>
+                                                   <!-- CCV -->
+                                                </div>
+                                              </div>
+                                            </fieldset>
+                                        </div>
+
+
+                                        <div class="col-xl-12">
+                                            <fieldset class="fieldset-border">
+                                             <legend class="legendtitle">Cash <button class="btn btn-info btn-sm mb-2">Collected</button></legend>
+                                              <div class="row">
+                                                <div class="col-4">
+                                                   <!-- Name On Card -->
+                                                   <div class="form-group">
+                                                       <label for="nameoncard">Amount</label>
+                                                       <input name="nameoncard" class="form-control" id="nameoncard" required="" type="text">
+                                                   </div>
+                                                   <!-- Name On Card -->
+                                                </div>
+                                                <div class="col-4">
+                                                   <!-- Billing Zip -->
+                                                   <div class="form-group">
+                                                       <label for="billingzip">Notes</label>
+                                                       <input name="billingzip" class="form-control" id="billingzip" required="" type="text">
+                                                   </div>
+                                                   <!-- Billing Zip -->
+                                                </div>
+                                              
+                                              </div>
+                                            </fieldset>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="tab-pane" id="tab8">
+                                        <div class="col-xl-12">
+                                            <fieldset class="fieldset-border">
+                                               <legend class="legendtitle">Your Information</legend>
+                                                <div class="row">
+                                                   <div class="col">
+                                                       <!-- First Name -->
+                                                       <div class="form-group">
+                                                           <label for="firstname">First Name<span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                           <input name="firstname" class="form-control" id="firstname" required="" type="text">
+                                                       </div>
+                                                       <!-- First Name -->
+                                                   </div>
+           
+                                                   <div class="col">
+                                                       <!-- Last Name -->
+                                                       <div class="form-group">
+                                                           <label for="lastname">Last Name<span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                           <input name="lastname" class="form-control" id="lastname" required="" type="text">
+                                                       </div>
+                                                       <!-- Last Name -->
+                                                   </div>
+           
+                                                   <div class="col">
+                                                       <!-- Date -->
+                                                       <div class="form-group">
+                                                           <label for="date">Date Of Birth<span><img src="assets/image-resources/pverify.gif" style="height: 25px;" alt=""></span></label>
+                                                           <input type="date" class="form-control" name="date" id="date" placeholder="mm-dd-yyyy" required="">
+                                                           <span id="error_sc_date"></span>
+                                                       </div>
+                                                       <!-- Date -->
+                                                   </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+           
+                                        <div class="col-xl-12">
+                                            <fieldset class="fieldset-border">
+                                              <legend class="legendtitle">Address</legend>
+                                               <div class="row">
+                                                <div class="col-4">
+                                                   <!-- street -->
+                                                   <div class="form-group">
+                                                       <label for="street">Street</label>
+                                                       <input name="street" class="form-control" id="street" required="" type="text">
+                                                   </div>
+                                                   <!-- street -->
+                                                </div>
+           
+                                                <div class="col-4">
+                                                   <!-- city -->
+                                                   <div class="form-group">
+                                                       <label for="city">City</label>
+                                                       <input name="city" class="form-control" id="city" required="" type="text">
+                                                   </div>
+                                                   <!-- city -->
+                                                </div>
+           
+                                                <div class="col-4">
+                                                   <!-- State -->
+                                                   <label>State</label>
+                                                   <select name="state" class="form-control" required="">
+                                                       <option value="" selected="">Choose Your Option</option>
+                                                       <option value="FL">FL</option>
+                                                       <option value="AL">AL</option>
+                                                       <option value="AK">AK</option>
+                                                       <option value="AZ">AZ</option>
+                                                       <option value="AR">AR</option>
+                                                       <option value="CA">CA</option>
+                                                       <option value="CO">CO</option>
+                                                       <option value="CT">CT</option>
+                                                       <option value="DE">DE</option>
+                                                       <option value="GA">GA</option>
+                                                       <option value="HI">HI</option>
+                                                       <option value="ID">ID</option>
+                                                       <option value="IL">IL</option>
+                                                       <option value="IN">IN</option>
+                                                       <option value="IA">IA</option>
+                                                       <option value="KS">KS</option>
+                                                       <option value="KY">KY</option>
+                                                       <option value="ME">ME</option>
+                                                       <option value="MD">MD</option>
+                                                       <option value="MA">MA</option>
+                                                       <option value="MI">MI</option>
+                                                       <option value="MN">MN</option>
+                                                       <option value="MS">MS</option>
+                                                       <option value="MO">MO</option>
+                                                       <option value="MT">MT</option>
+                                                       <option value="NE">NE</option>
+                                                       <option value="NV">NV</option>
+                                                       <option value="NH">NH</option>
+                                                       <option value="NJ">NJ</option>
+                                                       <option value="NM">NM</option>
+                                                       <option value="NY">NY</option>
+                                                       <option value="NC">NC</option>
+                                                       <option value="ND">ND</option>
+                                                       <option value="OH">OH</option>
+                                                       <option value="OK">OK</option>
+                                                       <option value="OR">OR</option>
+                                                       <option value="PA">PA</option>
+                                                       <option value="RI">RI</option>
+                                                       <option value="SC">SC</option>
+                                                       <option value="SD">SD</option>
+                                                       <option value="TN">TN</option>
+                                                       <option value="TX">TX</option>
+                                                       <option value="UT">UT</option>
+                                                       <option value="VT">VT</option>
+                                                       <option value="VA">VA</option>
+                                                       <option value="WA">WA</option>
+                                                       <option value="WV">WV</option>
+                                                       <option value="WI">WI</option>
+                                                       <option value="WY">WY</option>
+                                                   </select>
+                                                   <!-- State -->
+                                                </div>
+           
+                                                <div class="col-4">
+                                                   <!-- Zip -->
+                                                   <div class="form-group">
+                                                       <label for="Zip">Zip</label>
+                                                       <input name="zip" class="form-control" id="Zip" required="" type="text">
+                                                   </div>
+                                                   <!-- Zip -->
+                                                </div>
+                                               </div>
+                                            </fieldset>
+                                        </div>
+           
+                                        <div class="col-xl-12">
+                                            <fieldset class="fieldset-border">
+                                              <legend class="legendtitle">Contact Information</legend>
+                                              <div class="row">
+                                               <div class="col-4">
+                                                   <!--Phone Number-->
+                                                   <div class="form-group">
+                                                       <label for="phoneNumber">Phone Number</label>
+                                                       <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
+                                                       <input  style="margin-top: 13px;" type="checkbox" data-on-color="btn-success" name="" class="checkbox-success" checked data-size="medium" data-on-text="And" data-off-text="Or" style="display: inline-block;">
+                                                       <label for="">SMS Notification</label>
+                                                   </div>
+                                                   <!--Phone Number-->
+                                               </div>
+           
+                                               <div class="col-4">
+                                                   <!--Email-->
+                                                   <div class="form-group">
+                                                       <label for="email">Email</label>
+                                                       <input name="email" class="form-control" id="email" required="" type="text">
+                                                   </div>
+                                                   <!--Email-->
+                                               </div>
+           
+                                               <div class="col-4">
+                                                   <!-- phonetype -->
+                                                   <div class="form-group">
+                                                       <label for="phonetype">Phone Type*</label>
+                                                           <select name="phonetype" id="phonetype" class="form-control">
+                                                               <option selected="" disabled="" value="">Select phonetype</option>
+                                                               <option value="">Option 01</option>
+                                                               <option value="">Option 02</option>
+                                                               <option value="">Option 03</option>
+                                                           </select>
+                                                   </div>
+                                                   <!-- phonetype -->
+                                               </div>
+                                              </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab9">
+                                        <div class="col-xl-12">
+                                            <fieldset class="fieldset-border">
+                                               <legend class="legendtitle">Custom Demo Fields</legend>
+                                                <div class="row">
+                                                   <div class="col-4">
+                                                       <!-- Gender -->
+                                                       <div class="form-group">
+                                                           <label for="gender">Gender*</label>
+                                                               <select name="gender" id="gender" class="form-control">
+                                                                   <option selected="" disabled="" value="">Select Gender</option>
+                                                                   <option value="">Male</option>
+                                                                   <option value="">Female</option>
+                                                                   <option value="">Others</option>
+                                                               </select>
+                                                           </div>
+                                                       <!-- Gender --> 
+                                                   </div>
+           
+                                                   <div class="col-4">
+                                                       <!-- Gender Indentity -->
+                                                       <div class="form-group">
+                                                           <label for="genderindentity">Gender Indentity</label>
+                                                           <input name="genderindentity" class="form-control" id="genderindentity" required="" type="text">
+                                                       </div>
+                                                       <!-- Gender Indentity -->
+                                                   </div>
+           
+                                                   <div class="col-4">
+                                                       <!-- Sexual Orientation -->
+                                                       <div class="form-group">
+                                                           <label for="sexualorientation">Sexual Orientation</label>
+                                                           <input name="sexualorientation" class="form-control" id="sexualorientation" required="" type="text">
+                                                       </div>
+                                                       <!-- Sexual Orientation -->
+                                                   </div>
+           
+                                                   <div class="col-4">
+                                                       <!-- race -->
+                                                       <div class="form-group">
+                                                           <label for="race">race*</label>
+                                                               <select name="race" id="race" class="form-control">
+                                                                   <option selected="" disabled="" value="">Select Race</option>
+                                                                   <option value="">Option 01</option>
+                                                                   <option value="">Option 02</option>
+                                                                   <option value="">Option 03</option>
+                                                               </select>
+                                                           </div>
+                                                       <!-- race --> 
+                                                   </div>
+           
+                                                   <div class="col-4">
+                                                       <!-- ethinicity -->
+                                                       <div class="form-group">
+                                                           <label for="ethinicity">Ethinicity*</label>
+                                                               <select name="ethinicity" id="ethinicity" class="form-control">
+                                                                   <option selected="" disabled="" value="">Select ethinicity</option>
+                                                                   <option value="">Option 01</option>
+                                                                   <option value="">Option 02</option>
+                                                                   <option value="">Option 03</option>
+                                                               </select>
+                                                           </div>
+                                                       <!-- ethinicity --> 
+                                                   </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab10">
+                                        <div class="col-xl-12">
+                                            <fieldset class="fieldset-border">
+                                               <legend class="legendtitle">Questionnaire</legend>
+                                                <div class="row">
+                                                   <div class="col-4">
+                                                       <!-- question01 -->
+                                                       <div class="form-group">
+                                                           <label for="question01">Question 01</label>
+                                                               <select name="question01" id="question01" class="form-control">
+                                                                   <option selected="" disabled="" value="">Select question01</option>
+                                                                   <option value="">Option 01</option>
+                                                                   <option value="">Option 02</option>
+                                                                   <option value="">Option 03</option>
+                                                               </select>
+                                                           </div>
+                                                       <!-- question01 --> 
+                                                   </div>
+           
+                                                   <div class="col-4">
+                                                       <!-- Question 02 -->
+                                                       <div class="form-group">
+                                                           <label for="question02">Question 02</label>
+                                                           <input name="question02" class="form-control" id="question02" required="" type="text">
+                                                       </div>
+                                                       <!-- Question 02 -->
+                                                   </div>
+           
+                                                   <div class="col-4">
+                                                       <!-- Question 03 -->
+                                                       <div class="form-group">
+                                                           <label for="question03">Question 03</label>
+                                                           <input name="question03" class="form-control" id="question03" required="" type="text">
+                                                       </div>
+                                                       <!-- Question 03 -->
+                                                   </div>
+           
+                                                   <div class="col-4">
+                                                       <!-- question04 -->
+                                                       <div class="form-group">
+                                                           <label for="question04">Question 04*</label>
+                                                               <select name="question04" id="question04" class="form-control">
+                                                                   <option selected="" disabled="" value="">Select question 04</option>
+                                                                   <option value="">Option 01</option>
+                                                                   <option value="">Option 02</option>
+                                                                   <option value="">Option 03</option>
+                                                               </select>
+                                                           </div>
+                                                       <!-- question04 --> 
+                                                   </div>
+           
+                                                   <div class="col-4">
+                                                       <!-- question05 -->
+                                                       <div class="form-group">
+                                                           <label for="question05">Question 05*</label>
+                                                               <select name="question05" id="question05" class="form-control">
+                                                                   <option selected="" disabled="" value="">Select question 05</option>
+                                                                   <option value="">Option 01</option>
+                                                                   <option value="">Option 02</option>
+                                                                   <option value="">Option 03</option>
+                                                               </select>
+                                                           </div>
+                                                       <!-- question05 --> 
+                                                   </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- Checkin Modal -->
+
+<!-- Quick ADD Modal -->
+<div class="modal fade" id="qaddModal" tabindex="-1" role="dialog" aria-labelledby="qaddModalLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Quick ADD</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form enctype="multipart/form-data" method="post" siq_id="">
+
+            <div class="row">
+                <div class="col">
+                    <!-- Appointment ID -->
+                     <div class="form-group">
+                      <label for="appointmentidName">Appointment ID</label>
+                      <input name="appointmentidName" class="form-control" id="appointmentidName" required="" type="text">
+                     </div>
+                    <!-- Appointment ID -->
+                </div>
+                <div class="col">
+                <!-- First Name -->
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input name="firstName" class="form-control" id="firstName" required="" type="text">
+                </div>
+                <!-- First Name -->  
+                </div>
+            </div> 
+            
+            <div class="row">
+                <div class="col">
+                    <!-- last Name -->
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input name="lastName" class="form-control" id="lastName" required="" type="text">
+                    </div>
+                    <!-- last Name --> 
+                </div>
+                <div class="col">
+                    <!-- Date -->
+                    <div class="form-group">
+                        <label for="date">Date Of Birth</label>
+                        <input type="date" class="form-control" name="date" id="date" placeholder="mm-dd-yyyy" required="">
+                        <span id="error_sc_date"></span>
+                    </div>
+                    <!-- Date -->
+                </div>
+            </div> 
+            
+            <div class="row">
+                <div class="col">
+                    <!-- locationname -->
+                    <div class="form-group">
+                        <label>Location Name</label>
+                        <select name="locationname" class="form-control" required="">
+                        <option value="" selected="">Choose Your Option</option>
+                        <option value="">Option 01</option>
+                        <option value="">Option 02</option>
+                        <option value="">Option 03</option>
+                        <option value="">Option 04</option>
+                        <option value="">Option 05</option>
+                        <option value="">Option 06</option>
+                        </select>
+                    </div>
+                    <!-- locationname -->
+                </div>
+                <div class="col">
+                    <!-- productname -->
+                    <div class="form-group">
+                        <label>Product</label>
+                        <select name="productname" class="form-control" required="">
+                        <option value="" selected="">Choose Your Option</option>
+                        <option value="">Option 01</option>
+                        <option value="">Option 02</option>
+                        <option value="">Option 03</option>
+                        <option value="">Option 04</option>
+                        <option value="">Option 05</option>
+                        <option value="">Option 06</option>
+                        </select>
+                    </div>
+                    <!-- productname -->
+                </div>
+            </div> 
+
+            <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover onsiteact-qadd-started onsiteact-qadd-success onsiteact-qadd-failed"><span >Quick ADD</span><i class="glyph-icon icon-arrow-right"></i></button>
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- Quick ADD Modal -->
+
+<!-- Upload Records Modal -->
+<div class="modal fade" id="uploadrModal" tabindex="-1" role="dialog" aria-labelledby="uploadrModalLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Upload Records</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
+
+          <!-- uploadrecord -->
+          <div class="form-group">
+                <input name="uploadrecord" class="form-control" id="uploadrecord" required="" type="file">
+                <label for="uploadrecord">Download Template</label>
+            </div>
+         <!-- uploadrecord -->
+
+         <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover onsiteact-uploadrec-started onsiteact-uploadrec-success onsiteact-uploadrec-failed"><span >Upload Record</span><i class="glyph-icon icon-arrow-right"></i></button>
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- Upload Records Modal -->
+
+<!-- Update Records Modal -->
+<div class="modal fade" id="updaterModal" tabindex="-1" role="dialog" aria-labelledby="updaterModalLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Update Records</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
+
+          <!-- uploadrecord -->
+          <div class="form-group">
+                <input name="uploadrecord" class="form-control" id="uploadrecord" required="" type="file">
+                <label for="uploadrecord">Download Template</label>
+            </div>
+         <!-- uploadrecord -->
+
+         <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover onsiteact-updaterec-started onsiteact-updaterec-success onsiteact-updaterec-failed"><span >Update Record</span><i class="glyph-icon icon-arrow-right"></i></button>
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- Update Records Modal -->
+
+<!-- Bootstrap Daterangepicker -->
+<script type="text/javascript" src="assets/widgets/daterangepicker/moment.js"></script>
+<script type="text/javascript" src="assets/widgets/daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="assets/widgets/daterangepicker/daterangepicker-demo.js"></script>
+
+<!-- Boostrap Tabs -->
+<script type="text/javascript" src="assets/widgets/tabs/tabs.js"></script>
+
+<!-- Input switch -->
+<link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch.css">
+<script type="text/javascript" src="assets/widgets/input-switch/inputswitch.js"></script>
+<script type="text/javascript">
+    /* Input switch */
+
+    $(function() { "use strict";
+        $('.input-switch').bootstrapSwitch();
+    });
+</script>
+<!-- Input switch -->
+
+<!-- Multi select -->
+<script type="text/javascript" src="assets/widgets/multi-select/multiselect.js"></script>
+<script type="text/javascript">
+    /* Multiselect inputs */
+
+    $(function() { "use strict";
+        $(".multi-select").multiSelect();
+        $(".ms-container").append('<i class="glyph-icon icon-exchange"></i>');
+    });
+</script>
+<!-- Multi select -->
+
+<!-- menu retractoff -->
+<script type="text/javascript">
+
+    $('.menu-open').click(function(e) {
+        e.stopPropagation();
+        $('li > .sidebar-submenu').hide();
+        $('.menu-open > .sidebar-submenu').toggle();
+    });
+</script>
+<!-- menu retractoff -->
+
+<!-- menu retract stop -->
+<script type="text/javascript">
+    $('.menu-dropdown').click(function(e) {
+        e.stopPropagation();
+    });
+    $('.menu-dropdown').click(function() {
+        $(".sidebar-submenu").toggle();
+    });
+</script>
+<!-- menu retract stop -->
+
+<!-- Chosen -->
+<script type="text/javascript" src="assets/widgets/chosen/chosen.js"></script>
+<script type="text/javascript" src="assets/widgets/chosen/chosen-demo.js"></script>
+<!-- Chosen -->
+
+    <!-- WIDGETS -->
+<script type="text/javascript" src="assets/tether/js/tether.js"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="assets/widgets/jgrowl-notifications/jgrowl.css">-->
+<script type="text/javascript" src="assets/widgets/jgrowl-notifications/jgrowl.js"></script>
+<script type="text/javascript" src="assets/widgets/jgrowl-notifications/jgrowl-demo.js"></script>
+
+<!-- Bootstrap Dropdown -->
+
+<!-- <script type="text/javascript" src="assets/widgets/dropdown/dropdown.js"></script> -->
+
+<!-- Bootstrap Tooltip -->
+
+<!-- <script type="text/javascript" src="assets/widgets/tooltip/tooltip.js"></script> -->
+
+<!-- Bootstrap Popover -->
+
+<!-- <script type="text/javascript" src="assets/widgets/popover/popover.js"></script> -->
+
+<!-- Bootstrap Progress Bar -->
+
+<script type="text/javascript" src="assets/widgets/progressbar/progressbar.js"></script>
+
+<!-- Bootstrap Buttons -->
+
+<!-- <script type="text/javascript" src="assets/widgets/button/button.js"></script> -->
+
+<!-- Bootstrap Collapse -->
+
+<!-- <script type="text/javascript" src="assets/widgets/collapse/collapse.js"></script> -->
+
+<!-- Superclick -->
+
+<script type="text/javascript" src="assets/widgets/superclick/superclick.js"></script>
+
+<!-- Input switch alternate -->
+
+<script type="text/javascript" src="assets/widgets/input-switch/inputswitch-alt.js"></script>
+
+<!-- Slim scroll -->
+
+<script type="text/javascript" src="assets/widgets/slimscroll/slimscroll.js"></script>
+
+<!-- Slidebars -->
+
+<script type="text/javascript" src="assets/widgets/slidebars/slidebars.js"></script>
+<script type="text/javascript" src="assets/widgets/slidebars/slidebars-demo.js"></script>
+
+<!-- PieGage -->
+
+<script type="text/javascript" src="assets/widgets/charts/piegage/piegage.js"></script>
+<script type="text/javascript" src="assets/widgets/charts/piegage/piegage-demo.js"></script>
+
+<!-- Screenfull -->
+
+<script type="text/javascript" src="assets/widgets/screenfull/screenfull.js"></script>
+
+<!-- Content box -->
+
+<script type="text/javascript" src="assets/widgets/content-box/contentbox.js"></script>
+
+<!-- Overlay -->
+
+<script type="text/javascript" src="assets/widgets/overlay/overlay.js"></script>
+
+<!-- Widgets init for demo -->
+
+<script type="text/javascript" src="assets/js-init/widgets-init.js"></script>
+
+<!-- Theme layout -->
+
+<script type="text/javascript" src="assets/themes/admin/layout.js"></script>
+
+<!-- Theme switcher -->
+
+<script type="text/javascript" src="assets/widgets/theme-switcher/themeswitcher.js"></script>
+
+<script type="text/javascript">
+    /* Datatable row highlight */
+
+    $(document).ready(function() {
+        var table = $('#datatable-row-highlight').DataTable();
+
+        $('#datatable-row-highlight tbody').on( 'click', 'tr', function () {
+            $(this).toggleClass('tr-selected');
+        } );
+    });
+
+
+
+    $(document).ready(function() {
+        $('.dataTables_filter input').attr("placeholder", "Search...");
+    });
+
+</script>
+
+</div>
+</body>
+</html>
