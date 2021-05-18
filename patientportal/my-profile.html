@@ -1,0 +1,1466 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title> View profile </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/icons/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/icons/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/icons/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/icons/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/images/icons/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+
+    <!-- HELPERS -->
+    <link rel="stylesheet" type="text/css" href="assets/helpers/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/helpers/backgrounds.css">
+    <link rel="stylesheet" type="text/css" href="assets/helpers/boilerplate.css">
+    <link rel="stylesheet" type="text/css" href="assets/helpers/border-radius.css">
+    <link rel="stylesheet" type="text/css" href="assets/helpers/grid.css">
+    <link rel="stylesheet" type="text/css" href="assets/helpers/page-transitions.css">
+    <link rel="stylesheet" type="text/css" href="assets/helpers/spacing.css">
+    <link rel="stylesheet" type="text/css" href="assets/helpers/typography.css">
+    <link rel="stylesheet" type="text/css" href="assets/helpers/utils.css">
+    <link rel="stylesheet" type="text/css" href="assets/helpers/colors.css">
+
+    <!-- ELEMENTS -->
+    <link rel="stylesheet" type="text/css" href="assets/elements/badges.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/buttons.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/content-box.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/dashboard-box.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/forms.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/images.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/info-box.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/invoice.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/loading-indicators.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/menus.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/panel-box.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/response-messages.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/responsive-tables.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/ribbon.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/social-box.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/tables.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/tile-box.css">
+    <link rel="stylesheet" type="text/css" href="assets/elements/timeline.css">
+
+
+
+    <!-- ICONS -->
+    <link rel="stylesheet" type="text/css" href="assets/icons/fontawesome/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/icons/linecons/linecons.css">
+    <link rel="stylesheet" type="text/css" href="assets/icons/spinnericon/spinnericon.css">
+
+
+    <!-- WIDGETS -->
+    <link rel="stylesheet" type="text/css" href="assets/widgets/accordion-ui/accordion.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/calendar/calendar.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/carousel/carousel.css">
+
+
+    <link rel="stylesheet" type="text/css" href="assets/widgets/chosen/chosen.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/colorpicker/colorpicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/datatable/datatable.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/datepicker/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/datepicker-ui/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/dialog/dialog.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/dropdown/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/dropzone/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/file-input/fileinput.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch-alt.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/ionrangeslider/ionrangeslider.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/jcrop/jcrop.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/jgrowl-notifications/jgrowl.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/loading-bar/loadingbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/maps/vector-maps/vectormaps.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/markdown/markdown.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/modal/modal.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/multi-select/multiselect.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/multi-upload/fileupload.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/nestable/nestable.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/noty-notifications/noty.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/popover/popover.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/pretty-photo/prettyphoto.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/progressbar/progressbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/range-slider/rangeslider.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/slider-ui/slider.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/tabs-ui/tabs.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/theme-switcher/themeswitcher.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/timepicker/timepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/tocify/tocify.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/tooltip/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/touchspin/touchspin.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/uniform/uniform.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/wizard/wizard.css">
+    <link rel="stylesheet" type="text/css" href="assets/widgets/xeditable/xeditable.css">
+
+    <!-- SNIPPETS -->
+    <link rel="stylesheet" type="text/css" href="assets/snippets/chat.css">
+    <link rel="stylesheet" type="text/css" href="assets/snippets/files-box.css">
+    <link rel="stylesheet" type="text/css" href="assets/snippets/login-box.css">
+    <link rel="stylesheet" type="text/css" href="assets/snippets/notification-box.css">
+    <link rel="stylesheet" type="text/css" href="assets/snippets/progress-box.css">
+    <link rel="stylesheet" type="text/css" href="assets/snippets/todo.css">
+    <link rel="stylesheet" type="text/css" href="assets/snippets/user-profile.css">
+    <link rel="stylesheet" type="text/css" href="assets/snippets/mobile-navigation.css">
+
+    <!-- Admin theme -->
+    <link rel="stylesheet" type="text/css" href="assets/themes/admin/layout.css">
+    <link rel="stylesheet" type="text/css" href="assets/themes/admin/color-schemes/default.css">
+
+    <!-- Components theme -->
+    <link rel="stylesheet" type="text/css" href="assets/themes/components/default.css">
+    <link rel="stylesheet" type="text/css" href="assets/themes/components/border-radius.css">
+
+    <!-- Admin responsive -->
+    <link rel="stylesheet" type="text/css" href="assets/helpers/responsive-elements.css">
+    <link rel="stylesheet" type="text/css" href="assets/helpers/admin-responsive.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="users/css/custom.css">
+
+    <!-- JS Core -->
+    <script type="text/javascript" src="assets/js-core/jquery-core.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-core.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-widget.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-mouse.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-position.js"></script>
+    <!--<script type="text/javascript" src="assets/js-core/transition.js"></script>-->
+    <script type="text/javascript" src="assets/js-core/modernizr.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-cookie.js"></script>
+
+    <script type="text/javascript">
+            $(window).load(function(){
+                setTimeout(function() {
+                    $('#loading').fadeOut( 400, "linear" );
+                }, 300);
+            });
+    </script>
+</head>
+
+<body>
+    <div id="sb-site">
+
+        <div id="loading">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+
+        <div id="page-wrapper">
+            <div id="page-content-wrapper">
+                <div id="page-content">
+                    <div class="container">
+                        <!-- Uniform -->
+                        <!--<link rel="stylesheet" type="text/css" href="assets/widgets/uniform/uniform.css">-->
+                        <script type="text/javascript" src="assets/widgets/uniform/uniform.js"></script>
+                        <script type="text/javascript" src="assets/widgets/uniform/uniform-demo.js"></script>
+
+                        <!-- Boostrap Tabs -->
+                        <script type="text/javascript" src="assets/widgets/tabs/tabs.js"></script>
+
+                        <!-- Chosen -->
+                        <!--<link rel="stylesheet" type="text/css" href="assets/widgets/chosen/chosen.css">-->
+                        <script type="text/javascript" src="assets/widgets/chosen/chosen.js"></script>
+                        <script type="text/javascript" src="assets/widgets/chosen/chosen-demo.js"></script>
+
+                        <!-- Input switch -->
+                        <!--<link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch.css">-->
+                        <script type="text/javascript" src="assets/widgets/input-switch/inputswitch.js"></script>
+                        <script type="text/javascript">
+                            /* Input switch */
+
+                            $(function() { "use strict";
+                                $('.input-switch').bootstrapSwitch();
+                            });
+                        </script>
+
+                        <!-- Textarea -->
+                        <script type="text/javascript" src="assets/widgets/textarea/textarea.js"></script>
+                        <script type="text/javascript">
+                            /* Textarea autoresize */
+
+                            $(function() { "use strict";
+                                $('.textarea-autosize').autosize();
+                            });
+                        </script>
+
+                        <div class="row mailbox-wrapper">
+                            <div class="col-md-4">
+                                <div class="panel-layout">
+                                    <div class="panel-box">
+                                        <div class="panel-content image-box" >
+                                            <img src="users/img/logo.png" style="height: 100px; margin-top: 15px;" alt="">
+                                            <p class="font-weight-bold font-size-26 mt-15">Born From <span class="customColor">Care</span>, Treated through <span class="customColor">Compassion</span>, Built for <span class="customColor">Community</span></p>
+                                        </div>
+                                         
+                                        <ul class="list-group row list-group-icons mt-20">
+                                            <li class="col-md-6 col-xs-6 mb-20 active">
+                                                <a href="#tab-example-5" data-toggle="tab" class="list-group-item">
+                                                    <i class="fas fa-user fa-2x"></i>
+                                                    <br>
+                                                    Welcome
+                                                </a>
+                                            </li>
+                                            <li class="col-md-6 col-xs-6 mb-20">
+                                                <a href="#tab-example-3" data-toggle="tab" class="list-group-item">
+                                                    <i class="fas fa-vial fa-2x"></i>
+                                                    <br>
+                                                    Last Test
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="col-md-6 col-xs-6 mb-20">
+                                                <a href="#tab-example-2" data-toggle="tab" class="list-group-item">
+                                                    <i class="fas fa-history fa-2x"></i>
+                                                    <br>
+                                                    Testing History
+                                                </a>
+                                            </li>
+                                             
+                                        
+                                            <li class="col-md-6 col-xs-6 mb-20">
+                                                <a href="#tab-example-4" data-toggle="tab" class="list-group-item">
+                                                    <i class="fas fa-user-cog fa-2x"></i>
+                                                    <br>
+                                                    Personal Information
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="col-md-6 col-xs-6">
+                                                <a href="#tab-example-1" data-toggle="tab" class="list-group-item">
+                                                    <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+                                                    <br>
+                                                    Account Settings
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="col-md-6 col-xs-6">
+                                                <a href="#" class="list-group-item">
+                                                    <i class="fa fa-power-off fa-2x" aria-hidden="true"></i>
+                                                    <br>
+                                                    Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <button class="btn btn-success btn-block customPaddingbtn">Schedule Test</button>
+                                        <div class="panel-content pad15A bg-white radius-bottom-all-4 mt-20 socialBox">
+                                            <div class="clear profile-box">
+                                                <ul class="nav nav-pills nav-justified">
+                                                    <li>
+                                                        <a href="#" class="btn btn-sm bg-facebook">
+                                                            <span class="glyph-icon icon-separator">
+                                                                <i class="glyph-icon icon-facebook"></i>
+                                                            </span>
+                                                            <span class="button-content">
+                                                                Facebook
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="btn btn-sm bg-instagram bg-red">
+                                                            <span class="glyph-icon icon-separator">
+                                                                <i class="glyph-icon icon-instagram"></i>
+                                                            </span>
+                                                            <span class="button-content">
+                                                                Instagram
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="btn btn-sm bg-linkedin bg-blue-alt">
+                                                            <span class="glyph-icon icon-separator">
+                                                                <i class="glyph-icon icon-linkedin"></i>
+                                                            </span>
+                                                            <span class="button-content">
+                                                                linkedin
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="btn btn-sm bg-twitter">
+                                                            <span class="glyph-icon icon-separator">
+                                                                <i class="glyph-icon icon-twitter"></i>
+                                                            </span>
+                                                            <span class="button-content">
+                                                                Twitter
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="mrg15T mrg15B"></div>
+                                            <blockquote class="font-black">
+                                                <p class="customTextSize5 font-black mb-20">360 Clinic</p>
+                                                <p><span class="font-weight-bold customTextSize6">Email:</span> <span class="customTextSize6">inquiries@360clinic.md</span></p>
+                                                <p><span class="font-weight-bold customTextSize6">Website:</span> <span class="customTextSize6">www.360clinic.md</span></p>
+                                                <p><span class="font-weight-bold customTextSize6">Hotline:</span> <span class=" customTextSize6">1-800-446-8888</span></p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="example-box-wrapper">
+                                            
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade" id="tab-example-1">
+                                            <div class="alert alert-close alert-success">
+                                                <a href="#" title="Close" class="glyph-icon alert-close-btn icon-remove"></a>
+                                                <div class="bg-green alert-icon">
+                                                    <i class="glyph-icon icon-check"></i>
+                                                </div>
+                                                <div class="alert-content">
+                                                    <h4 class="alert-title">Example Infobox</h4>
+                                                    <p>Lorem ipsum dolor sic amet dixit tu...</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="content-box mrg15B">
+                                                        <h3 class="content-box-header clearfix">
+                                                            Change Password
+                                                            <div class="font-size-11 float-right">
+                                                                <a href="#" title="">
+                                                                    <i class="glyph-icon mrg5R opacity-hover icon-plus"></i>
+                                                                </a>
+                                                                <a href="#" title="">
+                                                                    <i class="glyph-icon opacity-hover icon-cog"></i>
+                                                                </a>
+                                                            </div>
+                                                        </h3>
+                                                        <div class="content-box-wrapper pad0T clearfix">
+                                                            <form class="form-horizontal pad15L pad15R bordered-row">
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-6 control-label">Old password:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="text" class="form-control" id="" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-6 control-label">New password:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="text" class="form-control" id="" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-6 control-label">Repeat password:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="text" class="form-control" id="" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="button-pane mrg20T">
+                                                            <button class="btn btn-success">Update Password</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="tab-example-2">
+                                            <div class="content-box pad25A">
+                                                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="datatable-example">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Location Name</th>
+                                                            <th>Test Date</th>
+                                                            <th>Result</th>
+                                                            <th>View</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Test Location</td>
+                                                            <td>10/02/2021</td>
+                                                            <td>Negative</td>
+                                                            <td>
+                                                                <a href="#" data-toggle="modal" data-target="#viewTest">View</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Test Location</td>
+                                                            <td>10/02/2021</td>
+                                                            <td>Positive</td>
+                                                            <td>
+                                                                <a href="#" data-toggle="modal" data-target="#viewTest">View</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Test Location</td>
+                                                            <td>10/02/2021</td>
+                                                            <td>Retest</td>
+                                                            <td>
+                                                                <a href="#" data-toggle="modal" data-target="#viewTest">View</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade in" id="tab-example-3">
+                                            <div class="row content-box pad25A">
+                                                <div class="col-xl-12">      
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-xs-6">
+                                                            <img style="height: 70px;" src="users/img/logo.png" alt="" id="logo" class="mt-3">
+                                                        </div>
+                                                        <div class="col-lg-6 col-xs-6 text-right">
+                                                            <img width="100" height="100" src="users/img/360qr.png" alt="" id="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <h2 class="font-weight-bold">Hello Ravi,</h1>
+                                                    <div class="botmBorder"></div>
+                                                </div>
+
+                                                <div class="col-md-12" style="margin-top: 20px;">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <table class="table-condensed">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="2"><h3 class="font-weight-bold mb-20">Patient Information</h3></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Full Name:</span></th>
+                                                                        <td class="text-left">Ravi Agrawal</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">DOB:</span></th>
+                                                                        <td class="text-left">123123</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Patient ID:</span></th>
+                                                                        <td class="text-left">123123</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Address:</span></th>
+                                                                        <td class="text-left">123123</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">PASSPORT:</span></th>
+                                                                        <td class="text-left">123123</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">DRIVERS LICENSE NUMBER:</span></th>
+                                                                        <td class="text-left">123123</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Phone:</span></th>
+                                                                        <td class="text-left">123123</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Email:</span></th>
+                                                                        <td class="text-left">123123</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                        <div class="col-md-3 col-sm-6">
+                                                            <table class="table-condensed">
+                                                                <thead>
+                                                                    <tr >
+                                                                        <th colspan="2"><h3 class="font-weight-bold mb-20">Accession</h3></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Test Kit#:</span></th>
+                                                                        <td class="text-left">asdasdasd</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Appointment ID:</span></th>
+                                                                        <td class="text-left">asdasdasd</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Test Type:</span></th>
+                                                                        <td class="text-left">asdasdasd</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Collection Type:</span></th>
+                                                                        <td class="text-left">asdasdasd</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Collected Date:</span></th>
+                                                                        <td class="text-left">asdasdasd</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Result Date:</span></th>
+                                                                        <td class="text-left">asdasdasd</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <table class="table-condensed">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th  colspan="2"><h3 class="font-weight-bold mb-20">Physician</h3></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Name of Provider:</span></th>
+                                                                        <td class="text-left">Dr. Nguyen, Linh</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Location Name:</span></th>
+                                                                        <td class="text-left">123123</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <table class="table-condensed">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th  colspan="2"><h3 class="font-weight-bold mb-20">Laboratory</h3></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Testing Lab:</span></th>
+                                                                        <td class="text-left">asdasdasd</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">CAP#:</span></th>
+                                                                        <td class="text-left">asdasdasd</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">CLIA#:</span></th>
+                                                                        <td class="text-left">asdasdasd</td>
+                                                                    </tr>
+                
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold">Laboratory Director#:</span></th>
+                                                                        <td class="text-left">asdasdasd</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <div class="botmBorder"></div>
+                                                </div>
+                                                        
+
+                                                <div class="col-md-12" style="margin-bottom: 20px;">
+                                                    <div class="col-md-2">
+                                                        <img src="users/img/negative.PNG"  class="mt-3 resultimgSize">
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <div>
+                                                            <h3 class="resultSize" >NEGATIVE</h3>
+                                                            <p class="resultSizeP">A negative result means that the virus was not detected in the sample you provided.
+                                                                There suit suggests you were negative at the time of testing</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <h4 class="font-weight-bold">HOW ACCURATE IS THE TEST?</h4>
+                                                <p>The sensitivity of the test refers to the false negative rate and is expressed as a percentage. The PCR test for antigens has a minimum sensitivity of 98% if performed correctly. This means that, if performed correctly, out of every 100 people who have virus antigen on the swab, 2 people will falsely be given a negative result.</p>
+
+                                                <h4 class="font-weight-bold" style="margin-top: 20px;">WHAT DO MY RESULTS MEAN?</h4>
+                                                <p>A negative PCR result could mean that you are not currently infected by the virus. As you can see from the sensitivity, if the swab is performed correctly, it is highly likely that you do not carry the virus. However, the swab is difficult to perform and a poor quality sample reduces the sensitivity and therefore likelihood of false negative result. Alternatively, the virus may not be present at the site the sample was taken from. Timing may also be an issue: it could be too early or too late in the infection to detect replicating virus.</p>
+
+                                                <div class="botmBorder"></div>
+
+                                                <h3 class="font-weight-bold">LIMITATIONS</h3>
+
+                                                <p>All laboratory tests have limitations. Test results and interpretation are based on the proper identification of the submitted specimen. In very rare instances, errors may result due to mix-up or co-mingling of specimens. Positive results do not imply that there are no other contributions, genetic or otherwise, to the patient's current health state, and negative results do not rule out infection entirely. This test is only valid for the detection of the SARS-CoV-2 virus. Efforts have been made in the design of this test to minimize the chances of a false positive result due to the presence of other infectious agents, but this cannot be ruled out. False negative results may occur if the virus is not present in the tested specimen or is present at a very low level.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane pad0A fade" id="tab-example-4">
+                                            <div class="content-box">
+                                                <h2 class="font-weight-bold text-center" style="margin-top: 15px; font-weight: 800;">Demographics</h2>
+                                                <form class="form-horizontal pad15L pad15R bordered-row">
+                                                    <div class="form-group remove-border">
+                                                        <label class="col-sm-3 control-label">First Name:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="" placeholder="First name...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Last Name:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="" placeholder="Last name...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Date of birth:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="" placeholder="Date of birth...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Gender:</label>
+                                                        <div class="col-sm-6">
+                                                            <select name="gender" id="gender" class="form-control">
+                                                                <option value="" selected="">Select</option>
+                                                                <option value="Male">Male</option>
+                                                                <option value="Female">Female</option>
+                                                                <option value="Other">Other</option>
+                                                                <option value="Prefer Not To Say">Prefer Not To Say</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Gender Identity:</label>
+                                                        <div class="col-sm-6">
+                                                            <select name="gender" id="gender" class="form-control">
+                                                                <option value="" selected="">Select</option>
+                                                                <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+                                                                <option value="Asian">Asian</option>
+                                                                <option value="Black or African American">Black or African American</option>
+                                                                <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+                                                                <option value="White">White</option>
+                                                                <option value="Other">Other</option>
+                                                                <option value="Prefer Not To Say">Prefer Not To Say</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Sexual Orientation:</label>
+                                                        <div class="col-sm-6">
+                                                            <select name="sexual_orientation" id="sexual_orientation" class="form-control">
+                                                                <option value="" selected="">Select</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Phone Number:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Phone Number...">
+                                                        </div>
+                                                        <div class="col-sm-1">
+                                                            <a href="#" class="btn btn-primary" onclick="FunctionPhone()">Verify Phone Number</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="phoneOTP" style="display: none;">
+                                                        <label class="col-sm-3 control-label">Enter OTP:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="" placeholder="Enter OTP...">
+                                                        </div>
+                                                        <div class="col-sm-1">
+                                                            <a href="#" class="btn btn-primary">Submit</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Phone Type:</label>
+                                                        <div class="col-sm-6">
+                                                            <select name="phone_type" id="phone_type" name="phone_type" class="form-control">
+                                                                <option value="" selected="">Select</option>
+                                                                <option value="Mobile">Mobile</option>
+                                                                <option value="Home">Home</option>
+                                                                <option value="Work">Work</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Email:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="" placeholder="Email...">
+                                                        </div>
+                                                        <div class="col-sm-1">
+                                                            <a href="#" class="btn btn-primary" onclick="FunctionEmail()">Verify Email</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="emailOTP" style="display: none;">
+                                                        <label class="col-sm-3 control-label">Enter OTP:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="" placeholder="Enter OTP...">
+                                                        </div>
+                                                        <div class="col-sm-1">
+                                                            <a href="#" class="btn btn-primary">Submit</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Race :</label>
+                                                        <div class="col-sm-6">
+                                                            <select name="race" id="race" class="form-control">
+                                                                <option value="" selected="">Select</option>
+                                                                <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+                                                                <option value="Asian">Asian</option>
+                                                                <option value="Black or African American">Black or African American</option>
+                                                                <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+                                                                <option value="White">White</option>
+                                                                <option value="Other">Other</option>
+                                                                <option value="Prefer Not To Say">Prefer Not To Say</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Ethnicity :</label>
+                                                        <div class="col-sm-6">
+                                                            <select name="ethnicity" id="ethnicity" class="form-control">
+                                                                <option value="" selected="">Select</option>
+                                                                <option value="Hispanic or Latino">Hispanic or Latino</option>
+                                                                <option value="Not Hispanic or Latino">Not Hispanic or Latino</option>
+                                                                <option value="Native American">Native American</option>
+                                                                <option value="Other">Other</option>
+                                                                <option value="Prefer Not To Say">Prefer Not To Say</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Address:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="" placeholder="Address...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Street:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="" placeholder="Street...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Unit/APT:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="" placeholder="Unit/APT...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">City:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" id="" placeholder="City...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">State:</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-control select2" name="state" id="state" style="width: 100%;">
+                                                            <option value="" selected disabled>Select</option>
+                                                            <option value="Alabama">Alabama</option>
+                                                            <option value="Alaska">Alaska</option>
+                                                            <option value="Arizona">Arizona</option>
+                                                            <option value="Arkanasas">Arkanasas</option>
+                                                            <option value="California">California</option>
+                                                            <option value="Colorado">Colorado</option>
+                                                            <option value="Connecticut">Connecticut</option>
+                                                            <option value="Delaware">Delaware</option>
+                                                            <option value="Florida">Florida</option>
+                                                            <option value="Georgia">Georgia</option>
+                                                            <option value="Hawaii">Hawaii</option>
+                                                            <option value="Idaho">Idaho</option>
+                                                            <option value="Illinois">Illinois</option>
+                                                            <option value="Indiana">Indiana</option>
+                                                            <option value="Iowa">Iowa</option>
+                                                            <option value="Kankas">Kankas</option>
+                                                            <option value="Kentucky">Kentucky</option>
+                                                            <option value="Louisiana">Louisiana</option>
+                                                            <option value="Maine">Maine</option>
+                                                            <option value="Maryland">Maryland</option>
+                                                            <option value="Massachusetts">Massachusetts</option>
+                                                            <option value="Michigan">Michigan</option>
+                                                            <option value="Minnesota">Minnesota</option>
+                                                            <option value="Mississippi">Mississippi</option>
+                                                            <option value="Missouri">Missouri</option>
+                                                            <option value="Montana">Montana</option>
+                                                            <option value="Nebraska">Nebraska</option>
+                                                            <option value="Nevada">Nevada</option>
+                                                            <option value="New Hampshire">New Hampshire</option>
+                                                            <option value="New Jersey">New Jersey</option>
+                                                            <option value="New Mexico">New Mexico</option>
+                                                            <option value="New York">New York</option>
+                                                            <option value="North Carolina">North Carolina</option>
+                                                            <option value="North Dakota">North Dakota</option>
+                                                            <option value="Ohio">Ohio</option>
+                                                            <option value="Oklahoma">Oklahoma</option>
+                                                            <option value="Oregon">Oregon</option>
+                                                            <option value="Pennsylvania">Pennsylvania</option>
+                                                            <option value="Rhode Island">Rhode Island</option>
+                                                            <option value="South Carolina">South Carolina</option>
+                                                            <option value="South Dakota">South Dakota</option>
+                                                            <option value="Tennessee">Tennessee</option>
+                                                            <option value="Texas">Texas</option>
+                                                            <option value="Utah">Utah</option>
+                                                            <option value="Vermont">Vermont</option>
+                                                            <option value="Virginia">Virginia</option>
+                                                            <option value="Washington">Washington</option>
+                                                            <option value="Washington, D.C.(DC)">Washington, D.C.(DC)</option>
+                                                            <option value="West Virginia">West Virginia</option>
+                                                            <option value="Wisconsin">Wisconsin</option>
+                                                            <option value="Wyoming">Wyoming</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label">Zip:</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control zip-inputmask mb-20" id="" placeholder="Zip...">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div class="content-box">
+                                                <h2 class="font-weight-bold text-center mt-15">Insurance</h2>
+                                                <form class="form-horizontal pad15L pad15R bordered-row">
+
+                                                    <div class="form-group remove-border">
+                                                        <label class="col-sm-3 control-label">Insurance:</label>
+                                                        <div class="col-sm-6">
+                                                            <select name="" id="optionSelector" class="form-control">
+                                                                <option value="">Select</option>
+                                                                <option value="yes">Yes</option>
+                                                                <option value="no">No</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--YES-->
+                                                    <div id="yes" class="insuranceOption bordered-row" style="display:none">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Insurance Provider:</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control" id="" placeholder="Insurance Provider...">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Insurance Member ID:</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control" id="" placeholder="Insurance Member ID...">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Insurance Group Number:</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control" id="" placeholder="Insurance Group Number...">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Relationship to this Insured:</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control" id="" placeholder="Relationship to this Insured...">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Insurance Front Image:</label>
+                                                            <div class="col-sm-6">
+                                                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                                    <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+                                                                    <div>
+                                                                    <span class="btn btn-default btn-file">
+                                                                        <span class="fileinput-new">Select image</span>
+                                                                        <span class="fileinput-exists">Change</span>
+                                                                        <input type="file" name="...">
+                                                                    </span>
+                                                                        <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Insurance Back Image:</label>
+                                                            <div class="col-sm-6">
+                                                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                                    <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+                                                                    <div>
+                                                                    <span class="btn btn-default btn-file">
+                                                                        <span class="fileinput-new">Select image</span>
+                                                                        <span class="fileinput-exists">Change</span>
+                                                                        <input type="file" name="...">
+                                                                    </span>
+                                                                        <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--YES-->
+
+                                                    <!--NO-->
+                                                    <div id="no" class="insuranceOption bordered-row" style="display:none">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Driving License Number:</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control" id="" placeholder="Driving License Number...">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Social Security Number:</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control ssn-inputmask" placeholder="Social Security Number...">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Identification Type:</label>
+                                                            <div class="col-sm-6">
+                                                                <select name="identification_type" id="identification_type" class="form-control">
+                                                                    <option value="" selected="">Select</option>
+                                                                    <option value="Driver License">Driver License</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">DL Image:</label>
+                                                            <div class="col-sm-6">
+                                                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                                    <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+                                                                    <div>
+                                                                    <span class="btn btn-default btn-file">
+                                                                        <span class="fileinput-new">Select image</span>
+                                                                        <span class="fileinput-exists">Change</span>
+                                                                        <input type="file" name="...">
+                                                                    </span>
+                                                                        <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--NO-->
+                                                            
+                                                </form>
+                                            </div>
+
+
+                                            <div class="button-pane mrg20T">
+                                                <button class="btn btn-info">Save</button>
+                                                <button class="btn btn-link font-gray-dark">Cancel</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade  active in" id="tab-example-5">
+                                            <div class="row content-box pad25A">
+                                                <div class="col-md-12">
+                                                    <p class="font-weight-bold customTextSize">Welcome Ravi</p>
+                                                    <div class="botmBorder"></div>
+                                                </div>
+                                                
+                                                <div class="col-md-12">
+                                                    <table class="table-condensed">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th><span class="font-weight-bold customTextSize7">Last Test Date:</span></th>
+                                                                <td class="customTextSize7 text-right">04/26/21</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <th><span class="font-weight-bold customTextSize7">Last Test Location:</span></th>
+                                                                <td class="customTextSize7 text-right">Arizona</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <th><span class="font-weight-bold customTextSize7">Last Test Result:</span></th>
+                                                                <td class="customTextSize2">NEGATIVE</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                
+                                                <div class="col-md-12">
+                                                    <div class="botmBorder"></div>
+                                                    <p class="font-weight-bold mb-30 customTextSize1 text-success text-center">Upcoming Appointment</p>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <table class="table-condensed mbp-20">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold customTextSize8">Location:</span></th>
+                                                                        <td class="customTextSize8 text-left TR">Test Location</td>
+                                                                    </tr>
+            
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold customTextSize8">Address:</span></th>
+                                                                        <td class="customTextSize8 text-left TR">Mukherjee chowk</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <table class="table-condensed">
+                                                                <tbody>
+            
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold customTextSize8">Date:</span></th>
+                                                                        <td class="customTextSize8  text-left TR">02-02-2021</td>
+                                                                    </tr>
+            
+                                                                    <tr>
+                                                                        <th><span class="font-weight-bold customTextSize8">Time:</span></th>
+                                                                        <td class="customTextSize8  text-left TR">02:00pm - 02:30pm</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="botmBorder"></div>
+                                                </div>
+
+                                                <div class="col-md-12 mb-20 mt-20 text-center">
+                                                    <p class="font-weight-bold mb-30 customTextSize1">Our Process</p>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="https://static.wixstatic.com/media/c86cbb_29e189db9e24431eac9c347b03503b43~mv2.png/v1/crop/x_12,y_436,w_477,h_337/fill/w_120,h_80,al_c,q_85,usm_0.66_1.00_0.01/Untitled%20design.webp" alt="" style="width: 120px; height: 86px; object-fit: cover; margin-bottom: 20px;">
+                                                            <p class="font-weight-bold">Register Online <br>< 3 min</p>
+                                                            <p class="">Complete a short online health questionnaire using our secure platform.</p>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-3">
+                                                            <img src="https://static.wixstatic.com/media/c86cbb_29e189db9e24431eac9c347b03503b43~mv2.png/v1/crop/x_0,y_27,w_382,h_421/fill/w_96,h_96,al_c,q_85,usm_0.66_1.00_0.01/Untitled%20design.webp" alt="" style="width: 96px; height: 96px; object-fit: cover; margin-bottom: 10px;">
+                                                            <p class="font-weight-bold">Get Tested <br>< 30 min</p>
+                                                            <p class="">Arrive at your registered appointment time, stay in your car, and follow the posted signs. Our clinical team will walk you through collecting your own sample.</p>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-2">
+                                                            <img src="https://static.wixstatic.com/media/c34cc9_18bfeed5f6ca4e38bbb31c7c06043217~mv2.png/v1/fill/w_99,h_99,al_c,q_85,usm_0.66_1.00_0.01/no%20cost.webp" alt="" style="width: 96px; height: 96px; object-fit: cover; margin-bottom: 10px;">
+                                                            <p class="font-weight-bold">No Cost <br> Medical Evaluation</p>
+                                                            <p class="">Included in the COVID Testing Process</p>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-2">
+                                                            <img src="https://static.wixstatic.com/media/c86cbb_29e189db9e24431eac9c347b03503b43~mv2.png/v1/crop/x_424,y_83,w_265,h_646/fill/w_47,h_80,al_c,q_85,usm_0.66_1.00_0.01/Untitled%20design.webp" alt="" style="height: 96px; object-fit: cover; margin-bottom: 10px;">
+                                                            <p class="font-weight-bold">Receive Results <br> 24 - 72 hrs</p>
+                                                            <p class="">Your results will be sent to you on a secure, HIPAA compliant system, by your selected preference – text or email.</p>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-3">
+                                                            <img src="https://static.wixstatic.com/media/c86cbb_29e189db9e24431eac9c347b03503b43~mv2.png/v1/crop/x_127,y_785,w_461,h_365/fill/w_110,h_80,al_c,q_85,usm_0.66_1.00_0.01/Untitled%20design.webp" alt="" style="height: 96px; object-fit: cover; margin-bottom: 10px;">
+                                                            <p class="font-weight-bold"><strong class="text-danger">*</strong>Telemedince Consultation <br>< 24 hrs</p>
+                                                            <p class="">Our providers / physicians will follow up with you to address any and all of concerns. We’re here for you.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12 text-center">
+                                                    <p class="font-weight-bold mb-20 customTextSize4">Please Bring To Your Appointment</p>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <img src="https://static.wixstatic.com/media/c86cbb_d640eb4277ed4a2291df6313a21073ed~mv2.png/v1/fill/w_75,h_80,al_c,q_85,usm_0.66_1.00_0.01/icon1-1.webp" alt="" style="height: 86px; object-fit: cover; margin-bottom: 20px;">
+                                                            <p class="font-weight-bold">Goverment ID</p>
+                                                            <p class="">Valid picture ID with address</p>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-4">
+                                                            <img src="https://static.wixstatic.com/media/c86cbb_a54cb7773dfe4e869192093d93ce100e~mv2.png/v1/fill/w_72,h_71,al_c,q_85,usm_0.66_1.00_0.01/icon2-1.webp" alt="" style="height: 96px; object-fit: cover; margin-bottom: 10px;">
+                                                            <p class="font-weight-bold">Cell Phone</p>
+                                                            <p class="">For communication during the test and listening to & following instructions.</p>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-4">
+                                                            <img src="https://static.wixstatic.com/media/c86cbb_12a4e39516e648f1964abb0d6c8b53b8~mv2.png/v1/fill/w_78,h_71,al_c,q_85,usm_0.66_1.00_0.01/icon3-1.webp" alt="" style="height: 96px; object-fit: cover; margin-bottom: 10px;">
+                                                            <p class="font-weight-bold">Insurance Card</p>
+                                                            <p class="">After registration, your details will be validated and a photo with your insurance ID will be taken. <br> <small class="font-italic">*You will not be charged w/o insurance.</small></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VewResult Modal Start -->
+          <div class="modal fade" id="viewTest" tabindex="-1" role="dialog" aria-labelledby="viewTestLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title font-weight-bold" id="viewTestLabel">View Result</h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row content-box pad25A">
+                        <div class="col-xl-12">      
+                            <div class="row">
+                                <div class="col-lg-6 col-xs-6">
+                                    <img style="height: 70px;" src="users/img/logo.png" alt="" id="logo" class="mt-3">
+                                </div>
+                                <div class="col-lg-6 col-xs-6 text-right">
+                                    <img width="100" height="100" src="users/img/360qr.png" alt="" id="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="botmBorder"></div>
+                        </div>
+
+                        <div class="col-md-12" style="margin-top: 20px;">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <table class="table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2"><h3 class="font-weight-bold mb-20">Patient Information</h3></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th><span class="font-weight-bold">Full Name:</span></th>
+                                                <td class="text-left">Ravi Agrawal</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">DOB:</span></th>
+                                                <td class="text-left">123123</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">Patient ID:</span></th>
+                                                <td class="text-left">123123</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">Address:</span></th>
+                                                <td class="text-left">123123</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">PASSPORT:</span></th>
+                                                <td class="text-left">123123</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">DRIVERS LICENSE NUMBER:</span></th>
+                                                <td class="text-left">123123</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">Phone:</span></th>
+                                                <td class="text-left">123123</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">Email:</span></th>
+                                                <td class="text-left">123123</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <table class="table-condensed">
+                                        <thead>
+                                            <tr >
+                                                <th colspan="2"><h3 class="font-weight-bold mb-20">Accession</h3></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th><span class="font-weight-bold">Test Kit#:</span></th>
+                                                <td class="text-left">asdasdasd</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">Appointment ID:</span></th>
+                                                <td class="text-left">asdasdasd</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">Test Type:</span></th>
+                                                <td class="text-left">asdasdasd</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">Collection Type:</span></th>
+                                                <td class="text-left">asdasdasd</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">Collected Date:</span></th>
+                                                <td class="text-left">asdasdasd</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">Result Date:</span></th>
+                                                <td class="text-left">asdasdasd</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <table class="table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th  colspan="2"><h3 class="font-weight-bold mb-20">Physician</h3></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th><span class="font-weight-bold">Name of Provider:</span></th>
+                                                <td class="text-left">Dr. Nguyen, Linh</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">Location Name:</span></th>
+                                                <td class="text-left">123123</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <table class="table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th  colspan="2"><h3 class="font-weight-bold mb-20">Laboratory</h3></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th><span class="font-weight-bold">Testing Lab:</span></th>
+                                                <td class="text-left">asdasdasd</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">CAP#:</span></th>
+                                                <td class="text-left">asdasdasd</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">CLIA#:</span></th>
+                                                <td class="text-left">asdasdasd</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th><span class="font-weight-bold">Laboratory Director#:</span></th>
+                                                <td class="text-left">asdasdasd</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="botmBorder"></div>
+                        </div>
+                                
+
+                        <div class="col-md-12" style="margin-bottom: 20px;">
+                            <div class="col-md-2">
+                                <img src="users/img/negative.PNG"  class="mt-3 resultimgSize">
+                            </div>
+                            <div class="col-md-10 mb-30">
+                                <div>
+                                    <h3 class="resultSize" >NEGATIVE</h3>
+                                    <p class="resultSizeP">A negative result means that the virus was not detected in the sample you provided.
+                                        There suit suggests you were negative at the time of testing</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <img src="users/img/positive.PNG"  class="mt-3 resultimgSize">
+                            </div>
+                            <div class="col-md-10 mb-30">
+                                <div>
+                                    <h3 class="resultSize" >POSITIVE</h3>
+                                    <p class="resultSizeP">A positive result means that the virus was detected in the sample you provided.
+                                        There suit suggests you were positive at the time of testing</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <img src="users/img/retest.png"  class="mt-3 resultimgSize">
+                            </div>
+                            <div class="col-md-10 mb-30">
+                                <div>
+                                    <h3 class="resultSize" >Retest</h3>
+                                    <p class="resultSizeP">NOT SUFFICIENT SAMPLE</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="font-weight-bold">HOW ACCURATE IS THE TEST?</h4>
+                        <p>The sensitivity of the test refers to the false negative rate and is expressed as a percentage. The PCR test for antigens has a minimum sensitivity of 98% if performed correctly. This means that, if performed correctly, out of every 100 people who have virus antigen on the swab, 2 people will falsely be given a negative result.</p>
+
+                        <h4 class="font-weight-bold" style="margin-top: 20px;">WHAT DO MY RESULTS MEAN?</h4>
+                        <p>A negative PCR result could mean that you are not currently infected by the virus. As you can see from the sensitivity, if the swab is performed correctly, it is highly likely that you do not carry the virus. However, the swab is difficult to perform and a poor quality sample reduces the sensitivity and therefore likelihood of false negative result. Alternatively, the virus may not be present at the site the sample was taken from. Timing may also be an issue: it could be too early or too late in the infection to detect replicating virus.</p>
+
+                        <div class="botmBorder"></div>
+
+                        <h3 class="font-weight-bold">LIMITATIONS</h3>
+
+                        <p>All laboratory tests have limitations. Test results and interpretation are based on the proper identification of the submitted specimen. In very rare instances, errors may result due to mix-up or co-mingling of specimens. Positive results do not imply that there are no other contributions, genetic or otherwise, to the patient's current health state, and negative results do not rule out infection entirely. This test is only valid for the detection of the SARS-CoV-2 virus. Efforts have been made in the design of this test to minimize the chances of a false positive result due to the presence of other infectious agents, but this cannot be ruled out. False negative results may occur if the virus is not present in the tested specimen or is present at a very low level.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- VewResult Modal End -->
+
+        <!-- WIDGETS -->
+        <script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>
+
+        <!-- Bootstrap Dropdown -->
+        <!-- <script type="text/javascript" src="assets/widgets/dropdown/dropdown.js"></script> -->
+        <!-- Bootstrap Tooltip -->
+        <!-- <script type="text/javascript" src="assets/widgets/tooltip/tooltip.js"></script> -->
+        <!-- Bootstrap Popover -->
+        <!-- <script type="text/javascript" src="assets/widgets/popover/popover.js"></script> -->
+
+        <!-- Bootstrap Progress Bar -->
+        <script type="text/javascript" src="assets/widgets/progressbar/progressbar.js"></script>
+
+        <!-- Bootstrap Buttons -->
+        <!-- <script type="text/javascript" src="assets/widgets/button/button.js"></script> -->
+        <!-- Bootstrap Collapse -->
+        <!-- <script type="text/javascript" src="assets/widgets/collapse/collapse.js"></script> -->
+
+        <!-- Superclick -->
+        <script type="text/javascript" src="assets/widgets/superclick/superclick.js"></script>
+
+        <!-- Input switch alternate -->
+        <script type="text/javascript" src="assets/widgets/input-switch/inputswitch-alt.js"></script>
+
+        <!-- Slim scroll -->
+        <script type="text/javascript" src="assets/widgets/slimscroll/slimscroll.js"></script>
+
+        <!-- Slidebars -->
+        <script type="text/javascript" src="assets/widgets/slidebars/slidebars.js"></script>
+        <script type="text/javascript" src="assets/widgets/slidebars/slidebars-demo.js"></script>
+
+        <!-- PieGage -->
+        <script type="text/javascript" src="assets/widgets/charts/piegage/piegage.js"></script>
+        <script type="text/javascript" src="assets/widgets/charts/piegage/piegage-demo.js"></script>
+
+        <!-- Screenfull -->
+        <script type="text/javascript" src="assets/widgets/screenfull/screenfull.js"></script>
+
+        <!-- Content box -->
+        <script type="text/javascript" src="assets/widgets/content-box/contentbox.js"></script>
+
+        <!-- Overlay -->
+        <script type="text/javascript" src="assets/widgets/overlay/overlay.js"></script>
+
+        <!-- Widgets init for demo -->
+        <script type="text/javascript" src="assets/js-init/widgets-init.js"></script>
+
+        <!-- Theme layout -->
+        <script type="text/javascript" src="assets/themes/admin/layout.js"></script>
+
+        <!-- Theme switcher -->
+        <script type="text/javascript" src="assets/widgets/theme-switcher/themeswitcher.js"></script>
+
+        <!-- Data tables -->
+        <!--<link rel="stylesheet" type="text/css" href="../../assets/widgets/datatable/datatable.css">-->
+        <script type="text/javascript" src="assets/widgets/datatable/datatable.js"></script>
+        <script type="text/javascript" src="assets/widgets/datatable/datatable-bootstrap.js"></script>
+        <script type="text/javascript" src="assets/widgets/datatable/datatable-tabletools.js"></script>
+
+        <script type="text/javascript">
+
+            /* Datatables basic */
+
+            $(document).ready(function() {
+                $('#datatable-example').dataTable();
+            });
+
+            $(document).ready(function() {
+                $('.dataTables_filter input').attr("placeholder", "Search...");
+            });
+
+        </script>
+
+        <script>
+            $(function() {
+                $('#optionSelector').change(function(){
+                    $('.insuranceOption').hide();
+                    $('#' + $(this).val()).show();
+                });
+            });
+        </script>
+        
+        <script>
+            function FunctionPhone() {
+              var x = document.getElementById("phoneOTP");
+              if (x.style.display === "none") {
+                x.style.display = "block";
+              } else {
+                x.style.display = "none";
+              }
+            }
+        </script>
+        
+        <script>
+            function FunctionEmail() {
+              var x = document.getElementById("emailOTP");
+              if (x.style.display === "none") {
+                x.style.display = "block";
+              } else {
+                x.style.display = "none";
+              }
+            }
+        </script>
+        <script src="assets/inputmask/dist/mask.init.js"></script>
+        <script src="assets/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    </div>
+</body>
+</html>
