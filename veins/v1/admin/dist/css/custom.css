@@ -1,0 +1,138 @@
+table
+{
+	width: 100% !important;
+}
+
+.bg-indigo
+  {
+    background-color: #03A9F3;
+    color: white; 
+  }
+
+.md-form 
+{
+ position: relative;
+ margin-top: 1.5rem;
+ margin-bottom: 1.5rem;
+}
+
+.dashboardName
+{
+  font-weight: 900;
+  margin-top: 10px;
+  color: white;
+}
+
+.inputspacing
+{
+  margin-left: 10px;
+}
+
+.h3Spacing
+{
+  margin-bottom: 20px;
+}
+
+.boldText
+{
+  font-weight: 800 !important;
+}
+
+.boldsizeText
+{
+  font-size: 2em;
+  font-weight: 900 !important;
+}
+
+.boldsizeTextv2
+{
+  font-size: 15px;
+  font-weight: 900 !important;
+}
+
+
+.badgeBorder
+{
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.2rem;
+  font-weight: 400;
+  color: white;
+}
+
+.table thead th {
+  border-bottom: 2px solid #03A9F3 !important;
+}
+
+.bg-grey
+{
+  background-color: grey;
+}
+
+.trSpacing
+{
+  padding: 8px !important;
+  vertical-align: 0% !important;
+}
+
+
+.ul1 {
+  list-style: none;
+}
+.li1 {
+  display: inline-block;
+  margin-right: 15px;
+}
+.input1 {
+  visibility:hidden;
+}
+.label1 {
+  cursor: pointer;
+}
+.input1:checked + .label1 {
+  background: #03A9F3;
+  color: white;
+}
+.input1:checked + .label2 {
+  background: #03A9F3;
+  color: white;
+}
+
+/* Ratings */
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center
+}
+
+.rating>input {
+  display: none
+}
+
+.rating>label {
+  position: relative;
+  width: 1em;
+  font-size: 2vw;
+  color: #FFD600;
+  cursor: pointer
+}
+
+.rating>label::before {
+  content: "\2605";
+  position: absolute;
+  opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+  opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+  opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+  opacity: 0.4
+}
+/* Ratings */
