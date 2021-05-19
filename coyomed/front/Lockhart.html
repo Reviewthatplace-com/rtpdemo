@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Coyomed</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="assets/css/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" /> 
+  <link href="assets/css/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet" />
+
+  <!-- =======================================================
+   * Template Name: Coyomed - v1.0
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- Register -->
+  <div class="modal fade" id="register" tabindex="-1" aria-labelledby="ReviewLabel" aria-hidden="true" style="z-index: 1051 !important;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 125%;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ReviewLabel">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container text-center">
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Name</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="patientfullname" class=" slide" name="patientfullname" placeholder="Name">
+                  </div>
+            </div>
+  
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Email</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="patientfullname" class=" slide" name="patientfullname" placeholder="Email">
+                  </div>
+            </div>
+  
+            <div class="form-group">
+              <label id="formlable" for="birthDate" class="col-sm-12 font-weight-3 slide">Date of Birth</label>
+                <div class="col-sm-12">
+                  <input required type="date" id="birthDate" class=" slide" placeholder="Date of Birth" autofocus>
+                </div>
+            </div>
+  
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Password</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="patientfullname" class=" slide" name="patientfullname" placeholder="Password">
+                  </div>
+            </div>
+  
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Confirm Password</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="patientfullname" class=" slide" name="patientfullname" placeholder="Confirm Password">
+                  </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-12">
+                <button class="btn gradient-button gradient-button-1 font-weight-1 slide" id="rastepthreenext">Register</button> 
+              </div>
+            </div>
+            
+  
+            <hr>
+            <button class="loginBtn loginBtn--facebook slide">
+            Sign Up With with Facebook
+            </button>
+            
+            <button class="loginBtn loginBtn--google slide">
+            Sign Up With with Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Register -->
+  
+  <!-- Patient Login -->
+  <div class="modal fade" id="patientLogin" tabindex="-1" aria-labelledby="ReviewLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 125%;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ReviewLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container text-center">
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Username</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="patientfullname" class=" slide" name="patientfullname" placeholder="Username">
+                  </div>
+            </div>
+  
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Password</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="patientfullname" class=" slide" name="patientfullname" placeholder="Password">
+                  </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-12">
+                <button class="btn gradient-button gradient-button-1 font-weight-1 slide" id="">Login</button> 
+              </div>
+            </div>
+            
+            <small class="text-center slide">Not registered yet? <a href="#" data-bs-toggle="modal" data-bs-target="#register" class="font-weight-1 text-black">Register</a></small>
+            <hr>
+            <button class="loginBtn loginBtn--facebook slide">
+            Sign In with Facebook
+            </button>
+            
+            <button class="loginBtn loginBtn--google slide">
+            Sign In with Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Patient Login -->
+  
+  <!-- patientorpractice -->
+  <div class="modal fade" id="patientorpractice" tabindex="-1" aria-labelledby="ReviewLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 125%;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ReviewLabel">Are You...</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-md-12">
+                <button class="btn gradient-button gradient-button-1 font-weight-1 slide" onClick="parent.location='practiceRegister.html'">Practice User</button> 
+              </div>
+              <div class="col-md-12">
+                <button class="btn gradient-button gradient-button-1 font-weight-1 slide" data-bs-target="#register" data-bs-toggle="modal">Patient User</button> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- patientorpractice -->
+
+  <!-- Reviews Modal -->
+  <div class="modal fade" id="Review" tabindex="-1" aria-labelledby="ReviewLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ReviewLabel">Submit Your Reviews</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+
+            <div class="col-md-12">
+              <div class="col-md-12 m-t-15">
+                <div class="form-group">
+                  <label for="yourname" class="col-sm-12 font-weight-3 text-center">Your Name</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="yourname" class="reviewInput" name="yourname" placeholder="Name">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12 m-t-15">
+                <div class="form-group">
+                  <label for="youremail" class="col-sm-12 font-weight-3 text-center">Your Email</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="youremail" class="reviewInput" name="youremail" placeholder="Email">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12 m-t-15">
+                <div class="form-group">
+                  <label for="phone" class="col-sm-12 font-weight-3 text-center">Your Phone</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="phone" class="reviewInput" name="phone" placeholder="Phone">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12 m-t-15">
+              <div class="form-group">
+                <label for="phone" class="col-sm-12 font-weight-3 text-center">Your Thoughts</label>
+                <div class="col-sm-12">
+                  <textarea type="text" class="form-control textareaHeight text-center" placeholder="Your Thoughts" required=""></textarea>
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <div class="stars" data-rating="0">
+                <span class="star" title="Sucks big time">&nbsp;</span>
+                <span class="star" title="Kinda bad">&nbsp;</span>
+                <span class="star" title="Meh">&nbsp;</span>
+                <span class="star" title="Pretty good">&nbsp;</span>
+                <span class="star" title="Rocks!">&nbsp;</span>
+                </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary SubmitReview">Submit Review</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Reviews Modal -->
+
+  <!-- Put Reviews Modal -->
+  <div class="modal fade" id="ReviewHistory" tabindex="-1" aria-labelledby="ReviewLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 125%;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ReviewLabel">All Reviews</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+              <table class="table table-hover">
+                  <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Date</th>
+                          <th>Review</th>
+                          <th>Rating</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                      <td>
+                        Shakir Ansari
+                      </td>
+                      <td>
+                        02/08/21
+                      </td>
+                      <td>Outstanding Service</td>
+                      <td>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Ravi Agrawal
+                        </td>
+                        <td>
+                          02/08/21
+                        </td>
+                        <td>Great Service</td>
+                        <td>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Saimun Hasan
+                        </td>
+                        <td>
+                          02/08/21
+                        </td>
+                        <td>Excellent Service</td>
+                        <td>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                        </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Put Reviews Modal -->
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>Coyomed</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <ul>
+            <li class="dropdown"><a href="#"><span>Login</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a href="practiceLogin.html">Practice Login</a></li>
+                <li><a href="#" data-bs-target="#patientLogin" data-bs-toggle="modal">Patient Login</a></li>
+                <li><a href="#" data-bs-target="#patientorpractice" data-bs-toggle="modal">Register</a></li>
+              </ul>
+            </li>
+          </ul>
+          <li><a class="nav-link scrollto" href="allBlogs.html">Blogs</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <!-- Name & Description -->
+          <div class="content col-xl-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="content">
+              <img src="assets/img/rtplogo.png" alt="" style="height: 50px;">
+              <h3>Powers Pediatrics - Lockhart</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              </p>
+              <a href="#" class="about-btn">Call US <i class="bx bx-phone"></i></a><!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary customButton" data-bs-toggle="modal" data-bs-target="#Review"> Leave Review</button>
+          
+              <div class="row m-t-15"  data-aos="fade-up" data-aos-delay="100">
+                <div class="col-12">
+                <span class="fa fa-star checked customFont"></span>
+                <span class="fa fa-star checked customFont"></span>
+                <span class="fa fa-star checked customFont"></span>
+                <span class="fa fa-star customFont"></span>
+                <span class="fa fa-star customFont"></span>
+                <button type="button" class="btn btn-sm btn-primary customButton readReviewButton" data-bs-toggle="modal" data-bs-target="#ReviewHistory">Read Reviews</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Name & Description -->
+          
+          <!-- Calendar -->
+          <div class="col-xl-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <h3 class="text-center">Make an Appointment!</h3>
+                  <div class="content1" id="rastep0">
+                    <div class="calendar-container">
+                      <div class="calendar"> 
+                        <div class="year-header"> 
+                          <span class="left-button" id="prev"> &lang; </span> 
+                          <span class="year" id="label"></span> 
+                          <span class="right-button" id="next"> &rang; </span>
+                        </div> 
+                        <table class="months-table"> 
+                          <tbody>
+                            <tr class="months-row">
+                              <td class="month">Jan</td> 
+                              <td class="month">Feb</td> 
+                              <td class="month">Mar</td> 
+                              <td class="month">Apr</td> 
+                              <td class="month">May</td> 
+                              <td class="month">Jun</td> 
+                              <td class="month">Jul</td>
+                              <td class="month">Aug</td> 
+                              <td class="month">Sep</td> 
+                              <td class="month">Oct</td>          
+                              <td class="month">Nov</td>
+                              <td class="month">Dec</td>
+                            </tr>
+                          </tbody>
+                        </table> 
+                        
+                        <table class="days-table"> 
+                          <td class="day">Sun</td> 
+                          <td class="day">Mon</td> 
+                          <td class="day">Tue</td> 
+                          <td class="day">Wed</td> 
+                          <td class="day">Thu</td> 
+                          <td class="day">Fri</td> 
+                          <td class="day">Sat</td>
+                        </table> 
+                        <div class="frame"> 
+                          <table class="dates-table"> 
+                              <tbody class="tbody">             
+                              </tbody> 
+                          </table>
+                        </div> 
+                        <!--<button class="button" id="add-button">Add Event</button>-->
+                      </div>
+                    </div>
+                    <div class="event-container">
+                      <section id="rastep1" class="section1">
+                        <div class="row">
+                          <p class="text-center font-weight800 text-white m-t-15" style="font-size: 30px;">Pick A Service</p>
+                          <div class="col-12 text-center">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2" id="rasteponenext">Initial visit</button>
+                          </div>
+                          <div class="col-12 text-center">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2">Physical</button>
+                          </div>
+                          <div class="col-12 text-center">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2">Follow Up</button>
+                          </div>
+                          <div class="col-12 text-center">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2">Lab</button>
+                          </div>
+                        </div>                        
+                      </section>
+
+                      <section id="rastep2" class="section1">
+                        <button class="btn btn-outline-success btn-sm font-weight-1" id="rasteptwoback" style="margin-left: 5px; margin-top: -25px;">Back</button> 
+                        <div class="row">
+                          <p class="text-center font-weight800 mt-1 text-white" style="font-size: 20px;">Available Appointment Times</p>
+                          <div class="col-12 text-center">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-2" id="rasteptwonext">08:00 AM - 09:00 AM</button>
+                          </div>
+                          <div class="col-12 text-center mt-2">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-2">09:00 AM - 10:00 AM</button>
+                          </div>
+                          <div class="col-12 text-center mt-2">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-2">10:00 AM - 11:00 AM</button>
+                          </div>  
+                        </div>                     
+                      </section>
+                    </div>
+                    <div class="dialog" id="dialog">
+                        <h2 class="dialog-header"> Add New Event </h2>
+                        <form class="form" id="form">
+                          <div class="form-container" align="center">
+                            <label class="form-label" id="valueFromMyButton" for="name">Event name</label>
+                            <input class="input" type="text" id="name" maxlength="36">
+                            <label class="form-label" id="valueFromMyButton" for="count">Number of people to invite</label>
+                            <input class="input" type="number" id="count" min="0" max="1000000" maxlength="7">
+                            <input type="button" value="Cancel" class="button" id="cancel-button">
+                            <input type="button" value="OK" class="button" id="ok-button">
+                          </div>
+                        </form>
+                    </div>
+                  </div>
+
+                  <!-- Request Form-->
+                  <section id="rastep3" class="section2">
+                    <div class="content1">
+                        <div class="container">
+                              <div class="row">
+                                <div class="col-md-12 text-center">
+                                  <h2 class="text-white"><b>Request Appointment</b></h2>
+                                </div>
+                              </div>
+                        </div>
+                        
+                        <div class="container text-center">
+                          <div class="slide">
+                             <legend class="font-weight-bold" id="pagetitles">Patient Informaiton</legend>
+                          </div>
+                              
+                          <!--Patient Full Name-->
+                          <div class="form-group">
+                                <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Patient Full Name</label>
+                                <div class="col-sm-12">
+                                  <input required type="text" id="patientfullname" class=" slide" name="patientfullname" placeholder="Patient Full Name">
+                                </div>
+                          </div>
+                          <!--Patient Full Name-->
+                  
+                          <!--Date-->
+                            <div class="form-group">
+                              <label id="formlable" for="birthDate" class="col-sm-12 font-weight-3 slide">Date of Birth</label>
+                                <div class="col-sm-12">
+                                  <input required type="date" id="birthDate" class=" slide" placeholder="Date of Birth" autofocus>
+                                </div>
+                            </div>
+                          <!--Date-->
+                          
+                          <div class="row">
+                            <div class="col-md-6">
+                              <button class="btn gradient-button gradient-button-1 formbackButton font-weight-1 col-md-6 slide" id="rastepthreeback">Back</button> 
+                            </div>
+                            <div class="col-md-6">
+                              <button class="btn gradient-button gradient-button-1 formnextButton font-weight-1 col-md-6 slide" id="rastepthreenext">Next</button> 
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </section>
+
+                  <section id="rastep4" class="section2 slide">
+                    <div class="content1">
+                      <div class="container">
+                            <div class="row">
+                              <div class="col-md-12 text-center">
+                                <h2 class="text-white"><b>Request Appointment</b></h2>
+                              </div>
+                            </div>
+                      </div>
+                      
+                      <div class="container text-center">
+                        <div class="">
+                              <legend class="font-weight-bold" id="pagetitles">Contact Information</legend>
+                        </div>
+                            
+                        <!--Email Address-->
+                          <div class="form-group">
+                          <label id="formlable" for="email" class="col-sm-12 font-weight-3">Email Address</label>
+                              <div class="col-sm-12">
+                                <input required type="text" id="email" class="" placeholder="Enter Email Address" class="form-control" autofocus>
+                              </div>
+                          </div>
+                        <!--Email Address-->
+                  
+                        <!--Phone Number-->
+                          <div class="form-group">
+                            <label id="formlable" for="phonenumber" class="col-sm-12 font-weight-3">Phone Number</label>
+                            <div class="col-sm-12">
+                            <input required type="tel" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
+                            </div>
+                          </div>
+                        <!--Phone Number-->
+                              
+                        <div class="row">
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formbackButton font-weight-1 col-md-6" id="rastepfourback">Back</button> 
+                          </div>
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formnextButton font-weight-1 col-md-6" id="rastepfournext">Next</button> 
+                          </div>
+                        </div>                      
+                      </div>
+                  </div>
+                  </section>
+
+                  <section id="rastep5" class="section2 slide">
+                    <div class="content1">
+                      <div class="container">
+                            <div class="row">
+                              <div class="col-md-12 text-center">
+                                <h2 class="text-white"><b>Request Appointment</b></h2>
+                              </div>
+                            </div>
+                      </div>
+                      
+                      <div class="container text-center">
+                        <div class="">
+                              <legend class="font-weight-bold" id="pagetitles">Other Information</legend>
+                        </div>
+             
+                        <!--Upload Document-->
+                          <div class="form-group">
+                                  <label id="formlable" for="fileToUpload" class="col-sm-12 font-weight-3">Upload Document</label>
+                                  <div class="col-sm-12">
+                                     <input required type="file" id="uploaddoc" class="" placeholder="Upload Document" autofocus>
+                                 </div>
+                          </div>
+                        <!--Upload Document-->
+                        
+                        <!--Comment-->
+                          <div class="form-group">
+                              <label for="comment" class="col-sm-12 font-weight-3">Comment</label>
+                              <div class="col-sm-12">
+                          <textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
+                              </div>
+                          </div>
+                        <!--Comment-->
+                              
+                        <div class="row">
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formbackButton font-weight-1 col-md-6" id="rastepfiveback">Back</button> 
+                          </div>
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formnextButton font-weight-1 col-md-6" id="rastepfivenext">Next</button> 
+                          </div>
+                        </div>                      
+                      </div>
+                  </div>
+                  </section>
+
+                  <section id="rastep6" class="section3 slide">
+                    <div class="content1">
+                      <div class="container">
+                            <div class="row">
+                              <div class="col-md-12 text-center">
+                                <h2 class="text-white"><b>Request Appointment</b></h2>
+                              </div>
+                            </div>
+                      </div>
+                      
+                      <div class="container text-center">
+                        <div class="container" style="overflow-y: scroll !important; height: 350px !important;">
+                          <div class="col-12" id="pagetitles">
+                            <h4 class="font-weight-bold my-3"> Patient Information </h4>
+                          </div>
+                          <table class="table table-striped">
+                                <tbody>
+                                  <tr>
+                                    <th>Patient Full Name</th>
+                                    <td id="td1">Heather</td>
+                                  </tr>
+                                  <tr>
+                                <th>Patient Date of Birth</th>
+                                    <td id="td1">20/02/1990</td>
+                                  </tr>
+                                </tbody>
+                          </table>
+                  
+                          <div class="col-12" id="pagetitles">
+                            <h4 class="font-weight-bold my-3"> Contact Information </h4>
+                          </div>
+                          <table class="table table-striped">
+                                <tbody>
+                              <tr>
+                                <th>Email Address</th>
+                                <td id="td1">heather@gmail.com</td>
+                              </tr>
+                                  <tr>
+                                <th>Phone Number</th>
+                                    <td id="td1">9153595831</td>
+                                  </tr>
+                                </tbody>
+                          </table>
+                           
+                          <div class="col-12" id="pagetitles">
+                          <h4 class="font-weight-bold my-3"> Other Information </h4>
+                          </div>
+                          <table class="table table-striped">
+                                <tbody>
+                              <tr>
+                                    <th>Comment</th>
+                                    <td id="td1">Great Demo</td>
+                              </tr>
+                              <tr>
+                                    <th>Upload Document</th>
+                                    <td id="td1">DocFile</td>
+                              </tr>
+                                </tbody>
+                          </table>
+                           
+                          <div class="col-12" id="pagetitles">
+                            <h4 class="font-weight-bold my-3"> Appointment Information </h4>
+                          </div>
+                          <table class="table table-striped">
+                              <tbody>
+                              <tr>
+                                    <th>Appointment Type</th>
+                                    <td id="td1">New Patient Appointment</td>
+                              </tr>
+                              <tr>
+                                    <th>Appointment Date</th>
+                                    <td id="td1">12/09/2020</td>
+                              </tr>
+                              <tr>
+                                    <th>Appointment Time</th>
+                                    <td id="td1">02.00 PM</td>
+                              </tr>
+                                </tbody>
+                          </table> 
+                                
+                        <div class="row">
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formbackButton font-weight-1 col-md-6" id="rastepsixback">Back</button> 
+                          </div>
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formnextButton font-weight-1 col-md-6" id="rastepsixnext">Submit</button> 
+                          </div>
+                        </div>                     
+                        </div>
+                      </div>
+                  </section>
+                  <!-- Request Form-->
+                </div>
+              </div>
+            </div><!-- End .content-->
+            
+          </div>
+          <!-- Calendar -->
+          
+          <!-- Services -->
+          <div class="col-md-3 icon-box" data-aos="fade-up" data-aos-delay="100" style="margin-top: -50px !important;">
+            <i class="bx bxl-dribbble"></i>
+            <div class="row">
+              <div class="col-6"><h4>Inital Visit</h4></div>
+              <div class="col-6"><h5 class="font-weight800">$25</h5></div>
+            </div>
+            <p>Includes Initial visit with a pediatrician & initial Exams</p>
+          </div>
+          <div class="col-md-3 icon-box" data-aos="fade-up" data-aos-delay="200" style="margin-top: -50px !important;">
+            <i class="bx bx-clinic"></i>
+            <div class="row">
+              <div class="col-6"><h4>Follow Up</h4></div>
+              <div class="col-6"><h5 class="font-weight800">$25</h5></div>
+            </div>
+            <p>Includes Follow Up visit with a pediatrician & Follow Up Exams</p>
+          </div>
+          <!-- Services -->
+        </div>
+    </section><!-- End About Section -->  
+
+    <section class="inner-page" data-aos="fade-up" data-aos-delay="200">
+      <div class="container">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Services</th>
+                                <th>Cost</th>
+                                <th>Distance</th>
+                                <th style="width: 180px; text-align: center;">Available</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>
+                              <span class="bs-label label-success badgeBorder">Family Medicine - Physical:</span>
+                              <br>
+                              Includes Initial visit with a MD & initial Exams
+                            </td>
+                            <td><span class="text-success text-semibold">$55</span> </td>
+                            <td>2 Miles</td>
+                            <td>
+                              <button class="btn btn-outline-primary">
+                                February 10th
+                                <br>
+                                10:00 AM
+                              </button>
+                            </td>
+                            </tr>
+
+                            <tr>
+                            <td>
+                              <span class="bs-label label-success badgeBorder">Dental - Initial Visit:</span>
+                              <br>
+                              Includes Initial visit with a DDS & initial Exams
+                            </td>
+                            <td><span class="text-success text-semibold">$65</span> </td>
+                            <td>8 Miles</td>
+                            <td>
+                              <button class="btn btn-outline-primary">
+                                February 10th
+                                <br>
+                                12:00 PM
+                              </button>
+                            </td>
+                            </tr>
+
+                            <tr>
+                            <td>
+                              <span class="bs-label label-success badgeBorder">Chiropractor - Initial Visit:</span>
+                              <br>
+                              Includes Initial visit with a Chiropractor & initial Exams
+                            </td>
+                            <td><span class="text-success text-semibold">$45</span> </td>
+                            <td>4 Miles</td>
+                            <td>
+                              <button class="btn btn-outline-primary">
+                                February 10th
+                                <br>
+                                09:00 AM
+                              </button>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+      </div>
+    </section>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>A108 Adam Street, New York, NY 535022</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Hours of Operation</h3>
+              <ul class="listNone text-justify">
+                <li>Monday To Friday: 9 AM to 5 PM</li>
+                <li>Saturday: 12 PM to 5 PM</li>
+                <li>Sunday: Closed</li>
+              </ul>
+              <p> <br>  <br> </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>contact@example.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+1 5589 55488 55</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <section class="inner-page">
+      <div class="container">
+            <div class="card-body">
+              <h2 class="text-center font-weight800">Our Other Locations</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="text-center">
+                            <tr>
+                                <th>Business Name</th>
+                                <th>Contact</th>
+                                <th>Services</th>
+                                <th>Cost</th>
+                                <th>Distance</th>
+                                <th style="width: 180px;">Available</th>
+                                <th style="width: 180px;">Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td style="transform: rotate(0);">
+                                <a href="Daytona.html" class="stretched-link">
+                                Powers Pediatrics - Daytona <br>
+                                254 Daytona Blvd,
+                                Daytona Beach, FL 32114
+                                </a>
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-sm btn-primary">Call Us: 407-286-2965</button>
+                            </td>
+                            <td>
+                              <span class="bs-label label-success badgeBorder">Family Medicine - Physical:</span>
+                              <br>
+                              Includes Initial visit with a MD & initial Exams
+                            </td>
+                            <td><span class="text-success text-semibold">$55</span> </td>
+                            <td>2 Miles</td>
+                            <td>
+                              <a href="Daytona.html" class="btn btn-outline-primary">
+                                February 10th
+                                <br>
+                                10:00 AM
+                              </a>
+                            </td>
+                            <td>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                            </td>
+                            </tr>
+
+                            <tr>
+                              <td style="transform: rotate(0);">
+                                <a href="Tampa.html" class="stretched-link">
+                                Powers Family -  Tampa <br>
+                                5877 New Way Road,
+                                Tampa, FL 32547
+                                </a>
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-sm btn-primary">Call Us: 407-286-2965</button>
+                            </td>
+                            <td>
+                              <span class="bs-label label-success badgeBorder">Dental - Initial Visit:</span>
+                              <br>
+                              Includes Initial visit with a DDS & initial Exams
+                            </td>
+                            <td><span class="text-success text-semibold">$65</span> </td>
+                            <td>8 Miles</td>
+                            <td>
+                              <a href="Tampa.html" class="btn btn-outline-primary">
+                                February 10th
+                                <br>
+                                12:00 PM
+                              </a>
+                            </td>
+                            <td>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                            </td>
+                            </tr>
+
+                            <tr>
+                              <td style="transform: rotate(0);">
+                                <a href="Newyork.html" class="stretched-link">
+                                Powers Family -  New York <br>
+                                3307  Elm Drive,
+                                NY, NY 10014
+                                </a>
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-sm btn-primary">Call Us: 407-286-2965</button>
+                            </td>
+                            <td>
+                              <span class="bs-label label-success badgeBorder">Chiropractor - Initial Visit:</span>
+                              <br>
+                              Includes Initial visit with a Chiropractor & initial Exams
+                            </td>
+                            <td><span class="text-success text-semibold">$45</span> </td>
+                            <td>4 Miles</td>
+                            <td>
+                              <a href="Newyork.html" class="btn btn-outline-primary">
+                                February 10th
+                                <br>
+                                09:00 AM
+                              </a>
+                            </td>
+                            <td>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                  <a href="#">&laquo;</a>
+                  <a href="#"class="active" >1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#">&raquo;</a>
+                </div>
+            </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Coyomed</h3>
+              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span><a href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a></span></strong>. All Rights Reserved
+      </div>
+      
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="assets/css/select2/dist/js/select2.full.js" type="text/javascript"></script>
+  <script src="assets/css/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="assets/css/multiselect/js/jquery.multi-select.js"></script>
+  <script>
+      $(function () {
+          // Switchery
+          var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+          $('.js-switch').each(function () {
+              new Switchery($(this)[0], $(this).data());
+          });
+          // For select 2
+          $(".select2").select2();
+          $('.selectpicker').selectpicker();
+          //Bootstrap-TouchSpin
+          $(".vertical-spin").TouchSpin({
+              verticalbuttons: true
+          });
+          var vspinTrue = $(".vertical-spin").TouchSpin({
+              verticalbuttons: true
+          });
+          if (vspinTrue) {
+              $('.vertical-spin').prev('.bootstrap-touchspin-prefix').remove();
+          }
+          $("input[name='tch1']").TouchSpin({
+              min: 0,
+              max: 100,
+              step: 0.1,
+              decimals: 2,
+              boostat: 5,
+              maxboostedstep: 10,
+              postfix: '%'
+          });
+          $("input[name='tch2']").TouchSpin({
+              min: -1000000000,
+              max: 1000000000,
+              stepinterval: 50,
+              maxboostedstep: 10000000,
+              prefix: '$'
+          });
+          $("input[name='tch3']").TouchSpin();
+          $("input[name='tch3_22']").TouchSpin({
+              initval: 40
+          });
+          $("input[name='tch5']").TouchSpin({
+              prefix: "pre",
+              postfix: "post"
+          });
+          // For multiselect
+          $('#pre-selected-options').multiSelect();
+          $('#optgroup').multiSelect({
+              selectableOptgroup: true
+          });
+          $('#public-methods').multiSelect();
+          $('#select-all').click(function () {
+              $('#public-methods').multiSelect('select_all');
+              return false;
+          });
+          $('#deselect-all').click(function () {
+              $('#public-methods').multiSelect('deselect_all');
+              return false;
+          });
+          $('#refresh').on('click', function () {
+              $('#public-methods').multiSelect('refresh');
+              return false;
+          });
+          $('#add-option').on('click', function () {
+              $('#public-methods').multiSelect('addOption', {
+                  value: 42,
+                  text: 'test 42',
+                  index: 0
+              });
+              return false;
+          });
+          $(".ajax").select2({
+              ajax: {
+                  url: "https://api.github.com/search/repositories",
+                  dataType: 'json',
+                  delay: 250,
+                  data: function (params) {
+                      return {
+                          q: params.term, // search term
+                          page: params.page
+                      };
+                  },
+                  processResults: function (data, params) {
+                      // parse the results into the format expected by Select2
+                      // since we are using custom formatting functions we do not need to
+                      // alter the remote JSON data, except to indicate that infinite
+                      // scrolling can be used
+                      params.page = params.page || 1;
+                      return {
+                          results: data.items,
+                          pagination: {
+                              more: (params.page * 30) < data.total_count
+                          }
+                      };
+                  },
+                  cache: true
+              },
+              escapeMarkup: function (markup) {
+                  return markup;
+              }, // let our custom formatter work
+              minimumInputLength: 1,
+              //templateResult: formatRepo, // omitted for brevity, see the source of this page
+              //templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+          });
+      });
+  </script>
+        <script type="text/javascript">
+
+          document.addEventListener('DOMContentLoaded', function () {
+              let stars = document.querySelectorAll('.star');
+              stars.forEach(function (star) {
+                  star.addEventListener('click', setRating);
+              });
+  
+              let rating = parseInt(document.querySelector('.stars').getAttribute('data-rating'));
+              let target = stars[rating - 1];
+              target.dispatchEvent(new MouseEvent('click'));
+          });
+          function setRating(ev) {
+              let span = ev.currentTarget;
+              let stars = document.querySelectorAll('.star');
+              let match = false;
+              let num = 0;
+              stars.forEach(function (star, index) {
+                  if (match) {
+                      star.classList.remove('rated');
+                  } else {
+                      star.classList.add('rated');
+                  }
+                  //are we currently looking at the span that was clicked
+                  if (star === span) {
+                      match = true;
+                      num = index + 1;
+                  }
+              });
+              document.querySelector('.stars').setAttribute('data-rating', num);
+              document.getElementById("rating").value = num;
+          }
+        </script>
+
+<!-- Sweet-Alert  -->
+<script src="assets/css/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="assets/css/sweetalert2/sweet-alert.init.js"></script>
+
+<script>
+  // Setup the calendar with the current date
+$(document).ready(function(){
+    var date = new Date();
+    var today = date.getDate();
+    // Set click handlers for DOM elements
+    $(".right-button").click({date: date}, next_year);
+    $(".left-button").click({date: date}, prev_year);
+    $(".month").click({date: date}, month_click);
+    $("#add-button").click({date: date}, new_event);
+    // Set current month as active
+    $(".months-row").children().eq(date.getMonth()).addClass("active-month");
+    init_calendar(date);
+    var events = check_events(today, date.getMonth()+1, date.getFullYear());
+    show_events(events, months[date.getMonth()], today);
+});
+
+// Initialize the calendar by appending the HTML dates
+function init_calendar(date) {
+    $(".tbody").empty();
+    $(".events-container").empty();
+    var calendar_days = $(".tbody");
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    var day_count = days_in_month(month, year);
+    var row = $("<tr class='table-row'></tr>");
+    var today = date.getDate();
+    // Set date to 1 to find the first day of the month
+    date.setDate(1);
+    var first_day = date.getDay();
+    // 35+firstDay is the number of date elements to be added to the dates table
+    // 35 is from (7 days in a week) * (up to 5 rows of dates in a month)
+    for(var i=0; i<35+first_day; i++) {
+        // Since some of the elements will be blank, 
+        // need to calculate actual date from index
+        var day = i-first_day+1;
+        // If it is a sunday, make a new row
+        if(i%7===0) {
+            calendar_days.append(row);
+            row = $("<tr class='table-row'></tr>");
+        }
+        // if current index isn't a day in this month, make it blank
+        if(i < first_day || day > day_count) {
+            var curr_date = $("<td class='table-date nil'>"+"</td>");
+            row.append(curr_date);
+        }   
+        else {
+            var curr_date = $("<td class='table-date'>"+day+"</td>");
+            var events = check_events(day, month+1, year);
+            if(today===day && $(".active-date").length===0) {
+                curr_date.addClass("active-date");
+                show_events(events, months[month], day);
+            }
+            // If this date has any events, style it with .event-date
+            if(events.length!==0) {
+                curr_date.addClass("event-date");
+            }
+            // Set onClick handler for clicking a date
+            curr_date.click({events: events, month: months[month], day:day}, date_click);
+            row.append(curr_date);
+        }
+    }
+    // Append the last row and set the current year
+    calendar_days.append(row);
+    $(".year").text(year);
+}
+
+// Get the number of days in a given month/year
+function days_in_month(month, year) {
+    var monthStart = new Date(year, month, 1);
+    var monthEnd = new Date(year, month + 1, 1);
+    return (monthEnd - monthStart) / (1000 * 60 * 60 * 24);    
+}
+
+// Event handler for when a date is clicked
+function date_click(event) {
+    $(".events-container").show(250);
+    $("#dialog").hide(250);
+    $(".active-date").removeClass("active-date");
+    $(this).addClass("active-date");
+    show_events(event.data.events, event.data.month, event.data.day);
+};
+
+// Event handler for when a month is clicked
+function month_click(event) {
+    $(".events-container").show(250);
+    $("#dialog").hide(250);
+    var date = event.data.date;
+    $(".active-month").removeClass("active-month");
+    $(this).addClass("active-month");
+    var new_month = $(".month").index(this);
+    date.setMonth(new_month);
+    init_calendar(date);
+}
+
+// Event handler for when the year right-button is clicked
+function next_year(event) {
+    $("#dialog").hide(250);
+    var date = event.data.date;
+    var new_year = date.getFullYear()+1;
+    $("year").html(new_year);
+    date.setFullYear(new_year);
+    init_calendar(date);
+}
+
+// Event handler for when the year left-button is clicked
+function prev_year(event) {
+    $("#dialog").hide(250);
+    var date = event.data.date;
+    var new_year = date.getFullYear()-1;
+    $("year").html(new_year);
+    date.setFullYear(new_year);
+    init_calendar(date);
+}
+
+// Event handler for clicking the new event button
+function new_event(event) {
+    // if a date isn't selected then do nothing
+    if($(".active-date").length===0)
+        return;
+    // remove red error input on click
+    $("input").click(function(){
+        $(this).removeClass("error-input");
+    })
+    // empty inputs and hide events
+    $("#dialog input[type=text]").val('');
+    $("#dialog input[type=number]").val('');
+    $(".events-container").hide(250);
+    $("#dialog").show(250);
+    // Event handler for cancel button
+    $("#cancel-button").click(function() {
+        $("#name").removeClass("error-input");
+        $("#count").removeClass("error-input");
+        $("#dialog").hide(250);
+        $(".events-container").show(250);
+    });
+    // Event handler for ok button
+    $("#ok-button").unbind().click({date: event.data.date}, function() {
+        var date = event.data.date;
+        var name = $("#name").val().trim();
+        var count = parseInt($("#count").val().trim());
+        var day = parseInt($(".active-date").html());
+        // Basic form validation
+        if(name.length === 0) {
+            $("#name").addClass("error-input");
+        }
+        else if(isNaN(count)) {
+            $("#count").addClass("error-input");
+        }
+        else {
+            $("#dialog").hide(250);
+            console.log("new event");
+            new_event_json(name, count, date, day);
+            date.setDate(day);
+            init_calendar(date);
+        }
+    });
+}
+
+// Adds a json event to event_data
+function new_event_json(name, count, date, day) {
+    var event = {
+        "occasion": name,
+        "invited_count": count,
+        "year": date.getFullYear(),
+        "month": date.getMonth()+1,
+        "day": day
+    };
+    event_data["events"].push(event);
+}
+
+// Display all events of the selected date in card views
+function show_events(events, month, day) {
+    // Clear the dates container
+    $(".events-container").empty();
+    $(".events-container").show(250);
+    console.log(event_data["events"]);
+    // If there are no events for this date, notify the user
+    if(events.length===0) {
+        var event_card = $("<div class='event-card'></div>");
+        var event_name = $("<div class='event-name'>There are no events planned for "+month+" "+day+".</div>");
+        $(event_card).css({ "border-left": "10px solid #FF1744" });
+        $(event_card).append(event_name);
+        $(".events-container").append(event_card);
+    }
+    else {
+        // Go through and add each event as a card to the events container
+        for(var i=0; i<events.length; i++) {
+            var event_card = $("<div class='event-card'></div>");
+            var event_name = $("<div class='event-name'>"+events[i]["occasion"]+":</div>");
+            var event_count = $("<div class='event-count'>"+events[i]["invited_count"]+" Invited</div>");
+            if(events[i]["cancelled"]===true) {
+                $(event_card).css({
+                    "border-left": "10px solid #FF1744"
+                });
+                event_count = $("<div class='event-cancelled'>Cancelled</div>");
+            }
+            $(event_card).append(event_name).append(event_count);
+            $(".events-container").append(event_card);
+        }
+    }
+}
+
+// Checks if a specific date has any events
+function check_events(day, month, year) {
+    var events = [];
+    for(var i=0; i<event_data["events"].length; i++) {
+        var event = event_data["events"][i];
+        if(event["day"]===day &&
+            event["month"]===month &&
+            event["year"]===year) {
+                events.push(event);
+            }
+    }
+    return events;
+}
+
+// Given data for events in JSON format
+var event_data = {
+    "events": [
+    {
+        "occasion": " Repeated Test Event ",
+        "invited_count": 120,
+        "year": 2017,
+        "month": 5,
+        "day": 10,
+        "cancelled": true
+    },
+    {
+        "occasion": " Repeated Test Event ",
+        "invited_count": 120,
+        "year": 2017,
+        "month": 5,
+        "day": 10,
+        "cancelled": true
+    },
+        {
+        "occasion": " Repeated Test Event ",
+        "invited_count": 120,
+        "year": 2017,
+        "month": 5,
+        "day": 10,
+        "cancelled": true
+    },
+    {
+        "occasion": " Repeated Test Event ",
+        "invited_count": 120,
+        "year": 2017,
+        "month": 5,
+        "day": 10
+    },
+        {
+        "occasion": " Repeated Test Event ",
+        "invited_count": 120,
+        "year": 2017,
+        "month": 5,
+        "day": 10,
+        "cancelled": true
+    },
+    {
+        "occasion": " Repeated Test Event ",
+        "invited_count": 120,
+        "year": 2017,
+        "month": 5,
+        "day": 10
+    },
+        {
+        "occasion": " Repeated Test Event ",
+        "invited_count": 120,
+        "year": 2017,
+        "month": 5,
+        "day": 10,
+        "cancelled": true
+    },
+    {
+        "occasion": " Repeated Test Event ",
+        "invited_count": 120,
+        "year": 2017,
+        "month": 5,
+        "day": 10
+    },
+        {
+        "occasion": " Repeated Test Event ",
+        "invited_count": 120,
+        "year": 2017,
+        "month": 5,
+        "day": 10,
+        "cancelled": true
+    },
+    {
+        "occasion": " Repeated Test Event ",
+        "invited_count": 120,
+        "year": 2017,
+        "month": 5,
+        "day": 10
+    },
+    {
+        "occasion": " Test Event",
+        "invited_count": 120,
+        "year": 2017,
+        "month": 5,
+        "day": 11
+    }
+    ]
+};
+
+const months = [ 
+    "January", 
+    "February", 
+    "March", 
+    "April", 
+    "May", 
+    "June", 
+    "July", 
+    "August", 
+    "September", 
+    "October", 
+    "November", 
+    "December" 
+];
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+   $('#rastep1').css({'display':'block'});
+   $("#rasteponenext").click(function(){
+    $('#rastep1').css({'display':'none'});
+    $('#rastep2').css({'display':'block'});
+  });
+  $("#rasteptwoback").click(function(){
+    $('#rastep2').css({'display':'none'});
+    $('#rastep1').css({'display':'block'});
+  });
+  $("#rasteptwonext").click(function(){
+    $('#rastep2').css({'display':'none'});
+    $('#rastep3').css({'display':'block'});
+    $('#rastep0').css({'display':'none'});
+  });
+  $("#rastepthreeback").click(function(){
+    $('#rastep3').css({'display':'none'});
+    $('#rastep2').css({'display':'block'});
+    $('#rastep0').css({'display':'block'});
+  });
+  $("#rastepthreenext").click(function(){
+    $('#rastep3').css({'display':'none'});
+    $('#rastep4').css({'display':'block'});
+  });
+  $("#rastepfourback").click(function(){
+    $('#rastep4').css({'display':'none'});
+    $('#rastep3').css({'display':'block'});
+  });
+  $("#rastepfournext").click(function(){
+    $('#rastep4').css({'display':'none'});
+    $('#rastep5').css({'display':'block'});
+  });
+  $("#rastepfiveback").click(function(){
+    $('#rastep5').css({'display':'none'});
+    $('#rastep4').css({'display':'block'});
+  });
+  $("#rastepfivenext").click(function(){
+    $('#rastep5').css({'display':'none'});
+    $('#rastep6').css({'display':'block'});
+  });
+  $("#rastepsixback").click(function(){
+    $('#rastep6').css({'display':'none'});
+    $('#rastep5').css({'display':'block'});
+  });
+  })
+</script>
+
+</body>
+
+</html>
