@@ -1,0 +1,3526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96678346-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-96678346-4');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>MPED1 | New Patient Form</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="assets/css/register.css" rel="stylesheet">
+  <link href="assets/css/progress.css" rel="stylesheet">
+  <link href="assets/css/mdb.min.css" rel="stylesheet">
+  <link href="assets/css/typography.css" rel="stylesheet">
+  <link href="assets/css/signature/jquery.signaturepad.css" rel="stylesheet">
+  <!-- extra css -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+  
+  <style type="text/css">
+    section,
+    #topbar,
+    #header,
+    #footer
+    {
+      display: none;
+    }
+    @media (max-width: 991px){
+     #topbar
+     {
+      display: none !important;
+    }
+  }
+  #registration-section
+  {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 991px){
+    #registration-section
+    {
+      margin-top: 60px;
+    }  
+  }
+  ul.stepper li .btn-box a
+  {
+    padding: 0.8rem !important;
+  }
+  @media only screen and (min-width: 750px)
+  {
+   #section1a,#section1b,#section1c,#section1d
+   {
+    background-image: url(assets/img/section1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+  }
+} 
+#section1a .inner-section
+{
+  padding-top: 20px;
+}
+
+#section1b .inner-section
+{
+  padding-top: 70px;
+}
+.next-btn,
+.back-btn
+{
+  height: 40px;
+}
+
+.shadow,.shadow2
+{
+  box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+  padding: 30px 40px;
+  border-radius: 10px 10px 10px 10px;
+  background: white;
+}
+
+.top-rtplogo
+{
+  height: 120px;
+}
+
+.btn-start
+{
+  height: 85px;
+}
+@media only screen and (min-width: 750px){
+  #confirmation
+  {
+    background-image: url(assets/img/481.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+  } 
+  #check-logo
+  {
+    height: 100px;
+  } 
+}
+
+#confirmation .shadow
+{
+  background-color: white;
+  border-radius: 40px;
+}
+.check-img
+{
+  margin-top: -75px;
+  height: 150px;
+}
+.btn-box
+{
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 750px){
+  #section1a .inner-section
+  {
+    padding-top: 15px;
+  }
+
+  #section1b .inner-section
+  {
+    padding-top: 15px;
+  }
+
+  .shadow
+  {
+    box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+    padding: 10px 25px;
+    border-radius: 10px 10px 10px 10px;
+    background: white;
+  }
+  .shadow2
+  {
+    box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+    padding: 20px 15px;
+    border-radius: 10px 10px 10px 10px;
+    background: white;
+  }
+
+  .top-rtplogo,.top-rtplogo2
+  {
+    height: 100px;
+  }
+
+  .btn-start
+  {
+    height: 50px;
+  }
+  .btn-start2
+  {
+    height: 70px;
+    margin: 15px auto !important;
+  }
+
+  .inner-section
+  {
+    background:rgba(255,255,255,1);
+  }
+  #confirmation
+  {
+    background-image: url(assets/img/481.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  } 
+  .check-img
+  {
+    margin-top: -50px;
+    height: 100px;
+  }
+  .next-btn,
+  .back-btn
+  {
+    height: 30px;
+  }
+  #finish-step .next-btn
+  {
+   max-width: 90%;
+ } 
+ .btn-box
+ {
+  justify-content: center;
+}
+#confirmation h2
+{
+  font-size: 22px;
+}
+#confirmation h3
+{
+  font-size: 20px;
+}
+
+}
+
+.progress
+{
+  background: none !important;
+}
+
+</style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example">
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="contact-info">
+        <ul>
+          <li><i class="icofont-envelope"></i><a href="mailto:rtpdemo@gmail.com">rtpdemo@gmail.com</a></li>
+          <li><i class="icofont-phone"></i><a href="tel:888-503-1636"> 888-503-1636</a></li>
+          <li><i class="icofont-clock-time icofont-flip-horizontal"></i> Mon-Fri 9am - 5pm</li>
+        </ul>
+      </div>
+      <div class="cta">
+       <select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|af">Afrikaans</option><option value="en|sq">Albanian</option><option value="en|ar">Arabic</option><option value="en|hy">Armenian</option><option value="en|az">Azerbaijani</option><option value="en|eu">Basque</option><option value="en|be">Belarusian</option><option value="en|bg">Bulgarian</option><option value="en|ca">Catalan</option><option value="en|zh-CN">Chinese (Simplified)</option><option value="en|zh-TW">Chinese (Traditional)</option><option value="en|hr">Croatian</option><option value="en|cs">Czech</option><option value="en|da">Danish</option><option value="en|nl">Dutch</option><option value="en|en">English</option><option value="en|et">Estonian</option><option value="en|tl">Filipino</option><option value="en|fi">Finnish</option><option value="en|fr">French</option><option value="en|gl">Galician</option><option value="en|ka">Georgian</option><option value="en|de">German</option><option value="en|el">Greek</option><option value="en|ht">Haitian Creole</option><option value="en|iw">Hebrew</option><option value="en|hi">Hindi</option><option value="en|hu">Hungarian</option><option value="en|is">Icelandic</option><option value="en|id">Indonesian</option><option value="en|ga">Irish</option><option value="en|it">Italian</option><option value="en|ja">Japanese</option><option value="en|ko">Korean</option><option value="en|lv">Latvian</option><option value="en|lt">Lithuanian</option><option value="en|mk">Macedonian</option><option value="en|ms">Malay</option><option value="en|mt">Maltese</option><option value="en|no">Norwegian</option><option value="en|fa">Persian</option><option value="en|pl">Polish</option><option value="en|pt">Portuguese</option><option value="en|ro">Romanian</option><option value="en|ru">Russian</option><option value="en|sr">Serbian</option><option value="en|sk">Slovak</option><option value="en|sl">Slovenian</option><option value="en|es">Spanish</option><option value="en|sw">Swahili</option><option value="en|sv">Swedish</option><option value="en|th">Thai</option><option value="en|tr">Turkish</option><option value="en|uk">Ukrainian</option><option value="en|ur">Urdu</option><option value="en|vi">Vietnamese</option><option value="en|cy">Welsh</option><option value="en|yi">Yiddish</option></select><div id="google_translate_element2"></div>
+       <script type="text/javascript">
+         function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+       </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+       <script type="text/javascript">
+         /* <![CDATA[ */
+         eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+         /* ]]> */
+       </script>
+       <!-- <a href="#about" class="scrollto">Get Started</a> -->
+     </div>
+   </div>
+ </div>
+
+ <!-- ======= Header ======= -->
+ <header id="header" class="fixed-top ">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <h1 class="logo"><a href="#header" class="scrollto">
+     <img src="assets/img/rtplogo.png" alt="" class="img-fluid"> 
+   </a></h1>
+   <!-- Uncomment below if you prefer to use an image logo -->
+   <!-- <a href="#header" class="logo scrollto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+   <nav class="nav-menu d-none d-lg-block">
+    <ul>
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li class="active"><a href="index.html#our-resources">Patient Resource Center</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#portfolio">Insurance</a></li>
+      <li><a href="index.html#blog">Blog</a></li>
+      <li><a href="index.html#team">Team</a></li>
+
+    </ul>
+  </nav><!-- .nav-menu -->
+
+</div>
+</header><!-- End Header -->
+
+<div class="progress blue" id="progress">
+  <span class="progress-left">
+    <span class="progress-bar"></span>
+  </span>
+  <span class="progress-right">
+    <span class="progress-bar"></span>
+  </span>
+  <div class="progress-value"><span id="progress-value">0</span>%</div>
+</div>
+
+<form class="floating-labels">
+  <!-- first section -->
+  <section id="section1a">
+    <div class="inner-section">
+      <div class="container-fluid">
+       <div class="row text-center justify-content-center">
+
+        <div class="col-lg-5 offset-lg-7 col-12 p-4">
+          <img src="assets/img/rtplogo.png" alt="" class="img-fluid top-rtplogo">
+          <img src="assets/img/letstart.jpg" alt="" class="img-fluid">
+          <div class="row">
+            <div class="col-6">
+             <a href="#">
+              <img src="assets/img/startnew.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/startnew-hover.png'" onmouseout="this.src='assets/img/startnew.png'" onclick="startNew()"> 
+            </a>   
+          </div>
+          <div class="col-6">
+            <a href="#">
+              <img src="assets/img/findsaved.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/findsaved-hover.png'" onmouseout="this.src='assets/img/findsaved.png'" onclick="findSaved1()">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>  
+</section>
+<!-- first section -->
+
+<!-- first section -->
+<section id="section1b">
+  <div class="inner-section">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 offset-lg-8 col-12">
+          <div class="text-center">
+            <img src="assets/img/rtplogo.png" alt="" class="img-fluid top-rtplogo2 mb-5">
+          </div>
+          <div class="shadow mb-4">
+            <div class="form-group">
+              <label for="s0q1" class="float-label">Your Name</label>
+              <input type="text" class="form-control required" id="s0q1" name="s0q1">
+            </div>
+            <div class="form-group">
+              <label for="s0q2" class="float-label">Email</label>
+              <input type="email" class="form-control required" id="s0q2" name="s0q2">
+            </div>
+
+            <div class="text-center">
+             <a href="#">
+               <img src="assets/img/next.png" class="img-fluid btn-start2" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'" onclick="nextBtn1()"> 
+             </a> 
+           </div>
+         </div>
+         
+       </div>
+     </div>
+     
+     
+   </div>
+ </div>  
+</section>
+<!-- first section -->
+
+<!-- first section -->
+<section id="section1c">
+  <div class="inner-section">
+    <div class="container text-center">
+      <div class="row">
+
+        <div class="col-lg-4 offset-lg-8" style="margin-top: 40px;">
+          <img src="assets/img/rtplogo.png" alt="" class="img-fluid top-rtplogo2 mb-5">
+          <div class="shadow mb-4">
+            <p class="lead font-weight-bold">Congrats! You have started your New Patient paperwork!</p>
+            <p class="lead">Please save this PIN <h1 class="font-weight-bold">XXXX</h1>  to be able to gain access to this again. You can save and continue at a later time!</p>
+
+            <a href="#">
+             <img src="assets/img/next.png" class="img-fluid btn-start2" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'" onclick="nextBtn2()"> 
+           </a>
+         </div>
+         
+       </div>
+     </div>
+     
+   </div> 
+ </div> 
+</section>
+<!-- first section -->
+
+
+<!-- first section -->
+<section id="section1d">
+  <div class="inner-section">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 offset-lg-8" style="margin-top: 50px;">
+          <div class="text-center">
+           <img src="assets/img/rtplogo.png" alt="" class="img-fluid top-rtplogo2 mb-5"> 
+         </div>
+         <div class="shadow mb-4">
+          <div class="form-group">
+            <label for="s0q3" class="float-label">Email</label>
+            <input type="email" class="form-control required" id="s0q3" name="s0q3">
+          </div>
+
+          <div class="form-group">
+            <label for="s0q4" class="float-label">Pin</label>
+            <input type="text" class="form-control required" id="s0q4" name="s0q4">
+          </div>
+
+          <div class="text-center">
+           <a href="#">
+             <img src="assets/img/findsaved.png" class="img-fluid btn-start2" onmouseover="this.src='assets/img/findsaved-hover.png'" onmouseout="this.src='assets/img/findsaved.png'" onclick="findSaved2()"> 
+           </a> 
+         </div>
+       </div>
+       
+     </div>
+   </div>
+   
+   
+ </div>  
+</div>
+</section>
+<!-- first section -->
+</form>
+
+<!-- ======================= new patient form ================================  -->
+<section class="" id="registration-section">
+  <!-- ======================= container ================================  -->
+  <div class="container" id="form-container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1 class="section-heading">New Patient Registration</h1>
+      </div>
+    </div>
+    <!-- ======================= content ================================  -->
+    <div class="card">
+      <div class="card-body">
+        <form class="floating-labels" method="post" enctype="multipart/form-data" role="form">
+
+          <div class="row">
+
+            <div class="col-xl-12">
+              <!-- Stepers Wrapper -->
+              <ul class="stepper stepper-vertical">
+                <li class="form-step active" id="first-step">
+                  <a>
+                    <span class="circle" id="step-one-cirle">1</span>
+                    <span class="label">Your Info</span>
+                  </a>
+
+                  <div class="step-content container pr-5">
+                    <div class="row">
+
+                      <div class="col-xl-12">
+                       <fieldset class="fieldset-outer">
+                         <legend class="custom-legend">Your Information</legend>
+                         <div class="row inner-row">
+                           <div class="col-xl-6">
+                            <div class="form-group">
+                              <label for="filler_name" class="float-label">Your Name*</label>
+                              <input type="text" class="form-control required" id="filler_name" name="filler_name">
+                              <span id="error_filler_name" class="error-span"></span>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                              <label for="filler_email" class="float-label">Email*</label>
+                              <input type="email" class="form-control required" id="filler_email" name="filler_email">
+                            </div>
+                          </div>
+
+                          <div class="col-xl-12">
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" name="filler_id" id="filler_id" accept="image/*;capture=camera">
+                              <label class="custom-file-label" for="filler_id">Upload ID</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset> 
+                    </div>
+
+                    <div class="col-xl-12">
+                      <fieldset class="fieldset-outer">
+                        <legend class="custom-legend">Relationship With Patient*</legend>
+                        <div class="inner-row">
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o1" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o1">Self</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o2" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o2">Spouse</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o3" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o3">Step Child</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o4" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o4">Foster Child</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o5" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o5">Ward of the court</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o6" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o6">Employee</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o7" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o7">Handicaped dependent</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o8" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o8">Organ Donar</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o9" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o9">Cadever Donar</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o10" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o10">Grandchild</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o11" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o11">Niece/Nephew</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o12" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o12">Injured Plaintiff</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o13" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o13">Sponsored Dependent</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o14" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o14">Parent</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o15" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o15">Grandparent</label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" name="s1q1" id="s1q1o16" class="radio" value="">
+                            <label class="radiolabel required-label" for="s1q1o16">Other</label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <div class="col-xl-12">
+                      <fieldset class="fieldset-outer">
+                        <legend class="custom-legend">How did you hear about us?*</legend>
+                        <div class="inner-row">
+                         <div class="form-radio">
+                          <input type="radio" name="s1q2" id="s1q2o1" class="radio" value="">
+                          <label class="radiolabel required-label" for="s1q2o1">TV</label>
+                        </div>
+                        <div class="form-radio">
+                          <input type="radio" name="s1q2" id="s1q2o2" class="radio" value="">
+                          <label class="radiolabel required-label" for="s1q2o2">Flyer</label>
+                        </div>
+                        <div class="form-radio">
+                          <input type="radio" name="s1q2" id="s1q2o3" class="radio" value="">
+                          <label class="radiolabel required-label" for="s1q2o3">Facebook</label>
+                        </div>
+                        <div class="form-radio">
+                          <input type="radio" name="s1q2" id="s1q2o4" class="radio" value="">
+                          <label class="radiolabel required-label" for="s1q2o4">Google</label>
+                        </div>
+                        <div class="form-radio">
+                          <input type="radio" name="s1q2" id="s1q2o5" class="radio" value="">
+                          <label class="radiolabel required-label" for="s1q2o5">Walk In</label>
+                        </div>
+                        <div class="form-radio">
+                          <input type="radio" name="s1q2" id="s1q2o6" class="radio" value="">
+                          <label class="radiolabel required-label" for="s1q2o6">Insurance Company</label>
+                        </div>
+                        <div class="form-radio">
+                          <input type="radio" name="s1q2" id="s1q2o7" class="radio" value="">
+                          <label class="radiolabel required-label" for="s1q2o7">Sibling/Friend</label>
+                        </div> 
+                      </div>
+                    </fieldset>
+                  </div>
+
+
+
+
+                  <div class="col-xl-12">
+                   <fieldset class="fieldset-outer">
+                    <legend class="custom-legend">Reason for visit</legend>
+                    <div class="row inner-row">
+                      <div class="col-xl-12">
+                        <div class="form-group">
+                          <label for="visit_reason" class="float-label">Reason for your visit today</label>
+                          <textarea class="form-control optional" id="visit_reason" name="visit_reason" rows="3"></textarea>
+                        </div>
+                      </div>
+                    </div> 
+                  </fieldset> 
+                </div>
+
+
+
+
+
+              </div>
+
+              <!-- Steppers Navigation -->
+              <div class="row mt-1 btn-box">
+               <a onclick="saveExit()">
+                <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+              </a>
+              <a id="next_step2">
+               <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+             </a>
+           </div>
+           <!-- /.Vertical Steppers -->
+         </div>
+
+       </li>
+
+       <li class="form-step" id="second-step">
+        <a>
+          <span class="circle" id="step-second-cirle">2</span>
+          <span class="label">Patient Demographics</span>
+        </a>
+
+        <!-- Section Description -->
+        <div class="step-content container pr-5">
+          <h4 class="font-weight-bold"></h4>
+          <div class="row">
+            <div class="col-xl-12">
+             <fieldset class="fieldset-outer">
+              <legend class="custom-legend">Patient Information</legend>
+              <div class="row inner-row">
+               <div class="col-xl-4">
+                <div class="form-group">
+                  <label for="child_name" class="float-label">Patient Name*</label>
+                  <input type="text" class="form-control required" id="child_name" name="child_name">
+                  <span id="error_child_name" class="error-span"></span>
+                </div>
+              </div>
+
+              <div class="col-xl-4">
+                <div class="form-group">
+                  <label for="child_dob" class="float-label">Patient DOB*</label>
+                  <input type="text" class="form-control required datepicker datepicker" id="child_dob" name="child_dob">
+                  <span id="error_child_dob" class="error-span"></span>
+                </div>
+              </div>
+
+              <div class="col-xl-4">
+                <div class="form-group">
+                  <label for="child_ssn" class="float-label">Patient SSN</label>
+                  <input type="text" class="form-control optional ssn" id="child_ssn" name="child_ssn">
+                </div>
+              </div> 
+            </div> 
+          </fieldset> 
+        </div>
+
+        <div class="col-xl-12">
+         <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Home Address</legend>
+          <div class="row inner-row">
+           <div class="col-xl-6">
+            <div class="form-group">
+              <label for="child_home" class="float-label">Home Address*</label>
+              <input type="text" class="form-control required" id="child_home" name="child_home">
+              <span id="error_child_home" class="error-span"></span>
+            </div>
+          </div>
+
+
+
+
+          <div class="col-xl-6">
+            <div class="form-group">
+              <label for="child_city" class="float-label">City*</label>
+              <input type="text" class="form-control required" id="child_city" name="child_city">
+              <span id="error_child_city" class="error-span"></span>
+            </div>
+          </div>
+
+          <div class="col-xl-6">
+            <div class="form-group">
+              <label for="" class="float-label">State*</label>
+              <select class="form-control required" name="child_state" id="child_state">
+                <option></option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkanas">Arkanas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Lowa">Lowa</option>
+                <option value="Kankas">Kankas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="Washington, D.C.(DC)">Washington, D.C.(DC)</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option>
+              </select>
+              <span id="error_child_state" class="error-span"></span>
+            </div>
+          </div>
+
+          <div class="col-xl-6">
+            <div class="form-group">
+              <label for="child_zip" class="float-label">Zip*</label>
+              <input type="text" class="form-control required zip" id="child_zip" name="child_zip">
+              <span id="error_child_zip" class="error-span"></span>
+            </div>
+          </div>
+
+        </div> 
+      </fieldset> 
+    </div>
+
+    <div class="col-xl-12">
+     <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Contact Information</legend>
+      <div class="row inner-row">
+       <div class="col-xl-4">
+        <div class="form-group">
+          <label for="child_phone" class="float-label">Cell Phone</label>
+          <input type="tel" class="form-control required" id="child_phone" name="child_phone">
+        </div>
+      </div>
+
+      <div class="col-xl-4">
+        <div class="form-group">
+          <label for="child_home_phone" class="float-label">Home Phone*</label>
+          <input type="tel" class="form-control optional" id="child_home_phone" name="child_home_phone">
+          <span id="error_child_home_phone" class="error-span"></span>
+        </div>
+      </div>
+
+      <div class="col-xl-4">
+        <div class="form-group">
+          <label for="child_email" class="float-label">Email*</label>
+          <input type="email" class="form-control required" id="child_email" name="child_email">
+          <span id="error_child_email" class="error-span"></span>
+        </div>
+      </div> 
+    </div> 
+  </fieldset> 
+</div>
+
+
+
+
+
+
+</div>
+<!-- row -->
+
+<div class="row">
+  <div class="col-xl-12">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Race</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s2q2" id="s2q2o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s2q2o1">Black or African American</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s2q2" id="s2q2o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s2q2o2">Hispanic</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s2q2" id="s2q2o3" class="radio" value="">
+          <label class="radiolabel required-label" for="s2q2o3">Asian</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s2q2" id="s2q2o4" class="radio" value="">
+          <label class="radiolabel required-label" for="s2q2o4">White</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s2q2" id="s2q2o5" class="radio" value="">
+          <label class="radiolabel required-label" for="s2q2o5">Other</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="col-xl-12">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Ethnicity</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s2q3" id="s2q3o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s2q3o1">Hispanic or Latino</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s2q3" id="s2q3o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s2q3o2">Not Hispanic or Latino</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="col-xl-12">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Language</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s2q4" id="s2q4o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s2q4o1">English</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s2q4" id="s2q4o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s2q4o2">Spanish</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s2q4" id="s2q4o3" class="radio" value="">
+          <label class="radiolabel required-label" for="s2q4o3">Creole</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s2q4" id="s2q4o4" class="radio" value="">
+          <label class="radiolabel required-label" for="s2q4o4">Other</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+  <div class="col-xl-12">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Communication Barriers(If Any)</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="checkbox" id="vision" value="Vision" name="barrier[]">
+          <label class="checklabel optional-label" for="vision">Vision</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="checkbox" id="Hearing" value="Hearing" name="barrier[]">
+          <label class="checklabel optional-label" for="Hearing">Hearing</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+</div>
+
+<!-- Steppers Navigation -->
+<div class="row mt-1 btn-box">
+  <a onclick="saveExit()">
+   <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+ </a>
+ <a id="next_step3">
+   <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+ </a>
+</div>
+<!-- /.Vertical Steppers -->
+
+
+</div>
+<!-- container -->
+</li>
+
+
+
+<li class="form-step" id="third-step">
+  <a>
+    <span class="circle" id="step-third-circle">3</span>
+    <span class="label">Emergency Contact</span>
+  </a>
+
+  <div class="step-content container pr-5">
+    <div class="row">
+      <div class="col-xl-12">
+       <fieldset class="fieldset-outer">
+        <legend class="custom-legend">Contact</legend>
+        <div class="row inner-row">
+         <div class="col-xl-6">
+          <div class="form-group">
+            <label for="emg_contact" class="float-label">Emergency Contact</label>
+            <input type="text" class="form-control required" id="emg_contact" name="emg_contact">
+            <span id="error_emg_contact" class="error-span"></span>
+          </div>
+        </div>
+
+
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="emg_phone" class="float-label">Phone</label>
+            <input type="tel" class="form-control required" id="emg_phone" name="emg_phone">
+            <span id="error_emg_phone" class="error-span"></span>
+          </div>
+        </div> 
+      </div> 
+    </fieldset> 
+  </div>
+
+
+  <div class="col-xl-12">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Relationship</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o1">Self</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o2">Spouse</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o3" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o3">Step Child</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o4" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o4">Foster Child</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o5" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o5">Ward of the court</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o6" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o6">Employee</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o7" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o7">Handicaped dependent</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o8" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o8">Organ Donar</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o9" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o9">Cadever Donar</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o10" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o10">Grandchild</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o11" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o11">Niece/Nephew</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o12" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o12">Injured Plaintiff</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o13" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o13">Sponsored Dependent</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o14" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o14">Parent</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o15" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o15">Grandparent</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s3q1" id="s3q1o16" class="radio" value="">
+          <label class="radiolabel required-label" for="s3q1o16">Other</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+
+<!-- Steppers Navigation -->
+<div class="row mt-1 btn-box">
+  <a onclick="saveExit()">
+   <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+ </a>
+ <a id="next_step4">
+   <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+ </a>
+</div>
+<!-- /.Vertical Steppers -->
+
+
+</div>
+
+
+</li>
+
+
+
+
+<li class="form-step" id="fourth-step">
+  <a>
+    <span class="circle" id="step-four-circle">4</span>
+    <span class="label">Parent's Information</span>
+  </a>
+
+  <div class="step-content container pr-5">
+    <div class="row">
+      <div class="col-xl-12">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Parent’s Marital Status*</legend>
+          <div class="inner-row">
+            <div class="form-radio">
+              <input type="radio" id="single" name="marriage_status" class="radio" value="Single">
+              <label class="radiolabel required-label" for="single">Single</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" id="married" name="marriage_status" class="radio" value="Married">
+              <label class="radiolabel required-label" for="married">Married</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" id="divorced" name="marriage_status" class="radio" value="Divorced">
+              <label class="radiolabel required-label" for="divorced">Divorced</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" id="widowed" name="marriage_status" class="radio" value="Widowed">
+              <label class="radiolabel required-label" for="widowed">Widowed</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="col-xl-12">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Mom's Information</legend>
+          <div class="row inner-row">
+
+            <div class="col-xl-12">
+             <fieldset class="fieldset-border">
+              <legend>Mom's Info</legend>
+              <div class="row">
+               <div class="col-xl-4">
+                <div class="form-group">
+                  <label for="mom_name" class="float-label">Mom's Name</label>
+                  <input type="text" class="form-control required" id="mom_name" name="mom_name">
+                  <span id="error_mom_name" class="error-span"></span>
+                </div>
+              </div>
+
+              <div class="col-xl-4">
+                <div class="form-group">
+                  <label for="mom_dob" class="float-label">Mom’s DOB</label>
+                  <input type="text" class="form-control required datepicker" id="mom_dob" name="mom_dob">
+                  <span id="error_mom_dob" class="error-span"></span>
+                </div>
+              </div>
+              <div class="col-xl-4">
+                <div class="form-group">
+                  <label for="mom_ssn" class="float-label">Mom’s SSN</label>
+                  <input type="text" class="form-control optional ssn" id="mom_ssn" name="mom_ssn">
+                </div>
+              </div> 
+            </div> 
+          </fieldset> 
+        </div>
+        
+        <div class="col-xl-12">
+         <fieldset class="fieldset-border">
+          <legend>Mom's Contact</legend>
+          <div class="row">
+           <div class="col-xl-6">
+            <div class="form-group">
+              <label for="mom_phone" class="float-label">Mom’s Phone</label>
+              <input type="tel" class="form-control required" id="mom_phone" name="mom_phone">
+              <span id="error_mom_phone" class="error-span"></span>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="form-group">
+              <label for="mom_email" class="float-label">Mom’s Email</label>
+              <input type="email" class="form-control required" id="mom_email" name="mom_email">
+            </div>
+          </div> 
+        </div> 
+      </fieldset> 
+    </div>
+    
+
+    
+
+    <div class="col-xl-12">
+     <fieldset class="fieldset-border">
+      <legend>Mom's Employer</legend>
+      <div class="row">
+       <div class="col-xl-6">
+        <div class="form-group">
+          <label for="mom_employer" class="float-label">Mom’s Employer</label>
+          <input type="text" class="form-control optional" id="mom_employer" name="mom_employer">
+        </div>
+      </div>
+
+      <div class="col-xl-6">
+        <div class="form-group">
+          <label for="mom_work_phone" class="float-label">Work Phone</label>
+          <input type="tel" class="form-control optional" id="mom_work_phone" name="mom_work_phone">
+        </div>
+      </div> 
+    </div> 
+  </fieldset> 
+</div>
+
+
+<div class="col-xl-12">
+  <fieldset class="fieldset-border">
+    <legend>Mother’s Education</legend>
+    <div class="form-radio">
+      <input type="radio" name="s4q1" id="s4q1o1" class="radio" value="">
+      <label class="radiolabel optional-label" for="s4q1o1">Less than High School</label>
+    </div>
+    <div class="form-radio">
+      <input type="radio" name="s4q1" id="s4q1o2" class="radio" value="">
+      <label class="radiolabel optional-label" for="s4q1o2">High school diploma/GED</label>
+    </div>
+    <div class="form-radio">
+      <input type="radio" name="s4q1" id="s4q1o3" class="radio" value="">
+      <label class="radiolabel optional-label" for="s4q1o3">Some college</label>
+    </div>
+    <div class="form-radio">
+      <input type="radio" name="s4q1" id="s4q1o4" class="radio" value="">
+      <label class="radiolabel optional-label" for="s4q1o4">Bachelor’s degree or higher</label>
+    </div>
+  </fieldset>
+</div>
+</div>
+</fieldset>
+</div>
+
+
+
+
+<div class="col-xl-12 my-3">
+  <fieldset class="fieldset-outer">
+    <legend class="custom-legend">Dad's Information</legend>
+    <div class="row inner-row">
+      <div class="col-xl-12">
+       <fieldset class="fieldset-border">
+        <legend>Dad's Info</legend>
+        <div class="row">
+         <div class="col-xl-4">
+          <div class="form-group">
+            <label for="dad_name" class="float-label">Dad’s Name</label>
+            <input type="text" class="form-control required" id="dad_name" name="dad_name">
+          </div>
+        </div>
+
+        <div class="col-xl-4">
+          <div class="form-group">
+            <label for="dad_dob" class="float-label">Dad’s DOB</label>
+            <input type="text" class="form-control required datepicker" id="dad_dob" name="dad_dob">
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="form-group">
+            <label for="dad_ssn" class="float-label">Dad’s SSN</label>
+            <input type="text" class="form-control optional ssn" id="dad_ssn" name="dad_ssn">
+          </div>
+        </div> 
+      </div> 
+    </fieldset> 
+  </div>
+  
+  <div class="col-xl-12">
+   <fieldset class="fieldset-border">
+    <legend>Dad's Contact</legend>
+    <div class="row">
+     <div class="col-xl-6">
+      <div class="form-group">
+        <label for="dad_phone" class="float-label">Dad’s Phone</label>
+        <input type="tel" class="form-control required" id="dad_phone" name="dad_phone">
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="form-group">
+        <label for="dad_email" class="float-label">Dad’s Email</label>
+        <input type="email" class="form-control required" id="dad_email" name="dad_email">
+      </div>
+    </div> 
+  </div> 
+</fieldset> 
+</div>
+
+<div class="col-xl-12">
+ <fieldset class="fieldset-border">
+  <legend>Dad's Employer</legend>
+  <div class="row">
+   <div class="col-xl-6">
+    <div class="form-group">
+      <label for="dad_employer" class="float-label">Dad’s Employer</label>
+      <input type="text" class="form-control optional" id="dad_employer" name="dad_employer">
+    </div>
+  </div>
+
+  <div class="col-xl-6">
+    <div class="form-group">
+      <label for="dad_work_phone" class="float-label">Work Phone</label>
+      <input type="tel" class="form-control optional" id="dad_work_phone" name="dad_work_phone">
+    </div>
+  </div> 
+</div> 
+</fieldset>
+</div>
+
+
+
+
+
+
+<div class="col-xl-12">
+  <fieldset class="fieldset-border">
+    <legend>Dad’s Education</legend>
+    <div class="form-radio">
+      <input type="radio" name="s4q2" id="s4q2o1" class="radio" value="">
+      <label class="radiolabel optional-label" for="s4q2o1">Less than High School</label>
+    </div>
+    <div class="form-radio">
+      <input type="radio" name="s4q2" id="s4q2o2" class="radio" value="">
+      <label class="radiolabel optional-label" for="s4q2o2">High school diploma/GED</label>
+    </div>
+    <div class="form-radio">
+      <input type="radio" name="s4q2" id="s4q2o3" class="radio" value="">
+      <label class="radiolabel optional-label" for="s4q2o3">Some college</label>
+    </div>
+    <div class="form-radio">
+      <input type="radio" name="s4q2" id="s4q2o4" class="radio" value="">
+      <label class="radiolabel optional-label" for="s4q2o4">Bachelor’s degree or higher</label>
+    </div>
+  </fieldset>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+
+<!-- Steppers Navigation -->
+<div class="row mt-1 btn-box">
+  <a onclick="saveExit()">
+   <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+ </a>
+ <a id="next_step5">
+   <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+ </a>
+</div>
+<!-- /.Vertical Steppers -->
+</div>
+
+
+</li>
+
+
+
+<li class="form-step" id="fifth-step">
+  <a>
+    <span class="circle" id="step-fifth-circle">5</span>
+    <span class="label">Insurance Detail</span>
+  </a>
+
+  <div class="step-content container pr-5">
+    <div class="row">
+      <div class="col-xl-12">
+       <fieldset class="fieldset-outer">
+        <legend class="custom-legend">Select Type</legend>
+        <div class="inner-row">
+          <div class="form-checkbox">
+            <input class="checkbox" type="radio" name="s5q0" id="s5q0o1" value="">
+            <label class="checklabel required-label" for="s5q0o1">Self Pay</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="checkbox" type="radio" name="s5q0" id="s5q0o2" value="">
+            <label class="checklabel required-label" for="s5q0o2" onclick="insType()">Insurance</label>
+          </div>
+        </div>
+      </fieldset> 
+    </div>
+    <div class="col-xl-12" id="insurancetype" style="display: none;">
+     <div class="row">
+      <div class="col-xl-6">
+       <fieldset class="fieldset-outer">
+        <legend class="custom-legend">Primary</legend>
+        <div class="inner-row">
+         <div class="col-xl-12">
+           <div class="custom-file mb-4">
+             <input type="file" class="custom-file-input" name="primary_id" id="primary_id" accept="image/*;capture=camera">
+             <label class="custom-file-label" for="primary_id">Upload ID</label>
+           </div>
+         </div>
+         <div class="col-xl-12">
+           <div class="form-group">
+             <label for="insurance_company1" class="float-label">Insurance Company</label>
+             <input type="text" class="form-control required" id="insurance_company1" name="insurance_company1">
+           </div>
+         </div>
+
+         <div class="col-xl-12">
+           <div class="form-group">
+             <label for="insurance_memberid1" class="float-label">Member ID Or Policy</label>
+             <input type="text" class="form-control required" id="insurance_memberid1" name="insurance_memberid1">
+           </div>
+         </div>
+
+         <div class="col-xl-12">
+           <div class="form-group">
+             <label for="insurance_who1" class="float-label">Under Who</label>
+             <input type="text" class="form-control optional" id="insurance_who1" name="insurance_who1">
+           </div>
+         </div>
+
+         
+
+         <div class="col-xl-12">
+           <div class="form-group">
+             <label for="insurance_group1" class="float-label">Group # (If applicable)</label>
+             <input type="text" class="form-control optional" id="insurance_group1" name="insurance_group1">
+           </div>
+         </div>
+
+         <div class="col-xl-12">
+           <div class="form-group">
+             <label for="insurance_address1" class="float-label">Claim Address</label>
+             <textarea name="insurance_address1" class="form-control optional" id="insurance_address1"></textarea>
+             <span id="error_insurance_address" class="error-span"></span>
+           </div>
+         </div> 
+       </div> 
+     </fieldset> 
+   </div>
+
+   <div class="col-xl-6">
+     <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Secondary</legend>
+      <div class="inner-row">
+        <div class="col-xl-12">
+          <div class="custom-file mb-4">
+            <input type="file" class="custom-file-input" name="secondary_id" id="secondary_id" accept="image/*;capture=camera">
+            <label class="custom-file-label" for="secondary_id">Upload ID</label>
+          </div>
+        </div>
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="insurance_company" class="float-label">Insurance Company</label>
+            <input type="text" class="form-control optional" id="insurance_company" name="insurance_company">
+          </div>
+        </div>
+
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="insurance_memberid" class="float-label">Member ID Or Policy</label>
+            <input type="text" class="form-control optional" id="insurance_memberid" name="insurance_memberid">
+          </div>
+        </div>
+
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="insurance_who" class="float-label">Under Who</label>
+            <input type="text" class="form-control optional" id="insurance_who" name="insurance_who">
+          </div>
+        </div>
+
+        
+
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="insurance_group" class="float-label">Group # (If applicable)</label>
+            <input type="text" class="form-control optional" id="insurance_group" name="insurance_group">
+          </div>
+        </div>
+
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="insurance_address" class="float-label">Claim Address</label>
+            <textarea name="insurance_address" class="form-control optional" id="insurance_address"></textarea>
+            <span id="error_insurance_address" class="error-span"></span>
+          </div>
+        </div>
+      </div> 
+    </fieldset> 
+  </div> 
+</div> 
+</div>
+
+
+</div>
+
+<!-- Steppers Navigation -->
+<div class="row mt-1 btn-box">
+  <a onclick="saveExit()">
+   <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+ </a>
+ <a id="next_step6">
+   <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+ </a>
+</div>
+<!-- /.Vertical Steppers -->
+
+</div>
+</li>
+
+
+<li class="form-step" id="sixth-step">
+  <a>
+    <span class="circle" id="step-sixth-circle">6</span>
+    <span class="label">Social Information</span>
+  </a>
+
+  <div class="step-content container pr-5">
+    <div class="row">
+
+      <div class="col-xl-12">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Lives With</legend>
+          <div class="inner-row">
+            <div class="form-radio">
+              <input type="radio" name="s6q1" id="s6q1o1" class="radio" value="">
+              <label class="radiolabel required-label" for="s6q1o1">Mother</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="s6q1" id="s6q1o2" class="radio" value="">
+              <label class="radiolabel required-label" for="s6q1o2">Father</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="s6q1" id="s6q1o3" class="radio" value="">
+              <label class="radiolabel required-label" for="s6q1o3">Guardian</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="s6q1" id="s6q1o4" class="radio" value="">
+              <label class="radiolabel required-label" for="s6q1o4">Fooster</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="s6q1" id="s6q1o5" class="radio" value="">
+              <label class="radiolabel required-label" for="s6q1o5">Grandparents</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-12">
+       <fieldset class="fieldset-outer">
+        <legend class="custom-legend">Sibling Information</legend>
+        <div class="row inner-row">
+         <div class="col-xl-4">
+          <div class="form-group">
+            <label for="child_brother" class="float-label">Brothers</label>
+            <input type="number" class="form-control optional" id="child_brother" name="child_brother">
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="form-group">
+            <label for="child_sister" class="float-label">Sisters</label>
+            <input type="number" class="form-control optional" id="child_sister" name="child_sister">
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="form-group">
+            <label for="child_pet" class="float-label">Pets</label>
+            <input type="number" class="form-control optional" id="child_pet" name="child_pet">
+          </div>
+        </div>
+        
+
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="sibling_details" class="float-label">Siblings names and DOBs</label>
+            <textarea class="form-control optional" id="sibling_details" rows="3" name="sibling_details"></textarea>
+          </div>
+        </div> 
+      </div> 
+    </fieldset> 
+  </div>
+
+  
+
+  <div class="col-xl-6">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Smoker in Household</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s6q2" id="s6q2o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s6q2o1" onclick="smoke()">Yes</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s6q2" id="s6q2o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s6q2o2">No</label>
+        </div>
+        <div class="form-group intial_hidden" id="smoker_group">
+          <label for="smoker_name" class="float-label">Who(Smoker Name)</label>
+          <input type="text" class="form-control required" id="smoker_name" name="smoker_name">
+          <span id="error_smoker_name" class="error-span"></span>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="col-xl-6">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Alcohol use in Household</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s6q3" id="s6q3o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s6q3o1" onclick="alcohal()">Yes</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s6q3" id="s6q3o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s6q3o2">No</label>
+        </div>
+        <div class="form-group intial_hidden" id="alcohol_group">
+          <label for="alcohol_name" class="float-label">Who</label>
+          <input type="text" class="form-control required" id="alcohol_name" name="alcohol_name">
+          <span id="error_alcohol_name" class="error-span"></span>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="col-xl-12">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Domestic abuse/violence(If Any)</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="checkbox" id="Verbal" value="1" name="Verbal">
+          <label class="checklabel optional-label" for="Verbal">Verbal</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="checkbox" id="Physical" value="1" name="Physical">
+          <label class="checklabel optional-label" for="Physical">Physical</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="checkbox" id="Sexual" value="1" name="Sexual">
+          <label class="checklabel optional-label" for="Sexual">Sexual</label>
+        </div>
+        <div class="form-group intial_hidden" id="violence_group">
+          <label for="violence_situation" class="float-label">Explain Situation<span class="desktop">(Domestic abuse/violence)</span></label>
+          <textarea class="form-control required" id="violence_situation" rows="3" name="violence_situation"></textarea>
+          <span id="error_violence_situation" class="error-span"></span>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+</div>
+
+<!-- Steppers Navigation -->
+<div class="row mt-1 btn-box">
+  <a onclick="saveExit()">
+   <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+ </a>
+ <a id="next_step7">
+   <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+ </a>
+</div>
+<!-- /.Vertical Steppers -->
+
+
+</div>
+
+</li>
+
+
+
+
+<li class="form-step" id="seventh-step">
+  <a>
+    <span class="circle" id="step-seventh-circle">7</span>
+    <span class="label">Past History</span>
+  </a>
+
+  <div class="step-content container pr-5">
+    <div class="row">
+
+      <div class="col-xl-6">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Any Complication during Pregnancy</legend>
+          <div class="inner-row">
+            <div class="form-radio">
+              <input type="radio" name="s7q1" id="s7q1o1" class="radio" value="">
+              <label class="radiolabel required-label" for="s7q1o1" onclick="pregnancy()">Yes</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="s7q1" id="s7q1o2" class="radio" value="">
+              <label class="radiolabel required-label" for="s7q1o2">No</label>
+            </div>
+            <div class="form-group intial_hidden" id="pregnancy_group">
+              <label for="pregnancy_explain" class="float-label">Explain(Complication <span class="desktop">during Pregnancy</span>)</label>
+              <textarea class="form-control required" id="pregnancy_explain" name="pregnancy_explain" rows="3"></textarea>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      
+      <div class="col-xl-6">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Delivery</legend>
+          <div class="inner-row">
+            <div class="form-radio">
+              <input type="radio" name="s7q2" id="s7q2o1" class="radio" value="">
+              <label class="radiolabel required-label" for="s7q2o1">Vaginal</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="s7q2" id="s7q2o2" class="radio" value="">
+              <label class="radiolabel required-label" for="s7q2o2">C-Section</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-12">
+       <fieldset class="fieldset-outer">
+        <legend class="custom-legend">Birth Information</legend>
+        <div class="row inner-row">
+         <div class="col-xl-6">
+          <div class="form-group">
+            <label for="labor" class="float-label">Labor</label>
+            <input type="text" class="form-control optional" id="labor" name="labor">
+          </div>
+        </div>
+
+        <div class="col-xl-6">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label class="float-label">Birth Weight</label>
+                <input type="text" name="bw_lb"  class="form-control optional" placeholder="Lb">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <input type="text" name="bw_oz" class="form-control optional" placeholder="Oz">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="hospital_name" class="float-label">Hospital Name Child Was Born In</label>
+            <input type="text" class="form-control optional" id="hospital_name" name="hospital_name">
+          </div>
+        </div>
+
+      </div> 
+    </fieldset> 
+  </div>
+
+  <div class="col-xl-6">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">At Birth: Hep B</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s7q3" id="s7q3o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q3o1">Yes</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s7q3" id="s7q3o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q3o2">No</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="col-xl-6">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Hearing Screen</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s7q4" id="s7q4o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q4o1">Passed</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s7q4" id="s7q4o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q4o2">Failed</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+  <div class="col-xl-6">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Any Hospital Admission</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s7q5" id="s7q5o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q5o1" onclick="admHospital()">Yes</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s7q5" id="s7q5o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q5o2">No</label>
+        </div>
+        <div class="form-group intial_hidden" id="hospital_admission_group">
+          <label for="admission_explain" class="float-label">Explain(Hospital Admission)</label>
+          <textarea class="form-control required" id="admission_explain" name="admission_explain"></textarea>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="col-xl-6">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Any illness</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s7q6" id="s7q6o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q6o1" onclick="anyIllness()">Yes</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s7q6" id="s7q6o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q6o2">No</label>
+        </div>
+        <div class="form-group intial_hidden" id="any_illness_group">
+          <label for="explain_illness" class="float-label">Explain(Illness)</label>
+          <textarea class="form-control required" id="explain_illness" name="explain_illness"></textarea>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="col-xl-6">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Any medication</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s7q7" id="s7q7o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q7o1" onclick="anymedication()">Yes</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s7q7" id="s7q7o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q7o2">No</label>
+        </div>
+        <div class="form-group intial_hidden" id="any_medication_group">
+          <label for="explain_medication" class="float-label">Explain(Medication)</label>
+          <textarea class="form-control required" id="explain_medication" name="explain_medication"></textarea>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="col-xl-6">
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Any known allergies</legend>
+      <div class="inner-row">
+        <div class="form-radio">
+          <input type="radio" name="s7q8" id="s7q8o1" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q8o1" onclick="anyallergy()">Yes</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" name="s7q8" id="s7q8o2" class="radio" value="">
+          <label class="radiolabel required-label" for="s7q8o2">No</label>
+        </div>
+        <div class="form-group intial_hidden" id="any_allergy_group">
+          <label for="explain_allergies" class="float-label">Explain(Allergies)</label>
+          <textarea class="form-control required" id="explain_allergies" name="explain_allergies"></textarea>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  
+
+</div>
+
+<!-- Steppers Navigation -->
+<div class="row mt-1 btn-box">
+  <a onclick="saveExit()">
+   <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+ </a>
+ <a id="next_step8">
+   <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+ </a>
+</div>
+<!-- /.Vertical Steppers -->
+
+
+</div>
+
+</li>
+
+
+<li class="form-step" id="eighth-step">
+  <a>
+    <span class="circle" id="step-eighth-circle">8</span>
+    <span class="label">Developmental History</span>
+  </a>
+
+  <div class="step-content container pr-5">
+    <div class="row">
+      <div class="col-xl-12">
+       <p>For infants to 24 months child, please review the Developmental Milestones of the child and list the age the milestones was achieved</p> 
+     </div>
+     <div class="col-xl-12">
+       <div class="table-responsive">
+        <table class="table table-bordered table-sm text-center">
+          <tr>
+            <th>#</th>
+            <th>Developmental Milestones</th>
+            <th>Expected Dates</th>
+            <th>List Below Date Developmental Milestone achieved or Age</th>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>Head up 45 degrees; Lifts head</td>
+            <td>2 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q1" id="d_y1" value="Yes">
+                <label class="checklabel required-label" for="d_y1">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q1" id="d_n1" value="No">
+                <label class="checklabel required-label" for="d_n1">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q1" id="d_d1" value="Delayed">
+                <label class="checklabel required-label" for="d_d1">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>2</td>
+            <td>Smile spontaneously;Smile responsively</td>
+            <td>2 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q2" id="d_y2" value="Yes">
+                <label class="checklabel required-label" for="d_y2">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q2" id="d_n2" value="No">
+                <label class="checklabel required-label" for="d_n2">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q2" id="d_d2" value="Delayed">
+                <label class="checklabel required-label" for="d_d2">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>3</td>
+            <td>Roll over; Sit with head steady</td>
+            <td>4 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q3" id="d_y3" value="Yes">
+                <label class="checklabel required-label" for="d_y3">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q3" id="d_n3" value="No">
+                <label class="checklabel required-label" for="d_n3">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q3" id="d_d3" value="Delayed">
+                <label class="checklabel required-label" for="d_d3">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Grasp rattle; Turn to see rattling sound; Laugh</td>
+            <td>4 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q4" id="d_y4" value="Yes">
+                <label class="checklabel required-label" for="d_y4">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q4" id="d_n4" value="No">
+                <label class="checklabel required-label" for="d_n4">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q4" id="d_d4" value="Delayed">
+                <label class="checklabel required-label" for="d_d4">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>5</td>
+            <td>Sit- No Support; Roll over</td>
+            <td>6 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q5" id="d_y5" value="Yes">
+                <label class="checklabel required-label" for="d_y5">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q5" id="d_n5" value="No">
+                <label class="checklabel required-label" for="d_n5">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q5" id="d_d5" value="Delayed">
+                <label class="checklabel required-label" for="d_d5">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td>Feed self; Work to obtain toy that is out of reach</td>
+            <td>6 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q6" id="d_y6" value="Yes">
+                <label class="checklabel required-label" for="d_y6">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q6" id="d_n6" value="No">
+                <label class="checklabel required-label" for="d_n6">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q6" id="d_d6" value="Delayed">
+                <label class="checklabel required-label" for="d_d6">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>7</td>
+            <td>Pull to stand; Stand holding up</td>
+            <td>9 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q7" id="d_y7" value="Yes">
+                <label class="checklabel required-label" for="d_y7">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q7" id="d_n7" value="No">
+                <label class="checklabel required-label" for="d_n7">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q7" id="d_d7" value="Delayed">
+                <label class="checklabel required-label" for="d_d7">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>8</td>
+            <td>Says DADA/MAMA- Nonspecific; Use single syllables</td>
+            <td>9 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q8" id="d_y8" value="Yes">
+                <label class="checklabel required-label" for="d_y8">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q8" id="d_n8" value="No">
+                <label class="checklabel required-label" for="d_n8">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q8" id="d_d8" value="Delayed">
+                <label class="checklabel required-label" for="d_d8">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>9</td>
+            <td>Wave Bye-Bye; Imitates activities</td>
+            <td>9 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q9" id="d_y9" value="Yes">
+                <label class="checklabel required-label" for="d_y9">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q9" id="d_n9" value="No">
+                <label class="checklabel required-label" for="d_n9">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q9" id="d_d9" value="Delayed">
+                <label class="checklabel required-label" for="d_d9">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>10</td>
+            <td>Walks well; Walk Backwards; Stops and Recovers</td>
+            <td>15 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q10" id="d_y10" value="Yes">
+                <label class="checklabel required-label" for="d_y10">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q10" id="d_n10" value="No">
+                <label class="checklabel required-label" for="d_n10">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q10" id="d_d10" value="Delayed">
+                <label class="checklabel required-label" for="d_d10">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>11</td>
+            <td>Speak 1 word; Speak 3 words</td>
+            <td>15 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q11" id="d_y11" value="Yes">
+                <label class="checklabel required-label" for="d_y11">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q11" id="d_n11" value="No">
+                <label class="checklabel required-label" for="d_n11">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q11" id="d_d11" value="Delayed">
+                <label class="checklabel required-label" for="d_d11">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>12</td>
+            <td>Removes clothing; Run; Walks up stairs</td>
+            <td>18 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q12" id="d_y12" value="Yes">
+                <label class="checklabel required-label" for="d_y12">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q12" id="d_n12" value="No">
+                <label class="checklabel required-label" for="d_n12">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q12" id="d_d12" value="Delayed">
+                <label class="checklabel required-label" for="d_d12">Delayed</label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>13</td>
+            <td>Dresses themselves; Combines Words</td>
+            <td>24 months</td>
+            <td>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q13" id="d_y13" value="Yes">
+                <label class="checklabel required-label" for="d_y13">Yes</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q13" id="d_n13" value="No">
+                <label class="checklabel required-label" for="d_n13">No</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="d_q13" id="d_d13" value="Delayed">
+                <label class="checklabel required-label" for="d_d13">Delayed</label>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div> 
+    </div>
+  </div> 
+
+  <!-- Steppers Navigation -->
+  <div class="row mt-1 btn-box">
+    <a onclick="saveExit()">
+     <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+   </a>
+   <a id="next_step9">
+     <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+   </a>
+ </div>
+ <!-- /.Vertical Steppers -->
+
+
+</div>
+
+</li>
+
+
+<li class="form-step" id="ninth-step">
+  <a>
+    <span class="circle" id="step-ninth-circle">9</span>
+    <span class="label">Family History</span>
+  </a>
+
+  <div class="step-content container pr-5">
+    <div class="row">
+
+      <div class="col-xl-6">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Mother Healthy*</legend>
+          <div class="inner-row">
+            <div class="form-radio">
+              <input type="radio" name="s9q1" id="s9q1o1" class="radio" value="">
+              <label class="radiolabel required-label" for="s9q1o1">Yes</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="s9q1" id="s9q1o2" class="radio" value="">
+              <label class="radiolabel required-label" for="s9q1o2" onclick="motherHealth()">No</label>
+            </div>
+            <div class="form-group intial_hidden" id="mother_healthy_group">
+              <label for="explain_mother_health" class="float-label">If No Explain(Mother Health)</label>
+              <input type="text" class="form-control required" id="explain_mother_health" name="explain_mother_health">
+              <span id="error_explain_mother_health" class="error-span"></span>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-6">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Father Healthy*</legend>
+          <div class="inner-row">
+            <div class="form-radio">
+              <input type="radio" name="s9q2" id="s9q2o1" class="radio" value="">
+              <label class="radiolabel required-label" for="s9q2o1">Yes</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="s9q2" id="s9q2o2" class="radio" value="">
+              <label class="radiolabel required-label" for="s9q2o2" onclick="fatherHealth()">No</label>
+            </div>
+            <div class="form-group intial_hidden" id="father_health_group">
+              <label for="explain_father_health" class="float-label">If No Explain(Father Health)</label>
+              <input type="text" class="form-control required" id="explain_father_health" name="explain_father_health">
+              <span class="error-span" id="error_explain_father_health"></span>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-6">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Siblings Healthy*</legend>
+          <div class="inner-row">
+            <div class="form-radio">
+              <input type="radio" name="s9q3" id="s9q3o1" class="radio" value="">
+              <label class="radiolabel required-label" for="s9q3o1">Yes</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="s9q3" id="s9q3o2" class="radio" value="">
+              <label class="radiolabel required-label" for="s9q3o2" onclick="siblingHealth()">No</label>
+            </div>
+            <div class="form-group intial_hidden" id="sibling_group">
+              <label for="sibling_explain" class="float-label">If No Explain(Siblings Health)</label>
+              <input type="text" class="form-control required" id="sibling_explain" name="sibling_explain">
+              <span id="error_sibling_explain" class="error-span"></span>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-6">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Paternal Grandparents Healthy</legend>
+          <div class="inner-row">
+            <div class="form-radio">
+              <input type="radio" name="s9q4" id="s9q4o1" class="radio" value="">
+              <label class="radiolabel required-label" for="s9q4o1">Yes</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="s9q4" id="s9q4o2" class="radio" value="">
+              <label class="radiolabel required-label" for="s9q4o2" onclick="paternalHealth()">No</label>
+            </div>
+            <div class="form-group intial_hidden" id="pgrandparent_group">
+              <label for="pgrandparent_explain" class="float-label">If No Explain<span class="desktop">(Paternal Grandparents Health)</span></label>
+              <input type="text" class="form-control required" id="pgrandparent_explain" name="pgrandparent_explain">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-6">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Maternal Grandparents Healthy</legend>
+          <div class="inner-row">
+            <div class="form-radio">
+              <input type="radio" name="s9q5" id="s9q5o1" class="radio" value="">
+              <label class="radiolabel required-label" for="s9q5o1">Yes</label>
+            </div>
+            <div class="form-radio">
+              <input type="radio" name="s9q5" id="s9q5o2" class="radio" value="">
+              <label class="radiolabel required-label" for="s9q5o2" onclick="maternalHealth()">No</label>
+            </div>
+            <div class="form-group intial_hidden" id="mgrandparent_group">
+              <label for="mgrandparent_explain" class="float-label">If No Explain<span class="desktop">(Maternal Grandparents Healthy)</span></label>
+              <input type="text" class="form-control required" id="mgrandparent_explain" name="mgrandparent_explain">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      
+      <div class="col-xl-12"></div>  
+      
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Traveled outside USA</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="travel_history" id="fh_q1_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q1_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="travel_history" id="fh_q1_n" value="No">
+              <label class="checklabel required-label" for="fh_q1_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Diabetes</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="diabetes_history" id="fh_q2_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q2_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="diabetes_history" id="fh_q2_n" value="No">
+              <label class="checklabel required-label" for="fh_q2_n">No</label>
+            </div>
+          </div>
+        </fieldset> 
+      </div>
+
+
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Mood Disord</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="mood_history" id="fh_q3_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q3_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="mood_history" id="fh_q3_n" value="No">
+              <label class="checklabel required-label" for="fh_q3_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">High Blood Pressure</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="blood_history" id="fh_q4_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q4_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="blood_history" id="fh_q5_n" value="No">
+              <label class="checklabel required-label" for="fh_q5_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Exposure to HIV</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="hiv_history" id="fh_q6_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q6_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="hiv_history" id="fh_q6_n" value="No">
+              <label class="checklabel required-label" for="fh_q6_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Anger</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="anger_history" id="fh_q7_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q7_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="anger_history" id="fh_q7_n" value="No">
+              <label class="checklabel required-label" for="fh_q7_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Heart Disease</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="heart_history" id="fh_q8_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q8_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="heart_history" id="fh_q8_n" value="No">
+              <label class="checklabel required-label" for="fh_q8_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Exposure to TB</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="tb_history" id="fh_q9_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q9_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="tb_history" id="fh_q9_n" value="No">
+              <label class="checklabel required-label" for="fh_q9_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Schizophrenia</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="schi_history" id="fh_q10_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q10_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="schi_history" id="fh_q10_n" value="No">
+              <label class="checklabel required-label" for="fh_q10_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Coronary Artery Disease</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="artery_history" id="fh_q11_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q11_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="artery_history" id="fh_q11_n" value="No">
+              <label class="checklabel required-label" for="fh_q11_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Bipolar</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="bipolar_history" id="fh_q12_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q12_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="bipolar_history" id="fh_q12_n" value="No">
+              <label class="checklabel required-label" for="fh_q12_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Drug Abuse</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="drug_history" id="fh_q13_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q13_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="drug_history" id="fh_q13_n" value="No">
+              <label class="checklabel required-label" for="fh_q13_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Cancer</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="cancer_history" id="fh_q14_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q14_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="cancer_history" id="fh_q15_n" value="No">
+              <label class="checklabel required-label" for="fh_q15_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">ADHD</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="adhd_history" id="fh_q16_y" value="Yes">
+              <label class="checklabel required-label" for="fh_q16_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="adhd_history" id="fh_16_n" value="No">
+              <label class="checklabel required-label" for="fh_16_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Maternal Depression</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="meternal_history" id="fh_17_y" value="Yes">
+              <label class="checklabel required-label" for="fh_17_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="meternal_history" id="fh_17_n" value="No">
+              <label class="checklabel required-label" for="fh_17_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">High Cholesterol</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="chol_history" id="fh_18_y" value="Yes">
+              <label class="checklabel required-label" for="fh_18_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="chol_history" id="fh_18_n" value="No">
+              <label class="checklabel required-label" for="fh_18_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-4">
+        <fieldset class="fieldset-outer">
+          <legend class="custom-legend">Behavioral Disorder</legend>
+          <div class="inner-row">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="behave_history" id="fh_19_y" value="Yes">
+              <label class="checklabel required-label" for="fh_19_y">Yes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="behave_history" id="fh_19_n" value="No">
+              <label class="checklabel required-label" for="fh_19_n">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-xl-12">
+       <fieldset class="fieldset-outer">
+        <legend class="custom-legend">Other</legend>
+        <div class="row inner-row">
+         <div class="col-xl-12">
+          <div class="form-group">
+            <label for="explain_family_health" class="float-label">Please explain any family Member’s behavior health problem</label>
+            <textarea class="form-control optional" id="explain_family_health" name="explain_family_health" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="explain_child_health" class="float-label">Please list the child’s health concerns in order of importance. When did it begin?</label>
+            <textarea class="form-control optional" name="explain_child_health" id="explain_child_health" rows="3"></textarea>
+          </div>
+        </div> 
+      </div> 
+    </fieldset> 
+  </div>
+  
+
+  
+</div>
+
+<!-- Steppers Navigation -->
+<div class="row mt-1 btn-box">
+  <a onclick="saveExit()">
+   <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+ </a>
+ <a id="next_step10">
+   <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+ </a>
+</div>
+<!-- /.Vertical Steppers -->
+
+
+</div>
+
+</li>
+
+
+<li class="form-step" id="tenth-step">
+  <a>
+    <span class="circle" id="step-tenth-circle">10</span>
+    <span class="label">Family Health Habits</span>
+  </a>
+
+  <div class="step-content container pr-5">
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">How strong are your family’s religious beliefs or practices?</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q1" id="fhh_q1_vs" value="Very Strong">
+          <label class="checklabel required-label" for="fhh_q1_vs">Very Strong</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q1" id="fhh_q1_ms" value="Moderately Strong">
+          <label class="checklabel required-label" for="fhh_q1_ms">Moderately Strong</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q1" id="fhh_q1_ns" value="Not Strong">
+          <label class="checklabel required-label" for="fhh_q1_ns">Not Strong</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q1" id="fhh_q1_na" value="N/A">
+          <label class="checklabel required-label" for="fhh_q1_na">N/A</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">How often does your family eat meals together?</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q2" id="fhh_q2_f" value="Frequently">
+          <label class="checklabel required-label" for="fhh_q2_f">Frequently</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q2" id="fhh_q2_often" value="Often">
+          <label class="checklabel required-label" for="fhh_q2_often">Often</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q2" id="fhh_q2_oca" value="Occasionally">
+          <label class="checklabel required-label" for="fhh_q2_oca">Occasionally</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q2" id="fhh_q2_rare" value="Rarely">
+          <label class="checklabel required-label" for="fhh_q2_rare">Rarely</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q2" id="fhh_q2_never" value="Never">
+          <label class="checklabel required-label" for="fhh_q2_never">Never</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">How often does your child use a seatbelt? (Car seat)?</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q3" id="fhh_q3_never" value="Never">
+          <label class="checklabel required-label" for="fhh_q3_never">Never</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q3" id="fhh_q3_rarely" value="Rarely">
+          <label class="checklabel required-label" for="fhh_q3_rarely">Rarely</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q3" id="fhh_q3_sometimes" value="Sometimes">
+          <label class="checklabel required-label" for="fhh_q3_sometimes">Sometimes</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q3" id="fhh_q3_often" value="Often">
+          <label class="checklabel required-label" for="fhh_q3_often">Often</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q3" id="fhh_q3_always" value="Always">
+          <label class="checklabel required-label" for="fhh_q3_always">Always</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Does your child ride a bicycle?</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q4" id="fhh_q4_never" value="Never">
+          <label class="checklabel required-label" for="fhh_q4_never">Never</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q4" id="fhh_q4_rarely" value="Rarely">
+          <label class="checklabel required-label" for="fhh_q4_rarely">Rarely</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q4" id="fhh_q4_sometimes" value="Sometimes">
+          <label class="checklabel required-label" for="fhh_q4_sometimes">Sometimes</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q4" id="fhh_q4_often" value="Often">
+          <label class="checklabel required-label" for="fhh_q4_often">Often</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q4" id="fhh_q4_always" value="Always">
+          <label class="checklabel required-label" for="fhh_q4_always">Always</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">If yes, how often he/she use a helmet?</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q5" id="fhh_q5_never" value="Never">
+          <label class="checklabel required-label" for="fhh_q5_never">Never</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q5" id="fhh_q5_rarely" value="Rarely">
+          <label class="checklabel required-label" for="fhh_q5_rarely">Rarely</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q5" id="fhh_q5_sometimes" value="Sometimes">
+          <label class="checklabel required-label" for="fhh_q5_sometimes">Sometimes</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q5" id="fhh_q5_often" value="Often">
+          <label class="checklabel required-label" for="fhh_q5_often">Often</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q5" id="fhh_q5_always" value="Always">
+          <label class="checklabel required-label" for="fhh_q5_always">Always</label>
+        </div>
+      </div>
+    </fieldset>
+
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">What kind of guns are in your home?</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="checkbox" name="fhh_q6" id="fhh_q6_handgun" value="Handgun">
+          <label class="checklabel required-label" for="fhh_q6_handgun">Handgun</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="checkbox" name="fhh_q6" id="fhh_q6_shotgun" value="Shotgun">
+          <label class="checklabel required-label" for="fhh_q6_shotgun">Shotgun</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="checkbox" name="fhh_q6" id="fhh_q6_rifle" value="Rifle">
+          <label class="checklabel required-label" for="fhh_q6_rifle">Rifle</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="checkbox" name="fhh_q6" id="fhh_q6_other" value="Other">
+          <label class="checklabel required-label" for="fhh_q6_other">Other</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="checkbox" name="fhh_q6" id="fhh_q6_none" value="None">
+          <label class="checklabel required-label" for="fhh_q6_none">None</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">If you have a gun at home, is it locked up?</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q7" id="fhh_q7_yes" value="Yes">
+          <label class="checklabel required-label" for="fhh_q7_yes">Yes</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q7" id="fhh_q7_no" value="No">
+          <label class="checklabel required-label" for="fhh_q7_no">No</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q7" id="fhh_q7_na" value="N/A">
+          <label class="checklabel required-label" for="fhh_q7_na">N/A</label>
+        </div>
+      </div>
+    </fieldset>
+
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Does your child use a toothpaste with fluoride in it?</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q8" id="fhh_q8_yes" value="Yes">
+          <label class="checklabel required-label" for="fhh_q8_yes">Yes</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q8" id="fhh_q8_no" value="No">
+          <label class="checklabel required-label" for="fhh_q8_no">No</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Do you help your child with tooth brushing?</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q9" id="fhh_q9_yes" value="Yes">
+          <label class="checklabel required-label" for="fhh_q9_yes">Yes</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q9" id="fhh_q9_no" value="No">
+          <label class="checklabel required-label" for="fhh_q9_no">No</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">How often do you brush your teeth?</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q10" id="fhh_q10_more" value="More than once day">
+          <label class="checklabel required-label" for="fhh_q10_more">More than once day</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q10" id="fhh_q10_day" value="Once a day">
+          <label class="checklabel required-label" for="fhh_q10_day">Once a day</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="fhh_q10" id="fhh_q10_less" value="Less than once a day">
+          <label class="checklabel required-label" for="fhh_q10_less">Less than once a day</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="row">
+      <div class="col-xl-12">
+       <fieldset class="fieldset-outer">
+        <legend class="custom-legend">Other</legend>
+        <div class="row inner-row">
+         <div class="col-xl-12">
+          <div class="form-group">
+            <label for="family_fun" class="float-label">What does your family do together for fun?</label>
+            <textarea class="form-control optional" id="family_fun" rows="2" name="family_fun"></textarea>
+          </div>
+        </div>
+
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="oral_concern" class="float-label">Any Concerns of oral of oral/dental health</label>
+            <textarea class="form-control optional" id="oral_concern" name="oral_concern" rows="2"></textarea>
+          </div>
+        </div> 
+      </div> 
+    </fieldset> 
+  </div>
+  
+</div>
+
+<!-- Steppers Navigation -->
+<div class="row mt-1 btn-box">
+  <a onclick="saveExit()">
+   <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+ </a>
+ <a id="next_step11">
+   <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+ </a>
+</div>
+<!-- /.Vertical Steppers -->
+
+
+</div>
+
+</li>
+
+<li class="form-step" id="eleventh-step">
+  <a>
+    <span class="circle" id="step-eleventh-circle">11</span>
+    <span class="label">Financial Responsibility</span>
+  </a>
+
+  <div class="step-content container pr-5">
+    <p>Thank you for choosing us as your child’s health care provider. We are committed to providing your child comprehensive Pediatric care. Please understand that payment of your child’s bill is considered part of their treatment. The following is a statement of our financial policy which we require you to read and sign prior to any treatment.</p>
+    <h5><b>ALL PARENTS MUST COMPLETE ALL PAPERWORK BEFORE THEIR CHILD IS SEEN.</b></h5>
+    <p>All professional services rendered are charged to the patient and are due at the time of service, unless other arrangements have been made in advance with our business office. Necessary forms will be completed to file for insurance carrier payments.</p>
+    <p>If a check is returned to us for any reason, your child’s account will be charged the amount of the check plus a $ 25.00 returned check fee. Parents will be responsible for any fees incurred from collection agencies and/or legal services hired by POWERS PEDIATRICS to secure payment for services.</p>
+    <h5><b>USUAL & CUSTOMARY RATES</b></h5>
+    <p>Our practice is committed to providing the best treatment for our patients and we charge what is usual and customary for our area. You are responsible for payment regardless of any insurance company’s arbitrary determination of usual or customary rates.</p>
+    <h5><b>INSURANCE</b></h5>
+    <p>WE CANNOT BILL YOUR INSURANCE COMPANY UNLESS YOU GIVE US A COPY OF YOUR CHILD’S INSURANCE CARD. Without a copy of the card, you will be responsible for 100% of the charges on that date of service. We will file to your insurance company; however, if you must pay a percentage of the bill, it must be paid at the time of service. All co-pays are due at the time of service.</p>
+    <p>The balance is your responsibility whether your insurance company pays or not. Your insurance policy is a contract between you and your insurance company. Please be aware that some, and perhaps all of the services provided may be non-covered services and not considered reasonable according to your insurance policy.</p>
+    <p>According to Florida State statutes, an HMO has 45 days to process and pay a correct claim. If your insurance has not paid your child’s claim in full within 6 months, you will be responsible for the bill within 10 days of receipt of your statement.</p>
+    <p>We will mail 2 statements to you before the account is turned over to a collection agency. If you are unable to pay the balance in full, we can arrange a payment plan for you which you will sign. A copy of the payment plan will be given to you and copy will be kept in your child’s chart. If you default on your payment plan, the account will be forwarded to a collection agency.</p>
+
+    <p>In the event that your insurance changes, it is your responsibility to notify us as we may be non participating providers. Failure to do so will result in you being responsible for all charges incurred. It is not the responsibility of POWERS PEDIATRICS to ensure we are providers. Our main concern is the health of our patients.</p>
+
+    <p>Regarding HMO, Managed Care and Medicaid plan, you are responsible for making sure that our practice and/or doctors are listed as your child’s Primary Care Physicians. Failure to do so will result in you being responsible for all charges incurred.</p>
+
+    <h5><b>Assignment of Benefits</b></h5>
+    <p>I hereby assign all medical, dental and surgical benefits, to include major medical benefits to which I am entitled. I hereby authorize and direct my insurance carrieres), including Medicare, private insurance and any other health/medical and dental plan, to issue payment check(s) directly to POWERS PEDIATRICS for medical and dental services rendered to myself and/or my dependents regardless of my insurance benefits, if any. I understand that I am responsible for any amount not covered by insurance.</p>
+
+    <h5><b>Authorization to Release Information</b></h5>
+    <p>I hereby authorize POWERS PEDIATRICS to: (1) release any information necessary to insurance carriers regarding my illness and treatments; (2) process insurance claims generated in the course of examination or treatment; and (3) allow a photocopy of my signature to be used to process insurance claims for the period of lifetime. This order will remain in effect until revoked by me in writing.</p>
+
+    <p>I have requested medical services from POWERS PEDIATRICS on behalf of myself and/or my dependents, and understand that by making this request, I become fully financially responsible for any and all charges incurred in the course of the treatment authorized.</p>
+
+    <p>I further understand that fees are due and payable on the date that services are rendered and agree to pay all such charges incurred in full immediately upon presentation of the appropriate statement. A photocopy of this assignment is to be considered as valid as the original.</p>
+
+    <p>Your Signature Below Confirm that you fully understand POWERS PEDIATRICS financial policy.</p>
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">Do you have trouble affording the care or prescriptions prescribed?</legend>
+      <div class="inner-row">
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="any_finance_trouble" id="trouble_yes" value="Yes">
+          <label class="checklabel required-label" for="trouble_yes">Yes</label>
+        </div>
+        <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="any_finance_trouble" id="trouble_no" value="No">
+          <label class="checklabel required-label" for="trouble_no">No</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="row">
+      <div class="col-xl-6">
+       <fieldset class="fieldset-outer">
+        <legend class="custom-legend">Signee Info</legend>
+        <div class="row inner-row">
+          <div class="col-xl-12">
+            <div class="form-group">
+              <label for="finance_parent" class="float-label">Parent’s name</label>
+              <input type="text" class="form-control required" id="finance_parent" name="finance_parent">
+              <span id="error_finance_parent" class="error-span"></span>
+            </div>
+          </div>
+
+          <div class="col-xl-12">
+            <div class="form-group">
+              <label for="finance_child" class="float-label">Patient’s name</label>
+              <input type="text" class="form-control required" id="finance_child" name="finance_child">
+              <span id="error_finance_child" class="error-span"></span>
+            </div>
+          </div>
+
+          <div class="col-xl-12">
+            <div class="form-group">
+              <label for="finance_date" class="float-label">Date</label>
+              <input type="text" class="form-control optional datepicker" id="finance_date" name="finance_date" value="" disabled>
+            </div>
+          </div>
+          
+        </div> 
+      </fieldset> 
+    </div>
+
+    <div class="col-xl-6">
+      <div class="sigPad" style="width:404px;" id="smoothed3">
+        <ul class="sigNav">
+          <li class="drawIt"><a href="#draw-it" >Do your Signature</a></li>
+          <li class="clearButton"><a href="#clear">Clear</a></li>
+        </ul>
+        <div class="sig sigWrapper" style="height:auto;">
+          <div class="typed"></div>
+          <canvas class="pad" width="400" height="250"></canvas>
+          <input type="hidden" name="sign3" class="output" id="sign3">
+        </div>
+        <span class="error-span" id="error_sign3"></span>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Steppers Navigation -->
+  <div class="row mt-1 btn-box">
+    <a onclick="saveExit()">
+     <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+   </a>
+   <a id="next_step12">
+     <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+   </a>
+ </div>
+ <!-- /.Vertical Steppers -->
+
+
+</div>
+
+</li>
+
+<li class="form-step" id="tweleveth-step">
+  <a>
+    <span class="circle" id="step-tweleveth-circle">12</span>
+    <span class="label">HIPAA Patient Questionnaire</span>
+  </a>
+
+  <div class="step-content container pr-5">
+
+    <fieldset class="fieldset-outer">
+      <legend class="custom-legend">1. Please list the family members or other person(s), if any, whom we may inform about your general medical condition and your diagnosis (including treatment, payment and health care operations):</legend>
+
+      <div class="row inner-row">
+        <div class="col-xl-5">
+          <div class="form-group">
+            <label for="gmc_name1" class="float-label">Name</label>
+            <input type="text" class="form-control optional" id="gmc_name1" name="gmc_name1">
+          </div>
+        </div>
+        <div class="col-xl-5">
+          <div class="form-group">
+            <label for="gmc_phone1" class="float-label">Phone Number</label>
+            <input type="tel" class="form-control optional" id="gmc_phone1" name="gmc_phone1">
+          </div>
+        </div>
+        <div class="col-xl-2 text-center">
+         <button type="button" class="btn btn-primary btn-minus"onclick="document.getElementById('gmcstep').style.display='none'">-</button>
+         <button type="button" class="btn btn-primary btn-add" onclick="document.getElementById('gmcstep').style.display='block'">+</button> 
+       </div>
+       <div class="col-xl-12" id="gmcstep" style="display: none;">
+         <div class="row">
+          <div class="col-xl-5">
+            <div class="form-group">
+              <label for="gmc_name2" class="float-label">Name</label>
+              <input type="text" class="form-control optional" id="gmc_name2" name="gmc_name2">
+            </div>
+          </div>
+          <div class="col-xl-5">
+            <div class="form-group">
+              <label for="gmc_phone2" class="float-label">Phone Number</label>
+              <input type="tel" class="form-control optional" id="gmc_phone2" name="gmc_phone2">
+            </div>
+          </div> 
+        </div> 
+      </div>
+    </div>
+  </fieldset>
+
+  
+  <fieldset class="fieldset-outer">
+    <legend class="custom-legend">2. Please list the family members or others, if any, whom we may inform about your medical condition ONLY IN AN EMERGENCY.</legend>
+
+    <div class="row inner-row">
+      <div class="col-xl-5">
+        <div class="form-group">
+          <label for="emg_name1" class="float-label">Name</label>
+          <input type="text" class="form-control optional" id="emg_name1" name="emg_name1">
+        </div>
+      </div>
+      <div class="col-xl-5">
+        <div class="form-group">
+          <label for="emg_phone1" class="float-label">Phone Number</label>
+          <input type="tel" class="form-control optional" id="emg_phone1" name="emg_phone1">
+        </div>
+      </div>
+      <div class="col-xl-2 text-center">
+       <button type="button" class="btn btn-primary btn-minus" onclick="document.getElementById('emgstep').style.display='none'">-</button>
+       <button type="button" class="btn btn-primary btn-add" onclick="document.getElementById('emgstep').style.display='block'">+</button> 
+     </div>
+     <div class="col-xl-12" id="emgstep" style="display: none;">
+       <div class="row">
+        <div class="col-xl-5">
+          <div class="form-group">
+            <label for="emg_name2" class="float-label">Name</label>
+            <input type="text" class="form-control optional" id="emg_name2" name="emg_name2">
+          </div>
+        </div>
+        <div class="col-xl-5">
+          <div class="form-group">
+            <label for="emg_phone2" class="float-label">Phone Number</label>
+            <input type="tel" class="form-control optional" id="emg_phone2" name="emg_phone2">
+          </div>
+        </div> 
+      </div> 
+    </div>
+  </div>
+</fieldset>
+
+
+<fieldset class="fieldset-outer">
+  <legend class="custom-legend">3. Please print the address of where you would like your billing statements and/or correspondence from our office to be sent if other than your home.  (Confidential Communications)</legend>
+
+  <div class="row inner-row">
+    <div class="col-xl-6">
+      <div class="form-group">
+        <label for="billing_address" class="float-label">Address</label>
+        <input type="text" class="form-control optional" id="billing_address" name="billing_address">
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="form-group">
+        <label for="billing_city" class="float-label">City</label>
+        <input type="text" class="form-control optional" id="billing_city" name="billing_city">
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="form-group">
+        <label for="billing_state" class="float-label">State</label>
+        <select name="billing_state" id="billing_state" class="form-control optional">
+          <option></option>
+          <option value="Alabama">Alabama</option>
+          <option value="Alaska">Alaska</option>
+          <option value="Arizona">Arizona</option>
+          <option value="Arkanas">Arkanas</option>
+          <option value="California">California</option>
+          <option value="Colorado">Colorado</option>
+          <option value="Connecticut">Connecticut</option>
+          <option value="Delaware">Delaware</option>
+          <option value="Florida">Florida</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Hawaii">Hawaii</option>
+          <option value="Idaho">Idaho</option>
+          <option value="Illinois">Illinois</option>
+          <option value="Indiana">Indiana</option>
+          <option value="Lowa">Lowa</option>
+          <option value="Kankas">Kankas</option>
+          <option value="Kentucky">Kentucky</option>
+          <option value="Louisiana">Louisiana</option>
+          <option value="Maine">Maine</option>
+          <option value="Maryland">Maryland</option>
+          <option value="Massachusetts">Massachusetts</option>
+          <option value="Michigan">Michigan</option>
+          <option value="Minnesota">Minnesota</option>
+          <option value="Mississippi">Mississippi</option>
+          <option value="Missouri">Missouri</option>
+          <option value="Montana">Montana</option>
+          <option value="Nebraska">Nebraska</option>
+          <option value="Nevada">Nevada</option>
+          <option value="New Hampshire">New Hampshire</option>
+          <option value="New Jersey">New Jersey</option>
+          <option value="New Mexico">New Mexico</option>
+          <option value="New York">New York</option>
+          <option value="North Carolina">North Carolina</option>
+          <option value="North Dakota">North Dakota</option>
+          <option value="Ohio">Ohio</option>
+          <option value="Oklahoma">Oklahoma</option>
+          <option value="Oregon">Oregon</option>
+          <option value="Pennsylvania">Pennsylvania</option>
+          <option value="Rhode Island">Rhode Island</option>
+          <option value="South Carolina">South Carolina</option>
+          <option value="South Dakota">South Dakota</option>
+          <option value="Tennessee">Tennessee</option>
+          <option value="Texas">Texas</option>
+          <option value="Utah">Utah</option>
+          <option value="Vermont">Vermont</option>
+          <option value="Virginia">Virginia</option>
+          <option value="Washington">Washington</option>
+          <option value="Washington, D.C.(DC)">Washington, D.C.(DC)</option>
+          <option value="West Virginia">West Virginia</option>
+          <option value="Wisconsin">Wisconsin</option>
+          <option value="Wyoming">Wyoming</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="form-group">
+        <label for="billing_zip" class="float-label">Zip</label>
+        <input type="text" class="form-control optional zip" id="billing_zip" name="billing_zip">
+      </div>
+    </div>
+  </div>
+</fieldset>
+
+
+<fieldset class="fieldset-outer">
+  <legend class="custom-legend">4. Please indicate if you want all correspondence from our office sent in a sealed envelope marked “CONFIDENTIAL”.</legend>
+
+  <div class="inner-row">
+   <div class="form-checkbox">
+    <input class="checkbox" type="radio" name="confidential_agree" id="confidential_yes" value="Yes">
+    <label class="checklabel optional-label" for="confidential_yes">Yes</label>
+  </div>
+  <div class="form-checkbox">
+    <input class="checkbox" type="radio" name="confidential_agree" id="confidential_no" value="No">
+    <label class="checklabel optional-label" for="confidential_no">No</label>
+  </div> 
+</div>
+</fieldset>
+
+<fieldset class="fieldset-outer">
+  <legend class="custom-legend">5. Please print the telephone number or email address where you want to receive calls about your appointments, labs and x-rays results or other health care information:</legend>
+
+  <div class="row inner-row">
+    <div class="col-xl-6">
+      <div class="form-group">
+        <label for="health_phoneno" class="float-label">Home phone number</label>
+        <input type="tel" class="form-control optional" id="health_phoneno" name="health_phoneno">
+        <span class="error-span" id="error_health_phoneno"></span>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="form-group">
+        <label for="health_email" class="float-label">Email Address</label>
+        <input type="email" class="form-control optional" id="health_email" name="health_email">
+        <span class="error-span" id="error_health_email"></span>
+      </div>
+    </div>
+  </div>
+</fieldset>
+
+
+<fieldset class="fieldset-outer">
+  <legend class="custom-legend">6. Can confidential messages (ie., appointment reminders) be left on your telephone answering machine or voicemail?</legend>
+  <div id="error_hipaa_6" class="error-span"></div> 
+  <div class="inner-row">
+   <div class="form-checkbox">
+    <input class="checkbox" type="radio" name="hipaa_6" id="hipaa_6_y" value="Yes">
+    <label class="checklabel optional-label" for="hipaa_6_y">Yes</label>
+  </div>
+  <div class="form-checkbox">
+    <input class="checkbox" type="radio" name="hipaa_6" id="hipaa_6_n" value="No">
+    <label class="checklabel optional-label" for="hipaa_6_n">No</label>
+  </div> 
+</div>
+</fieldset>
+
+
+<p>I understand the Privacy Protection Act and have been offered a copy of the Organization’s Notice of Privacy Practices updated for the HITECH Omnibus Rule of 2013.</p>
+
+
+<div class="row">
+  <div class="col-xl-12">
+    <div class="row mt-4">
+      <div class="col-xl-6">
+        <div class="form-group">
+          <label for="hipaa_patient_name" class="float-label">Patient Name</label>
+          <input type="text" class="form-control optional" id="hipaa_patient_name" name="hipaa_patient_name">
+          <span class="error-span" id="error_hipaa_patient_name"></span>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="form-group">
+          <label for="hipaa_patient_date" class="float-label">Date</label>
+          <input type="text" class="form-control optional datepicker" id="hipaa_patient_date" name="hipaa_patient_date" value="" disabled>
+          <span class="error-span" id="error_hipaa_patient_date"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Steppers Navigation -->
+<div class="row mt-1 btn-box">
+  <a onclick="saveExit()">
+   <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+ </a>
+ <a id="next_step13">
+   <img src="assets/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/next-hover.png'" onmouseout="this.src='assets/img/next.png'"> 
+ </a>
+</div>
+<!-- /.Vertical Steppers -->
+
+</div>
+
+</li>
+
+
+<li class="form-step" id="thirteenth-step">
+  <a>
+    <span class="circle" id="step-thirteenth-circle">13</span>
+    <span class="label">Consent for Treatment</span>
+  </a>
+
+  <div class="step-content container pr-5">
+
+    <p>I consent to the use of disclosure of my protected health information by Powers Pediatrics for the purpose of diagnosing or providing treatment to me/my child, obtaining payment for me/my child’s health care bills or to conduct health care operations of Powers Pediatrics.</p>
+
+    <p>I have the right to revoke this consent, in writing, at any time, except to the extent that Powers Pediatrics has taken action in reliance on this consent.</p>
+
+    <p>Me/my child’s “protected health information” mean health information, including my demographic information, collected from me and created or received by my physician, another health care provider, a health plan, my employer or a health care clearinghouse. This protected health information relates to me/my child, or there is a reasonable basis to believe the information may identify me/my child.</p>
+
+    <p>POWERS PEDIATRICS has an established privacy policy which is displayed in this office and I can request a printed copy of this policy.</p>
+
+
+
+
+    <div class="row mt-4">
+      <div class="col-xl-6">
+        <div class="row">
+          <div class="col-xl-12">
+           <fieldset class="fieldset-outer">
+            <legend class="custom-legend">Signee Information</legend>
+            <div class="inner-row">
+              <div class="col-xl-12">
+                <div class="form-group">
+                  <label for="consent_patient_name" class="float-label">Patient Name</label>
+                  <input type="text" class="form-control required" id="consent_patient_name" name="consent_patient_name">
+                  <span class="error-span" id="error_consent_patient_name"></span>
+                </div>
+              </div>
+              <div class="col-xl-12">
+                <div class="form-group">
+                  <label for="consent_patient_date" class="float-label">Date</label>
+                  <input type="text" class="form-control required datepicker" id="consent_patient_date" name="consent_patient_date" value="" disabled>
+                  <span class="error-span" id="error_consent_patient_date"></span>
+                </div>
+              </div>
+
+              <div class="col-xl-12">
+                <div class="form-group">
+                  <label for="consent_parent_name" class="float-label">Parent/Guardian Name</label>
+                  <input type="text" class="form-control required" id="consent_parent_name" name="consent_parent_name">
+                </div>
+              </div>
+            </div> 
+          </fieldset> 
+        </div>
+
+        <div class="col-xl-12">
+          <fieldset class="fieldset-outer">
+            <legend class="custom-legend">Relationship With Patient*</legend>
+            <div class="inner-row">
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o1" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o1">Self</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o2" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o2">Spouse</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o3" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o3">Step Child</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o4" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o4">Foster Child</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o5" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o5">Ward of the court</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o6" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o6">Employee</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o7" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o7">Handicaped dependent</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o8" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o8">Organ Donar</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o9" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o9">Cadever Donar</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o10" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o10">Grandchild</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o11" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o11">Niece/Nephew</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o12" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o12">Injured Plaintiff</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o13" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o13">Sponsored Dependent</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o14" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o14">Parent</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o15" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o15">Grandparent</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="s14q1" id="s14q1o16" class="radio" value="">
+                <label class="radiolabel optional-label" for="s14q1o16">Other</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-xl-6">
+      <div class="sigPad" style="width:404px;" id="smoothed5">
+        <ul class="sigNav">
+          <li class="drawIt"><a href="#draw-it" >Do your Signature</a></li>
+          <li class="clearButton"><a href="#clear">Clear</a></li>
+        </ul>
+        <div class="sig sigWrapper" style="height:auto;">
+          <div class="typed"></div>
+          <canvas class="pad" width="400" height="250"></canvas>
+          <input type="hidden" name="sign5" class="output" id="sign5">
+        </div>
+        <span class="error-span" id="error_sign5"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Steppers Navigation -->
+  <div class="row mt-1 btn-box">
+    <a onclick="saveExit()">
+     <img src="assets/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/Save & Exit 2.png'" onmouseout="this.src='assets/img/Save & Exit.png'"> 
+   </a>
+   <a id="btn-finish" onclick="submitForm()">
+     <img src="assets/img/se.png" class="img-fluid next-btn" onmouseover="this.src='assets/img/sehover.png'" onmouseout="this.src='assets/img/se.png'"> 
+   </a>
+ </div>
+ <!-- /.Vertical Steppers -->
+
+
+</div>
+
+</li>
+
+</ul>
+<!-- /.Stepers Wrapper -->
+
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- ======================= content ================================  -->
+
+</div> 
+<!-- ======================= container ================================  -->
+</section>
+
+<section class="pb-3" id="confirmation">
+ <div class="container-fluid" style="background: rgba(255,255,255,0.6);">
+
+  <div class="row px-5 pt-3 mt-5" id="confirm1" style="display: none">
+   <div class="col-xl-6 offset-xl-3 shadow text-center pb-5">
+    <img src="assets/img/check.png" class="img-fluid check-img"> 
+    <h2 class="font-weight-bold mt-4 mb-4">Congrats! You have successfully completed your New Patient paperwork!</h2>
+    <img src="assets/img/rtplogo.png" class="img-fluid" id="check-logo">
+    <div><button type="button" class="btn btn-success next-step mt-5" onclick="nextStep()">Next steps<i class="fas fa-arrow-right ml-2 pt-2"></i></button></div>
+  </div>
+</div>
+
+<div class="row px-5 pt-3 mt-5" id="confirm3" style="display: none">
+ <div class="col-xl-6 offset-xl-3 shadow text-center pb-5">
+  <img src="assets/img/check.png" class="img-fluid check-img"> 
+  <h5 class="font-weight-bold mt-4 mb-4">You have Saved and Exited your new patient paperwork.</h5>
+  <h5 class="font-weight-bold mt-4 mb-4">Remember you can start again anytime with the PIN you received in the beginning.</h5>
+  <img src="assets/img/rtplogo.png" class="img-fluid" id="check-logo">
+  <div><button type="button" class="btn btn-success mt-5 mr-3 font-weight-bold" onclick="letStart()">Let's Complete</button><button type="button" class="btn btn-success mt-5 font-weight-bold" onclick="doLater()" style="background-color: #FF621F !important;">Do it Later</button></div>
+</div>
+</div>
+
+<div class="row" id="confirm2" style="display: none">
+ <div class="col-xl-6 offset-xl-3 shadow text-center">
+  <div class="row justify-content-center">
+   <div class="col-xl-12 text-center shadow2 mb-5 mx-3">
+    <h3 class="font-weight-bold"><i class="fas fa-receipt mr-2"></i>Authorization Release</h3>
+    <p class="lead">Please send fill out an authorization form for all the practices we need to request your records from.</p>
+    <button type="button" class="btn btn-success"><a href="autherization-release.html">Let's start</a></button> 
+  </div>
+  <div class="col-xl-12 text-center shadow2 mx-3">
+    <h3 class="font-weight-bold"><i class="far fa-calendar-alt mr-2"></i>Book Appointment</h3>
+    <p class="lead">Have you scheduled an appointment yet?</p> 
+    <button type="button" class="btn btn-success"><a href="request-appointment.html">Let's start</a></button>
+  </div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section>
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h4>Our Newsletter</h4>
+          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+        </div>
+        <div class="col-lg-6">
+          <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="index.html#hero">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="index.html#about">About us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="index.html#our-resources">Resources</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="index.html#services">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="index.html#portfolio">Insurance</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Compliance</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a onclick=" window.open('baa.html', '_blank'); return false;" data-toggle="modal">BAA</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a onclick=" window.open('hipaa.html', '_blank'); return false;" data-toggle="modal">HIPAA</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a onclick=" window.open('nondisclosure.html', '_blank'); return false;" data-toggle="modal">Nondisclosure</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            4071 RICHFIELD 
+            RD FLINT, MI 
+            48506 <br><br>
+            <strong>Phone:</strong>  888-503-1636<br>
+            <strong>Email:</strong> rtpdemo@gmail.com<br>
+          </p>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-info">
+          <h3>About RTP</h3>
+          <p>We check for your current health issues and decide your treatment. Our specialists will take care of your health with dedication.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; 2020 Copyright: <strong><span><a style="color: #fff;" href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a></span></strong>
+    </div>
+    
+  </div>
+</footer><!-- End Footer -->
+
+
+<script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="assets/js/custom.js"></script>
+<script type="text/javascript" src="assets/js/progress.js"></script>
+<script type="text/javascript" src="assets/js/mask.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/register.js"></script>
+<script type="text/javascript" src="assets/js/signature/bezier.js"></script>
+<script type="text/javascript" src="assets/js/signature/jquery.signaturepad.js"></script>
+<script type="text/javascript" src="assets/js/signature/json2.min.js"></script>
+<script type="text/javascript" src="assets/js/signature/numeric.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#smoothed1').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    $('#smoothed2').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    $('#smoothed3').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    $('#smoothed4').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    $('#smoothed5').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    $('#smoothed6').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+  });
+</script>
+  <script src="https://desk.zoho.com/portal/api/feedbackwidget/171918000001748149?orgId=642064172&displayType=popout"></script>
+  <script type="text/javascript">
+    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"fc7419b0bac87beaf78d08583abd967e32e2d0769bce422fef99d3d69b81fcbb", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
+  </script>
+</body>
+
+</html>
