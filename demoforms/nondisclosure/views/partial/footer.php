@@ -165,6 +165,10 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="assest/js/custom.js"></script>
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+  <script src="https://desk.zoho.com/portal/api/feedbackwidget/171918000001748149?orgId=642064172&displayType=popout"></script>
+  <script type="text/javascript">
+    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"fc7419b0bac87beaf78d08583abd967e32e2d0769bce422fef99d3d69b81fcbb", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
+  </script>
 </body>
 
 </html>
