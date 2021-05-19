@@ -1,0 +1,992 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Veins - Patient Portal</title>
+    <link rel="icon" href="../img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/datatables.min.css">
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+
+<body>
+   <!-- ============ Projects starts here ================ -->
+    <div class="wrapper">
+        <!-- ============ side navbar ================ -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/logo.png" class="img-fluid" id="logo">
+                <span>Dashboard</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                <!-- ================get started ============= -->
+                <li>
+
+                    <a href="#getStarted" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-play nav-icon"></i>
+                        <span>Get Started</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="getStarted">
+                        <li>
+                            <a href="#" class="waves-effect" data-target="#requestAccess" data-toggle="modal"><i class="fas fa-key nav-sub-icon"></i>Request Access</a>
+                        </li>
+                        <li>
+                            <a href="https://rtprms.com/" target="_blank" class="waves-effect"><i class="fas fa-exchange-alt nav-sub-icon"></i>Claim Access</a>
+                        </li>
+                        <li>
+                            <a href="../addnewpractice.html" class="waves-effect"><i class="fas fa-plus nav-sub-icon"></i>Add New Practices</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- ================get started ============= -->
+
+                <!-- ================ my practices ============= -->
+                <li class="active">
+
+                    <a href="#myPractices" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-clinic-medical nav-icon"></i>
+                        <span>My Practices</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="myPractices">
+                        <!-- =========== reports ============ -->
+                        <li>
+                            <a href="#reports" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-file nav-sub-icon"></i>Reports</a>
+
+                            <ul class="collapse list-unstyled" id="reports">
+                              <li>
+                                <a href="../mypractices/reports/statisticReports.html" class="waves-effect"><i class="far fa-chart-bar nav-sub-icon"></i>Statistic Reports</a>
+                              </li>
+                              
+                              <li>
+                                <a href="../mypractices/reports/dailyReports.html" class="waves-effect"><i class="fas fa-tasks nav-sub-icon"></i>Daily Reports</a>
+                              </li>
+                              
+                              <li>
+                                <a href="../mypractices/reports/physicianReports.html" class="waves-effect"><i class="fas fa-file-medical-alt nav-sub-icon"></i>Physician Reports</a>
+                              </li>
+                              <li>
+                                <a href="../mypractices/reports/staffReports.html" class="waves-effect"><i class="fas fa-users"></i>Staff Reports</a>
+                              </li>
+                              <li>
+                                <a href="../mypractices/reports/paymentReports.html" class="waves-effect"><i class="far fa-credit-card nav-sub-icon"></i>Payment Reports</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== reports ============ -->
+
+
+                        <!-- =========== system ============ -->
+                        <li>
+                            <a href="#system" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-cogs nav-sub-icon"></i>System</a>
+
+                            <ul class="collapse list-unstyled" id="system">
+                              <!-- ==== users ==== -->
+                              <li>
+                                <a href="#users" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users nav-sub-icon"></i>Users</a>
+
+                                <ul class="collapse list-unstyled" id="users">
+                                  <li>
+                                    <a href="../mypractices/system/users/authorizedUsers.html" class="waves-effect"><i class="fas fa-user-check nav-sub-icon"></i>Authorized Users</a>
+                                  </li>
+                                  <li>
+                                    <a href="../mypractices/system/users/pendingRequest.html" class="waves-effect"><i class="fas fa-user-clock nav-sub-icon"></i>Pending Request</a>
+                                  </li>
+                                </ul>
+
+                              </li>
+                              <!-- ==== users ==== -->
+
+                              <!-- ==== securityProfiles ==== -->
+                              <li>
+                                <a href="#securityProfiles" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-lock nav-sub-icon"></i>Security Profiles</a>
+
+                                <ul class="collapse list-unstyled" id="securityProfiles">
+                                  <li>
+                                    <a href="../mypractices/system/securityProfiles/createSP.html" class="waves-effect"><i class="fas fa-plus nav-sub-icon"></i>Create</a>
+                                  </li>
+                                  <li>
+                                    <a href="../mypractices/system/securityProfiles/activeSP.html" class="waves-effect"><i class="fas fa-user-check nav-sub-icon"></i>Active</a>
+                                  </li>
+                                </ul>
+
+                              </li>
+                              <!-- ==== securityProfiles ==== -->
+                              
+                              <li>
+                                <a href="../mypractices/system/personalSetting.html" class="waves-effect"><i class="fas fa-cog nav-sub-icon"></i>Personal Settings</a>
+                              </li>
+
+                              <li>
+                                <a href="../mypractices/system/demographics.html" class="waves-effect"><i class="fas fa-info-circle nav-sub-icon"></i>Demographics</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== system ============ -->
+
+
+                        <!-- =========== appointmentScheduler ============ -->
+                        <li>
+                            <a href="#appointmentScheduler" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="far fa-calendar-check nav-sub-icon"></i>Appointment Scheduler</a>
+
+                            <ul class="collapse list-unstyled" id="appointmentScheduler">
+                              <li>
+                                <a href="../mypractices/appointmentScheduler/requestedAppointments.html" class="waves-effect"><i class="far fa-calendar-alt"></i>Requested Appointments</a>
+                              </li>
+                             
+                              <li>
+                                <a href="../mypractices/appointmentScheduler/upcomingAppointments.html" class="waves-effect"><i class="fas fa-calendar-check"></i>Upcoming Appointments</a>
+                              </li>
+                            </ul>
+                        </li>
+                        <!-- =========== appointmentScheduler ============ -->
+
+
+
+                        <!-- =========== rms ============ -->
+                        <li>
+                            <a href="#rms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-comment-medical nav-sub-icon"></i>RMS</a>
+
+                            <ul class="collapse list-unstyled" id="rms">
+                              <li>
+                                <a href="../mypractices/rms/review.html" class="waves-effect"><i class="far fa-star"></i>Reviews</a>
+                              </li>
+                              <li>
+                                <a href="../mypractices/rms/reviewSummary.html" class="waves-effect"><i class="fas fa-list"></i>Review Summary</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== rms ============ -->
+
+
+                        <!-- =========== webdevForms ============ -->
+                        <li>
+                            <a href="#webdevForms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fab fa-wpforms nav-sub-icon"></i>Webdev Forms</a>
+
+                            <ul class="collapse list-unstyled" id="webdevForms">
+                              <li>
+                                <a href="../mypractices/webdevForms/requestForms.html" class="waves-effect"><i class="fab fa-wpforms"></i>Request Forms</a>
+                              </li>
+                              <li>
+                                <a href="../mypractices/webdevForms/submitDemo.html" class="waves-effect"><i class="fas fa-desktop"></i>Submit Demo</a>
+                              </li>
+                            </ul>
+                        </li>
+                        <!-- =========== webdevForms ============ -->
+
+                        <!-- ====== surveys ====== -->
+                        <li>
+                          <a href="../mypractices/surveys.html" class="waves-effect"><i class="fas fa-poll nav-sub-icon"></i>Surveys</a>
+                        </li>
+                        <!-- ====== surveys ====== -->
+                        
+
+                        <!-- =========== communicationCenter ============ -->
+                        <li>
+                            <a href="#communicationCenter" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-comments nav-sub-icon"></i>Communication Center</a>
+
+                            <ul class="collapse list-unstyled" id="communicationCenter">
+                              <li>
+                                <a href="../mypractices/communicationCenter/emails.html" class="waves-effect"><i class="far fa-envelope"></i>Emails</a>
+                              </li>
+                              <li>
+                                <a href="../mypractices/communicationCenter/texts.html" class="waves-effect"><i class="far fa-comment"></i>Texts</a>
+                              </li>
+                            </ul>
+                        </li>
+                        <!-- =========== communicationCenter ============ -->
+
+                        <!-- ====== timesheets ====== -->
+                        <li>
+                          <a href="../mypractices/timesheets.html" class="waves-effect"><i class="fas fa-clock nav-sub-icon"></i>Timesheets</a>
+                        </li>
+                        <!-- ====== timesheets ====== -->
+
+                        <!-- =========== payments ============ -->
+                        <li>
+                            <a href="#payments" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-credit-card nav-sub-icon"></i>Payments</a>
+
+                            <ul class="collapse list-unstyled" id="payments">
+                              <li>
+                                <a href="../mypractices/payments/paymentrequests.html" class="waves-effect"><i class="fas fa-money-bill nav-sub-icon"></i>Payment Requested</a>
+                              </li>
+                              <li>
+                                <a href="../mypractices/payments/paymentcollect.html" class="waves-effect"><i class="far fa-credit-card"></i>Payment Collected</a>
+                              </li>
+                            </ul>
+                        </li>
+                        <!-- =========== payments ============ -->
+
+                        <!-- ====== billing ====== -->
+                        <li class="active">
+                          <a href="../mypractices/timesheets.html" class="waves-effect"><i class="fas fa-money-bill nav-sub-icon"></i>Billing</a>
+                        </li>
+                        <!-- ====== billing ====== -->
+
+                        <!-- ====== patient portals ====== -->
+                        <li>
+                          <a href="../mypractices/patientPortals.html" class="waves-effect"><i class="fas fa-clinic-medical nav-sub-icon"></i>Patient Portals</a>
+                        </li>
+                        <!-- ====== patient portals ====== -->
+                       
+                    </ul>
+                </li>
+                <!-- ================ my practices ============= -->
+
+
+
+                <!-- ================ logout ============= -->
+                <li>
+                    <a href="http://veinspracticesolution.com/login/practiceuser.html">
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+                <!-- ================ logout ============= -->
+            </ul>
+        </nav>
+
+        <!-- ============ side Navbar ================ -->
+
+        <!-- ============ Main content ================ -->
+        <div id="content">
+          <!-- ========== navbar ============== -->
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    
+                    <h3 class="h3-responsive pageTitle">Billing</h3>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                              <li class="nav-item pr-3">
+                                <a href="../index.html" class="nav-link btn btn-outline-info btn-sm">
+                                  <i class="fas fa-arrow-left"></i>Back To My Dashboard
+                                </a>
+                              </li>
+
+                             
+                              <!-- Dropdown -->
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="badge red">2</span> <i class="fas fa-bell"></i>
+                                  <span class="d-none d-md-inline-block dropdownText">Notifications</span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-primary" id="notification" aria-labelledby="navbarDropdownMenuLink">
+                                  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                  <a class="dropdown-item" href="#">
+                                    <i class="far fa-money-bill-alt mr-2" aria-hidden="true"></i>
+                                    <span>New order received</span>
+                                    <span class="float-right"><i class="far fa-clock" aria-hidden="true"></i> 13 min</span>
+                                  </a>
+                                  <a class="dropdown-item" href="#">
+                                    <i class="far fa-money-bill-alt mr-2" aria-hidden="true"></i>
+                                    <span>New order received</span>
+                                    <span class="float-right"><i class="far fa-clock" aria-hidden="true"></i> 33 min</span>
+                                  </a>
+                                </div>
+                              </li>
+
+
+                              <li class="nav-item dropdown">
+
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>
+                                <span class="dropdownText">Profile</span>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="../mypractices/system/personalsetting.html"><i class="fas fa-pencil-alt"></i> Edit Profile</a>
+                                <a class="dropdown-item" href="http://veinspracticesolution.com/login/practiceuser.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                              </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </nav>
+            <!-- ========== nav bar ============== -->
+
+            <!-- ============ Main ================= -->
+            <main>
+              <div class="container-fluid">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="text-right">
+                      <button class="btn btn-success" data-target="#practiceIncluded" data-toggle="modal"><i class="fas fa-clinic-medical pr-2"></i>Practices Included</button>
+                      <button class="btn btn-success" data-target="#changePlan" data-toggle="modal"><i class="fas fa-pencil-alt pr-2"></i>Change Plan</button>
+                    </div>
+                      <table class="table table-sm table-bordered text-center">
+                        <thead class="thead-light">
+                          <th>Users</th>
+                          <th>Texts</th>
+                          <th>Emails</th>
+                          <th>Practices</th>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>2</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="row">
+                        <div class="col-xl-6">
+                          <table class="table table-bordered table-sm">
+                            <thead>
+                              <tr class="thead-light">
+                                <th colspan="2">Appointment Scheduler</th>
+                              </tr>
+                              <tr>
+                                <th class="font-weight-bold">Texts - 12</th>
+                                <th class="font-weight-bold">Emails - 12</th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                        <div class="col-xl-6">
+                          <table class="table table-bordered table-sm">
+                            <thead>
+                              <tr class="thead-light">
+                                <th colspan="2">RMS</th>
+                              </tr>
+                              <tr>
+                                <th class="font-weight-bold">Texts - 12</th>
+                                <th class="font-weight-bold">Emails - 12</th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xl-6">
+                          <table class="table table-bordered table-sm">
+                            <thead>
+                              <tr class="thead-light">
+                                <th colspan="2">WebDev Forms</th>
+                              </tr>
+                              <tr>
+                                <th class="font-weight-bold">Texts - 12</th>
+                                <th class="font-weight-bold">Emails - 12</th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                        <div class="col-xl-6">
+                          <table class="table table-bordered table-sm">
+                            <thead>
+                              <tr class="thead-light">
+                                <th colspan="2">Surveys</th>
+                              </tr>
+                              <tr>
+                                <th class="font-weight-bold">Texts - 12</th>
+                                <th class="font-weight-bold">Emails - 12</th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xl-6">
+                          <table class="table table-bordered table-sm">
+                            <thead>
+                              <tr class="thead-light">
+                                <th colspan="2">Communication Center</th>
+                              </tr>
+                              <tr>
+                                <th class="font-weight-bold">Texts - 12</th>
+                                <th class="font-weight-bold">Emails - 12</th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                        <div class="col-xl-6">
+                          <table class="table table-bordered table-sm">
+                            <thead>
+                              <tr class="thead-light">
+                                <th colspan="2">Clock-In/Out</th>
+                              </tr>
+                              <tr>
+                                <th class="font-weight-bold">Texts - 12</th>
+                                <th class="font-weight-bold">Emails - 12</th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xl-6">
+                          <table class="table table-bordered table-sm">
+                            <thead>
+                              <tr class="thead-light">
+                                <th colspan="2">Payments</th>
+                              </tr>
+                              <tr>
+                                <th class="font-weight-bold">Texts - 12</th>
+                                <th class="font-weight-bold">Emails - 12</th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                        <div class="col-xl-6">
+                          <table class="table table-bordered table-sm">
+                            <thead>
+                              <tr class="thead-light">
+                                <th colspan="2">Patient Portals</th>
+                              </tr>
+                              <tr>
+                                <th class="font-weight-bold">Texts - 12</th>
+                                <th class="font-weight-bold">Emails - 12</th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                      </div>
+
+                      
+
+                      
+                  </div>
+                </div>
+              </div>
+            </main>
+            <!-- ========== Main ============== -->
+
+            <!-- ========== Footer ============== -->
+            <footer class="page-footer fixed-bottom font-small blue">
+
+              <!-- Copyright -->
+              <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://Reviewthatplace.com"> Reviewthatplace.com</a>
+              </div>
+              <!-- Copyright -->
+
+            </footer>
+            <!-- ========== Footer ============== -->
+          
+        </div>
+        <!-- ============ Main content ================ -->
+    </div>
+    <!-- ============ Projects end here ================ -->
+
+
+    <!-- ============ change plan ================ -->
+    <div class="modal fade" id="changePlan" tabindex="-1" role="dialog" aria-labe7[piyt4re321lledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info modal-xl" role="document">
+      <!-- Content -->
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <p class="heading lead">Change Plan</p>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th rowspan="2">Plan Name</th>
+                  <th rowspan="2">Users</th>
+                  <th rowspan="2">Texts</th>
+                  <th rowspan="2">Emails</th>
+                  <th colspan="2">
+                    Appointment Scheduler
+                  </th>
+
+                  <th colspan="2">
+                    RMS
+                  </th>
+
+                  <th colspan="2">
+                    WebDev Forms
+                  </th>
+
+                  <th colspan="2">
+                    Surveys
+                  </th>
+
+                  <th colspan="2">
+                    Communication Center
+                  </th>
+
+                  <th colspan="2">
+                    Clock-In/Out
+                  </th>
+
+                  <th colspan="2">
+                    Payments
+                  </th>
+
+                  <th colspan="2">
+                    Patient Portals
+                  </th>
+
+                  <th rowspan="2">
+                    Select
+                  </th>
+                </tr>
+
+                <tr>
+                  <th>Emails</th>
+                  <th>Texts</th>
+
+                  <th>Emails</th>
+                  <th>Texts</th>
+
+                  <th>Emails</th>
+                  <th>Texts</th>
+
+                  <th>Emails</th>
+                  <th>Texts</th>
+
+                  <th>Emails</th>
+                  <th>Texts</th>
+
+                  <th>Emails</th>
+                  <th>Texts</th>
+
+                  <th>Emails</th>
+                  <th>Texts</th>
+
+                  <th>Emails</th>
+                  <th>Texts</th>
+
+                </tr>
+              </thead>
+
+
+              <tbody>
+                <tr>
+                  <td>Plan 1</td>
+                  <td>12</td>
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+                  
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+
+                  <td>
+                    <button class="btn btn-success btn-sm m-0">Change</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Plan 1</td>
+                  <td>12</td>
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+                  
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+
+                  <td>
+                    <button class="btn btn-success btn-sm m-0">Change</button>
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <td>Plan 1</td>
+                  <td>12</td>
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+                  
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+
+                  <td>
+                    <button class="btn btn-success btn-sm m-0">Change</button>
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <td>Plan 1</td>
+                  <td>12</td>
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+                  
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+                  <td>12</td>
+                  <td>12</td>
+
+
+                  <td>
+                    <button class="btn btn-success btn-sm m-0">Change</button>
+                  </td>
+                </tr>
+
+              
+              </tbody>
+            </table>
+          </div>
+
+          
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <!-- Content -->
+    </div>
+    </div>
+    <!--========== change plan ================== -->
+
+
+    <!-- ============ change plan ================ -->
+    <div class="modal fade" id="practiceIncluded" tabindex="-1" role="dialog" aria-labe7[piyt4re321lledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info modal-xl" role="document">
+      <!-- Content -->
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <p class="heading lead">Practices Included</p>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered datatables">
+              <thead class="thead-dark">
+                <tr>
+                  <th>RTPID</th>
+                  <th>Practice Name</th>
+                  <th>Street</th>
+                  <th>City</th>
+                  <th>State</th>
+                  <th>Zip</th>
+                </tr> 
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>RTP123</td>
+                  <td>Powers Pediatrics</td>
+                  <td>Rose Eve</td>
+                  <td>ornaldo</td>
+                  <td>FL</td>
+                  <td>123425367</td>
+                </tr>
+
+                <tr>
+                  <td>RTP123</td>
+                  <td>Powers Pediatrics</td>
+                  <td>Rose Eve</td>
+                  <td>ornaldo</td>
+                  <td>FL</td>
+                  <td>123425367</td>
+                </tr>
+
+                <tr>
+                  <td>RTP123</td>
+                  <td>Powers Pediatrics</td>
+                  <td>Rose Eve</td>
+                  <td>ornaldo</td>
+                  <td>FL</td>
+                  <td>123425367</td>
+                </tr>
+
+                <tr>
+                  <td>RTP123</td>
+                  <td>Powers Pediatrics</td>
+                  <td>Rose Eve</td>
+                  <td>ornaldo</td>
+                  <td>FL</td>
+                  <td>123425367</td>
+                </tr>
+
+                <tr>
+                  <td>RTP123</td>
+                  <td>Powers Pediatrics</td>
+                  <td>Rose Eve</td>
+                  <td>ornaldo</td>
+                  <td>FL</td>
+                  <td>123425367</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-success waves-effect" data-toggle="modal" data-target="#addPractice"><i class="fas fa-plus pr-2"></i>Add Practice</button>
+          <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <!-- Content -->
+    </div>
+    </div>
+    <!--========== change plan ================== -->
+
+
+
+    <!-- ============ add practice ================ -->
+    <div class="modal fade" id="addPractice" tabindex="-1" role="dialog" aria-labe7[piyt4re321lledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info modal-xl" role="document">
+      <!-- Content -->
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <p class="heading lead">Add Practice</p>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered selectTables">
+              <thead class="thead-dark">
+                <tr>
+                  <th></th>
+                  <th>RTPID</th>
+                  <th>Practice Name</th>
+                  <th>Street</th>
+                  <th>City</th>
+                  <th>State</th>
+                  <th>Zip</th>
+                </tr> 
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>RTP123</td>
+                  <td>Powers Pediatrics</td>
+                  <td>Rose Eve</td>
+                  <td>ornaldo</td>
+                  <td>FL</td>
+                  <td>123425367</td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td>RTP123</td>
+                  <td>Powers Pediatrics</td>
+                  <td>Rose Eve</td>
+                  <td>ornaldo</td>
+                  <td>FL</td>
+                  <td>123425367</td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td>RTP123</td>
+                  <td>Powers Pediatrics</td>
+                  <td>Rose Eve</td>
+                  <td>ornaldo</td>
+                  <td>FL</td>
+                  <td>123425367</td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td>RTP123</td>
+                  <td>Powers Pediatrics</td>
+                  <td>Rose Eve</td>
+                  <td>ornaldo</td>
+                  <td>FL</td>
+                  <td>123425367</td>
+                </tr>
+
+            
+              </tbody>
+            </table>
+          </div>
+
+          
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-success waves-effect" data-toggle="modal" data-target="addPractice"><i class="fas fa-plus pr-2"></i>Add Practice</button>
+          <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <!-- Content -->
+    </div>
+    </div>
+    <!--========== add practice ================== -->
+
+
+    <!-- ============ request Access ================ -->
+    <div class="modal fade" id="requestAccess" tabindex="-1" role="dialog" aria-labe7[piyt4re321lledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+      <!-- Content -->
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <p class="heading lead">Request Access</p>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body">
+          <!-- Access Code -->
+          <div class="md-form mt-2">
+            <input type="text" id="accessCode" class="form-control">
+            <label for="accessCode">Enter Access Code</label>
+          </div>
+
+          <button class="btn btn-success waves-effect">Submit</button>
+          <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <!-- Content -->
+    </div>
+    </div>
+    <!--========== request Access ================== -->
+
+    
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <!-- sidebar JS -->
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/tableScript.js"></script>
+    <script src="../js/commanScript.js"></script>
+    <script src="../js/mdb.min.js"></script>
+    
+</body>
+
+</html>

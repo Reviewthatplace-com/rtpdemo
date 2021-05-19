@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Home Page</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <style type="text/css">
+        a
+        {
+            color: black !important;
+        }
+        .notListedSection
+        {
+          display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light white mb-2">
+        <div class="container">
+            <img src="img/logo.png">
+            <h2 class="h2-responsive pageTitle">Select Patient</h2>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="text-right">
+                <button class="btn btn-success" data-target="#addPatientPopup" data-toggle="modal"><i class="fas fa-plus pr-2"></i>Add New Patient</button>
+            </div>
+
+            <!-- row -->
+            <div class="row mt-2">
+                <!-- single -->
+                <div class="col-xl-4 mb-3">
+                    <a href="demographics.html">
+                        <div class="card">
+                            <div class="card-body p-2">
+                                <div class="row">
+                                     <div class="col-4">
+                                         <img src="https://img.icons8.com/plasticine/2x/user.png" class="img-fluid">
+                                     </div>
+                                     <div class="col-8 p-2">
+                                         <h3 class="font-weight-bold">Ravi Agrawal</h3>
+                                         <p class="grey-text">User Since 01/04/2020</p>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- single -->
+
+                <!-- single -->
+                <div class="col-xl-4 mb-3">
+                    <a href="demographics.html">
+                        <div class="card">
+                            <div class="card-body p-2">
+                                <div class="row">
+                                     <div class="col-4">
+                                         <img src="https://img.icons8.com/plasticine/2x/user.png" class="img-fluid">
+                                     </div>
+                                     <div class="col-8 p-2">
+                                         <h3 class="font-weight-bold">Ravi Agrawal</h3>
+                                         <p class="grey-text">User Since 01/04/2020</p>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- single -->
+
+                <!-- single -->
+                <div class="col-xl-4 mb-3">
+                    <a href="demographics.html">
+                        <div class="card">
+                            <div class="card-body p-2">
+                                <div class="row">
+                                     <div class="col-4">
+                                         <img src="https://img.icons8.com/plasticine/2x/user.png" class="img-fluid">
+                                     </div>
+                                     <div class="col-8 p-2">
+                                         <h3 class="font-weight-bold">Ravi Agrawal</h3>
+                                         <p class="grey-text">User Since 01/04/2020</p>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- single -->
+
+                <!-- single -->
+                <div class="col-xl-4 mb-3">
+                    <a href="demographics.html">
+                        <div class="card">
+                            <div class="card-body p-2">
+                                <div class="row">
+                                     <div class="col-4">
+                                         <img src="https://img.icons8.com/plasticine/2x/user.png" class="img-fluid">
+                                     </div>
+                                     <div class="col-8 p-2">
+                                         <h3 class="font-weight-bold">Ravi Agrawal</h3>
+                                         <p class="grey-text">User Since 01/04/2020</p>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- single -->
+
+
+            </div>
+            <!-- row -->
+
+        </div>        
+    </main>
+
+
+    <!-- ============================= Footer starts here ======================= -->
+    <footer class="page-footer font-small blue fixed-bottom" style="left: 0 !important;">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+          <a href="#" class="white-text"> Review That Place.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- ============================= Footer Ends here ======================= -->
+
+
+    <!-- ============================= add new patient modal ======================= -->
+    <div class="modal fade" id="addPatientPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New Patient</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body px-4">
+            <!-- first row -->
+            <div class="row">
+              <div class="col-lg-6">
+                <!-- first name -->
+                <div class="md-form">
+                  <input type="text" id="firstName" class="form-control">
+                  <label for="firstName">First name</label>
+                </div>
+                <!-- first name -->
+              </div>
+              <div class="col-lg-6">
+                <!-- last name -->
+                <div class="md-form">
+                  <input type="text" id="lastName" class="form-control">
+                  <label for="lastName">Last name</label>
+                </div>
+                <!-- last name -->
+              </div>
+            </div>
+            <!-- first row -->
+
+            <!-- second row -->
+            <div class="row">
+              <div class="col-lg-6">
+                <label for="date">Date Of Birth</label>
+                <div class="md-form mt-0">
+                  <input  type="text" placeholder="(mm-dd-yyyy)" id="date" class="form-control datepicker">
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <label class="pr-3 mt-lg-5">Gender</label>
+                <!-- Default inline 1-->
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" class="custom-control-input" id="male" name="inlineDefaultRadiosExample">
+                  <label class="custom-control-label" for="male">Male</label>
+                </div>
+
+                <!-- Default inline 2-->
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" class="custom-control-input" id="female" name="inlineDefaultRadiosExample">
+                  <label class="custom-control-label" for="female">Female</label>
+                </div>
+
+                <!-- Default inline 3-->
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" class="custom-control-input" id="other" name="inlineDefaultRadiosExample">
+                  <label class="custom-control-label" for="other">Other</label>
+                </div>
+              </div>
+            </div>
+            <!-- second row -->
+
+            <!-- third row -->
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="md-form">
+                  <input type="tel" id="phoneNumber" class="form-control" required="">
+                  <label for="phoneNumber">Phone Number</label>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="md-form">
+                  <input type="email" id="email" class="form-control">
+                  <label for="email">Email (username)</label>
+                </div>
+              </div>
+            </div>
+            <!-- third row -->
+
+            <!-- fourth row -->
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="md-form">
+                  <input type="text" id="ssn" class="form-control">
+                  <label for="ssn">Social Security Number</label>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                
+              </div>
+            </div>
+            <!-- fourth row -->
+
+
+            <!-- fifth row -->
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="md-form">
+                  <input type="text" id="street" class="form-control">
+                  <label for="street">street (optional)</label>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="md-form">
+                  <input type="text" id="city" class="form-control">
+                  <label for="city">city (optional)</label>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <!-- category -->
+                <label class="font-weight-bold">State</label>
+                <select class="browser-default custom-select mb-4">
+                    <option value="" selected="">Choose State</option>
+                    <option value="FL">FL</option>
+                    <option value="AL">AL</option>
+                    <option value="AK">AK</option>
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option>
+                    <option value="CT">CT</option>
+                    <option value="DE">DE</option>
+                    <option value="GA">GA</option>
+                    <option value="HI">HI</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="IA">IA</option>
+                    <option value="KS">KS</option>
+                    <option value="KY">KY</option>
+                    <option value="ME">ME</option>
+                    <option value="MD">MD</option>
+                    <option value="MA">MA</option>
+                    <option value="MI">MI</option>
+                    <option value="MN">MN</option>
+                    <option value="MS">MS</option>
+                    <option value="MO">MO</option>
+                    <option value="MT">MT</option>
+                    <option value="NE">NE</option>
+                    <option value="NV">NV</option>
+                    <option value="NH">NH</option>
+                    <option value="NJ">NJ</option>
+                    <option value="NM">NM</option>
+                    <option value="NY">NY</option>
+                    <option value="NC">NC</option>
+                    <option value="ND">ND</option>
+                    <option value="OH">OH</option>
+                    <option value="OK">OK</option>
+                    <option value="OR">OR</option>
+                    <option value="PA">PA</option>
+                    <option value="RI">RI</option>
+                    <option value="SC">SC</option>
+                    <option value="SD">SD</option>
+                    <option value="TN">TN</option>
+                    <option value="TX">TX</option>
+                    <option value="UT">UT</option>
+                    <option value="VT">VT</option>
+                    <option value="VA">VA</option>
+                    <option value="WA">WA</option>
+                    <option value="WV">WV</option>
+                    <option value="WI">WI</option>
+                    <option value="WY">WY</option>
+                </select>
+                <!-- category -->
+              </div>
+
+              
+
+              
+            </div>
+            <!-- fifth row -->
+
+            <div class="row">
+              
+              <div class="col-lg-4">
+                <div class="md-form">
+                  <input type="text" id="zip" class="form-control">
+                  <label for="zip">Zip (optional)</label>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <!-- category -->
+                <label class="font-weight-bold">Insurance</label>
+                <select class="browser-default custom-select mb-4" name="selectInsurance" id="selectInsurance">
+                    <option value="" selected="" disabled="">Choose Options</option>
+
+                    <option value="mineNotListed">Mine Not Listed</option>
+                    <option value="Aetna">Aetna</option>
+                    <option value="Staywell">Staywell</option>
+                    <option value="United">United</option>
+                </select>
+                <!-- category -->
+              </div>
+
+
+              <div class="col-lg-4">
+                <!-- category -->
+                <label class="font-weight-bold">Secondary Insurance</label>
+                <select class="browser-default custom-select mb-4" name="selectInsurance" id="selectInsurance">
+                    <option value="" selected="" disabled="">Choose Options</option>
+                    <option value="Aetna">Aetna</option>
+                    <option value="Staywell">Staywell</option>
+                    <option value="United">United</option>
+                </select>
+                <!-- category -->
+              </div>
+
+            </div>
+
+
+
+            <!-- mine not listed section -->
+            <div class="notListedSection">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="md-form">
+                    <input type="text" id="iname" class="form-control">
+                    <label for="iname">Insurance name</label>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="md-form">
+                    <input type="text" id="istreet" class="form-control">
+                    <label for="istreet">Insurance Street</label>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="md-form">
+                    <input type="text" id="icity" class="form-control">
+                    <label for="icity">Insurance City</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4">
+                  <!-- category -->
+                <label class="font-weight-bold">State</label>
+                <select class="browser-default custom-select mb-4">
+                    <option value="" selected="">Choose State</option>
+                    <option value="FL">FL</option>
+                    <option value="AL">AL</option>
+                    <option value="AK">AK</option>
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option>
+                    <option value="CT">CT</option>
+                    <option value="DE">DE</option>
+                    <option value="GA">GA</option>
+                    <option value="HI">HI</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="IA">IA</option>
+                    <option value="KS">KS</option>
+                    <option value="KY">KY</option>
+                    <option value="ME">ME</option>
+                    <option value="MD">MD</option>
+                    <option value="MA">MA</option>
+                    <option value="MI">MI</option>
+                    <option value="MN">MN</option>
+                    <option value="MS">MS</option>
+                    <option value="MO">MO</option>
+                    <option value="MT">MT</option>
+                    <option value="NE">NE</option>
+                    <option value="NV">NV</option>
+                    <option value="NH">NH</option>
+                    <option value="NJ">NJ</option>
+                    <option value="NM">NM</option>
+                    <option value="NY">NY</option>
+                    <option value="NC">NC</option>
+                    <option value="ND">ND</option>
+                    <option value="OH">OH</option>
+                    <option value="OK">OK</option>
+                    <option value="OR">OR</option>
+                    <option value="PA">PA</option>
+                    <option value="RI">RI</option>
+                    <option value="SC">SC</option>
+                    <option value="SD">SD</option>
+                    <option value="TN">TN</option>
+                    <option value="TX">TX</option>
+                    <option value="UT">UT</option>
+                    <option value="VT">VT</option>
+                    <option value="VA">VA</option>
+                    <option value="WA">WA</option>
+                    <option value="WV">WV</option>
+                    <option value="WI">WI</option>
+                    <option value="WY">WY</option>
+                </select>
+                <!-- category -->
+                </div>
+                <div class="col-lg-4">
+                  <div class="md-form">
+                    <input type="text" id="izip" class="form-control">
+                    <label for="izip">Insurance Zip</label>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="md-form">
+                    <input type="tel" id="iphone" class="form-control">
+                    <label for="iphone">Insurance Phone</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- mine not listed section -->
+
+            
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="md-form">
+                  <input type="text" id="sid" class="form-control">
+                  <label for="sid">Subscriber ID(optional)</label>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <label class="font-weight-bold">Plan Name</label>
+                <select class="browser-default custom-select mb-4" id="planNameSelect" name="planNameSelect">  
+                  <option value="" disabled="" selected>Choose Plan</option>
+                  <option value="mineNotListed">Mind Not Listed</option>
+                  <option value="option 1">option 1</option>
+                  <option value="option 2">option 1</option>
+                  <option value="option 3">option 1</option>
+                </select>
+              </div>
+              <div class="col-lg-4" style="display: none;" id="notListedPlan">
+                <div class="md-form">
+                  <input type="text" id="planName" class="form-control">
+                  <label for="planName">Plan Name</label>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row mt-2">
+              <div class="col-lg-6 mb-3">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFileLang">
+                  <label class="custom-file-label" for="customFileLang">Upload ID</label>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFileLang">
+                  <label class="custom-file-label" for="customFileLang">Insurance ID</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Create</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= add new patient modal ======================= -->
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- sidebar JS -->
+    <script src="js/mdb.min.js"></script>
+
+    <script type="text/javascript">
+        $("#selectInsurance").on("change", function() {     
+            if($(this).val() === "mineNotListed")
+            {
+                $(".notListedSection").show();
+            }
+            else
+            {
+                $(".notListedSection").hide();
+            }
+        });
+
+        $("#planNameSelect").on("change", function() {     
+            if($(this).val() === "mineNotListed")
+            {
+                $("#notListedPlan").show();
+            }
+            else
+            {
+                $("#notListedPlan").hide();
+            }
+        });
+    </script>
+    <!-- ============================= Script Files ======================= -->
+</body>
+
+</html>

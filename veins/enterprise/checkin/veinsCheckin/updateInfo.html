@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Checkin - Enter info</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="../css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/typography.css" rel="stylesheet">
+  <link rel="icon" href="img/logo.png" type="../image/png" sizes="16x16">
+</head>
+
+<body>
+
+
+  <main>
+    <div class="container py-2">
+      <div class="card mb-4">
+        <div class="card-body p-5">
+          <h3 class="font-weight-bold dark-grey-text">Update Your Information</h3>
+           <div class="row">
+              <div class="col-md-6">
+                <div class="md-form">
+                  <input type="text" id="firstName" class="form-control validate">
+                  <label for="firstName" data-error="wrong" data-success="right">First Name</label>
+                </div>
+              </div>
+
+        <div class="col-md-6">
+          <div class="md-form">
+            <input type="text" id="lastName" class="form-control validate">
+            <label for="lastName" data-error="wrong" data-success="right">Last Name</label>
+          </div>
+        </div>
+      </div>
+
+       <div class="row">
+              <div class="col-md-6">
+                <span class="mb-3 mr-4 dark-grey-text">DOB</span>
+                <div class="md-form mt-0">
+                  <input placeholder="Select date" type="date" id="date-picker-example" class="form-control datepicker">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <span class="mb-3 mr-4 dark-grey-text">Gender</span>
+                <br>
+
+                <!-- Default inline 1-->
+                <div class="custom-control custom-radio custom-control-inline mt-3 mb-3">
+                  <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+                  <label class="custom-control-label" for="defaultInline1">Male</label>
+                </div>
+
+                <!-- Default inline 2-->
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+                  <label class="custom-control-label" for="defaultInline2">Female</label>
+                </div>
+
+                <!-- Default inline 3-->
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+                  <label class="custom-control-label" for="defaultInline3">Others</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="md-form">
+                  <input type="email" id="email" class="form-control validate">
+                  <label for="email" data-error="wrong" data-success="right">Enter your email</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="md-form">
+                  <input type="number" id="phoneNumber" class="form-control validate">
+                  <label for="phoneNumber" data-error="wrong" data-success="right">Phone Number</label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-4">
+                <div class="md-form">
+                  <input type="number" id="ssn" class="form-control validate">
+                  <label for="ssn" data-error="wrong" data-success="right">SSN</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="md-form">
+                  <input type="text" id="insurance" class="form-control validate">
+                  <label for="insurance" data-error="wrong" data-success="right">Insurance</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="md-form">
+                  <input type="number" id="insuranceId" class="form-control validate">
+                  <label for="insuranceId" data-error="wrong" data-success="right">Insurance ID</label>
+                </div>
+              </div>
+            </div>  
+
+            <div class="row">
+              <div class="col-md-3">
+                <div class="md-form">
+                  <input type="text" id="street" class="form-control validate">
+                  <label for="street" data-error="wrong" data-success="right">Street</label>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="md-form">
+                  <input type="text" id="city" class="form-control validate">
+                  <label for="city" data-error="wrong" data-success="right">City</label>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="md-form">
+                  <input type="text" id="state" class="form-control validate">
+                  <label for="state" data-error="wrong" data-success="right">State</label>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="md-form">
+                  <input type="number" id="zip" class="form-control validate">
+                  <label for="zip" data-error="wrong" data-success="right">Zip</label>
+                </div>
+              </div>
+            </div>
+
+              <div class="text-center">
+                <button class="btn btn-success waves-effect">Checkin</button>
+              </div>
+        </div>
+      </div>
+
+     
+    </div>
+  </main>
+  
+
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../js/mdb.min.js"></script>
+
+
+</body>
+
+</html>

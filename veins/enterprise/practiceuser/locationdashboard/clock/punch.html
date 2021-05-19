@@ -1,0 +1,1099 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Practice user - location dashboard</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <link rel="stylesheet" href="../css/datatables.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <style type="text/css">
+      #punchInButton,#punchOutButton
+      {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 15px;
+      }
+
+      #punchInButton
+      {
+        display: none;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/logo.png" class="img-fluid" id="logo">
+                <span>Dashboard</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+
+                    <a href="#clock-in-out" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-clock nav-icon"></i>
+                        <span>Clock in/out</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="clock-in-out">
+                        <li>
+                            <a href="../clock/timeSheets.html" class="waves-effect">
+                                <i class="fas fa-business-time"></i>Time Sheets
+                            </a>
+                        </li>
+                        <li class="active">
+                          <a href="../clock/punch.html" class="waves-effect"><i class="fas fa-clock"></i>Punch</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../checkin.html" class="waves-effect">
+                        <i class="fas fa-map-marker-alt nav-icon"></i>
+                        <span>Veins Check In</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#displays" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-tv nav-icon"></i>
+                        <span>Displays</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="displays">
+                        <li>
+                          <a href="../displays/stageDisplay.html" class="waves-effect"><i class="far fa-user-circle nav-sub-icon"></i>Stage Display</a>
+                        </li>
+                        <li>
+                          <a href="../displays/lobbyDisplay.html" class="waves-effect"><i class="fas fa-user-circle nav-sub-icon"></i>Lobby Display</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#payments" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="far fa-credit-card nav-icon"></i>
+                        <span>Payments</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="payments">
+                        <li>
+                          <a href="../payments/paymentrequests.html" class="waves-effect"><i class="fas fa-money-bill nav-sub-icon"></i>Payment Requests</a>
+                        </li>
+                        <li>
+                          <a href="../payments/paymentpaid.html" class="waves-effect"><i class="far fa-credit-card nav-sub-icon"></i>Payment Paid</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#appointmentScheduler" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="far fa-calendar-check nav-icon"></i>
+                        <span>Appointment Scheduler</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="appointmentScheduler">
+                        <li>
+                          <a href="../appointmentScheduler/availability.html" class="waves-effect"><i class="far fa-calendar-plus nav-sub-icon"></i>Availability</a>
+                        </li>
+                        <li>
+                          <a href="../appointmentScheduler/requestedAppointments.html" class="waves-effect"><i class="fab fa-wpforms nav-sub-icon"></i>Requested Appointments</a>
+                        </li>
+                        <li>
+                          <a href="../appointmentScheduler/appointmentCalender.html" class="waves-effect"><i class="fas fa-calendar-alt nav-sub-icon"></i>Appointment Calender</a>
+                        </li>
+                        <li>
+                          <a href="../appointmentScheduler/upcomingAppointments.html" class="waves-effect"><i class="far fa-calendar-alt nav-sub-icon"></i>Upcoming Appointments</a>
+                        </li>
+                    </ul>
+                </li>
+
+                 <li>
+                    <a href="#rms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-search nav-icon"></i>
+                        <span>RMS</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="rms">
+                        <li>
+                          <a href="../rms/widget.html" class="waves-effect"><i class="fas fa-link"></i>Widget</a>
+                        </li>
+                        <li>
+                          <a href="../rms/review.html" class="waves-effect"><i class="fas fa-star"></i>Reviews</a>
+                        </li>
+                        <li>
+                          <a href="../rms/reviewSummary.html" class="waves-effect"><i class="fas fa-list-ul"></i>Review Summary</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#webdevForm" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fab fa-wpforms nav-icon"></i>
+                        <span>WebDev Forms</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="webdevForm">
+                        <li>
+                          <a href="../webdevForms/requestForms.html" class="waves-effect"><i class="fab fa-wpforms nav-sub-icon"></i>Request Forms</a>
+                        </li>
+                        <li>
+                          <a href="../webdevForms/submitDemo.html" class="waves-effect"><i class="fas fa-laptop nav-sub-icon"></i>Submit Demo</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#surveys" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-poll nav-icon"></i>
+                        <span>Surveys</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="surveys">
+                        <li>
+                          <a href="../surveys/active.html" class="waves-effect"><i class="fas fa-poll"></i>Active</a>
+                        </li>
+                        <li>
+                          <a href="../surveys/inactive.html" class="waves-effect"><i class="fas fa-poll"></i>Inactive</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#communicationCenter" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="far fa-comment-alt nav-icon"></i>
+                        <span>Communication Center</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="communicationCenter">
+                        <li>
+                          <a href="../communicationCenter/emails.html" class="waves-effect"><i class="far fa-envelope nav-sub-icon"></i>Emails</a>
+                        </li>
+                        <li>
+                          <a href="../communicationCenter/texts.html" class="waves-effect"><i class="fas fa-sms nav-sub-icon"></i>Texts</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                
+                <li>
+                    <a href="../patientPortals/patientPortals.html">
+                        <i class="fas fa-clinic-medical nav-icon"></i>
+                        <span>Patient Portals</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#reports" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="far fa-file-alt nav-icon"></i>
+                        <span>Reports</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="reports">
+                        <li>
+                          <a href="../reports/statisticReports.html" class="waves-effect"><i class="fas fa-chart-line"></i>Statistic Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/waitTimeReports.html" class="waves-effect"><i class="fas fa-pause"></i>Wait Time Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/advancedWaitTime.html" class="waves-effect"><i class="fas fa-pause"></i>Advanced Wait Time Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/dailyReports.html" class="waves-effect"><i class="fas fa-tasks"></i>Daily Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/stepReports.html" class="waves-effect"><i class="fas fa-chart-line"></i>Step Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/physicianReports.html" class="waves-effect"><i class="fas fa-user-md"></i>Physician Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/staffReports.html" class="waves-effect"><i class="fas fa-user-nurse"></i>Staff Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/paymentReports.html" class="waves-effect"><i class="fas fa-money-bill"></i>Payment Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/checkoutReports.html" class="waves-effect"><i class="fas fa-shopping-cart"></i>Checkout Reports</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#system" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-cogs nav-sub-icon"></i>
+                        <span>System</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="system">
+                        <li>
+                          <a href="../system/demographics.html" class="waves-effect"><i class="fas fa-info-circle"></i>Demographics</a>
+                        </li>
+
+                        <li>
+                          <a href="../system/personalSetting.html" class="waves-effect"><i class="fas fa-cog"></i>Personal Settings</a>
+                        </li>
+
+                        <!-- =========== Display Option ============ -->
+                        <li>
+                            <a href="#displayOption" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-tv nav-sub-icon"></i>Display Option</a>
+
+                            <ul class="collapse list-unstyled" id="displayOption">
+                              <li>
+                                <a href="../system/displayOption/stageAndStep.html" class="waves-effect"><i class="fas fa-chart-line"></i>Stage And Step</a>
+                              </li>
+                              <li>
+                                <a href="../system/displayOption/reasons.html" class="waves-effect"><i class="fas fa-question-circle"></i>Reasons</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== Display Option ============ -->
+
+                        <!-- =========== Clock In/Out ============ -->
+                        <li>
+                            <a href="#system-clockin-out" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="far fa-clock nav-sub-icon"></i>Clock In/Out</a>
+
+                            <ul class="collapse list-unstyled" id="system-clockin-out">
+                              <li>
+                                <a href="../system/clock/ptosetting.html" class="waves-effect"><i class="fas fa-plane"></i>PTO Settings</a>
+                              </li>
+                              <li>
+                                <a href="../system/clock/activeusers.html" class="waves-effect"><i class="fas fa-user-check"></i>Active Users</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== Clock In/Out ============ -->
+
+
+                        <!-- =========== Users ============ -->
+                        <li>
+                            <a href="#users" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users-cog nav-sub-icon"></i>Users</a>
+
+                            <ul class="collapse list-unstyled" id="users">
+                              <li>
+                                <a href="../system/users/authorizedUsers.html" class="waves-effect"><i class="fas fa-user-check nav-sub-icon"></i>Authorized Users</a>
+                              </li>
+                              <li>
+                                <a href="../system/users/pendingRequest.html" class="waves-effect"><i class="fas fa-user-edit"></i>Pending Request</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== Users ============ -->
+
+                        <!-- =========== Security Profiles ============ -->
+                        <li>
+                            <a href="#security-profiles" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-user-lock nav-sub-icon"></i>Security Profiles</a>
+
+                            <ul class="collapse list-unstyled" id="security-profiles">
+                              <li>
+                                <a href="../system/securityProfiles/createSP.html" class="waves-effect"><i class="fas fa-user-lock"></i>Create</a>
+                              </li>
+                              <li>
+                                <a href="../system/securityProfiles/activeSP.html" class="waves-effect"><i class="fas fa-lock-open"></i>Active</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== Security Profiles ============ -->
+
+                        <!-- =========== Appointments ============ -->
+                        <li>
+                            <a href="#system-appointments" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-calendar-check nav-sub-icon"></i>Appointments</a>
+
+                            <ul class="collapse list-unstyled" id="system-appointments">
+                              <li>
+                                <a href="../system/appointments/templates.html" class="waves-effect"><i class="fab fa-wpforms"></i>Website Form</a>
+                              </li>
+                              <li>
+                                <a href="../system/appointments/appointmentReminders.html" class="waves-effect"><i class="far fa-bell"></i>Reminders</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== Appointments ============ -->
+
+                        <li>
+                          <a href="../system/communicationCenter.html" class="waves-effect"><i class="far fa-comments"></i>Communication Center</a>
+                        </li>
+
+                        <li>
+                          <a href="system/rms.html" class="waves-effect"><i class="fas fa-search-location"></i>RMS</a>
+                        </li>
+
+                        <!-- =========== webdev forms ============ -->
+                        <li>
+                            <a href="#system-webdev-form" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fab fa-wpforms nav-sub-icon"></i>Webdev Form</a>
+
+                            <ul class="collapse list-unstyled" id="system-webdev-form">
+                              <li>
+                                <a href="../system/webdevForm/createWebdev.html" class="waves-effect"><i class="fas fa-plus"></i>Create</a>
+                              </li>
+                              <li>
+                                <a href="../system/webdevForm/activeWebdev.html" class="waves-effect"><i class="fab fa-wpforms"></i>Active</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== webdev forms ============ -->
+
+                        <!-- =========== surveys ============ -->
+                        <li>
+                            <a href="#system-surveys" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-poll nav-sub-icon"></i>Surveys</a>
+
+                            <ul class="collapse list-unstyled" id="system-surveys">
+                              <li>
+                                <a href="../system/webdevForm/createWebdev.html" class="waves-effect"><i class="fas fa-plus"></i>Create</a>
+                              </li>
+                              <li>
+                                <a href="../system/webdevForm/activeWebdev.html" class="waves-effect"><i class="fas fa-poll-h"></i>Active</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== surveys ============ -->
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../../login/practiceUser.html" class="waves-effect"><i class="fas fa-sign-out-alt nav-icon"></i>Logout</a>
+                </li>
+
+
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    
+                    <h3 class="h3-responsive pageTitle">Punch</h3>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Navbar links -->
+                        <ul class="nav navbar-nav nav-flex-icons ml-auto">
+
+                          <li class="nav-item">
+                            <a href="../../dashboard/index.html" class="nav-link btn btn-outline-info btn-sm">
+                              <i class="fas fa-arrow-left"></i>Back To My Dashboard
+                            </a>
+                          </li>
+
+                          <!-- Dropdown -->
+                          <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="badge red">4</span> <i class="fas fa-search-location"></i>
+                              <span class="d-none d-md-inline-block dropdownText">My Practices</span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-primary" id="myPractice" aria-labelledby="navbarDropdownMenuLink">
+                              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                              <a class="dropdown-item" href="../index.html">
+                                <span>Power Pediatrics</span><br>
+                                <small><i class="fas fa-map-marker-alt pr-2"></i>Ornaldo, Florida</small><br>
+                                <small><i class="fas fa-phone pr-2"></i>407-286-2965</small>
+                                <small>| RTP8712</small>
+                              </a>
+                              
+                            </div>
+                          </li>
+
+
+                          <!-- Dropdown -->
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="badge red">2</span> <i class="fas fa-bell"></i>
+                              <span class="d-none d-md-inline-block dropdownText">Notifications</span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-primary" id="notification" aria-labelledby="navbarDropdownMenuLink">
+                              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+
+                              <a class="dropdown-item" href="#">
+                                <i class="far fa-money-bill-alt mr-2" aria-hidden="true"></i>
+                                <span>New order received</span>
+                                <span class="float-right"><i class="far fa-clock" aria-hidden="true"></i> 13 min</span>
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="far fa-money-bill-alt mr-2" aria-hidden="true"></i>
+                                <span>New order received</span>
+                                <span class="float-right"><i class="far fa-clock" aria-hidden="true"></i> 33 min</span>
+                              </a>
+                            </div>
+                          </li>
+
+                          
+                          <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>
+
+                            <span class="dropdownText">Profile</span>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">
+
+                              <span>Clocked In</span>
+                              <span class="float-right"><i class="far fa-clock pr-2"></i>12/25/19 - 2:45 PM</span>
+                            </a>
+                            <a class="dropdown-item" href="system/personalsetting.html"><i class="fas fa-pencil-alt"></i> Edit Profile</a>
+                            <a class="dropdown-item" href="http://veinspracticesolution.com/login/practiceuser.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                          </div>
+                        </li>
+
+                        <li>
+                          <a class="nav-link btn btn-outline-info btn-sm" data-target="#checkin" data-toggle="modal">
+                            Checkin
+                          </a>
+                        </li>
+
+                      </ul>
+                      <!-- Navbar links -->
+                    </div>
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </nav>
+
+
+            <main>
+              <div class="container-fluid">
+
+                <div class="text-center mt-4 mb-3">
+                  <input class="btn btn-success btn-lg" id="punchInButton" type="button" value="Punch In" onclick="punchIn() ">
+                  <input class="btn btn-success btn-lg" id="punchOutButton" type="button" value="Punch Out" onclick="punchOut() ">
+                  <p class="lead output"></p>
+                </div>
+
+
+                <div class="card mb-0">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-xl">
+                        <label>Show Entries</label>
+                        <select class="form-control mt-0" id="showEntries" style="float: left;">
+                          <option value="1">10</option>
+                          <option value="2">20</option>
+                          <option value="3">30</option>
+                          <option value="4">40</option>
+                          <option value="5">50</option>
+                        </select>
+                      </div>
+                      <div class="col-xl">
+                        <label>Start Date</label>
+                        <input placeholder="Start date" type="text" id="startingDate" class="form-control datepicker">
+                      </div>
+                      <div class="col-xl">
+                        <label>End Date</label>
+                        <input placeholder="End date" type="text" id="endingDate" class="form-control datepicker">
+                      </div>
+                      <div class="col-xl mt-3">
+                        <button class="btn btn-info mt-0">Apply</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- top card  -->
+
+
+                <!-- card -->
+                <div class="card mt-3">
+                  <!-- header -->
+                  <div class="card-header blue">
+                    <div class="row">
+                      <div class="col-xl-5 text-left">
+                        <h4 class="font-weight-bold h4-responsive white-text">Pay Period : 09/09/2019 Thru 09/15/2019</h4>
+                      </div>
+
+                      <div class="col-xl-7 text-right">
+                        <button class="btn btn-mdb-color mt-0"><i class="fas fa-file-archive mr-2"></i>Archive</button>
+                        <button class="btn btn-success mt-0"><i class="fas fa-print mr-2"></i>Print</button>
+                        <button class="btn btn-danger mt-0"><i class="far fa-envelope mr-2"></i>Email</button>
+                        <button class="btn btn-pink mt-0"><i class="fas fa-file-export mr-2"></i>Export CSV</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!-- header -->
+
+                  <!-- card body -->
+                  <div class="card-body p-0">
+                    <div class="table-responsive-xl">
+                      <!-- table -->
+                      <table class="table table-striped text-center">
+                        <thead class="grey white-text text-uppercase">
+                          <tr>
+                            <th>Emp#</th>
+                            <th>Employee</th>
+                            <th>Day</th>
+                            <th>Date</th>
+                            <th>Total</th>
+                            <th>Reg</th>
+                            <th>IN</th>
+                            <th>OUT</th>
+                            <th>Settings</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Ravi</td>
+                            <td>Mon</td>
+                            <td>19/08/2019</td>
+                            <td>13.23</td>
+                            <td>0.00</td>
+                            <td>12:22</td>
+                            <td>12:50</td>
+                            <td>
+                               <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#editPopUp"><i class="fas fa-edit"></i></a>
+                                <a class="btn-floating btn-sm btn-secondary" data-toggle="modal" data-target="#removePopUp"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td>Ravi</td>
+                            <td>Mon</td>
+                            <td>19/08/2019</td>
+                            <td>13.23</td>
+                            <td>0.00</td>
+                            <td>12:22</td>
+                            <td>12:50</td>
+                            <td>
+                               <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#editPopUp"><i class="fas fa-edit"></i></a>
+                                <a class="btn-floating btn-sm btn-secondary" data-toggle="modal" data-target="#removePopUp"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td>Ravi</td>
+                            <td>Mon</td>
+                            <td>19/08/2019</td>
+                            <td>13.23</td>
+                            <td>0.00</td>
+                            <td>12:22</td>
+                            <td>12:50</td>
+                            <td>
+                               <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#editPopUp"><i class="fas fa-edit"></i></a>
+                                <a class="btn-floating btn-sm btn-secondary" data-toggle="modal" data-target="#removePopUp"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td>Ravi</td>
+                            <td>Mon</td>
+                            <td>19/08/2019</td>
+                            <td>13.23</td>
+                            <td>0.00</td>
+                            <td>12:22</td>
+                            <td>12:50</td>
+                            <td>
+                               <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#editPopUp"><i class="fas fa-edit"></i></a>
+                                <a class="btn-floating btn-sm btn-secondary" data-toggle="modal" data-target="#removePopUp"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td>Ravi</td>
+                            <td>Mon</td>
+                            <td>19/08/2019</td>
+                            <td>13.23</td>
+                            <td>0.00</td>
+                            <td>12:22</td>
+                            <td>12:50</td>
+                            <td>
+                               <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#editPopUp"><i class="fas fa-edit"></i></a>
+                                <a class="btn-floating btn-sm btn-secondary" data-toggle="modal" data-target="#removePopUp"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td>Ravi</td>
+                            <td>Mon</td>
+                            <td>19/08/2019</td>
+                            <td>13.23</td>
+                            <td>0.00</td>
+                            <td>12:22</td>
+                            <td>12:50</td>
+                            <td>
+                               <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#editPopUp"><i class="fas fa-edit"></i></a>
+                                <a class="btn-floating btn-sm btn-secondary" data-toggle="modal" data-target="#removePopUp"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>1</td>
+                            <td>Ravi</td>
+                            <td>Mon</td>
+                            <td>19/08/2019</td>
+                            <td>13.23</td>
+                            <td>0.00</td>
+                            <td>12:22</td>
+                            <td>12:50</td>
+                            <td>
+                               <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#editPopUp"><i class="fas fa-edit"></i></a>
+                                <a class="btn-floating btn-sm btn-secondary" data-toggle="modal" data-target="#removePopUp"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- table -->
+                    </div>
+                  </div>
+                  <!-- card body -->
+                </div>
+                <!-- card -->
+              </div>
+            </main>
+
+
+            <!-- Footer -->
+            <footer class="page-footer fixed-bottom font-small blue">
+
+              <!-- Copyright -->
+              <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://Reviewthatplace.com"> Reviewthatplace.com</a>
+              </div>
+              <!-- Copyright -->
+
+            </footer>
+            <!-- Footer -->
+          
+        </div>
+    </div>
+
+
+    <!-- edit pop up -->
+    <div class="modal fade" id="editPopUp" tabindex="-1" role="dialog" aria-labe7[piyt4re321lledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+        <!-- Content -->
+        <div class="modal-content">
+          <!-- Header -->
+          <div class="modal-header">
+            <p class="heading lead">Adjusting Day For Ravi Agrawal</p>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+
+          <!-- Body -->
+          <div class="modal-body">
+            <h4 class="h4-responsive">Work 1.02 hours</h4>
+            <p>Use Hours</p>
+            
+            <div class="switch">
+              <label>
+                Off
+                <input type="checkbox" id="useHours">
+                <span class="lever"></span> On
+              </label>
+            </div>
+
+            <div class="row" id="offHours">
+              <div class="col">
+                <label>In(DB)</label>
+                <div class="md-form mt-0">
+                  <input placeholder="Selected time" type="text" id="input_starttime" class="form-control timepicker timeInHours">
+                  
+                </div>
+              </div>
+              <div class="col">
+                <label>In(DB)</label>
+                <div class="md-form mt-0">
+                  <input placeholder="Selected time" type="text" id="input_starttime" class="form-control timepicker timeInHours">
+                  
+                </div>
+              </div>
+
+              <div class="col">
+                <span>Midnight</span>
+                <div class="switch">
+                <label>
+                  Off
+                  <input type="checkbox" id="useHours">
+                  <span class="lever"></span> On
+                </label>
+              </div>
+              </div>
+            </div>
+
+            <!-- Material input -->
+            <label>Hours</label>
+            <div class="md-form mt-0" id="onHours" style="display: none;">
+              <input type="text" id="hours" class="form-control">
+              
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <!--job-->
+                <span>Job</span>
+                <select class="form-control mt-0 pt-0">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                  <option value="5">Option 5</option>
+                </select>
+                <!--job-->
+              </div>
+              <div class="col">
+                <!--Dept-->
+                <span>Dept</span>
+                <select class="form-control mt-0 pt-0 mb-0">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                  <option value="5">Option 5</option>
+                </select>
+                <!--Dept-->
+              </div>
+            </div>
+
+            <div class="md-form mt-0 pt-0">
+              <textarea id="notes" class="md-textarea form-control" rows="1"></textarea>
+              <label for="notes">Note</label>
+            </div>
+                   
+
+            <button class="btn btn-success waves-effect">Save</button>
+            <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+        <!-- Content -->
+      </div>
+    </div>
+    <!--Edit popup -->
+
+
+
+    <!--================================= checkin ======================= -->
+    <div class="modal fade" id="checkin" tabindex="-1" role="dialog" aria-labe7[piyt4re321lledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info  modal-xl" role="document">
+        <!-- Content -->
+        <div class="modal-content">
+          <!-- Header -->
+          <div class="modal-header">
+            <p class="heading lead">Manual Entry</p>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+
+          <!-- Body -->
+          <div class="modal-body">
+            <div class="row">
+              <!-- new patient -->
+              <div class="col-xl-5 mb-2">
+                <h4 class="font-weight-bold h4-responsive mb-4">New Patient</h4>
+
+                <form>
+                  <!-- Full name row -->
+                  <div class="row">
+                    <!--  first name -->
+                    <div class="col">
+                      <div class="md-form mt-0">
+                        <input type="text" class="form-control" placeholder="First name">
+                      </div>
+                    </div>
+                    <!-- first name -->
+
+                    <!-- last name -->
+                    <div class="col">
+                      <div class="md-form mt-0">
+                        <input type="text" class="form-control" placeholder="Last name">
+                      </div>
+                    </div>
+                    <!-- last name -->
+                  </div>
+                  <!-- Full name row -->
+
+                  <!-- row -->
+                  <div class="row">
+                    <!-- date of birth -->
+                    <div class="col-xl-12">
+                      <span>DOB</span>
+                      <div class="md-form mt-0">
+                        <input placeholder="Select date" type="text" id="date-picker-example" class="form-control datepicker">
+                      </div>
+                    </div>
+                    <!-- date of birth -->
+
+                    <!-- gender -->
+                    <div class="col-xl-12">
+                      <span class="font-weight-bold mt-4">Gender</span>
+                      <br>
+                      <!-- Material inline 1 -->
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline1">Male</label>
+                      </div>
+
+                      <!-- Material inline 2 -->
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline2">Female</label>
+                      </div>
+
+                      <!-- Material inline 3 -->
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialInline3" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline3">Others</label>
+                      </div>
+                    </div>
+                    <!-- gender -->
+
+                    <!-- email -->
+                    <div class="col-xl-12">
+                      <div class="md-form form-group">
+                        <input type="email" class="form-control" id="email">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+                    <!-- email -->
+
+                    <!-- Phone -->
+                    <div class="col-xl-12">
+                      <div class="md-form form-group">
+                        <input type="tel" class="form-control" id="phoneno">
+                        <label for="phoneno">Phone Number</label>
+                      </div>
+                    </div>
+                    <!-- Phone -->
+
+                    <!-- date of birth -->
+                    <div class="col-xl-12">
+                      <span>DOS</span>
+                      <div class="md-form mt-1">
+                        <input placeholder="Select date" type="text" id="dos" class="form-control datepicker">
+                      </div>
+                    </div>
+                    <!-- date of birth -->
+
+                    <div class="col-xl-12 mb-2">
+                      <label class="mdb-main-label">Category</label>
+                      <select class="form-control">
+                        <option value="" disabled selected>Choose Category</option>
+                        <option value="1">Walk IN</option>
+                        <option value="2">Sick</option>
+                      </select>
+                    </div>
+
+                    <div class="col-xl-12 mb-2">
+                      <label class="mdb-main-label">Reason</label>
+                      <select class="form-control">
+                        <option value="" disabled selected>Choose reason</option>
+                        <option value="1">Walk IN</option>
+                        <option value="2">Sick</option>
+                      </select>
+                    </div>
+
+                    <div class="col-xl-12 mb-2">
+                      <label class="mdb-main-label">Physician</label>
+                      <select class="form-control">
+                        <option value="" disabled selected>Choose Physician</option>
+                        <option value="1">Walk IN</option>
+                        <option value="2">Sick</option>
+                      </select>
+                    </div>
+
+                    <!-- comments -->
+                    <div class="col-xl-12">
+                      <div class="md-form">
+                        <textarea id="comment" class="form-control md-textarea" length="120" rows="3"></textarea>
+                        <label for="comment">Comment</label>
+                      </div>
+                    </div>
+                    <!-- comments -->
+                  </div>
+                  <!-- row -->
+
+                  <div>
+                    <input type="submit" name="" class="btn btn-success" value="Save Changes">
+                  </div>
+
+                  
+
+                </form>
+              </div>
+              <!-- new patient -->
+
+              <!-- regular patient -->
+              <div class="col-xl-7 mb-2">
+                <h4 class="font-weight-bold h4-responsive">Regular Patient</h4>
+
+                <div class="table-responsive-xl">
+                  <table class="table table-striped datatables">
+                    <thead class="black white-text">
+                      <tr>
+                        <th>ID</th>
+                        <th>ID2</th>
+                        <th>Full Name</th>
+                        <th>DOB</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>12</td>
+                        <td>14</td>
+                        <td>Ravi Agrawal</td>
+                        <td>11/10/1998</td>
+                        <td>ravi@gmail.com</td>
+                        <td>122314323</td>
+                      </tr>
+
+                      <tr>
+                        <td>12</td>
+                        <td>14</td>
+                        <td>Ravi Agrawal</td>
+                        <td>11/10/1998</td>
+                        <td>ravi@gmail.com</td>
+                        <td>122314323</td>
+                      </tr>
+
+                      <tr>
+                        <td>12</td>
+                        <td>14</td>
+                        <td>Ravi Agrawal</td>
+                        <td>11/10/1998</td>
+                        <td>ravi@gmail.com</td>
+                        <td>122314323</td>
+                      </tr>
+
+                      <tr>
+                        <td>12</td>
+                        <td>14</td>
+                        <td>Ravi Agrawal</td>
+                        <td>11/10/1998</td>
+                        <td>ravi@gmail.com</td>
+                        <td>122314323</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- regular patient -->
+            </div>
+
+              <!-- <button class="btn btn-success waves-effect">Save</button>
+                <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button> -->
+
+              </div>
+              <!-- body -->
+            </div>
+            <!-- Content -->
+          </div>
+        </div>
+        <!--================================= checkin ======================= -->
+
+    
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/tableScript.js"></script>
+    <!-- sidebar JS -->
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/mdb.min.js"></script>
+
+    <script type="text/javascript">
+      $('#punchInButton').click(function() {
+        $(this).hide();
+        $('#punchOutButton').show();
+      });
+
+      $('#punchOutButton').click(function() {
+        $(this).hide();
+        $('#punchInButton').show();
+      });
+
+      $('.timeInHours').pickatime({
+      // 12 or 24 hour
+      twelvehour: true,
+      });
+
+      var hours = new Date().getHours();
+      var mid='am';
+      if(hours==0){ //At 00 hours we need to show 12 am
+      hours=12;
+      }
+      else if(hours>12)
+      {
+      hours=hours%12;
+      mid='pm';
+      }
+    
+      function punchOut() 
+      { 
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = mm + '/' + dd + '/' + yyyy;
+        var currentdate = new Date(); 
+
+        var datetime = "Punched Out at: " + today + " @ "  
+                        + hours + ":"  
+                        + currentdate.getMinutes()  
+                        + mid;
+        document.querySelector('.output').textContent 
+                        = datetime; 
+      }
+
+      function punchIn() 
+      { 
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = mm + '/' + dd + '/' + yyyy;
+        var currentdate = new Date(); 
+
+        var datetime = "Punched In at: " + today + " @ "  
+                        + hours + ":"  
+                        + currentdate.getMinutes()  
+                        + mid;
+        document.querySelector('.demoOutput').textContent 
+                        = datetime; 
+      } 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Veins - Patient Portal</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/datatables.min.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <link rel="stylesheet" href="../css/table.css">
+
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+</head>
+
+<!-- ====================== body starts here ====================== -->
+<body>
+    <!-- ============================= Page Starts here ======================= -->
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/logo.png" class="img-fluid" id="logo">
+                <span>Patient Portal</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#mypractices" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-home nav-icon"></i>
+                        <span>My Practices</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="mypractices">
+                        <li>
+                            <a href="../mypractices/practiceAuthorized.html"><i class="fas fa-search-location"></i>Authorized Practices</a>
+                        </li>
+                        
+                        <li>
+                            <a href="../mypractices/appointmentRequest.html"><i class="far fa-calendar-plus"></i>Request Appointment</a>
+                        </li>
+
+                        <li>
+                            <a href="../mypractices/appointmentUpcoming.html"><i class="far fa-calendar-check"></i>Upcoming Appointment</a>
+                        </li>
+
+                        <li>
+                            <a href="../mypractices/myReviews.html"><i class="fas fa-star"></i>My Reviews</a>
+                        </li>
+
+                        <li>
+                            <a href="../mypractices/surveys.html"><i class="fas fa-poll"></i>Surveys</a>
+                        </li>
+
+                        <li class="active">
+                            <a href="../mypractices/visitHistory.html"><i class="fas fa-business-time"></i>Visit History</a>
+                        </li>
+                        
+                        <li>
+                            <a href="../mypractices/communicationCenter.html"><i class="fas fa-comment"></i>Communication Center</a>
+                        </li>
+
+                        <li>
+                            <a href="#mypractice-payments" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Payments</span>
+                            </a>
+                            <ul class="collapse list-unstyled" id="mypractice-payments">
+                                <li>
+                                    <a href="../mypractices/payments/paymentRequests.html"><i class="fas fa-money-bill"></i>Payment Requests</a>
+                                </li>
+                                <li>
+                                    <a href="../mypractices/payments/paymentCompleted.html"><i class="far fa-credit-card"></i>Payments Completed</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy nav-icon"></i>
+                        <span>My Records</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="../myRecords/recordsRequest.html"><i class="fas fa-folder-plus"></i>Request Records</a>
+                        </li>
+                        <li>
+                            <a href="../myRecords/recordsSend.html"><i class="fas fa-share-square"></i>Send Records</a>
+                        </li>
+                        <li>
+                            <a href="../myRecords/recordsPending.html"><i class="far fa-folder-open"></i>Pending Records</a>
+                        </li>
+                        <li>
+                            <a href="../myRecords/recordsAll.html"><i class="far fa-folder"></i>All Records</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../demographics.html" class="active">
+                        <i class="fas fa-info-circle nav-icon"></i>
+                        <span >Demographics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../accessRequest.html">
+                        <i class="fa fa-lock nav-icon"></i>
+                        <span>Access Request</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../login/patientportal.html">
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!-- ============================= navbar  ======================= -->
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid white">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+
+                    
+
+                    <h3 class="h3-responsive pageTitle">VISIT HISTORY</h3>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html"><i class="fas fa-home"></i>Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../myRecords/recordsRequest.html"><i class="fas fa-folder-plus"></i>Request Records</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../myRecords/recordsSend.html"><i class="fas fa-share-square"></i>Send Records</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../myRecords/recordsSend.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                </div>
+            </nav>
+            <!-- ============================= navbar  ======================= -->
+
+
+            <!-- ============================= main content starts here ======================= -->
+            <main>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered datatables table-sm">
+                              <thead class="thead-dark">
+                                <tr>
+                                  <th scope="col">Pracitce Name</th>
+                                  <th scope="col">Date Of Service</th>
+                                  <th scope="col">Time</th>
+                                  <th scope="col">Physician</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Powers Pediatrics</td>
+                              <td>01/02/2019</td>
+                              <td>01:02 pm</td>
+                              <td>Ravi</td>
+                          </tr>
+
+                          <tr>
+                              <td>Powers Pediatrics</td>
+                              <td>01/02/2019</td>
+                              <td>01:02 pm</td>
+                              <td>Ravi</td>
+                          </tr>
+
+                          <tr>
+                              <td>Powers Pediatrics</td>
+                              <td>01/02/2019</td>
+                              <td>01:02 pm</td>
+                              <td>Ravi</td>
+                          </tr>
+
+                          <tr>
+                              <td>Powers Pediatrics</td>
+                              <td>01/02/2019</td>
+                              <td>01:02 pm</td>
+                              <td>Ravi</td>
+                          </tr>
+
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </main>
+  <!-- ============================= main content starts here ======================= -->
+
+  <!-- ============================= Footer starts here ======================= -->
+  <footer class="page-footer font-small blue fixed-bottom">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="#"> Review That Place.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- ============================= Footer Ends here ======================= -->
+
+</div>
+</div>
+<!-- ============================= Project End Here ======================= -->
+
+
+
+
+<!-- ============================= Script Files ======================= -->
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="../js/jquery-3.3.1.slim.min.js"></script>
+<!-- Popper.JS -->
+<script src="../js/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- sidebar JS -->
+<script src="../js/sidebar.js"></script>
+<script src="../js/datatables.min.js"></script>
+<script src="../js/tableScript.js"></script>
+<!-- ============================= Script Files ======================= -->
+</body>
+
+</html>

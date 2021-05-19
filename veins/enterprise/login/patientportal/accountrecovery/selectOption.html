@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Login - Patient Portal</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="../../../css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="../../../css/style.css">
+  
+</head>
+<body>
+  <nav class=" navbar-dark grey">
+    <div class="container">
+      <a class="navbar-brand" href="http://veinspracticesolution.com">
+        <img src="../../../img/logo.png" class="img-fluid">
+      </a>
+    </div>
+  </nav>
+
+  <!-- Start your project here-->  
+  <section>
+    <!-- form container -->
+    <div class="container-fluid pl-0" id="formArea">
+      
+      <div class="row">
+        <!-- img -->
+        <div class="col-md-4 forDesktop">
+          <img src="https://images.unsplash.com/photo-1476365518243-f738bf58443d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=333&q=80" class="img-fluid sideImg">
+        </div>
+        <!-- img -->
+
+        <!-- form area -->
+        <div class="col-md-8 content">
+          <div class="container forMobile pt-4">
+            <!-- form -->
+            <form class="p-3">
+              <a href="../verify.html"><i class="fas fa-arrow-left pr-2"></i>Go Back</a>
+              
+
+              <h2 class="heading h2-responsive mt-3">Patient Portal - Reset Your Password</h2>
+
+              
+              <div class="row mt-4">
+                <div class="col-md-8 borderRight">
+                  <p>How do you want to receive the code to reset your password?</p>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="verifyByEmail" name="selectOption" value="verifyByEmail">
+                    <label class="custom-control-label" for="verifyByEmail"><i class="fas fa-envelope pr-2"></i>Send Code Via Email<br><span class="grey-text">a*******10@gmail.com</span></label>
+                  </div>
+
+                  <!--  -->
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="verifyByPhone" name="selectOption" value="verifyByPhone">
+                    <label class="custom-control-label" for="verifyByPhone"><i class="fas fa-phone pr-2"></i>Send Code Via Phone<br><span class="grey-text">98******63</span></label>
+                  </div>
+
+                  <!--  -->
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="verifyByIdentity" name="selectOption" value="verifyByIdentity">
+                    <label class="custom-control-label" for="verifyByIdentity"><i class="fas fa-user-check pr-2"></i>Verify Identity<br><span class="grey-text">You Need To Verify Security Questions and DOB</span></label>
+                  </div>
+                </div>
+
+                <div class="col-md-4 forDesktop">
+                  <img src="data:image/png;base64,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" class="img-fluid" style="height: 140px; width: 140px;">
+                  <h4 class="font-weight-bold h4-responsive">Ravi Agrawal</h4>
+                  <p class="grey-text">Patient Portal</p>
+                </div>
+              </div>
+              
+              <div class="text-right mt-3">
+                <input type="button" name="submit"  class="btn btn-info" value="Continue">
+                <a href="../accountrecovery.html" class="btn btn-primary">Not You?</a>
+              </div>
+
+             
+            </form>
+            <!-- form -->
+          </div>
+        </div>
+        <!-- form area -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- form container -->
+  </section>
+  <!-- End your project here-->
+
+  <!-- Footer -->
+  <footer class="page-footer font-small grey fixed-bottom">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="#"> Review That Place.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="../../../js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../../../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../../../js/mdb.min.js"></script>
+  <script type="text/javascript">
+
+     $(document).ready(function()
+     {
+        $("input[type='button']").click(function(){
+            var radioValue = $("input[name='selectOption']:checked").val();
+
+            if(radioValue == "verifyByEmail"){
+                alert("Thanks! A reset password link has been sent to your email. The link will expire in 24 Hours.");
+                return true;
+            }
+            else if(radioValue == "verifyByPhone")
+            {
+              window.open('phoneVerify.html','_self');
+              return true;
+            }
+            else if(radioValue == "verifyByIdentity")
+            {
+              window.open('verify.html','_self');
+              return true;
+            }
+        });
+    });
+  </script>
+</body>
+</html>

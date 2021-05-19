@@ -1,0 +1,557 @@
+    
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Veins - Patient Portal</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/table.css">
+
+    <link rel="stylesheet" href="../css/datatables.min.css">
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">  
+
+    <style type="text/css">
+      .singleSection
+      {
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      .singleSection .form-check
+      {
+        margin-bottom: 30px;
+      }
+
+      .singleSection .form-check input
+      {
+        width: 17px;
+        height: 17px;
+      }
+      .singleSection .form-check label
+      {
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/logo.png" class="img-fluid" id="logo">
+                <span>Admin Panel</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                 <li>
+                    <a href="#practices" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-clinic-medical nav-icon"></i>
+                        <span>Practices</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practices">
+                        <li>
+                            <a href="../practices/claimed.html"><i class="fas fa-check"></i>Claimed</a>
+                        </li>
+                        <li>
+                            <a href="../practices/unclaimed.html"><i class="fas fa-times"></i>Unclaimed</a>
+                        </li>
+                        <li>
+                            <a href="../practices/addRequest.html"><i class="fas fa-user-plus"></i>Request To Add</a>
+                        </li>
+                        <li>
+                            <a href="../practices/claimAccess.html"><i class="fas fa-user-lock"></i>Claim Access</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="#billing" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-money-bill nav-icon"></i>
+                        <span>Billing</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="billing">
+                        <li class="active">
+                            <a href="../billing/create.html"><i class="fas fa-plus"></i>Create</a>
+                        </li>
+                        <li>
+                            <a href="../billing/active.html"><i class="fas fa-check-double"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../billing/inactive.html"><i class="far fa-times-circle"></i>Inactive</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="../categories.html">
+                        <i class="fa fa-list nav-icon"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+
+
+                <li>
+
+                    <a href="#rms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-search-location nav-icon"></i>
+                        <span>RMS</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="rms">
+                        <li>
+                            <a href="../rms/reviews.html"><i class="fas fa-search"></i>Reviews</a>
+                        </li>
+                        <li>
+                            <a href="../rms/practices.html"><i class="fas fa-hospital-alt"></i>Practices</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#insurance" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-shield-alt nav-icon"></i>
+                        <span>Insurance</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="insurance">
+                        <li>
+                            <a href="../insurances/active.html"><i class="fas fa-user-shield"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../insurances/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                
+
+                <li>
+                    <a href="#practiceUser" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-user-check nav-icon"></i>
+                        <span>Practice User</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practiceUser">
+                        <li>
+                            <a href="../practiceUser/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../practiceUser/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#patientPortal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-stethoscope nav-icon"></i>
+                        <span>Patient Portal</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="patientPortal">
+                        <li>
+                            <a href="../patientPortal/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../patientPortal/pending.html"><i class="fas fa-user-edit"></i>Pending</a>
+                        </li>
+                        <li>
+                            <a href="../patientPortal/notStarted.html"><i class="fas fa-user-times"></i>Not Started</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../userType.html">
+                        <i class="fa fa-users nav-icon"></i>
+                        <span >User Type</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../reports.html">
+                        <i class="fa fa-file nav-icon"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+        <!-- ================= Sidebar ======================== -->
+
+
+        <!-- ================= Page Content ======================== -->
+        <div id="content">
+            <!-- ================= Navbar ======================== -->
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    <h3 class="h3-responsive pageTitle">Plans - Create</h3>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                          
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- ================= Navbar ======================== -->
+
+            <!-- ================= Main Content ======================== -->
+            
+            <main>
+                <!-- card -->
+                <div class="card">
+                    <!-- card body -->
+                    <div class="card-body">  
+                      <h2 class="font-weight-bold">Create New Plan</h2>
+                      <!-- first row -->
+                      <div class="row">
+                        <div class="col-xl-4">
+                          <!-- Plan Name -->
+                          <div class="md-form">
+                            <input type="text" id="planName" class="form-control">
+                            <label for="planName">Plan name</label>
+                          </div>
+                        </div>
+
+                        <div class="col-xl-4">
+                          <!-- price -->
+                          <div class="md-form">
+                            <input type="number" id="price" class="form-control">
+                            <label for="price">Price</label>
+                          </div>
+                        </div>
+
+                        <div class="col-xl-4">
+                          <!-- users -->
+                          <div class="md-form">
+                            <input type="number" id="users" class="form-control">
+                            <label for="users">Users</label>
+                          </div>
+                        </div>
+
+                        <div class="col-xl-4">
+                          <!-- texts -->
+                          <div class="md-form">
+                            <input type="number" id="texts" class="form-control">
+                            <label for="texts">Texts</label>
+                          </div>
+                        </div>
+
+                        <div class="col-xl-4">
+                          <!-- emails -->
+                          <div class="md-form">
+                            <input type="number" id="emails" class="form-control">
+                            <label for="emails">Emails</label>
+                          </div>
+                        </div>
+
+                      </div>
+                      <!-- first row -->
+
+                      <div class="row"> 
+                        <!-- col -->
+                        <div class="col-xl-4">
+                          <div class="singleSection">
+                            <!-- appointment -->  
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="appointmentScheduler">
+                                <label class="form-check-label" for="appointmentScheduler">Appointment Scheduler</label>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xl-6">
+                                <!-- texts -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="texts" class="form-control">
+                                  <label for="texts">Texts</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <!-- emails -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="emails" class="form-control">
+                                  <label for="emails">Emails</label>
+                                </div>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                        </div>
+                        <!-- col -->
+
+                        <!-- col -->
+                        <div class="col-xl-4">
+                          <div class="singleSection">
+                            <!-- rms -->  
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="rms">
+                                <label class="form-check-label" for="rms">RMS</label>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xl-6">
+                                <!-- texts -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="texts" class="form-control">
+                                  <label for="texts">Texts</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <!-- emails -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="emails" class="form-control">
+                                  <label for="emails">Emails</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- col -->
+
+
+                        <!-- col -->
+                        <div class="col-xl-4">
+                          <div class="singleSection">
+                            <!-- webdevForms -->  
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="webdevForms">
+                                <label class="form-check-label" for="webdevForms">WebDev Forms</label>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xl-6">
+                                <!-- texts -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="texts" class="form-control">
+                                  <label for="texts">Texts</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <!-- emails -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="emails" class="form-control">
+                                  <label for="emails">Emails</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- col -->
+
+
+                        <!-- col -->
+                        <div class="col-xl-4">
+                          <div class="singleSection">
+                            <!-- Surveys -->  
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="Surveys">
+                                <label class="form-check-label" for="Surveys">Surveys</label>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xl-6">
+                                <!-- texts -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="texts" class="form-control">
+                                  <label for="texts">Texts</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <!-- emails -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="emails" class="form-control">
+                                  <label for="emails">Emails</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- col -->
+
+                        <!-- col -->
+                        <div class="col-xl-4">
+                          <div class="singleSection">
+                            <!-- communicationCenter -->  
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="communicationCenter">
+                                <label class="form-check-label" for="communicationCenter">Communication Center</label>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xl-6">
+                                <!-- texts -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="texts" class="form-control">
+                                  <label for="texts">Texts</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <!-- emails -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="emails" class="form-control">
+                                  <label for="emails">Emails</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- col -->
+
+                        <!-- col -->
+                        <div class="col-xl-4">
+                          <div class="singleSection">
+                            <!-- clock -->  
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="clock">
+                                <label class="form-check-label" for="clock">Clock-In/Out</label>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xl-6">
+                                <!-- texts -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="texts" class="form-control">
+                                  <label for="texts">Texts</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <!-- emails -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="emails" class="form-control">
+                                  <label for="emails">Emails</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- col -->
+
+                        <!-- col -->
+                        <div class="col-xl-4">
+                          <div class="singleSection">
+                            <!-- Payments -->  
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="Payments">
+                                <label class="form-check-label" for="Payments">Payments</label>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xl-6">
+                                <!-- texts -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="texts" class="form-control">
+                                  <label for="texts">Texts</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <!-- emails -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="emails" class="form-control">
+                                  <label for="emails">Emails</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- col -->
+
+                        <!-- col -->
+                        <div class="col-xl-4">
+                          <div class="singleSection">
+                            <!-- patientPortal -->  
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="patientPortal">
+                                <label class="form-check-label" for="patientPortal">Patient Portals</label>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xl-6">
+                                <!-- texts -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="texts" class="form-control">
+                                  <label for="texts">Texts</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <!-- emails -->
+                                <div class="md-form mt-0">
+                                  <input type="number" id="emails" class="form-control">
+                                  <label for="emails">Emails</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- col -->
+                      </div>
+
+
+                      <button type="button" class="btn btn-success"><i class="fas fa-plus pr-2"></i>Create</button>
+
+                    </div>
+                    <!-- card body -->
+                </div>
+                <!-- card -->
+            </main>
+            <!-- ================= Main Content ======================== -->
+
+            <!-- ============================= Footer starts here ======================= -->
+            <footer class="page-footer font-small blue fixed-bottom">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                  <a href="#"> Review That Place.com</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+            <!-- ============================= Footer Ends here ======================= -->
+          
+        </div>
+        <!-- ================= Page Content ======================== -->
+    </div>
+    <!-- ================= Ends here ======================== -->
+
+    
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../js/mdb.min.js"></script>
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/tableScript.js"></script>
+</body>
+
+</html>

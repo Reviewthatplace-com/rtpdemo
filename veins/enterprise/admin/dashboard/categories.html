@@ -1,0 +1,631 @@
+	
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Veins - Patient Portal</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/table.css">
+
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/datatables.min.css">
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="img/logo.png" class="img-fluid" id="logo">
+                <span>Admin Panel</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                 <li>
+                    <a href="#practices" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-clinic-medical nav-icon"></i>
+                        <span>Practices</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practices">
+                        <li>
+                            <a href="practices/claimed.html"><i class="fas fa-check"></i>Claimed</a>
+                        </li>
+                        <li>
+                            <a href="practices/unclaimed.html"><i class="fas fa-times"></i>Unclaimed</a>
+                        </li>
+                        <li>
+                            <a href="practices/addRequest.html"><i class="fas fa-user-plus"></i>Request To Add</a>
+                        </li>
+                        <li>
+                            <a href="practices/claimAccess.html"><i class="fas fa-user-lock"></i>Claim Access</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#billing" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-money-bill nav-icon"></i>
+                        <span>Billing</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="billing">
+                        <li>
+                            <a href="billing/create.html"><i class="fas fa-plus"></i>Create</a>
+                        </li>
+                        <li>
+                            <a href="billing/active.html"><i class="fas fa-check-double"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="billing/inactive.html"><i class="far fa-times-circle"></i>Inactive</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="active">
+                    <a href="categories.html">
+                        <i class="fa fa-list nav-icon"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+
+
+                <li>
+
+                    <a href="#rms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-search-location nav-icon"></i>
+                        <span>RMS</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="rms">
+                        <li>
+                            <a href="rms/reviews.html"><i class="fas fa-search"></i>Reviews</a>
+                        </li>
+                        <li>
+                            <a href="rms/practices.html"><i class="fas fa-hospital-alt"></i>Practices</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#insurance" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-shield-alt nav-icon"></i>
+                        <span>Insurance</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="insurance">
+                        <li>
+                            <a href="insurances/active.html"><i class="fas fa-user-shield"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="insurances/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                
+
+                <li>
+                    <a href="#practiceUser" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-user-check nav-icon"></i>
+                        <span>Practice User</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practiceUser">
+                        <li>
+                            <a href="practiceUser/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="practiceUser/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#patientPortal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-stethoscope nav-icon"></i>
+                        <span>Patient Portal</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="patientPortal">
+                        <li>
+                            <a href="patientPortal/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="patientPortal/pending.html"><i class="fas fa-user-edit"></i>Pending</a>
+                        </li>
+                        <li>
+                            <a href="patientPortal/notStarted.html"><i class="fas fa-user-times"></i>Not Started</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="userType.html">
+                        <i class="fa fa-users nav-icon"></i>
+                        <span >User Type</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reports.html">
+                        <i class="fa fa-file nav-icon"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-default">
+                        <i class="fas fa-align-left"></i>
+                        <!-- <span>Toggle Sidebar</span> -->
+                    </button>
+                    
+                    <h3 class="h3-responsive pageTitle">Categories</h3>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                          
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </nav>
+
+
+            <!-- ================= main content ================== -->
+            <main> 
+                <div class="text-right">
+                  <button class="btn btn-success" data-toggle="modal" data-target="#createPopup"><i class="fas fa-plus pr-3"></i>Create New</button>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-sm datatables table-bordered">
+                              <thead class="thead-dark">
+                                <tr>
+                                  <th scope="col">Category Image</th>
+                                  <th scope="col">CATID</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Practices</th>
+                                  <th scope="col">Edit</th>
+                                  <th scope="col">Delete</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <img src="img/cat/Pediatrics.png" class="img-fluid catImg">
+                                  </td>
+                                  <td>CAT123</td>
+                                  <td>Pediatrics</td>
+                                  <td>
+                                    <a class="btn-floating btn-primary" data-toggle="modal" data-target="#viewPracticesPopup"><i class="far fa-eye"></i></a>
+                                  </td>
+
+                                  <td>
+                                    <a class="btn-floating btn-info" data-toggle="modal" data-target="#editPopup"><i class="fas fa-edit"></i></a>
+                                  </td>
+
+                                  <td>
+                                    <a class="btn-floating btn-danger" data-toggle="modal" data-target="#deletePopup"><i class="fas fa-trash"></i></a>
+                                  </td>
+                                </tr>
+
+
+                               
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- ================= main content ================== -->
+
+            <!-- ============================= Footer starts here ======================= -->
+            <footer class="page-footer font-small blue fixed-bottom">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                  <a href="#"> Review That Place.com</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+            <!-- ============================= Footer Ends here ======================= -->
+          
+        </div>
+    </div>
+
+    <!-- ============================= practices view modal ======================= -->
+    <div class="modal fade" id="viewPracticesPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Practice Associated</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table selectTables table-sm table-bordered table-hover">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">RTPID</th>
+                          <th scope="col">Practice Name</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Phone Number</th>
+                          <th scope="col">Fax</th>
+                          <th scope="col">Street</th>
+                          <th scope="col">City</th>
+                          <th scope="col">State</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+
+                         
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#viewAllPractice">View All</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= practices view modal ======================= -->
+
+
+    <!-- ============================= practices view all modal ======================= -->
+    <div class="modal fade" id="viewAllPractice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">All Practice Associated</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table selectTables table-sm table-bordered table-hover">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">RTPID</th>
+                          <th scope="col">Practice Name</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Phone Number</th>
+                          <th scope="col">Fax</th>
+                          <th scope="col">Street</th>
+                          <th scope="col">City</th>
+                          <th scope="col">State</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+
+                         <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>RTP234</td>
+                          <td>Powers Pediatrics</td>
+                          <td>ravi@reviewthatplace.com</td>
+                          <td>987217202</td>
+                          <td>987217202</td>
+                          <td>Rose Eve</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                        </tr>
+                          
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addNewViewallPractice">Add</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= practices all view modal ======================= -->
+
+
+    <!-- ============================= add new view all practice modal ======================= -->
+    <div class="modal fade" id="addNewViewallPractice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Adding?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <p>Are you sure want to add all selected practices?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= add new view all practice modal ======================= -->
+
+
+
+    <!-- ============================= Edit modal ======================= -->
+    <div class="modal fade" id="editPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFile">
+                  <label class="custom-file-label" for="customFile">Category Img</label>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label for="catId">Cat ID</label>
+                  <input type="text" class="form-control" id="catId" value="1" disabled>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label for="catName">Cat Name</label>
+                  <input type="text" class="form-control" id="catName" value="Pediatrics">
+                </div>
+
+
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= Edit modal ======================= -->
+
+
+    <!-- ============================= create new modal ======================= -->
+    <div class="modal fade" id="createPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create New</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFile">
+                  <label class="custom-file-label" for="customFile">Category Img</label>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label for="catName">Cat Name</label>
+                  <input type="text" class="form-control" id="catName">
+                </div>
+
+
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Create</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= create new modal ======================= -->
+
+
+    <!-- ============================= delete modal ======================= -->
+    <div class="modal fade" id="deletePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-danger modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Deleting?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <p>Are you Sure want to delete this?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= delete modal ======================= -->
+    
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- sidebar JS -->
+    <script src="js/sidebar.js"></script>
+    <script src="js/datatables.min.js"></script>
+    <script src="js/tableScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>AUTHORIZED PRACTICES</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/datatables.min.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/rating.css">
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+</head>
+
+<!-- ====================== body starts here ====================== -->
+<body>
+    <!-- ============================= Page Starts here ======================= -->
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/logo.png" class="img-fluid" id="logo">
+                <span>Patient Portal</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#mypractices" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-home nav-icon"></i>
+                        <span>My Practices</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="mypractices">
+                        <li class="active">
+                            <a href="../mypractices/practiceAuthorized.html"><i class="fas fa-search-location"></i>Authorized Practices</a>
+                        </li>
+                        
+                        <li>
+                            <a href="../mypractices/appointmentRequest.html"><i class="far fa-calendar-plus"></i>Request Appointment</a>
+                        </li>
+
+                        <li>
+                            <a href="../mypractices/appointmentUpcoming.html"><i class="far fa-calendar-check"></i>Upcoming Appointment</a>
+                        </li>
+
+                        <li>
+                            <a href="../mypractices/myReviews.html"><i class="fas fa-star"></i>My Reviews</a>
+                        </li>
+
+                        <li>
+                            <a href="../mypractices/surveys.html"><i class="fas fa-poll"></i>Surveys</a>
+                        </li>
+
+                        <li>
+                            <a href="../mypractices/visitHistory.html"><i class="fas fa-business-time"></i>Visit History</a>
+                        </li>
+                        
+                        <li>
+                            <a href="../mypractices/communicationCenter.html"><i class="fas fa-comment"></i>Communication Center</a>
+                        </li>
+
+                        <li>
+                            <a href="#mypractice-payments" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Payments</span>
+                            </a>
+                            <ul class="collapse list-unstyled" id="mypractice-payments">
+                                <li>
+                                    <a href="../mypractices/payments/paymentRequests.html"><i class="fas fa-money-bill"></i>Payment Requests</a>
+                                </li>
+                                <li>
+                                    <a href="../mypractices/payments/paymentCompleted.html"><i class="far fa-credit-card"></i>Payments Completed</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy nav-icon"></i>
+                        <span>My Records</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="../myRecords/recordsRequest.html"><i class="fas fa-folder-plus"></i>Request Records</a>
+                        </li>
+                        <li>
+                            <a href="../myRecords/recordsSend.html"><i class="fas fa-share-square"></i>Send Records</a>
+                        </li>
+                        <li>
+                            <a href="../myRecords/recordsPending.html"><i class="far fa-folder-open"></i>Pending Records</a>
+                        </li>
+                        <li>
+                            <a href="../myRecords/recordsAll.html"><i class="far fa-folder"></i>All Records</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../demographics.html" class="active">
+                        <i class="fas fa-info-circle nav-icon"></i>
+                        <span >Demographics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../accessRequest.html">
+                        <i class="fa fa-lock nav-icon"></i>
+                        <span>Access Request</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../login/patientportal.html">
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!-- ============================= navbar  ======================= -->
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid white">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+
+                    
+
+                    <h3 class="h3-responsive pageTitle">AUTHORIZED PRACTICES</h3>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html"><i class="fas fa-home"></i>Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../myRecords/recordsRequest.html"><i class="fas fa-folder-plus"></i>Request Records</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../myRecords/recordsSend.html"><i class="fas fa-share-square"></i>Send Records</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../myRecords/recordsSend.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                </div>
+            </nav>
+            <!-- ============================= navbar  ======================= -->
+
+
+            <!-- ============================= main content starts here ======================= -->
+            <main>
+              <div class="text-right">
+                  <button class="btn btn-success" data-target="#addPractice" data-toggle="modal"><i class="fas fa-plus pr-3"></i>Add Practice</button>
+              </div>
+              <div class="card">
+                  <div class="card-body">
+                      <div class="table-responsive-xl">
+                          <table class="table table-hover table-sm table-bordered datatables">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Pracitce Name</th>
+                                <th scope="col">Phone</th>     
+                                <th scope="col">Email</th>     
+                                <th scope="col">Address</th>     
+                                <th scope="col">Sent By</th>     
+                                <th scope="col">Approved Date</th>     
+                                <th scope="col">Revoke Access</th>     
+                                <th scope="col">Send Message</th>     
+                                <th scope="col">Leave A Review</th>     
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Powers Pediatrics</td>
+                                <td>(123) 456-7890</td>
+                                <td>info@powerspediatrics.com</td>
+                                <td>Ornaldo</td>
+                                <td>Ravi</td>
+                                <td>01/02/2019</td>
+                                <td>
+                                    <a class="btn-floating btn-danger" data-toggle="modal" data-placement="top" title="Revoke Access" data-target="#revokePopup"><i class="fas fa-user-minus"></i></a>
+                                </td>
+                                <td>
+                                  <a class="btn-floating btn-success" href="communicationCenter.html" title="Chat Now"><i class="far fa-comment-dots"></i></a>
+                                </td>
+                                <td>
+                                  <a class="btn-floating btn-primary" data-toggle="modal"  title="Chat Now" data-target="#leaveReview"><i class="fas fa-comments"></i></a>
+                                </td>
+                              </tr>
+
+                              
+
+                              
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+
+            </main>
+            <!-- ============================= main content starts here ======================= -->
+
+            <!-- ============================= Footer starts here ======================= -->
+            <footer class="page-footer font-small blue fixed-bottom">
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                  <a href="#"> Review That Place.com</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <!-- ============================= Footer Ends here ======================= -->
+            
+        </div>
+    </div>
+    <!-- ============================= Page Content ends here ======================= -->
+
+
+
+    <!-- ============================= add practice modal ======================= -->
+    <div class="modal fade" id="addPractice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Practice</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="text-right mb-2">
+              
+            </div>
+            
+            <div class="table-responsive">
+              <table class="table table-hover table-bordered selectTables" id="example">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">RTPID</th>
+                    <th scope="col">Pracitce Name</th>
+                    <th scope="col">Category</th>     
+                    <th scope="col">Street</th>     
+                    <th scope="col">City</th>     
+                    <th scope="col">State</th>     
+                    <th scope="col">Zip</th>     
+                    <th scope="col">Phone</th>     
+                    <th scope="col">Rating</th>     
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>RTP1234</td>
+                    <td>Powers Pediatrics</td>
+                    <td>Pediatrics</td>
+                    <td>Rose Eve 78202</td>
+                    <td>Ornaldo</td>
+                    <td>FL</td>
+                    <td>1233-21892</td>
+                    <td>(123) 331-2192</td>
+                    <td>4.5/5</td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>RTP1234</td>
+                    <td>Powers Pediatrics</td>
+                    <td>Pediatrics</td>
+                    <td>Rose Eve 78202</td>
+                    <td>Ornaldo</td>
+                    <td>FL</td>
+                    <td>1233-21892</td>
+                    <td>(123) 331-2192</td>
+                    <td>4.5/5</td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>RTP1234</td>
+                    <td>Powers Pediatrics</td>
+                    <td>Pediatrics</td>
+                    <td>Rose Eve 78202</td>
+                    <td>Ornaldo</td>
+                    <td>FL</td>
+                    <td>1233-21892</td>
+                    <td>(123) 331-2192</td>
+                    <td>4.5/5</td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>RTP1234</td>
+                    <td>Powers Pediatrics</td>
+                    <td>Pediatrics</td>
+                    <td>Rose Eve 78202</td>
+                    <td>Ornaldo</td>
+                    <td>FL</td>
+                    <td>1233-21892</td>
+                    <td>(123) 331-2192</td>
+                    <td>4.5/5</td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>RTP1234</td>
+                    <td>Powers Pediatrics</td>
+                    <td>Pediatrics</td>
+                    <td>Rose Eve 78202</td>
+                    <td>Ornaldo</td>
+                    <td>FL</td>
+                    <td>1233-21892</td>
+                    <td>(123) 331-2192</td>
+                    <td>4.5/5</td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>RTP1234</td>
+                    <td>Powers Pediatrics</td>
+                    <td>Pediatrics</td>
+                    <td>Rose Eve 78202</td>
+                    <td>Ornaldo</td>
+                    <td>FL</td>
+                    <td>1233-21892</td>
+                    <td>(123) 331-2192</td>
+                    <td>4.5/5</td>
+                  </tr>
+
+
+                  <tr>
+                    <td></td>
+                    <td>RTP1234</td>
+                    <td>Powers Pediatrics</td>
+                    <td>Pediatrics</td>
+                    <td>Rose Eve 78202</td>
+                    <td>Ornaldo</td>
+                    <td>FL</td>
+                    <td>1233-21892</td>
+                    <td>(123) 331-2192</td>
+                    <td>4.5/5</td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>RTP1234</td>
+                    <td>Powers Pediatrics</td>
+                    <td>Pediatrics</td>
+                    <td>Rose Eve 78202</td>
+                    <td>Ornaldo</td>
+                    <td>FL</td>
+                    <td>1233-21892</td>
+                    <td>(123) 331-2192</td>
+                    <td>4.5/5</td>
+                  </tr>
+
+                 
+
+                  
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" data-target="#giveAuth" data-toggle="modal">Give Authorization</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= add practice modal ======================= -->
+
+
+    <!-- ============================= auth confirm  modal ======================= -->
+    <div class="modal fade" id="giveAuth" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Giving Authorization</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Are You sure want to authorized these practices?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= auth confirm  modal ======================= -->
+
+
+    <!-- ============================= revoke modal ======================= -->
+    <div class="modal fade" id="revokePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-danger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Revoke</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>This Can Not Be Undone.Are you sure want to revoke the access?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+            <button type="button" class="btn btn-success">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= revoke modal ======================= -->
+
+
+    <!-- ============================= revoke modal ======================= -->
+    <div class="modal fade" id="leaveReview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-primary" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Leave Your Review</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+                <label>Leave review for</label>
+                <select class="form-control">
+                    <option selected="" disabled="">Choose Practice</option>
+                    <option>Powers Pediatrics</option>
+                    <option>Woimedicine</option>
+                </select>
+
+                
+
+                <div class="md-form md-outline">
+                  <textarea id="message" class="md-textarea form-control" rows="3"></textarea>
+                  <label for="message">Submit Review</label>
+                </div>
+
+                <div class="rate">
+                  <input type="radio" id="star5" name="rate" value="5" />
+                  <label for="star5" title="text">5 stars</label>
+                  <input type="radio" id="star4" name="rate" value="4" />
+                  <label for="star4" title="text">4 stars</label>
+                  <input type="radio" id="star3" name="rate" value="3" />
+                  <label for="star3" title="text">3 stars</label>
+                  <input type="radio" id="star2" name="rate" value="2" />
+                  <label for="star2" title="text">2 stars</label>
+                  <input type="radio" id="star1" name="rate" value="1" />
+                  <label for="star1" title="text">1 star</label>
+                </div>    
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Submit</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= revoke modal ======================= -->
+
+
+    
+
+
+    <!-- ============================= Script Files ======================= -->
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- sidebar JS -->
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/mdb.min.js"></script>
+    <script src="../js/tableScript.js"></script>
+    <!-- ============================= Script Files ======================= -->
+    <script type="text/javascript">
+        /* datepicker */
+        $( function() 
+        {
+            $( ".datepicker" ).datepicker();
+        } );
+    </script>
+</body>
+
+</html>

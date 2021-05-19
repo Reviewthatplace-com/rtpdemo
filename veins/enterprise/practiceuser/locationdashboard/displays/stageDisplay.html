@@ -1,0 +1,3922 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Practice user - location dashboard</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <link rel="stylesheet" href="../css/datatables.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <style type="text/css">
+        .singleEvent
+        {
+            margin-bottom: 15px;
+        }
+        .singleEvent h4
+        {
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!--================================= page Starts here ======================= -->
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/logo.png" class="img-fluid" id="logo">
+                <span>Dashboard</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+
+                    <a href="#clock-in-out" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-clock nav-icon"></i>
+                        <span>Clock in/out</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="clock-in-out">
+                        <li>
+                            <a href="../clock/timeSheets.html" class="waves-effect">
+                                <i class="fas fa-business-time"></i>Time Sheets
+                            </a>
+                        </li>
+                        <li>
+                          <a href="../clock/punch.html" class="waves-effect"><i class="fas fa-clock"></i>Punch</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../checkin.html" class="waves-effect">
+                        <i class="fas fa-map-marker-alt nav-icon"></i>
+                        <span>Veins Check In</span>
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="#displays" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-tv nav-icon"></i>
+                        <span>Displays</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="displays">
+                        <li class="active">
+                          <a href="../displays/stageDisplay.html" class="waves-effect"><i class="far fa-user-circle nav-sub-icon"></i>Stage Display</a>
+                        </li>
+                        <li>
+                          <a href="../displays/lobbyDisplay.html" class="waves-effect"><i class="fas fa-user-circle nav-sub-icon"></i>Lobby Display</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#payments" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="far fa-credit-card nav-icon"></i>
+                        <span>Payments</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="payments">
+                        <li>
+                          <a href="../payments/paymentrequests.html" class="waves-effect"><i class="fas fa-money-bill nav-sub-icon"></i>Payment Requests</a>
+                        </li>
+                        <li>
+                          <a href="../payments/paymentpaid.html" class="waves-effect"><i class="far fa-credit-card nav-sub-icon"></i>Payment Paid</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#appointmentScheduler" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="far fa-calendar-check nav-icon"></i>
+                        <span>Appointment Scheduler</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="appointmentScheduler">
+                        <li>
+                          <a href="../appointmentScheduler/availability.html" class="waves-effect"><i class="far fa-calendar-plus nav-sub-icon"></i>Availability</a>
+                        </li>
+                        <li>
+                          <a href="../appointmentScheduler/requestedAppointments.html" class="waves-effect"><i class="fab fa-wpforms nav-sub-icon"></i>Requested Appointments</a>
+                        </li>
+                        <li>
+                          <a href="../appointmentScheduler/appointmentCalender.html" class="waves-effect"><i class="fas fa-calendar-alt nav-sub-icon"></i>Appointment Calender</a>
+                        </li>
+                        <li>
+                          <a href="../appointmentScheduler/upcomingAppointments.html" class="waves-effect"><i class="far fa-calendar-alt nav-sub-icon"></i>Upcoming Appointments</a>
+                        </li>
+                    </ul>
+                </li>
+
+                 <li>
+                    <a href="#rms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-search nav-icon"></i>
+                        <span>RMS</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="rms">
+                        <li>
+                          <a href="../rms/widget.html" class="waves-effect"><i class="fas fa-link"></i>Widget</a>
+                        </li>
+                        <li>
+                          <a href="../rms/review.html" class="waves-effect"><i class="fas fa-star"></i>Reviews</a>
+                        </li>
+                        <li>
+                          <a href="../rms/reviewSummary.html" class="waves-effect"><i class="fas fa-list-ul"></i>Review Summary</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#webdevForm" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fab fa-wpforms nav-icon"></i>
+                        <span>WebDev Forms</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="webdevForm">
+                        <li>
+                          <a href="../webdevForms/requestForms.html" class="waves-effect"><i class="fab fa-wpforms nav-sub-icon"></i>Request Forms</a>
+                        </li>
+                        <li>
+                          <a href="../webdevForms/submitDemo.html" class="waves-effect"><i class="fas fa-laptop nav-sub-icon"></i>Submit Demo</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#surveys" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-poll nav-icon"></i>
+                        <span>Surveys</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="surveys">
+                        <li>
+                          <a href="../surveys/active.html" class="waves-effect"><i class="fas fa-poll"></i>Active</a>
+                        </li>
+                        <li>
+                          <a href="../surveys/inactive.html" class="waves-effect"><i class="fas fa-poll"></i>Inactive</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#communicationCenter" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="far fa-comment-alt nav-icon"></i>
+                        <span>Communication Center</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="communicationCenter">
+                        <li>
+                          <a href="../communicationCenter/emails.html" class="waves-effect"><i class="far fa-envelope nav-sub-icon"></i>Emails</a>
+                        </li>
+                        <li>
+                          <a href="../communicationCenter/texts.html" class="waves-effect"><i class="fas fa-sms nav-sub-icon"></i>Texts</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                
+                <li>
+                    <a href="../patientPortals/patientPortals.html">
+                        <i class="fas fa-clinic-medical nav-icon"></i>
+                        <span>Patient Portals</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#reports" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="far fa-file-alt nav-icon"></i>
+                        <span>Reports</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="reports">
+                        <li>
+                          <a href="../reports/statisticReports.html" class="waves-effect"><i class="fas fa-chart-line"></i>Statistic Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/waitTimeReports.html" class="waves-effect"><i class="fas fa-pause"></i>Wait Time Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/advancedWaitTime.html" class="waves-effect"><i class="fas fa-pause"></i>Advanced Wait Time Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/dailyReports.html" class="waves-effect"><i class="fas fa-tasks"></i>Daily Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/stepReports.html" class="waves-effect"><i class="fas fa-chart-line"></i>Step Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/physicianReports.html" class="waves-effect"><i class="fas fa-user-md"></i>Physician Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/staffReports.html" class="waves-effect"><i class="fas fa-user-nurse"></i>Staff Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/paymentReports.html" class="waves-effect"><i class="fas fa-money-bill"></i>Payment Reports</a>
+                        </li>
+                        <li>
+                          <a href="../reports/checkoutReports.html" class="waves-effect"><i class="fas fa-shopping-cart"></i>Checkout Reports</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#system" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-cogs nav-sub-icon"></i>
+                        <span>System</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="system">
+                        <li>
+                          <a href="../system/demographics.html" class="waves-effect"><i class="fas fa-info-circle"></i>Demographics</a>
+                        </li>
+
+                        <li>
+                          <a href="../system/personalSetting.html" class="waves-effect"><i class="fas fa-cog"></i>Personal Settings</a>
+                        </li>
+
+                        <!-- =========== Display Option ============ -->
+                        <li>
+                            <a href="#displayOption" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-tv nav-sub-icon"></i>Display Option</a>
+
+                            <ul class="collapse list-unstyled" id="displayOption">
+                              <li>
+                                <a href="../system/displayOption/stageAndStep.html" class="waves-effect"><i class="fas fa-chart-line"></i>Stage And Step</a>
+                              </li>
+                              <li>
+                                <a href="../system/displayOption/reasons.html" class="waves-effect"><i class="fas fa-question-circle"></i>Reasons</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== Display Option ============ -->
+
+                        <!-- =========== Clock In/Out ============ -->
+                        <li>
+                            <a href="#system-clockin-out" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="far fa-clock nav-sub-icon"></i>Clock In/Out</a>
+
+                            <ul class="collapse list-unstyled" id="system-clockin-out">
+                              <li>
+                                <a href="../system/clock/ptosetting.html" class="waves-effect"><i class="fas fa-plane"></i>PTO Settings</a>
+                              </li>
+                              <li>
+                                <a href="../system/clock/activeusers.html" class="waves-effect"><i class="fas fa-user-check"></i>Active Users</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== Clock In/Out ============ -->
+
+
+                        <!-- =========== Users ============ -->
+                        <li>
+                            <a href="#users" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users-cog nav-sub-icon"></i>Users</a>
+
+                            <ul class="collapse list-unstyled" id="users">
+                              <li>
+                                <a href="../system/users/authorizedUsers.html" class="waves-effect"><i class="fas fa-user-check nav-sub-icon"></i>Authorized Users</a>
+                              </li>
+                              <li>
+                                <a href="../system/users/pendingRequest.html" class="waves-effect"><i class="fas fa-user-edit"></i>Pending Request</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== Users ============ -->
+
+                        <!-- =========== Security Profiles ============ -->
+                        <li>
+                            <a href="#security-profiles" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-user-lock nav-sub-icon"></i>Security Profiles</a>
+
+                            <ul class="collapse list-unstyled" id="security-profiles">
+                              <li>
+                                <a href="../system/securityProfiles/createSP.html" class="waves-effect"><i class="fas fa-user-lock"></i>Create</a>
+                              </li>
+                              <li>
+                                <a href="../system/securityProfiles/activeSP.html" class="waves-effect"><i class="fas fa-lock-open"></i>Active</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== Security Profiles ============ -->
+
+                        <!-- =========== Appointments ============ -->
+                        <li>
+                            <a href="#system-appointments" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-calendar-check nav-sub-icon"></i>Appointments</a>
+
+                            <ul class="collapse list-unstyled" id="system-appointments">
+                              <li>
+                                <a href="../system/appointments/templates.html" class="waves-effect"><i class="fab fa-wpforms"></i>Website Form</a>
+                              </li>
+                              <li>
+                                <a href="../system/appointments/appointmentReminders.html" class="waves-effect"><i class="far fa-bell"></i>Reminders</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== Appointments ============ -->
+
+                        <li>
+                          <a href="../system/communicationCenter.html" class="waves-effect"><i class="far fa-comments"></i>Communication Center</a>
+                        </li>
+
+                        <li>
+                          <a href="system/rms.html" class="waves-effect"><i class="fas fa-search-location"></i>RMS</a>
+                        </li>
+
+                        <!-- =========== webdev forms ============ -->
+                        <li>
+                            <a href="#system-webdev-form" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fab fa-wpforms nav-sub-icon"></i>Webdev Form</a>
+
+                            <ul class="collapse list-unstyled" id="system-webdev-form">
+                              <li>
+                                <a href="../system/webdevForm/createWebdev.html" class="waves-effect"><i class="fas fa-plus"></i>Create</a>
+                              </li>
+                              <li>
+                                <a href="../system/webdevForm/activeWebdev.html" class="waves-effect"><i class="fab fa-wpforms"></i>Active</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== webdev forms ============ -->
+
+                        <!-- =========== surveys ============ -->
+                        <li>
+                            <a href="#system-surveys" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-poll nav-sub-icon"></i>Surveys</a>
+
+                            <ul class="collapse list-unstyled" id="system-surveys">
+                              <li>
+                                <a href="../system/webdevForm/createWebdev.html" class="waves-effect"><i class="fas fa-plus"></i>Create</a>
+                              </li>
+                              <li>
+                                <a href="../system/webdevForm/activeWebdev.html" class="waves-effect"><i class="fas fa-poll-h"></i>Active</a>
+                              </li>
+                            </ul>
+
+                        </li>
+                        <!-- =========== surveys ============ -->
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../../login/practiceUser.html" class="waves-effect"><i class="fas fa-sign-out-alt nav-icon"></i>Logout</a>
+                </li>
+
+
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    
+                    <h3 class="h3-responsive pageTitle">Stage Display</h3>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Navbar links -->
+                        <ul class="nav navbar-nav nav-flex-icons ml-auto">
+
+                          <li class="nav-item">
+                            <a href="../../dashboard/index.html" class="nav-link btn btn-outline-info btn-sm">
+                              <i class="fas fa-arrow-left"></i>Back To My Dashboard
+                            </a>
+                          </li>
+
+                          <!-- Dropdown -->
+                          <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="badge red">4</span> <i class="fas fa-search-location"></i>
+                              <span class="d-none d-md-inline-block dropdownText">My Practices</span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-primary" id="myPractice" aria-labelledby="navbarDropdownMenuLink">
+                              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                              <a class="dropdown-item" href="../index.html">
+                                <span>Power Pediatrics</span><br>
+                                <small><i class="fas fa-map-marker-alt pr-2"></i>Ornaldo, Florida</small><br>
+                                <small><i class="fas fa-phone pr-2"></i>407-286-2965</small>
+                                <small>| RTP8712</small>
+                              </a>
+                              
+                            </div>
+                          </li>
+
+
+                          <!-- Dropdown -->
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="badge red">2</span> <i class="fas fa-bell"></i>
+                              <span class="d-none d-md-inline-block dropdownText">Notifications</span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-primary" id="notification" aria-labelledby="navbarDropdownMenuLink">
+                              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+
+                              <a class="dropdown-item" href="#">
+                                <i class="far fa-money-bill-alt mr-2" aria-hidden="true"></i>
+                                <span>New order received</span>
+                                <span class="float-right"><i class="far fa-clock" aria-hidden="true"></i> 13 min</span>
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="far fa-money-bill-alt mr-2" aria-hidden="true"></i>
+                                <span>New order received</span>
+                                <span class="float-right"><i class="far fa-clock" aria-hidden="true"></i> 33 min</span>
+                              </a>
+                            </div>
+                          </li>
+
+                          
+                          <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>
+
+                            <span class="dropdownText">Profile</span>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">
+
+                              <span>Clocked In</span>
+                              <span class="float-right"><i class="far fa-clock pr-2"></i>12/25/19 - 2:45 PM</span>
+                            </a>
+                            <a class="dropdown-item" href="../system/personalsetting.html"><i class="fas fa-pencil-alt"></i> Edit Profile</a>
+                            <a class="dropdown-item" href="http://veinspracticesolution.com/login/practiceuser.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                          </div>
+                        </li>
+
+                        <li>
+                          <a class="nav-link btn btn-outline-info btn-sm" data-target="#checkin" data-toggle="modal">
+                            Checkin
+                          </a>
+                        </li>
+
+                      </ul>
+                      <!-- Navbar links -->
+                    </div>
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </nav>
+
+
+            <main>
+              <div class="container-fluid">
+                <!-- Top Table UI -->
+                <div class="card mb-2">
+                    <div class="card-body py-1">
+                          <!-- Grid row -->
+                          <div class="row justify-content-center">
+                            <div class="col-xl-3 col-md-3 col-6 pt-1">
+                             <!--Data Range-->
+                             <select class="form-control" id="dataRange">
+                              <option value="1">Today</option>
+                              <option value="2">Yesterday</option>
+                              <option value="3">Last 7 Days</option>
+                              <option value="4">Last 30 Days</option>
+                              <option value="5">Uptil now</option>
+                              <option value="5">Custom</option>
+                            </select>
+                            <!--Custom Date-->
+                          </div>
+
+                          <div class="col-xl-3 col-md-3 col-6">
+                            <div class="md-form mt-0">
+                              <input placeholder="Start date" type="text" id="startingDate" class="form-control datepicker">
+                            </div>
+                          </div>
+
+                          <div class="col-xl-3 col-md-3 col-6">
+                            <div class="md-form mt-0">
+                              <input placeholder="End date" type="text" id="endingDate" class="form-control datepicker">
+                            </div>
+                          </div>
+
+                          <div class="col-xl-3 col-md-3 col-6">
+                            <button class="btn btn-info topBarButton">Apply</button>
+                          </div>
+                        </div>
+                        <!-- Grid row -->
+                    </div>
+                </div>
+                <!-- Top Table UI -->
+
+                <!-- Grid row -->
+                <div class="row">
+                  <!-- Grid column -->
+                  <div class="col-xl-12 my-3">
+                    <div class="classic-tabs">
+                      <!-- Nav tabs -->
+                      <div class="tabs-wrapper tabs-blue p-0">
+                        <div class="row">
+
+                          <div class="col-md-9">
+                            <ul class="nav tabsNav" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link waves-light active waves-effect waves-light" data-toggle="tab" href="#panel1"
+                                role="tab">office visit</a>
+                              </li>
+
+                              <li class="nav-item">
+                                <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="#panel2" role="tab">mgr</a>
+                              </li>
+
+                              <li class="nav-item">
+                                <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="#panel3" role="tab">superbill submitted</a>
+                              </li>
+
+                              <li class="nav-item">
+                                <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="#panel4" role="tab">payment received </a>
+                              </li>
+
+                              <li class="nav-item">
+                                <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="#panel5" role="tab">CheckOut</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div class="col-md-2">
+                           <!-- Search form -->
+                           <div class="md-form mt-1 px-3">
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search" id="searchBar">
+                          </div>  
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- Tab panels -->
+                    <div class="tab-content card p-0">
+                      <!-- Panel 1 -->
+                      <div class="tab-pane fade in show active " id="panel1" role="tabpanel">
+                        <div class="container-fluid p-0">
+                          <!-- Gird column -->
+                          <div class="row">
+                            <!-- col -->
+                            <div class="col-xl-12">
+                              <div class="table-responsive">
+                                <table id="d1" class="table table-sm table-striped text-center" id="d1" cellspacing="0" width="100%">
+                                  <thead class="grey white-text">
+                                    <tr>
+                                      <th class="th-sm">PT ID</th>
+                                      <th class="th-sm">Name & DOB</th>
+                                      <th class="th-sm">Resource ID</th>
+                                      <th class="th-sm">Category</th>
+                                      <th class="th-sm">Reason</th>
+                                      <th class="th-sm">DOS</th>
+                                      <th class="th-sm">1. Insurance</th>
+                                      <th class="th-sm">2. Demo</th>
+                                      <th class="th-sm">3. Pharmacy</th>
+                                      <th class="th-sm">4. Payments</th>
+                                      <th class="th-sm">5. vitals</th>
+                                      <th class="th-sm">Next Stage</th>
+                                    </tr>
+                                  </thead>
+
+                                  <tbody>
+                                   <tr>
+                                    <td>
+                                      <a class="btn-green btn btn-sm m-0 text-center white-text" data-toggle="modal" data-target="#ptId" data-backdrop="false">1</a>
+                                    </td>
+                                    <td>
+                                      <button class="btn peach-gradient m-0 btn-sm waves-effect waves-light text-nowrap" data-toggle="modal" data-target="#centralModalSuccessDemo" data-backdrop="false">Ravi Agrawal<br><strong>11/10/1998</strong></button>
+
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-info btn-sm m-0" data-toggle="modal" data-target="#Resources">Not Being Used</button>
+                                    </td>
+
+
+                                    <td>Walk In</td>
+                                    <td>Sick</td>
+                                    <td>6/9/2019</td>
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="insurance1">Insurance</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="insurance2"><span class="insuranceTime"></span> By MKunal</button>
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="demo1">Demo</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="demo2"><span class="demoTime"></span> By MKunal</button>
+                                    </td>
+
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="pharmacy1">Pharmacy</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="pharmacy2"><span class="output"></span> By MKunal</button>
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="payment1">Payment</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="payment2"><span class="output"></span> By MKunal</button>
+                                    </td>
+
+                                    <td>
+                                      <button onclick="getTime();" class="btn btn-sm btn-outline-info m-0" id="vitals1">Vitals </button>
+                                      <button onclick="getTime();" style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="vitals2"><span class="output"></span> By MKunal</button>
+                                    </td>
+
+
+                                    <td style="width: 300px;">
+
+                                      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                        <button type="button" class="btn btn-outline-info btn-sm m-0 text-nowrap">Next Stage</button>
+
+                                        <div class="dropdown dropleft">
+                                          <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary btn-sm text-nowrap" data-target="#" href="/page.html">
+                                            Jump To <span class="caret"></span>
+                                          </a>
+
+                                          <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                            <li class="dropdown-submenu">
+                                              <a tabindex="-1" href="#" class="drop-left">Office Visit</a>
+                                              <ul class="dropdown-menu">
+                                                <li><a tabindex="-1" href="#">Insurance</a></li>
+                                                <li><a href="#">Demo</a></li>
+                                                <li><a href="#">Pharmacy</a></li>
+                                              </ul>
+                                            </li>
+
+                                            <li class="dropdown-submenu">
+                                              <a tabindex="-1" href="#" class="drop-left">MGR</a>
+                                              <ul class="dropdown-menu">
+                                               <li><a tabindex="-1" href="#">Insurance</a></li>
+                                               <li><a href="#">Demo</a></li>
+                                               <li><a href="#">Pharmacy</a></li>
+                                             </ul>
+                                           </li>
+                                         </ul>
+                                       </div>
+
+                                     </td>
+
+                                   </tr>
+
+
+
+
+
+
+                                   <tr>
+                                    <td>
+                                      <a class="btn-red btn btn-sm m-0 text-center white-text" data-toggle="modal" data-target="#ptId" data-backdrop="false">1</a>
+                                    </td>
+                                    <td>
+                                      <button class="btn peach-gradient m-0 btn-sm waves-effect waves-light text-nowrap" data-toggle="modal" data-target="#centralModalSuccessDemo" data-backdrop="false">Ravi Agrawal<br><strong>11/10/1998</strong></button>
+
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-info btn-sm m-0" data-toggle="modal" data-target="#Resources">Resources</button>
+                                    </td>
+                                    <td>Walk In</td>
+                                    <td>Sick</td>
+                                    <td>6/9/2019</td>
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="insurance1">Insurance</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="insurance2"><span class="output"></span> PM By MKunal</button>
+
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="demo1">Demo</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="demo2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="pharmacy1">Pharmacy</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="pharmacy2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="payment1">Payment</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="payment2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="vitals1">Vitals </button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="vitals2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+
+                                    <td style="width: 300px;">
+
+                                      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                        <button type="button" class="btn btn-outline-info btn-sm m-0 text-nowrap">Next Stage</button>
+
+                                        <div class="dropdown dropleft">
+                                          <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary btn-sm text-nowrap" data-target="#" href="/page.html">
+                                            Jump To <span class="caret"></span>
+                                          </a>
+
+                                          <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                            <li class="dropdown-submenu">
+                                              <a tabindex="-1" href="#" class="drop-left">Office Visit</a>
+                                              <ul class="dropdown-menu">
+                                                <li><a tabindex="-1" href="#">Insurance</a></li>
+                                                <li><a href="#">Demo</a></li>
+                                                <li><a href="#">Pharmacy</a></li>
+                                              </ul>
+                                            </li>
+
+                                            <li class="dropdown-submenu">
+                                              <a tabindex="-1" href="#" class="drop-left">MGR</a>
+                                              <ul class="dropdown-menu">
+                                               <li><a tabindex="-1" href="#">Insurance</a></li>
+                                               <li><a href="#">Demo</a></li>
+                                               <li><a href="#">Pharmacy</a></li>
+                                             </ul>
+                                           </li>
+                                         </ul>
+                                       </div>
+
+                                     </td>
+
+                                   </tr>
+
+
+                                   <tr>
+                                    <td>
+                                      <a class="btn-blue btn btn-sm m-0 text-center white-text" data-toggle="modal" data-target="#ptId" data-backdrop="false">1</a>
+                                    </td>
+                                    <td>
+                                      <button class="btn peach-gradient m-0 btn-sm waves-effect waves-light text-nowrap" data-toggle="modal" data-target="#centralModalSuccessDemo" data-backdrop="false">Ravi Agrawal<br><strong>11/10/1998</strong></button>
+
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-info btn-sm m-0" data-toggle="modal" data-target="#Resources">Not Being Used</button>
+                                    </td>
+                                    <td>Walk In</td>
+                                    <td>Sick</td>
+                                    <td>6/9/2019</td>
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="insurance1">Insurance</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="insurance2">6/9/2018 2:11:15 PM By MKunal</button>
+
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="demo1">Demo</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="demo2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="pharmacy1">Pharmacy</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="pharmacy2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="payment1">Payment</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="payment2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="vitals1">Vitals </button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="vitals2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+
+                                    <td style="width: 300px;">
+
+                                      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                        <button type="button" class="btn btn-outline-info btn-sm m-0 text-nowrap">Next Stage</button>
+
+                                        <div class="dropdown dropleft">
+                                          <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary btn-sm text-nowrap" data-target="#" href="/page.html">
+                                            Jump To <span class="caret"></span>
+                                          </a>
+
+                                          <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                            <li class="dropdown-submenu">
+                                              <a tabindex="-1" href="#" class="drop-left">Office Visit</a>
+                                              <ul class="dropdown-menu">
+                                                <li><a tabindex="-1" href="#">Insurance</a></li>
+                                                <li><a href="#">Demo</a></li>
+                                                <li><a href="#">Pharmacy</a></li>
+                                              </ul>
+                                            </li>
+
+                                            <li class="dropdown-submenu">
+                                              <a tabindex="-1" href="#" class="drop-left">MGR</a>
+                                              <ul class="dropdown-menu">
+                                               <li><a tabindex="-1" href="#">Insurance</a></li>
+                                               <li><a href="#">Demo</a></li>
+                                               <li><a href="#">Pharmacy</a></li>
+                                             </ul>
+                                           </li>
+                                         </ul>
+                                       </div>
+
+                                     </td>
+
+                                   </tr>
+
+
+                                   <tr>
+                                    <td>
+                                      <a class="btn-yellow btn btn-sm m-0 text-center white-text" data-toggle="modal" data-target="#ptId" data-backdrop="false">1</a>
+                                    </td>
+                                    <td>
+                                      <button class="btn peach-gradient m-0 btn-sm waves-effect waves-light text-nowrap" data-toggle="modal" data-target="#centralModalSuccessDemo" data-backdrop="false">Ravi Agrawal<br><strong>11/10/1998</strong></button>
+
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-info btn-sm m-0" data-toggle="modal" data-target="#Resources">Not Being Used</button>
+                                    </td> 
+                                    <td>Walk In</td>
+                                    <td>Sick</td>
+                                    <td>6/9/2019</td>
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="insurance1">Insurance</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="insurance2">6/9/2018 2:11:15 PM By MKunal</button>
+
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="demo1">Demo</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="demo2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="pharmacy1">Pharmacy</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="pharmacy2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="payment1">Payment</button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="payment2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+                                    <td>
+                                      <button class="btn btn-sm btn-outline-info m-0" id="vitals1">Vitals </button>
+                                      <button style="display: none;" class="btn btn-sm btn-mdb-color m-0 p-0" id="vitals2">6/9/2018 2:11:15 PM By MKunal</button>
+                                    </td>
+
+
+                                    <td style="width: 300px;">
+
+                                      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                        <button type="button" class="btn btn-outline-info btn-sm m-0 text-nowrap">Next Stage</button>
+
+                                        <div class="dropdown dropleft">
+                                          <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary btn-sm text-nowrap" data-target="#" href="/page.html">
+                                            Jump To <span class="caret"></span>
+                                          </a>
+
+                                          <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                            <li class="dropdown-submenu">
+                                              <a tabindex="-1" href="#" class="drop-left">Office Visit</a>
+                                              <ul class="dropdown-menu">
+                                                <li><a tabindex="-1" href="#">Insurance</a></li>
+                                                <li><a href="#">Demo</a></li>
+                                                <li><a href="#">Pharmacy</a></li>
+                                              </ul>
+                                            </li>
+
+                                            <li class="dropdown-submenu">
+                                              <a tabindex="-1" href="#" class="drop-left">MGR</a>
+                                              <ul class="dropdown-menu">
+                                               <li><a tabindex="-1" href="#">Insurance</a></li>
+                                               <li><a href="#">Demo</a></li>
+                                               <li><a href="#">Pharmacy</a></li>
+                                             </ul>
+                                           </li>
+                                         </ul>
+                                       </div>
+
+                                     </td>
+
+                                   </tr>
+
+                                 </tbody>
+                               </table>
+                             </div>
+                           </div>
+                           <!-- Gird column -->
+
+
+                           <!-- bottom col -->
+                           <div class="col-xl-12">
+                            <!-- row -->
+                            <div class="row px-3">
+                              <!-- show entries -->
+                              <div class="col-6 text-left pt-2">
+
+                                <div class="row">
+                                  <div class="col-xl-3 col-6 pt-2"><p>Show Entries</p></div>
+                                  <div class="col-xl-4 col-4">
+                                    <select class="form-control" id="showEntries" style="float: left;">
+                                      <option value="1">10</option>
+                                      <option value="2">20</option>
+                                      <option value="3">30</option>
+                                      <option value="4">40</option>
+                                      <option value="5">50</option>
+                                    </select>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <!-- show entries -->
+
+                              <!-- pagination -->
+                              <div class="col-6 text-right pt-2">
+                                <nav aria-label="Page navigation example">
+                                  <ul class="pagination pg-blue" style="float: right;">
+                                    <li class="page-item ">
+                                      <a class="page-link" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link">1</a></li>
+                                    <li class="page-item active">
+                                      <a class="page-link">2 <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link">3</a></li>
+                                    <li class="page-item ">
+                                      <a class="page-link">Next</a>
+                                    </li>
+                                  </ul>
+                                </nav>
+                              </div>
+                              <!-- pagination -->
+
+                            </div>
+                            <!-- row -->
+                          </div>
+                          <!-- bottom col -->
+
+                          <!-- col -->
+                          <div class="col-xl-12 pb-4 mt-3">
+                            <!-- row -->
+                            <div class="row px-3">
+                              <div class="col-xl-3 col-md-6">
+                                <div class="row">
+                                  <div class="col-2">
+                                    <div class="idMappingBox green"></div>
+                                  </div>
+                                  <div class="col-10">Verified Patient Portal</div>
+                                </div>
+                                
+                              </div>
+                              <div class="col-xl-3 col-md-6">
+                                <div class="row">
+                                  <div class="col-2">
+                                    <div class="idMappingBox red"></div>
+                                  </div>
+                                  <div class="col-10">Unmapped Patient Profile</div>
+                                </div>
+                              </div>
+                              <div class="col-xl-3 col-md-6">
+                               <div class="row">
+                                  <div class="col-2">
+                                    <div class="idMappingBox blue"></div>
+                                  </div>
+                                  <div class="col-10">Mapped Patient Profile</div>
+                                </div>
+                              </div>
+                              <div class="col-xl-3 col-md-6">
+                                <div class="row">
+                                  <div class="col-2">
+                                    <div class="idMappingBox yellow"></div>
+                                  </div>
+                                  <div class="col-10">Patient Portal Access Pending</div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- row -->
+                          </div>
+                          <!-- col -->
+
+
+                        </div>
+                        <!-- row -->
+                      </div>
+                      <!-- container -->
+                    </div>
+                    <!-- Panel 1 -->
+
+
+                    <!-- Panel 2 -->
+                    <div class="tab-pane fade" id="panel2" role="tabpanel">
+
+                    </div>
+                    <!-- Panel 2 -->
+
+                    <!-- Panel 3 -->
+                    <div class="tab-pane fade" id="panel3" role="tabpanel">
+
+                    </div>
+                    <!-- Panel 3 -->
+
+                    <!-- Panel 4 -->
+                    <div class="tab-pane fade" id="panel4" role="tabpanel">
+
+                    </div>
+                    <!-- Panel 4 -->
+
+                    <!-- Panel 5 -->
+                    <div class="tab-pane fade in show" id="panel5" role="tabpanel">
+
+                    </div>
+
+                  </div>
+
+                </div>
+                <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+              </div>
+            </main>
+
+
+            <!-- Footer -->
+            <footer class="page-footer fixed-bottom font-small blue">
+
+              <!-- Copyright -->
+              <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://Reviewthatplace.com"> Reviewthatplace.com</a>
+              </div>
+              <!-- Copyright -->
+
+            </footer>
+            <!-- Footer -->
+          
+        </div>
+    </div>
+    <!--================================= page ends here ======================= -->
+
+
+
+    <!--================================= checkin ======================= -->
+    <div class="modal fade" id="checkin" tabindex="-1" role="dialog" aria-labe7[piyt4re321lledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info  modal-xl" role="document">
+        <!-- Content -->
+        <div class="modal-content">
+          <!-- Header -->
+          <div class="modal-header">
+            <p class="heading lead">Manual Entry</p>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+
+          <!-- Body -->
+          <div class="modal-body">
+            <div class="row">
+              <!-- new patient -->
+              <div class="col-xl-5 mb-2">
+                <h4 class="font-weight-bold h4-responsive mb-4">New Patient</h4>
+
+                <form>
+                  <!-- Full name row -->
+                  <div class="row">
+                    <!--  first name -->
+                    <div class="col">
+                      <div class="md-form mt-0">
+                        <input type="text" class="form-control" placeholder="First name">
+                      </div>
+                    </div>
+                    <!-- first name -->
+
+                    <!-- last name -->
+                    <div class="col">
+                      <div class="md-form mt-0">
+                        <input type="text" class="form-control" placeholder="Last name">
+                      </div>
+                    </div>
+                    <!-- last name -->
+                  </div>
+                  <!-- Full name row -->
+
+                  <!-- row -->
+                  <div class="row">
+                    <!-- date of birth -->
+                    <div class="col-xl-12">
+                      <span>DOB</span>
+                      <div class="md-form mt-0">
+                        <input placeholder="Select date" type="text" id="date-picker-example" class="form-control datepicker">
+                      </div>
+                    </div>
+                    <!-- date of birth -->
+
+                    <!-- gender -->
+                    <div class="col-xl-12">
+                      <span class="font-weight-bold mt-4">Gender</span>
+                      <br>
+                      <!-- Material inline 1 -->
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline1">Male</label>
+                      </div>
+
+                      <!-- Material inline 2 -->
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline2">Female</label>
+                      </div>
+
+                      <!-- Material inline 3 -->
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialInline3" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline3">Others</label>
+                      </div>
+                    </div>
+                    <!-- gender -->
+
+                    <!-- email -->
+                    <div class="col-xl-12">
+                      <div class="md-form form-group">
+                        <input type="email" class="form-control" id="email">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+                    <!-- email -->
+
+                    <!-- Phone -->
+                    <div class="col-xl-12">
+                      <div class="md-form form-group">
+                        <input type="tel" class="form-control" id="phoneno">
+                        <label for="phoneno">Phone Number</label>
+                      </div>
+                    </div>
+                    <!-- Phone -->
+
+                    <!-- date of birth -->
+                    <div class="col-xl-12">
+                      <span>DOS</span>
+                      <div class="md-form mt-1">
+                        <input placeholder="Select date" type="text" id="dos" class="form-control datepicker">
+                      </div>
+                    </div>
+                    <!-- date of birth -->
+
+                    <div class="col-xl-12 mb-2">
+                      <label class="mdb-main-label">Category</label>
+                      <select class="form-control">
+                        <option value="" disabled selected>Choose Category</option>
+                        <option value="1">Walk IN</option>
+                        <option value="2">Sick</option>
+                      </select>
+                    </div>
+
+                    <div class="col-xl-12 mb-2">
+                      <label class="mdb-main-label">Reason</label>
+                      <select class="form-control">
+                        <option value="" disabled selected>Choose reason</option>
+                        <option value="1">Walk IN</option>
+                        <option value="2">Sick</option>
+                      </select>
+                    </div>
+
+                    <div class="col-xl-12 mb-2">
+                      <label class="mdb-main-label">Physician</label>
+                      <select class="form-control">
+                        <option value="" disabled selected>Choose Physician</option>
+                        <option value="1">Walk IN</option>
+                        <option value="2">Sick</option>
+                      </select>
+                    </div>
+
+                    <!-- comments -->
+                    <div class="col-xl-12">
+                      <div class="md-form">
+                        <textarea id="comment" class="form-control md-textarea" length="120" rows="3"></textarea>
+                        <label for="comment">Comment</label>
+                      </div>
+                    </div>
+                    <!-- comments -->
+                  </div>
+                  <!-- row -->
+
+                  <div>
+                    <input type="submit" name="" class="btn btn-success" value="Save Changes">
+                  </div>
+
+                  
+
+                </form>
+              </div>
+              <!-- new patient -->
+
+              <!-- regular patient -->
+              <div class="col-xl-7 mb-2">
+                <h4 class="font-weight-bold h4-responsive">Regular Patient</h4>
+                
+                <div class="table-responsive-xl">
+                  <table class="table table-striped datatables">
+                    <thead class="black white-text">
+                      <tr>
+                        <th>ID</th>
+                        <th>ID2</th>
+                        <th>Full Name</th>
+                        <th>DOB</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>12</td>
+                        <td>14</td>
+                        <td>Ravi Agrawal</td>
+                        <td>11/10/1998</td>
+                        <td>ravi@gmail.com</td>
+                        <td>122314323</td>
+                      </tr>
+
+                      <tr>
+                        <td>12</td>
+                        <td>14</td>
+                        <td>Ravi Agrawal</td>
+                        <td>11/10/1998</td>
+                        <td>ravi@gmail.com</td>
+                        <td>122314323</td>
+                      </tr>
+
+                      <tr>
+                        <td>12</td>
+                        <td>14</td>
+                        <td>Ravi Agrawal</td>
+                        <td>11/10/1998</td>
+                        <td>ravi@gmail.com</td>
+                        <td>122314323</td>
+                      </tr>
+
+                      <tr>
+                        <td>12</td>
+                        <td>14</td>
+                        <td>Ravi Agrawal</td>
+                        <td>11/10/1998</td>
+                        <td>ravi@gmail.com</td>
+                        <td>122314323</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- regular patient -->
+            </div>
+
+              <!-- <button class="btn btn-success waves-effect">Save</button>
+                <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button> -->
+
+              </div>
+              <!-- body -->
+            </div>
+            <!-- Content -->
+          </div>
+        </div>
+        <!--================================= checkin ======================= -->
+
+
+
+        <!-- ============================== pt id pop up ======================================= -->
+        <div class="modal fade" id="ptId" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog cascading-modal modal-lg" role="document">
+            <!-- Content -->
+            <div class="modal-content">
+
+              <!--Modal cascading tabs-->
+              <div class="modal-c-tabs">
+
+                <!-- Nav tabs -->
+                <ul class="nav md-tabs tabs-2 light-blue darken-3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active white-text" data-toggle="tab" href="#myPatientPanel" role="tab"><i class="fas fa-user mr-1"></i>
+                    My Patients</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link white-text" data-toggle="tab" href="#veinsPanel" role="tab"><i class="fas fa-user-plus mr-1"></i>
+                    Veins Patient Portals</a>
+                  </li>
+                </ul>
+
+                <!-- Tab panels -->
+                <div class="tab-content">
+                  <!-- === My Patient Panel ==== -->
+                  <div class="tab-pane fade in show active" id="myPatientPanel" role="tabpanel">
+
+                    <!-- Body -->
+                    <div class="modal-body mb-1 pt-2">
+                      <div class="table-responsive-xl text-nowrap pt-0">
+                        <table class="table table-striped text-center table-sm pt-0 datatables" cellspacing="0"  style="width: 100% !important; ">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th>PT ID</th>
+                              <th>SSN</th>
+                              <th>First Name</th>
+                              <th>Last Name</th>
+                              <th>DOB</th>
+                              <th>Email</th>
+                              <th>Phone</th>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            <tr>
+                              <td>
+                                <button class="btn btn-grey btn-sm m-0 myPatientButton" data-target="#ptIdAlert" data-toggle="modal">1</button>
+                              </td>
+                              <td>1</td>
+                              <td>Ravi</td>
+                              <td>Agrawal</td>
+                              <td>11/10/1999</td>
+                              <td>agrawalravi.1110@gmail.com</td>
+                              <td>9872712063</td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <button class="btn btn-grey btn-sm m-0 myPatientButton" data-target="#ptIdAlert" data-toggle="modal">1</button>
+                              </td>
+                              <td>1</td>
+                              <td>Ravi</td>
+                              <td>Agrawal</td>
+                              <td>11/10/1999</td>
+                              <td>agrawalravi.1110@gmail.com</td>
+                              <td>9872712063</td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <button class="btn btn-grey btn-sm m-0 myPatientButton" data-target="#ptIdAlert" data-toggle="modal">1</button>
+                              </td>
+                              <td>1</td>
+                              <td>Ravi</td>
+                              <td>Agrawal</td>
+                              <td>11/10/1999</td>
+                              <td>agrawalravi.1110@gmail.com</td>
+                              <td>9872712063</td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <button class="btn btn-grey btn-sm m-0 myPatientButton" data-target="#ptIdAlert" data-toggle="modal">1</button>
+                              </td>
+                              <td>1</td>
+                              <td>Ravi</td>
+                              <td>Agrawal</td>
+                              <td>11/10/1999</td>
+                              <td>agrawalravi.1110@gmail.com</td>
+                              <td>9872712063</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- Footer -->
+                    <div class="modal-footer">
+
+                      <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                    </div>
+                    <!-- Footer -->
+
+                  </div>
+                  <!-- === My Patient Panel ==== -->
+
+                  <!-- === Veins Patient === -->
+                  <div class="tab-pane fade" id="veinsPanel" role="tabpanel">
+
+                    <!-- Body -->
+                    <div class="modal-body mb-1 pt-2">
+                      <div class="table-responsive-xl text-nowrap pt-0">
+                        <table class="table table-striped text-center table-sm pt-0 datatables" cellspacing="0" width="100%">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th>PT ID</th>
+                              <th>SSN</th>
+                              <th>First Name</th>
+                              <th>Last Name</th>
+                              <th>DOB</th>
+                              <th>Email</th>
+                              <th>Phone</th>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            <tr>
+                              <td>
+                                <button class="btn btn-grey btn-sm m-0 veinsPatientButton" data-target="#veinsPatientAlert" data-toggle="modal">1</button>
+                              </td>
+                              <td>1</td>
+                              <td>Ravi</td>
+                              <td>Agrawal</td>
+                              <td>11/10/1999</td>
+                              <td>agrawalravi.1110@gmail.com</td>
+                              <td>9872712063</td>
+                            </tr>
+
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- Footer -->
+                    <div class="modal-footer">
+
+                      <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                    </div>
+                    <!-- Footer -->
+
+                  </div>
+                  <!-- === Veins Patient === -->
+                </div>
+
+              </div>
+            </div>
+            <!-- Content -->
+          </div>
+        </div>
+        <!-- ============================= pt id pop up =================================== -->
+
+
+        <!-- confirmation alert for my patient -->
+        <div class="modal fade" id="ptIdAlert" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Are You Sure?</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <p>You are merging “Name and ID from stage Display” into ”Name and ID from Practice Patient Profile Database”.  This cannot be undone. Are you sure you want to continue?</p>
+            
+
+              <button class="btn btn-success waves-effect">Continue</button>
+              <button class="btn btn-danger waves-effect" data-dismiss="modal">Cancel</button>
+
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+        </div>
+        <!--confirmation alert for my patient -->
+
+
+        <!-- confirmation alert for veins patient alert -->
+        <div class="modal fade" id="veinsPatientAlert" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Are You Sure?</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <p>We have sent your access request to ”Name and ID from Veins Patient Portal Database”. If approved by the patient, “Name and ID from stage Display” will be updated. This cannot be undone. If Rejected you will be notified and record unchanged. Are you sure you want to continue?</p>
+            
+
+              <button class="btn btn-success waves-effect">Continue</button>
+              <button class="btn btn-danger waves-effect" data-dismiss="modal">Cancel</button>
+
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+        </div>
+        <!--confirmation alert for delete button -->
+
+
+        
+
+
+
+        <!-- ============================== resources ================================== -->
+        <div class="modal fade" id="Resources" tabindex="-1" role="dialog" aria-labe7[piyt4re321lledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-notify modal-primary" role="document">
+            <!-- Content -->
+            <div class="modal-content">
+              <!-- Header -->
+              <div class="modal-header">
+                <span class="white-text">Resources</span>
+              </div>
+              <!-- header -->
+
+              <!-- Body -->
+              <div class="modal-body">
+                <div class="table-responsive">
+                  <table class="table table-sm table-striped text-center">
+                    <thead>
+                      <tr>
+                        <th>Resource ID</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                      </tr>
+                    </thead>
+
+
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Room 1</td>
+                        <td>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                            <label class="form-check-label" for="materialUnchecked"></label>
+                          </div>
+                        </td>
+                        <td>11:30pm</td>
+                        <td>12:00pm</td>
+                      </tr>
+
+                      <tr>
+                        <td>2</td>
+                        <td>Allergy Machine</td>
+                        <td>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                            <label class="form-check-label" for="materialUnchecked"></label>
+                          </div>
+                        </td>
+                        <td>11:30pm</td>
+                        <td>12:00pm</td>
+                      </tr>
+
+                      <tr>
+                        <td>3</td>
+                        <td>Room 2</td>
+                        <td>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                            <label class="form-check-label" for="materialUnchecked"></label>
+                          </div>
+                        </td>
+                        <td>11:30pm</td>
+                        <td>12:00pm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+             
+
+                <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+              </div>
+              <!-- body -->
+            </div>
+            <!-- Content -->
+          </div>
+        </div>
+        <!-- ===================== resources ================================== -->
+
+
+        <!--============================ Name Pop up ============================== -->
+        <div class="modal fade" id="centralModalSuccessDemo" tabindex="-1" role="dialog" aria-labe7[piyt4re321lledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+            <!-- Content -->
+            <div class="modal-content">
+              <!-- Header -->
+              <div class="modal-header">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-7 text-left">
+                      <p class="heading lead">
+                        <span class="text-nowrap">Service Date 1/1/2019 -</span>
+                      </p>
+                      <a data-toggle="modal" data-target="#patientDetails" class="btn btn-primary btn-sm m-0"><span class="text-nowrap">Shakir Ansari (11/29/1986)</span></a>
+                    </div>
+
+                    <div class="col-md-5 text-nowrap text-right">
+                      <button type="button" class="close" data-target="#confirmDelete" data-toggle="modal" aria-label="Close">
+                        <i class="far fa-trash-alt white-text"></i>
+                      </button>
+
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- header -->
+
+              <!-- Body -->
+              <div class="modal-body">
+
+                <div class="text-center" style="color: white;">
+                  <a class="btn-floating btn-info material-tooltip-email" data-toggle="modal" data-placement="top" title="Leave A Comment" data-target="#leaveReply"><i class="fas fa-comment-alt animated rotateIn" style="color: white;"></i></a>
+
+                  <a class="btn-floating btn-warning material-tooltip-email" data-toggle="modal" data-placement="top" title="Edit Visit Type" data-target="#edit"><i class="fas fa-pencil-alt animated rotateIn" style="color: white;"></i></a>
+
+                  <a class="btn-floating btn-pink material-tooltip-email" data-toggle="modal" data-placement="top" title="Collect Money" data-target="#collectMoney"><i class="fas fa-hand-holding-usd animated rotateIn white-text"></i></a>
+
+                  <a class="btn-floating btn-success material-tooltip-email" data-toggle="modal" data-placement="top" title="Send A Text" data-target="#sendText"><i class="far fa-comments animated rotateIn white-text"></i></a>
+
+                  <a class="btn-floating btn-danger material-tooltip-email" data-toggle="modal" data-placement="top" title="Send An email" data-target="#sendMail"><i class="fas fa-envelope animated rotateIn white-text"></i></a>
+
+                  <a class="btn-floating btn-indigo material-tooltip-email" data-toggle="modal" data-placement="top" title="Assign Physician" data-target="#assignPhysician"><i class="fas fa-user-md animated rotateIn white-text"></i></a>
+
+                  <a class="btn-floating btn-blue material-tooltip-email" data-toggle="modal" data-placement="top" title="Payment Request" data-target="#paymentRequest"><i class="fas fa-credit-card animated rotateIn white-text"></i></a>
+                  
+                  
+                  <hr>
+
+                  <!-- show events -->
+                  <div class="row">
+                    <div class="col-xl-3 black-text pt-2">
+                      <p class="font-weight-bold">Show Events</p>
+                    </div>
+                    <div class="col-xl-3">
+                      <!--Data Range-->
+                      <select class="form-control" id="dataRange">
+                        <option value="1">5</option>
+                        <option value="2">10</option>
+                        <option value="3">15</option>
+                        <option value="4">20</option>
+                        <option value="5">25</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- show events -->
+
+
+                  <!-- event -->
+                  <div class="container singleEvent">
+                    <!-- row -->
+                    <div class="row">
+                      <div class="col-xl-1">
+                        <i class="fas fa-comment-alt fa-2x"></i>
+                      </div>
+                      <div class="col-xl-11 text-left">
+                        <h4 class="h4-responsive">Leave a Comment</h4>
+                        <div class="row">
+                          <div class="col-3">
+                            <p class="text-nowrap">Ravi Agrawal</p>
+                            <p class="text-nowrap">11/10/1998</p>
+                          </div>
+                          <div class="col-9">
+                            <p>Comment Left</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- row -->
+                    
+                    
+                  </div>
+                  
+                  <!-- event -->
+                  <hr class="m-0">
+
+                  <!-- event -->
+                  <div class="container singleEvent">
+                    <!-- row -->
+                    <div class="row">
+                      <div class="col-xl-1">
+                        <i class="fas fa-pencil-alt fa-2x fa-2x"></i>
+                      </div>
+                      <div class="col-xl-11 text-left">
+                        <h4 class="h4-responsive">Edit Visit Type</h4>
+                        <div class="row">
+                          <div class="col-3">
+                            <p class="text-nowrap">Ravi Agrawal</p>
+                            <p class="text-nowrap">11/10/1998</p>
+                          </div>
+                          <div class="col-9">
+                            <p>”Current category” was updated to “Updated Category” <br>
+                            ”Current reason” was updated to “Updated reason”<br>
+                            The Date of Service “current DOS” was changed to “new DOS”</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- row -->
+                    
+                    
+                  </div>
+                  <!-- event -->
+
+                  <hr class="m-0">    
+
+                  <!-- event -->
+                  <div class="container singleEvent">
+                    <!-- row -->
+                    <div class="row">
+                      <div class="col-xl-1">
+                        <i class="fas fa-hand-holding-usd fa-2x"></i>
+                      </div>
+                      <div class="col-xl-11 text-left">
+                        <h4 class="h4-responsive">Payment Collected</h4>
+                        <div class="row">
+                          <div class="col-3">
+                            <p class="text-nowrap">Ravi Agrawal</p>
+                            <p class="text-nowrap">11/10/1998</p>
+                          </div>
+                          <div class="col-9">
+                            <p>”Current category” was updated to “Updated Category” <br>
+                            ”Current reason” was updated to “Updated reason”<br>
+                            The Date of Service “current DOS” was changed to “new DOS”</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- row -->
+                    
+                  </div>
+                  <!-- event -->
+
+
+                  <hr class="m-0">    
+
+                  <!-- event -->
+                  <div class="container singleEvent">
+                    <div class="row">
+                      <div class="col-xl-1">
+                        <i class="far fa-comment fa-2x"></i>
+                      </div>
+                      <div class="col-xl-11 text-left">
+                         <h4 class="h4-responsive">Text Sent</h4>
+                          <div class="row">
+                            <div class="col-3">
+                              <p class="text-nowrap">Ravi Agrawal</p>
+                              <p class="text-nowrap">11/10/1998</p>
+                            </div>
+                            <div class="col-9">
+                              <p>Sent to “Number in the To field”: “Message in Body”</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                  <!-- event -->
+
+
+                  <hr class="m-0">    
+
+                  <!-- event -->
+                  <div class="container singleEvent">
+                    <div class="row">
+                      <div class="col-xl-1">
+                        <i class="far fa-envelope fa-2x"></i>
+                      </div>
+                      <div class="col-xl-11 text-left">
+                        <h4 class="h4-responsive">Email Sent</h4>
+                        <div class="row">
+                          <div class="col-3">
+                            <p class="text-nowrap">Ravi Agrawal</p>
+                            <p class="text-nowrap">11/10/1998</p>
+                          </div>
+                          <div class="col-9">
+                            <p>Sent to “email in the To field”: subject “text in subject field”: “Message in Body”</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!-- event -->
+
+                  <hr class="m-0">    
+
+                  <!-- event -->
+                  <div class="container singleEvent">
+                    <div class="row">
+                      <div class="col-xl-1"><i class="fas fa-user-md fa-2x"></i></div>
+                      <div class="col-xl-11 text-left">
+                          <h4 class="h4-responsive">Physician Assigned</h4>
+                          <div class="row">
+                            <div class="col-3">
+                              <p class="text-nowrap">Ravi Agrawal</p>
+                              <p class="text-nowrap">11/10/1998</p>
+                            </div>
+                            <div class="col-9">
+                              <p>“Name of Physician” assigned.</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <!-- event -->
+
+
+                  <hr class="m-0">    
+
+                  <!-- event -->
+                  <div class="container singleEvent">
+                    <div class="row">
+                      <div class="col-xl-1">
+                        <i class="fas fa-compress fa-2x"></i>
+                      </div>
+                      <div class="col-xl-11 text-left">
+                        <h4 class="h4-responsive">Mapping</h4>
+                        <div class="row">
+                          <div class="col-3">
+                            <p class="text-nowrap">Ravi Agrawal</p>
+                            <p class="text-nowrap">11/10/1998</p>
+                          </div>
+                          <div class="col-9">
+                            <p>“Name, DOB, and ID from stage Display” was merged into ”Name, DOB and ID from Practice Patient Profile Database”</p>
+                            <p>“Name, DOB, and ID from stage Display” was merged into Veins Patient Portal ”Name, DOB and ID from Patient Portal Database”</p>
+                            <p>Access to “Name, DOB, and ID from Patient Portal Database” was requested</p>
+                            <p>Access was granted to “Name, DOB, and ID from Patient Portal Database” Veins Patient Portal.</p>
+                            <p>Access was denied to “Name, DOB, and ID from Patient Portal Database” Veins Patient Portal.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!-- event -->
+
+                  <hr class="m-0">    
+
+                  <!-- event -->
+                  <div class="container singleEvent">
+                    <div class="row">
+                      <div class="col-xl-1">
+                        <i class="fas fa-user-alt fa-2x"></i>
+                      </div>
+                      <div class="col-xl-11 text-left">
+                        <h4 class="h4-responsive">Patient Detail Update</h4>
+                        <div class="row">
+                          <div class="col-3">
+                            <p class="text-nowrap">Ravi Agrawal</p>
+                            <p class="text-nowrap">11/10/1998</p>
+                          </div>
+                          <div class="col-9">
+                            <p>“Current Field Value” was updated to “New Field Value”</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- event -->
+
+
+                  <hr class="m-0">    
+
+                  <!-- event -->
+                  <div class="container singleEvent">
+                    <div class="row">
+                      <div class="col-xl-1">
+                        <i class="far fa-thumbs-up fa-2x"></i>
+                      </div>
+                      <div class="col-xl-11 text-left">
+                          <h4 class="h4-responsive">Step Acknowledgements</h4>
+                          <div class="row">
+                            <div class="col-3">
+                              <p class="text-nowrap">Ravi Agrawal</p>
+                              <p class="text-nowrap">11/10/1998</p>
+                            </div>
+                            <div class="col-9">
+                              <p>“step name” was acknowledged.<br>
+                                “step name” was unacknowledged</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                  <!-- event -->
+
+                  <hr class="m-0">    
+
+                  <!-- event -->
+                  <div class="container singleEvent">
+                    <div class="row">
+                      <div class="col-xl-1">
+                        <i class="fas fa-sign-in-alt fa-2x"></i>
+                      </div>
+                      <div class="col-xl-11 text-left">
+                         <h4 class="h4-responsive">Stage Entry and Exit</h4>
+                          <div class="row">
+                            <div class="col-3">
+                              <p class="text-nowrap">Ravi Agrawal</p>
+                              <p class="text-nowrap">11/10/1998</p>
+                            </div>
+                            <div class="col-9">
+                              <p>“Stage name” was entered via Next Stage<br>
+                              “Stage name” was entered via Jump To</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                  <!-- event -->
+
+                  <hr class="m-0">    
+
+                  <!-- event -->
+                  <div class="container singleEvent">
+                    <div class="row">
+                      <div class="col-xl-1">
+                        <i class="fas fa-credit-card fa-2x"></i>
+                      </div>
+                      <div class="col-xl-11 text-left">
+                        <h4 class="h4-responsive">Payment Request</h4>
+                        <div class="row">
+                          <div class="col-3">
+                            <p class="text-nowrap">Ravi Agrawal</p>
+                            <p class="text-nowrap">11/10/1998</p>
+                          </div>
+                          <div class="col-9">
+                            <p>Payment request of “amount of payment” for “Date of Service” was sent to “Phone”, “Email”. Noted “any comment left in comment section”.</p>
+                            <p>Payment request of “amount of payment” for “Date of Service” was sent to “Phone”, “Email”. Noted “any comment left in comment section”.</p>
+                            <p>Payment request of “amount of payment” for “Date of Service” was Disputed. Noted “any comment left in comment section”.</p>
+                            <p>Payment request of “amount of payment” for “Date of Service” is Pending. Noted “any comment left in comment section”.</p>
+                            <p>Payment request of “amount of payment” for “Date of Service” was Paid. Noted “any comment left in comment section”.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!-- event -->
+                </div>
+              </div>
+            </div>
+            <!-- Content -->
+          </div>
+        </div>
+        <!-- ============================== Name Pop up  =================================-->
+
+        
+
+
+        <!-- ========================= Patient Details ============================ -->
+        <div class="modal fade" id="patientDetails" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info modal-xl" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Patient Details</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-xl-12 text-left">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="alert alert-success" role="alert" style="color: white; background-color: green;">
+                        Verified Patient Portal (AccessApproved)
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="alert alert-warning" role="alert" style="color: black; background-color: yellow;">
+                        (Access Pending)
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="alert alert-orange" role="alert" style="color: white; background-color: orange;">
+                        (Access Denied)
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="alert alert-danger" role="alert" style="color: white; background-color: red;">
+                        Patient Portal Not Created
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  
+                </div>
+
+                
+
+              </div>
+
+              <div class="row">
+                    <div class="col-xl-2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfbAGxAhFwWC1FqBA4OEuNVttlb4y8xvN1Lf2uq07HVD9sc1f9" class="img-fluid" style="height: 70px; width: 70px;">
+                    </div>
+                  <div class="col-xl-10 text-right">
+                    <a class="btn-floating btn-primary material-tooltip-email" data-toggle="modal" data-placement="top" title="Visit History" data-target="#visitHistory"><i class="fas fa-eye animated rotateIn white-text"></i></a>
+
+                    <a class="btn-floating btn-yellow material-tooltip-email" data-toggle="modal" data-placement="top" title="Payment History" data-target="#paymentHistory"><i class="far fa-credit-card animated rotateIn white-text"></i></a>
+
+                    <a class="btn-floating btn-danger material-tooltip-email" data-toggle="modal" data-placement="top" title="Email History" data-target="#emailHistory"><i class="fas fa-envelope animated rotateIn white-text"></i></a>
+
+                    <a class="btn-floating btn-success material-tooltip-email" data-toggle="modal" data-placement="top" title="Text History" data-target="#textHistory"><i class="far fa-comment animated rotateIn white-text"></i></a>
+
+                    <a class="btn-floating btn-secondary material-tooltip-email" data-toggle="modal" data-placement="top" title="My Records" data-target="#myRecords"><i class="fas fa-envelope-open-text animated rotateIn white-text"></i></a>
+                  </div>
+              </div>
+
+
+               <h3 class="font-weight-bold">Basic Details</h3>
+              <!-- first row -->
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <!-- first name -->
+                            <div class="md-form">
+                              <input type="text" id="firstName" class="form-control" value="Ravi">
+                              <label for="firstName">First name</label>
+                            </div>
+                            <!-- first name -->
+                          </div>
+                          <div class="col-lg-6">
+                            <!-- last name -->
+                            <div class="md-form">
+                              <input type="text" id="lastName" class="form-control" value="Agrawal">
+                              <label for="lastName">Last name</label>
+                            </div>
+                            <!-- last name -->
+                          </div>
+                        </div>
+                        <!-- first row -->
+
+                        <!-- second row -->
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <label for="date">Date Of Birth</label>
+                            <div class="md-form mt-0">
+                              <input  type="text" id="date" class="form-control datepicker" value="10/10/1998">
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <label class="pr-3 mt-lg-5">Gender</label>
+                            <!-- Default inline 1-->
+                            <div class="custom-control custom-radio custom-control-inline">
+                              <input type="radio" class="custom-control-input" id="male" name="inlineDefaultRadiosExample">
+                              <label class="custom-control-label" for="male">Male</label>
+                            </div>
+
+                            <!-- Default inline 2-->
+                            <div class="custom-control custom-radio custom-control-inline">
+                              <input type="radio" class="custom-control-input" id="female" name="inlineDefaultRadiosExample">
+                              <label class="custom-control-label" for="female">Female</label>
+                            </div>
+
+                            <!-- Default inline 3-->
+                            <div class="custom-control custom-radio custom-control-inline">
+                              <input type="radio" class="custom-control-input" id="other" name="inlineDefaultRadiosExample">
+                              <label class="custom-control-label" for="other">Other</label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- second row -->
+
+                        <!-- third row -->
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="md-form">
+                              <input type="tel" id="phoneNumber" class="form-control" required="">
+                              <label for="phoneNumber">Phone Number</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="md-form">
+                              <input type="email" id="email" class="form-control">
+                              <label for="email">Email (username)</label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- third row -->
+
+                        <!-- fourth row -->
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="md-form">
+                              <input type="text" id="id1" class="form-control">
+                              <label for="id1">ID1</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="md-form">
+                              <input type="text" id="ssn" class="form-control">
+                              <label for="ssn">Social Security Number</label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- fourth row -->
+
+                        <h3 class="font-weight-bold">Address</h3>
+                        <!-- fifth row -->
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="md-form">
+                              <input type="text" id="street" class="form-control">
+                              <label for="street">street (optional)</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="md-form">
+                              <input type="text" id="city" class="form-control">
+                              <label for="city">city (optional)</label>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="md-form">
+                              <input type="text" id="zip" class="form-control">
+                              <label for="zip">Zip (optional)</label>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <!-- category -->
+                            <label class="font-weight-bold">State</label>
+                            <select class="browser-default custom-select mb-4">
+                                <option value="" selected="">Choose State</option>
+                                <option value="FL">FL</option>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DE">DE</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                            </select>
+                            <!-- category -->
+                          </div>
+
+                          
+
+                          
+                        </div>
+                        <!-- fifth row -->
+
+                        <h3 class="font-weight-bold mb-4">Insurance Details</h3>
+                        <div class="row">
+                          
+                          
+
+                          <div class="col-lg-6">
+                            <!-- category -->
+                            <label class="font-weight-bold">Primary Insurance</label>
+                            <select class="browser-default custom-select" name="selectInsurance" id="selectInsurance">
+                                <option value="" selected="" disabled="">Choose Options</option>
+
+                                <option value="mineNotListed">Mine Not Listed</option>
+                                <option value="Aetna">Aetna</option>
+                                <option value="Staywell">Staywell</option>
+                                <option value="United">United</option>
+                            </select>
+                            <!-- category -->
+                          </div>
+
+                          <div class="col-lg-6">
+                            <label class="font-weight-bold">Primary Insurance Plan Name</label>
+                            <select class="browser-default custom-select" id="planNameSelect" name="planNameSelect">  
+                              <option value="" disabled="" selected>Choose Plan</option>
+                              <option value="mineNotListed">Mind Not Listed</option>
+                              <option value="option 1">option 1</option>
+                              <option value="option 2">option 1</option>
+                              <option value="option 3">option 1</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- mine not listed insurance section -->
+                        <div class="notListedSection border p-4 mt-3" style="display: none;">
+                          <h4 class="font-weight-bold">Primary Insurance - Manual Entry</h4>
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <div class="md-form">
+                                <input type="text" id="iname" class="form-control">
+                                <label for="iname">Insurance name</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="md-form">
+                                <input type="text" id="istreet" class="form-control">
+                                <label for="istreet">Insurance Street</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="md-form">
+                                <input type="text" id="icity" class="form-control">
+                                <label for="icity">Insurance City</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <!-- category -->
+                            <label class="font-weight-bold">State</label>
+                            <select class="browser-default custom-select mb-4">
+                                <option value="" selected="">Choose State</option>
+                                <option value="FL">FL</option>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DE">DE</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                            </select>
+                            <!-- category -->
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="md-form">
+                                <input type="text" id="izip" class="form-control">
+                                <label for="izip">Insurance Zip</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="md-form">
+                                <input type="tel" id="iphone" class="form-control">
+                                <label for="iphone">Insurance Phone</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- mine not listed insurance section -->
+
+
+                        <div class="row">
+                          <div class="col-lg-6" style="display: none;" id="notListedPlan">
+                            <div class="md-form">
+                              <input type="text" id="planName" class="form-control">
+                              <label for="planName">Plan Name</label>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <div class="row">
+                          <div class="col-lg-6 mt-4">
+                            <!-- category -->
+                            <label class="font-weight-bold">Secondary Insurance</label>
+                            <select class="browser-default custom-select mb-4" name="selectSecondaryInsurance" id="selectSecondaryInsurance">
+                                <option value="" selected="" disabled="">Choose Options</option>
+                                <option value="mineNotListed">Mine Not Listed</option>
+                                <option value="Aetna">Aetna</option>
+                                <option value="Staywell">Staywell</option>
+                                <option value="United">United</option>
+                            </select>
+                            <!-- category -->
+                          </div>
+
+
+                          <div class="col-lg-6 mt-4">
+                            <label class="font-weight-bold">Secondary Insurance Plan Name</label>
+                            <select class="browser-default custom-select mb-4" id="planNameSecondarySelect" name="planNameSelect">  
+                              <option value="" disabled="" selected>Choose Plan</option>
+                              <option value="mineNotListed">Mind Not Listed</option>
+                              <option value="option 1">option 1</option>
+                              <option value="option 2">option 1</option>
+                              <option value="option 3">option 1</option>
+                            </select>
+                          </div>
+                        </div>
+
+
+                        
+
+                        <!-- mine not listed secondary insurance section -->
+                        <div class="notListedSecondarySection border p-4 mt-3" style="display: none;">
+                          <h4 class="font-weight-bold">Secondary Insurance - Manual Entry</h4>
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <div class="md-form">
+                                <input type="text" id="iname" class="form-control">
+                                <label for="iname">Insurance name</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="md-form">
+                                <input type="text" id="istreet" class="form-control">
+                                <label for="istreet">Insurance Street</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="md-form">
+                                <input type="text" id="icity" class="form-control">
+                                <label for="icity">Insurance City</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <!-- category -->
+                            <label class="font-weight-bold">State</label>
+                            <select class="browser-default custom-select mb-4">
+                                <option value="" selected="">Choose State</option>
+                                <option value="FL">FL</option>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DE">DE</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                            </select>
+                            <!-- category -->
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="md-form">
+                                <input type="text" id="izip" class="form-control">
+                                <label for="izip">Insurance Zip</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="md-form">
+                                <input type="tel" id="iphone" class="form-control">
+                                <label for="iphone">Insurance Phone</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- mine not listed secondary insurance section -->
+
+                        <div class="row">
+                          <div class="col-lg-6" style="display: none;" id="notListedSecondaryPlan">
+                            <div class="md-form">
+                              <input type="text" id="planName" class="form-control">
+                              <label for="planName">Plan Name</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="md-form">
+                              <input type="text" id="sid" class="form-control">
+                              <label for="sid">Subscriber ID(optional)</label>
+                            </div>
+                          </div>
+                         
+                          
+
+                          <div class="col-lg-6" style="display: none;" id="notListedPlanSecondary">
+                            <div class="md-form">
+                              <input type="text" id="planName" class="form-control">
+                              <label for="planName">Plan Name For Secondary Insurance</label>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <h3 class="font-weight-bold mb-4 mt-4">Upload Images</h3>
+
+                        <div class="row mt-2">
+                          <div class="col-lg-6 mb-3">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Centers_for_Medicare_and_Medicaid_Services_logo.svg/1200px-Centers_for_Medicare_and_Medicaid_Services_logo.svg.png" class="img-fluid" style="height: 100px;">
+                            <div class="custom-file mt-2">
+                              <input type="file" class="custom-file-input" id="customFileLang">
+                              <label class="custom-file-label" for="customFileLang">Insurance ID</label>
+                            </div>
+                          </div>
+                        
+                          <div class="col-lg-6 mb-3">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Centers_for_Medicare_and_Medicaid_Services_logo.svg/1200px-Centers_for_Medicare_and_Medicaid_Services_logo.svg.png" class="img-fluid" style="height: 100px;">
+                            <div class="custom-file mt-2">
+                              <input type="file" class="custom-file-input" id="customFileLang">
+                              <label class="custom-file-label" for="customFileLang">Secondary ID</label>
+                            </div>
+                          </div>
+                        </div>
+
+
+            <button class="btn btn-success waves-effect" data-dismiss="modal">Save</button>
+
+          </div>
+        </div>
+        <!-- Content -->
+        </div>
+        </div>
+        <!-- ============================= Patient Details ================================ -->
+
+
+        <!-- ============================= visit history ================================== -->
+        <div class="modal fade" id="visitHistory" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info modal-xl" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Visit History</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+             <!-- Grid row -->
+             <div class="row justify-content-center">
+              <div class="col">
+               <!--Data Range-->
+               <select class="form-control">
+                <option value="1">Today</option>
+                <option value="2">Yesterday</option>
+                <option value="3">Last 7 Days</option>
+                <option value="4">Last 30 Days</option>
+                <option value="5">Uptil now</option>
+              </select>
+              <!--Custom Date-->
+            </div>
+
+            <div class="col">
+              <div class="md-form mt-0">
+                <!--The "from" Date Picker -->
+                <input placeholder="Start date" type="text" id="startingDate" class="form-control datepicker">
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="md-form mt-0">
+                <!--The "to" Date Picker -->
+                <input placeholder="End date" type="text" id="endingDate" class="form-control datepicker">
+              </div>
+            </div>
+
+            <div class="col">
+              <!-- Search form -->
+              <div class="md-form mt-0">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </div>
+
+            <div class="col">
+              <input type="button" name="" value="Apply" class="btn btn-info py-2">      
+            </div>
+          </div>
+          <!-- Grid row -->
+
+          <div class="table-responsive-xl">
+            <table class="table table-striped datatables">
+              <thead class="black white-text">
+                <tr>
+                  <th>Category</th>
+                  <th>Reason</th>
+                  <th>DOS</th>
+                  <th>Timein</th>
+                  <th>Stage</th>
+                  <th>Step</th>
+                  <th>Physician</th>
+                  <th>Comment</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Walk In</td>
+                  <td>sick</td>
+                  <td>323213123</td>
+                  <td>12:21</td>
+                  <td>Lorem Ipsum</td>
+                  <td>Lorem Ipsum</td>
+                  <td>Lorem Ipsum</td>
+                  <td>Lorem Ipsum</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+
+        </div>
+        </div>
+        <!-- Content -->
+        </div>
+        </div>
+        <!--visit history -->
+
+
+        <!-- payment history -->
+        <div class="modal fade" id="paymentHistory" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info modal-xl" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Payment History</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+             <!-- Grid row -->
+             <div class="row justify-content-center">
+              <div class="col">
+               <!--Data Range-->
+               <select class="form-control">
+                <option value="1">Today</option>
+                <option value="2">Yesterday</option>
+                <option value="3">Last 7 Days</option>
+                <option value="4">Last 30 Days</option>
+                <option value="5">Uptil now</option>
+              </select>
+              <!--Custom Date-->
+            </div>
+
+            <div class="col">
+              <div class="md-form mt-0">
+                <!--The "from" Date Picker -->
+                <input placeholder="Start date" type="text" id="startingDate" class="form-control datepicker">
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="md-form mt-0">
+                <!--The "to" Date Picker -->
+                <input placeholder="End date" type="text" id="endingDate" class="form-control datepicker">
+              </div>
+            </div>
+
+            <div class="col">
+              <!-- Search form -->
+              <div class="md-form mt-0">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </div>
+
+            <div class="col">
+              <input type="button" name="" value="Apply" class="btn btn-info py-2">      
+            </div>
+          </div>
+          <!-- Grid row -->
+
+          <div class="table-responsive-xl">
+            <table class="table table-striped datatables">
+              <thead class="black white-text">
+                <tr>
+                  <th>DOS</th>
+                  <th>Amount</th>
+                  <th>Method</th>
+                  <th>Comment</th>
+                  <th>Stage</th>
+                  <th>Collection Date</th>
+                  <th>Collected By</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>323123213</td>
+                  <td>3232$</td>
+                  <td>cash</td>
+                  <td>Collected</td>
+                  <td>lorem ipsum</td>
+                  <td>12/10/2019</td>
+                  <td>Ravi</td>
+                </tr>
+
+                 <tr>
+                  <td>323123213</td>
+                  <td>3232$</td>
+                  <td>cash</td>
+                  <td>Collected</td>
+                  <td>lorem ipsum</td>
+                  <td>12/10/2019</td>
+                  <td>Ravi</td>
+                </tr>
+
+                 <tr>
+                  <td>323123213</td>
+                  <td>3232$</td>
+                  <td>cash</td>
+                  <td>Collected</td>
+                  <td>lorem ipsum</td>
+                  <td>12/10/2019</td>
+                  <td>Ravi</td>
+                </tr>
+                 <tr>
+                  <td>323123213</td>
+                  <td>3232$</td>
+                  <td>cash</td>
+                  <td>Collected</td>
+                  <td>lorem ipsum</td>
+                  <td>12/10/2019</td>
+                  <td>Ravi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+
+        </div>
+        </div>
+        <!-- Content -->
+        </div>
+        </div>
+        <!--payment history -->
+
+        <!-- email history -->
+        <div class="modal fade" id="emailHistory" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Email History</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+             <!-- Grid row -->
+             <div class="row justify-content-center">
+              <div class="col">
+               <!--Data Range-->
+               <select class="form-control">
+                <option value="1">Today</option>
+                <option value="2">Yesterday</option>
+                <option value="3">Last 7 Days</option>
+                <option value="4">Last 30 Days</option>
+                <option value="5">Uptil now</option>
+              </select>
+              <!--Custom Date-->
+            </div>
+
+            <div class="col">
+              <div class="md-form mt-0">
+                <!--The "from" Date Picker -->
+                <input placeholder="Start date" type="text" id="startingDate" class="form-control datepicker">
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="md-form mt-0">
+                <!--The "to" Date Picker -->
+                <input placeholder="End date" type="text" id="endingDate" class="form-control datepicker">
+              </div>
+            </div>
+
+            <div class="col">
+              <!-- Search form -->
+              <div class="md-form mt-0">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </div>
+
+            <div class="col">
+              <input type="button" name="" value="Apply" class="btn btn-info py-2">      
+            </div>
+          </div>
+          <!-- Grid row -->
+
+          <div class="table-responsive-xl">
+            <table class="table table-striped datatables">
+              <thead class="black white-text">
+                <tr>
+                  <th>Subject</th>
+                  <th>Sending Date</th>
+                  <th>To</th>
+                  <th>Email Body</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>email</td>
+                  <td>23/09/2019</td>
+                  <td>shakir@reviewthatplace.com</td>
+                  <td>email sent</td>
+                </tr>
+
+                <tr>
+                  <td>email</td>
+                  <td>23/09/2019</td>
+                  <td>shakir@reviewthatplace.com</td>
+                  <td>email sent</td>
+                </tr>
+
+                <tr>
+                  <td>email</td>
+                  <td>23/09/2019</td>
+                  <td>shakir@reviewthatplace.com</td>
+                  <td>email sent</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+
+        </div>
+        </div>
+        <!-- Content -->
+        </div>
+        </div>
+        <!--email history -->
+
+
+        <!-- text history -->
+        <div class="modal fade" id="textHistory" tabindex="-1" role="dialog" aria-labe7[piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Text History</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+             <!-- Grid row -->
+             <div class="row justify-content-center">
+              <div class="col">
+               <!--Data Range-->
+               <select class="form-control">
+                <option value="1">Today</option>
+                <option value="2">Yesterday</option>
+                <option value="3">Last 7 Days</option>
+                <option value="4">Last 30 Days</option>
+                <option value="5">Uptil now</option>
+              </select>
+              <!--Custom Date-->
+            </div>
+
+            <div class="col">
+              <div class="md-form mt-0">
+                <!--The "from" Date Picker -->
+                <input placeholder="Start date" type="text" id="startingDate" class="form-control datepicker">
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="md-form mt-0">
+                <!--The "to" Date Picker -->
+                <input placeholder="End date" type="text" id="endingDate" class="form-control datepicker">
+              </div>
+            </div>
+
+            <div class="col">
+              <!-- Search form -->
+              <div class="md-form mt-0">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </div>
+
+            <div class="col">
+              <input type="button" name="" value="Apply" class="btn btn-info py-2">      
+            </div>
+          </div>
+          <!-- Grid row -->
+
+          <div class="table-responsive-xl">
+            <table class="table table-striped" id="textHistoryTable">
+              <thead class="black white-text">
+                <tr>
+                  <th>Date</th>
+                  <th>To</th>
+                  <th>Text Body</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>23/09/2019</td>
+                  <td>9872710633</td>
+                  <td>Text sent</td>
+                </tr>
+
+                <tr>
+                  <td>23/09/2019</td>
+                  <td>9872710633</td>
+                  <td>Text sent</td>
+                </tr>
+
+                <tr>
+                  <td>23/09/2019</td>
+                  <td>9872710633</td>
+                  <td>Text sent</td>
+                </tr>
+
+                <tr>
+                  <td>23/09/2019</td>
+                  <td>9872710633</td>
+                  <td>Text sent</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+
+        </div>
+        </div>
+        <!-- Content -->
+        </div>
+        </div>
+        <!--text history -->
+
+
+        <!-- all records -->
+        <div class="modal fade" id="myRecords" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info modal-xl" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">My Records</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+             <!-- Grid row -->
+             <div class="row justify-content-center">
+              <div class="col">
+               <!--Data Range-->
+               <select class="form-control">
+                <option value="1">Today</option>
+                <option value="2">Yesterday</option>
+                <option value="3">Last 7 Days</option>
+                <option value="4">Last 30 Days</option>
+                <option value="5">Uptil now</option>
+              </select>
+              <!--Custom Date-->
+            </div>
+
+            <div class="col">
+              <div class="md-form mt-0">
+                <!--The "from" Date Picker -->
+                <input placeholder="Start date" type="text" id="startingDate" class="form-control datepicker">
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="md-form mt-0">
+                <!--The "to" Date Picker -->
+                <input placeholder="End date" type="text" id="endingDate" class="form-control datepicker">
+              </div>
+            </div>
+
+            <div class="col">
+              <!-- Search form -->
+              <div class="md-form mt-0">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </div>
+
+            <div class="col">
+              <input type="button" name="" value="Apply" class="btn btn-info py-2">      
+            </div>
+          </div>
+          <!-- Grid row -->
+
+          <div class="table-responsive-xl">
+            <table class="table table-striped" id="visitHistoryTable">
+              <thead class="black white-text">
+                <tr>
+                  <th>Name</th>
+                  <th>Recieved From</th>
+                  <th>Date Recieved</th>
+                  <th>Date Reviewed</th>
+                  <th>Records</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Walk In</td>
+                  <td>sick</td>
+                  <td>323213123</td>
+                  <td>12:21</td>
+                  <td>
+                    <a href=""><i class="fas fa-download pr-2"></i>Attachment</a>
+                  </td>
+                </tr>
+
+                 <tr>
+                  <td>Walk In</td>
+                  <td>sick</td>
+                  <td>323213123</td>
+                  <td>12:21</td>
+                  <td>
+                    <a href=""><i class="fas fa-download pr-2"></i>Attachment</a>
+                  </td>
+                </tr>
+
+
+                 <tr>
+                  <td>Walk In</td>
+                  <td>sick</td>
+                  <td>323213123</td>
+                  <td>12:21</td>
+                  <td>
+                    <a href=""><i class="fas fa-download pr-2"></i>Attachment</a>
+                  </td>
+                </tr>
+
+                 <tr>
+                  <td>Walk In</td>
+                  <td>sick</td>
+                  <td>323213123</td>
+                  <td>12:21</td>
+                  <td>
+                    <a href=""><i class="fas fa-download pr-2"></i>Attachment</a>
+                  </td>
+                </tr>
+
+                 <tr>
+                  <td>Walk In</td>
+                  <td>sick</td>
+                  <td>323213123</td>
+                  <td>12:21</td>
+                  <td>
+                    <a href=""><i class="fas fa-download pr-2"></i>Attachment</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+
+        </div>
+        </div>
+        <!-- Content -->
+        </div>
+        </div>
+        <!-- all records -->
+
+
+
+        <!-- ============================= leave a reply ========================== -->
+        <div class="modal fade" id="leaveReply" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Leave A Reply</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <div class="form-group purple-border">
+                <label for="comment">Comment</label>
+                <textarea class="form-control" id="comment" rows="3"></textarea>
+              </div>
+
+              <button class="btn btn-success waves-effect" data-dismiss="modal">Save</button>
+
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+        </div>
+        <!-- ============================= leave a reply ========================== -->
+
+        <!-- ============================= Edit ====================================  -->
+        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Edit Visit Type</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <span>Categroy</span>
+              <select class="form-control">
+                <option value="" disabled selected>Choose Category</option>
+                <option value="1">Cat 1</option>
+                <option value="2">Cat 2</option>
+                <option value="3">Cat 3</option>
+              </select>
+
+              <span class="mt-2">Reason</span>
+              <select class="form-control">
+                <option value="" disabled selected>Choose Reason</option>
+                <option value="1">Reason 1</option>
+                <option value="2">Reason 2</option>
+                <option value="3">Reason 3</option>
+              </select>
+
+              <div class="md-form">
+                <input placeholder="Select DOS" type="text" id="dos" class="form-control datepicker">
+              </div>
+
+              <button class="btn btn-success waves-effect" data-dismiss="modal">Save</button>
+
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+        </div>
+        <!--Edit -->
+
+        <!-- comment  -->
+        <div class="modal fade" id="sendText" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Send A Text</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <div class="container">
+                <!-- row -->
+                <div class="row">
+                  <div class="col-xl-4">
+
+                    <div class="row">
+                      <div class="col-xl">
+
+                        <div class="list-group text-left" id="list-tab" role="tablist">
+                          <a class="list-group-item list-group-item-action btn-success" id="list-home-list" data-toggle="list" href="#list-home"
+                          role="tab" aria-controls="home"><i class="fas fa-envelope mr-3"></i>Compose</a>
+                          <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home"
+                          role="tab" aria-controls="home"><i class="far fa-file-alt mr-3"></i>Welcome To Got</a>
+                          <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile"
+                          role="tab" aria-controls="profile"><i class="far fa-file-alt mr-3"></i>Trying To Reach</a>
+                          <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages"
+                          role="tab" aria-controls="messages"><i class="far fa-file-alt mr-3"></i>Update Records</a>
+                          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings"
+                          role="tab" aria-controls="settings"><i class="far fa-file-alt mr-3"></i>Hello There!</a>
+                          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings"
+                          role="tab" aria-controls="settings"><i class="far fa-file-alt mr-3"></i>Hello There!</a>
+                          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings"
+                          role="tab" aria-controls="settings"><i class="far fa-file-alt mr-3"></i>Hello There!</a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-xl-8">
+                    <div class="card">
+                      <div class="card-body pt-0">
+                       <div class="tab-content pt-2 pl-2" id="nav-tabContent">
+
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                          <h3 class="text-left dark-grey-text font-weight-bold">Compose Text</h3>
+
+                          <!-- heading -->
+                          <div class="md-form">
+                            <input type="text" id="form1" class="form-control" value="Welcome To Got">
+                            <label for="form1">Template Name: For Name Only Min 5 Characters</label>
+                          </div>
+
+                          <!-- To -->
+                          <div class="md-form">
+                            <input type="text" id="form2" class="form-control">
+                            <label for="form2">To:</label>
+                          </div>
+
+                          <!-- Subject -->
+                          <div class="md-form">
+                            <input type="text" id="form3" class="form-control">
+                            <label for="form3">Subject:</label>
+                          </div>
+
+                          <div class="md-form">
+                            <textarea id="textarea-char-counter" class="form-control md-textarea" length="120" rows="3"></textarea>
+                            <label for="textarea-char-counter">Type your text</label>
+                          </div>
+
+                          <div class="text-right">
+                            <button class="btn btn-primary waves-effect"><i class="fas fa-paper-plane mr-2"></i>Send</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- row -->
+            </div>
+          </div>
+        </div>
+        <!-- Content -->
+        </div>
+        </div>
+        <!--comment -->
+
+        <!-- Send a mail  -->
+        <div class="modal fade" id="sendMail" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Mailbox</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <div class="container">
+                <!-- row -->
+                <div class="row">
+                  <div class="col-xl-4">
+
+                    <div class="row">
+                      <div class="col-xl">
+
+                        <div class="list-group text-left" id="list-tab" role="tablist">
+                          <a class="list-group-item list-group-item-action btn-success" id="list-home-list" data-toggle="list" href="#list-home"
+                          role="tab" aria-controls="home"><i class="fas fa-envelope mr-3"></i>Compose</a>
+                          <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home"
+                          role="tab" aria-controls="home"><i class="far fa-file-alt mr-3"></i>Welcome To Got</a>
+                          <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile"
+                          role="tab" aria-controls="profile"><i class="far fa-file-alt mr-3"></i>Trying To Reach</a>
+                          <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages"
+                          role="tab" aria-controls="messages"><i class="far fa-file-alt mr-3"></i>Update Records</a>
+                          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings"
+                          role="tab" aria-controls="settings"><i class="far fa-file-alt mr-3"></i>Hello There!</a>
+                          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings"
+                          role="tab" aria-controls="settings"><i class="far fa-file-alt mr-3"></i>Hello There!</a>
+                          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings"
+                          role="tab" aria-controls="settings"><i class="far fa-file-alt mr-3"></i>Hello There!</a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-xl-8">
+                    <div class="card">
+                      <div class="card-body pt-0">
+                       <div class="tab-content pt-2 pl-2" id="nav-tabContent">
+
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                          <h3 class="text-left dark-grey-text font-weight-bold">Compose Email</h3>
+
+                          <!-- heading -->
+                          <div class="md-form">
+                            <input type="text" id="form1" class="form-control" value="Welcome To Got">
+                            <label for="form1">Template Name: For Name Only Min 5 Characters</label>
+                          </div>
+
+                          <!-- To -->
+                          <div class="md-form">
+                            <input type="text" id="form2" class="form-control">
+                            <label for="form2">To:</label>
+                          </div>
+
+                          <!-- Subject -->
+                          <div class="md-form">
+                            <input type="text" id="form3" class="form-control">
+                            <label for="form3">Subject:</label>
+                          </div>
+
+                          <div class="md-form">
+                            <textarea id="textarea-char-counter" class="form-control md-textarea" length="120" rows="3"></textarea>
+                            <label for="textarea-char-counter">Type your text</label>
+                          </div>
+
+                          <div class="text-right">
+                            <button class="btn btn-primary waves-effect"><i class="fas fa-paper-plane mr-2"></i>Send</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- row -->
+            </div>
+          </div>
+        </div>
+        <!-- Content -->
+        </div>
+        </div>
+        <!--Send a mail -->
+
+        <!-- assign physicians -->
+        <div class="modal fade" id="assignPhysician" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Assign Physician</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <div class="table-responsive-xl">
+                <table class="table table-striped table-sm datatables">
+                  <thead class="black white-text">
+                    <tr>
+                      <th>Name</th>
+                      <th>DOB</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Ravi</td>
+                      <td>11/10/1999</td>
+                      <td>agrawalravi.1110@gmail.com</td>
+                      <td>9872712063</td>
+                      <td>
+                        <input type="button" class="btn btn-grey m-0 p-2 apButton" value="Assign Physician">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Ravi</td>
+                      <td>11/10/1999</td>
+                      <td>agrawalravi.1110@gmail.com</td>
+                      <td>9872712063</td>
+                      <td>
+                        <input type="button" class="btn btn-grey m-0 p-2 apButton" value="Assign Physician">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Ravi</td>
+                      <td>11/10/1999</td>
+                      <td>agrawalravi.1110@gmail.com</td>
+                      <td>9872712063</td>
+                      <td>
+                        <input type="button" class="btn btn-grey m-0 p-2 apButton" value="Assign Physician">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Ravi</td>
+                      <td>11/10/1999</td>
+                      <td>agrawalravi.1110@gmail.com</td>
+                      <td>9872712063</td>
+                      <td>
+                        <input type="button" class="btn btn-grey m-0 p-2 apButton" value="Assign Physician">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Ravi</td>
+                      <td>11/10/1999</td>
+                      <td>agrawalravi.1110@gmail.com</td>
+                      <td>9872712063</td>
+                      <td>
+                        <input type="button" class="btn btn-grey m-0 p-2 apButton" value="Assign Physician">
+                      </td>
+                    </tr>
+
+
+
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+        </div>
+        <!--assign physicians -->
+
+        <!-- collect a payment -->
+        <div class="modal fade" id="collectMoney" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Select A Payment Method</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+              <div class="row text-center">
+                <div class="col m-2 p-2 " style="border: 3px solid black; border-radius: 10px;">
+                  <a data-target="#debit" data-toggle="modal">
+                    <i class="far fa-credit-card fa-5x mb-3 blue-text"></i>
+                    <h4 class="font-weight-bold">Credit Or Debit Card</h4>
+                  </a>
+                </div>
+
+                <div class="col m-2 p-2" style="border: 3px solid black; border-radius: 10px;">
+                  <a data-target="#cash" data-toggle="modal">
+                    <i class="fas fa-hand-holding-usd fa-5x mb-3 blue-text"></i>
+                    <h4 class="font-weight-bold">Cash</h4>
+                  </a>
+                </div>
+
+                <div class="col m-2 p-2" style="border: 3px solid black; border-radius: 10px;">
+                  <a data-target="#cheque" data-toggle="modal">
+                    <i class="fas fa-money-check-alt fa-5x mb-3 blue-text"></i>
+                    <h4 class="font-weight-bold">Cheque</h4>
+                  </a>
+                </div>
+              </div>
+
+
+              <button class="btn btn-danger waves-effect mt-3" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+        </div>
+        <!--collect a payment -->
+
+
+        <!-- credit/debit -->
+        <div class="modal fade" id="debit" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Payment Via Authorize</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <h4 class="font-weight-bold h4-responsive">Payment Verfication will be Done</h4>
+              <!-- Card holder name -->
+              <div class="md-form">
+                <input type="text" id="holderName" class="form-control">
+                <label for="holderName">Card Holder Name</label>
+              </div>
+              <!-- Card holder name -->
+
+              <!-- Card Number -->
+              <div class="md-form">
+                <input type="number" id="cardNumber" class="form-control">
+                <label for="cardNumber">Card Number</label>
+              </div>
+              <!-- Card Number -->
+
+              <!-- Card CVC -->
+              <div class="md-form">
+                <input type="number" id="cvc" class="form-control">
+                <label for="cvc">Card CVC</label>
+              </div>
+              <!-- Card CVC -->
+
+              <!-- Amount -->
+              <div class="md-form">
+                <input type="number" id="amount" class="form-control">
+                <label for="amount">Amount</label>
+              </div>
+              <!-- AmountC -->
+
+              <!-- Comment -->
+              <div class="md-form">
+                <input type="text" id="comment" class="form-control">
+                <label for="comment">Comment</label>
+              </div>
+              <!-- Comment -->
+
+              <h4 class="font-weight-bold h4-responsive">Billing Information</h4>
+
+              <div class="row">
+                <div class="col">
+                  <!-- First Name -->
+                  <div class="md-form">
+                    <input type="text" id="firstName" class="form-control">
+                    <label for="firstName">First Name</label>
+                  </div>
+                  <!-- First Name -->
+                </div>
+                <div class="col">
+                  <!-- Last Name -->
+                  <div class="md-form">
+                    <input type="text" id="lastName" class="form-control">
+                    <label for="lastName">Last Name</label>
+                  </div>
+                  <!-- Last Name -->
+                </div>
+              </div>
+
+              <!-- company Name -->
+              <div class="md-form">
+                <input type="text" id="companyName" class="form-control">
+                <label for="companyName">company Name</label>
+              </div>
+              <!-- company Name -->
+
+              <!-- Address -->
+              <div class="md-form">
+                <input type="text" id="address" class="form-control">
+                <label for="address">Address</label>
+              </div>
+              <!-- Address -->
+
+              <!-- City -->
+              <div class="md-form">
+                <input type="text" id="city" class="form-control">
+                <label for="city">City</label>
+              </div>
+              <!-- City -->
+
+              <div class="row">
+                <div class="col">
+                  <!-- State -->
+                  <div class="md-form">
+                    <input type="text" id="state" class="form-control">
+                    <label for="state">State</label>
+                  </div>
+                  <!-- State -->
+                </div>
+                <div class="col">
+                  <!-- Zip Code -->
+                  <div class="md-form">
+                    <input type="text" id="zipCode" class="form-control">
+                    <label for="zipCode">Zip Code</label>
+                  </div>
+                  <!-- Zip Code -->
+                </div>
+              </div>
+
+              <!-- Country -->
+              <div class="md-form">
+                <input type="text" id="country" class="form-control">
+                <label for="country">Country</label>
+              </div>
+              <!-- Country -->
+
+              <!-- Email -->
+              <div class="md-form">
+                <input type="email" id="email" class="form-control">
+                <label for="email">Email</label>
+              </div>
+              <!-- Email -->
+
+              <button class="btn btn-success waves-effect">Process</button>
+              <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+        </div>
+        <!--credit/debit -->
+
+
+        <!-- cash -->
+        <div class="modal fade" id="cash" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Cash On The Spot</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              
+              <h4 class="font-weight-bold h4-responsive">Payment Verfication will be Done</h4>
+
+              <!-- Amount -->
+              <div class="md-form">
+                <input type="number" id="amount" class="form-control">
+                <label for="amount">Amount(In $)</label>
+              </div>
+              <!-- AmountC -->
+
+              <!-- Comment -->
+              <div class="md-form">
+                <input type="text" id="comment" class="form-control">
+                <label for="comment">Comment</label>
+              </div>
+              <!-- Comment -->
+
+
+              <button class="btn btn-success waves-effect">Collect</button>
+              <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+        </div>
+        <!--cash -->
+
+
+        <!-- cheque -->
+        <div class="modal fade" id="cheque" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Payment Via Cheque</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <h4 class="font-weight-bold h4-responsive">Payment Verfication will be Done</h4>
+              <!-- Cheque Number -->
+              <div class="md-form">
+                <input type="number" id="chequeNumber" class="form-control">
+                <label for="chequeNumber">Cheque Number</label>
+              </div>
+              <!-- Cheque Number -->
+
+              <!-- Amount -->
+              <div class="md-form">
+                <input type="number" id="amount" class="form-control">
+                <label for="amount">Amount(In $)</label>
+              </div>
+              <!-- Amount -->
+
+              <!-- Cheque Holder Name -->
+              <div class="md-form">
+                <input type="number" id="chequeHolderName" class="form-control">
+                <label for="chequeHolderName">Cheque Holder Name</label>
+              </div>
+              <!--Cheque Holder Name -->
+
+              <!-- Comment -->
+              <div class="md-form">
+                <input type="text" id="comment" class="form-control">
+                <label for="comment">Comment</label>
+              </div>
+              <!-- Comment -->
+
+
+              <button class="btn btn-success waves-effect">Collect</button>
+              <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+        </div>
+        <!--cheque -->
+
+        <!-- confirmation alert for veins patient alert -->
+        <div class="modal fade" id="confirmDelete" tabindex="-1" role="dialog" aria-labe7
+        [piyt4re321lledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+          <!-- Content -->
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <p class="heading lead">Are You Sure?</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <p class="lead">Do you want to delete the record for date of service “populate date of service of record”? This can’t be undone.</p>
+            
+
+              <button class="btn btn-success waves-effect">Yes</button>
+              <button class="btn btn-danger waves-effect" data-dismiss="modal">No</button>
+
+            </div>
+          </div>
+          <!-- Content -->
+        </div>
+        </div>
+        <!--confirmation alert for delete button -->
+
+        
+
+        
+
+
+        <!-- payment request -->
+        <div class="modal fade" id="paymentRequest" tabindex="-1" role="dialog" aria-labe7[piyt4re321lledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-notify modal-primary" role="document">
+            <!-- Content -->
+            <div class="modal-content">
+              <!-- Header -->
+              <div class="modal-header">
+                <span class="white-text">Payment Request</span>
+              </div>
+              <!-- header -->
+
+              <!-- Body -->
+              <div class="modal-body">
+                <div class="alert alert-success" role="alert">
+                Payment Request is sent. You can track it in the Payment Request Section :)
+              </div>
+
+                <div class="md-form">
+                  <input type="text" id="amount" class="form-control">
+                  <label for="amount">Amount(In $)</label>
+                </div>
+
+                <div class="md-form">
+                  <input type="email" id="email" class="form-control">
+                  <label for="email">Email</label>
+                </div>
+
+                <div class="md-form">
+                  <input type="tel" id="phoneNumber" class="form-control">
+                  <label for="phoneNumber">Phone Number</label>
+                </div>
+
+                <div class="md-form">
+                  <textarea id="comments" class="md-textarea form-control" rows="3"></textarea>
+                  <label for="comments">Comments</label>
+                </div>
+
+                <input type="button" name="sendRequest" class="btn btn-success" value="Send Request">
+                <button class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+              </div>
+              <!-- body -->
+            </div>
+            <!-- Content -->
+          </div>
+        </div>
+        <!-- payment request -->
+    
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/tableScript.js"></script>
+    <!-- sidebar JS -->
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/steps.js"></script>
+    <script src="../js/mdb.min.js"></script>
+    
+    <script type="text/javascript">
+        //stage display
+        $(document).ready(function () {
+            $('#d1').DataTable({
+            "scrollY": "200px",
+            "scrollCollapse": true,
+            "bPaginate": false,
+            "bLengthChange": false,
+            "bFilter": false,
+            "bInfo": false,
+            "bAutoWidth": true ,
+            });
+            $('.dataTables_length').addClass('bs-select');
+            });
+    </script>
+</body>
+
+</html>
