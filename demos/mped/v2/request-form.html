@@ -1,0 +1,545 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96678346-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-96678346-4');
+  </script>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+     <title>Request Form</title>
+     <!-- Booststrap css -->
+     <link rel="stylesheet" type="text/css" href="assest/css/forms/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="assest/css/forms/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="icon" href="assest/img/logo.png" type="image/jpg" sizes="32x32">
+     <link rel="stylesheet" type="text/css" href="assest/css/forms/select2.min.css">
+     <link rel="stylesheet" type="text/css" href="assest/css/forms/select2-bootstrap4.min.css">
+     <link rel="stylesheet" type="text/css" href="assest/css/forms/form.css">
+     <link rel="stylesheet" type="text/css" href="assest/css/forms/result.css">
+     <link rel="stylesheet" type="text/css" href="assest/css/forms/style.css">
+     <link rel="stylesheet" type="text/css" href="assest/css/forms/typography.css">
+     <link rel="icon" href="assest/img/rtplogo.png" type="image/jpg" sizes="32x32">
+     <!-- extra css -->
+     <link href="assest/css/main.css" rel="stylesheet">
+     <link href="assest/vendor/icofont/icofont.min.css" rel="stylesheet">
+     <link href="assest/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+     <link href="assest/vendor/venobox/venobox.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+          <div class="d-flex flex-column">
+
+          <div class="profile">
+            <img src="assest/img/rtplogo.png" alt="" class="img-fluid">
+            <div class="text-center">
+            <select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|af">Afrikaans</option><option value="en|sq">Albanian</option><option value="en|ar">Arabic</option><option value="en|hy">Armenian</option><option value="en|az">Azerbaijani</option><option value="en|eu">Basque</option><option value="en|be">Belarusian</option><option value="en|bg">Bulgarian</option><option value="en|ca">Catalan</option><option value="en|zh-CN">Chinese (Simplified)</option><option value="en|zh-TW">Chinese (Traditional)</option><option value="en|hr">Croatian</option><option value="en|cs">Czech</option><option value="en|da">Danish</option><option value="en|nl">Dutch</option><option value="en|en">English</option><option value="en|et">Estonian</option><option value="en|tl">Filipino</option><option value="en|fi">Finnish</option><option value="en|fr">French</option><option value="en|gl">Galician</option><option value="en|ka">Georgian</option><option value="en|de">German</option><option value="en|el">Greek</option><option value="en|ht">Haitian Creole</option><option value="en|iw">Hebrew</option><option value="en|hi">Hindi</option><option value="en|hu">Hungarian</option><option value="en|is">Icelandic</option><option value="en|id">Indonesian</option><option value="en|ga">Irish</option><option value="en|it">Italian</option><option value="en|ja">Japanese</option><option value="en|ko">Korean</option><option value="en|lv">Latvian</option><option value="en|lt">Lithuanian</option><option value="en|mk">Macedonian</option><option value="en|ms">Malay</option><option value="en|mt">Maltese</option><option value="en|no">Norwegian</option><option value="en|fa">Persian</option><option value="en|pl">Polish</option><option value="en|pt">Portuguese</option><option value="en|ro">Romanian</option><option value="en|ru">Russian</option><option value="en|sr">Serbian</option><option value="en|sk">Slovak</option><option value="en|sl">Slovenian</option><option value="en|es">Spanish</option><option value="en|sw">Swahili</option><option value="en|sv">Swedish</option><option value="en|th">Thai</option><option value="en|tr">Turkish</option><option value="en|uk">Ukrainian</option><option value="en|ur">Urdu</option><option value="en|vi">Vietnamese</option><option value="en|cy">Welsh</option><option value="en|yi">Yiddish</option></select><div id="google_translate_element2"></div>
+                      
+            </div>
+          </div>
+
+          <nav class="nav-menu">
+            <ul>
+              <li class="active"><a href="index.html#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+              <li><a href="index.html#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+              <li><a href="index.html#resources"><i class="fab fa-wpforms"></i> <span>Patient Resource Center</span></a></li>
+              <li><a href="index.html#services"><i class="bx bx-server"></i> Services</a></li>
+              <li><a href="index.html#portfolio"><i class="bx bx-file-blank"></i> <span>Insurance</span></a></li>
+              <li><a href="index.html#doctors"><i class="bx bx-user"></i> <span>Our Staff</span></a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="bx bx-clipboard"></i>Compliance Forms
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown2">
+                  <a class="dropdown-item" href="BAA.html">BAA</a>
+                  <a class="dropdown-item" href="HIPAA.html">HIPAA</a>
+                  <a class="dropdown-item" href="ND.html">Non-Disclosure</a>
+                </div>
+              </li>
+            </ul>
+          </nav><!-- .nav-menu -->
+          <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+          <div class="contact-detail mt-3">
+           <ul style="list-style: none;padding-left: 0;">
+            <li class="mb-1"><a href="#"><i class="fas fa-map-marker-alt mr-1"></i> <span>7037 Rose Ave Orlando FL 32810</span></a></li>
+              <li class="mb-1"><a href="#"><i class="fas fa-envelope mr-1"></i> <span>rtpdemo@gmail.com</span></a></li>
+              <li class="mb-1"><a href="#"><i class="fas fa-phone mr-1"></i> <span>888-503-1636</span></a></li> 
+           </ul>
+          </div>
+        </div>
+      </header><!-- End Header -->
+
+    <main id="main">
+
+      
+            <section id="rfstep1" class="section">
+    			  <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <h1><b>Request Form</b></h1>
+                </div>
+              </div>
+            </div>
+            <div class="container head-container text-center">
+    				<div class="row">
+    			  		<div class="col-sm-6">
+    						<!--<img src="assest/img/rtplogo.png" id="logo1">-->	
+    					</div>
+    	      			<div class="col-sm-5" id="rfc">
+    						<!--<h1 id="rft">Request Form</h1>-->	
+    					</div>
+    				</div>
+    					
+    			  </div>
+    			  
+    			  <div class="container form-container text-center fadeInDown">
+    				
+    				<div class="" id="strips1">
+    				  		<legend class="font-weight-bold" id="pagetitles">Your Information</legend>
+    				</div>
+    	      		
+    				<!--Your Name-->
+    	      		<div class="form-group">
+    	      		  <label for="yourname" class="col-sm-12 control-label">Your Name</label>
+    	      		  <div class="col-sm-12">
+    	      		    <input required type="text" id="yourname" class="fadeInDown" name="yourname" placeholder="Your Name">
+    	      		  </div>
+    	      		</div>
+    	      		<!--Your Name-->
+
+    				<!--Upload ID-->
+                    <div class="form-group">
+                      <label id="formlable" for="fileToUpload" class="col-sm-12 ">Upload ID</label>
+                      <div class="col-sm-12">
+                         <input required type="file" id="uploadid" class="fadeInDown" placeholder="Upload ID" autofocus>
+                     </div>
+                    </div>
+                    <!--Upload ID-->
+
+    				<div class="card" id="btncard">
+    				<a href="#">
+              <img src="assest/img/buttons/pi.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assest/img/buttons/pihover.png'" onmouseout="this.src='assest/img/buttons/pi.png'" id="rfsteponenext">
+    				</a>
+    				</div>
+
+    	      	</div>
+    	      	</section>
+
+
+           <section id="rfstep2" class="section">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <h1><b>Request Form</b></h1>
+                </div>
+              </div>
+            </div>
+            <div class="container head-container text-center">
+            <div class="row">
+                <div class="col-sm-6">
+                <!--<img src="assest/img/rtplogo.png" id="logo1">-->  
+              </div>
+                  <div class="col-sm-5" id="rfc">
+                <!--<h1 id="rft">Request Form</h1>--> 
+              </div>
+            </div>
+              
+            </div>
+            
+            <div class="container form-container text-center slide">
+            
+            <div class="" id="strips1">
+                  <legend class="font-weight-bold" id="pagetitles">Patient Information</legend>
+            </div>
+                
+              <!--Patient Name-->
+              <div class="form-group">
+                <label for="patientname" class="col-sm-12 control-label">Patient Name</label>
+                <div class="col-sm-12">
+                <input required type="text" id="patientname" name="patientname" placeholder="Patient Name">
+                </div>
+              </div>
+              <!--Patient Name-->
+      
+              <!--Date-->
+              <div class="form-group">
+                <label id="formlable" for="birthDate" class="col-sm-12 control-label">Date of Birth</label>
+                  <div class="col-sm-12">
+                    <input required type="date" id="birthDate" class="" placeholder="Date of Birth" autofocus>
+                  </div>
+              </div>
+              <!--Date-->
+
+              <div class="row">
+
+              <div class="card col" id="backbtncard">
+                <a href="#">
+                    <img src="assest/img/buttons/ba.png" alt="" class="img-fluid btn-start">
+                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="rfsteptwoback">
+                </a>
+              </div>
+
+              <div class="card col" id="nextbtncard">
+                  <a href="#">
+                    <img src="assest/img/buttons/pi.png" alt="" class="img-fluid btn-start">
+                    <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="rfsteptwonext">
+                  </a>
+              </div>  
+                
+              </div>
+              
+      
+          </div>
+         </section>
+
+         <section id="rfstep3" class="section">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <h1><b>Request Form</b></h1>
+                </div>
+              </div>
+            </div>
+            <div class="container head-container text-center">
+            <div class="row">
+                <div class="col-sm-6">
+                <!--<img src="assest/img/rtplogo.png" id="logo1">-->  
+              </div>
+                  <div class="col-sm-5" id="rfc">
+                <!--<h1 id="rft">Request Form</h1>--> 
+              </div>
+            </div>
+              
+            </div>
+            
+            <div class="container form-container text-center slide">
+            
+            <div class="" id="strips1">
+                  <legend class="font-weight-bold" id="pagetitles">Request Information</legend>
+            </div>
+                
+              <!--Document Type-->
+            <div class="form-group">
+              <label for="doctype" class="col-sm-12 control-label">Document Type</label>
+              <div class="col-sm-12">
+              <select name="documentTypes" class="form-control" required="" id="docs">
+                <option value="" selected="">Choose Your Option</option>
+                <option value="1">Physical</option>
+                <option value="2">Shot Records</option>
+                <option value="3">School Records</option>
+                <option value="4">Others</option>
+              </select>
+              </div>
+            </div>
+            <!--Document Type-->
+
+            <!--Collection Type-->
+            <div class="form-group">
+              <label for="collectiontype" class="col-sm-12 control-label">Collection Type</label>
+              <div class="col-sm-12">
+              <select name="collectionTypes" class="form-control" required="" id="docs">
+                <option value="" selected="">Choose Your Option</option>
+                <option value="1">Pick Up In Office</option>
+                <option value="2">Email</option>
+                <option value="3">Fax</option>
+                <option value="4">Others</option>
+              </select>
+              </div>
+            </div>
+            <!--Collection Type-->
+
+            <!--Upload Document-->
+                    <div class="form-group">
+                      <label id="formlable" for="fileToUpload" class="col-sm-12 control-label">Upload Document</label>
+                      <div class="col-sm-12">
+                         <input type="file" id="uploaddoc3" class="" placeholder="Upload Document" autofocus>
+                     </div>
+                    </div>
+                    <!--Upload Document-->
+
+            <div class="row">
+              
+            <div class="card col" id="backbtncard">
+              <a href="#">
+                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid btn-start">
+                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="rfstepthreeback">
+              </a>
+            </div>
+
+            <div class="card col" id="nextbtncard">
+                <a href="#">
+                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid btn-start">
+                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="rfstepthreenext">
+                </a>
+              </div>  
+              
+            </div>
+
+        </div>
+            </section>
+
+            <section id="rfstep4" class="section">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <h1><b>Request Form</b></h1>
+                </div>
+              </div>
+            </div>
+            <div class="container head-container text-center">
+            <div class="row">
+                <div class="col-sm-6">
+                <!--<img src="assest/img/rtplogo.png" id="logo1">-->  
+              </div>
+                  <div class="col-sm-5" id="rfc">
+                <!--<h1 id="rft">Request Form</h1>--> 
+              </div>
+            </div>
+              
+            </div>
+            
+              <div class="container form-container text-center slide">
+            
+            <div class="" id="strips1">
+                  <legend class="font-weight-bold" id="pagetitles">Contact Information</legend>
+            </div>
+            
+              <!--Email Address-->
+              <div class="form-group">
+              <label id="formlable" for="email" class="col-sm-12 control-label">Email Address</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="email" class="" placeholder="Enter Email Address" class="form-control" autofocus>
+                  </div>
+              </div>
+              <!--Email Address-->
+      
+              <!--Phone Number-->
+              <div class="form-group">
+                <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Phone Number</label>
+                <div class="col-sm-12">
+                <input required type="tel" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
+                </div>
+              </div>
+              <!--Phone Number-->
+      
+              <!--Fax Number-->
+              <div class="form-group">
+                <label id="formlable" for="faxnumber" class="col-sm-12 control-label">Fax Number</label>
+                <div class="col-sm-12">
+                <input required type="tel" id="faxnumber" class="" name="faxNumber" placeholder="Fax Number">
+                </div>
+              </div>
+              <!--Fax Number-->
+      
+              <div class="row">
+              
+              <div class="card col" id="backbtncard">
+                <a href="#">
+                    <img src="assest/img/buttons/ba.png" alt="" class="img-fluid btn-start">
+                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="rfstepfourback">
+                </a>
+              </div>
+      
+              <div class="card col" id="nextbtncard">
+                  <a href="#">
+                    <img src="assest/img/buttons/pi.png" alt="" class="img-fluid btn-start">
+                    <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="rfstepfournext">
+                  </a>
+                </div>  
+                
+              </div>
+      
+            </div>
+            </section>
+
+            <section id="rfstep5" class="section">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <h1><b>Request Form</b></h1>
+                </div>
+              </div>
+            </div>
+            <div class="container head-container text-center">
+            <div class="row">
+                <div class="col-sm-6">
+                <!--<img src="assest/img/rtplogo.png" id="logo1">-->  
+              </div>
+                  <div class="col-sm-5" id="rfc">
+                <!--<h1 id="rft">Request Form</h1>--> 
+              </div>
+            </div>
+              
+            </div>
+            
+            <div class="container form-container slide">
+            <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3"> Your Information </h4>
+              </div>
+                <table class="table table-striped">
+                  <tbody id="tbd">
+                    <tr>
+                      <th id="th1">Your Name</th>
+                      <td id="td1">Shakir Ansari</td>
+                    </tr>
+                    <tr>
+                      <th id="th1">Upload ID</th>
+                      <td id="td1">File</td>
+                    </tr>
+                  </tbody>
+              </table>
+              
+              <div class="" id="strips1">
+              <h4 class="font-weight-bold my-3"> Patient Information </h4>
+              </div>
+              <table class="table table-striped">
+                <tbody id="tbd">
+                <tr>
+                  <th id="th1">Patient Name</th>
+                  <td id="td1">Heather</td>
+                    </tr>
+                    <tr>
+                      <th id="th1">Patient Date of Birth</th>
+                      <td id="td1">20/02/1990</td>
+                    </tr>
+                  </tbody>
+              </table>
+              
+              <div class="" id="strips1">
+              <h4 class="font-weight-bold my-3"> Request Information  </h4>
+              </div>
+                <table class="table table-striped">
+                <tbody id="tbd">
+                <tr>
+                      <th id="th1">Document Type</th>
+                      <td id="td1">docFile</td>
+                    </tr>
+                    <tr>
+                      <th id="th1">Collection Type</th>
+                      <td id="td1">Email</td>
+                    </tr>
+                    <tr>
+                      <th id="th1">Upload Document</th>
+                      <td id="td1">docFile</td>
+                    </tr>
+                  </tbody>
+              </table>
+
+              <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3"> Contact Information  </h4>
+              </div>
+                <table class="table table-striped">
+                <tbody id="tbd">
+                <tr>
+                      <th id="th1">Email Address</th>
+                      <td id="td1">heather@gmail.com</td>
+                    </tr>
+                    <tr>
+                      <th id="th1">Phone Number</th>
+                      <td id="td1">9153595831</td>
+                </tr>
+                <tr>
+                      <th id="th1">Fax Number</th>
+                      <td id="td1">9153595832</td>
+                </tr>
+                  </tbody>
+                </table>
+
+                <div class="row">
+              
+              <div class="card  col" id="backbtncard">
+                <a href="#">
+                    <img src="assest/img/buttons/ba.png" alt="" class="img-fluid btn-start">
+                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="rfstepfiveback">
+                </a>
+              </div>
+      
+              <div class="card  col" id="nextbtncard">
+                  <a href="#">
+                    <img src="assest/img/buttons/se.png" alt="" class="img-fluid btn-start">
+                    <img src="assest/img/buttons/sehover.png" alt="" class="img-fluid btn-start img-top" id="rfstepfivesubmit">
+                  </a>
+                </div>  
+                
+              </div>
+                
+              </div>
+            </section>
+
+    </main>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; 2020 Copyright: <span><a href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a></span>
+        </div>
+      </div>
+    </footer><!-- End  Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    
+
+    <script type="text/javascript" src="assest/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assest/js/popper.min.js"></script>
+    <script type="text/javascript" src="assest/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assest/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assest/js/custom.js"></script>
+    <script type="text/javascript" src="assest/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="assest/js/mask.js"></script>
+    <script type="text/javascript">
+          $(document).ready(function(){
+        $('#rfstep1').css({'display':'block'});
+        $("#rfsteponenext").click(function(){
+        $('#rfstep1').css({'display':'none'});
+        $('#rfstep2').css({'display':'block'});
+      });
+      $("#rfsteptwoback").click(function(){
+        $('#rfstep2').css({'display':'none'});
+        $('#rfstep1').css({'display':'block'});
+      });
+      $("#rfsteptwonext").click(function(){
+        $('#rfstep2').css({'display':'none'});
+        $('#rfstep3').css({'display':'block'});
+      });
+      $("#rfstepthreeback").click(function(){
+        $('#rfstep3').css({'display':'none'});
+        $('#rfstep2').css({'display':'block'});
+      });
+      $("#rfstepthreenext").click(function(){
+        $('#rfstep3').css({'display':'none'});
+        $('#rfstep4').css({'display':'block'});
+      });
+      $("#rfstepfourback").click(function(){
+        $('#rfstep4').css({'display':'none'});
+        $('#rfstep3').css({'display':'block'});
+      });
+      $("#rfstepfournext").click(function(){
+        $('#rfstep4').css({'display':'none'});
+        $('#rfstep5').css({'display':'block'});
+      });
+      $("#rfstepfiveback").click(function(){
+        $('#rfstep5').css({'display':'none'});
+        $('#rfstep4').css({'display':'block'});
+      });
+      })
+  
+    </script>
+    
+  <script src="https://desk.zoho.com/portal/api/feedbackwidget/171918000001748149?orgId=642064172&displayType=popout"></script>
+  <script type="text/javascript">
+    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"fc7419b0bac87beaf78d08583abd967e32e2d0769bce422fef99d3d69b81fcbb", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
+  </script>
+</body>
+    </html>

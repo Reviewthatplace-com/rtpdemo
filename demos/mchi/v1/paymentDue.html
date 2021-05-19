@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+ 
+<head> 
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+ <title>Payment Due</title>
+ <!-- Booststrap css -->
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/jquery-ui.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="icon" href="assest/img/logo.png" type="image/jpg" sizes="32x32">
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/select2.min.css">
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/select2-bootstrap4.min.css">
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/form.css">
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/result.css">
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/style.css">
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/typography.css">
+ 
+</head>
+<body>
+  <div id="loader"></div>
+        
+        <section id="step-0" class="section active m-b-40" style="margin-top: 100px;">
+          <div class="container form-container slide">
+            <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3 text-center"> Payment Due </h4>
+              <hr>
+            </div>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th>Patient Name</th>
+                      <td id="td1">Shakir Ansari</td>
+                    </tr>
+                    <tr>
+                      <th>Date Of Birth</th>
+                      <td id="td1">11/22/1998</td>
+                    </tr>
+                    <tr>
+                      <th>Amount Due:</th>
+                      <td id="td1">$120</td>
+                    </tr>
+                    <tr>
+                      <th>Date of Service:</th>
+                      <td id="td1">11/27/2020</td>
+                    </tr>
+                    <tr>
+                  <th>Sent By:</th>
+                      <td id="td1">RTP Medical Solution</td>
+                    </tr>
+                    <tr>
+                      <th>Sent Date:</th>
+                      <td id="td1">11/26/2020</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              <div class="row">
+            
+                <div class="card col" id="backbtncard">
+                  <a href="">
+                      <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                      <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+                  </a>
+                </div>
+        
+                <div class="card col" id="nextbtncard">
+                    <a href="">
+                      <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                      <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+                    </a>
+                </div>	
+                  
+              </div>
+                
+          </div>
+        </section>
+  
+        <section id="step-1" class="section active m-b-40">
+          <div class="container form-container slide">
+              <h3 class="font-weight-bold h3Spacing text-center">Payment</h3>
+              <hr>
+                <form class="floating-labels">
+                      <!-- first row -->
+                      <div class="row text-center">
+                        <div class="col-lg-12">
+                          <!-- first name -->
+                          <div class="form-group focused m-b-40">
+                            <label for="" class="col-sm-12 control-label">Card Holder Name</label>
+                            <div class="col-sm-12">
+                              <input required type="text" id="" class="" name="" placeholder="Card Holder Name">
+                            </div>
+                          </div>
+                          <!-- first name -->
+                        </div>
+                        <div class="col-lg-12">
+                          <!-- Card Number -->
+                          <div class="form-group focused m-b-40">
+                            <label for="" class="col-sm-12 control-label">Card Number</label>
+                            <div class="col-sm-12">
+                              <input required type="text" id="" class="" name="" placeholder="Card Number">
+                            </div>
+                          </div>
+                          <!-- Card Number -->
+                        </div>
+                      </div>
+                      <!-- first row -->
+
+                      <!-- second row -->
+                      <div class="row text-center">
+                        <div class="col-lg-12">
+                          <!-- Card CVC -->
+                          <div class="form-group focused m-b-40">
+                            <label for="" class="col-sm-12 control-label">Card CVC</label>
+                            <div class="col-sm-12">
+                              <input required type="text" id="" class="" name="" placeholder="Card CVC">
+                            </div>
+                          </div>
+                          <!-- Card CVC -->
+                        </div>
+                        <div class="col-lg-12">
+                          <!-- ZIP -->
+                          <div class="form-group focused m-b-40">
+                            <label for="" class="col-sm-12 control-label">ZIP</label>
+                            <div class="col-sm-12">
+                              <input required type="text" id="" class="" name="" placeholder="ZIP">
+                            </div>
+                          </div>
+                          <!-- ZIP -->
+                        </div>
+                      </div>
+                      <!-- second row -->
+
+                      <!-- Third row -->
+                      <div class="row text-center">
+                        <div class="col-lg-12">
+                          <!-- Amount -->
+                          <div class="form-group focused m-b-40">
+                            <label for="" class="col-sm-12 control-label">Amount</label>
+                            <div class="col-sm-12">
+                              <input required type="text" id="" class="" name="" placeholder="$$$">
+                            </div>
+                          </div>
+                          <!-- Amount -->
+                        </div>
+                        <div class="col-lg-12">
+                          <!-- last name -->
+                          <div class="form-group">
+                            <label for="" class="control-label">Comment:</label>
+                            <textarea class="form-control" id=""></textarea>
+                        </div>
+                          <!-- last name -->
+                        </div>
+                      </div>
+                      <!-- Third row -->
+                </form>
+
+                <div class="row">
+            
+                  <div class="card col" id="backbtncard">
+                    <a href="">
+                        <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                        <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+                    </a>
+                  </div>
+          
+                  <div class="card col" id="nextbtncard">
+                      <a href="">
+                        <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                        <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+                      </a>
+                  </div>	
+                    
+                </div>
+          </div>
+        </section>
+
+        <section id="step-2" class="section active m-b-40">
+          <div class="container form-container slide">
+            <h3 class="text-center boldText">THANK YOU FOR VISITING<br>RTP MEDICAL SOLUTIONS</h3> 
+          </div>
+        </section>
+
+        <!-- ============================================================== -->
+        <!-- All Jquery -->
+        <!-- ============================================================== -->
+        <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap tether Core JavaScript -->
+        <script src="assets/node_modules/popper/popper.min.js"></script>
+        <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- slimscrollbar scrollbar JavaScript -->
+        <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+        <!--Wave Effects -->
+        <script src="dist/js/waves.js"></script>
+        <!--Menu sidebar -->
+        <script src="dist/js/sidebarmenu.js"></script>
+        <!--stickey kit -->
+        <script src="assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+        <script src="assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+        <!--Custom JavaScript -->
+        <script src="dist/js/custom.min.js"></script> 
+</body>
+</html>

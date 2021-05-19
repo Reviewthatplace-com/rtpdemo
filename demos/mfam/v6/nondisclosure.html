@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+ <title>Non-disclosure</title>
+ <!-- Booststrap css -->
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/jquery-ui.min.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/select2.min.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/select2-bootstrap4.min.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/form.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/result.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/style.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/typography.css">
+ <link rel="icon" href="assets/img/favicon.jpg" type="image/jpg" sizes="32x32">
+ <!-- extra css -->
+ <link href="assets/css/signature/jquery.signaturepad.css" rel="stylesheet">
+</head>
+<body>
+
+  
+  <main>
+    <form method="post" enctype="multipart/form-data">
+      <!-- {{csrf_field()}} -->
+
+      <section id="ndcstep1" class="section">
+        <div class="container head-container text-center">
+          <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-5" id="rfc"></div>
+          </div>
+        </div>
+
+        <div class="container form-container text-center slide" style="max-width: 1130px !important; height: 450px; overflow-y: scroll; padding: 50px;">
+          <div class="text-justify">
+            <p><strong>HIPAA/CONFIDENTIALITY AGREEMENT (NON-EMPLOYEE)</strong></p>
+            <p>As a non-employee who is on the premises of _________(hereafter “Practice”) you may have access to Protected Health Information (“PHI”) as well as “confidential” information. Both are valuable and sensitive information and protected by law. This Agreement will set out the terms and conditions which information created or received by or on behalf of the Practice may be used or disclosed under state law and the Health Insurance Portability and Accountability Act and updated through HIPAA Omnibus Rule of 2013 (hereafter “HIPAA”)</p>
+            <p>Confidential information includes, but is not limited to any information about employees, any computer log-on codes or passwords, physician information, any financial information, any proprietary information, or anything that is otherwise designated as confidential by the Practice.</p>
+            <p>Protected Health Information (hereafter “PHI”) includes all identifiers under C.F.R. § 164.514 and defined under HIPAA as individually identifiable health information, held or maintained by the Practice that is transmitted or maintained in any form or medium.</p>
+            <p>Disclosure and use of PHI or confidential information includes, but is not limited to, the display or distribution of tangible physical documentation, in whole or in part, from any source or in any format (e.g., oral, electronic, paper, digital, internet, social networks, posting, FAX, etc.)</p>
+            <p>As a non-employee of the Practice, I, the undersigned agree to comply with the following terms:</p>
+            <ol type="ordered">
+              <li>All data available to me will be treated as confidential information.</li>
+              <br>
+              <li>I will not access any confidential information, including personnel, billing or private information, or PHI for which I have no responsibilities or need to know</li>
+              <br>
+              <li>I will not use or disclose any confidential or PHI information in violation of HIPAA or any other applicable law.</li>
+              <br>
+              <li>All confidential and PHI information I receive will be held and treated as confidential and will not be disclosed in any manner whatsoever, in whole or part, except as authorized by HIPAA and state law.</li>
+              <br>
+              <li>I will not divulge, copy, release, sell, loan, review, alter or destroy any confidential information or PHI except as properly authorized by the Practice and within the scope of my professional activities. </li>
+              <br>
+              <li>I will immediately report suspected disclosures of PHI or confidential information to the Practice.</li>
+            </ol>
+            <p>Upon the end of my relationship with the Practice, I understand that disclosure of confidential information or PHI is prohibited indefinitely, even after termination of my business relationship with the Practice.</p>
+            <p>Under state and federal law and regulations governing an individual’s right to privacy, I understand I may be subjected to civil fines for which I may be personally responsible and criminal sanctions for unlawful or unauthorized access to or use or disclosure of an individual’s confidential information.</p>
+            <p>I understand that if I violate any of the terms set out above, I may be subject to disciplinary actions, including loss of privileges, termination of contract, legal action for monetary damages or injunction, or both, or any other remedy available to the Practice. <strong>With my signature set out below, I have read, understand and acknowledge agreement to all of the above statements regarding my responsibility for compliance with this Agreement.</strong></p>
+          </div>
+        </div>
+
+        <div class="card slide" id="btncard" style="background-color: rgba(245, 245, 245, 0) !important; margin-left: 600px;">
+          <a href="#">
+            <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="btnimg1">
+            <img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="ndcsteponenext">
+          </a>
+        </div>
+
+      </section>
+
+      <section id="ndcstep2" class="section">
+        <div class="container head-container text-center">
+          <div class="row">
+            <div class="col-sm-6">
+              <!--<img src="assets/img/rtplogo.png" id="logo1">-->  
+            </div>
+            <div class="col-sm-5" id="rfc">
+              <!--<h1 id="rft1">Request Form</h1>-->  
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container form-container text-center">
+
+          <!--Your Information-->
+          <div class="form-group  slide">
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Your Information</legend>
+            </div>
+            <label for="yourname" class="col-sm-12 control-label">First Name</label>
+            <div class="col-sm-12">
+              <input required type="text" id="yourname" class="" name="yourname" placeholder="First Name">
+            </div>
+            <br>
+
+            <label for="yourname" class="col-sm-12 control-label">Last Name</label>
+            <div class="col-sm-12">
+              <input required type="text" id="yourname" class="" name="yourname" placeholder="Last Name">
+            </div>
+            <br>              
+            <label id="formlable" for="" class="col-sm-12 control-label">Date of Birth</label>
+            <div class="col-sm-12">
+              <input required type="date" id="" class="" placeholder="Date of Birth" autofocus>
+            </div>
+
+          </div>
+          <!--Your Information-->
+
+          <div class="card" id="btncard">
+            <a href="#">
+              <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="btnimg1">
+              <img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="ndcsteptwonext">
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="ndcstep3" class="section">
+        <div class="container head-container text-center">
+          <div class="row">
+            <div class="col-sm-6">
+              <!--<img src="assets/img/rtplogo.png" id="logo1">-->  
+            </div>
+            <div class="col-sm-5" id="rfc">
+              <!--<h1 id="rft1">Request Form</h1>-->  
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Your Address</legend>
+          </div>
+
+          <div class="form-group  slide">
+            <label for="yourname" class="col-sm-12 control-label">Street</label>
+            <div class="col-sm-12">
+              <input required type="text" id="yourname" class="" name="yourname" placeholder="Street">
+            </div>
+            <br>
+
+            <label for="yourname" class="col-sm-12 control-label">City</label>
+            <div class="col-sm-12">
+              <input required type="text" id="yourname" class="" name="yourname" placeholder="City">
+            </div>
+            <br>
+
+            <label for="yourname" class="col-sm-12 control-label">State</label>
+            <div class="col-sm-12">
+              <input required type="text" id="yourname" class="" name="yourname" placeholder="State">
+            </div>
+            <br>
+
+            <label for="yourname" class="col-sm-12 control-label">Zip</label>
+            <div class="col-sm-12">
+              <input required type="text" id="yourname" class="" name="yourname" placeholder="Zip">
+            </div>
+          </div>
+
+
+          <div class="row">
+
+            <div class="card  col" id="backbtncard">
+              <a href="#">
+                <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                <img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="ndcstepthreeback">
+              </a>
+            </div>
+
+            <div class="card  col" id="nextbtncard">
+              <a href="#">
+                <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                <img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="ndcstepthreenext">
+              </a>
+            </div>  
+
+          </div>
+
+
+        </div>
+      </section>
+
+      <section id="ndcstep4" class="section">
+        <div class="container head-container text-center">
+          <div class="row">
+            <div class="col-sm-6">
+              <!--<img src="assets/img/rtplogo.png" id="logo1">-->  
+            </div>
+            <div class="col-sm-5" id="rfc">
+              <!--<h1 id="rft1">Request Form</h1>-->  
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container form-container text-center slide">
+
+          <div>
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Your Contact</legend>
+            </div>
+
+            <div class="form-group">
+              <label for="" class="col-sm-12 control-label">Phone</label>
+              <div class="col-sm-12">
+                <input required type="text" id="" class="" name="" placeholder="Phone">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label for="" class="col-sm-12 control-label">Cell</label>
+              <div class="col-sm-12">
+                <input required type="text" id="text1" class="" name="" placeholder="Cell">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label for="" class="col-sm-12 control-label">Email</label>
+              <div class="col-sm-12">
+                <input required type="text" id="text1" class="" name="" placeholder="Email">
+              </div>
+            </div>          
+          </div>
+
+          <div class="row">   
+            <div class="card col" id="backbtncard">
+              <a href="#">
+                <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                <img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="ndcstepfourback">
+              </a>
+            </div>
+
+            <div class="card col" id="nextbtncard">
+              <a href="#">
+                <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                <img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="ndcstepfournext">
+              </a>
+            </div>  
+
+          </div>
+
+        </div>
+      </section>
+
+      <section id="ndcstep5" class="section">
+        <div class="container head-container text-center">
+          <div class="row">
+            <div class="col-sm-6">
+              <!--<img src="assets/img/rtplogo.png" id="logo1">-->  
+            </div>
+            <div class="col-sm-5" id="rfc">
+              <!--<h1 id="rft1">Request Form</h1>-->  
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Confirm your Information</legend>
+          </div>
+
+          <div class="form-group">
+            <label for="" class="col-sm-12 control-label">Your Name</label>
+            <div class="col-sm-12">
+              <input required type="text" id="" class="" name="" placeholder="Your Name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="" class="col-sm-12 control-label">Signature</label>
+            <div class="col-12">
+              <div class="sigPad" style="width:404px;" id="smoothed1">
+                <ul class="sigNav">
+                  <li class="drawIt"><a href="#draw-it">Do your Signature</a></li>
+                  <li class="clearButton"><a href="#clear">Clear</a></li>
+                </ul>
+                <div class="sig sigWrapper" style="height:auto;">
+                  <div class="typed"></div>
+                  <canvas class="pad" width="400" height="250"></canvas>
+                  <input type="hidden" name="sign5" class="output" id="sign5">
+                </div>
+                <span class="error-span" id="error_sign5"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="card  col" id="backbtncard">
+              <a href="#">
+                <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                <img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="ndcstepfiveback">
+              </a>
+            </div>
+
+            <div class="card  col" id="nextbtncard">
+              <a href="#">
+                <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                <img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="ndcstepfivenext">
+              </a>
+            </div>  
+
+          </div>
+
+        </div>
+      </section>
+
+      <section id="ndcstep6" class="section">
+        <div class="container head-container text-center">
+          <div class="row">
+            <div class="col-sm-6">
+              <!--<img src="assets/img/rtplogo.png" id="logo1">-->  
+            </div>
+            <div class="col-sm-5" id="rfc">
+              <!--<h1 id="rft1">Request Form</h1>-->  
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container form-container slide">
+          <div class="col-12" id="strips">
+            <h4 class="font-weight-bold my-3" id="p11t">Your Information</h4>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>First Name</th>
+                <td id="td1">Shakir</td>
+              </tr>
+              <tr>
+                <th>Last Name</th>
+                <td id="td1">Ansari</td>
+              </tr>
+              <tr>
+                <th>Date Of Birth</th>
+                <td id="td1">11/10/1990</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="col-12" id="strips">
+            <h4 class="font-weight-bold my-3" id="p11t"> Your Address </h4>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>Street</th>
+                <td id="td1">7037 Rose Ave</td>
+              </tr>
+              <tr>
+                <th>City</th>
+                <td id="td1">Orlando</td>
+              </tr>
+              <tr>
+                <th>State</th>
+                <td id="td1">FL</td>
+              </tr>
+              <tr>
+                <th>Zip</th>
+                <td id="td1">32810</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="col-12" id="strips">
+            <h4 class="font-weight-bold my-3" id="p11t">Your Contact</h4>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>Phone</th>
+                <td id="td1">9153595860</td>
+              </tr>
+              <tr>
+                <th>Cell</th>
+                <td id="td1">9156548752</td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td id="td1">X@gmail.com</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="col-12" id="strips">
+            <h5 class="font-weight-bold my-3" id="p11t">Confirm your Information</h5>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>Your Name</th>
+                <td id="td1">Saimun</td>
+              </tr>
+              <tr>
+                <th>Signature</th>
+                <td id="td1"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="row">
+
+            <div class="card  col" id="backbtncard">
+              <a href="#">
+                <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                <img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="ndcstepsixback">
+              </a>
+            </div>
+
+            <div class="card  col" id="nextbtncard">
+              <a href="">
+                <img src="assets/img/buttons/se.png" alt="" class="img-fluid btn-start" id="nextbtn" style="margin-top: 10px;">
+                <img src="assets/img/buttons/sehover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn" style="margin-top: 10px;">
+              </a>
+            </div>  
+
+          </div>
+
+        </div>
+      </section>
+    </form>
+  </main>
+
+
+  <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/popper.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  <script type="text/javascript" src="assets/js/mask.js"></script>
+  <script type="text/javascript" src="assets/js/signature/bezier.js"></script>
+  <script type="text/javascript" src="assets/js/signature/jquery.signaturepad.js"></script>
+  <script type="text/javascript" src="assets/js/signature/json2.min.js"></script>
+  <script type="text/javascript" src="assets/js/signature/numeric.min.js"></script>
+
+  <script type="text/javascript">
+   $(document).ready(function() {
+     $('#smoothed1').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+     $('#smoothed2').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+     $('#smoothed3').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+     $('#smoothed4').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+     $('#smoothed5').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+     $('#smoothed6').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+   });
+   $(document).ready(function(){
+    $('#ndcstep1').css({'display':'block'});
+    $("#ndcsteponenext").click(function(){
+      $('#ndcstep1').css({'display':'none'});
+      $('#ndcstep2').css({'display':'block'});
+    });
+    $("#ndcsteptwonext").click(function(){
+      $('#ndcstep2').css({'display':'none'});
+      $('#ndcstep3').css({'display':'block'});
+    });
+    $("#ndcstepthreenext").click(function(){
+      $('#ndcstep3').css({'display':'none'});
+      $('#ndcstep4').css({'display':'block'});
+    });
+    $("#ndcstepthreeback").click(function(){
+      $('#ndcstep3').css({'display':'none'});
+      $('#ndcstep2').css({'display':'block'});
+    });
+    $("#ndcstepfournext").click(function(){
+      $('#ndcstep4').css({'display':'none'});
+      $('#ndcstep5').css({'display':'block'});
+    });
+    $("#ndcstepfourback").click(function(){
+      $('#ndcstep4').css({'display':'none'});
+      $('#ndcstep3').css({'display':'block'});
+    });
+    $("#ndcstepfivenext").click(function(){
+      $('#ndcstep5').css({'display':'none'});
+      $('#ndcstep6').css({'display':'block'});
+    });
+    $("#ndcstepfiveback").click(function(){
+      $('#ndcstep5').css({'display':'none'});
+      $('#ndcstep4').css({'display':'block'});
+    });
+    $("#ndcstepsixback").click(function(){
+      $('#ndcstep6').css({'display':'none'});
+      $('#ndcstep5').css({'display':'block'});
+    });
+  }) 
+</script>
+</body>
+</html>

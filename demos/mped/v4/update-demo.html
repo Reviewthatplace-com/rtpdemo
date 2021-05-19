@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96678346-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-96678346-4');
+  </script>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+	<title>Update Demo</title>
+	<!-- Booststrap css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/forms/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/forms/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/forms/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/forms/select2-bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/forms/form.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/forms/result.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/forms/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/forms/typography.css">
+	<link rel="icon" href="assets/img/favicon.jpg" type="image/jpg" sizes="32x32">
+	<!-- extra css -->
+	<link href="assets/css/main.css" rel="stylesheet">
+	<link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">     
+</head>
+<body>
+
+	<!-- ======= Top Bar ======= -->
+	<div id="topbar" class="d-none d-lg-flex align-items-center fixed-top ">
+		<div class="container d-flex align-items-center justify-content-between">
+			<div class="contact-info">
+				<ul>
+					<li><i class="icofont-envelope"></i><a href="mailto:rtpdemo@gmail.com">rtpdemo@gmail.com</a></li>
+					<li><i class="icofont-phone"></i> 888-503-1636</li>
+					<li><i class="icofont-clock-time icofont-flip-horizontal"></i> Mon-Fri 9am - 5pm</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+	<div class="container-fluid d-flex justify-content-between align-items-center">
+
+		<a href="index.html" class="logo"><img src="assets/img/rtplogo.png" alt="" class="img-fluid"></a>
+
+		<nav class="nav-menu d-none d-lg-block">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li class="active"><a href="resource.html">Resources</a></li>
+				<li class="drop-down"><a>Compliance</a>
+					<ul>
+						<li><a onclick=" window.open('baa.html', '_blank'); return false;" data-toggle="modal">BAA</a></li>
+						<li><a onclick=" window.open('hipaa.html', '_blank'); return false;" data-toggle="modal">HIPAA</a></li>
+						<li><a onclick=" window.open('nondisclosure.html', '_blank'); return false;" data-toggle="modal">Nondisclosure</a></li>
+					</ul>
+				</li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="insurance.html">Insurance</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="team.html">Team</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav><!-- .nav-menu -->
+
+		<div class="header-social-links">
+			<select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|af">Afrikaans</option><option value="en|sq">Albanian</option><option value="en|ar">Arabic</option><option value="en|hy">Armenian</option><option value="en|az">Azerbaijani</option><option value="en|eu">Basque</option><option value="en|be">Belarusian</option><option value="en|bg">Bulgarian</option><option value="en|ca">Catalan</option><option value="en|zh-CN">Chinese (Simplified)</option><option value="en|zh-TW">Chinese (Traditional)</option><option value="en|hr">Croatian</option><option value="en|cs">Czech</option><option value="en|da">Danish</option><option value="en|nl">Dutch</option><option value="en|en">English</option><option value="en|et">Estonian</option><option value="en|tl">Filipino</option><option value="en|fi">Finnish</option><option value="en|fr">French</option><option value="en|gl">Galician</option><option value="en|ka">Georgian</option><option value="en|de">German</option><option value="en|el">Greek</option><option value="en|ht">Haitian Creole</option><option value="en|iw">Hebrew</option><option value="en|hi">Hindi</option><option value="en|hu">Hungarian</option><option value="en|is">Icelandic</option><option value="en|id">Indonesian</option><option value="en|ga">Irish</option><option value="en|it">Italian</option><option value="en|ja">Japanese</option><option value="en|ko">Korean</option><option value="en|lv">Latvian</option><option value="en|lt">Lithuanian</option><option value="en|mk">Macedonian</option><option value="en|ms">Malay</option><option value="en|mt">Maltese</option><option value="en|no">Norwegian</option><option value="en|fa">Persian</option><option value="en|pl">Polish</option><option value="en|pt">Portuguese</option><option value="en|ro">Romanian</option><option value="en|ru">Russian</option><option value="en|sr">Serbian</option><option value="en|sk">Slovak</option><option value="en|sl">Slovenian</option><option value="en|es">Spanish</option><option value="en|sw">Swahili</option><option value="en|sv">Swedish</option><option value="en|th">Thai</option><option value="en|tr">Turkish</option><option value="en|uk">Ukrainian</option><option value="en|ur">Urdu</option><option value="en|vi">Vietnamese</option><option value="en|cy">Welsh</option><option value="en|yi">Yiddish</option></select><div id="google_translate_element2"></div>
+			<script type="text/javascript">
+				function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+			</script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+			<script type="text/javascript">
+				/* <![CDATA[ */
+				eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+				/* ]]> */
+			</script>
+		</div>
+
+	</div>
+
+</header><!-- End Header -->
+
+<main>
+	<form method="post" enctype="multipart/form-data">
+		<!-- {{csrf_field()}} -->
+
+		<section id="ufstep1" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1><b>Update Demo</b></h1>
+					</div>
+				</div>
+			</div>
+			<div class="container head-container text-center">
+				<div class="row">
+					<div class="col-sm-6">
+						<!--<img src="assets/img/rtplogo.png" id="logo1">-->	
+					</div>
+					<div class="col-sm-5" id="rfc">
+						<!--<h1 id="rft">Request Form</h1>-->	
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="container form-container text-center fadeInDown">
+
+				<div class="" id="strips1">
+					<legend class="font-weight-bold" id="pagetitles">Patient Information</legend>
+				</div>
+
+				<!--Patient Full Name-->
+				<div class="form-group">
+					<label for="patientfullname" class="col-sm-12 control-label">Patient Full Name</label>
+					<div class="col-sm-12">
+						<input required type="text" id="patientfullname" class="" name="patientfullname" placeholder="Patient Full Name">
+					</div>
+				</div>
+				<!--Patient Full Name-->
+
+				<!--Date-->
+				<div class="form-group">
+					<label id="formlable" for="birthDate" class="col-sm-12 control-label">Date of Birth</label>
+					<div class="col-sm-12">
+						<input required type="date" id="birthDate" class="" placeholder="Date of Birth" autofocus>
+					</div>
+				</div>
+				<!--Date-->
+
+				<!--Sex-->
+				<div class="form-group">
+					<label for="sex" class="col-sm-12 control-label">Sex</label>
+					<div class="col-sm-12">
+						<select name="sex" class="form-control" required="" id="docs">
+							<option value="" selected="">Choose Your Option</option>
+							<option value="1">Male</option>
+							<option value="2">Female</option>
+							<option value="3">Others</option>
+						</select>
+					</div>
+				</div>
+				<!--Sex-->
+
+				<div class="card " id="btncard">
+					<a href="#">
+						<img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start">
+						<img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="ufsteponenext">
+					</a>
+				</div>
+
+				<!--<input required type="submit" id="btn" class="" value="Patient Information">-->
+
+			</div>
+		</section>
+
+		<section id="ufstep2" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1><b>Update Demo</b></h1>
+					</div>
+				</div>
+			</div>
+			<div class="container head-container text-center">
+				<div class="row">
+					<div class="col-sm-6">
+						<!--<img src="assets/img/rtplogo.png" id="logo1">-->	
+					</div>
+					<div class="col-sm-5" id="rfc">
+						<!--<h1 id="rft">Request Form</h1>-->	
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="container form-container text-center slide">
+
+				<div class="" id="strips1">
+					<legend class="font-weight-bold" id="pagetitles">Contact Information</legend>
+				</div>
+
+				<!--Email Address-->
+				<div class="form-group">
+					<label id="formlable" for="email" class="col-sm-12 control-label">Email Address</label>
+					<div class="col-sm-12">
+						<input required type="text" id="email" class="" placeholder="Enter Email Address" class="form-control" autofocus>
+					</div>
+				</div>
+				<!--Email Address-->
+
+				<!--Phone Number-->
+				<div class="form-group">
+					<label id="formlable" for="phonenumber" class="col-sm-12 control-label">Phone Number</label>
+					<div class="col-sm-12">
+						<input required type="tel" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
+					</div>
+				</div>
+				<!--Phone Number-->
+
+				<div class="row">
+
+					<div class="card col" id="backbtncard">
+						<a href="#">
+							<img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start">
+							<img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="ufsteptwoback">
+						</a>
+					</div>
+
+					<div class="card col" id="nextbtncard">
+						<a href="#">
+							<img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start">
+							<img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="ufsteptwonext">
+						</a>
+					</div>	
+					
+				</div>
+				
+
+			</div>
+		</section>
+
+		<section id="ufstep3" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1><b>Update Demo</b></h1>
+					</div>
+				</div>
+			</div>
+			<div class="container head-container text-center">
+				<div class="row">
+					<div class="col-sm-6">
+						<!--<img src="assets/img/rtplogo.png" id="logo1">-->	
+					</div>
+					<div class="col-sm-5" id="rfc">
+						<!--<h1 id="rft">Request Form</h1>-->	
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="container form-container text-center slide">
+
+				<div class="" id="strips1">
+					<legend class="font-weight-bold" id="pagetitles">Address</legend>
+				</div>
+
+				<!--Street-->
+				<div class="form-group">
+					<label for="address" class="col-sm-12 control-label">Street</label>
+					<div class="col-sm-12">
+						<input required type="text" id="street" class="" name="street" placeholder="Street">
+					</div>
+				</div>
+				<!--Street-->
+
+				<!--City-->
+				<div class="form-group">
+					<label for="address" class="col-sm-12 control-label">City</label>
+					<div class="col-sm-12">
+						<input required type="text" id="city" class="" name="city" placeholder="City">
+					</div>
+				</div>
+				<!--City-->
+
+				<!--State-->
+				<div class="form-group">
+					<label for="address" class="col-sm-12 control-label">State</label>
+					<div class="col-sm-12">
+						<input required type="text" id="state" class="" name="state" placeholder="state">
+					</div>
+				</div>
+				<!--State-->
+
+				<!--Zip-->
+				<div class="form-group">
+					<label for="address" class="col-sm-12 control-label">Zip</label>
+					<div class="col-sm-12">
+						<input required type="text" id="zip" class="" name="zip" placeholder="zip">
+					</div>
+				</div>
+				<!--Zip-->
+
+				<div class="row">
+
+					<div class="card  col" id="backbtncard">
+						<a href="#">
+							<img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start">
+							<img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="ufstepthreeback">
+						</a>
+					</div>
+
+					<div class="card  col" id="nextbtncard">
+						<a href="#">
+							<img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start">
+							<img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="ufstepthreenext">
+						</a>
+					</div>	
+
+				</div>
+
+			</div>
+		</section>
+
+		<section id="ufstep4" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1><b>Update Demo</b></h1>
+					</div>
+				</div>
+			</div>
+			<div class="container head-container text-center">
+				<div class="row">
+					<div class="col-sm-6">
+						<!--<img src="assets/img/rtplogo.png" id="logo1">-->	
+					</div>
+					<div class="col-sm-5" id="rfc">
+						<!--<h1 id="rft">Request Form</h1>-->	
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="container form-container text-center slide">
+
+				<div class="" id="strips1">
+					<legend class="font-weight-bold" id="pagetitles">Insurance Information</legend>
+				</div>
+
+				<!--Insurance-->
+				<div class="form-group">
+					<label for="insurance" class="col-sm-12 control-label">Insurance</label>
+					<div class="col-sm-12">
+						<select name="insurance" class="form-control" required="" id="docs">
+							<option value="" selected="">Choose Your Option</option>
+							<option value="1">Self Pay</option>
+							<option value="2">Aetna</option>
+							<option value="3">Avmed</option>
+							<option value="4">Cigna</option>
+							<option value="5">Humana</option>
+							<option value="6">Wellcare / Staywell</option>
+							<option value="7">Simply / Amerigroup</option>
+							<option value="8">Medicaid</option>
+							<option value="9">Sunshine</option>
+							<option value="10">Sunshine – Ambetter</option>
+							<option value="11">United Health Care</option>
+							<option value="12">CignaTri Care / Out of Network</option>
+							<option value="13">Av-Med / True Blue</option>
+							<option value="14">Bluecross Blue Shield / True Blue</option>
+						</select>
+					</div>
+				</div>
+				<!--Insurance-->
+
+				<!--Insurance ID-->
+				<div class="form-group">
+					<label for="insruanceid" class="col-sm-12 control-label">Insurance ID</label>
+					<div class="col-sm-12">
+						<input required type="text" id="insruanceid" class="" name="insruanceid" placeholder="Insurance ID">
+					</div>
+				</div>
+				<!--Insurance ID-->
+
+				<!--SSN-->
+				<div class="form-group">
+					<label for="SSN" class="col-sm-12 control-label">SSN</label>
+					<div class="col-sm-12">
+						<input required type="text" id="SSN" class="" name="SSN" placeholder="SSN">
+					</div>
+				</div>
+				<!--SSN-->
+
+				<div class="row">
+
+					<div class="card col" id="backbtncard">
+						<a href="#">
+							<img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start">
+							<img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="ufstepfourback">
+						</a>
+					</div>
+
+					<div class="card col" id="nextbtncard">
+						<a href="#">
+							<img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start">
+							<img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="ufstepfournext">
+						</a>
+					</div>	
+					
+				</div>
+
+			</div>
+		</section>
+
+		<section id="ufstep5" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1><b>Update Demo</b></h1>
+					</div>
+				</div>
+			</div>
+			<div class="container head-container text-center">
+				<div class="row">
+					<div class="col-sm-6">
+						<!--<img src="assets/img/rtplogo.png" id="logo1">-->	
+					</div>
+					<div class="col-sm-5" id="rfc">
+						<!--<h1 id="rft">Request Form</h1>-->	
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="container form-container text-center slide">
+
+				<div class="" id="strips1">
+					<legend class="font-weight-bold" id="pagetitles">Other Information</legend>
+				</div>
+
+				<!--Pharmacy-->
+				<div class="form-group">
+					<label for="pharmacy" class="col-sm-12 control-label">Pharmacy</label>
+					<div class="col-sm-12">
+						<input required type="text" id="pharmacy" class="" name="pharmacy" placeholder="Pharmacy">
+					</div>
+				</div>
+				<!--Pharmacy-->
+
+				<!--Upload Document-->
+				<div class="form-group">
+					<label id="formlable" for="fileToUpload" class="col-sm-12 control-label">Upload Document</label>
+					<div class="col-sm-12">
+						<input required type="file" id="uploaddoc1" class="" placeholder="Upload Document" autofocus>
+					</div>
+				</div>
+				<!--Upload Document-->
+
+				<!--Comment-->
+				<div class="form-group">
+					<label for="comment" class="col-sm-12 control-label">Comment</label>
+					<div class="col-sm-12">
+						<textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
+					</div>
+				</div>
+				<!--Comment-->
+
+				<div class="row">
+
+					<div class="card  col" id="backbtncard">
+						<a href="#">
+							<img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start">
+							<img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="ufstepfiveback">
+						</a>
+					</div>
+
+					<div class="card  col" id="nextbtncard">
+						<a href="#">
+							<img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start">
+							<img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="ufstepfivenext">
+						</a>
+					</div>	
+					
+				</div>
+
+			</div>
+		</section>
+
+		<section id="ufstep6" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1><b>Update Demo</b></h1>
+					</div>
+				</div>
+			</div>
+			<div class="container head-container text-center">
+				<div class="row">
+					<div class="col-sm-6">
+						<!--<img src="assets/img/rtplogo.png" id="logo1">-->	
+					</div>
+					<div class="col-sm-5" id="rfc">
+						<!--<h1 id="rft">Request Form</h1>-->	
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="container form-container slide">
+				<div class="col-12" id="strips1">
+					<h4 class="font-weight-bold my-3"> Patient Information </h4>
+				</div>
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<th>Patient Full Name</th>
+							<td id="td1">Heather</td>
+						</tr>
+						<tr>
+							<th>Patient Date of Birth</th>
+							<td id="td1">20/02/1990</td>
+						</tr>
+						<tr>
+							<th>Sex</th>
+							<td id="td1">Female</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="col-12" id="strips1">
+					<h4 class="font-weight-bold my-3"> Contact Information </h4>
+				</div>
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<th>Email Address</th>
+							<td id="td1">heather@gmail.com</td>
+						</tr>
+						<tr>
+							<th>Phone Number</th>
+							<td id="td1">9153595831</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="col-12" id="strips1">
+					<h4 class="font-weight-bold my-3"> Address </h4>
+				</div>
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<th>Street</th>
+							<td id="td1">2717 US-89</td>
+						</tr>
+						<tr>
+							<th>City</th>
+							<td id="td1">Ogden</td>
+						</tr>
+						<tr>
+							<th>State</th>
+							<td id="td1">UT</td>
+						</tr>
+						<tr>
+							<th>Zip</th>
+							<td id="td1">84414</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="col-12" id="strips1">
+					<h4 class="font-weight-bold my-3"> Insurance Information </h4>
+				</div>
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<th>Insurance</th>
+							<td id="td1">Aetna</td>
+						</tr>
+						<tr>
+							<th>Insurance ID</th>
+							<td id="td1">1235457845451</td>
+						</tr>
+						<tr>
+							<th>SSN</th>
+							<td id="td1"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="col-12" id="strips1">
+					<h4 class="font-weight-bold my-3"> Other Information </h4>
+				</div>
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<th>Pharmacy</th>
+							<td id="td1">Aetna</td>
+						</tr>
+						<tr>
+							<th>Comment</th>
+							<td id="td1">Great Demo</td>
+						</tr>
+						<tr>
+							<th>Upload DOcument</th>
+							<td id="td1">DocFile</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="row">
+
+					<div class="card  col" id="backbtncard">
+						<a href="#">
+							<img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start">
+							<img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="ufstepsixback">
+						</a>
+					</div>
+
+					<div class="card  col" id="nextbtncard">
+						<a href="#">
+							<img src="assets/img/buttons/se.png" alt="" class="img-fluid btn-start">
+							<img src="assets/img/buttons/sehover.png" alt="" class="img-fluid btn-start img-top">
+						</a>
+					</div>	
+					
+				</div>
+
+			</div>
+		</section>
+	</form>
+</main>
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+	<div class="container">
+		<div class="copyright">
+			&copy; 2020 Copyright: <strong><span><a href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a></span></strong>
+		</div>
+		
+	</div>
+</footer><!-- End  Footer -->
+
+<script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/mask.js"></script>
+<script type="text/javascript">
+// update form buttons click
+
+$(document).ready(function(){
+	$('#ufstep1').css({'display':'block'});
+	$("#ufsteponenext").click(function(){
+		$('#ufstep1').css({'display':'none'});
+		$('#ufstep2').css({'display':'block'});
+	});
+	$("#ufsteptwoback").click(function(){
+		$('#ufstep2').css({'display':'none'});
+		$('#ufstep1').css({'display':'block'});
+	});
+	$("#ufsteptwonext").click(function(){
+		$('#ufstep2').css({'display':'none'});
+		$('#ufstep3').css({'display':'block'});
+	});
+	$("#ufstepthreeback").click(function(){
+		$('#ufstep3').css({'display':'none'});
+		$('#ufstep2').css({'display':'block'});
+	});
+	$("#ufstepthreenext").click(function(){
+		$('#ufstep3').css({'display':'none'});
+		$('#ufstep4').css({'display':'block'});
+	});
+	$("#ufstepfourback").click(function(){
+		$('#ufstep4').css({'display':'none'});
+		$('#ufstep3').css({'display':'block'});
+	});
+	$("#ufstepfournext").click(function(){
+		$('#ufstep4').css({'display':'none'});
+		$('#ufstep5').css({'display':'block'});
+	});
+	$("#ufstepfiveback").click(function(){
+		$('#ufstep5').css({'display':'none'});
+		$('#ufstep4').css({'display':'block'});
+	});
+	$("#ufstepfivenext").click(function(){
+		$('#ufstep5').css({'display':'none'});
+		$('#ufstep6').css({'display':'block'});
+	});
+	$("#ufstepsixback").click(function(){
+		$('#ufstep6').css({'display':'none'});
+		$('#ufstep5').css({'display':'block'});
+	});
+})
+
+</script>
+  <script src="assets/js/custom2.js"></script>
+  <script src="https://desk.zoho.com/portal/api/feedbackwidget/171918000001748149?orgId=642064172&displayType=popout"></script>
+  <script type="text/javascript">
+    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"fc7419b0bac87beaf78d08583abd967e32e2d0769bce422fef99d3d69b81fcbb", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
+  </script>
+</body>
+</html>

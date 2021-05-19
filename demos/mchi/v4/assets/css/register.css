@@ -1,0 +1,138 @@
+.step-content
+{
+  display: none !important;
+}
+.active .step-content
+{
+  display: block !important;
+}
+.has-error
+{
+  padding: 10px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.form-group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+}
+.form-control[type='text'], .form-control[type='email'], .form-control[type='number'], .form-control[type='tel'], .form-control[type='password'], .form-control[type='date'], 
+  select.form-control , textarea.form-control{
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid black;
+  outline: 0;
+  font-size: 1.3rem;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form-group label {
+  position: absolute;
+  top: 0;
+  display: block;
+  font-size: 1.1rem;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+/* reset input */
+.form-control{
+  &:required,&:invalid { box-shadow:none; }
+}
+.intial_hidden
+{
+  display: none;
+}
+
+fieldset
+{
+  background-color:white;
+}
+fieldset.fieldset-border
+{
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+legend
+{
+  font-size: 1.1rem;
+  margin-left:0px;
+}
+
+.form-checkbox, .form-radio {
+  padding:2px;
+  max-width: 100% !important;
+  display: inline-block;
+  margin-right: 8px;
+  background:white;
+}
+.checklabel,.radiolabel{
+  display:block;
+  width:100%;
+  border:2px solid #60B2FF;
+  background: white;
+  border-radius:12px;
+  text-align:center;
+  padding:5px 1em;
+  font-size:1rem;
+  box-shadow:0 0 1px 1px rgba(0,0,0,0.2);
+}
+.checklabel:hover, .radiolabel:hover {
+  background:#ddd;
+}
+.checkbox, .radio {
+  display: none;
+}
+.checkbox:focus + label, .radio:focus + label{
+  border-color:#60B2FF;
+} 
+.checkbox:active + label {
+  background-color: #ddd;
+}
+.checkbox:checked + label, .radio:checked + label {
+  background-position: 0 0;
+  background-color: #60B2FF;
+  color: white;
+}
+/*==============================mobile view===========================*/
+@media only screen and (max-width: 750px)
+{
+  .form-checkbox, .form-radio
+  {
+    margin-right: 5px !important;
+  }
+  .checklabel, .radiolabel
+  {
+    padding:8px !important;
+    font-size:14px !important;
+  }
+  .form-group label
+  {
+    font-size: 15px;
+  }
+
+  fieldset
+  {
+    padding: 12px;
+  }
+  legend
+  {
+    font-size: 16px;
+  }
+  .form-control[type='text'], .form-control[type='email'], .form-control[type='number'], .form-control[type='tel'], .form-control[type='password'], .form-control[type='date'], 
+  select.form-control , textarea.form-control
+  {
+    font-size: 1rem;
+  }
+  .step-content 
+  {
+    padding-right: 20px;
+  }
+}

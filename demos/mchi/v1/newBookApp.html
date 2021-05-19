@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head> 
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+ <title>Request Appointment</title>
+ <!-- Booststrap css -->
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/jquery-ui.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="icon" href="assest/img/logo.png" type="image/jpg" sizes="32x32">
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/result.css">
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/style.css">
+ <link rel="stylesheet" type="text/css" href="assest/css/custom.css">
+ <link rel="stylesheet" type="text/css" href="assest/css/forms/typography.css">
+ 
+</head>
+<body>
+	<div id="loader"></div>
+<header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light py-0" id="topbar">
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">
+          <img class="img-fluid" id="logo" alt="rtplogo" src="assest/img/rtplogo.png">        
+        </a>
+
+        <a class="navbar-brand" href="#" id="desk">
+          <h1 id="rft1">Request Appointment</h1>       
+        </a>
+
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+			<div class="text-right">
+					<!-- GTranslate: https://gtranslate.io/ -->
+			<a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;" title="French" class="gflag nturl" style="background-position:-200px -100px;"><img data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="French" /></a><a href="#" onclick="doGTranslate('en|de');return false;" title="German" class="gflag nturl" style="background-position:-300px -100px;"><img data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="German" /></a><a href="#" onclick="doGTranslate('en|it');return false;" title="Italian" class="gflag nturl" style="background-position:-600px -100px;"><img data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Italian" /></a><a href="#" onclick="doGTranslate('en|pt');return false;" title="Portuguese" class="gflag nturl" style="background-position:-300px -200px;"><img data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Portuguese" /></a><a href="#" onclick="doGTranslate('en|ru');return false;" title="Russian" class="gflag nturl" style="background-position:-500px -200px;"><img data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Russian" /></a><a href="#" onclick="doGTranslate('en|es');return false;" title="Spanish" class="gflag nturl" style="background-position:-600px -200px;"><img data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Spanish" /></a>
+
+			<style type="text/css">
+        a.gflag {vertical-align:middle;font-size:16px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/16.png);}
+        a.gflag img {border:0;}
+        a.gflag:hover {background-image:url(//gtranslate.net/flags/16a.png);}
+        #goog-gt-tt {display:none !important;}
+        .goog-te-banner-frame {display:none !important;}
+        .goog-te-menu-value:hover {text-decoration:none !important;}
+        body {top:0 !important;}
+        #google_translate_element2 {display:none!important;}
+			</style>
+
+			<br /><select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|af">Afrikaans</option><option value="en|sq">Albanian</option><option value="en|ar">Arabic</option><option value="en|hy">Armenian</option><option value="en|az">Azerbaijani</option><option value="en|eu">Basque</option><option value="en|be">Belarusian</option><option value="en|bg">Bulgarian</option><option value="en|ca">Catalan</option><option value="en|zh-CN">Chinese (Simplified)</option><option value="en|zh-TW">Chinese (Traditional)</option><option value="en|hr">Croatian</option><option value="en|cs">Czech</option><option value="en|da">Danish</option><option value="en|nl">Dutch</option><option value="en|en">English</option><option value="en|et">Estonian</option><option value="en|tl">Filipino</option><option value="en|fi">Finnish</option><option value="en|fr">French</option><option value="en|gl">Galician</option><option value="en|ka">Georgian</option><option value="en|de">German</option><option value="en|el">Greek</option><option value="en|ht">Haitian Creole</option><option value="en|iw">Hebrew</option><option value="en|hi">Hindi</option><option value="en|hu">Hungarian</option><option value="en|is">Icelandic</option><option value="en|id">Indonesian</option><option value="en|ga">Irish</option><option value="en|it">Italian</option><option value="en|ja">Japanese</option><option value="en|ko">Korean</option><option value="en|lv">Latvian</option><option value="en|lt">Lithuanian</option><option value="en|mk">Macedonian</option><option value="en|ms">Malay</option><option value="en|mt">Maltese</option><option value="en|no">Norwegian</option><option value="en|fa">Persian</option><option value="en|pl">Polish</option><option value="en|pt">Portuguese</option><option value="en|ro">Romanian</option><option value="en|ru">Russian</option><option value="en|sr">Serbian</option><option value="en|sk">Slovak</option><option value="en|sl">Slovenian</option><option value="en|es">Spanish</option><option value="en|sw">Swahili</option><option value="en|sv">Swedish</option><option value="en|th">Thai</option><option value="en|tr">Turkish</option><option value="en|uk">Ukrainian</option><option value="en|ur">Urdu</option><option value="en|vi">Vietnamese</option><option value="en|cy">Welsh</option><option value="en|yi">Yiddish</option></select><div id="google_translate_element2"></div>
+			<script type="text/javascript">
+			function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+			</script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+			<script type="text/javascript">
+			/* <![CDATA[ */
+			eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+			/* ]]> */
+			</script>
+			</div>
+        </ul>
+        <!-- Links -->
+
+        <a class="navbar-brand" id="mobile1">
+          <h1 id="rft1">Request Appointment</h1>       
+        </a>
+
+      </div>
+    </nav>
+    <!--/.Navbar-->
+
+
+    <!--Navbar-->
+    <div class="container" id="menu-bar">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="">
+              mchi
+            </a>
+            <!-- Collapse button -->
+            <button class="navbar-toggler" aria-expanded="false" aria-controls="basicExampleNav" aria-label="Toggle navigation" type="button" data-target="#basicExampleNav" data-toggle="collapse">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+
+              <!-- Links -->
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item main-nav-item">
+                  <a class="nav-link mainNavLinks" href="index.html#home-section">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item main-nav-item">
+                  <a class="nav-link mainNavLinks" href="index.html#about-section">About Us</a>
+                </li>
+                <li class="nav-item main-nav-item">
+                  <a class="nav-link mainNavLinks" href="index.html#portal-section">Patient Resource Center</a>
+                </li>
+                <li class="nav-item main-nav-item">
+                  <a class="nav-link mainNavLinks" href="index.html#service-section">Services</a>
+                </li>
+                <li class="nav-item main-nav-item">
+                  <a class="nav-link mainNavLinks" href="index.html#blog">Blogs</a>
+                </li>
+                <li class="nav-item main-nav-item">
+                  <a class="nav-link mainNavLinks" href="index.html#insurance-section">Insurance</a>
+                </li>
+                <li class="nav-item main-nav-item">
+                  <a class="nav-link mainNavLinks" href="index.html#team-section">Our Team</a>
+                </li>
+                <li class="nav-item main-nav-item">
+                  <a class="nav-link mainNavLinks" href="index.html#social-row">Contact Us</a>
+                </li>
+              </ul>
+              <!-- Links -->
+            </div>
+            <!-- Collapsible content -->
+          </div>
+      </nav>
+    </div>
+    <!--/.Navbar-->
+</header>
+	
+<main>
+  <form method="post" enctype="multipart/form-data">
+	      	<!-- {{csrf_field()}} -->
+
+	      <section id="step-0" class="section active">
+
+          <!-- Calendar -->
+          <div class="col-xl-12" data-aos="fade-up">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <div class="content1" id="rastep0">
+                    <div class="calendar-container">
+                      <div class="calendar"> 
+                        <div class="year-header"> 
+                          <span class="left-button" id="prev"> &lang; </span> 
+                          <span class="year" id="label"></span> 
+                          <span class="right-button" id="next"> &rang; </span>
+                        </div> 
+                        <table class="months-table"> 
+                          <tbody>
+                            <tr class="months-row">
+                              <td class="month">Jan</td> 
+                              <td class="month">Feb</td> 
+                              <td class="month">Mar</td> 
+                              <td class="month">Apr</td> 
+                              <td class="month">May</td> 
+                              <td class="month">Jun</td> 
+                              <td class="month">Jul</td>
+                              <td class="month">Aug</td> 
+                              <td class="month">Sep</td> 
+                              <td class="month">Oct</td>          
+                              <td class="month">Nov</td>
+                              <td class="month">Dec</td>
+                            </tr>
+                          </tbody>
+                        </table> 
+                        
+                        <table class="days-table"> 
+                          <td class="day">Sun</td> 
+                          <td class="day">Mon</td> 
+                          <td class="day">Tue</td> 
+                          <td class="day">Wed</td> 
+                          <td class="day">Thu</td> 
+                          <td class="day">Fri</td> 
+                          <td class="day">Sat</td>
+                        </table> 
+                        <div class="frame"> 
+                          <table class="dates-table"> 
+                              <tbody class="tbody">             
+                              </tbody> 
+                          </table>
+                        </div> 
+                        <!--<button class="button" id="add-button">Add Event</button>-->
+                      </div>
+                    </div>
+                    <div class="event-container">
+                      <section id="rastep1" class="section1">
+                        <div class="row">
+                          <h3 class="font-weight800 text-white" style="margin-left: 25%;">Pick A Service</h3>
+                          <div class="col-12 text-center">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2" id="rasteponenext">Initial visit</button>
+                          </div>
+                          <div class="col-12 text-center">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2">Physical</button>
+                          </div>
+                          <div class="col-12 text-center">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2">Follow Up</button>
+                          </div>
+                          <div class="col-12 text-center">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2">Lab</button>
+                          </div>
+                        </div>                        
+                      </section>
+
+                      <section id="rastep2" class="section1">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-2" id="rasteptwoback" style="margin-left: 5px; margin-top: -25px;">Back</button>
+                        <div class="row">
+                          <p class="font-weight800 mt-1 text-white" style="font-size: 20px;margin-left: 15%">Available Appointment Times</p>
+                          <div class="col-12 text-center">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-2" id="rasteptwonext">08:00 AM - 09:00 AM</button>
+                          </div>
+                          <div class="col-12 text-center mt-2">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-2">09:00 AM - 10:00 AM</button>
+                          </div>
+                          <div class="col-12 text-center mt-2">
+                            <button class="btn gradient-button gradient-button-1 customButtonWidth font-weight-2">10:00 AM - 11:00 AM</button>
+                          </div>  
+                        </div>                     
+                      </section>
+                    </div>
+                    <div class="dialog" id="dialog">
+                        <h2 class="dialog-header"> Add New Event </h2>
+                        <form class="form" id="form">
+                          <div class="form-container" align="center">
+                            <label class="form-label" id="valueFromMyButton" for="name">Event name</label>
+                            <input class="input" type="text" id="name" maxlength="36">
+                            <label class="form-label" id="valueFromMyButton" for="count">Number of people to invite</label>
+                            <input class="input" type="number" id="count" min="0" max="1000000" maxlength="7">
+                            <input type="button" value="Cancel" class="button" id="cancel-button">
+                            <input type="button" value="OK" class="button" id="ok-button">
+                          </div>
+                        </form>
+                    </div>
+                  </div>
+
+                  <!-- Request Form-->
+                  <section id="rastep3" class="section2">
+                    <div class="content2">
+                        <div class="container">
+                              <div class="row">
+                                <div class="col-md-12 text-center">
+                                  <h2 class="text-white"><b>Request Appointment</b></h2>
+                                </div>
+                              </div>
+                        </div>
+                        
+                        <div class="container text-center">
+                          <div class="slide">
+                             <legend class="font-weight-bold" id="pagetitles">Patient Informaiton</legend>
+                          </div>
+                              
+                          <!--Patient Full Name-->
+                          <div class="form-group">
+                                <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Patient Full Name</label>
+                                <div class="col-sm-12">
+                                  <input required type="text" id="patientfullname" class=" slide" name="patientfullname" placeholder="Patient Full Name">
+                                </div>
+                          </div>
+                          <!--Patient Full Name-->
+                  
+                          <!--Date-->
+                            <div class="form-group">
+                              <label id="formlable" for="birthDate" class="col-sm-12 font-weight-3 slide">Date of Birth</label>
+                                <div class="col-sm-12">
+                                  <input required type="date" id="birthDate" class=" slide" placeholder="Date of Birth" autofocus>
+                                </div>
+                            </div>
+                          <!--Date-->
+                          
+                          <div class="row text-center">
+                            <div class="col-md-6">
+                              <button class="btn gradient-button gradient-button-1 formbackButton font-weight-1 col-md-6 slide" id="rastepthreeback">Back</button> 
+                            </div>
+                            <div class="col-md-6">
+                              <button class="btn gradient-button gradient-button-1 formnextButton font-weight-1 col-md-6 slide" id="rastepthreenext">Next</button> 
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </section>
+
+                  <section id="rastep4" class="section2 slide">
+                    <div class="content2">
+                      <div class="container">
+                            <div class="row">
+                              <div class="col-md-12 text-center">
+                                <h2 class="text-white"><b>Request Appointment</b></h2>
+                              </div>
+                            </div>
+                      </div>
+                      
+                      <div class="container text-center">
+                        <div class="">
+                              <legend class="font-weight-bold" id="pagetitles">Contact Information</legend>
+                        </div>
+                            
+                        <!--Email Address-->
+                          <div class="form-group">
+                          <label id="formlable" for="email" class="col-sm-12 font-weight-3">Email Address</label>
+                              <div class="col-sm-12">
+                                <input required type="text" id="email" class="" placeholder="Enter Email Address" class="form-control" autofocus>
+                              </div>
+                          </div>
+                        <!--Email Address-->
+                  
+                        <!--Phone Number-->
+                          <div class="form-group">
+                            <label id="formlable" for="phonenumber" class="col-sm-12 font-weight-3">Phone Number</label>
+                            <div class="col-sm-12">
+                            <input required type="tel" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
+                            </div>
+                          </div>
+                        <!--Phone Number-->
+                          
+                        <div class="row text-center">
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formbackButton font-weight-1 col-md-6" id="rastepfourback">Back</button> 
+                          </div>
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formnextButton font-weight-1 col-md-6" id="rastepfournext">Next</button> 
+                          </div>
+                        </div>                      
+                      </div>
+                  </div>
+                  </section>
+
+                  <section id="rastep5" class="section2 slide">
+                    <div class="content2">
+                      <div class="container">
+                            <div class="row">
+                              <div class="col-md-12 text-center">
+                                <h2 class="text-white"><b>Request Appointment</b></h2>
+                              </div>
+                            </div>
+                      </div>
+                      
+                      <div class="container text-center">
+                        <div class="">
+                              <legend class="font-weight-bold" id="pagetitles">Other Information</legend>
+                        </div>
+             
+                        <!--Upload Document-->
+                          <div class="form-group">
+                                  <label id="formlable" for="fileToUpload" class="col-sm-12 font-weight-3">Upload Document</label>
+                                  <div class="col-sm-12">
+                                     <input required type="file" id="uploaddoc" class="" placeholder="Upload Document" autofocus>
+                                 </div>
+                          </div>
+                        <!--Upload Document-->
+                        
+                        <!--Comment-->
+                          <div class="form-group">
+                              <label for="comment" class="col-sm-12 font-weight-3">Comment</label>
+                              <div class="col-sm-12">
+                          <textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
+                              </div>
+                          </div>
+                        <!--Comment-->
+                          
+                        <div class="row text-center">
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formbackButton font-weight-1 col-md-6" id="rastepfiveback">Back</button> 
+                          </div>
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formnextButton font-weight-1 col-md-6" id="rastepfivenext">Next</button> 
+                          </div>
+                        </div>                      
+                      </div>
+                  </div>
+                  </section>
+
+                  <section id="rastep6" class="section3 slide">
+                    <div class="content2">
+                      <div class="container">
+                            <div class="row">
+                              <div class="col-md-12 text-center">
+                                <h2 class="text-white"><b>Request Appointment</b></h2>
+                              </div>
+                            </div>
+                      </div>
+                      
+                      <div class="container text-center">
+                        <div class="container" style="overflow-y: scroll !important; height: 350px !important;">
+                          <div class="col-12" id="pagetitles">
+                            <h4 class="font-weight-bold my-3"> Patient Information </h4>
+                          </div>
+                          <table class="table table-striped">
+                                <tbody>
+                                  <tr>
+                                    <th class="text-left">Patient Full Name</th>
+                                    <td class="text-right">Heather</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="text-left">Patient Date of Birth</th>
+                                    <td class="text-right">20/02/1990</td>
+                                  </tr>
+                                </tbody>
+                          </table>
+                  
+                          <div class="col-12" id="pagetitles">
+                            <h4 class="font-weight-bold my-3"> Contact Information </h4>
+                          </div>
+                          <table class="table table-striped">
+                            <tbody>
+                              <tr>
+                                <th class="text-left">Email Address</th>
+                                <td class="text-right">heather@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <th class="text-left">Phone Number</th>
+                                <td class="text-right">9153595831</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                           
+                          <div class="col-12" id="pagetitles">
+                          <h4 class="font-weight-bold my-3"> Other Information </h4>
+                          </div>
+                          <table class="table table-striped">
+                            <tbody>
+                              <tr>
+                                <th class="text-left">Comment</th>
+                                <td class="text-right">Great Demo</td>
+                              </tr>
+                              <tr>
+                                <th class="text-left">Upload Document</th>
+                                <td class="text-right">DocFile</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                           
+                          <div class="col-12" id="pagetitles">
+                            <h4 class="font-weight-bold my-3"> Appointment Information </h4>
+                          </div>
+                          <table class="table table-striped">
+                            <tbody>
+                              <tr>
+                                <th class="text-left">Appointment Type</th>
+                                <td class="text-right">New Patient Appointment</td>
+                              </tr>
+                              <tr>
+                                <th class="text-left">Appointment Date</th>
+                                <td class="text-right">12/09/2020</td>
+                              </tr>
+                              <tr>
+                                <th class="text-left">Appointment Time</th>
+                                <td class="text-right">02.00 PM</td>
+                              </tr>
+                            </tbody>
+                          </table> 
+                          
+                        <div class="row text-center">
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formbackButton font-weight-1 col-md-6" id="rastepsixback">Back</button> 
+                          </div>
+                          <div class="col-md-6">
+                            <button class="btn gradient-button gradient-button-1 formnextButton font-weight-1 col-md-6" id="rastepsevennext">Submit</button> 
+                          </div>
+                        </div>                     
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section id="rastep7" class="section2 slide">
+                    <div class="content2">
+                        <div class="container text-center">
+                          <img data-src="assest/img/check.png" class="img-fluid check-img"> 
+                          <h2 class="font-weight-bold mt-4 mb-4">Congrats! You have successfully completed your Book Appointment Paperwork!</h2>
+                          <img data-src="assest/img/rtplogo.png" class="img-fluid" id="check-logo">
+                            
+                          <div class="row text-center">
+                            <div class="col-md-6">
+                              <button class="btn gradient-button gradient-button-1 formbackButton font-weight-1 col-md-6" id="rastepsevenback">Back</button> 
+                            </div>
+                            <div class="col-md-6">
+                              <button class="btn gradient-button gradient-button-1 formnextButton font-weight-1 col-md-6" id="rastepeightnext">Next</button> 
+                            </div>
+                          </div>                      
+                        </div>
+                    </div>
+                  </section>
+
+                  <section id="rastep8" class="section2 slide">
+                    <div class="content2">
+                      <div class="container">
+                            <div class="row">
+                              <div class="col-md-12 text-center">
+                                <h2 class="text-white"><b>Other Forms</b></h2>
+                              </div>
+                            </div>
+                      </div>
+                        <div class="container text-center">
+                          <div class="col-12 text-center">
+                            <a href="arp1.html" target="_blank" class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2" id="rasteponenext">Authorization Release</a>
+                          </div>
+                          <div class="col-12 text-center">
+                            <a href="ud1.html" target="_blank"  class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2">Update Demo</a>
+                          </div>
+                          <div class="col-12 text-center">
+                            <a href="rfp1.html" target="_blank"  class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2">Request Form</a>
+                          </div>
+                          <div class="col-12 text-center">
+                            <a href="s01.html" target="_blank"  class="btn gradient-button gradient-button-1 customButtonWidth font-weight-1 mt-2">Survey</a>
+                          </div>
+                            
+                          <!--<div class="row text-center">
+                            <div class="col-md-6">
+                              <button class="btn gradient-button gradient-button-1 formbackButton font-weight-1 col-md-6" id="rastepeightback">Back</button> 
+                            </div>
+                            <div class="col-md-6">
+                              <button class="btn gradient-button gradient-button-1 formnextButton font-weight-1 col-md-6" id="rastepfivenext">Next</button> 
+                            </div>
+                          </div>-->                     
+                        </div>
+                    </div>
+                  </section>
+                  <!-- Request Form-->
+                </div>
+              </div>
+            </div><!-- End .content-->
+            
+          </div>
+        <!-- Calendar -->
+
+	      </section>
+  </form>
+</main>
+
+
+<!-- Footer -->
+  <footer class="page-footer font-small" >
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left pb-5">
+
+      <!-- Grid row -->
+      <div class="row pt-5">
+
+        <!-- Grid column
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <img alt="cf4" src="assest/img/tiles/cf4.png" class="tiles" data-toggle="tooltip" data-placement="top" data-html="true" title="<span class='tooltipHeading'>Crucial COMMUNICATION Features</span><p class='tooltipPara'>Having a great email list can give you powerful benefits for contacting new and existing patients </p>">
+          <h6 class="text-uppercase font-weight-bold">Subscribe</h6>
+          <hr class="footer-hr mb-4 mt-0 d-inline-block mx-auto">
+          
+       <div class=" input-group m-0">
+        <input class="form-control" aria-describedby="MaterialButton-addon2" aria-label="Enter Your Email" type="text" placeholder="Enter Your Email">
+        <div class="input-group-append">
+          <button class="btn btn-md btn-secondary m-0 pb-2 pt-2 pr-3 pl-3" id="MaterialButton-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+
+        </div>
+        <!-- Grid column -->
+
+
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="footer-hr mb-4 mt-0 d-inline-block mx-auto">
+
+          <div class="row mb-3">
+		  <div class="col-md-1">
+              <i class="fas fa-map-marker-alt mr-3"></i>
+            </div>
+            <div class="col-md-11">7037 Rose Ave Orlando FL 32810</div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-1"><i class="fas fa-envelope mr-3"></i></div>
+            <div class="col-md-11">
+              <div class="">Email</div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-1"><i class="fas fa-phone mr-3"></i></div>
+            <div class="col-md-11">888-503-1636</div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-1"><i class="fas fa-fax mr-3"></i></div>
+            <div class="col-md-11">Fax</div>
+          </div>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Operational Hours</h6>
+          <hr class="footer-hr mb-4 mt-0 d-inline-block mx-auto">
+
+          <div class="row">
+            <div class="col">
+              <strong>Monday To Friday</strong>
+            </div>
+
+            <div class="col">
+              9 AM - 5 PM
+            </div>
+          </div>
+         
+
+          <div class="row">
+            <div class="col">
+              <strong>Saturday</strong>
+            </div>
+
+            <div class="col">
+              9 AM - 12:30 PM
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <strong>Sunday</strong>
+            </div>
+
+            <div class="col">
+              Closed
+            </div>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright: <a class="white-text" href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+<!-- Footer -->
+
+
+<script type="text/javascript" src="assest/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="assest/js/popper.min.js"></script>
+<script type="text/javascript" src="assest/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assest/js/custom.js"></script>
+
+ 
+</body>
+</html>

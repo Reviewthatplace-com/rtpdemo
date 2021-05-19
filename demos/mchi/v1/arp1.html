@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <title>Authorization Release</title>
+    <!-- Booststrap css -->
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/bootstrap.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/jquery-ui.min.css">
+    <link rel="stylesheet" rel="preconnect" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="icon" href="assest/img/logo.png" type="image/jpg" sizes="32x32">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/select2.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/select2-bootstrap4.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/form.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/result.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/style.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/typography.min.css">
+ </head>
+ <body>
+    <div id="loader"></div>
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light py-0" id="topbar">
+          <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="#">
+              <img class="img-fluid lazyload" id="logo" alt="rtplogo" data-src="assest/img/rtplogo.png">        
+            </a>
+
+            <a class="navbar-brand" href="#" id="desk">
+              <h1 id="rft1">Authorization Release</h1>       
+            </a>
+
+            <!-- Links -->
+            <ul class="navbar-nav ml-auto">
+          <div class="text-right">
+              <!-- GTranslate: https://gtranslate.io/ -->
+          <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img class="lazyload" data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;" title="French" class="gflag nturl" style="background-position:-200px -100px;"><img class="lazyload" data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="French" /></a><a href="#" onclick="doGTranslate('en|de');return false;" title="German" class="gflag nturl" style="background-position:-300px -100px;"><img class="lazyload" data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="German" /></a><a href="#" onclick="doGTranslate('en|it');return false;" title="Italian" class="gflag nturl" style="background-position:-600px -100px;"><img class="lazyload" data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Italian" /></a><a href="#" onclick="doGTranslate('en|pt');return false;" title="Portuguese" class="gflag nturl" style="background-position:-300px -200px;"><img class="lazyload" data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Portuguese" /></a><a href="#" onclick="doGTranslate('en|ru');return false;" title="Russian" class="gflag nturl" style="background-position:-500px -200px;"><img class="lazyload" data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Russian" /></a><a href="#" onclick="doGTranslate('en|es');return false;" title="Spanish" class="gflag nturl" style="background-position:-600px -200px;"><img class="lazyload" data-src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Spanish" /></a>
+
+          <style type="text/css">
+            a.gflag {vertical-align:middle;font-size:16px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/16.png);}
+            a.gflag img {border:0;}
+            a.gflag:hover {background-image:url(//gtranslate.net/flags/16a.png);}
+            #goog-gt-tt {display:none !important;}
+            .goog-te-banner-frame {display:none !important;}
+            .goog-te-menu-value:hover {text-decoration:none !important;}
+            body {top:0 !important;}
+            #google_translate_element2 {display:none!important;}
+          </style>
+
+          <br /><select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|af">Afrikaans</option><option value="en|sq">Albanian</option><option value="en|ar">Arabic</option><option value="en|hy">Armenian</option><option value="en|az">Azerbaijani</option><option value="en|eu">Basque</option><option value="en|be">Belarusian</option><option value="en|bg">Bulgarian</option><option value="en|ca">Catalan</option><option value="en|zh-CN">Chinese (Simplified)</option><option value="en|zh-TW">Chinese (Traditional)</option><option value="en|hr">Croatian</option><option value="en|cs">Czech</option><option value="en|da">Danish</option><option value="en|nl">Dutch</option><option value="en|en">English</option><option value="en|et">Estonian</option><option value="en|tl">Filipino</option><option value="en|fi">Finnish</option><option value="en|fr">French</option><option value="en|gl">Galician</option><option value="en|ka">Georgian</option><option value="en|de">German</option><option value="en|el">Greek</option><option value="en|ht">Haitian Creole</option><option value="en|iw">Hebrew</option><option value="en|hi">Hindi</option><option value="en|hu">Hungarian</option><option value="en|is">Icelandic</option><option value="en|id">Indonesian</option><option value="en|ga">Irish</option><option value="en|it">Italian</option><option value="en|ja">Japanese</option><option value="en|ko">Korean</option><option value="en|lv">Latvian</option><option value="en|lt">Lithuanian</option><option value="en|mk">Macedonian</option><option value="en|ms">Malay</option><option value="en|mt">Maltese</option><option value="en|no">Norwegian</option><option value="en|fa">Persian</option><option value="en|pl">Polish</option><option value="en|pt">Portuguese</option><option value="en|ro">Romanian</option><option value="en|ru">Russian</option><option value="en|sr">Serbian</option><option value="en|sk">Slovak</option><option value="en|sl">Slovenian</option><option value="en|es">Spanish</option><option value="en|sw">Swahili</option><option value="en|sv">Swedish</option><option value="en|th">Thai</option><option value="en|tr">Turkish</option><option value="en|uk">Ukrainian</option><option value="en|ur">Urdu</option><option value="en|vi">Vietnamese</option><option value="en|cy">Welsh</option><option value="en|yi">Yiddish</option></select><div id="google_translate_element2"></div>
+          <script type="text/javascript">
+          function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+          </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+          <script type="text/javascript">
+          /* <![CDATA[ */
+          eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+          /* ]]> */
+          </script>
+          </div>
+            </ul>
+            <!-- Links -->
+
+            <a class="navbar-brand" id="mobile1">
+              <h1 id="rft1">Authorization Release</h1>       
+            </a>
+
+          </div>
+        </nav>
+        <!--/.Navbar-->
+
+
+        <!--Navbar-->
+        <div class="container" id="menu-bar">
+          <nav class="navbar navbar-expand-lg navbar-dark">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="">
+                  mchi
+                </a>
+                <!-- Collapse button -->
+                <button class="navbar-toggler" aria-expanded="false" aria-controls="basicExampleNav" aria-label="Toggle navigation" type="button" data-target="#basicExampleNav" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                  <!-- Links -->
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item main-nav-item">
+                      <a class="nav-link mainNavLinks" href="index.html#home-section">Home
+                        <span class="sr-only">(current)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item main-nav-item">
+                      <a class="nav-link mainNavLinks" href="index.html#about-section">About Us</a>
+                    </li>
+                    <li class="nav-item main-nav-item">
+                      <a class="nav-link mainNavLinks" href="index.html#portal-section">Patient Resource Center</a>
+                    </li>
+                    <li class="nav-item main-nav-item">
+                      <a class="nav-link mainNavLinks" href="index.html#service-section">Services</a>
+                    </li>
+                    <li class="nav-item main-nav-item">
+                      <a class="nav-link mainNavLinks" href="index.html#blog">Blogs</a>
+                    </li>
+                    <li class="nav-item main-nav-item">
+                      <a class="nav-link mainNavLinks" href="index.html#insurance-section">Insurance</a>
+                    </li>
+                    <li class="nav-item main-nav-item">
+                      <a class="nav-link mainNavLinks" href="index.html#team-section">Our Team</a>
+                    </li>
+                    <li class="nav-item main-nav-item">
+                      <a class="nav-link mainNavLinks" href="index.html#social-row">Contact Us</a>
+                    </li>
+                  </ul>
+                  <!-- Links -->
+                </div>
+                <!-- Collapsible content -->
+              </div>
+          </nav>
+        </div>
+        <!--/.Navbar-->
+    </header>
+    <main>
+      <section id="arfstep1" class="section mt-5 active">
+        <div class="container form-container text-center fadeInDown">
+          
+          <!--Your Name-->
+            <div class="form-group">
+            <div class="" id="strips1">
+                <legend class="font-weight-bold" id="pagetitles">Your Information</legend>
+              </div>
+                <label for="yourname" class="col-sm-12 control-label">Your Name</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="yourname" class="" name="yourname" placeholder="Your Name">
+                </div>
+            </div>
+          <!--Your Name-->
+
+          <!--Upload ID-->
+            <div class="form-group">
+                    <label id="formlable" for="fileToUpload" class="col-sm-12 control-label">Upload ID</label>
+                    <div class="col-sm-12">
+                      <input required type="file" id="uploadid" class="" placeholder="Upload ID" autofocus>
+                  </div>
+            </div>
+          <!--Upload ID-->
+
+          <div class="card" id="btncard">
+            <a href="#" id="arfsteponenext">
+              <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" id="btnimg1">
+              <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid lazyload btn-start img-top" id="btnimg1">
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="arfstep2" class="section mt-5">  
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Your Information</legend>
+          </div>
+              
+          <!--Phone Number-->
+            <div class="form-group">
+              <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Phone Number</label>
+              <div class="col-sm-12">
+              <input required type="text" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
+              </div>
+            </div>
+          <!--Phone Number-->
+          
+          
+          <!--Email Address-->
+            <div class="form-group">
+            <label id="formlable" for="email" class="col-sm-12 control-label">Email Address</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="email" class="" placeholder="Enter Email Address" class="form-control" autofocus>
+                </div>
+            </div>
+          <!--Email Address-->
+
+          <div class="row">
+            <div class="card  col" id="backbtncard">
+              <a href="#" id="arfsteptwoback">
+                  <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid lazyload btn-start" id="backbtn">
+                  <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid lazyload btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card  col" id="nextbtncard">
+                <a href="#" id="arfsteptwonext">
+                  <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" id="nextbtn">
+                  <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid lazyload btn-start img-top" id="nextbtn">
+                </a>
+            </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="arfstep3" class="section mt-5"> 
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Patient Information</legend>
+          </div>
+              
+          <!--Patient Full Name-->
+            <div class="form-group">
+                <label for="patientfullname" class="col-sm-12 control-label">Patient Full Name</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="patientfullname" class="" name="patientfullname" placeholder="Patient Full Name">
+                </div>
+            </div>
+          <!--Patient Full Name-->
+
+          <!--Date-->
+            <div class="form-group">
+              <label id="formlable" for="birthDate" class="col-sm-12 control-label">Date of Birth</label>
+                <div class="col-sm-12">
+                  <input required type="date" id="birthDate" class="" placeholder="Date of Birth" autofocus>
+                </div>
+            </div>
+          <!--Date-->
+
+          <!--SSN-->
+            <div class="form-group">
+                <label for="SSN" class="col-sm-12 control-label">SSN</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="SSN" class="" name="SSN" placeholder="SSN">
+                </div>
+            </div>
+          <!--SSN-->
+
+          <div class="row">
+            <div class="card col" id="backbtncard">
+              <a href="#" id="arfstepthreeback">
+                  <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid lazyload btn-start" id="backbtn">
+                  <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid lazyload btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card col" id="nextbtncard">
+                <a href="#" id="arfstepthreenext">
+                  <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" id="nextbtn">
+                  <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid lazyload btn-start img-top" id="nextbtn">
+                </a>
+              </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="arfstep4" class="section mt-5">
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Who is sending the records?</legend>
+          </div>
+          <div class="form-checkbox ">
+            <input required class="checkbox" type="radio" name="" id="" value="">
+            <label class="checklabel" for="">RTP Medical Solutions</label>  
+          </div>
+          <div class="form-checkbox ">
+            <input required class="checkbox" type="radio" name="" id="" value="">
+            <label class="checklabel" for="">Somebody Else</label>  
+          </div>
+
+          <div class="row">
+          <div class="card  col" id="backbtncard">
+            <a href="#" id="arfstepfourback">
+                <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid lazyload btn-start" id="backbtn">
+                <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid lazyload btn-start img-top" id="backbtn">
+            </a>
+          </div>
+
+          <div class="card  col" id="nextbtncard">
+              <a href="#" id="arfstepfournext">
+                <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" id="nextbtn">
+                <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid lazyload btn-start img-top" id="nextbtn">
+              </a>
+            </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="arfstep5" class="section mt-5">
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">How do you want them send?</legend>
+          </div>
+          <div class="form-checkbox">
+            <input required class="checkbox" type="radio" name="" id="" value="">
+            <label class="checklabel" for="" onclick="faxType()">Fax</label>  
+          </div>
+          <div class="form-checkbox">
+            <input required class="checkbox" type="radio" name="" id="" value="">
+            <label class="checklabel" for="" onclick="emailType()">Email</label>  
+          </div>
+
+          <div class="col-lg-12 slide" id="emailType" style="display: none;">
+            <div class="form-group">
+              <label id="formlable" for="email" class="col-sm-12 control-label">Email Address</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="text" class="" placeholder="Enter Email Address" class="form-control" autofocus>
+                  </div>
+            </div>
+          </div> 
+
+          <div class="col-lg-12 slide" id="faxType" style="display: none;">
+            <div class="form-group">
+              <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Fax Number</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="phonenumber" class="" name="phoneNumber" placeholder="fax Number">
+                </div>
+            </div>
+          </div> 
+
+          <div class="row">
+            <div class="card  col" id="backbtncard">
+              <a href="#" id="arfstepfiveback">
+                  <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid lazyload btn-start" id="backbtn">
+                  <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid lazyload btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card  col" id="nextbtncard">
+                <a href="#" id="arfstepfivenext">
+                  <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" id="nextbtn">
+                  <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid lazyload btn-start img-top" id="nextbtn">
+                </a>
+            </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="arfstep6" class="section mt-5">
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Who is sending the records?</legend>
+          </div>
+          <!--Name Of Practice-->
+            <div class="form-group">
+              <label for="practicename" class="col-sm-12 control-label">Name Of Practice</label>
+              <div class="col-sm-12">
+                <input required type="text" id="practicename" class="" name="practicename" placeholder="Name Of Practice">
+              </div>
+            </div>
+          <!--Name Of Practice-->
+
+          <!--Phone Number-->
+            <div class="form-group">
+              <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Phone Number</label>
+              <div class="col-sm-12">
+                <input required type="text" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
+              </div>
+            </div>
+          <!--Phone Number-->
+
+          <!--Street-->
+            <div class="form-group">
+                <label for="address" class="col-sm-12 control-label">Street</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="street" class="" name="street" placeholder="Street">
+                </div>
+            </div>
+          <!--Street-->
+
+          <!--City-->
+            <div class="form-group">
+                <label for="address" class="col-sm-12 control-label">City</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="city" class="" name="city" placeholder="City">
+                </div>
+            </div>
+          <!--City-->
+            
+          <!--State-->
+            <div class="form-group">
+                <label for="address" class="col-sm-12 control-label">State</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="state" class="" name="state" placeholder="state">
+                </div>
+            </div>
+          <!--State-->
+            
+          <!--Zip-->
+            <div class="form-group">
+                <label for="address" class="col-sm-12 control-label">Zip</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="zip" class="" name="zip" placeholder="zip">
+                </div>
+            </div>
+          <!--Zip-->
+
+          <div class="row">
+            <div class="card col" id="backbtncard">
+              <a href="#" id="arfstepsixback">
+                  <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid lazyload btn-start" id="backbtn">
+                  <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid lazyload btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card col" id="nextbtncard">
+                <a href="#" id="arfstepsixnext">
+                  <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" id="nextbtn">
+                  <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid lazyload btn-start img-top" id="nextbtn">
+                </a>
+            </div> 
+          </div>
+        </div>
+      </section>
+
+      <section id="arfstep7" class="section mt-5">
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Where do you want RTPMedicalSolution to send them?</legend>
+          </div>
+            <!--Name Of Practice-->
+              <div class="form-group">
+                <label for="practicename" class="col-sm-12 control-label">Name Of Practice</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="practicename" class="" name="practicename" placeholder="Name Of Practice">
+                </div>
+              </div>
+            <!--Name Of Practice-->
+
+            <!--Phone Number-->
+            <div class="form-group">
+              <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Phone Number</label>
+              <div class="col-sm-12">
+                <input required type="text" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
+              </div>
+            </div>
+          <!--Phone Number-->
+
+            <!--Street-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">Street</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="street" class="" name="street" placeholder="Street">
+                  </div>
+              </div>
+            <!--Street-->
+
+            <!--City-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">City</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="city" class="" name="city" placeholder="City">
+                  </div>
+              </div>
+            <!--City-->
+              
+            <!--State-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">State</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="state" class="" name="state" placeholder="state">
+                  </div>
+              </div>
+            <!--State-->
+              
+            <!--Zip-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">Zip</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="zip" class="" name="zip" placeholder="zip">
+                  </div>
+              </div>
+            <!--Zip-->
+
+            <div class="row">
+              <div class="card  col" id="backbtncard">
+                <a href="#" id="arfstepsevenback">
+                    <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid lazyload btn-start" id="backbtn">
+                    <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid lazyload btn-start img-top" id="backbtn">
+                </a>
+              </div>
+
+              <div class="card  col" id="nextbtncard">
+                  <a href="#" id="arfstepsevennext">
+                    <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" id="nextbtn">
+                    <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid lazyload btn-start img-top" id="nextbtn">
+                  </a>
+              </div> 
+            </div>
+        </div>
+      </section>
+
+      <section id="arfstep8" class="section mt-5">
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">What’s the purpose of this request?</legend>
+          </div>
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Changing Practices</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Email Us</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Continued Medical Care</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Personal Information</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Legal</label>  
+          </div> 
+
+          <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="" id="" value="">
+                <label class="checklabel" for="">Insurance</label>  
+          </div>
+
+          <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="" id="" value="">
+                <label class="checklabel" for="">Other</label>  
+          </div>
+
+          <div class="row">
+            <div class="card  col" id="backbtncard">
+              <a href="#" id="arfstepeightback">
+                  <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid lazyload btn-start" id="backbtn">
+                  <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid lazyload btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card  col" id="nextbtncard">
+                <a href="#" id="arfstepeightnext">
+                  <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" id="nextbtn">
+                  <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid lazyload btn-start img-top" id="nextbtn">
+                </a>
+            </div>    
+          </div>
+        </div>
+      </section>
+
+      <section id="arfstep9" class="section mt-5">
+        <div class="container form-container text-center slide">
+          <legend class="font-weight-bold">By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records, <br> If Such Information And/or Records Exist:</legend>
+          
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">ALL Records</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Office Notes and Reports</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Diagnostic Reports</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Billing Statements</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Rx History</label>  
+          </div> 
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Transcribed Hospital Reports</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Laboratory Reports</label>  
+          </div>
+
+          <div class="row">
+                <div class="card  col" id="backbtncard">
+                  <a href="#" id="arfstepnineback">
+                      <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid lazyload btn-start" id="backbtn">
+                      <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid lazyload btn-start img-top" id="backbtn">
+                  </a>
+                </div>
+
+                <div class="card  col" id="nextbtncard">
+                    <a href="#" id="arfstepninenext">
+                      <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" id="nextbtn">
+                      <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid lazyload btn-start img-top" id="nextbtn">
+                    </a>
+                </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="arfstep10" class="section mt-5">
+        <div class="container form-container text-center slide">
+          <legend class="font-weight-bold">Do you want to restrict disclosure for any records related to the following? <br> If no please continue to next step</legend>
+          
+          <div class="form-checkbox ">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">HIV/AIDS</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">TB or Other Communicable Diseases</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Mental Health Records</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Domestic Violence</label>  
+          </div>
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Genetic Testing Information</label>  
+          </div> 
+
+          <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="" id="" value="">
+              <label class="checklabel" for="">Drug/Alcohol</label>  
+          </div>
+
+          <!--Describe-->
+              <div class="form-group">
+                    <label for="comment" class="col-sm-12 control-label">Describe</label>
+                    <h6>(Federal regulations require a description of how much and <br> what kind of information is to be disclosed.) </h6>
+                    <div class="col-sm-12">
+                      <textarea name="describe" class="form-control" id="describe" required="" rows="3"></textarea>
+                    </div>
+              </div>
+          <!--Describe-->
+
+          <div class="row">
+                <div class="card col" id="backbtncard">
+                  <a href="#" id="arfsteptenback">
+                      <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid lazyload btn-start" id="backbtn">
+                      <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid lazyload btn-start img-top" id="backbtn">
+                  </a>
+                </div>
+
+                <div class="card col" id="nextbtncard">
+                    <a href="#" id="arfsteptennext">
+                      <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" id="nextbtn">
+                      <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid lazyload btn-start img-top" id="nextbtn">
+                    </a>
+                </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="arfstep11" class="section mt-5">
+        <div class="container form-container slide">
+          <div class="col-12" id="strips">
+            <h4 class="font-weight-bold my-3" id="p11t"> Your Information </h4>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+                  <tr>
+                    <th>Your Name</th>
+                    <td id="td1">Shakir</td>
+                  </tr>
+                  <tr>
+                    <th>Upload ID</th>
+                    <td id="td1">ID</td>
+                  </tr>
+                  <tr>
+                    <th>Phone Number</th>
+                    <td id="td1">9153595831</td>
+                  </tr>
+                  <tr>
+                    <th>Email Address</th>
+                    <td id="td1">heather@gmail.com</td>
+                  </tr>
+            </tbody>
+          </table>
+
+          <div class="col-12" id="strips">
+            <h4 class="font-weight-bold my-3" id="p11t"> Patient Information </h4>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+                <tr>
+                  <th>Patient Name</th>
+                  <td id="td1">Heather</td>
+                </tr>
+                <tr>
+                  <th>Patient Date of Birth</th>
+                  <td id="td1">20/02/1990</td>
+                </tr>
+                <tr>
+                  <th>SSN</th>
+                </tr>
+            </tbody>
+          </table>
+
+          <div class="col-12" id="strips">
+          <h5 class="font-weight-bold my-3" id="p11t">Who is sending the records?</h5>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                    <th>Name Of Practice</th>
+                    <td id="td1">SIPMD</td>
+              </tr>
+              <tr>
+                    <th>Phone Number</th>
+                    <td id="td1">9153595860</td>
+              </tr>
+              <tr>
+                    <th>Street</th>
+                    <td id="td1">2717 US-89</td>
+              </tr>
+              <tr>
+                    <th>City</th>
+                    <td id="td1">Ogden</td>
+              </tr>
+              <tr>
+                    <th>State</th>
+                    <td id="td1">UT</td>
+              </tr>
+              <tr>
+                    <th>Zip</th>
+                    <td id="td1">84414</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="col-12" id="strips">
+            <h5 class="font-weight-bold my-3" id="p11t">Where do you want RTPMedicalSolution to send them?</h5>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>Name Of Practice</th>
+                <td id="td1">DJIMD</td>
+              </tr>
+              <tr>
+                <th>Phone Number</th>
+                <td id="td1">9153595850</td>
+              </tr>
+              <tr>
+                <th>Street</th>
+                <td id="td1">2717 US-89</td>
+              </tr>
+              <tr>
+                <th>City</th>
+                <td id="td1">Ogden</td>
+              </tr>
+              <tr>
+                <th>State</th>
+                <td id="td1">UT</td>
+              </tr>
+              <tr>
+                <th>Zip</th>
+                <td id="td1">84414</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="col-12" id="strips">
+            <h5 class="font-weight-bold my-3" id="p11t">How do you want them sent?</h5>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>Fax</th>
+                <td id="td1">9153595835</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="col-12" id="strips">
+            <h5 class="font-weight-bold my-3" id="p11t">What’s the purpose of this request?</h5>
+          </div>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th id="middata">Changing Practices</th>
+                </tr>
+                <tr>
+                  <th id="middata">Email Us</th>
+                </tr>
+                <tr>
+                  <th id="middata">Continued Medical Care</th>
+                </tr>
+                <tr>
+                  <th id="middata">Personal Information</th>
+                </tr>
+                <tr>
+                  <th id="middata">Legal</th>
+                </tr>
+                <tr>
+                  <th id="middata">Insurance</th>
+                </tr>
+                <tr>
+                  <th id="middata">Other</th>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+              <h5 class="font-weight-bold my-3" id="p11t">Restrict Disclosure</h5>
+            </div>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th id="middata">HIV/AIDS</th>
+                </tr>
+                <tr>
+                  <th id="middata">TB or Other Communicable Diseases</th>
+                </tr>
+                <tr>
+                  <th id="middata">Mental Health Records</th>
+                </tr>
+                <tr>
+                  <th id="middata">Domestic Violence</th>
+                </tr>
+                <tr>
+                  <th id="middata">Genetic Testing Information</th>
+                </tr>
+                <tr>
+                  <th id="middata">Drug/Alcohol</th>
+                </tr>
+                <tr>
+                  <th id="middata">Describe</th>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="row">
+                  <div class="card col" id="backbtncard">
+                    <a href="#" id="arfstepelevenback">
+                        <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid lazyload btn-start" id="backbtn">
+                        <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid lazyload btn-start img-top" id="backbtn">
+                    </a>
+                  </div>
+      
+                  <div class="card col" id="nextbtncard">
+                      <a href="#" id="arfstepelevennext">
+                        <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" id="nextbtn">
+                        <img data-src="assest/img/buttons/pihover.png" alt="" class="img-fluid lazyload btn-start img-top" id="nextbtn">
+                      </a>
+                  </div>  
+            </div>
+        </div>  
+      </section>
+
+      <section id="arfstep12" class="section mt-5">
+        <div class="container form-container text-center slide">
+          <div class="container text-justify">
+            <p><strong>I understand that</strong>, if the person or entity receiving the information is not a health care provider or health plan covered by federal privacy regulations, the information described above may be re-disclosed and no longer protected by HIPAA and other federal and state regulations. However, the recipient may be prohibited from disclosing substance abuse information under the Federal Substance Abuse Confidentiality Requirements</p>
+          </div>
+
+          <div class="container text-justify">
+            <p><strong>I also understand </strong>that the person I am authorizing to use and/or disclose the information may not receive compensation for doing so.</p>
+          </div>
+
+          <div class="container text-justify">
+            <p><strong>I, further understand</strong>that I may refuse to sign this authorization and that my refusal to sign will not affect my ability to obtain treatment or payment of my eligibility for benefits. I may inspect or copy any information to be used and/or disclosed under this authorization</p>
+          </div>
+          
+          <div class="container text-justify">
+            <p><strong>Finally, I understand, </strong>that <u>I may revoke this authorization</u>, in writing, at any time, provided that I do so in writing, except to the extent that action has been taken in reliance upon this authorization</p>
+          </div>
+          
+          <div class="container text-justify">
+            <p><strong>Unless Revoked Earlier, this Authorization Will Expire in Six (6) Months from the Date of Signing or until</p>
+              <!--Date-->
+                <div class="form-group">
+                  <label id="formlable" for="insertdate" class="col-sm-12 control-label">Insert Date</label>
+                    <div class="col-sm-12">
+                      <input required type="date" id="insertdate" class="fadeIn second" placeholder="insert date" autofocus>
+                    </div>
+                </div>
+              <!--Date-->
+
+              <!--Patient Full Name-->
+              <div class="form-group">
+              <label for="patientfullname" class="col-sm-12 control-label">Patient Full Name</label>
+              <div class="col-sm-12">
+                <input required type="text" id="patientfullname" class="fadeIn second" name="patientfullname" placeholder="Patient Full Name">
+              </div>
+              </div>
+              <!--Patient Full Name-->
+
+              <!--Date-->
+                <div class="form-group">
+                  <label id="formlable" for="datetoday" class="col-sm-12 control-label">Today's Date</label>
+                    <div class="col-sm-12">
+                      <input required type="date" id="datetoday" class="fadeIn second" placeholder="TodaysDate" autofocus>
+                    </div>
+                </div>
+              <!--Date-->
+
+              <!--Your Name-->
+                <div class="form-group">
+                <label for="yourname" class="col-sm-12 control-label">Your Name</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="yourname" class="fadeIn second" name="yourname" placeholder="Your Name">
+                </div>
+                </div>
+              <!--Your Name-->
+
+              <div class="container text-justify">
+                <p><strong>Signature of Patient or Patient’s Legal Representative: </strong> ____________________________</p>
+                <h6>I give authorization to the provider listed below to disclose a copy of the specific health/medical information identified.</h6>
+              </div>
+              
+              <div class="container text-lg-center">
+                <p><strong>Relationship to patient: </strong> ____________________________</p>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="card fadeIn fourth col" id="backbtncard">
+              <a href="#" id="arfsteptwelveback">
+                  <img data-src="assest/img/buttons/ba.png" alt="" class="img-fluid lazyload btn-start" id="backbtn">
+                  <img data-src="assest/img/buttons/bahover.png" alt="" class="img-fluid lazyload btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card fadeIn fourth col" id="nextbtncard">
+                <a href="#" id="arfsteptwelvenext">
+                  <img data-src="assest/img/buttons/se.png" alt="" class="img-fluid lazyload btn-start" id="nextbtn">
+                  <img data-src="assest/img/buttons/sehover.png" alt="" class="img-fluid lazyload btn-start img-top" id="nextbtn">
+                </a>
+            </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="arfstep13" class="section">
+          <div class="container-fluid slide">
+              <div class="row px-5 pt-3" id="confirm1">
+                <div class="col-xl-6 offset-xl-3 shadow text-center pb-5">
+                  <img data-src="assest/img/check.png" class="img-fluid lazyload check-img"> 
+                  <h2 class="font-weight-bold mt-4 mb-4">Congrats! You have successfully completed your Authorization Release Paperwork!</h2>
+                  <img data-src="assest/img/rtplogo.png" class="img-fluid lazyload" id="check-logo">
+                    <div>
+                      <a href="#" class="mt-3">
+                        <img data-src="assest/img/buttons/pi.png" alt="" class="img-fluid lazyload btn-start" onmouseover="this.src='assest/img/buttons/pihover.png'" onmouseout="this.src='assest/img/buttons/pi.png'" id="arfstepthirteenenext">
+                      </a>
+                    </div>
+                </div>
+            </div>
+          </div> 
+      </section>
+
+      <section id="arfstep14" class="section">
+          <div class="container-fluid slide">
+            <div class="row" id="confirm2">
+              <div class="col-xl-6 offset-xl-3 shadow text-center">
+                <div class="row justify-content-center">
+
+                  <div class="col-xl-12 text-center shadow2 mb-40">
+                    <h3 class="font-weight-bold"><i class="fas fa-desktop mr-2"></i>Update Demo</h3>
+                    <p class="lead">Update your demo now!</p> 
+                    <a type="button" class="btn btn-success mb-3" href="https://rtpdemo.com/mchi1/ud1.html" target="_blank">Let's start</a>
+                  </div>
+
+                  <div class="col-xl-12 text-center shadow2 mb-40">
+                    <h3 class="font-weight-bold"><i class="fab fa-wpforms mr-2"></i>Request Form</h3>
+                    <p class="lead">Hae you filled out the request form yet?</p> 
+                    <a type="button" class="btn btn-success mb-3" href="https://rtpdemo.com/mchi1/rfp1.html" target="_blank">Let's start</a>
+                  </div>
+
+                  <div class="col-xl-12 text-center shadow2 mb-40">
+                    <h3 class="font-weight-bold"><i class="far fa-calendar-alt mr-2"></i>Survey</h3>
+                    <p class="lead">Please take this Survey</p> 
+                    <a type="button" class="btn btn-success mb-3" href="https://rtpdemo.com/SurveyForm" target="_blank">Let's start</a>
+                  </div>
+
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+      </section>
+
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer font-small" >
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left pb-5">
+
+          <!-- Grid row -->
+          <div class="row pt-5">
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">Contact</h6>
+              <hr class="footer-hr mb-4 mt-0 d-inline-block mx-auto">
+
+              <div class="row mb-3">
+          <div class="col-md-1">
+                  <i class="fas fa-map-marker-alt mr-3"></i>
+                </div>
+                <div class="col-md-11">7037 Rose Ave Orlando FL 32810</div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-1"><i class="fas fa-envelope mr-3"></i></div>
+                <div class="col-md-11">
+                  <div class="">Email</div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-1"><i class="fas fa-phone mr-3"></i></div>
+                <div class="col-md-11">888-503-1636</div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-1"><i class="fas fa-fax mr-3"></i></div>
+                <div class="col-md-11">Fax</div>
+              </div>
+              
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">Operational Hours</h6>
+              <hr class="footer-hr mb-4 mt-0 d-inline-block mx-auto">
+
+              <div class="row">
+                <div class="col">
+                  <strong>Monday To Friday</strong>
+                </div>
+
+                <div class="col">
+                  9 AM - 5 PM
+                </div>
+              </div>
+            
+
+              <div class="row">
+                <div class="col">
+                  <strong>Saturday</strong>
+                </div>
+
+                <div class="col">
+                  9 AM - 12:30 PM
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <strong>Sunday</strong>
+                </div>
+
+                <div class="col">
+                  Closed
+                </div>
+              </div>
+
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright: <a class="white-text" href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+      <script defer src="assest/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+      <!-- Bootstrap tooltips -->
+      <script defer src="assest/js/popper.min.js" type="text/javascript"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script defer src="assest/js/bootstrap.min.js" type="text/javascript"></script>
+      <script defer src="assest/js/lazysizes.min.js" type="text/javascript"></script>
+      <script defer src="assest/js/custom.min.js" type="text/javascript"></script>
+ </body>
+</html>

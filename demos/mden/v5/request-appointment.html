@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+ <title>Request Appointment</title>
+ <!-- Booststrap css -->
+ <!-- Booststrap css -->
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/jquery-ui.min.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/select2.min.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/select2-bootstrap4.min.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/form.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/result.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/style.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/forms/typography.css">
+ <link rel="icon" href="assets/img/favicon.jpg" type="image/jpg" sizes="32x32">
+ <!-- extra css -->
+ <link href="assets/css/main.css" rel="stylesheet">
+ <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+
+  <main>
+
+    
+    <form method="post" enctype="multipart/form-data">
+      <!-- {{csrf_field()}} -->
+
+      <section id="rastep1" class="section">
+       <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1><b>Request Appointment</b></h1>
+          </div>
+        </div>
+      </div>
+      <div class="container head-container text-center">
+        <div class="row">
+         <div class="col-sm-6">
+          <!--<img src="assets/img/rtplogo.png" id="logo1">-->	
+        </div>
+        <div class="col-sm-5" id="rfc">
+          <!--<h1 id="rft1">Request Form</h1>-->	
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="container form-container text-center fadeInDown">
+      
+      <div class="" id="strips1">
+        <legend class="font-weight-bold" id="pagetitles">Patient Informaiton</legend>
+      </div>
+      
+      <!--Patient Full Name-->
+      <div class="form-group">
+       <label for="patientfullname" class="col-sm-12 control-label">Patient Full Name</label>
+       <div class="col-sm-12">
+         <input required type="text" id="patientfullname" class="" name="patientfullname" placeholder="Patient Full Name">
+       </div>
+     </div>
+     <!--Patient Full Name-->
+
+     <!--Date-->
+     <div class="form-group">
+      <label id="formlable" for="birthDate" class="col-sm-12 control-label">Date of Birth</label>
+      <div class="col-sm-12">
+        <input required type="date" id="birthDate" class="" placeholder="Date of Birth" autofocus>
+      </div>
+    </div>
+    <!--Date-->
+
+    <div class="card " id="btncard">
+      <a href="#" id="rasteponenext">
+       <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="btnimg1">
+       <img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="btnimg1">
+     </a>
+   </div>
+
+   <!--<input required type="submit" id="btn" class="" value="Patient Information">-->
+
+ </div>
+</section>
+
+<section id="rastep2" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1><b>Request Appointment</b></h1>
+      </div>
+    </div>
+  </div>
+  <div class="container head-container text-center">
+    <div class="row">
+      <div class="col-sm-6">
+        <!--<img src="assets/img/rtplogo.png" id="logo1">-->  
+      </div>
+      <div class="col-sm-5" id="rfc">
+        <!--<h1 id="rft1">Request Form</h1>-->  
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="container form-container text-center slide">
+    
+    <div class="" id="strips1">
+      <legend class="font-weight-bold" id="pagetitles">Contact Information</legend>
+    </div>
+    
+    <!--Email Address-->
+    <div class="form-group">
+      <label id="formlable" for="email" class="col-sm-12 control-label">Email Address</label>
+      <div class="col-sm-12">
+        <input required type="text" id="email" class="" placeholder="Enter Email Address" class="form-control" autofocus>
+      </div>
+    </div>
+    <!--Email Address-->
+    
+    <!--Phone Number-->
+    <div class="form-group">
+      <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Phone Number</label>
+      <div class="col-sm-12">
+        <input required type="tel" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
+      </div>
+    </div>
+    <!--Phone Number-->
+
+    <div class="row">
+
+      <div class="card col" id="backbtncard">
+        <a href="#" id="rasteptwoback">
+          <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+          <img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+        </a>
+      </div>
+
+      <div class="card col" id="nextbtncard">
+        <a href="#" id="rasteptwonext">
+          <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+          <img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+        </a>
+      </div>  
+      
+    </div>
+    
+    
+  </div>
+</section>
+
+<section id="rastep3" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1><b>Request Appointment</b></h1>
+      </div>
+    </div>
+  </div>
+  <div class="container head-container text-center">
+    <div class="row">
+      <div class="col-sm-6">
+        <!--<img src="assets/img/rtplogo.png" id="logo1">-->  
+      </div>
+      <div class="col-sm-5" id="rfc">
+        <!--<h1 id="rft1">Request Form</h1>-->  
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="container form-container text-center slide">
+    
+    <div class="" id="strips1">
+      <legend class="font-weight-bold" id="pagetitles">Other Information</legend>
+    </div>
+    
+    <!--Upload Document-->
+    <div class="form-group">
+      <label id="formlable" for="fileToUpload" class="col-sm-12 control-label">Upload Document</label>
+      <div class="col-sm-12">
+       <input required type="file" id="uploaddoc" class="" placeholder="Upload Document" autofocus>
+     </div>
+   </div>
+   <!--Upload Document-->
+   
+   <!--Comment-->
+   <div class="form-group">
+    <label for="comment" class="col-sm-12 control-label">Comment</label>
+    <div class="col-sm-12">
+      <textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
+    </div>
+  </div>
+  <!--Comment-->
+
+  <div class="row">
+    
+    <div class="card col" id="backbtncard">
+      <a href="#" id="rastepthreeback">
+        <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+        <img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+      </a>
+    </div>
+
+    <div class="card col" id="nextbtncard">
+      <a href="#" id="rastepthreenext">
+        <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+        <img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+      </a>
+    </div>  
+    
+  </div>
+
+</div>
+</section> 
+
+<section id="rastep4" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1><b>Request Appointment</b></h1>
+      </div>
+    </div>
+  </div>
+  <div class="container head-container text-center">
+    <div class="row">
+      <div class="col-sm-6">
+        <!--<img src="assets/img/rtplogo.png" id="logo1">-->  
+      </div>
+      <div class="col-sm-5" id="rfc">
+        <!--<h1 id="rft1">Request Form</h1>-->  
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="container form-container text-center slide">
+
+    <div class="" id="strips1">
+      <legend class="font-weight-bold" id="pagetitles">Appointment Information</legend>
+    </div>
+
+    <div class="form-group">
+      <label for="appttype" class="col-sm-12 control-label text-center">Appointment Type</label>
+      
+
+      <!--Appointment Type-->
+      <div class="form-checkbox">
+       <input required class="checkbox" type="radio" name="" id="" value="">
+       <label class="checklabel" for="">Physical</label>  
+     </div>
+
+     <div class="form-checkbox">
+       <input required class="checkbox" type="radio" name="" id="" value="">
+       <label class="checklabel" for="">Sick</label>  
+     </div>
+
+     <div class="form-checkbox">
+       <input required class="checkbox" type="radio" name="" id="" value="">
+       <label class="checklabel" for="">Follow up</label>  
+     </div>
+
+     <div class="form-checkbox">
+       <input required class="checkbox" type="radio" name="" id="" value="">
+       <label class="checklabel" for="">Telemedicine</label>  
+     </div>
+
+     <div class="form-checkbox">
+       <input required class="checkbox" type="radio" name="" id="" value="">
+       <label class="checklabel" for="">Circumcision</label>  
+     </div>
+
+     <div class="form-checkbox">
+       <input required class="checkbox" type="radio" name="" id="" value="">
+       <label class="checklabel" for="">Allergy Test</label>  
+     </div>
+
+     <div class="form-checkbox">
+       <input required class="checkbox" type="radio" name="" id="" value="">
+       <label class="checklabel" for="">Fluoride</label>  
+     </div>
+
+     <div class="form-checkbox">
+       <input required class="checkbox" type="radio" name="" id="" value="">
+       <label class="checklabel" for="">Med Refill</label>  
+     </div>
+
+     <div class="form-checkbox">
+       <input required class="checkbox" type="radio" name="" id="" value="">
+       <label class="checklabel" for="">Post E.R/Urgent Care</label>  
+     </div>
+   </div>
+   
+   
+
+   <div class="row">
+    
+    <div class="card col" id="backbtncard">
+      <a href="#" id="rastepfourback">
+        <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+        <img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+      </a>
+    </div>
+    
+    <div class="card col" id="nextbtncard">
+      <a href="#" id="rastepfournext">
+        <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+        <img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+      </a>
+    </div>  
+    
+  </div>
+  
+</div>
+</section>
+
+<section id="rastep5" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1><b>Request Appointment</b></h1>
+      </div>
+    </div>
+  </div>
+  <div class="container head-container text-center">
+    <div class="row">
+      <div class="col-sm-6">
+        <!--<img src="assets/img/rtplogo.png" id="logo1">-->  
+      </div>
+      <div class="col-sm-5" id="rfc">
+        <!--<h1 id="rft1">Request Form</h1>-->  
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="container form-container text-center slide">
+
+    <div class="" id="strips1">
+      <legend class="font-weight-bold" id="pagetitles">Appointment Information</legend>
+    </div>
+    
+    <!--Date-->
+    <div class="form-group">
+      <label id="formlable" for="date" class="col-sm-12 control-label">Appointment Date</label>
+      <div class="col-sm-12">
+        <input required type="date" id="appdate" class="" placeholder="Appointment Date" autofocus>
+      </div>
+    </div>
+    <!--Date-->
+
+    <!--Select Time-->
+    <div class="form-group">
+      <label for="time" class="col-sm-12 control-label">Select Time</label>
+      <div class="col-sm-12">
+        <input required type="text" id="time" class="" name="time" placeholder="Select Time">
+      </div>
+    </div>
+    <!--Select Time-->
+    
+    <div class="row">
+      
+      <div class="card col" id="backbtncard">
+        <a href="#" id="rastepfiveback">
+          <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+          <img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+        </a>
+      </div>
+      
+      <div class="card col" id="nextbtncard">
+        <a href="#" id="rastepfivenext">
+          <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+          <img src="assets/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+        </a>
+      </div>  
+      
+    </div>
+    
+  </div>
+</section>
+
+<section id="rastep6" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1><b>Request Appointment</b></h1>
+      </div>
+    </div>
+  </div>
+  <div class="container head-container text-center">
+    <div class="row">
+      <div class="col-sm-6">
+        <!--<img src="assets/img/rtplogo.png" id="logo1">-->  
+      </div>
+      <div class="col-sm-5" id="rfc">
+        <!--<h1 id="rft1">Request Form</h1>-->  
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="container form-container slide">
+    <div class="col-12" id="strips1">
+      <h4 class="font-weight-bold my-3"> Patient Information </h4>
+    </div>
+    <table class="table table-striped slide">
+      <tbody>
+        <tr>
+          <th>Patient Full Name</th>
+          <td id="td1">Heather</td>
+        </tr>
+        <tr>
+          <th>Patient Date of Birth</th>
+          <td id="td1">20/02/1990</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="col-12" id="strips1">
+      <h4 class="font-weight-bold my-3"> Contact Information </h4>
+    </div>
+    <table class="table table-striped slide">
+      <tbody>
+        <tr>
+          <th>Email Address</th>
+          <td id="td1">heather@gmail.com</td>
+        </tr>
+        <tr>
+          <th>Phone Number</th>
+          <td id="td1">9153595831</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="col-12" id="strips1">
+      <h4 class="font-weight-bold my-3"> Other Information </h4>
+    </div>
+    <table class="table table-striped slide">
+      <tbody>
+        <tr>
+          <th>Comment</th>
+          <td id="td1">Great Demo</td>
+        </tr>
+        <tr>
+          <th>Upload Document</th>
+          <td id="td1">DocFile</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="col-12" id="strips1">
+      <h4 class="font-weight-bold my-3"> Appointment Information </h4>
+    </div>
+    <table class="table table-striped slide">
+      <tbody>
+        <tr>
+          <th>Appointment Type</th>
+          <td id="td1">New Patient Appointment</td>
+        </tr>
+        <tr>
+          <th>Appointment Date</th>
+          <td id="td1">12/09/2020</td>
+        </tr>
+        <tr>
+          <th>Appointment Time</th>
+          <td id="td1">02.00 PM</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="row">
+      
+      <div class="card col" id="backbtncard">
+        <a href="#" id="rastepsixback">
+          <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+          <img src="assets/img/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+        </a>
+      </div>
+      
+      <div class="card col" id="nextbtncard">
+        <a href="#">
+          <img src="assets/img/buttons/se.png" alt="" class="img-fluid btn-start" id="nextbtn">
+          <img src="assets/img/buttons/sehover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+        </a>
+      </div>  
+      
+    </div>
+    
+  </div>
+</section>
+</form>
+</main>
+
+
+<script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/mask.js"></script>
+
+<script type="text/javascript" src="assets/js/mask.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+   $('#rastep1').css({'display':'block'});
+   $("#rasteponenext").click(function(){
+    $('#rastep1').css({'display':'none'});
+    $('#rastep2').css({'display':'block'});
+  });
+   $("#rasteptwoback").click(function(){
+    $('#rastep2').css({'display':'none'});
+    $('#rastep1').css({'display':'block'});
+  });
+   $("#rasteptwonext").click(function(){
+    $('#rastep2').css({'display':'none'});
+    $('#rastep3').css({'display':'block'});
+  });
+   $("#rastepthreeback").click(function(){
+    $('#rastep3').css({'display':'none'});
+    $('#rastep2').css({'display':'block'});
+  });
+   $("#rastepthreenext").click(function(){
+    $('#rastep3').css({'display':'none'});
+    $('#rastep4').css({'display':'block'});
+  });
+   $("#rastepfourback").click(function(){
+    $('#rastep4').css({'display':'none'});
+    $('#rastep3').css({'display':'block'});
+  });
+   $("#rastepfournext").click(function(){
+    $('#rastep4').css({'display':'none'});
+    $('#rastep5').css({'display':'block'});
+  });
+   $("#rastepfiveback").click(function(){
+    $('#rastep5').css({'display':'none'});
+    $('#rastep4').css({'display':'block'});
+  });
+   $("#rastepfivenext").click(function(){
+    $('#rastep5').css({'display':'none'});
+    $('#rastep6').css({'display':'block'});
+  });
+   $("#rastepsixback").click(function(){
+    $('#rastep6').css({'display':'none'});
+    $('#rastep5').css({'display':'block'});
+  });
+ })
+</script>
+</body>
+</html>
