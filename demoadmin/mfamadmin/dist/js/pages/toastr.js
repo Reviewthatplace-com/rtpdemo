@@ -6,63 +6,12 @@ File: js
 */
 $(function() {
     "use strict";
-      $(".tst1").click(function(){
-           $.toast({
-            heading: 'Welcome to Material Pro admin',
-            text: 'Use the predefined ones, or specify a custom position object.',
-            position: 'top-right',
-            loaderBg:'#ff6849',
-            icon: 'info',
-            hideAfter: 3000, 
-            stack: 6
-          });
 
-     });
-
-      $(".tst2").click(function(){
-           $.toast({
-            heading: 'Welcome to Material Pro admin',
-            text: 'Use the predefined ones, or specify a custom position object.',
-            position: 'top-right',
-            loaderBg:'#ff6849',
-            icon: 'warning',
-            hideAfter: 3500, 
-            stack: 6
-          });
-
-     });
-
-      $(".tst3").click(function(){
-           $.toast({
-            heading: 'Welcome to Material Pro admin',
-            text: 'Use the predefined ones, or specify a custom position object.',
-            position: 'top-right',
-            loaderBg:'#ff6849',
-            icon: 'success',
-            hideAfter: 3500, 
-            stack: 6
-          });
-
-     });
-
-      $(".tst4").click(function(){
-           $.toast({
-            heading: 'Welcome to Material Pro admin',
-            text: 'Use the predefined ones, or specify a custom position object.',
-            position: 'top-right',
-            loaderBg:'#ff6849',
-            icon: 'error',
-            hideAfter: 3500
-            
-          });
-
-     });
-     
      //stage Display Start
      $(".mgrnotification").click(function(){
           $.toast({
            heading: '',
-           text: 'Ravi Agrawal jumped visit Shakir Ansari 11/10/2020 to Stage MGR. ',
+           text: 'Shakir jumped visit Shakir Ansari 11/10/2020 to Stage MGR. ',
            position: 'top-right',
            loaderBg:'#ff6849',
            icon: 'warning',
@@ -75,7 +24,7 @@ $(function() {
      $(".mgrnotification").click(function(){
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal jumped visit Shakir Ansari 11/10/2020 to Stage MGR. ',
+               text: 'Shakir jumped visit Shakir Ansari 11/10/2020 to Stage MGR. ',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'success',
@@ -88,7 +37,7 @@ $(function() {
      $(".mgrnotification").click(function(){
         $.toast({
          heading: '',
-         text: 'Ravi Agrawal jumped visit Shakir Ansari 11/10/2020 to Stage MGR. ',
+         text: 'Shakir jumped visit Shakir Ansari 11/10/2020 to Stage MGR. ',
          position: 'top-right',
          loaderBg:'#ff6849',
          icon: 'error',
@@ -101,7 +50,7 @@ $(function() {
      $(".locationinfoUpdate").click(function(){
           $.toast({
            heading: '',
-           text: 'Ravi Agrawal updated Location Information.',
+           text: 'Shakir updated Location Information.',
            position: 'top-right',
            loaderBg:'#ff6849',
            icon: 'warning',
@@ -111,7 +60,7 @@ $(function() {
          
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated Location Information.',
+          text: 'Shakir updated Location Information.',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -121,7 +70,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal updated Location Information.',
+               text: 'Shakir updated Location Information.',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -133,7 +82,7 @@ $(function() {
      $(".stepAcknowledge").click(function(){
      $.toast({
       heading: '',
-      text: 'Ravi Agrawal Acknowledged a Step',
+      text: 'Shakir Acknowledged a Step',
       position: 'top-right',
       loaderBg:'#ff6849',
       icon: 'warning',
@@ -143,7 +92,7 @@ $(function() {
     
      $.toast({
      heading: '',
-     text: 'Ravi Agrawal Acknowledged a Step',
+     text: 'Shakir Acknowledged a Step',
      position: 'top-right',
      loaderBg:'#ff6849',
      icon: 'success',
@@ -153,7 +102,7 @@ $(function() {
 
      $.toast({
           heading: '',
-          text: 'Ravi Agrawal Acknowledged a Step',
+          text: 'Shakir Acknowledged a Step',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'error',
@@ -165,7 +114,7 @@ $(function() {
      $(".newptMarked").click(function(){
      $.toast({
       heading: '',
-      text: 'Ravi Agrawal Marked a New Patient',
+      text: 'Shakir Marked a New Patient',
       position: 'top-right',
       loaderBg:'#ff6849',
       icon: 'warning',
@@ -175,7 +124,7 @@ $(function() {
     
      $.toast({
      heading: '',
-     text: 'Ravi Agrawal Marked a New Patient',
+     text: 'Shakir Marked a New Patient',
      position: 'top-right',
      loaderBg:'#ff6849',
      icon: 'success',
@@ -185,7 +134,7 @@ $(function() {
 
      $.toast({
           heading: '',
-          text: 'Ravi Agrawal Marked a New Patient',
+          text: 'Shakir Marked a New Patient',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'error',
@@ -197,7 +146,7 @@ $(function() {
      $(".queAddStage").click(function(){
      $.toast({
       heading: '',
-      text: 'Ravi Agrawal updated a questionnaire for a Visit.',
+      text: 'Shakir updated a questionnaire for a Visit.',
       position: 'top-right',
       loaderBg:'#ff6849',
       icon: 'warning',
@@ -207,7 +156,7 @@ $(function() {
     
      $.toast({
      heading: '',
-     text: 'Ravi Agrawal updated a questionnaire for a Visit.',
+     text: 'Shakir updated a questionnaire for a Visit.',
      position: 'top-right',
      loaderBg:'#ff6849',
      icon: 'success',
@@ -217,7 +166,7 @@ $(function() {
 
      $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated a questionnaire for a Visit.',
+          text: 'Shakir updated a questionnaire for a Visit.',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'error',
@@ -229,7 +178,7 @@ $(function() {
      $(".commentleftStage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Left a Comment for a Visit',
+          text: 'Shakir Left a Comment for a Visit',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -239,7 +188,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Left a Comment for a Visit',
+          text: 'Shakir Left a Comment for a Visit',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -249,7 +198,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Left a Comment for a Visit',
+               text: 'Shakir Left a Comment for a Visit',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -261,7 +210,7 @@ $(function() {
      $(".updateVisitStage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Visit',
+          text: 'Shakir Updated a Visit',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -271,7 +220,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Visit',
+          text: 'Shakir Updated a Visit',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -281,7 +230,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated a Visit',
+               text: 'Shakir Updated a Visit',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -293,7 +242,7 @@ $(function() {
      $(".textoptStage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Sent a Text to a Patient',
+          text: 'Shakir Sent a Text to a Patient',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -303,7 +252,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Sent a Text to a Patient',
+          text: 'Shakir Sent a Text to a Patient',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -313,7 +262,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Sent a Text to a Patient',
+               text: 'Shakir Sent a Text to a Patient',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -325,7 +274,7 @@ $(function() {
      $(".emailoptStage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Sent a Text to a Patient',
+          text: 'Shakir Sent a Text to a Patient',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -335,7 +284,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Sent a Text to a Patient',
+          text: 'Shakir Sent a Text to a Patient',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -345,7 +294,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Sent a Text to a Patient',
+               text: 'Shakir Sent a Text to a Patient',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -357,7 +306,7 @@ $(function() {
      $(".assignPhyStage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Assigned a Physician to a Patient Visit',
+          text: 'Shakir Assigned a Physician to a Patient Visit',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -367,7 +316,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Assigned a Physician to a Patient Visit',
+          text: 'Shakir Assigned a Physician to a Patient Visit',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -377,7 +326,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Assigned a Physician to a Patient Visit',
+               text: 'Shakir Assigned a Physician to a Patient Visit',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -389,7 +338,7 @@ $(function() {
      $(".unassignPhyStage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Unassigned a Physician to a Patient Visit',
+          text: 'Shakir Unassigned a Physician to a Patient Visit',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -399,7 +348,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Unassigned a Physician to a Patient Visit',
+          text: 'Shakir Unassigned a Physician to a Patient Visit',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -409,7 +358,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Unassigned a Physician to a Patient Visit',
+               text: 'Shakir Unassigned a Physician to a Patient Visit',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -421,7 +370,7 @@ $(function() {
      $(".resourceupdateStage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Resources for a Patient Visit',
+          text: 'Shakir Updated Resources for a Patient Visit',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -431,7 +380,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Resources for a Patient Visit',
+          text: 'Shakir Updated Resources for a Patient Visit',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -441,7 +390,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated Resources for a Patient Visit',
+               text: 'Shakir Updated Resources for a Patient Visit',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -453,7 +402,7 @@ $(function() {
      $(".demoupdateStage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Demo for a Patient',
+          text: 'Shakir Updated Demo for a Patient',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -463,7 +412,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Demo for a Patient',
+          text: 'Shakir Updated Demo for a Patient',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -473,7 +422,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated Demo for a Patient',
+               text: 'Shakir Updated Demo for a Patient',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -485,7 +434,7 @@ $(function() {
      $(".insuranceupdateStage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Insurance for a Patient',
+          text: 'Shakir Updated Insurance for a Patient',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -495,7 +444,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Insurance for a Patient',
+          text: 'Shakir Updated Insurance for a Patient',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -505,7 +454,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated Insurance for a Patient',
+               text: 'Shakir Updated Insurance for a Patient',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -517,7 +466,7 @@ $(function() {
      $(".paymentreminderStage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal sent a Payment Reminder for a Patient',
+          text: 'Shakir sent a Payment Reminder for a Patient',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -527,7 +476,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal sent a Payment Reminder for a Patient',
+          text: 'Shakir sent a Payment Reminder for a Patient',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -537,7 +486,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal sent a Payment Reminder for a Patient',
+               text: 'Shakir sent a Payment Reminder for a Patient',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -549,7 +498,7 @@ $(function() {
      $(".recordnxtStage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal sent Record to Next Stage',
+          text: 'Shakir sent Record to Next Stage',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -559,7 +508,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal sent Record to Next Stage',
+          text: 'Shakir sent Record to Next Stage',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -569,7 +518,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal sent Record to Next Stage',
+               text: 'Shakir sent Record to Next Stage',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -581,7 +530,7 @@ $(function() {
      $(".jumptoNxtstage").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Next Stage a visit for Shakir Ansari 11/10/2020 to Stage MGR.',
+          text: 'Shakir Next Stage a visit for Shakir Ansari 11/10/2020 to Stage MGR.',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -591,7 +540,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Next Stage a visit for Shakir Ansari 11/10/2020 to Stage MGR.',
+          text: 'Shakir Next Stage a visit for Shakir Ansari 11/10/2020 to Stage MGR.',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -601,7 +550,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Next Stage a visit for Shakir Ansari 11/10/2020 to Stage MGR.',
+               text: 'Shakir Next Stage a visit for Shakir Ansari 11/10/2020 to Stage MGR.',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -615,7 +564,7 @@ $(function() {
      $(".visitReason").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Visit Reason',
+          text: 'Shakir Updated a Visit Reason',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -625,7 +574,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Visit Reason',
+          text: 'Shakir Updated a Visit Reason',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -635,7 +584,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated a Visit Reason',
+               text: 'Shakir Updated a Visit Reason',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -647,7 +596,7 @@ $(function() {
      $(".visittypeOrder").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated order for a Visit Type',
+          text: 'Shakir updated order for a Visit Type',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -657,7 +606,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated order for a Visit Type',
+          text: 'Shakir updated order for a Visit Type',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -667,7 +616,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal updated order for a Visit Type',
+               text: 'Shakir updated order for a Visit Type',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -679,7 +628,7 @@ $(function() {
      $(".visittypeUpdate").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Visit type',
+          text: 'Shakir Updated a Visit type',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -689,7 +638,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Visit type',
+          text: 'Shakir Updated a Visit type',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -699,7 +648,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated a Visit type',
+               text: 'Shakir Updated a Visit type',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -711,7 +660,7 @@ $(function() {
      $(".visitReasonOrder").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated order for a Visit Reason',
+          text: 'Shakir updated order for a Visit Reason',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -721,7 +670,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated order for a Visit Reason',
+          text: 'Shakir updated order for a Visit Reason',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -731,7 +680,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal updated order for a Visit Reason',
+               text: 'Shakir updated order for a Visit Reason',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -745,7 +694,7 @@ $(function() {
      $(".demofieldAdd").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a Demo Field',
+          text: 'Shakir Added a Demo Field',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -755,7 +704,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a Demo Field',
+          text: 'Shakir Added a Demo Field',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -765,7 +714,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Added a Demo Field',
+               text: 'Shakir Added a Demo Field',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -777,7 +726,7 @@ $(function() {
      $(".demoActive").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal set a Demo Field as Active',
+          text: 'Shakir set a Demo Field as Active',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -787,7 +736,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal set a Demo Field as Active',
+          text: 'Shakir set a Demo Field as Active',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -797,7 +746,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal set a Demo Field as Active',
+               text: 'Shakir set a Demo Field as Active',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -807,11 +756,11 @@ $(function() {
      });
      //Demo End
 
-     //Questionnaire Start
-     $(".questionAdd").click(function(){
+     //Survey Start
+     $(".SurveyAdd").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a Questionnaire Field',
+          text: 'Shakir Added a survey Field',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -821,7 +770,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a Questionnaire Field',
+          text: 'Shakir Added a survey Field',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -831,7 +780,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Added a Questionnaire Field',
+               text: 'Shakir Added a survey Field',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -843,7 +792,7 @@ $(function() {
      $(".questionUpdate").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Questionnaire Field',
+          text: 'Shakir Updated a survey Field',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -853,7 +802,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Questionnaire Field',
+          text: 'Shakir Updated a survey Field',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -863,7 +812,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated a Questionnaire Field',
+               text: 'Shakir Updated a survey Field',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -875,7 +824,7 @@ $(function() {
      $(".questionActive").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal set a Questionnaire Field as Active',
+          text: 'Shakir set a survey Field as Active',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -885,7 +834,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal set a Questionnaire Field as Active',
+          text: 'Shakir set a survey Field as Active',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -895,7 +844,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal set a Questionnaire Field as Active',
+               text: 'Shakir set a survey Field as Active',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -907,7 +856,7 @@ $(function() {
      $(".questionArchive").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal set a Questionnaire Field as Archived',
+          text: 'Shakir set a survey Field as Archived',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -917,7 +866,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal set a Questionnaire Field as Archived',
+          text: 'Shakir set a survey Field as Archived',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -927,7 +876,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal set a Questionnaire Field as Archived',
+               text: 'Shakir set a survey Field as Archived',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -935,13 +884,11 @@ $(function() {
                stack: 6
           });
      });
-     //Questionnaire End
 
-     //Stage & Step Start
-     $(".stagenstepAdd").click(function(){
+     $(".surveySaved").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a Stage',
+          text: 'Shakir saved a survey information',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -951,7 +898,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a Stage',
+          text: 'Shakir saved a survey information',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -961,7 +908,41 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Added a Stage',
+               text: 'Shakir saved a survey information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+     //Survey End
+
+     //Stage & Step Start
+     $(".stagenstepAdd").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir Added a Stage',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+          });
+          
+          $.toast({
+          heading: '',
+          text: 'Shakir Added a Stage',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir Added a Stage',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -973,7 +954,7 @@ $(function() {
      $(".stagenStageAdd").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated a Stage',
+          text: 'Shakir updated a Stage',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -983,7 +964,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated a Stage',
+          text: 'Shakir updated a Stage',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -993,7 +974,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal updated a Stage',
+               text: 'Shakir updated a Stage',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1005,7 +986,7 @@ $(function() {
      $(".stageUpdate").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Stage',
+          text: 'Shakir Updated a Stage',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1015,7 +996,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Stage',
+          text: 'Shakir Updated a Stage',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1025,7 +1006,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated a Stage',
+               text: 'Shakir Updated a Stage',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1037,7 +1018,7 @@ $(function() {
      $(".stepAdd").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a Step',
+          text: 'Shakir Added a Step',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1047,7 +1028,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a Step',
+          text: 'Shakir Added a Step',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1057,7 +1038,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Added a Step',
+               text: 'Shakir Added a Step',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1069,7 +1050,7 @@ $(function() {
      $(".stepUpdate").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Step',
+          text: 'Shakir Updated a Step',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1079,7 +1060,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Step',
+          text: 'Shakir Updated a Step',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1089,7 +1070,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated a Step',
+               text: 'Shakir Updated a Step',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1101,7 +1082,7 @@ $(function() {
      $(".StageOrder").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated order for a Stage',
+          text: 'Shakir updated order for a Stage',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1111,7 +1092,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated order for a Stage',
+          text: 'Shakir updated order for a Stage',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1121,7 +1102,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal updated order for a Stage',
+               text: 'Shakir updated order for a Stage',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1133,7 +1114,7 @@ $(function() {
      $(".StepOrder").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated order for a Step',
+          text: 'Shakir updated order for a Step',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1143,7 +1124,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal updated order for a Step',
+          text: 'Shakir updated order for a Step',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1153,7 +1134,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal updated order for a Step',
+               text: 'Shakir updated order for a Step',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1167,7 +1148,7 @@ $(function() {
      $(".resourceAdd").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a Resource',
+          text: 'Shakir Added a Resource',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1177,7 +1158,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a Resource',
+          text: 'Shakir Added a Resource',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1187,7 +1168,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Added a Resource',
+               text: 'Shakir Added a Resource',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1199,7 +1180,7 @@ $(function() {
      $(".resourceUpdate").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Resource',
+          text: 'Shakir Updated a Resource',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1209,7 +1190,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a Resource',
+          text: 'Shakir Updated a Resource',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1219,7 +1200,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated a Resource',
+               text: 'Shakir Updated a Resource',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1231,7 +1212,7 @@ $(function() {
      $(".resourceArchive").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Archived a Resource',
+          text: 'Shakir Archived a Resource',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1241,7 +1222,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Archived a Resource',
+          text: 'Shakir Archived a Resource',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1251,7 +1232,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Archived a Resource',
+               text: 'Shakir Archived a Resource',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1265,7 +1246,7 @@ $(function() {
      $(".smstempAdd").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a SMS Template',
+          text: 'Shakir Added a SMS Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1275,7 +1256,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added a SMS Template',
+          text: 'Shakir Added a SMS Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1285,7 +1266,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Added a SMS Template',
+               text: 'Shakir Added a SMS Template',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1297,7 +1278,7 @@ $(function() {
      $(".smstempUpdate").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a SMS Template',
+          text: 'Shakir Updated a SMS Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1307,7 +1288,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated a SMS Template',
+          text: 'Shakir Updated a SMS Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1317,7 +1298,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated a SMS Template',
+               text: 'Shakir Updated a SMS Template',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1329,7 +1310,7 @@ $(function() {
      $(".smstempDelete").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Deleted a SMS Template',
+          text: 'Shakir Deleted a SMS Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1339,7 +1320,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Deleted a SMS Template',
+          text: 'Shakir Deleted a SMS Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1349,7 +1330,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Deleted a SMS Template',
+               text: 'Shakir Deleted a SMS Template',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1363,7 +1344,7 @@ $(function() {
      $(".emailtempAdd").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added an Email Template',
+          text: 'Shakir Added an Email Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1373,7 +1354,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Added an Email Template',
+          text: 'Shakir Added an Email Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1383,7 +1364,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Added an Email Template',
+               text: 'Shakir Added an Email Template',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1395,7 +1376,7 @@ $(function() {
      $(".emailtempUpdate").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated an Email Template',
+          text: 'Shakir Updated an Email Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1405,7 +1386,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated an Email Template',
+          text: 'Shakir Updated an Email Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1415,7 +1396,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated an Email Template',
+               text: 'Shakir Updated an Email Template',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1427,7 +1408,7 @@ $(function() {
      $(".emailtempDelete").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Deleted an Email Template',
+          text: 'Shakir Deleted an Email Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1437,7 +1418,7 @@ $(function() {
           
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Deleted an Email Template',
+          text: 'Shakir Deleted an Email Template',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1447,7 +1428,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Deleted an Email Template',
+               text: 'Shakir Deleted an Email Template',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1461,7 +1442,7 @@ $(function() {
      $(".ptAllocation").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Patient Allocation for a Location',
+          text: 'Shakir Updated Patient Allocation for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1471,7 +1452,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Patient Allocation for a Location',
+          text: 'Shakir Updated Patient Allocation for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1481,7 +1462,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated Patient Allocation for a Location',
+               text: 'Shakir Updated Patient Allocation for a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1493,7 +1474,7 @@ $(function() {
      $(".userAllocation").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated User Allocation for a Location',
+          text: 'Shakir Updated User Allocation for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1503,7 +1484,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated User Allocation for a Location',
+          text: 'Shakir Updated User Allocation for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1513,7 +1494,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated User Allocation for a Location',
+               text: 'Shakir Updated User Allocation for a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1525,7 +1506,7 @@ $(function() {
      $(".smsAllocation").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated SMS Allocation for a Location',
+          text: 'Shakir Updated SMS Allocation for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1535,7 +1516,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated SMS Allocation for a Location',
+          text: 'Shakir Updated SMS Allocation for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1545,7 +1526,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated SMS Allocation for a Location',
+               text: 'Shakir Updated SMS Allocation for a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1557,7 +1538,7 @@ $(function() {
      $(".emailAllocation").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Email Allocation for a Location',
+          text: 'Shakir Updated Email Allocation for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1567,7 +1548,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Email Allocation for a Location',
+          text: 'Shakir Updated Email Allocation for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1577,7 +1558,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated Email Allocation for a Location',
+               text: 'Shakir Updated Email Allocation for a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1589,7 +1570,7 @@ $(function() {
      $(".paymentAllocation").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Authorize.net API for a Location',
+          text: 'Shakir Updated Authorize.net API for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1599,7 +1580,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Authorize.net API for a Location',
+          text: 'Shakir Updated Authorize.net API for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1609,7 +1590,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated Authorize.net API for a Location',
+               text: 'Shakir Updated Authorize.net API for a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1621,7 +1602,7 @@ $(function() {
      $(".updateuserLocation").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Users for a Location',
+          text: 'Shakir Updated Users for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1631,7 +1612,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Users for a Location',
+          text: 'Shakir Updated Users for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1641,7 +1622,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated Users for a Location',
+               text: 'Shakir Updated Users for a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1653,7 +1634,7 @@ $(function() {
      $(".updateptmgrLocation").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Patient Management for a Location',
+          text: 'Shakir Updated Patient Management for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1663,7 +1644,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated Patient Management for a Location',
+          text: 'Shakir Updated Patient Management for a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1673,7 +1654,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated Patient Management for a Location',
+               text: 'Shakir Updated Patient Management for a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1685,7 +1666,7 @@ $(function() {
      $(".deactiveLocation").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Deactivated a Location',
+          text: 'Shakir Deactivated a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1695,7 +1676,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Deactivated a Location',
+          text: 'Shakir Deactivated a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1705,7 +1686,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Deactivated a Location',
+               text: 'Shakir Deactivated a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1715,7 +1696,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Activated a Location',
+               text: 'Shakir Activated a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'warning',
@@ -1725,7 +1706,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Activated a Location',
+               text: 'Shakir Activated a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'success',
@@ -1735,7 +1716,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Activated a Location',
+               text: 'Shakir Activated a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1747,7 +1728,7 @@ $(function() {
      $(".deactivePhysician").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Deactivated a Physician',
+          text: 'Shakir Deactivated a Physician',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1757,7 +1738,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Deactivated a Physician',
+          text: 'Shakir Deactivated a Physician',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1767,7 +1748,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Deactivated a Physician',
+               text: 'Shakir Deactivated a Physician',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1777,7 +1758,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Activated a Physician',
+               text: 'Shakir Activated a Physician',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'warning',
@@ -1787,7 +1768,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Activated a Physician',
+               text: 'Shakir Activated a Physician',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'success',
@@ -1797,7 +1778,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Activated a Physician',
+               text: 'Shakir Activated a Physician',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1843,7 +1824,7 @@ $(function() {
      $(".newPractice").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Adding a Location',
+          text: 'Shakir Adding a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1853,7 +1834,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Adding a Location',
+          text: 'Shakir Adding a Location',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1863,7 +1844,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Adding a Location',
+               text: 'Shakir Adding a Location',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1878,7 +1859,7 @@ $(function() {
      $(".billingUpdate").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated the Billing Plan',
+          text: 'Shakir Updated the Billing Plan',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1888,7 +1869,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated the Billing Plan',
+          text: 'Shakir Updated the Billing Plan',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1898,7 +1879,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated the Billing Plan',
+               text: 'Shakir Updated the Billing Plan',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1913,7 +1894,7 @@ $(function() {
      $(".locationaccessUser").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated the Location access for a User',
+          text: 'Shakir Updated the Location access for a User',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1923,7 +1904,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Updated the Location access for a User',
+          text: 'Shakir Updated the Location access for a User',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1933,7 +1914,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Updated the Location access for a User',
+               text: 'Shakir Updated the Location access for a User',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1948,7 +1929,7 @@ $(function() {
      $(".activeRequestCredt").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Authorized a Credit Card Payment',
+          text: 'Shakir Authorized a Credit Card Payment',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1958,7 +1939,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Authorized a Credit Card Payment',
+          text: 'Shakir Authorized a Credit Card Payment',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -1968,7 +1949,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Authorized a Credit Card Payment',
+               text: 'Shakir Authorized a Credit Card Payment',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -1980,7 +1961,7 @@ $(function() {
      $(".activeRequestCash").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Authorized a Cash Payment',
+          text: 'Shakir Authorized a Cash Payment',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -1990,7 +1971,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Authorized a Cash Payment',
+          text: 'Shakir Authorized a Cash Payment',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -2000,7 +1981,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Authorized a Cash Payment',
+               text: 'Shakir Authorized a Cash Payment',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -2012,7 +1993,7 @@ $(function() {
      $(".activeRequestCheque").click(function(){
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Authorized a Cheque Payment',
+          text: 'Shakir Authorized a Cheque Payment',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'warning',
@@ -2022,7 +2003,7 @@ $(function() {
      
           $.toast({
           heading: '',
-          text: 'Ravi Agrawal Authorized a Cheque Payment',
+          text: 'Shakir Authorized a Cheque Payment',
           position: 'top-right',
           loaderBg:'#ff6849',
           icon: 'success',
@@ -2032,7 +2013,7 @@ $(function() {
 
           $.toast({
                heading: '',
-               text: 'Ravi Agrawal Authorized a Cheque Payment',
+               text: 'Shakir Authorized a Cheque Payment',
                position: 'top-right',
                loaderBg:'#ff6849',
                icon: 'error',
@@ -2041,6 +2022,1889 @@ $(function() {
           });
      });
      //Active requests End
-  
+
+     //Update Demo Start
+     $(".DemoSaved").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir saved a demo',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir saved a demo',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir saved a demo',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+     //Update Demo End
+
+     //Request Form Start
+     $(".RequestSaved").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir saved a request form',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir saved a request form',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir saved a request form',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+     //Request Form End
+
+     //Authorization Release Start
+     $(".authorizationSaved").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir saved an authorization form',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir saved an authorization form',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir saved an authorization form',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+     //Authorization Release End
+
+     //Appointment Start
+     $(".appointmentSaved").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir saved an appointment time',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir saved an appointment time',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir saved an appointment time',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".appointmentTypeSaved").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir saved an appointment type',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir saved an appointment type',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir saved an appointment type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".appointmentTypeAdded").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir added an appointment type',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir added an appointment type',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir added an appointment type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".appointmentTypeUpdated").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir updated an appointment type',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir updated an appointment type',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir updated an appointment type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".availabilitySaved").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir saved an appointment availability',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir saved an appointment availability',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir saved an appointment availability',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".blockedSaved").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir saved a blocked appointment',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir saved a blocked appointment',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir saved a blocked appointment',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".blockedAdded").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir added a blocked appointment',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir added a blocked appointment',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir added a blocked appointment',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".blockedUpdated").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir updated a blocked appointment',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir updated a blocked appointment',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir updated a blocked appointment',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".mondaySwitch").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir updated monday to be available',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir updated monday to be available',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir updated monday to be available',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".tuesdaySwitch").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir updated tuesday to be unavailable',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir updated tuesday to be unavailable',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir updated tuesday to be unavailable',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+     //Appointment End
+     
+
+     //Staff Highlights Start
+     $(".ActionCheck").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir activated a staff',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir activated a staff',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir activated a staff',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".ActionUnCheck").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir deactivated a staff',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir deactivated a staff',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir deactivated a staff',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".addStaff").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir added a staff',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir added a staff',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir added a staff',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".updateStaff").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Shakir updated a staff information',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Shakir updated a staff information',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Shakir updated a staff information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     //Staff Highlights End
+
+          //Insurance Start
+          $(".InsActionCheck").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir activated a user insurance',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir activated a user insurance',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir activated a user insurance',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+     
+          $(".InsActionUnCheck").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir deactivated a user insurance',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir deactivated a user insurance',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir deactivated a user insurance',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+     
+          $(".addInsurance").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir saved insurance information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir saved insurance information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir saved insurance information',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+     
+          $(".updateInsurance").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir updated insurance information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir updated insurance information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir updated insurance information',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+     
+          //Insurance End
+
+          //Social Media Start
+          $(".SocialActionCheck").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir activated a social media link',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir activated a social media link',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir activated a social media link',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+     
+          $(".SocialActionUnCheck").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir deactivated a social media link',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir deactivated a social media link',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir deactivated a social media link',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+
+          $(".SocialSave").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a social media link',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a social media link',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir saved a social media link',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+     
+          //Social Media End
+
+          //Service Start
+          $(".ServiceActionCheck").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir activated a Service',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir activated a Service',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir activated a Service',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+     
+          $(".ServiceActionUnCheck").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir deactivated a service',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir deactivated a service',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir deactivated a service',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+     
+          $(".addService").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a service information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a service information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir saved a service information',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+     
+          $(".updateService").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir updated a service information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir updated a service information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir updated a service information',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+     
+          //Service End
+
+          //License Mgt Start
+          $(".LicensemgtAdd").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir added a license',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir added a license',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir added a license',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+
+          
+          $(".LicensemgtUpdate").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir updated a license',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir updated a license',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir updated a license',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+          //License Mgt End
+
+          //Comliance Start
+          $(".BAAsaved").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a BAA agreement',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a BAA agreement',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir saved a BAA agreement',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+
+
+          $(".HIPAAsaved").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a HIPAA agreement',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a HIPAA agreement',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir saved a HIPAA agreement',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+
+          $(".Privacypolicysaved").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a privacy policy agreement',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a privacy policy agreement',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir saved a privacy policy agreement',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+
+          $(".Nonsaved").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a Non-disclosure  agreement',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir saved a Non-disclosure  agreement',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir saved a Non-disclosure  agreement',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+          
+          $(".LicensemgtUpdate").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir updated a license',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir updated a license',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir updated a license',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+          //Comliance End
+
+          //Calls Pending & Complete Start    
+          $(".SendBlast").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi Sent a blast',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi Sent a blast',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi Sent a blast',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });     
+              
+          $(".addCall").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi added a call',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi added a call',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi added a call',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });      
+              
+          $(".updateCall").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a call',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a call',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi updated a call',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });   
+          //Calls Pending & Complete End
+          $(".UpdateAppt").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Shakir updated an appointment time',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Shakir updated an appointment time',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     
+               $.toast({
+                    heading: '',
+                    text: 'Shakir updated an appointment time',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });   
+              
+          $(".updateTimesheet").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a timesheet',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a timesheet',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi updated a timesheet',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });   
+              
+          $(".updateTimeoff").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a Timeoff request',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a Timeoff request',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi updated a Timeoff request',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".sendTimeoff").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi sent a Timeoff request',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi sent a Timeoff request',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi sent a Timeoff request',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".updateUser").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a user information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a user information',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi updated a user information',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".savePayperiod").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi saved a payperiod day',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi saved a payperiod day',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi saved a payperiod day',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".addCalllistType").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi added a call list type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi added a call list type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi added a call list type',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".updateCalllistType").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a call list type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a call list type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi updated a call list type',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".addCallStatusType").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi added a call status type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi added a call status type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi added a call status type',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".UpdateCallStatusType").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a call status type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi updated a call status type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi updated a call status type',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".activateCallStatusType").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi activated a call status type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi activated a call status type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi activated a call status type',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".DeactivateCallStatusType").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi deactivated a call status type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi deactivated a call status type',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi deactivated a call status type',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".Sendreceipt").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi Sent a receipt',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi Sent a receipt',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi Sent a receipt',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".Sendrequest").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi Sent a payment request',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi Sent a payment request',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi Sent a payment request',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".addAlert").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi saved an alert',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi saved an alert',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi saved an alert',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+              
+          $(".updateAlert").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi updated an alert',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi updated an alert',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi updated an alert',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+              
+          $(".switchSandbox").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi switched to Production',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi switched to Production',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi switched to Production',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+              
+          $(".savePayment").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi saved a payment transaction key',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi saved a payment transaction key',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi saved a payment transaction key',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+              
+          $(".saveProfile").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi saved his profile settings',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi saved his profile settings',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi saved his profile settings',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
+              
+          $(".saveCompanyDetails").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Ravi saved his company details',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Ravi saved his company details',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Ravi saved his company details',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          });
 });
           

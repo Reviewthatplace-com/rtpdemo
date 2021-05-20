@@ -1,789 +1,241 @@
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-});
-
 //navigation functionality
 $("a").click(function(){
-  $(this).closest("li").toggleClass("active");
+	$(this).closest("li").toggleClass("active");
 });
 $('.intial_hidden').hide();
 
-// show and hide for marital status
-function maritalStatus() {
-  var x = document.getElementById("marital_status");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
 
 // show and hide for insurance type
 function insType() {
   var x = document.getElementById("insurancetype");
   if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for condition for office
-function fourCond() {
-  var x = document.getElementById("second_medcond");
-  var y = document.getElementById("third_medcond");
-  var z = document.getElementById("fourth_medcond");
-  if (z.style.display === "none" && y.style.display === "block" && x.style.display === "block") {
-    z.style.display = "block";	
-  }
-  if (y.style.display === "none" && x.style.display === "block" && z.style.display === "none") {
-    y.style.display = "block";	
-  }
-  if (x.style.display === "none" && y.style.display === "none" && z.style.display === "none") {
     x.style.display = "block";
-  }
-}
-
-
-// show and hide for radiating
-function Radiating1() {
-  var x = document.getElementById("radiating_type1");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
   } else {
     x.style.display = "none";
   }
 }
 
-document.getElementById("canvas1a").addEventListener("click", function() {
-  var rect = canvas1a.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas1a").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
+// show and hide for allergy
+function allergyYes() {
+  var x = document.getElementById("allergyyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide for marital status
+function marriedDetail() {
+  var x = document.getElementById("married-group");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+// show and hide on yes and no
+function smokeYes() {
+  var x = document.getElementById("smokeyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function smokeNo() {
+  var x = document.getElementById("smokeno");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function smokeQuit() {
+  var x = document.getElementById("smokequit");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function drugsYes() {
+  var x = document.getElementById("drugsyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function alcohalYes() {
+  var x = document.getElementById("alcohalyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function waterYes() {
+  var x = document.getElementById("wateryes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function exerciseYes() {
+  var x = document.getElementById("exerciseyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function employYes() {
+  var x = document.getElementById("employyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function bodyPain() {
+  var x = document.getElementById("bodypain");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+$(function () {
+    $("#Verbal, #Physical, #Sexual").click(function () {
+        if ($("#Verbal, #Physical, #Sexual").is(":checked")) {
+            $("#violence_group").show();
+        } else {
+            $("#violence_group").hide();
+        }
+    });
 });
 
-// show and hide for radiating
-function Radiating2() {
-  var x = document.getElementById("radiating_type2");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas1b").addEventListener("click", function() {
-  var rect = canvas1b.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas1b").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
+// show and hide on yes and no
+$("select#pregnancy_comp").change(function(){
+    if($.trim($('#pregnancy_comp').val()) == 'Yes')
+	{
+		$('#pregnancy_group').show();
+	}
+	else
+	{
+		$('#pregnancy_group').hide();
+	}
 });
 
-// show and hide for radiating
-function Radiating3() {
-  var x = document.getElementById("radiating_type3");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas1c").addEventListener("click", function() {
-  var rect = canvas1c.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas1c").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
+// show and hide on yes and no
+$("select#hospital_admission").change(function(){
+    if($.trim($('#hospital_admission').val()) == 'Yes')
+	{
+		$('#hospital_admission_group').show();
+	}
+	else
+	{
+		$('#hospital_admission_group').hide();
+	}
 });
 
-// show and hide for radiating
-function Radiating4() {
-  var x = document.getElementById("radiating_type4");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
 
-document.getElementById("canvas1d").addEventListener("click", function() {
-  var rect = canvas1d.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas1d").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
+// show and hide on yes and no
+$("select#any_illness").change(function(){
+    if($.trim($('#any_illness').val()) == 'Yes')
+	{
+		$('#any_illness_group').show();
+	}
+	else
+	{
+		$('#any_illness_group').hide();
+	}
 });
 
-// show and hide for Burning
-function Burning1() {
-  var x = document.getElementById("burning_type1");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
 
-document.getElementById("canvas2a").addEventListener("click", function() {
-  var rect = canvas2a.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas2a").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
+// show and hide on yes and no
+$("select#mother_healthy").change(function(){
+    if($.trim($('#mother_healthy').val()) == 'No')
+	{
+		$('#mother_healthy_group').show();
+	}
+	else
+	{
+		$('#mother_healthy_group').hide();
+	}
 });
 
-// show and hide for Burning
-function Burning2() {
-  var x = document.getElementById("burning_type2");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas2b").addEventListener("click", function() {
-  var rect = canvas2b.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas2b").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
+// show and hide on No and no
+$("select#father_health").change(function(){
+    if($.trim($('#father_health').val()) == 'No')
+	{
+		$('#father_health_group').show();
+	}
+	else
+	{
+		$('#father_health_group').hide();
+	}
 });
 
-// show and hide for Burning
-function Burning3() {
-  var x = document.getElementById("burning_type3");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas2c").addEventListener("click", function() {
-  var rect = canvas2c.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas2c").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
+// show and hide on No and no
+$("select#sibling_health").change(function(){
+    if($.trim($('#sibling_health').val()) == 'No')
+	{
+		$('#sibling_group').show();
+	}
+	else
+	{
+		$('#sibling_group').hide();
+	}
 });
 
-// show and hide for Burning
-function Burning4() {
-  var x = document.getElementById("burning_type4");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
 
-document.getElementById("canvas2d").addEventListener("click", function() {
-  var rect = canvas2d.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas2d").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
+// show and hide on No and no
+$("select#pgrandparent").change(function(){
+    if($.trim($('#pgrandparent').val()) == 'No')
+	{
+		$('#pgrandparent_group').show();
+	}
+	else
+	{
+		$('#pgrandparent_group').hide();
+	}
 });
 
-// show and hide for Dull
-function Dull1() {
-  var x = document.getElementById("dull_type1");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
 
-document.getElementById("canvas3a").addEventListener("click", function() {
-  var rect = canvas3a.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas3a").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
+// show and hide on No and no
+$("select#mgrandparent").change(function(){
+    if($.trim($('#mgrandparent').val()) == 'No')
+	{
+		$('#mgrandparent_group').show();
+	}
+	else
+	{
+		$('#mgrandparent_group').hide();
+	}
 });
 
-// show and hide for Dull
-function Dull2() {
-  var x = document.getElementById("dull_type2");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
 
-document.getElementById("canvas3b").addEventListener("click", function() {
-  var rect = canvas3b.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas3b").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Dull
-function Dull3() {
-  var x = document.getElementById("dull_type3");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas3c").addEventListener("click", function() {
-  var rect = canvas3c.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas3c").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Dull
-function Dull4() {
-  var x = document.getElementById("dull_type4");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas3d").addEventListener("click", function() {
-  var rect = canvas3d.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas3d").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for insurance Aching
-function Aching1() {
-  var x = document.getElementById("aching_type1");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas4a").addEventListener("click", function() {
-  var rect = canvas4a.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas4a").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for insurance Aching
-function Aching2() {
-  var x = document.getElementById("aching_type2");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas4b").addEventListener("click", function() {
-  var rect = canvas4b.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas4b").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for insurance Aching
-function Aching3() {
-  var x = document.getElementById("aching_type3");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas4c").addEventListener("click", function() {
-  var rect = canvas4c.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas4c").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for insurance Aching
-function Aching4() {
-  var x = document.getElementById("aching_type4");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas4d").addEventListener("click", function() {
-  var rect = canvas4d.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas4d").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Numbness
-function Numbness1() {
-  var x = document.getElementById("numbness_type1");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas5a").addEventListener("click", function() {
-  var rect = canvas5a.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas5a").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Numbness
-function Numbness2() {
-  var x = document.getElementById("numbness_type2");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas5b").addEventListener("click", function() {
-  var rect = canvas5b.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas5b").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Numbness
-function Numbness3() {
-  var x = document.getElementById("numbness_type3");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas5c").addEventListener("click", function() {
-  var rect = canvas5c.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas5c").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Numbness
-function Numbness4() {
-  var x = document.getElementById("numbness_type4");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas5d").addEventListener("click", function() {
-  var rect = canvas5d.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas5d").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Stabbing
-function Stabbing1() {
-  var x = document.getElementById("stabbing_type1");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas6a").addEventListener("click", function() {
-  var rect = canvas6a.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas6a").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Stabbing
-function Stabbing2() {
-  var x = document.getElementById("stabbing_type2");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas6b").addEventListener("click", function() {
-  var rect = canvas6b.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas6b").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Stabbing
-function Stabbing3() {
-  var x = document.getElementById("stabbing_type3");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas6c").addEventListener("click", function() {
-  var rect = canvas6c.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas6c").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Stabbing
-function Stabbing4() {
-  var x = document.getElementById("stabbing_type4");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas6d").addEventListener("click", function() {
-  var rect = canvas6d.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas6d").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Tingling
-function Tingling1() {
-  var x = document.getElementById("tingling_type1");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas7a").addEventListener("click", function() {
-  var rect = canvas7a.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas7a").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Tingling
-function Tingling2() {
-  var x = document.getElementById("tingling_type2");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas7b").addEventListener("click", function() {
-  var rect = canvas7b.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas7b").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Tingling
-function Tingling3() {
-  var x = document.getElementById("tingling_type3");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas7c").addEventListener("click", function() {
-  var rect = canvas7c.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas7c").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for Tingling
-function Tingling4() {
-  var x = document.getElementById("tingling_type4");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-document.getElementById("canvas7d").addEventListener("click", function() {
-  var rect = canvas7d.getBoundingClientRect();
-     var x = event.clientX - rect.left;
-     var y = event.clientY - rect.top;
-     var ctx = document.getElementById("canvas7d").getContext("2d");
-     ctx.fillStyle = "#ff2626"; // Red color
-     ctx.beginPath();
-     ctx.arc(x, y, 10, 0, Math.PI * 2, true);
-     ctx.fill();
-});
-
-// show and hide for psych_cond
-function psychCond() {
-  var x = document.getElementById("psych_cond");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for prev_surg
-function prevSurg() {
-  var x = document.getElementById("prev_surg");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for drugs_group
-function drugsGroup() {
-  var x = document.getElementById("drugs_group");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for spine_injury
-function spineInjury() {
-  var x = document.getElementById("spine_injury");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-
-
-// show and hide for past problem group
-function problemGroup() {
-  var x = document.getElementById("problem_group");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for past cond treat
-function condTreat() {
-  var x = document.getElementById("cond_treat");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for past complaint
-function pastComplaint() {
-  var x = document.getElementById("past_complaint");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for other treatment
-function otherTreatment() {
-  var x = document.getElementById("other_treatment");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for unfavoruable
-function unFavourable() {
-  var x = document.getElementById("un_favourable");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for smoke
-function smokeGroup() {
-  var x = document.getElementById("smoke_group");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for family condition
-function familyCondition() {
-  var x = document.getElementById("family_condition");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for hereditary condition
-function hereditaryCondition() {
-  var x = document.getElementById("hereditary_condition");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for nutrition supplement
-function nutritionSupplement() {
-  var x = document.getElementById("nutrition_supplement");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for flu short
-function fluShort() {
-  var x = document.getElementById("flu_short");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for exercise
-function exerCise() {
-  var x = document.getElementById("exer_cise");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
 
 
 //global variable
