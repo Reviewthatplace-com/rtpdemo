@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* ================== typography =========================== */
+body
+{
+  font-family: 'Poppins', sans-serif;
+  position: relative; 
+}
+.title {
+  font-size: 3.3rem;
+  font-weight: 800;
+  /*font-family: 'Bebas Neue', cursive;*/
+  letter-spacing: 2px !important;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: calc(2rem + 2.6vw);
+    text-align: center;
+  }
+}
+
+section
+{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.section-title {
+  margin-bottom: 60px;
+}
+.section-title h4 {
+  text-transform: capitalize;
+  font-size: 40px;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #D90303;
+}
+.section-title h4:before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: #D90303;
+  bottom: 0;
+  left: 50%;
+  margin-left: -30px;
+}
+.section-title h4:after {
+  position: absolute;
+  background-color: #D90303;
+  content: "";
+  width: 10px;
+  height: 10px;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -5px;
+  border-radius: 50%;
+}
+
+
+/* hr */
+hr.style-four {
+height: 10px;
+border: 1;
+box-shadow: inset 0 9px 9px -3px rgba(11, 99, 184, 0.8);
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+}
+/* ===================== typography ======================== */
+
+/* ========================= header section ==========================*/
+header
+{
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar-brand .forDesktop span
+{
+  font-weight: bold;
+  color: #D90303;
+  margin: 0px;
+  padding: 0px;
+  font-size: 30px;
+}
+.navbar-brand .forDesktop small
+{
+  position: relative;
+  top: -10px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+.navbar-brand .forMobile
+{
+  font-size: 35px;
+  font-weight: bold;
+  color: #D90303;
+}
+.sticky 
+{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#logo
+{
+  width: 70px;
+  height: 50px;
+}
+
+#menu-bar
+{
+  background-color: #CB3149;
+  padding-top:0px;
+  padding-bottom: 0px; 
+  z-index: 1000;
+}
+
+.main-nav-links
+{
+  color: white !important;
+}
+
+.navbar-nav li
+{
+  margin-left: 20px;
+}
+.main-nav-links
+{
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 20px 15px;
+    line-height: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    text-transform: uppercase;
+}
+.navbar-nav li a:hover
+{
+  border-bottom: 3px solid white;
+}
+
+#topbar
+{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#etabutton
+{
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10rem;
+  padding: 8px 25px;
+  margin-left: 0px;
+  color: white;
+}
+.nav-item .active 
+{ 
+  border-bottom: 3px solid white;
+}
+
+.forMobile
+{
+  display: none;
+}
+
+@media only screen and (max-width: 1200px)
+{
+  .forDesktop
+  {
+    display: none;
+  }
+  #logo
+  {
+    width: 120px !important;
+  }
+  .main-nav-links
+  {
+    padding: 7px 0px !important;
+  }
+  .forMobile
+  {
+    display: block;
+  }
+  #topbar
+  {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+/* ========================= header section ==========================*/
+
+#dr-img
+{
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.btn-readmore
+{
+  border-radius: 10rem;
+}
+/* ==================== patient portal ====================== */
+.portalHeading
+{
+  font-weight: bold;
+  color: #D90303;
+}
+
+.btn-portal
+{
+  background-color: #D90303;
+  color: white;
+  margin-left: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10rem;
+}
+
+.btn-portal:hover
+{
+  color: white;
+}
+/* ==================== patient portal ====================== */
+
+
+/* ==================== service ============================= */
+.style-4 .single-service {
+  border: 1px solid #ddd;
+  padding: 25px 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 30px -5px #ccc;
+  position:relative;
+  -webkit-transition:.3s;
+  transition:.3s;
+  text-align:center
+}
+
+.style-4 .single-service:hover:before, .single-service:hover:after{
+  opacity:1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  visibility:visible;
+  height:50%;
+  width:50%;
+}
+.style-4 .single-service h5 {
+  position: relative;
+  margin-top: 0px;
+  padding-top: 20px;
+  font-weight: bold;
+}
+.style-4 .single-service p {
+  font-weight: 300;
+}
+.serviceImg
+{
+  height: 70px;
+}
+/* ==================== service ============================= */
+
+
+/* ==================== Insurance section ============================= */
+#insuranceSection
+{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+#insuranceBg
+{
+  background-image: url(https://img1.wsimg.com/isteam/stock/101900/:/rs=w:400,cg:true,m);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#insuranceContent
+{
+  padding: 20px 30px;
+   box-shadow: 5px 5px 5px 5px grey; 
+  border-top-right-radius: 5px; 
+  border-bottom-right-radius: 5px;
+}
+.singleInsurance .fa-shield-alt
+{
+  color: red !important;
+}
+.singleInsurance
+{
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 1024px)
+{
+  #insuranceBg
+  {
+    display: none;
+  }
+}
+/* ==================== Insurance section ============================= */
+
+
+/* ==================== Our Team ============================= */
+#ourTeam .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+/* ==================== Our team ============================= */
+
+footer
+{
+  background-color: #263238;
+  color: white;
+}
+#social-row
+{
+  background-color: #D90303;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.blog-img {
+  position: relative;
+}
+.blog-img img {
+  width: 100%;
+}
+.post-category a {
+  display: inline-block;
+  background-color: #D90303;
+  color: #fff;
+  font-size: 15px;
+  padding: 5px 20px;
+}
+.single-blog:hover img {
+  opacity: .85;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"
+}
+.post-category {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.blog-content {
+  padding: 30px 20px;
+}
+.single-blog {
+  border: 1px solid #eee;
+}
+.blog-title h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.meta ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.meta {
+  margin-bottom: 20px;
+  opacity: .85;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+}
+.blog-content a.box_btn {
+  display: inline-block;
+  background-color: #D90303;
+  padding: 5px 15px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+
+a.box_btn {
+  overflow: hidden;
+  z-index: 2;
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: relative;
+  text-decoration:none;
+}
+a.box_btn:hover::before {
+  left: 0;
+  z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== language ============================= */
+a.gflag {vertical-align:middle;font-size:16px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/16.png);}
+a.gflag img {border:0;}
+a.gflag:hover {background-image:url(//gtranslate.net/flags/16a.png);}
+#goog-gt-tt {display:none !important;}
+.goog-te-banner-frame {display:none !important;}
+.goog-te-menu-value:hover {text-decoration:none !important;}
+body {top:0 !important;}
+#google_translate_element2 {display:none!important;}
+/* ==================== language ============================= */

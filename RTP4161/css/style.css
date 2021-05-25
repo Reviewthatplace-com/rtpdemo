@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+/* ================ typography  ======================*/
+body
+{
+  font-family: 'Poppins', sans-serif;
+}
+.nav-link
+{
+  text-transform: uppercase;
+  letter-spacing: 1.7px !important;
+  font-weight: bolder;
+  margin-right: 30px;
+}
+section
+{
+  padding: 30px 0px;
+}
+.title {
+  font-size: 4rem;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: #FF3547;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: calc(2.3rem + 2.6vw);
+  }
+
+}
+.active
+{
+  border-bottom: 5px solid white;
+}
+
+hr.style-four {
+height: 10px;
+border: 1;
+box-shadow: inset 0 9px 9px -3px rgba(11, 99, 184, 0.8);
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+}
+.section-title {
+  margin-bottom: 60px;
+}
+.section-title h4 {
+  text-transform: capitalize;
+  font-size: 40px;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #FF3547;
+}
+.section-title h4:before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: #ff3636;
+  bottom: 0;
+  left: 50%;
+  margin-left: -30px;
+}
+.section-title h4:after {
+  position: absolute;
+  background-color: #ff3636;
+  content: "";
+  width: 10px;
+  height: 10px;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -5px;
+  border-radius: 50%;
+}
+/* ================ typography  ======================*/
+
+
+/* =================== navbar ============================*/
+header
+{
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRt2u65wpocDzZCHQ1DiToOLgUrzlaNlTrC3kIETV5h8INIgjCp);
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sticky 
+{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+.mainNavLinks
+{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+#contentSection
+{
+  padding: 20px;
+  background-color: white;
+  color: white;
+  border: 5px solid #FF3547;
+  border-radius: 8px;
+}
+
+.topInfoHead
+{
+  color: red;
+}
+#menu-bar
+{
+  background-color: #FF611E;
+  z-index: 1000;
+}
+.brand-text
+{
+  font-size: 35px;
+  color: #FF611E;
+  font-weight: bold;
+}
+.brand-below-text
+{
+  position: relative;
+  top: -8px;
+  color: grey;
+}
+/* =================== navbar ============================*/
+
+/* ========================= about us section ==========================*/
+.aboutUsRow
+{
+  text-align: center;
+}
+.aboutusCol img
+{
+  height: 100px;
+  margin-bottom: 20px;
+}
+.feature-title
+{
+  font-weight: bold;
+}
+#aboutusImage
+{
+  max-height: 450px;
+}
+@media only screen and (max-width: 750px)
+{
+  #aboutusImage
+  {
+    display: none;
+  }
+}
+/* ========================= about us section ==========================*/
+
+
+
+/* ================== patient portal ======================= */
+#ppImage
+{
+  min-height: 580px;
+}
+@media only screen and (max-width: 600px)
+{
+  #ppImage
+  {
+    display: none;
+  }
+}
+/* btn settings */
+.btn-outline-pink, .btn-indigo
+{
+  letter-spacing: 1.5px;
+}
+
+.btn-outline-pink:hover
+{
+  background-color: #EC407A !important;
+  color: white !important;
+}
+
+.singleCenter
+{
+  margin-bottom: 20px;
+}
+/* btn settings */
+/* ================== patient portal ======================= */
+
+
+.section-block-grey {
+    padding: 90px 0px 90px 0px;
+    background-color: #f9f9f9;
+}
+
+.serv-section-2 {
+    position: relative;
+    border: 1px solid #eee;
+    background: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.serv-section-2:before {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: 0;
+    content: " ";
+    width: 120px;
+    height: 120px;
+    background: #f5f5f5;
+    border-bottom-left-radius: 136px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+.serv-section-2-icon {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    max-width: 100px;
+    z-index: 1;
+    text-align: center;
+}
+
+.serv-section-2-icon i {
+    color: #FF3547;
+    font-size: 48px;
+    line-height: 65px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+.serv-section-desc {
+    position: relative;
+}
+
+.serv-section-2 h4 {
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.serv-section-2 h5 {
+    color: #333;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 5px;
+}
+
+.section-heading-line-left {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #FF3547;
+    border-radius: 25%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.serv-section-2 p {
+    margin-top: 25px;
+    padding-right: 50px;
+}
+
+.serv-section-2:hover .serv-section-2-icon i {
+    color: #fff;
+}
+
+.serv-section-2:hover:before {
+    background: #FF3547;
+}
+
+.serv-section-desc h4
+{
+  width: 73%;
+}
+
+
+/* ========================= insurance section ==========================*/
+#insurancebg
+{
+   background: url('https://baymedical.org/sites/default/files/styles/services_image/public/services_images/heart-rythym.jpg?itok=yZ5b4A7F') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* insurance */
+#insuranceContent
+{
+  box-shadow: 15px 15px 15px grey; 
+  border-top-right-radius: 5px; 
+  border-bottom-right-radius: 5px;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 1024px)
+{
+  #insuranceContent
+  {
+    padding: 0px;
+    box-shadow: none;
+  }
+}
+/* ========================= insurance section ==========================*/
+
+
+
+/* ====================== lang setting ==================== */
+a.gflag {vertical-align:middle;font-size:16px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/16.png);}
+a.gflag img {border:0;}
+a.gflag:hover {background-image:url(//gtranslate.net/flags/16a.png);}
+#goog-gt-tt {display:none !important;}
+.goog-te-banner-frame {display:none !important;}
+.goog-te-menu-value:hover {text-decoration:none !important;}
+body {top:0 !important;}
+#google_translate_element2 {display:none!important;}
+/* ====================== lang setting ==================== */
