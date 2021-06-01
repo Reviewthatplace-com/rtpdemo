@@ -31,7 +31,6 @@
 }  
 }
 
-
 .next-step {
   font-weight: bold;
   font-size: 20px !important;
@@ -47,6 +46,16 @@
 }
 @keyframes popup {
   to { transform: scale(1.2); }
+}
+
+.step-content
+{
+  display: none !important;
+}
+
+.active .step-content
+{
+  display: block !important;
 }
 
 .btn-minus
@@ -146,44 +155,6 @@ legend
   border: 2px solid yellow !important;
 }
 
-/*===================================register section=========================*/
-#registration-section
-{
-  font-size: 15px;
-}
-#registration-section h4
-{
-  margin-top: 20px;
-  margin-bottom: 15px;
-  color: #FF611E;
-}
-#registration-section h1
-{
-  font-size: 40px;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-  text-align: center;
-}
-li .step-content
-{
-  display: none !important;
-}
-.active .step-content
-{
-  display: block !important;
-}
-
-.error-span
-{
-  color: red;
-}
-
-.radio-error
-{
-  color: red !important;
-}
-
 /*===================floating labels===========================*/
 .required
 {
@@ -254,8 +225,6 @@ li .step-content
   outline: none !important; 
 }
 
-/* reset input */
-
 .intial_hidden
 {
   display: none;
@@ -265,11 +234,49 @@ li .step-content
 {
   overflow: hidden;
 }
+
+.has-error
+{
+  padding: 10px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+table th
+{
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+}
+table td 
+{
+  font-size: 1.1rem !important;
+}
+.table-responsive tr
+{
+  width: 100%;
+}
+.table-responsive th
+{
+  width: 33.3%;
+}
+
+#ninth-step p,
+#ninth-step ol li,
+#tenth-step p,
+#tenth-step p,
+#eleventh-step p
+{
+  font-size: 16px !important;
+}
+
+
+/*==============================mobile view===========================*/
 @media only screen and (max-width: 750px)
 {
-  #registration-section h1
+  .table-responsive .datepicker
   {
-    font-size: 25px;
+    width: 120px !important;
   }
   .form-checkbox, .form-radio
   {
@@ -337,6 +344,11 @@ li .step-content
 {
   left: 1.4rem !important;
 }
+.insurancectnr
+{
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
 .next-step
 {
   font-size: 16px !important;
@@ -355,26 +367,4 @@ canvas
   padding-right: 0px !important;
   overflow: hidden !important;
 }
-#tweleveth-step .custom-label
-{
-  font-weight: bold;
-  font-size: 1rem;
-  position: relative;
-  top: -40px;
-  padding-inline-start:10px;
-  padding-inline-end:10px;
-  z-index: 50;
-  background-color: white;
-  top: -35px;
-}
-#tweleveth-step fieldset
-{
-  margin-bottom: 50px;
-}
-}
-@media only screen and (min-width: 751px){
-  .mobile
-  {
-    display: none;
-  }
 }
