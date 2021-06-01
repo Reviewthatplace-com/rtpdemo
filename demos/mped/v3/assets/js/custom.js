@@ -28,6 +28,7 @@ function doLater(){
 function nextStep(){
   document.getElementById('confirm1').style.display='none';
   document.getElementById('confirm2').style.display='block';
+  document.getElementById('progress').style.display='none';
 }
 
 function startNew(){
@@ -47,31 +48,31 @@ function nextBtn1(){
 
 function nextBtn2(){
   document.getElementById('section1c').style.display='none';
+  document.getElementById('progress').style.display='block';
   document.getElementById('topbar').style.display='flex';
   document.getElementById('header').style.display='block';
   document.getElementById('footer').style.display='block';
-  document.getElementById('progress').style.display='block';
   document.getElementById('registration-section').style.display='block';
 }
 
 function findSaved2(){
   document.getElementById('section1d').style.display='none';
+  document.getElementById('progress').style.display='block';
   document.getElementById('topbar').style.display='flex';
   document.getElementById('header').style.display='block';
   document.getElementById('footer').style.display='block';
-  document.getElementById('progress').style.display='block';
   document.getElementById('registration-section').style.display='block';
 }
 
 function submitForm(){
   document.getElementById('registration-section').style.display='none';
-  document.getElementById('progress').style.display='none';
   document.getElementById('topbar').style.display='none';
   document.getElementById('header').style.display='none';
   document.getElementById('footer').style.display='none';
   document.getElementById('confirmation').style.display='block';
   document.getElementById('confirm1').style.display='block';
 }
+
 
 // checkbox turn to green
 
@@ -91,6 +92,7 @@ $(document).ready(function(){
     $(this).removeClass("checkbox-yellow")
   })
 })
+
 
 // floating labels
 
