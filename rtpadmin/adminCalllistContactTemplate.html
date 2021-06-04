@@ -262,6 +262,7 @@
                                 <li class="m-l-10"><a href="InternalTimeoff.html">Time Off</a></li>
                             </ul>
                         </li>
+
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-phone text-primary"></i></i><span class="hide-menu">Call Lists<span class="badge badge-pill badge-success text-white ml-auto">115</span></span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li class="m-l-10"><a href="calllistPending.html">Pending</a></li>
@@ -313,8 +314,7 @@
                                  <li class="m-l-10"><a href="types.html">Users</a></li> 
                                  <li class="m-l-10"><a href="adminTimeoffRequest.html">Time Off Request</a></li>
                             </ul>
-                        </li>
-                        <li><a href="adminCalllist.html"><i class="fas fa-phone text-primary"></i><span class="hide-menu">Call Lists</span></a></li>
+                        </li> 
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-signature text-primary"></i><span class="hide-menu">Compliance</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li class="m-l-10"><a href="adminCBAA.html">BAA</a></li>
@@ -332,6 +332,16 @@
                                 <li class="m-l-10"><a href="SurveyActive.html">Survey</a></li>
                             </ul>
                         </li>
+
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-phone text-primary"></i><span class="hide-menu">Call Lists</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="adminCallSheet.html">Call Sheets</a></li>
+                                <li class="m-l-10"><a href="adminCalllistStatusTypes.html">Status Types</a></li>
+                                <li class="m-l-10"><a href="adminCalllistContactTemplate.html">Contact Templates</a></li>
+                                <li class="m-l-10"><a href="adminCalllistUpload.html">Upload</a></li>
+                            </ul>
+                        </li>
+
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-cogs text-primary"></i><span class="hide-menu">Settings</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li> <a href="companyDetails.html" aria-expanded="false">Company Details</span></a></li>
@@ -381,13 +391,13 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Upload Call lists</h4>
+                        <h4 class="text-themecolor">Contact Template</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Call lists</li>
+                                <li class="breadcrumb-item active">Contact Template</li>
                             </ol>
                         </div>
                     </div>
@@ -398,126 +408,83 @@
                 <!-- ============================================================== -->
                 <!-- Info box -->
                 <!-- ============================================================== -->
-                   <div class="row" id="selectcallList">
-                       <div class="col-5">
-                        <label class="float-left font-weight-bold">Upload to Call List</label>
-                        <select class="select2 m-b-10 select2-multiple" style="width: 100%"  data-placeholder="Choose">
-                            <option value="">Choose</option>
-                            <option value="">Hedis List</option>
-                            <option value="">ER List</option>
-                            <option value="">Bday List</option>
-                        </select>                             
-                       </div>
-                       <button type="button" class="btn btn-success m-t-30 m-b-10" id="goBtn">Go</button> 
-                   </div>
-
-                    <div class="card">
-                        <div class="card-body" id="uploadBox">
-                                <h4 class="card-title">Upload Here
-                                    <button type="button" class="btn btn-success" id="uploadBtn">Upload</button> 
-                                </h4>
-                                <form action="#" class="dropzone">
-                                    <div class="fallback">
-                                        <input name="file" type="file" multiple />
-                                    </div>
-                                </form>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-body" id="mappingBox">
-                            <div class="text-right">
-                             <div class="btn-group m-b-10">
-                                 <button type="button" class="btn btn-success finalize">
-                                     Finalize
-                                 </button>
-                             </div>
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#sms_01" role="tab"><span class="hidden-xs-down">SMS</span></a> </li>
+                            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#email_01" role="tab"><span class="hidden-xs-down">Email</span></a> </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content tabcontent-border">
+                            <div class="tab-pane p-20 active" id="sms_01" role="tabpanel">
+                                <div class="table-responsive-xl">
+                                    <table id="config-table" class="table display table-bordered table-striped no-wrap">
+                                        <thead>
+                                            <tr>
+                                                <th>Status</th>
+                                                <th>Name</th>
+                                                <th>Content</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><label class="bs-label label-success">Recieved</label></td>
+                                                <td>Shakir Ansari</td>
+                                                <td>Hello !</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="bs-label label-warning">Pending</label></td>
+                                                <td>Ravi Agrawal</td>
+                                                <td>Hello !</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="bs-label label-danger">Not Opened</label></td>
+                                                <td>Saimun Hasan</td>
+                                                <td>Hello !</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                            <table class="table table-striped" id="">
-                                    <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Mapping</th>
-                                        <th>Sample First Row</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Name</td>
-                                        <td>
 
-                                            <select class="select2 m-b-10 select2-multiple" style="width: 100%" data-placeholder="Choose">
-                                                <option value="">Choose</option>
-                                                <option value="">Option 01</option>
-                                                <option value="">Option 02</option>
-                                        </select> 
-                                        </td>
-                                        <td>Sample First Row</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Name</td>
-                                        <td>
-                                            <select class="select2 m-b-10 select2-multiple" style="width: 100%" data-placeholder="Choose">
-                                                    <option value="">Choose</option>
-                                                    <option value="">Option 01</option>
-                                                    <option value="">Option 02</option>
-                                            </select> 
-                                        </td>
-                                        <td>Sample First Row</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Name</td>
-                                        <td>
-                                            <select class="select2 m-b-10 select2-multiple" style="width: 100%" data-placeholder="Choose">
-                                                    <option value="">Choose</option>
-                                                    <option value="">Option 01</option>
-                                                    <option value="">Option 02</option>
-                                            </select> 
-                                        </td>
-                                        <td>Sample First Row</td>
-                                    </tr>
-                                    </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <h3 class="font-weight-bolder">Call Lists</h3>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="text-right">
-                                <button type="button" class="btn waves-effect waves-light btn-success mb-2" data-toggle="modal" data-target="#addListModal">Add</button>
-                            </div>
-                            <div class="table-responsive">
-                                <table id="config-table2" class="table display table-bordered table-striped no-wrap">
-                                    <thead>
-                                        <tr>
-                                            <th>Action</th>
-                                            <th>Call Lists Type</th>
-                                            <th>Call Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#updateListModal">Edit</button>
-                                                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <span class="sr-only">Toggle Dropdown</span>
-                                                    </button>
-                                                    <div class="dropdown-menu animated flipInY">
-                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#callstatusModal">Call Status</a>
-                                                        <a class="dropdown-item Delete" href="javascript:void(0)">Delete</a>
-                                                    </div>
-                                                </div> 
-                                            </td>
-                                            <td>Walk in</td>
-                                            <td><label class="bs-label label-success">Answered</label></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="tab-pane p-20" id="email_01" role="tabpanel">
+                                <div class="table-responsive-xl">
+                                    <table id="config-table1" class="table display table-bordered table-striped no-wrap">
+                                        <thead>
+                                            <tr>
+                                                <th>Status</th>
+                                                <th>Name</th>
+                                                <th>Subject</th>
+                                                <th>Content</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><label class="bs-label label-success">Recieved</label></td>
+                                                <td>Shakir Ansari</td>
+                                                <td>Introduction</td>
+                                                <td>Hello !</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="bs-label label-warning">Pending</label></td>
+                                                <td>Ravi Agrawal</td>
+                                                <td>Emergency</td>
+                                                <td>Hello !</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="bs-label label-danger">Not Opened</label></td>
+                                                <td>Saimun Hasan</td>
+                                                <td>Introduction</td>
+                                                <td>Hello !</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 <!-- ============================================================== -->
                 <!-- End Info box -->
                 <!-- ============================================================== -->
@@ -1005,17 +972,21 @@
         $(function () {
             // responsive table
             $('#config-table').DataTable({
-                responsive: true
+                responsive: false
             });
+
             $('#config-table1').DataTable({
-                responsive: true
+                responsive: false
             });
+
             $('#config-table2').DataTable({
                 responsive: true
             });
+
             $('#config-table3').DataTable({
                 responsive: true
             });
+
             $('#example23').DataTable({
                 dom: 'Bfrtip',
                 buttons: [

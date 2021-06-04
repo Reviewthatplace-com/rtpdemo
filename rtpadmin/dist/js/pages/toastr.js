@@ -3651,6 +3651,70 @@ $(function() {
                });
           }); 
               
+          $(".pendingCallStatus").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Call Status Pending',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Call Status Pending',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Call Status Pending',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".CompletedCallStatus").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Call Status Completed',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Call Status Completed',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Call Status Completed',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
           $(".Sendreceipt").click(function(){
                $.toast({
                heading: '',
