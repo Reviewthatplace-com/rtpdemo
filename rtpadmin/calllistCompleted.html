@@ -76,6 +76,10 @@
     color: #0099CE;
     border-bottom: 1px solid black;
 }
+
+.bootstrap-switch {
+    min-width: 150px !important;
+}
 </Style>
 </head>
 
@@ -1079,68 +1083,86 @@
 
     <!-- Contact Blast Modal -->
     <div class="modal fade" id="contactBlast" tabindex="-1" role="dialog" aria-labelledby="contactBlastLabel">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <!-- Header -->
-              <div class="modal-header light-blue darken-3 white-text">
-                <h4 class="modalh4 text-white">Contact Blast</h4>
-                <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
-                  <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
-                </button>
-              </div>
-              <!-- Header -->
-        
-              <!-- Body --> 
-              <div class="modal-body">
-                <button class="btn btn-outline-success waves-effect col-12 SendBlast">Send Blast</button>
-                <form enctype="multipart/form-data" method="post" siq_id="">
-                    <div class="card">
-                        <div class="card-body p-b-0">
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs customtab2" role="tablist">
-                                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#sms" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">SMS</span></a> </li>
-                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#Email" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Email</span></a> </li>
-                            </ul>
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div class="tab-pane active  p-20" id="sms" role="tabpanel">
-                                    <legend class="legendtitle">SMS
-                                        <input type="checkbox" data-on-color="primary" name="checkbox-example-1" class="input-switch" checked data-size="medium" data-on-text="On" data-off-text="Off">
-                                    </legend> 
-                                    <div class="row">
-                                       <div class="col-md-12">
-                                           <fieldset class="floating-labels">
-                                               <textarea class="form-control required" rows="4" id="input7" placeholder="SMS"></textarea>
-                                               <span class="bar"></span>
-                                           </fieldset>
-                                       </div>
-                                    </div> 
-                                </div>
-                                <div class="tab-pane  p-20" id="Email" role="tabpanel">
-                                        <legend class="legendtitle">Email
-                                            <input type="checkbox" data-on-color="primary" name="checkbox-example-1" class="input-switch" checked data-size="medium" data-on-text="On" data-off-text="Off">
-                                        </legend> 
-                                         <div class="row">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <input name="SubjectLine" class="form-control mb-2" id="SubjectLine" required="" type="text" placeholder="Subject">
-                                                    <div class="summernote">
-                                                        <h3>Default Summernote</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                         </div>
-                                </div>
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <!-- Header -->
+          <div class="modal-header light-blue darken-3 white-text">
+            <h4 class="modalh4 text-white">Contact Blast</h4>
+            <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+              <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+            </button>
+          </div>
+          <!-- Header -->
+    
+          <!-- Body --> 
+          <div class="modal-body">
+            <button class="btn btn-outline-success waves-effect col-12 SendBlast">Send Blast</button>
+            <form enctype="multipart/form-data" method="post" siq_id="">
+                <div class="card">
+                    <div class="card-body p-b-0">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs customtab2" role="tablist">
+                            <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#sms" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">SMS</span></a> </li>
+                            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#Email" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Email</span></a> </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active  p-20" id="sms" role="tabpanel">
+                                <legend class="legendtitle">SMS</legend> 
+                                <div class="row">
+                                    <table id="config-table4" class="table display table-bordered table-striped no-wrap">
+                                        <thead>
+                                            <tr>
+                                                <th>Action</th>
+                                                <th>Name</th>
+                                                <th>Content</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" data-on-color="primary" name="checkbox-example-1" class="input-switch" checked data-size="medium" data-on-text="Send" data-off-text="Don't Send">
+                                                </td>
+                                                <td>Shakir Ansari</td>
+                                                <td>Hello</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> 
+                            </div>
+                            <div class="tab-pane  p-20" id="Email" role="tabpanel">
+                                    <legend class="legendtitle">Email</legend> 
+                                     <div class="row">
+                                        <table id="config-table5" class="table display table-bordered table-striped no-wrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>Action</th>
+                                                    <th>Name</th>
+                                                    <th>Subject</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" data-on-color="primary" name="checkbox-example-1" class="input-switch" checked data-size="medium" data-on-text="Send" data-off-text="Don't Send">
+                                                    </td>
+                                                    <td>Shakir Ansari</td>
+                                                    <td>Introduction</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                     </div>
                             </div>
                         </div>
                     </div>
-        
-                </form>
-              </div>
-              <!--body -->
-        
-              </div>
-            </div>
+                </div>
+    
+            </form>
+          </div>
+          <!--body -->
+    
+          </div>
+        </div>
     </div>
     <!-- Contact Blast Modal --> 
 
@@ -1475,6 +1497,12 @@
             });
             $('#config-table3').DataTable({
                 responsive: true
+            });
+            $('#config-table4').DataTable({
+                responsive: false
+            });
+            $('#config-table5').DataTable({
+                responsive: false
             });
             $('#example23').DataTable({
                 dom: 'Bfrtip',

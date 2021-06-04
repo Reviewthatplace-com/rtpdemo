@@ -75,6 +75,11 @@
     font-size: 20px;
     color: #0099CE;
     border-bottom: 1px solid black;
+    
+}
+
+.bootstrap-switch {
+    min-width: 150px !important;
 }
 </Style>
 </head>
@@ -1121,31 +1126,49 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div class="tab-pane active  p-20" id="sms" role="tabpanel">
-                                    <legend class="legendtitle">SMS
-                                        <input type="checkbox" data-on-color="primary" name="checkbox-example-1" class="input-switch" checked data-size="medium" data-on-text="On" data-off-text="Off">
-                                    </legend> 
+                                    <legend class="legendtitle">SMS</legend> 
                                     <div class="row">
-                                       <div class="col-md-12">
-                                           <fieldset class="floating-labels">
-                                               <textarea class="form-control required" rows="4" id="input7" placeholder="SMS"></textarea>
-                                               <span class="bar"></span>
-                                           </fieldset>
-                                       </div>
+                                        <table id="config-table4" class="table display table-bordered table-striped no-wrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>Action</th>
+                                                    <th>Name</th>
+                                                    <th>Content</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" data-on-color="primary" name="checkbox-example-1" class="input-switch" checked data-size="medium" data-on-text="Send" data-off-text="Don't Send">
+                                                    </td>
+                                                    <td>Shakir Ansari</td>
+                                                    <td>Hello</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div> 
                                 </div>
                                 <div class="tab-pane  p-20" id="Email" role="tabpanel">
-                                        <legend class="legendtitle">Email
-                                            <input type="checkbox" data-on-color="primary" name="checkbox-example-1" class="input-switch" checked data-size="medium" data-on-text="On" data-off-text="Off">
-                                        </legend> 
+                                        <legend class="legendtitle">Email</legend> 
                                          <div class="row">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <input name="SubjectLine" class="form-control mb-2" id="SubjectLine" required="" type="text" placeholder="Subject">
-                                                    <div class="summernote">
-                                                        <h3>Default Summernote</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <table id="config-table5" class="table display table-bordered table-striped no-wrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Action</th>
+                                                        <th>Name</th>
+                                                        <th>Subject</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" data-on-color="primary" name="checkbox-example-1" class="input-switch" checked data-size="medium" data-on-text="Send" data-off-text="Don't Send">
+                                                        </td>
+                                                        <td>Shakir Ansari</td>
+                                                        <td>Introduction</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                          </div>
                                 </div>
                             </div>
@@ -1492,6 +1515,12 @@
             });
             $('#config-table3').DataTable({
                 responsive: true
+            });
+            $('#config-table4').DataTable({
+                responsive: false
+            });
+            $('#config-table5').DataTable({
+                responsive: false
             });
             $('#example23').DataTable({
                 dom: 'Bfrtip',
@@ -2086,29 +2115,27 @@ $('.required-upload').on('change', function (ev) {
         }
     </script>
 
+    <script type="text/javascript">
+        $('#punchInButton').click(function() {
+        $(this).hide();
+        $('#punchOutButton').show();
+        });
 
+        $('#punchOutButton').click(function() {
+        $(this).hide();
+        $('#punchInButton').show();
+        });
 
-<script type="text/javascript">
-    $('#punchInButton').click(function() {
-      $(this).hide();
-      $('#punchOutButton').show();
-    });
+        $('#punchInButtonProfile').click(function() {
+        $(this).hide();
+        $('#punchOutButtonProfile').show();
+        });
 
-    $('#punchOutButton').click(function() {
-      $(this).hide();
-      $('#punchInButton').show();
-    });
-
-    $('#punchInButtonProfile').click(function() {
-      $(this).hide();
-      $('#punchOutButtonProfile').show();
-    });
-
-    $('#punchOutButtonProfile').click(function() {
-      $(this).hide();
-      $('#punchInButtonProfile').show();
-    });
-</script>
+        $('#punchOutButtonProfile').click(function() {
+        $(this).hide();
+        $('#punchInButtonProfile').show();
+        });
+    </script>
 
 </body>
 
