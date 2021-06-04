@@ -490,6 +490,33 @@
                             </table>
                         </div>
                     </div>
+
+                    
+                    <h3 class="font-weight-bolder">History</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="config-table4" class="table display table-bordered table-striped no-wrap">
+                                    <thead>
+                                        <tr>
+                                            <th>Upload Date</th>
+                                            <th>Uploaded File</th>
+                                            <th>Error File</th>
+                                            <th>Uploaded Summary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Upload Data</td>
+                                            <td>Call List.pdf</td>
+                                            <td>No Error</td>
+                                            <td>234 / 1200</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 <!-- ============================================================== -->
                 <!-- End Info box -->
                 <!-- ============================================================== -->
@@ -987,6 +1014,9 @@
             });
             $('#config-table3').DataTable({
                 responsive: true
+            });
+            $('#config-table4').DataTable({
+                responsive: false
             });
             $('#example23').DataTable({
                 dom: 'Bfrtip',
