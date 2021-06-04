@@ -3715,6 +3715,134 @@ $(function() {
                });
           }); 
               
+          $(".sms_SaveDraft").click(function(){
+               $.toast({
+               heading: '',
+               text: 'SMS draft saved',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'SMS draft saved',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'SMS draft saved',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".email_SaveDraft").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Email draft saved',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Email draft saved',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Email draft saved',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".sms_Approval").click(function(){
+               $.toast({
+               heading: '',
+               text: 'SMS submitted for approval',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'SMS submitted for approval',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'SMS submitted for approval',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
+          $(".email_Approval").click(function(){
+               $.toast({
+               heading: '',
+               text: 'Email submitted for approval',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'warning',
+               hideAfter: 3500, 
+               stack: 6
+          });
+          
+               $.toast({
+               heading: '',
+               text: 'Email submitted for approval',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+          });
+
+               $.toast({
+                    heading: '',
+                    text: 'Email submitted for approval',
+                    position: 'top-right',
+                    loaderBg:'#ff6849',
+                    icon: 'error',
+                    hideAfter: 3500, 
+                    stack: 6
+               });
+          }); 
+              
           $(".Sendreceipt").click(function(){
                $.toast({
                heading: '',
