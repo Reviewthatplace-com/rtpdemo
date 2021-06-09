@@ -243,8 +243,8 @@ and (-webkit-min-device-pixel-ratio: 2)
 
 .loginName
 {
-    margin-top: -40px !important;
-    margin-left: 140px;   
+    margin-top: -60px !important;
+    margin-left: 145px; 
 }
 
     .nameTag {
@@ -254,6 +254,27 @@ and (-webkit-min-device-pixel-ratio: 2)
     }
 
 } 
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+
+    .loginName
+    {
+        margin-top: -60px !important;
+        margin-left: 385px !important;
+    }
+    
+        .nameTag {
+            font-size: 22px;
+            background: #f0f6fc !important;
+            padding: 8px !important;
+        }
+}
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
@@ -286,16 +307,35 @@ and (-webkit-min-device-pixel-ratio: 3)
 
 .loginName
 {
-    margin-top: -40px !important;
-    margin-left: 140px;
+    margin-left: 135px;
+    margin-top: -58px !important;
 }
 
-.nameTag
-{
+.nameTag {
     background: #f0f6fc !important;
-    padding: 10px !important;
-    font-size: 18px;
+    padding: 5px !important;
+    font-size: 22px;
 }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+    .loginName
+    {
+        margin-left: 440px !important;
+    }
+
+    .nameTag {
+        background: #f0f6fc !important;
+        padding: 5px !important;
+        font-size: 23px !important;
+    }
 
 }
 
@@ -365,7 +405,7 @@ and (-webkit-min-device-pixel-ratio: 3)
 .nameTag {
     background: #f0f6fc !important;
     padding: 5px !important;
-    font-size: 15px;
+    font-size: 18px !important;
 }
 
 
