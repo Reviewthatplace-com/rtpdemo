@@ -1928,7 +1928,12 @@
 
                         <!-- Choose Location Section -->
                             <div class="choose-location">
-                                <h1 class="font-primary text-center font-weight-bold">Choose Location</h1>
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-product"><span>Next</span><i class="glyph-icon icon-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                                <h1 class="font-primary text-center font-weight-bold mb-3">Choose Location</h1>
                                 <div class="panel">
                                         <div class="panel-body">
                                         <div class="example-box-wrapper">
@@ -1977,17 +1982,20 @@
                                         </div>
                                     </div>
                                 </div> 
-                                <div class="row mb-4">
-                                    <div class="col-12">
-                                        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-product"><span>Next</span><i class="glyph-icon icon-arrow-right"></i></button>
-                                    </div>
-                                </div>
                             </div>
                         <!-- Choose Location Section -->
 
                         <!-- Choose Product -->
                             <div class="choose-product" style="display: none;">
-                                <h1 class="font-primary text-center font-weight-bold">Choose Product</h1>
+                                <div class="row mb-4">
+                                    <div class="col-6">
+                                        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-location"><span>Back</span><i class="glyph-icon icon-arrow-left"></i></button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-date"><span>Next</span><i class="glyph-icon icon-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                                <h1 class="font-primary text-center font-weight-bold mb-3">Choose Product</h1>
                                 <div class="panel">
                                         <div class="panel-body">
                                         <div class="example-box-wrapper">
@@ -2028,51 +2036,11 @@
                                         </div>
                                     </div>
                                 </div> 
-                                <div class="row mb-4">
-                                    <div class="col-6">
-                                        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-location"><span>Back</span><i class="glyph-icon icon-arrow-left"></i></button>
-                                    </div>
-                                    <div class="col-6">
-                                        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-date"><span>Next</span><i class="glyph-icon icon-arrow-right"></i></button>
-                                    </div>
-                                </div>
                             </div>
                         <!-- Choose Product -->
 
                         <!-- Choose Date -->
                             <div class="choose-date" style="display: none;">
-                                <h1 class="font-primary text-center font-weight-bold">Choose Date</h1>
-                                <div class="panel">
-                                    <div class="panel-body">
-                                        <div class="example-box-wrapper">
-                                            <div class="row">
-                                                <div class="col-12 text-center m-3">
-                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 280px;">
-                                                        <label class="btn btn-outline-primary font-weight-bold" style="height: 75px; font-size: 25px; font-weight: 700; padding: auto;">
-                                                            <input type="checkbox"> 06/10/2021 <br> 70 Slots Available
-                                                        </label>
-                                                    </div>                                                     
-                                                </div>
-                                                <div class="col-12 text-center m-3">
-                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 280px;">
-                                                        <label class="btn btn-outline-primary font-weight-bold" style="height: 75px; font-size: 25px; font-weight: 700; padding: auto;">
-                                                            <input type="checkbox"> 07/10/2021 <br> 20 Slots Available
-                                                        </label>
-                                                    </div>                                                     
-                                                </div>
-                                                <div class="col-12 text-center m-3">
-                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 280px;">
-                                                        <label class="btn btn-outline-primary font-weight-bold" style="height: 75px; font-size: 25px; font-weight: 700; padding: auto;">
-                                                            <input type="checkbox"> 08/10/2021 <br> 80 Slots Available
-                                                        </label>
-                                                    </div>                                                     
-                                                </div>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="row mb-4">
                                     <div class="col-6">
                                         <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-product"><span>Back</span><i class="glyph-icon icon-arrow-left"></i></button>
@@ -2081,43 +2049,49 @@
                                         <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-time"><span>Next</span><i class="glyph-icon icon-arrow-right"></i></button>
                                     </div>
                                 </div>
+                                <h1 class="font-primary text-center font-weight-bold">Choose Date</h1>
+                                <div class="panel">
+                                    <div class="panel-body">
+                                        <div class="example-box-wrapper">
+                                            <table id="datatable-row-highlight_v5" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Available Slots</th>
+                                                    </tr>
+                                                </thead>
+                                                    
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Available Slots</th>
+                                                    </tr>
+                                                </tfoot>
+                                                    
+                                                <tbody>
+                                                    <tr>
+                                                        <td>06/10/21</td>
+                                                        <td>70</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>07/10/21</td>
+                                                        <td>70</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08/10/21</td>
+                                                        <td>70</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         <!-- Choose Date -->
 
                         <!-- Choose Time -->
                             <div class="choose-time" style="display: none;">
-                                <h1 class="font-primary text-center font-weight-bold">Choose Time</h1>
-                                <div class="panel">
-                                    <div class="panel-body">
-                                        <div class="example-box-wrapper">
-                                            <div class="row">
-                                                <div class="col-12 text-center m-3">
-                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 280px;">
-                                                        <label class="btn btn-outline-primary font-weight-bold" style="height: 75px; font-size: 25px; font-weight: 700; padding: auto;">
-                                                            <input type="checkbox"> 05:00 PM - 06:00 PM <br> 70 Slots Available
-                                                        </label>
-                                                    </div>                                                     
-                                                </div>
-                                                <div class="col-12 text-center m-3">
-                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 280px;">
-                                                        <label class="btn btn-outline-primary font-weight-bold" style="height: 75px; font-size: 25px; font-weight: 700; padding: auto;">
-                                                            <input type="checkbox"> 05:00 PM - 06:00 PM <br> 20 Slots Available
-                                                        </label>
-                                                    </div>                                                     
-                                                </div>
-                                                <div class="col-12 text-center m-3">
-                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 280px;">
-                                                        <label class="btn btn-outline-primary font-weight-bold" style="height: 75px; font-size: 25px; font-weight: 700; padding: auto;">
-                                                            <input type="checkbox"> 05:00 PM - 06:00 PM <br> 80 Slots Available
-                                                        </label>
-                                                    </div>                                                     
-                                                </div>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="row mb-4">
                                     <div class="col-6">
                                         <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-date"><span>Back</span><i class="glyph-icon icon-arrow-left"></i></button>
@@ -2126,20 +2100,60 @@
                                         <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-checkin"><span>Next</span><i class="glyph-icon icon-arrow-right"></i></button>
                                     </div>
                                 </div>
+                                <h1 class="font-primary text-center font-weight-bold">Choose Time</h1>
+                                <div class="panel">
+                                    <div class="panel-body">
+                                        <div class="example-box-wrapper">
+                                            <table id="datatable-row-highlight_v6" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Time</th>
+                                                        <th>Available Slots</th>
+                                                    </tr>
+                                                </thead>
+                                                    
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>Time</th>
+                                                        <th>Available Slots</th>
+                                                    </tr>
+                                                </tfoot>
+                                                    
+                                                <tbody>
+                                                    <tr>
+                                                        <td>04:00 PM - 05:00 PM</td>
+                                                        <td>5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>05:00 PM - 06:00 PM</td>
+                                                        <td>20</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06:00 PM - 07:00 PM</td>
+                                                        <td>15</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         <!-- Choose Time -->
 
                         <!-- Check In Section -->
                             <div class="choose-checkin" style="display: none;">
                                 <div class="row mb-4">
-                                    <div class="col-6">
+                                    <div class="col-4">
+                                        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-time"><span>Back</span><i class="glyph-icon icon-arrow-left"></i></button>
+                                    </div>
+                                    <div class="col-4">
                                         <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover" data-toggle="modal" data-target="#checkinModal"><span>New Patient</span><i class="glyph-icon icon-arrow-right"></i></button>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-4">
                                         <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover" data-toggle="modal" data-target="#checkinModal"><span>Check-In</span><i class="glyph-icon icon-arrow-right"></i></button>
                                     </div>
                                 </div>
-
                                 <div class="panel">
                                         <div class="panel-body">
                                         <div class="example-box-wrapper">
@@ -2199,13 +2213,7 @@
                                             </table>
                                         </div>
                                     </div>
-                                </div>   
-
-                                <div class="row mb-4">
-                                    <div class="col-12">
-                                        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover show_choose-time"><span>Back</span><i class="glyph-icon icon-arrow-left"></i></button>
-                                    </div>
-                                </div>                 
+                                </div>                  
                             </div>
                         <!-- Check In Section -->
                     </div>
@@ -3440,6 +3448,22 @@
                 var table = $('#datatable-row-highlight_v4').DataTable();
 
                 $('#datatable-row-highlight_v4 tbody').on( 'click', 'tr', function () {
+                    $(this).toggleClass('tr-selected');
+                } );
+            });
+
+            $(document).ready(function() {
+                var table = $('#datatable-row-highlight_v5').DataTable();
+
+                $('#datatable-row-highlight_v5 tbody').on( 'click', 'tr', function () {
+                    $(this).toggleClass('tr-selected');
+                } );
+            });
+
+            $(document).ready(function() {
+                var table = $('#datatable-row-highlight_v6').DataTable();
+
+                $('#datatable-row-highlight_v6 tbody').on( 'click', 'tr', function () {
                     $(this).toggleClass('tr-selected');
                 } );
             });
