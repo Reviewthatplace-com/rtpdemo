@@ -47,6 +47,40 @@ section
 /* ============== typography ====================*/
 
 /* ============== header ====================*/
+
+/* animated header image */
+#container {
+  perspective: 30px;
+}
+
+#inner {
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+}
+
+/*============================================================
+ * EXTRAS
+ *============================================================*/
+
+.demo-img {
+  background-image: url(../img/header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#container:hover {
+  cursor: pointer;
+}
+
+.demo-overlay {
+  width: 25em;
+  padding: 28em 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.4s;
+}
+/* animated header image */
+
 #logo
 {
   height: 80px;
@@ -64,15 +98,15 @@ section
 }
 #topContent
 {
-  padding: 5vh 20px; 
+  padding: 6vh 60px;; 
 }
 .title
 {
-  font-size: 4.3rem;
+  font-size: 5.3rem;
 }
 #dr-img
 {
-  height: 180px;
+  height: 535px;
 }
 
 .sticky 
@@ -140,17 +174,13 @@ section
 {
   font-size: 230% !important; 
 }
-#scheduleBtn
+
+.call_button
 {
-  font-size: 18px;
+  font-size: 25px !important;
+  font-weight: 700;
   letter-spacing: 1px;
-  width: 30%;
-}
-#callBtn
-{
-  font-size: 18px;
-  letter-spacing: 1px;
-  width: 30%;
+  width: 25rem;
 }
 /* ============== contact us section ====================*/
 
@@ -412,21 +442,23 @@ h4
 {
   padding-top: 60px;
 }
-#pli
+.price_list
 {
   list-style: none;
   margin-bottom: 0rem;
 }
-#pli0
+
+.price-list_check
 {
   color:limegreen;
   font-weight: 900;
 }
-#pricinglist
+.pricinglist
 {
   font-weight: 900;
 }
-#usabilityimg
+
+.usabilityimg
 {
   margin-top: 56px;
   height: 25rem;
@@ -452,6 +484,25 @@ h4
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
 
+.middle_priceCard:hover
+{
+  box-shadow: 0 0.5rem 1rem 0 rgba(235, 96, 3, 0.905) !important;
+}
+
+.pricing .card-body {
+  height: 700px;
+  overflow-y: scroll;
+}
+
+.pricing .card-body::-webkit-scrollbar {
+  display: none;
+}
+
+.middle_pricetab::-webkit-scrollbar
+{
+  display: none;
+}
+
 .pricing hr {
   margin: 1.5rem 0;
 }
@@ -461,6 +512,8 @@ h4
   letter-spacing: .1rem;
   font-weight: bold;
   padding: 25px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 .card-body {
   -ms-flex: 1 1 auto;
@@ -518,7 +571,7 @@ h4
 }
 
 /* Ratings */
-#ratings
+.ratings
 {
   height: 200px; 
   display: inline-block;
@@ -556,7 +609,7 @@ h4
   border-radius: 50%;
 }
 
-#pricingnames
+.price_names
 {
   color: #ff611f;
   background-color: #ADD8E6;
@@ -712,23 +765,21 @@ h4
   color: #ADD8E6;
 }
 
-#btn0
+.form_buttons
 {
   background-color: black;
-  color: white;
+  color: white !important;
   font-weight: bold;
-  font-size: 25px;
   width: 400px;
 }
 
-#btn0:hover
+.form_buttons:hover
 {
   background-color: black;
-  color: #FF621F;
+  color: #FF621F !important;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 25px !important;
   width: 400px;
-  margin-left: 8%;
 }
 
 #guideddemocards:hover
@@ -1117,14 +1168,15 @@ h4
 {
   background-color: #eee;
   cursor: pointer;
-  padding: 18px;
-  width: 85%;
+  padding: 20px;
+  width: 107%;
   border: none;
   text-align: left;
   outline: none;
   font-size: 25px;
   font-weight: 700;
   transition: 0.4s;
+  margin-left: -15px;
 }
 
 .accordion.active, .accordion:hover 
@@ -1545,4 +1597,16 @@ h4
   border: 2px solid !important;
   border-color: #28a745 !important;
   margin-top: -16px;
+}
+
+.review-strip {
+  background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.8)), url(../img/Strips/explore.jpg) fixed top center;
+}
+
+.contact-us-section {
+  background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.8)), url(../img/Strips/contact.jpg) fixed top center;
+}
+
+#whyus{
+  background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.8)), url(../img/Strips/ratings.jpg) fixed top center;
 }
