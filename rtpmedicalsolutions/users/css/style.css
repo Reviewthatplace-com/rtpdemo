@@ -1106,7 +1106,13 @@ h4
 .team .member .member-img {
   position: relative;
   overflow: hidden;
-  height: 12rem;
+  height: 16rem;
+}
+
+.team .member .firstrow-img{
+  position: relative;
+  overflow: hidden;
+  height: 24rem;
 }
 
 .team .member .social {
@@ -1618,6 +1624,10 @@ h4
   background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.8)), url(../img/Strips/ratings.jpg) fixed top center;
 }
 
+#performance{
+  background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.8)), url(../img/Strips/performance.jpg) fixed top center;
+}
+
 
 .dental {
   --bg-color: #96E4F2;
@@ -1913,3 +1923,80 @@ h4
   margin-left: -25rem !important
 }
 /* Infographic */
+
+
+.profile-card-5 {
+  background-color: #FFF;
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.profile-card-5 img {
+  transition: all 0.25s linear;
+}
+
+.profile-card-5 .profile-content {
+  position: relative;
+  padding: 15px;
+  background-color: #FFF;
+}
+
+.profile-card-5 .profile-name {
+  font-weight: bold;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -70px;
+  color: #FFF;
+  font-size: 17px;
+}
+
+.profile-card-5 .profile-name p {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+.profile-card-5 .profile-description {
+  color: #777;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.profile-card-5 .profile-overview {
+  padding: 15px 0px;
+}
+
+.profile-card-5 .profile-overview p {
+  font-size: 10px;
+  font-weight: 600;
+  color: #777;
+}
+
+.profile-card-5 .profile-overview h4 {
+  color: #273751;
+  font-weight: bold;
+}
+
+.profile-card-5 .profile-content::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  top: -10px;
+  left: 0px;
+  right: 0px;
+  background-color: #FFF;
+  z-index: 0;
+}
+
+.profile-card-5:hover img {
+  transform: rotate(5deg) scale(1.1, 1.1);
+  filter: brightness(110%);
+}
+
+.profile_img
+{
+  height: 250px;
+}
