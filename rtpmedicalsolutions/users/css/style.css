@@ -63,19 +63,25 @@ section
 
 #menu-bar
 {
-  z-index: 1050;
+  margin-bottom: 20px;
 }
 
 #topSection
 {
-  height: 89vh;
+  width: 100%;
+  height: auto;
 }
 
 .banner_img
 {
-  width: 100%; 
-  margin-top: -125px; 
+  width: 90%; 
+  margin-top: -65px;
   margin-left: 60px;
+}
+
+.freetrial_img
+{
+  width: 60%;
 }
 
 /*============================================================
@@ -125,10 +131,10 @@ section
 {
   font-size: 5.3rem;
 }
-/* #dr-img
+#dr-img
 {
-  height: 535px;
-} */
+  margin-left: -200px;
+}
 
 .sticky 
 {
@@ -182,8 +188,6 @@ section
     scroll-margin-top: 100px;
 }
 /* ============== header ====================*/
-
-
 
 /* ============== contact us section ====================*/
 .contact-us-section
@@ -262,9 +266,6 @@ section
   background-color: #ADD8E6;
 }
 
-
-
-
 #first-section
 {
   background-color: lightblue; padding: 18px;
@@ -305,7 +306,6 @@ footer
   background-color:#24355C; 
   color: white;
 }
-
 
 
 /* Please move these styles to your css file or just keep them here */
@@ -400,10 +400,14 @@ h4
 }
 #our-story
 {
+  padding: 0px 0px;
+}
+#story_img
+{
   background-image: url("../img/info.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 105vh;
+  height: 100vh;
 }
 #commonissuessection
 {
@@ -430,13 +434,14 @@ h4
   height: 100vh;
 }
 #list1
-{     border-bottom: 0px;
-      padding: 0px;
-      margin: 0px;
-      line-height: 52px;
-      text-align: left;
-      color: black;
-      font-size: larger;
+{   
+  border-bottom: 0px;
+  padding: 0px;
+  margin: 0px;
+  line-height: 52px;
+  text-align: left;
+  color: black;
+  font-size: larger;
 }
 #ourapproachsection
 {
@@ -894,246 +899,6 @@ h4
 }
 /* Teams End */
 
-/* Media quiries Start */
-
-@media (max-width: 480px)
-{
-  #commonissuessection
-  {
-    background-image: none;
-    height: auto;
-  }
-  #commonissuessectionl
-  {
-  margin-left: 0px;
-  }
-  #d1
-  {
-    display: none;
-  }
-  #ourapproachsection
-  {
-    background-image: none;
-  }
-  #blankspace
-  {
-    display: none;
-  }
-  #sides
-  {
-  padding-top: 0px;
-  }
-}
-
-@media only screen and (max-width: 700px) 
-{
-  #commonissuessection
-  {
-    background-image: none;
-    height: auto;
-  }
-  #commonissuessectionl
-  {
-  margin-left: 0px;
-  }
-  #d1
-  {
-    display: none;
-  }
-  #ourapproachsection
-  {
-    background-image: none;
-  }
-  #blankspace
-  {
-    display: none;
-  }
-  #sides
-  {
-  padding-top: 0px;
-  }
-  #btn0
-  {
-  background-color: black;
-  color: white;
-  font-weight: bold;
-  font-size: 25px;
-  width: 300px;
-  margin-left: 3%;
-  }
-  #btn0:hover
-  {
-  background-color: black;
-  color: #FF621F;
-  font-weight: bold;
-  font-size: 25px;
-  width: 300px;
-  margin-left: 3%;
-  }
- #rmsimg
- {
-   height: 100px;
-   margin-left: 100px;
- }
-
- #rmsimg1
- {
-  height: 100px;
-  margin-left: 88px;
- }
-
- #ts
- {
-  padding-left: 4%;
- }
-
- #guideddemoimg
- {
-  height: 130px;
-  padding-left: 130px;
- }
-
-}
-
-@media (max-width: 767px)
-{
-  #commonissuessection
-  {
-    background-image: none;
-    height: auto;
-  }
-  #commonissuessectionl
-  {
-  margin-left: 0px;
-  }
-
-  #d1
-  {
-    display: none;
-  }
-  #ourapproachsection
-  {
-    background-image: none;
-  }
-  #blankspace
-  {
-    display: none;
-  }
-  #sides
-  {
-  padding-top: 0px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px)
-{
-
-  #commonissuessection
-  {
-    background-image: none;
-    height: auto;
-  }
-  #commonissuessectionl
-  {
-  margin-left: 0px;
-  }
-  #d1
-  {
-    display: none;
-  }
-  #ourapproachsection
-  {
-    background-image: none;
-  }
-  #blankspace
-  {
-    display: none;
-  }
-  #sides
-  {
-  padding-top: 0px;
-  }
-}
-
-@media only screen and (max-width: 800px)
-{
-  #topSideImg
-  { 
-    height: 500px !important;
-    width: 100% !important; 
-    padding-left: 0px;
-    margin-top: 0vh;
-    
-  }
-  header
-  {
-    height: auto;
-  }
-  .title
-  {
-    font-size: 3rem;
-
-  }
-  #logo
-  {
-    width: 250px;
-    height: 90px;
-  }
-  .topContent
-  {
-    text-align: center !important;
-  }
-  #energy-pic
-  {
-    display: none;
-  }
-  .section-title h4
-  {
-    font-size: 30px !important;
-  }
-  #med-solution-pic
-  {
-    height: 250px !important;
-  }
-  #monthl-sol-img
-  {
-    height: 250px;
-    margin-top: 15px;
-  }
-  #scheduleBtn
-{
-  font-size: 18px;
-  letter-spacing: 1px;
-  width: 60%;
-}
-#callBtn
-{
-  font-size: 18px;
-  letter-spacing: 1px;
-  width: 60%;
-}
-}
-
-/* Hover Effects on Card */
-@media (min-width: 992px) {
-  .pricing .card:hover {
-    margin-top: -.25rem;
-    margin-bottom: .25rem;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
-  }
-  .pricing .card:hover .btn {
-    opacity: 1;
-  }
-  #middle
-  {
-    box-shadow: 0px 0px 50px 5px rgb(255,69,0);
-  }
-
-}
-
-/* Media quiries End */
-
-
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
@@ -1280,6 +1045,10 @@ h4
 {
   height: 50px;
   padding: 5px;
+}
+.underthehooddescription
+{
+  padding: 35px;
 }
 .underthehoodicons
 
@@ -1468,7 +1237,8 @@ h4
 }
 
 
-/* ========================= How it Works==========================*/.frontside .card .card-body img 
+/* ========================= How it Works==========================*/
+.frontside .card .card-body img 
 #htw
 {
   padding: 60px 0px 0px;
@@ -2290,3 +2060,605 @@ h4
   color: #fff;
   font-size: 14px;
 }
+
+
+/* Media quiries Start */
+
+@media (max-width: 480px)
+{
+  #commonissuessection
+  {
+    background-image: none;
+    height: auto;
+  }
+  #commonissuessectionl
+  {
+  margin-left: 0px;
+  }
+  #d1
+  {
+    display: none;
+  }
+  #ourapproachsection
+  {
+    background-image: none;
+  }
+  #blankspace
+  {
+    display: none;
+  }
+  #sides
+  {
+  padding-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 700px) 
+{
+  #commonissuessection
+  {
+    background-image: none;
+    height: auto;
+  }
+  #commonissuessectionl
+  {
+  margin-left: 0px;
+  }
+  #d1
+  {
+    display: none;
+  }
+  #ourapproachsection
+  {
+    background-image: none;
+  }
+  #blankspace
+  {
+    display: none;
+  }
+  #sides
+  {
+  padding-top: 0px;
+  }
+  #btn0
+  {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  width: 300px;
+  margin-left: 3%;
+  }
+  #btn0:hover
+  {
+  background-color: black;
+  color: #FF621F;
+  font-weight: bold;
+  font-size: 25px;
+  width: 300px;
+  margin-left: 3%;
+  }
+ #rmsimg
+ {
+   height: 100px;
+   margin-left: 100px;
+ }
+
+ #rmsimg1
+ {
+  height: 100px;
+  margin-left: 88px;
+ }
+
+ #ts
+ {
+  padding-left: 0%;
+ }
+
+ #guideddemoimg
+ {
+  height: 130px;
+  padding-left: 130px;
+ }
+
+}
+
+@media (max-width: 767px)
+{
+  #commonissuessection
+  {
+    background-image: none;
+    height: auto;
+  }
+  #commonissuessectionl
+  {
+  margin-left: 0px;
+  }
+
+  #d1
+  {
+    display: none;
+  }
+  #ourapproachsection
+  {
+    background-image: none;
+  }
+  #blankspace
+  {
+    display: none;
+  }
+  #sides
+  {
+  padding-top: 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px)
+{
+
+  #commonissuessection
+  {
+    background-image: none;
+    height: auto;
+  }
+  #commonissuessectionl
+  {
+  margin-left: 0px;
+  }
+  #d1
+  {
+    display: none;
+  }
+  #ourapproachsection
+  {
+    background-image: none;
+  }
+  #blankspace
+  {
+    display: none;
+  }
+  #sides
+  {
+  padding-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 800px)
+{
+  #topSideImg
+  { 
+    height: 500px !important;
+    width: 100% !important; 
+    padding-left: 0px;
+    margin-top: 0vh;
+    
+  }
+  header
+  {
+    height: auto;
+  }
+  .title
+  {
+    font-size: 3rem;
+
+  }
+  #logo
+  {
+    width: 250px;
+    height: 90px;
+  }
+  .topContent
+  {
+    text-align: center !important;
+  }
+  #energy-pic
+  {
+    display: none;
+  }
+  .section-title h4
+  {
+    font-size: 30px !important;
+  }
+  #med-solution-pic
+  {
+    height: 250px !important;
+  }
+  #monthl-sol-img
+  {
+    height: 250px;
+    margin-top: 15px;
+  }
+  #scheduleBtn
+{
+  font-size: 18px;
+  letter-spacing: 1px;
+  width: 60%;
+}
+#callBtn
+{
+  font-size: 18px;
+  letter-spacing: 1px;
+  width: 60%;
+}
+}
+
+/* Hover Effects on Card */
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+  #middle
+  {
+    box-shadow: 0px 0px 50px 5px rgb(255,69,0);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    /* Header Start */
+
+      #menu-bar
+      {
+        margin-bottom: 5px;
+      }
+
+      .banner_img
+      { 
+        width: 120%;
+        margin-top: 0px; 
+        margin-left: -25px;
+      }
+      
+      .slide_text
+      {
+        font-size: 2rem;
+      }
+      
+      #dr-img
+      {
+        margin-left: 0px;
+      }
+      
+      .freetrial_img
+      {
+        width: 125%;
+      }
+    /* Header End */
+
+    /* Our Story*/
+      #story_img
+      {
+        height: 35vh;
+        background-position: center;
+        margin-top: -30px !important;
+      }
+    /*Our Story*/
+
+    /*Contact Us*/
+      .call_button
+      {
+        font-size: 15px !important;
+        font-weight: 700;
+        letter-spacing: 1px;
+        width: 18rem;
+      }
+   /*Contact Us*/
+
+    /*Our Approach*/
+      #ourapproachimg {
+        height: 48vh;
+      }
+
+      #ourapproachsection {
+        height: 75vh;
+      }
+   /*Our Approach*/
+
+   /*Why US*/   
+   .ratings {
+    height: 85px;
+    display: inline-block;
+    margin-left: 0px;
+    }
+   /*Why US*/
+
+   /*Under The Hood*/  
+    .accordion {
+      width: 110%;
+      font-size: 14px;
+    } 
+    .underthehoodicons {
+      height: 15px;
+    }
+    .list-group .active {
+      font-size: 15px;
+    }
+    .accordian_text
+    {
+      font-size: 15px;
+    }
+   /*Under The Hood*/
+
+   .guideddemoimg
+   {
+     display: none;
+   }
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    #ts
+    {
+     padding-left: 10%;
+    }
+    #rmsimg1 {
+      height: 100px;
+      margin-left: 115px;
+    }
+    #rmsimg {
+      margin-left: 140px;
+    }
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    /*Our Approach*/
+      #ourapproachsection {
+        height: 60vh;
+      }
+   /*Our Approach*/
+
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    /*Our Approach*/
+      #ourapproachimg {
+        height: 40vh;
+      }
+      #ourapproachsection {
+        height: 60vh;
+      }
+   /*Our Approach*/
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    /* Header Start */
+    #menu-bar
+    {
+      margin-bottom: 5px;
+    }
+
+    .nav-link
+    {
+      font-size: .75rem !important;
+    } 
+    
+    .banner_img
+    { 
+      width: 120%;
+      margin-top: 0px; 
+      margin-left: -25px;
+    }
+    .slide_text
+    {
+      font-size: 2rem;
+    }
+    
+    #dr-img
+    {
+      margin-left: -45px !important;
+    }
+    
+    .freetrial_img
+    {
+      width: 85%;
+    }
+  /* Header End */
+
+  /* Our Story*/
+    #story_img
+    {
+      height: 35vh;
+      background-position: center;
+      margin-top: -30px !important;
+    }
+  /*Our Story*/
+
+  /*Contact Us*/
+    .call_button
+    {
+      font-size: 16px !important;
+      font-weight: 700;
+      letter-spacing: 1px;
+      width: 18rem;
+    }
+   /*Contact Us*/
+
+    /*Our Approach*/
+    #ourapproachimg {
+      height: 50vh;
+      margin-left: 50px;
+    }
+
+    #ourapproachsection {
+      height: 65vh;
+    }
+    .ourapproachblank
+    {
+      display: none;
+    }
+  /*Our Approach*/
+    #rmsimg1 {
+      margin-left: 270px;
+    }
+    #ts
+    {
+    padding-left: 28%;
+    }
+    #rmsimg {
+      margin-left: 300px;
+    }
+    .guideddemoimg
+    {
+      display: none;
+    }
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    /*Contact Us*/
+      .call_button
+      {
+        font-size: 20px !important;
+        font-weight: 700;
+        letter-spacing: 1px;
+        width: 22rem;
+      }
+     /*Contact Us*/
+
+      #commonissuessection
+      {
+        background-image: none;
+        height: auto;
+      }
+      
+      #commonissuessectionl
+      {
+      margin-left: 0px;
+      }
+
+      /*Our Approach*/
+      #ourapproachsection {
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #ourapproachimg {
+        height: 50vh;
+        margin-left: 95px;
+      }
+  
+      #ourapproachsection {
+        height: 65vh;
+      }
+      .ourapproachblank
+      {
+        display: none;
+      }
+    /*Our Approach*/
+    
+      #rmsimg1 {
+        margin-left: 390px;
+      }
+      #ts {
+        padding-left: 34%;
+      }
+      #rmsimg {
+        margin-left: 410px;
+      }
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    /* Header Start */
+    .banner_img
+    {
+      margin-top: 0px; 
+      margin-left: 5px;
+    }
+    
+    .slide_text
+    {
+      font-size: 2rem;
+    }
+    
+    .top_text
+    {
+      text-align: center;
+    }
+    
+    #dr-img
+    {
+      margin-left: -45px !important;
+    }
+    
+    .freetrial_img
+    {
+      width: 85%;
+    }
+  /* Header End */
+
+  /* Our Story*/
+    #story_img
+    {
+      height: 80vh;
+      background-position: center;
+      margin-top: -30px !important;
+    }
+  /*Our Story*/
+}
+
+/* Media quiries End */
