@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/img/dr.jpeg">
+    <title>Records</title>
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+    <link href="dist/css/pages/icon-page.css" rel="stylesheet">
+    <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+    <link href="dist/css/pages/icon-page.css" rel="stylesheet">
+    <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+    <link href="dist/css/pages/floating-label.css" rel="stylesheet">
+    <link href="dist/css/pages/chat-app-page.css" rel="stylesheet">
+    <link href="dist/css/pages/contact-app-page.css" rel="stylesheet">
+    <link href="dist/css/pages/footable-page.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <style>
+        .card-body {
+            padding: 0rem;
+        }
+
+        
+
+        /*
+    @media screen and (min-width:400px){
+        .none{
+                display: none;
+                }
+    }
+*/
+
+    </style>
+</head>
+
+<body class="skin-blue fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">RTP Medical Solutions</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar bg-white">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header bg-white">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--  You can put here icon as well -->
+                            <!--  <i class="wi wi-sunset"></i> -->
+                            <!-- Dark Logo icon -->
+                            <img src="dist/img/rtplogo.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <!--                            <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />-->
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                            <!-- dark Logo text -->
+                            <img src="dist/img/rtplogo.png" alt="homepage" class="dark-logo w-25" />
+                            <!-- Light Logo text -->
+                            <img src="dist/img/rtplogo.png" class="light-logo" alt="homepage" style="height: 75px; margin-left: 35px;"/>
+                        </span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto ">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item text-info"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark text-info" href="javascript:void(0)"><i class="icon-menu text-info"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <!--
+                        <li class="nav-item">
+                            <form class="app-search d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control" placeholder="Search & enter">
+                            </form>
+                        </li>
+-->
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-home text-info"></i>
+                                <!--                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>-->
+                            </a>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Comment -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                      
+                        <!-- ============================================================== -->
+                        <!-- End mega menu -->
+
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- User Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic text-info" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class=""> <span class="hidden-md-down">Mark &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <!-- text-->
+                                <a href="index.html" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                                <!-- text-->
+                                <a href="pay_Request.html" class="dropdown-item"><i class="ti-wallet"></i>Open Balance</a> 
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="account_settings.html" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                                <!-- text-->
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End User Profile -->
+                        <!-- ============================================================== -->
+                        <!--                        <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>-->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="far fa-user text-danger"></i><span class="hide-menu">My Profiles</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="profile_discovery.html" aria-expanded="false"><i class="fa fa-users text-danger"></i><span class="hide-menu">Profile Discovery</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="records.html" aria-expanded="false"><i class="fa fa-clipboard-check text-danger"></i><span class="hide-menu">Records</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="authorize_practice.html" aria-expanded="false"><i class="fa fa-map-marker text-danger"></i><span class="hide-menu">My Practices</span></a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-money-bill-alt text-danger"></i><span class="hide-menu">Payment<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="pay_Request.html">Payment Request</a></li>
+                                <li><a href="payment_Complete.html">Payments Completed</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="com_center.html" aria-expanded="false"><i class="fa fa-phone text-danger"></i><span class="hide-menu">Communication</span></a></li>
+                        <!-- temporary dropdown -->
+                        <!--
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-layout-grid2"></i><span class="hide-menu">My Records</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="recordRequest.html">Request Records</a></li>
+                                <li><a href="sendRecords.html">Send Records</a></li>
+                                <li><a href="PendingRecords.html">Pending Records</a></li>
+                                <li><a href="allRecords.html">All Records</a></li>
+
+                            </ul>
+                        </li>
+-->
+                         
+                          <li> <a class="waves-effect waves-dark" href="login.html" aria-expanded="false"><i class="fas fa-sign-in-alt text-danger"></i><span class="hide-menu">Log Out</span></a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <!-- .left-right-aside-column-->
+                            <div class="contact-page-aside">
+                                <!-- .left-aside-column-->
+                                <div class="left-aside bg-light-part">
+                                    <ul class="list-style-none">
+                                        <li class="box-label"><a href="javascript:void(0)">All Contacts
+                                                <span>123</span></a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="javascript:void(0)">Work <span>103</span></a></li>
+                                        <li><a href="javascript:void(0)">Family <span>19</span></a></li>
+                                        <li><a href="javascript:void(0)">Friends <span>623</span></a></li>
+                                        <li><a href="javascript:void(0)">Private <span>53</span></a></li>
+                                        <li class="box-label"><a href="javascript:void(0)" data-toggle="modal"
+                                                data-target="#myModal" class="btn btn-info text-white">+ Create New
+                                                Label</a></li>
+                                        <div id="myModal" class="modal fade in" tabindex="-1" role="dialog"
+                                            aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="myModalLabel">Add Lable</h4>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <from class="form-horizontal">
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Name of Label</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="type name"> </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Select Number of people</label>
+                                                                <div class="col-md-12">
+                                                                    <select class="form-control">
+                                                                        <option>All Contacts</option>
+                                                                        <option>10</option>
+                                                                        <option>20</option>
+                                                                        <option>30</option>
+                                                                        <option>40</option>
+                                                                        <option>Custome</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </from>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-info waves-effect"
+                                                            data-dismiss="modal">Save</button>
+                                                        <button type="button" class="btn btn-default waves-effect"
+                                                            data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                    </ul>
+                                </div>
+                                <!-- /.left-aside-column-->
+                                <div class="right-aside ">
+                                    <div class="right-page-header">
+                                        <div class="d-flex">
+                                            <div class="align-self-center">
+                                                <h4 class="card-title m-t-10">Contacts / Employee List </h4>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <input type="text" id="demo-input-search2" placeholder="search contacts"
+                                                    class="form-control"> </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-info btn-rounded m-t-10 float-right"
+                                        data-toggle="modal" data-target="#add-contact">Add New Contact</button>
+                                    <!-- Add Contact Popup Model -->
+                                    <div id="add-contact" class="modal fade in" tabindex="-1" role="dialog"
+                                        aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-hidden="true">×</button>
+                                                    <h4 class="modal-title" id="myModalLabel">Add New Contact</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <from class="form-horizontal form-material">
+                                                        <div class="form-group">
+                                                            <div class="col-md-12 m-b-20">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Type name"> </div>
+                                                            <div class="col-md-12 m-b-20">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Email"> </div>
+                                                            <div class="col-md-12 m-b-20">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Phone"> </div>
+                                                            <div class="col-md-12 m-b-20">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Designation"> </div>
+                                                            <div class="col-md-12 m-b-20">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Age"> </div>
+                                                            <div class="col-md-12 m-b-20">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Date of joining"> </div>
+                                                            <div class="col-md-12 m-b-20">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Salary"> </div>
+                                                            <div class="col-md-12 m-b-20">
+                                                                <div
+                                                                    class="fileupload btn btn-danger btn-rounded waves-effect waves-light">
+                                                                    <span><i class="ion-upload m-r-5"></i>Upload Contact
+                                                                        Image</span>
+                                                                    <input type="file" class="upload"> </div>
+                                                            </div>
+                                                        </div>
+                                                    </from>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-info waves-effect"
+                                                        data-dismiss="modal">Save</button>
+                                                    <button type="button" class="btn btn-default waves-effect"
+                                                        data-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table id="demo-foo-addrow"
+                                            class="table no-wrap table-bordered m-t-30 table-hover contact-list"
+                                            data-paging="true" data-paging-size="7">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Phone</th>
+                                                    <th>Role</th>
+                                                    <th>Age</th>
+                                                    <th>Joining date</th>
+                                                    <th>Salery</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/4.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Genelia Deshmukh</a>
+                                                    </td>
+                                                    <td>genelia@gmail.com</td>
+                                                    <td>+123 456 789</td>
+                                                    <td><span class="label label-danger">Designer</span> </td>
+                                                    <td>23</td>
+                                                    <td>12-10-2014</td>
+                                                    <td>$1200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/5.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Arijit Singh</a>
+                                                    </td>
+                                                    <td>arijit@gmail.com</td>
+                                                    <td>+234 456 789</td>
+                                                    <td><span class="label label-info">Developer</span> </td>
+                                                    <td>26</td>
+                                                    <td>10-09-2014</td>
+                                                    <td>$1800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/6.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Govinda jalan</a>
+                                                    </td>
+                                                    <td>govinda@gmail.com</td>
+                                                    <td>+345 456 789</td>
+                                                    <td><span class="label label-success">Accountant</span></td>
+                                                    <td>28</td>
+                                                    <td>1-10-2013</td>
+                                                    <td>$2200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/7.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Hritik Roshan</a>
+                                                    </td>
+                                                    <td>hritik@gmail.com</td>
+                                                    <td>+456 456 789</td>
+                                                    <td><span class="label label-inverse">HR</span></td>
+                                                    <td>25</td>
+                                                    <td>2-10-2017</td>
+                                                    <td>$200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/8.jpg" alt="user" width="40"
+                                                                class="img-circle" /> John Abraham</a>
+                                                    </td>
+                                                    <td>john@gmail.com</td>
+                                                    <td>+567 456 789</td>
+                                                    <td><span class="label label-danger">Manager</span></td>
+                                                    <td>23</td>
+                                                    <td>10-9-2015</td>
+                                                    <td>$1200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/1.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Pawandeep kumar</a>
+                                                    </td>
+                                                    <td>pawandeep@gmail.com</td>
+                                                    <td>+678 456 789</td>
+                                                    <td><span class="label label-warning">Chairman</span></td>
+                                                    <td>29</td>
+                                                    <td>10-5-2013</td>
+                                                    <td>$1500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/2.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Ritesh Deshmukh</a>
+                                                    </td>
+                                                    <td>ritesh@gmail.com</td>
+                                                    <td>+123 456 789</td>
+                                                    <td><span class="label label-danger">Designer</span></td>
+                                                    <td>35</td>
+                                                    <td>05-10-2012</td>
+                                                    <td>$3200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/2.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Salman Khan</a>
+                                                    </td>
+                                                    <td>salman@gmail.com</td>
+                                                    <td>+234 456 789</td>
+                                                    <td><span class="label label-info">Developer</span></td>
+                                                    <td>27</td>
+                                                    <td>11-10-2014</td>
+                                                    <td>$1800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/3.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Govinda jalan</a>
+                                                    </td>
+                                                    <td>govinda@gmail.com</td>
+                                                    <td>+345 456 789</td>
+                                                    <td><span class="label label-success">Accountant</span></td>
+                                                    <td>18</td>
+                                                    <td>12-5-2017</td>
+                                                    <td>$100</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/4.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Sonu Nigam</a>
+                                                    </td>
+                                                    <td>sonu@gmail.com</td>
+                                                    <td>+456 456 789</td>
+                                                    <td><span class="label label-inverse">HR</span></td>
+                                                    <td>36</td>
+                                                    <td>18-5-2009</td>
+                                                    <td>$4200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/5.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Varun Dhawan</a>
+                                                    </td>
+                                                    <td>varun@gmail.com</td>
+                                                    <td>+567 456 789</td>
+                                                    <td><span class="label label-danger">Manager</span></td>
+                                                    <td>43</td>
+                                                    <td>12-10-2010</td>
+                                                    <td>$5200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/6.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Genelia Deshmukh</a>
+                                                    </td>
+                                                    <td>genelia@gmail.com</td>
+                                                    <td>+123 456 789</td>
+                                                    <td><span class="label label-danger">Designer</span> </td>
+                                                    <td>23</td>
+                                                    <td>12-10-2014</td>
+                                                    <td>$1200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>13</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/7.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Arijit Singh</a>
+                                                    </td>
+                                                    <td>arijit@gmail.com</td>
+                                                    <td>+234 456 789</td>
+                                                    <td><span class="label label-info">Developer</span> </td>
+                                                    <td>26</td>
+                                                    <td>10-09-2014</td>
+                                                    <td>$1800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>14</td>
+                                                    <td>
+                                                        <a href="javascript:void(0)"><img
+                                                                src="../assets/images/users/8.jpg" alt="user" width="40"
+                                                                class="img-circle" /> Govinda jalan</a>
+                                                    </td>
+                                                    <td>govinda@gmail.com</td>
+                                                    <td>+345 456 789</td>
+                                                    <td><span class="label label-success">Accountant</span></td>
+                                                    <td>28</td>
+                                                    <td>1-10-2013</td>
+                                                    <td>$2200</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- .left-aside-column-->
+                                </div>
+                                <!-- /.left-right-aside-column-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade none-border bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="reviews">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Leave Your Review</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="white-text">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <label>Leave review for</label>
+                            <select class="form-control">
+                                <option selected="" disabled="">Choose Practice</option>
+                                <option>Powers Pediatrics</option>
+                                <option>Woimedicine</option>
+                            </select>
+
+
+
+                            <div class="md-form md-outline mt-2">
+                                <textarea id="message" class="md-textarea form-control" placeholder="Submit Your Review" rows="3"></textarea>
+                                <!--                                    <label for="message" class="active">Submit Review</label>-->
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Submit</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------->
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer">
+            © 2020 Eliteadmin by themedesigner.in
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="assets/node_modules/morrisjs/morris.min.js"></script>
+    <script src="assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!-- Popup message jquery -->
+    <!-- Chart JS -->
+    <script src="dist/js/dashboard1.js"></script>
+    <!-- Editable -->
+    <script src="assets/node_modules/jquery-datatables-editable/jquery.dataTables.js"></script>
+    <script src="assets/node_modules/datatables/media/js/dataTables.bootstrap.js"></script>
+    <script src="assets/node_modules/tiny-editable/mindmup-editabletable.js"></script>
+    <script src="assets/node_modules/tiny-editable/numeric-input-example.js"></script>
+    <!-- This is data table -->
+    <script src="assets/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+    <!-- start - This is for export functionality only -->
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+    <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+    <!-- end - This is for export functionality only -->
+    <script>
+        $('#mainTable').numericInputExample().find('td:first').focus();
+        $('#editable-datatable').numericInputExample().find('td:first').focus();
+        $(document).ready(function() {
+            $('#editable-datatable').DataTable();
+        });
+        
+        $('#clmtable1').DataTable({
+                scrollY:        "50vh",
+                scrollX:        true,
+                scrollCollapse: true,
+            });
+    </script>
+    <script>
+        $(function() {
+            $('#myTable').DataTable();
+            var table = $('#example').DataTable({
+                "columnDefs": [{
+                    "visible": false,
+                    "targets": 2
+                }],
+                "order": [
+                    [2, 'asc']
+                ],
+                "displayLength": 25,
+                "drawCallback": function(settings) {
+                    var api = this.api();
+                    var rows = api.rows({
+                        page: 'current'
+                    }).nodes();
+                    var last = null;
+                    api.column(2, {
+                        page: 'current'
+                    }).data().each(function(group, i) {
+                        if (last !== group) {
+                            $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
+                            last = group;
+                        }
+                    });
+                }
+            });
+            // Order by the grouping
+            $('#example tbody').on('click', 'tr.group', function() {
+                var currentOrder = table.order()[0];
+                if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                    table.order([2, 'desc']).draw();
+                } else {
+                    table.order([2, 'asc']).draw();
+                }
+            });
+            // responsive table
+            $('#config-table').DataTable({
+                responsive: true
+            });
+            $('#example23').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+            $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+        });
+
+    </script>
+    <script src="assets/node_modules/footable/js/footable.min.js"></script>
+    <!--FooTable init-->
+    <script>
+        $(function () {
+            $('#demo-foo-addrow').footable();
+        });
+    </script>
+
+</body>
+
+</html>
