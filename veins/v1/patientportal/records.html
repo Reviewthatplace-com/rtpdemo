@@ -28,6 +28,17 @@
     <link href="dist/css/pages/chat-app-page.css" rel="stylesheet">
     <link href="dist/css/pages/contact-app-page.css" rel="stylesheet">
     <link href="dist/css/pages/footable-page.css" rel="stylesheet">
+    <link href="assets/node_modules/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+     <!-- Page plugins css -->
+     <link href="assets/node_modules/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
+     <!-- Color picker plugins css -->
+     <link href="assets/node_modules/jquery-asColorPicker-master/dist/css/asColorPicker.css" rel="stylesheet">
+     <!-- Date picker plugins css -->
+     <link href="assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+     <!-- Daterange picker plugins css -->
+     <link href="assets/node_modules/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+     <link href="assets/node_modules/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,6 +50,14 @@
             padding: 0rem;
         }
 
+
+        .asColorPicker-trigger {
+            position: absolute;
+            top: 0px;
+            left: 220px;
+            height: 38px;
+            width: 37px;
+            border: 0; }
         
 
         /*
@@ -250,9 +269,7 @@
                                         <li><a href="javascript:void(0)">Radiology <span>19</span></a></li>
                                         <li><a href="javascript:void(0)">Dentist <span>623</span></a></li>
                                         <li><a href="javascript:void(0)">ER - Visit <span>53</span></a></li>
-                                        <li class="box-label"><a href="javascript:void(0)" data-toggle="modal"
-                                                data-target="#myModal" class="btn btn-info text-white">+ Create New
-                                                Label</a></li>
+                                        <li class="box-label"><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal" class="btn btn-info text-white"><i class="ti-settings"></i> Create New Label</a></li>
                                         <div id="myModal" class="modal fade in" tabindex="-1" role="dialog"
                                             aria-labelledby="myModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
@@ -267,20 +284,13 @@
                                                             <div class="form-group">
                                                                 <label class="col-md-12">Name of Label</label>
                                                                 <div class="col-md-12">
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="type name"> </div>
+                                                                    <input type="text" class="form-control" placeholder="type name"> 
+                                                                </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label class="col-md-12">Select Number of people</label>
-                                                                <div class="col-md-12">
-                                                                    <select class="form-control">
-                                                                        <option>All Contacts</option>
-                                                                        <option>10</option>
-                                                                        <option>20</option>
-                                                                        <option>30</option>
-                                                                        <option>40</option>
-                                                                        <option>Custome</option>
-                                                                    </select>
+                                                                <label class="col-md-12">Choose Record Color</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="text" class="colorpicker form-control" value="#7ab2fa" /> 
                                                                 </div>
                                                             </div>
                                                         </from>
@@ -323,26 +333,16 @@
                                                     <from class="form-horizontal form-material">
                                                         <div class="form-group">
                                                             <div class="col-md-12 m-b-20">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Type name"> </div>
+                                                                <input type="text" class="form-control" placeholder="Type name"> 
+                                                            </div>
                                                             <div class="col-md-12 m-b-20">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Email"> </div>
+                                                                <input type="text" class="form-control" placeholder="Email"> 
+                                                            </div>
                                                             <div class="col-md-12 m-b-20">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Phone"> </div>
+                                                                <input type="text" class="form-control" placeholder="Designation"> 
+                                                            </div>
                                                             <div class="col-md-12 m-b-20">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Designation"> </div>
-                                                            <div class="col-md-12 m-b-20">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Age"> </div>
-                                                            <div class="col-md-12 m-b-20">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Date of joining"> </div>
-                                                            <div class="col-md-12 m-b-20">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Salary"> </div>
+                                                                <input type="text" class="form-control" placeholder="Date of joining"> </div>
                                                             <div class="col-md-12 m-b-20">
                                                                 <div
                                                                     class="fileupload btn btn-danger btn-rounded waves-effect waves-light">
@@ -357,7 +357,7 @@
                                                     <button type="button" class="btn btn-info waves-effect"
                                                         data-dismiss="modal">Save</button>
                                                     <button type="button" class="btn btn-default waves-effect"
-                                                        data-dismiss="modal">Cancel</button>
+                                                    data-dismiss="modal">Cancel</button>
                                                 </div>
                                             </div>
                                             <!-- /.modal-content -->
@@ -638,6 +638,199 @@
         $(function () {
             $('#demo-foo-addrow').footable();
         });
+    </script>
+    <!-- Plugin JavaScript -->
+    <script src="assets/node_modules/moment/moment.js"></script>
+    <script src="assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script src="assets/node_modules/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="assets/node_modules/jquery-asColor/dist/jquery-asColor.js"></script>
+    <script src="assets/node_modules/jquery-asGradient/dist/jquery-asGradient.js"></script>
+    <script src="assets/node_modules/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="assets/node_modules/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="assets/node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script>
+    // MAterial Date picker    
+    $('#mdate').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+    $('#timepicker').bootstrapMaterialDatePicker({ format: 'HH:mm', time: true, date: false });
+    $('#date-format').bootstrapMaterialDatePicker({ format: 'dddd DD MMMM YYYY - HH:mm' });
+
+    $('#min-date').bootstrapMaterialDatePicker({ format: 'DD/MM/YYYY HH:mm', minDate: new Date() });
+    // Clock pickers
+    $('#single-input').clockpicker({
+        placement: 'bottom',
+        align: 'left',
+        autoclose: true,
+        'default': 'now'
+    });
+    $('.clockpicker').clockpicker({
+        donetext: 'Done',
+    }).find('input').change(function() {
+        console.log(this.value);
+    });
+    $('#check-minutes').click(function(e) {
+        // Have to stop propagation here
+        e.stopPropagation();
+        input.clockpicker('show').clockpicker('toggleView', 'minutes');
+    });
+    if (/mobile/i.test(navigator.userAgent)) {
+        $('input').prop('readOnly', true);
+    }
+    // Colorpicker
+    $(".colorpicker").asColorPicker();
+    $(".complex-colorpicker").asColorPicker({
+        mode: 'complex'
+    });
+    $(".gradient-colorpicker").asColorPicker({
+        mode: 'gradient'
+    });
+    // Date Picker
+    jQuery('.mydatepicker, #datepicker').datepicker();
+    jQuery('#datepicker-autoclose').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });
+    jQuery('#date-range').datepicker({
+        toggleActive: true
+    });
+    jQuery('#datepicker-inline').datepicker({
+        todayHighlight: true
+    });
+    // -------------------------------
+	// Start Date Range Picker
+	// -------------------------------
+
+    // Basic Date Range Picker
+    $('.daterange').daterangepicker();
+
+    // Date & Time
+    $('.datetime').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+            format: 'MM/DD/YYYY h:mm A'
+        }
+    });
+
+    //Calendars are not linked
+    $('.timeseconds').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        timePicker24Hour: true,
+        timePickerSeconds: true,
+        locale: {
+            format: 'MM-DD-YYYY h:mm:ss'
+        }
+    });
+
+    // Single Date Range Picker
+    $('.singledate').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true
+    });
+
+    // Auto Apply Date Range
+    $('.autoapply').daterangepicker({
+        autoApply: true,
+    });
+
+    // Calendars are not linked
+    $('.linkedCalendars').daterangepicker({
+        linkedCalendars: false,
+    });
+
+    // Date Limit
+    $('.dateLimit').daterangepicker({
+        dateLimit: {
+            days: 7
+        },
+    });
+
+    // Show Dropdowns
+    $('.showdropdowns').daterangepicker({
+        showDropdowns: true,
+    });
+
+    // Show Week Numbers
+    $('.showweeknumbers').daterangepicker({
+        showWeekNumbers: true,
+    });
+
+     $('.dateranges').daterangepicker({
+        ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    });
+
+    // Always Show Calendar on Ranges
+    $('.shawCalRanges').daterangepicker({
+        ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        alwaysShowCalendars: true,
+    });
+
+    // Top of the form-control open alignment
+    $('.drops').daterangepicker({
+        drops: "up" // up/down
+    });
+
+    // Custom button options
+    $('.buttonClass').daterangepicker({
+        drops: "up",
+        buttonClasses: "btn",
+        applyClass: "btn-info",
+        cancelClass: "btn-danger"
+    });
+
+	jQuery('#date-range').datepicker({
+        toggleActive: true
+    });
+    jQuery('#datepicker-inline').datepicker({
+        todayHighlight: true
+    });
+
+    // Daterange picker
+    $('.input-daterange-datepicker').daterangepicker({
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-daterange-timepicker').daterangepicker({
+        timePicker: true,
+        format: 'MM/DD/YYYY h:mm A',
+        timePickerIncrement: 30,
+        timePicker12Hour: true,
+        timePickerSeconds: false,
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-limit-datepicker').daterangepicker({
+        format: 'MM/DD/YYYY',
+        minDate: '06/01/2015',
+        maxDate: '06/30/2015',
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse',
+        dateLimit: {
+            days: 6
+        }
+    });
     </script>
 
 </body>
