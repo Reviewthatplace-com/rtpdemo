@@ -309,15 +309,8 @@
                                 <!-- .left-aside-column-->
                                 <div class="left-aside bg-light-part">
                                     <ul class="list-style-none">
-                                        <li class="box-label"><a href="javascript:void(0)">All Records<span>123</span></a></li>
-                                        <li class="box-label"><a href="pending_records.html">Pending<span>13</span></a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="javascript:void(0)">Dr. Kent - Primary Care <span>103</span></a></li>
-                                        <li><a href="javascript:void(0)">Radiology <span>19</span></a></li>
-                                        <li><a href="javascript:void(0)">Dentist <span>623</span></a></li>
-                                        <li><a href="javascript:void(0)">ER - Visit <span>53</span></a></li>
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti-settings"></i></button>
+                                            <button type="button" class="btn btn-sm btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti-settings"></i></button>
                                             <div class="dropdown-menu animated flipInX">
                                                 <a class="dropdown-item" href="javascript:void(0)">Action</a>
                                                 <a class="dropdown-item" href="javascript:void(0)">Another action</a>
@@ -326,6 +319,13 @@
                                                 <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
                                             </div>
                                         </div>
+                                        <li class="box-label"><a href="javascript:void(0)">All Records<span>123</span></a></li>
+                                        <li class="box-label"><a href="pending_records.html">Pending<span>13</span></a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="javascript:void(0)">Dr. Kent - Primary Care <span>103</span></a></li>
+                                        <li><a href="javascript:void(0)">Radiology <span>19</span></a></li>
+                                        <li><a href="javascript:void(0)">Dentist <span>623</span></a></li>
+                                        <li><a href="javascript:void(0)">ER - Visit <span>53</span></a></li>
                                         <div id="myModal" class="modal fade in" tabindex="-1" role="dialog"
                                             aria-labelledby="myModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
@@ -676,6 +676,7 @@
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         </div>
                         <div class="modal-body">
+                            
                             <section id="arfstep1" class="section mt-3 active">
                                 <legend class="text-center font-weight-bold">Your Information</legend>
                                 <from class="form-horizontal form-material">
@@ -797,29 +798,7 @@
                             </section>
 
                             <section id="arfstep3" class="section mt-3" style="display: none;">
-                                <legend class="text-center font-weight-bold">Who is Sending the Records?</legend>
-                                <from class="form-horizontal form-material">
-                                    <div class="form-group">
-                                        <div class="col-md-12 m-b-20">
-                                            <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="who_is_sending" id="who_is_sending1" value="1">
-                                                <label class="checklabel required-label" for="who_is_sending1">Veins</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 m-b-20">
-                                            <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="who_is_sending" id="who_is_sending2" value="1">
-                                                <label class="checklabel required-label" for="who_is_sending2">Somebody Else</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </from>
-                                <a href="#" id="arfstepthreeback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
-                                <a href="#" id="arfstepthreenext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
-                            </section>
-
-                            <section id="arfstep4" class="section mt-3" style="display: none;">
-                                <legend class="text-center font-weight-bold">How do you want them sent?</legend>
+                                <legend class="text-center font-weight-bold">Send Request Via</legend>
                                 <from class="form-horizontal form-material">
                                     <div class="form-group">
                                         <div class="col-md-12 m-b-20">
@@ -865,12 +844,12 @@
 
                                     </div>
                                 </from>
-                                <a href="#" id="arfstepfourback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
-                                <a href="#" id="arfstepfournext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
+                                <a href="#" id="arfstepthreeback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepthreenext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
                             </section>
 
-                            <section id="arfstep5" class="section mt-3" style="display: none;">
-                                <legend class="text-center font-weight-bold">Where do you want Veins to send them?</legend>
+                            <section id="arfstep4" class="section mt-3" style="display: none;">
+                                <legend class="text-center font-weight-bold">Sending Practice Information</legend>
                                 <from class="form-horizontal form-material">
                                     <div class="form-group">
                                         <div class="col-md-12 m-b-20">
@@ -976,33 +955,11 @@
                                         </div>
                                     </div>
                                 </from>
-                                <a href="#" id="arfstepfiveback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
-                                <a href="#" id="arfstepfivenext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
+                                <a href="#" id="arfstepfourback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepfournext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
                             </section>
 
-                            <section id="arfstep6" class="section mt-3" style="display: none;">
-                                <legend class="text-center font-weight-bold">What’s the purpose of this request?</legend>
-                                <from class="form-horizontal form-material">
-                                    <div class="form-group">
-                                        <div class="col-md-12 m-b-20">
-                                            <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="purpose" id="purpose1" value="1">
-                                                <label class="checklabel required-label" for="purpose1">Purpose of request 01</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 m-b-20">
-                                            <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="purpose" id="purpose2" value="1">
-                                                <label class="checklabel required-label" for="purpose2">Purpose of request 02</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </from>
-                                <a href="#" id="arfstepsixback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
-                                <a href="#" id="arfstepsixnext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
-                            </section>
-
-                            <section id="arfstep7" class="section mt-3" style="display: none;">
+                            <section id="arfstep5" class="section mt-3" style="display: none;">
                                 <legend class="text-center font-weight-bold">Authorization of Usage and Disclosure</legend>
                                 <p class="text-center">By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records,
                                     If Such Information And/or Records Exist:</p>
@@ -1011,51 +968,96 @@
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
                                                 <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization1" value="1">
-                                                <label class="checklabel required-label" for="Authorization1">Authorization of <br> usage and disclosure 01</label>
+                                                <label class="checklabel required-label" for="Authorization1">Office Notes and Reports</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
                                                 <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization2" value="1">
-                                                <label class="checklabel required-label" for="Authorization2">Authorization of <br> usage and disclosure 02</label>
+                                                <label class="checklabel required-label" for="Authorization2">Diagnostic Reports</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization3" value="1">
+                                                <label class="checklabel required-label" for="Authorization3">Billing Statements</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization4" value="1">
+                                                <label class="checklabel required-label" for="Authorization4">Rx History</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization5" value="1">
+                                                <label class="checklabel required-label" for="Authorization5">Transcribed Hospital Reports</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization6" value="1">
+                                                <label class="checklabel required-label" for="Authorization6">Laboratory Reports</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization7" value="1">
+                                                <label class="checklabel required-label" for="Authorization7">Others Listed Here:</label>
                                             </div>
                                         </div>
                                     </div>
                                 </from>
-                                <a href="#" id="arfstepsevenback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
-                                <a href="#" id="arfstepsevennext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
+                                <a href="#" id="arfstepfiveback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepfivenext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
                             </section>
 
-                            <section id="arfstep8" class="section mt-3" style="display: none;">
+                            <section id="arfstep6" class="section mt-3" style="display: none;">
                                 <legend class="text-center font-weight-bold">Restrict Disclosure</legend>
-                                <p class="text-center">Do you want to restrict disclosure for any records related to the following? If no please continue to next step</p>
+                                <p class="text-center">(Federal regulations require a description of how much and what kind of information is to be disclosed.)</p>
                                 <from class="form-horizontal form-material">
                                     <div class="form-group">
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization1" value="1">
-                                                <label class="checklabel required-label" for="Authorization1">Restrict Disclosure 01</label>
+                                                <input required="" class="checkbox" type="radio" name="restrictdisclosure" id="restrictdisclosure1" value="1">
+                                                <label class="checklabel required-label" for="restrictdisclosure1">HIV/AIDS relate information and/or records HBV, TB or Other Communicable Diseases</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization2" value="1">
-                                                <label class="checklabel required-label" for="Authorization2">Restrict Disclosure 02</label>
+                                                <input required="" class="checkbox" type="radio" name="restrictdisclosure" id="restrictdisclosure2" value="1">
+                                                <label class="checklabel required-label" for="restrictdisclosure2">Mental Health Information</label>
                                             </div>
                                         </div>
-
-                                        <legend class="text-center font-weight-bold">Restrict Disclosure</legend>
-                                        <p class="text-center">(Federal regulations require a description of how much and what kind of information is to be disclosed.)</p>
                                         <div class="col-md-12 m-b-20">
-                                            <textarea name="describe" class="optional form-control" id="describe" required="" rows="3" placeholder="Describe"></textarea>
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="radio" name="restrictdisclosure" id="restrictdisclosure3" value="1">
+                                                <label class="checklabel required-label" for="restrictdisclosure3">Domestic Violence</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="radio" name="restrictdisclosure" id="restrictdisclosure4" value="1">
+                                                <label class="checklabel required-label" for="restrictdisclosure4">Genetic Testing Information</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="radio" name="restrictdisclosure" id="restrictdisclosure5" value="1">
+                                                <label class="checklabel required-label" for="restrictdisclosure5">Drug/Alcohol diagnosis, treatment or referral information</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <textarea name="describe" class="optional form-control" id="describe" required="" rows="3" placeholder="Other"></textarea>
                                         </div>
                                     </div>
                                 </from>
-                                <a href="#" id="arfstepeightback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
-                                <a href="#" id="arfstepeightnext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
+                                <a href="#" id="arfstepsixback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepsixnext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
                             </section>
 
-                            <section id="arfstep9" class="section mt-3" style="display: none;">
+                            <section id="arfstep7" class="section mt-3" style="display: none;">
                                 <div class="container form-container slide">
                                   <div class="col-12">
                                     <h4 class="font-weight-bold my-3 text-center"> Your Information </h4>
@@ -1102,7 +1104,7 @@
                                   </table>
                         
                                   <div class="col-12" id="strips">
-                                  <h5 class="font-weight-bold my-3 text-center">Who is sending the records?</h5>
+                                  <h5 class="font-weight-bold my-3 text-center">Sending Practice Information</h5>
                                   </div>
                                   <table class="table table-striped">
                                     <tbody>
@@ -1132,41 +1134,9 @@
                                       </tr>
                                     </tbody>
                                   </table>
-                        
-                                  <div class="col-12" id="strips">
-                                    <h5 class="font-weight-bold my-3 text-center">Where do you want RTPMedicalSolution to send them?</h5>
-                                  </div>
-                                  <table class="table table-striped">
-                                    <tbody>
-                                      <tr>
-                                        <th class="float-left">Name Of Practice</th>
-                                        <td class="float-right">DJIMD</td>
-                                      </tr>
-                                      <tr>
-                                        <th class="float-left">Phone Number</th>
-                                        <td class="float-right">9153595850</td>
-                                      </tr>
-                                      <tr>
-                                        <th class="float-left">Street</th>
-                                        <td class="float-right">2717 US-89</td>
-                                      </tr>
-                                      <tr>
-                                        <th class="float-left">City</th>
-                                        <td class="float-right">Ogden</td>
-                                      </tr>
-                                      <tr>
-                                        <th class="float-left">State</th>
-                                        <td class="float-right">UT</td>
-                                      </tr>
-                                      <tr>
-                                        <th class="float-left">Zip</th>
-                                        <td class="float-right">84414</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
                                   
                                   <div class="col-12" id="strips">
-                                    <h5 class="font-weight-bold my-3 text-center">How do you want them sent?</h5>
+                                    <h5 class="font-weight-bold my-3 text-center">Sending Via</h5>
                                   </div>
                                   <table class="table table-striped">
                                     <tbody>
@@ -1183,25 +1153,39 @@
                                     <table class="table table-striped">
                                       <tbody>
                                         <tr>
-                                          <th class="text-center">Changing Practices</th>
+                                          <th class="text-center">Purpose 01</th>
                                         </tr>
                                         <tr>
-                                          <th class="text-center">Email Us</th>
+                                          <th class="text-center">Purpose 02</th>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                        
+                                    <div class="col-12" id="strips">
+                                      <h5 class="font-weight-bold my-3 text-center">Authorization of Usage and Disclosure</h5>
+                                    </div>
+                                    <table class="table table-striped">
+                                      <tbody>
+                                        <tr>
+                                          <th class="text-center">Office Notes and Reports</th>
                                         </tr>
                                         <tr>
-                                          <th class="text-center">Continued Medical Care</th>
+                                          <th class="text-center">Diagnostic Reports</th>
                                         </tr>
                                         <tr>
-                                          <th class="text-center">Personal Information</th>
+                                          <th class="text-center">Billing Statements</th>
                                         </tr>
                                         <tr>
-                                          <th class="text-center">Legal</th>
+                                          <th class="text-center">Rx History</th>
                                         </tr>
                                         <tr>
-                                          <th class="text-center">Insurance</th>
+                                          <th class="text-center">Transcribed Hospital Reports</th>
                                         </tr>
                                         <tr>
-                                          <th class="text-center">Other</th>
+                                          <th class="text-center">Laboratory Reports</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Others Listed Here:</th>
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1212,13 +1196,10 @@
                                     <table class="table table-striped">
                                       <tbody>
                                         <tr>
-                                          <th class="text-center">HIV/AIDS</th>
+                                          <th class="text-center">HIV/AIDS relate information and/or records HBV, TB or Other Communicable Diseases</th>
                                         </tr>
                                         <tr>
-                                          <th class="text-center">TB or Other Communicable Diseases</th>
-                                        </tr>
-                                        <tr>
-                                          <th class="text-center">Mental Health Records</th>
+                                          <th class="text-center">Mental Health Information</th>
                                         </tr>
                                         <tr>
                                           <th class="text-center">Domestic Violence</th>
@@ -1227,17 +1208,24 @@
                                           <th class="text-center">Genetic Testing Information</th>
                                         </tr>
                                         <tr>
-                                          <th class="text-center">Drug/Alcohol</th>
-                                        </tr>
-                                        <tr>
-                                          <th class="text-center">Describe</th>
+                                          <th class="text-center">Drug/Alcohol diagnosis, treatment or referral information</th>
                                         </tr>
                                       </tbody>
                                     </table>
                                 </div>
-                                <a href="#" id="arfstepnineback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepsevenback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
                                 <a href="#" id="" class="btn btn-lg btn-danger col-xl-5  float-right">Submit</a>
                             </section>
+
+                            <!-- <section id="arfstep8" class="section mt-3" style="display: none;">
+                                <a href="#" id="arfstepeightback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepeightnext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
+                            </section>
+
+                            <section id="arfstep9" class="section mt-3" style="display: none;">
+                                <a href="#" id="arfstepnineback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
+                                <a href="#" id="" class="btn btn-lg btn-danger col-xl-5  float-right">Submit</a>
+                            </section> -->
                         </div>
                     </div>
                     <!-- /.modal-content -->
