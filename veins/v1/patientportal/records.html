@@ -717,7 +717,7 @@
                                             <option value="t02">2010</option>
                                             <option value="t02">Stomach Cancer</option>
                                         </select>
-                                        <button class="btn btn-sm btn-success ml-2"><i class="fas fa-plus"></i></button>
+                                        <button class="btn btn-sm btn-success ml-2" data-toggle="modal" data-target="#add-tag"><i class="fas fa-plus"></i></button>
                                     </div>
                                     <div class="col-md-12 m-b-20">
                                         <form action="#" class="dropzone">
@@ -741,8 +741,6 @@
                 <!-- /.modal-dialog -->
             </div>
         <!-- Add Record Popup Model -->
-        <style>
-        </style>
     
         <!-- Request Record Modal -->
             <div id="request_record" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -1388,6 +1386,35 @@
                 <!-- /.modal-dialog -->
             </div>
         <!-- Request Record Modal -->
+    
+        <!-- Add Tagsl -->
+            <div id="add-tag" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="background: rgba(0, 0, 0, 0.5);">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Add Tag</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Tag Name"> 
+                                    </div>
+                                </div>
+                            </from>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info waves-effect"
+                                data-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-default waves-effect"
+                            data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        <!-- Add Tagsl -->
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
