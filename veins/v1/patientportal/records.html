@@ -28,6 +28,7 @@
     <link href="dist/css/pages/chat-app-page.css" rel="stylesheet">
     <link href="dist/css/pages/contact-app-page.css" rel="stylesheet">
     <link href="dist/css/pages/footable-page.css" rel="stylesheet">
+    <link href="dist/css/signature/jquery.signaturepad.css" rel="stylesheet">
     <link href="assets/node_modules/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
      <!-- Page plugins css -->
      <link href="assets/node_modules/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
@@ -676,7 +677,7 @@
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         </div>
                         <div class="modal-body">
-                            
+
                             <section id="arfstep1" class="section mt-3 active">
                                 <legend class="text-center font-weight-bold">Your Information</legend>
                                 <from class="form-horizontal form-material">
@@ -733,16 +734,6 @@
                                             </div>
                                             <div class="invalid-feedback">
                                               Please Provide your relationship to patient!
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 m-b-20">
-                                            <label for="yourname" class="font-weight-bold">Upload ID</label>
-                                            <input type="file" class="form-control"> 
-                                            <div class="valid-feedback">
-                                              Looks good!
-                                            </div>
-                                            <div class="invalid-feedback">
-                                              Please Provide your email!
                                             </div>
                                         </div>
                                     </div>
@@ -967,43 +958,49 @@
                                     <div class="form-group">
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization1" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization0" value="1">
+                                                <label class="checklabel required-label" for="Authorization0">All Records</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization1" value="1">
                                                 <label class="checklabel required-label" for="Authorization1">Office Notes and Reports</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization2" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization2" value="1">
                                                 <label class="checklabel required-label" for="Authorization2">Diagnostic Reports</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization3" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization3" value="1">
                                                 <label class="checklabel required-label" for="Authorization3">Billing Statements</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization4" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization4" value="1">
                                                 <label class="checklabel required-label" for="Authorization4">Rx History</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization5" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization5" value="1">
                                                 <label class="checklabel required-label" for="Authorization5">Transcribed Hospital Reports</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization6" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization6" value="1">
                                                 <label class="checklabel required-label" for="Authorization6">Laboratory Reports</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="Authorization" id="Authorization7" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization7" value="1">
                                                 <label class="checklabel required-label" for="Authorization7">Others Listed Here:</label>
                                             </div>
                                         </div>
@@ -1015,6 +1012,7 @@
 
                             <section id="arfstep6" class="section mt-3" style="display: none;">
                                 <legend class="text-center font-weight-bold">Restrict Disclosure</legend>
+                                <p class="text-center">Do you want to restrict disclosure for any records related to the following? <br> If no please continue to next step</p>
                                 <p class="text-center">(Federal regulations require a description of how much and what kind of information is to be disclosed.)</p>
                                 <from class="form-horizontal form-material">
                                     <div class="form-group">
@@ -1058,6 +1056,18 @@
                             </section>
 
                             <section id="arfstep7" class="section mt-3" style="display: none;">
+                                <div class="container text-justify-center">
+                                  <p><strong>I understand that</strong>, if the person or entity receiving the information is not a health care provider or health plan covered by federal privacy regulations, the information described above may be re-disclosed and no longer protected by HIPAA and other federal and state regulations. However, the recipient may be prohibited from disclosing substance abuse information under the Federal Substance Abuse Confidentiality Requirements</p>
+                                  <p><strong>I also understand that</strong>, the person I am authorizing to use and/or disclose the information may not receive compensation for doing so.</p>
+                                  <p><strong>I, further understand</strong> that I may refuse to sign this authorization and that my refusal to sign will not affect my ability to obtain treatment or payment of my eligibility for benefits. I may inspect or copy any information to be used and/or disclosed under this authorization</p>
+                                  <p><strong>Finally, I understand, </strong> that <u>I may revoke this authorization</u>, in writing, at any time, provided that I do so in writing, except to the extent that action has been taken in reliance upon this authorization</p>
+                                </div>
+
+                                <a href="#" id="arfstepsevenback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepsevennext" class="btn btn-lg btn-danger col-xl-5  float-right">I Agree</a>
+                            </section>
+
+                            <section id="arfstep8" class="section mt-3" style="display: none;">
                                 <div class="container form-container slide">
                                   <div class="col-12">
                                     <h4 class="font-weight-bold my-3 text-center"> Your Information </h4>
@@ -1153,10 +1163,7 @@
                                     <table class="table table-striped">
                                       <tbody>
                                         <tr>
-                                          <th class="text-center">Purpose 01</th>
-                                        </tr>
-                                        <tr>
-                                          <th class="text-center">Purpose 02</th>
+                                          <th class="text-center">Personal Records</th>
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1166,6 +1173,9 @@
                                     </div>
                                     <table class="table table-striped">
                                       <tbody>
+                                        <tr>
+                                          <th class="text-center">All Records</th>
+                                        </tr>
                                         <tr>
                                           <th class="text-center">Office Notes and Reports</th>
                                         </tr>
@@ -1189,10 +1199,6 @@
                                         </tr>
                                       </tbody>
                                     </table>
-                        
-                                    <div class="col-12" id="strips">
-                                      <h5 class="font-weight-bold my-3 text-center">Restrict Disclosure</h5>
-                                    </div>
                                     <table class="table table-striped">
                                       <tbody>
                                         <tr>
@@ -1212,12 +1218,56 @@
                                         </tr>
                                       </tbody>
                                     </table>
+                        
+                                    <div class="col-12" id="strips">
+                                        <p class="font-weight-bold">I give authorization to the provider listed below to disclose a copy of the specific health/medical information identified below: Unless Revoked Earlier, this Authorization will expire on</p>
+                                        
+                                        <from class="form-horizontal form-material">
+                                            <div class="col-md-12 m-b-20">
+                                                <label for="yourname" class="font-weight-bold">Insert Date:</label>
+                                                <input type="date" class="form-control"> 
+                                                <div class="valid-feedback">
+                                                Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                Please Provide your Insert Expiry Date!
+                                                </div>
+                                            </div>
+                                        </from>
+                                    </div>
+                                    <div class="col-12" id="strips">
+                                      <h5 class="font-weight-bold my-3 text-center">Confirm your Information</h5>
+                                    </div>
+                                    <from class="form-horizontal form-material">
+                                        <div class="form-group">
+                                            <div class="col-md-12 m-b-20">
+                                                <input type="text" class="form-control" placeholder="Your Name"> 
+                                                <div class="valid-feedback">
+                                                Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                Please Provide your name!
+                                                </div>
+                                            </div>
+        
+                                            <h3 for="" class="font-weight-bold text-center">Signature</h3>
+                                            <div class="col-12">
+                                                <div class="sigPad" style="width:404px;" id="smoothed1">
+                                                    <ul class="sigNav">
+                                        <li class="drawIt"><a href="#draw-it">Do your Signature</a></li>
+                                        <li class="clearButton"><a href="#clear">Clear</a></li>
+                                                    </ul>
+                                                    <div class="sig sigWrapper" style="height:auto;">
+                                        <div class="typed"></div>
+                                        <canvas class="pad" width="400" height="250"></canvas>
+                                        <input type="hidden" name="sign5" class="output" id="sign5">
+                                                    </div>
+                                                    <span class="error-span" id="error_sign5"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </from>
                                 </div>
-                                <a href="#" id="arfstepsevenback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
-                                <a href="#" id="" class="btn btn-lg btn-danger col-xl-5  float-right">Submit</a>
-                            </section>
-
-                            <!-- <section id="arfstep8" class="section mt-3" style="display: none;">
                                 <a href="#" id="arfstepeightback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
                                 <a href="#" id="arfstepeightnext" class="btn btn-lg btn-danger col-xl-5  float-right">Next</a>
                             </section>
@@ -1225,7 +1275,7 @@
                             <section id="arfstep9" class="section mt-3" style="display: none;">
                                 <a href="#" id="arfstepnineback" class="btn btn-lg btn-danger col-xl-5  float-left">Back</a>
                                 <a href="#" id="" class="btn btn-lg btn-danger col-xl-5  float-right">Submit</a>
-                            </section> -->
+                            </section>
                         </div>
                     </div>
                     <!-- /.modal-content -->
@@ -1662,6 +1712,26 @@
             x.style.display = "none";
             }
         };
+    </script>
+    <script src="dist/js/signature/bezier.js"></script>
+    <script src="dist/js/signature/jquery.signaturepad.js"></script>
+    <script src="dist/js/signature/json2.min.js"></script>
+    <script src="dist/js/signature/numeric.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#smoothed1').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed2').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed3').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed4').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed5').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed6').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed7').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed8').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed9').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed10').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed11').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed12').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    });
     </script>
 
 </body>
