@@ -678,7 +678,27 @@
                         </div>
                         <div class="modal-body">
 
-                            <section id="arfstep1" class="section mt-3 active">
+                            <section id="arfstep0" class="section mt-3 active">
+                                <legend class="text-center font-weight-bold">Lets Start</legend>
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="radio" type="radio" name="letsstart" id="letsstart1" value="1">
+                                                <label class="checklabel required-label" for="letsstart1">New Practice <br> Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via 407-617-2692</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="radio" type="radio" name="letsstart" id="letsstart2" value="1">
+                                                <label class="checklabel required-label" for="letsstart2">New Practice <br> Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via info@powerspediatrics.com</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <a href="#" id="arfstepzeronext" class="col-xl-12 btn btn-lg btn-danger float-right">NEXT</a>
+                            </section>
+
+                            <section id="arfstep1" class="section mt-3" style="display: none;">
                                 <legend class="text-center font-weight-bold">Your Information</legend>
                                 <from class="form-horizontal form-material">
                                     <div class="form-group">
@@ -738,7 +758,8 @@
                                         </div>
                                     </div>
                                 </from>
-                                <a href="#" id="arfsteponenext" class="col-xl-12 btn btn-lg btn-danger float-right">NEXT</a>
+                                <a href="#" id="arfsteponeback" class="btn btn-lg btn-danger col-xl-5 float-left">Back</a>
+                                <a href="#" id="arfsteponenext" class="btn btn-lg btn-danger col-xl-5 float-right">Next</a>
                             </section>
 
                             <section id="arfstep2" class="section mt-3" style="display: none;">
@@ -764,7 +785,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
-                                            <label for="yourname" class="font-weight-bold">Date of Birth</label>
+                                            <label for="">Date of Birth</label>
                                             <input type="date" class="form-control"> 
                                             <div class="valid-feedback">
                                               Looks good!
@@ -794,13 +815,13 @@
                                     <div class="form-group">
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="fax_number" id="fax_number1" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="fax_number" id="fax_number1" value="1">
                                                 <label class="checklabel required-label" for="fax_number1" onclick="faxType()">Fax</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="email" id="email1" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="email" id="email1" value="1">
                                                 <label class="checklabel required-label" for="email1" onclick="emailType()">Email</label>
                                             </div>
                                         </div>
@@ -1018,31 +1039,31 @@
                                     <div class="form-group">
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="restrictdisclosure" id="restrictdisclosure1" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="restrictdisclosure" id="restrictdisclosure1" value="1">
                                                 <label class="checklabel required-label" for="restrictdisclosure1">HIV/AIDS relate information and/or records HBV, TB or Other Communicable Diseases</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="restrictdisclosure" id="restrictdisclosure2" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="restrictdisclosure" id="restrictdisclosure2" value="1">
                                                 <label class="checklabel required-label" for="restrictdisclosure2">Mental Health Information</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="restrictdisclosure" id="restrictdisclosure3" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="restrictdisclosure" id="restrictdisclosure3" value="1">
                                                 <label class="checklabel required-label" for="restrictdisclosure3">Domestic Violence</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="restrictdisclosure" id="restrictdisclosure4" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="restrictdisclosure" id="restrictdisclosure4" value="1">
                                                 <label class="checklabel required-label" for="restrictdisclosure4">Genetic Testing Information</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
-                                                <input required="" class="checkbox" type="radio" name="restrictdisclosure" id="restrictdisclosure5" value="1">
+                                                <input required="" class="checkbox" type="checkbox" name="restrictdisclosure" id="restrictdisclosure5" value="1">
                                                 <label class="checklabel required-label" for="restrictdisclosure5">Drug/Alcohol diagnosis, treatment or referral information</label>
                                             </div>
                                         </div>
@@ -1199,6 +1220,10 @@
                                         </tr>
                                       </tbody>
                                     </table>
+                        
+                                    <div class="col-12" id="strips">
+                                      <h5 class="font-weight-bold my-3 text-center">Restrict Disclosure</h5>
+                                    </div>
                                     <table class="table table-striped">
                                       <tbody>
                                         <tr>
@@ -1235,9 +1260,7 @@
                                             </div>
                                         </from>
                                     </div>
-                                    <div class="col-12" id="strips">
-                                      <h5 class="font-weight-bold my-3 text-center">Confirm your Information</h5>
-                                    </div>
+
                                     <from class="form-horizontal form-material">
                                         <div class="form-group">
                                             <div class="col-md-12 m-b-20">
@@ -1594,10 +1617,18 @@
     <script>
         // AuthorizationRelease Steps Start
         $(document).ready(function(){
-            $('#arfstep1').css({'display':'block'});
+            $('#arfstep0').css({'display':'block'});
+            $("#arfstepzeronext").click(function(){
+                $('#arfstep0').css({'display':'none'});
+                $('#arfstep1').css({'display':'block'});
+            });
             $("#arfsteponenext").click(function(){
                 $('#arfstep1').css({'display':'none'});
                 $('#arfstep2').css({'display':'block'});
+            });
+            $("#arfsteponeback").click(function(){
+                $('#arfstep1').css({'display':'none'});
+                $('#arfstep0').css({'display':'block'});
             });
             $("#arfsteptwoback").click(function(){
                 $('#arfstep2').css({'display':'none'});
