@@ -20,6 +20,7 @@
     <link href="dist/css/style.css" rel="stylesheet">
     <!-- Dashboard 1 Page CSS -->
     <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+    <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
     <link href="dist/css/pages/icon-page.css" rel="stylesheet">
     <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
     <link href="dist/css/pages/icon-page.css" rel="stylesheet">
@@ -39,6 +40,10 @@
      <!-- Daterange picker plugins css -->
      <link href="assets/node_modules/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
      <link href="assets/node_modules/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+     <link href="assets/node_modules/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css" />
+     <link href="assets/node_modules/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
+     <link href="assets/node_modules/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+     <link href="assets/node_modules/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -103,6 +108,9 @@
             .checkbox, .radio {
                     display: none;
                 }
+                .label-offwhite {
+                    background-color: #f5f5f5;
+                }
                 .active-page
                 {
                     color: #fb9678 !important;
@@ -140,8 +148,6 @@
                             <!--  <i class="wi wi-sunset"></i> -->
                             <!-- Dark Logo icon -->
                             <img src="dist/img/rtplogo.png" alt="homepage" class="dark-logo" />
-                            <!-- Light Logo icon -->
-                            <!--                            <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />-->
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
@@ -166,13 +172,6 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <!--
-                        <li class="nav-item">
-                            <form class="app-search d-none d-md-block d-lg-block">
-                                <input type="text" class="form-control" placeholder="Search & enter">
-                            </form>
-                        </li>
--->
                     </ul>
                     <!-- ============================================================== -->
                     <!-- User profile and search -->
@@ -183,7 +182,6 @@
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-home text-info"></i>
-                                <!--                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>-->
                             </a>
                         </li>
                         <!-- ============================================================== -->
@@ -219,7 +217,6 @@
                         <!-- ============================================================== -->
                         <!-- End User Profile -->
                         <!-- ============================================================== -->
-                        <!--                        <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>-->
                     </ul>
                 </div>
             </nav>
@@ -246,20 +243,7 @@
                                 <li><a href="payment_Complete.html">Payments Completed</a></li>
                             </ul>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="com_center.html" aria-expanded="false"><i class="fa fa-phone text-danger"></i><span class="hide-menu">Communication</span></a></li>
-                        <!-- temporary dropdown -->
-                        <!--
-                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-layout-grid2"></i><span class="hide-menu">My Records</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="recordRequest.html">Request Records</a></li>
-                                <li><a href="sendRecords.html">Send Records</a></li>
-                                <li><a href="PendingRecords.html">Pending Records</a></li>
-                                <li><a href="allRecords.html">All Records</a></li>
-
-                            </ul>
-                        </li>
--->
-                         
+                        <li> <a class="waves-effect waves-dark" href="com_center.html" aria-expanded="false"><i class="fa fa-phone text-danger"></i><span class="hide-menu">Communication</span></a></li> 
                           <li> <a class="waves-effect waves-dark" href="login.html" aria-expanded="false"><i class="fas fa-sign-in-alt text-danger"></i><span class="hide-menu">Log Out</span></a></li>
                     </ul>
                 </nav>
@@ -281,25 +265,42 @@
 
                 <div class="row page-titles">
                     <div class="col-xl-1 col-md-2 align-self-center">
-                        <h4 class="text-themecolor">Pending Records</h4>
+                        <h4 class="text-themecolor">Records</h4>
                     </div>
                     <div class="col-xl-3 col-md-3 align-self-center">
-                         <div class="btn-group">
-                             <button type="button" class="btn btn-info">Shakir Ansari, 11-29-1986</button>
-                             <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 <span class="sr-only">Toggle Dropdown</span>
-                             </button>
-                             <div class="dropdown-menu">
-                                 <a class="dropdown-item" href="javascript:void(0)">Ravi Agrawal, 12-30-1990</a>
-                                 <a class="dropdown-item" href="javascript:void(0)">Ali Reza, 01-05-1995</a>
-                             </div>
-                         </div>
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Shakir Ansari, 11-29-1986
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="javascript:void(0)">Ravi Agrawal, 12-30-1990</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Ali Reza, 01-05-1995</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xl-8 col-md-7 align-self-center text-right">
+                    <div class="col-xl-4 col-md-3 align-self-center"></div>
+                    <div class="col-xl-3 col-md-3 align-self-center">
+                        <label for="">Filter</label> <br>
+                        <select class="select2 m-b-10 select2-multiple" style="width: 90%" multiple="multiple" data-placeholder="Choose">
+                            <optgroup label="Folders">
+                                <option value="">Dr. Kent - Primary Care</option>
+                                <option value="">Radiology</option>
+                                <option value="">Dentist</option>
+                                <option value="">ER - Visit</option>
+                            </optgroup>
+                            <optgroup label="Tags">
+                                <option value="t01">Broken Arm</option>
+                                <option value="t02">ER 2012</option>
+                                <option value="t02">2010</option>
+                                <option value="t02">Stomach Cancer</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="col-xl-1 col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">HOME</a></li>
-                                <li class="breadcrumb-item active">Pending Records</li>
+                                <li class="breadcrumb-item active">Records</li>
                             </ol>
                              
                         </div>
@@ -317,19 +318,16 @@
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-sm btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti-settings"></i></button>
                                             <div class="dropdown-menu animated flipInX">
-                                                <a class="dropdown-item" href="javascript:void(0)">Action</a>
-                                                <a class="dropdown-item" href="javascript:void(0)">Another action</a>
-                                                <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#myModal">Add Folder</a>
+                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#manage_folder">Manage Folders</a>
                                             </div>
                                         </div>
                                         <li class="box-label"><a href="records.html">All Records<span>123</span></a></li>
-                                        <li class="box-label"><a href="records_pending.html" class="active-page">Received Pending<span>13</span></a></li>
+                                        <li class="box-label"><a href="records_pending.html">Received Pending<span>13</span></a></li>
                                         <li class="box-label"><a href="records_requestsent.html">Requests Sent<span>23</span></a></li>
                                         <li class="divider"></li>
                                         <li><a href="DrKentPrimaryCare.html">Dr. Kent - Primary Care <span>103</span></a></li>
-                                        <li><a href="radiology.html">Radiology <span>19</span></a></li>
+                                        <li><a href="radiology.html" class="active-page">Radiology <span>19</span></a></li>
                                         <li><a href="dentist.html">Dentist <span>623</span></a></li>
                                         <li><a href="ervisit.html">ER - Visit <span>53</span></a></li>
                                         <div id="myModal" class="modal fade in" tabindex="-1" role="dialog"
@@ -337,20 +335,20 @@
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title" id="myModalLabel">Add Lable</h4>
+                                                        <h4 class="modal-title" id="myModalLabel">Add Folder</h4>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-hidden="true">×</button>
                                                     </div>
                                                     <div class="modal-body">
                                                         <from class="form-horizontal">
                                                             <div class="form-group">
-                                                                <label class="col-md-12">Name of Label</label>
+                                                                <label class="col-md-12">Folder Name</label>
                                                                 <div class="col-md-12">
-                                                                    <input type="text" class="form-control" placeholder="type name"> 
+                                                                    <input type="text" class="form-control" placeholder="Folder name"> 
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label class="col-md-12">Choose Record Color</label>
+                                                                <label class="col-md-12">Choose Folder Color</label>
                                                                 <div class="col-md-6">
                                                                     <input type="text" class="colorpicker form-control" value="#7ab2fa" /> 
                                                                 </div>
@@ -375,7 +373,7 @@
                                     <div class="right-page-header">
                                         <div class="d-flex">
                                             <div class="align-self-center">
-                                                <h4 class="card-title m-t-10">Contacts / Employee List </h4>
+                                                <h4 class="card-title m-t-10">All Records </h4>
                                             </div>
                                             <div class="ml-auto">
                                                 <input type="text" id="demo-input-search2" placeholder="search contacts" class="form-control"> 
@@ -391,175 +389,37 @@
                                             data-paging="true" data-paging-size="7">
                                             <thead>
                                                 <tr>
-                                                    <th>No</th>
                                                     <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Role</th>
-                                                    <th>Joining date</th>
+                                                    <th>Name of file</th>
+                                                    <th>Date</th>
+                                                    <th>From</th>
+                                                    <th>Folder</th>
+                                                    <th>Tags</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>1</td>
                                                     <td>
                                                         <div class="btn-group">
-                                                            <button type="button" class="btn btn-info">Action</button>
+                                                            <button type="button" class="btn btn-info">View</button>
                                                             <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                 <span class="sr-only">Toggle Dropdown</span>
                                                             </button>
                                                             <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0)">Update</a>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
+                                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#update_record">Update</a>
+                                                                <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td>genelia@gmail.com</td>
-                                                    <td><span class="label label-danger">Designer</span> </td>
-                                                    <td>12-10-2014</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
+                                                    <td>Y.pdf</td>
+                                                    <td>05-29-21</td>
                                                     <td>
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-info">Action</button>
-                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class="sr-only">Toggle Dropdown</span>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0)">Update</a>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
-                                                            </div>
-                                                        </div>
+                                                        info@powerspediatrics.com
+                                                        <br>
+                                                        08/29/2021, 05:12 PM
                                                     </td>
-                                                    <td>arijit@gmail.com</td>
-                                                    <td><span class="label label-info">Developer</span> </td>
-                                                    <td>10-09-2014</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-info">Action</button>
-                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class="sr-only">Toggle Dropdown</span>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0)">Update</a>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>govinda@gmail.com</td>
-                                                    <td><span class="label label-success">Accountant</span></td>
-                                                    <td>1-10-2013</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-info">Action</button>
-                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class="sr-only">Toggle Dropdown</span>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0)">Update</a>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>hritik@gmail.com</td>
-                                                    <td><span class="label label-inverse">HR</span></td>
-                                                    <td>2-10-2017</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-info">Action</button>
-                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class="sr-only">Toggle Dropdown</span>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0)">Update</a>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>john@gmail.com</td>
-                                                    <td><span class="label label-danger">Manager</span></td>
-                                                    <td>10-9-2015</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-info">Action</button>
-                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class="sr-only">Toggle Dropdown</span>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0)">Update</a>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>pawandeep@gmail.com</td>
-                                                    <td><span class="label label-warning">Chairman</span></td>
-                                                    <td>10-5-2013</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>7</td>
-                                                    <td>
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-info">Action</button>
-                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class="sr-only">Toggle Dropdown</span>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0)">Update</a>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>ritesh@gmail.com</td>
-                                                    <td><span class="label label-danger">Designer</span></td>
-                                                    <td>05-10-2012</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>8</td>
-                                                    <td>
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-info">Action</button>
-                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class="sr-only">Toggle Dropdown</span>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0)">Update</a>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>shakir@gmail.com</td>
-                                                    <td><span class="label label-danger">Designer</span></td>
-                                                    <td>05-10-2012</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>9</td>
-                                                    <td>
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-info">Action</button>
-                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class="sr-only">Toggle Dropdown</span>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0)">Update</a>
-                                                                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>ravi@gmail.com</td>
-                                                    <td><span class="label label-danger">Designer</span></td>
-                                                    <td>05-10-2012</td>
+                                                    <td><span class="label label-info">Radiology</span> </td>
+                                                    <td><span class="label label-offwhite text-dark">ER 2012</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -596,7 +456,6 @@
 
                             <div class="md-form md-outline mt-2">
                                 <textarea id="message" class="md-textarea form-control" placeholder="Submit Your Review" rows="3"></textarea>
-                                <!--                                    <label for="message" class="active">Submit Review</label>-->
                             </div>
                         </form>
                     </div>
@@ -638,22 +497,39 @@
                             <from class="form-horizontal form-material">
                                 <div class="form-group">
                                     <div class="col-md-12 m-b-20">
-                                        <input type="text" class="form-control" placeholder="Type name"> 
+                                        <input type="text" class="form-control" placeholder="Name of File"> 
                                     </div>
                                     <div class="col-md-12 m-b-20">
-                                        <input type="text" class="form-control" placeholder="Email"> 
+                                        <input type="date" class="form-control"> 
                                     </div>
                                     <div class="col-md-12 m-b-20">
-                                        <input type="text" class="form-control" placeholder="Designation"> 
+                                        <textarea class="col-md-12" name="" placeholder="Description"></textarea>
                                     </div>
                                     <div class="col-md-12 m-b-20">
-                                        <input type="text" class="form-control" placeholder="Date of joining"> </div>
+                                        <select required="" class="form-control required" id="practice2_state" name="practice2_state" placeholder="<span class="ai-folder-open"></span>">
+                                            <option value="">Select Folder</option>
+                                            <option value="Folder 01">Dr. Kent - Primary Care</option>
+                                            <option value="Folder 02">Radiology</option>
+                                            <option value="Folder 02">Dentist</option>
+                                            <option value="Folder 02">ER - Visit</option>
+                                        </select>
+                                    </div>
                                     <div class="col-md-12 m-b-20">
-                                        <div
-                                            class="fileupload btn btn-danger btn-rounded waves-effect waves-light">
-                                            <span><i class="ion-upload m-r-5"></i>Upload Contact Image</span>
-                                            <input type="file" class="upload"> 
-                                        </div>
+                                        <label for="">Tags</label> <br>
+                                        <select class="select2 m-b-10 select2-multiple" style="width: 90%" multiple="multiple" data-placeholder="Choose">
+                                            <option value="t01">Broken Arm</option>
+                                            <option value="t02">ER 2012</option>
+                                            <option value="t02">2010</option>
+                                            <option value="t02">Stomach Cancer</option>
+                                        </select>
+                                        <button class="btn btn-sm btn-success ml-2" data-toggle="modal" data-target="#add-tag"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <form action="#" class="dropzone">
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </from>
@@ -670,8 +546,68 @@
                 <!-- /.modal-dialog -->
             </div>
         <!-- Add Record Popup Model -->
-        <style>
-        </style>
+    
+        <!-- Add Record Popup Model -->
+            <div id="update_record" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Update Record</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Name of File"> 
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="date" class="form-control"> 
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <textarea class="col-md-12" name="" placeholder="Description"></textarea>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <select required="" class="form-control required" id="practice2_state" name="practice2_state" placeholder="<span class="ai-folder-open"></span>">
+                                            <option value="">Select Folder</option>
+                                            <option value="Folder 01">Dr. Kent - Primary Care</option>
+                                            <option value="Folder 02">Radiology</option>
+                                            <option value="Folder 02">Dentist</option>
+                                            <option value="Folder 02">ER - Visit</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <label for="">Tags</label> <br>
+                                        <select class="select2 m-b-10 select2-multiple" style="width: 90%" multiple="multiple" data-placeholder="Choose">
+                                            <option value="t01">Broken Arm</option>
+                                            <option value="t02">ER 2012</option>
+                                            <option value="t02">2010</option>
+                                            <option value="t02">Stomach Cancer</option>
+                                        </select>
+                                        <button class="btn btn-sm btn-success ml-2" data-toggle="modal" data-target="#add-tag"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <form action="#" class="dropzone">
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </from>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info waves-effect"
+                                data-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-default waves-effect"
+                            data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        <!-- Add Record Popup Model -->
     
         <!-- Request Record Modal -->
             <div id="request_record" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -690,23 +626,22 @@
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
                                                 <input required="" class="radio" type="radio" name="letsstart" id="letsstart0" value="1">
-                                                <label class="checklabel required-label" for="letsstart0">New Practice</label>
+                                                <label class="checklabel required-label arfstepzeronext" for="letsstart0">New Practice</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
                                                 <input required="" class="radio" type="radio" name="letsstart" id="letsstart1" value="1">
-                                                <label class="checklabel required-label" for="letsstart1">Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via 407-617-2692</label>
+                                                <label class="checklabel required-label arfstepzeronext" for="letsstart1">Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via 407-617-2692</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
                                             <div class="form-checkbox ">
                                                 <input required="" class="radio" type="radio" name="letsstart" id="letsstart2" value="1">
-                                                <label class="checklabel required-label" for="letsstart2">Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via info@powerspediatrics.com</label>
+                                                <label class="checklabel required-label arfstepzeronext" for="letsstart2">Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via info@powerspediatrics.com</label>
                                             </div>
                                         </div>
                                     </div>
-                                <a href="#" id="arfstepzeronext" class="col-xl-12 btn btn-lg btn-info float-right">NEXT</a>
                             </section>
 
                             <section id="arfstep1" class="section mt-3" style="display: none;">
@@ -723,7 +658,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12 m-b-20">
-                                            <input type="text" class="form-control" placeholder="Phone"> 
+                                            <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Phone Number">
                                             <div class="valid-feedback">
                                               Looks good!
                                             </div>
@@ -840,7 +775,7 @@
                                         <div class="col-lg-12 slide" id="faxType" style="display: none;">
                                           <div class="form-group">
                                             <div class="col-md-12 m-b-20">
-                                                <input type="text" class="form-control" placeholder="Fax Number"> 
+                                                <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Fax Number">
                                                 <div class="valid-feedback">
                                                   Looks good!
                                                 </div>
@@ -854,7 +789,7 @@
                                         <div class="col-lg-12 slide" id="emailType" style="display: none;">
                                             <div class="form-group">
                                               <div class="col-md-12 m-b-20">
-                                                  <input type="text" class="form-control" placeholder="Email Number"> 
+                                                  <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Email Number"> 
                                                   <div class="valid-feedback">
                                                     Looks good!
                                                   </div>
@@ -1044,7 +979,7 @@
 
                             <section id="arfstep6" class="section mt-3" style="display: none;">
                                 <legend class="text-center font-weight-bold">Restrict Disclosure</legend>
-                                <p class="text-center">Do you want to restrict disclosure for any records related to the following? <br> If no please continue to next step</p>
+                                <p class="text-center">Do you want to restrict disclosure for any records related to the following? <br> <span class="font-weight-bold text-danger font-16">If no please continue to next step</span></p>
                                 <p class="text-center">(Federal regulations require a description of how much and what kind of information is to be disclosed.)</p>
                                 <from class="form-horizontal form-material">
                                     <div class="form-group">
@@ -1317,11 +1252,88 @@
                 <!-- /.modal-dialog -->
             </div>
         <!-- Request Record Modal -->
+    
+        <!-- Manage Folders -->
+            <div id="manage_folder" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Upload Record</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive">
+                                <table id="config-table " class="table display table-bordered table-striped no-wrap text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Folder Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Dr. Kent - Primary Care</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Radiology</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dentist</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ER - Visitt</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info waves-effect"
+                                data-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-default waves-effect"
+                            data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        <!-- Manage Folders -->
+    
+        <!-- Add Tagsl -->
+            <div id="add-tag" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="background: rgba(0, 0, 0, 0.5);">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Add Tag</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Tag Name"> 
+                                    </div>
+                                </div>
+                            </from>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info waves-effect"
+                                data-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-default waves-effect"
+                            data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        <!-- Add Tagsl -->
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
     <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
-    <!-- Bootstrap popper Core JavaScript -->
+    <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
+    <script src="dist/js/pages/toastr.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
     <script src="assets/node_modules/popper/popper.min.js"></script>
     <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
@@ -1330,18 +1342,21 @@
     <script src="dist/js/waves.js"></script>
     <!--Menu sidebar -->
     <script src="dist/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
     <!--Custom JavaScript -->
     <script src="dist/js/custom.min.js"></script>
+    <!-- Sweet-Alert  -->
+    <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+    <script src="assets/node_modules/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="dist/js/pages/mask.init.js"></script>
+
+    <!-- alert JavaScript -->
     <!-- ============================================================== -->
     <!-- This page plugins -->
     <!-- ============================================================== -->
-    <!--morris JavaScript -->
-    <script src="assets/node_modules/raphael/raphael-min.js"></script>
-    <script src="assets/node_modules/morrisjs/morris.min.js"></script>
-    <script src="assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
-    <!-- Popup message jquery -->
-    <!-- Chart JS -->
-    <script src="dist/js/dashboard1.js"></script>
     <!-- Editable -->
     <script src="assets/node_modules/jquery-datatables-editable/jquery.dataTables.js"></script>
     <script src="assets/node_modules/datatables/media/js/dataTables.bootstrap.js"></script>
@@ -1358,8 +1373,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
-    <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
-    <script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
     <!-- end - This is for export functionality only -->
     <script>
         $('#mainTable').numericInputExample().find('td:first').focus();
@@ -1629,7 +1642,7 @@
         // AuthorizationRelease Steps Start
         $(document).ready(function(){
             $('#arfstep0').css({'display':'block'});
-            $("#arfstepzeronext").click(function(){
+            $(".arfstepzeronext").click(function(){
                 $('#arfstep0').css({'display':'none'});
                 $('#arfstep1').css({'display':'block'});
             });
@@ -1775,7 +1788,116 @@
         $('#smoothed12').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
     });
     </script>
-
+    <!-- Dropzone Plugin JavaScript -->
+    <script src="assets/node_modules/dropzone-master/dist/dropzone.js"></script>
+    <script src="assets/node_modules/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="assets/node_modules/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/node_modules/multiselect/js/jquery.multi-select.js"></script>
+    <script>
+        $(function () {
+            // Switchery
+            var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+            $('.js-switch').each(function () {
+                new Switchery($(this)[0], $(this).data());
+            });
+            // For select 2
+            $(".select2").select2();
+            $('.selectpicker').selectpicker();
+            //Bootstrap-TouchSpin
+            $(".vertical-spin").TouchSpin({
+                verticalbuttons: true
+            });
+            var vspinTrue = $(".vertical-spin").TouchSpin({
+                verticalbuttons: true
+            });
+            if (vspinTrue) {
+                $('.vertical-spin').prev('.bootstrap-touchspin-prefix').remove();
+            }
+            $("input[name='tch1']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10,
+                postfix: '%'
+            });
+            $("input[name='tch2']").TouchSpin({
+                min: -1000000000,
+                max: 1000000000,
+                stepinterval: 50,
+                maxboostedstep: 10000000,
+                prefix: '$'
+            });
+            $("input[name='tch3']").TouchSpin();
+            $("input[name='tch3_22']").TouchSpin({
+                initval: 40
+            });
+            $("input[name='tch5']").TouchSpin({
+                prefix: "pre",
+                postfix: "post"
+            });
+            // For multiselect
+            $('#pre-selected-options').multiSelect();
+            $('#optgroup').multiSelect({
+                selectableOptgroup: true
+            });
+            $('#public-methods').multiSelect();
+            $('#select-all').click(function () {
+                $('#public-methods').multiSelect('select_all');
+                return false;
+            });
+            $('#deselect-all').click(function () {
+                $('#public-methods').multiSelect('deselect_all');
+                return false;
+            });
+            $('#refresh').on('click', function () {
+                $('#public-methods').multiSelect('refresh');
+                return false;
+            });
+            $('#add-option').on('click', function () {
+                $('#public-methods').multiSelect('addOption', {
+                    value: 42,
+                    text: 'test 42',
+                    index: 0
+                });
+                return false;
+            });
+            $(".ajax").select2({
+                ajax: {
+                    url: "https://api.github.com/search/repositories",
+                    dataType: 'json',
+                    delay: 250,
+                    data: function (params) {
+                        return {
+                            q: params.term, // search term
+                            page: params.page
+                        };
+                    },
+                    processResults: function (data, params) {
+                        // parse the results into the format expected by Select2
+                        // since we are using custom formatting functions we do not need to
+                        // alter the remote JSON data, except to indicate that infinite
+                        // scrolling can be used
+                        params.page = params.page || 1;
+                        return {
+                            results: data.items,
+                            pagination: {
+                                more: (params.page * 30) < data.total_count
+                            }
+                        };
+                    },
+                    cache: true
+                },
+                escapeMarkup: function (markup) {
+                    return markup;
+                }, // let our custom formatter work
+                minimumInputLength: 1,
+                //templateResult: formatRepo, // omitted for brevity, see the source of this page
+                //templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+            });
+        });
+    </script>
 </body>
 
 </html>
