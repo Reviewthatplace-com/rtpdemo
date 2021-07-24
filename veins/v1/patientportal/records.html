@@ -318,7 +318,7 @@
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-sm btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti-settings"></i></button>
                                             <div class="dropdown-menu animated flipInX">
-                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#myModal">Add Folder</a>
+                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#add_folder">Add Folder</a>
                                                 <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#manage_folder">Manage Folders</a>
                                             </div>
                                         </div>
@@ -330,42 +330,6 @@
                                         <li><a href="radiology.html">Radiology <span>19</span></a></li>
                                         <li><a href="dentist.html">Dentist <span>623</span></a></li>
                                         <li><a href="ervisit.html">ER - Visit <span>53</span></a></li>
-                                        <div id="myModal" class="modal fade in" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h4 class="modal-title" id="myModalLabel">Add Folder</h4>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-hidden="true">×</button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <from class="form-horizontal">
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Folder Name</label>
-                                                                <div class="col-md-12">
-                                                                    <input type="text" class="form-control" placeholder="Folder name"> 
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Choose Folder Color</label>
-                                                                <div class="col-md-6">
-                                                                    <input type="text" class="colorpicker form-control" value="#7ab2fa" /> 
-                                                                </div>
-                                                            </div>
-                                                        </from>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-info waves-effect"
-                                                            data-dismiss="modal">Save</button>
-                                                        <button type="button" class="btn btn-default waves-effect"
-                                                            data-dismiss="modal">Cancel</button>
-                                                    </div>
-                                                </div>
-                                                <!-- /.modal-content -->
-                                            </div>
-                                            <!-- /.modal-dialog -->
-                                        </div>
                                     </ul>
                                 </div>
                                 <!-- /.left-aside-column-->
@@ -384,7 +348,7 @@
                                     <button type="button" class="btn btn-info btn-rounded m-t-10 float-right" data-toggle="modal" data-target="#request_record">Request Records</button>
 
                                     <div class="table-responsive">
-                                        <table id="demo-foo-addrow"
+                                        <table id="clmtable1"
                                             class="table no-wrap table-bordered m-t-30 table-hover contact-list"
                                             data-paging="true" data-paging-size="7">
                                             <thead>
@@ -1433,6 +1397,43 @@
                 <!-- /.modal-dialog -->
             </div>
         <!-- Request Record Modal -->
+
+        <!-- Add Folder -->
+        <div id="add_folder" class="modal fade in" tabindex="-2" role="dialog"aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Add Folder</h4>
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <from class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-md-12">Folder Name</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" placeholder="Folder name"> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Choose Folder Color</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="colorpicker form-control" value="#7ab2fa" /> 
+                                </div>
+                            </div>
+                        </from>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info waves-effect"
+                            data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-default waves-effect"
+                            data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+        <!-- Add Folder -->
     
         <!-- Manage Folders -->
             <div id="manage_folder" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -1447,20 +1448,65 @@
                                 <table id="config-table " class="table display table-bordered table-striped no-wrap text-center">
                                     <thead>
                                         <tr>
+                                            <th>Action</th>
                                             <th>Folder Name</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#update_folder">Update</button>
+                                                    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td>Dr. Kent - Primary Care</td>
                                         </tr>
                                         <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#update_folder">Update</button>
+                                                    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td>Radiology</td>
                                         </tr>
                                         <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#update_folder">Update</button>
+                                                    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td>Dentist</td>
                                         </tr>
                                         <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#update_folder">Update</button>
+                                                    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td>ER - Visitt</td>
                                         </tr>
                                     </tbody>
@@ -1479,33 +1525,71 @@
                 <!-- /.modal-dialog -->
             </div>
         <!-- Manage Folders -->
+
+        <!-- Update Folder -->
+        <div id="update_folder" class="modal fade in" tabindex="-2" role="dialog"aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Update Folder</h4>
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <from class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-md-12">Folder Name</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" placeholder="Folder name"> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Choose Folder Color</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="colorpicker form-control" value="#7ab2fa" /> 
+                                </div>
+                            </div>
+                        </from>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info waves-effect"
+                            data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-default waves-effect"
+                            data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+        <!-- Update Folder -->
     
         <!-- Add Tagsl -->
             <div id="add-tag" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="background: rgba(0, 0, 0, 0.5);">
                 <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Add Tag</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        </div>
-                        <div class="modal-body">
-                            <from class="form-horizontal form-material">
-                                <div class="form-group">
-                                    <div class="col-md-12 m-b-20">
-                                        <input type="text" class="form-control" placeholder="Tag Name"> 
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">Add Tag</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Tag Name"> 
+                                        </div>
                                     </div>
-                                </div>
-                            </from>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-info waves-effect"
-                                data-dismiss="modal">Save</button>
-                            <button type="button" class="btn btn-default waves-effect"
-                            data-dismiss="modal">Cancel</button>
+                                </from>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info waves-effect"
+                                    data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-default waves-effect"
+                                data-dismiss="modal">Cancel</button>
+                            </div>
                         </div>
+                        <!-- /.modal-content -->
                     </div>
-                    <!-- /.modal-content -->
+                    <!-- /.modal-dialog -->
                 </div>
-                <!-- /.modal-dialog -->
             </div>
         <!-- Add Tagsl -->
     <!-- ============================================================== -->
@@ -1563,9 +1647,9 @@
         });
         
         $('#clmtable1').DataTable({
-                scrollY:        "50vh",
-                scrollX:        true,
                 scrollCollapse: true,
+                bLengthChange: false,
+                searching: false,
             });
     </script>
     <script>
@@ -1609,6 +1693,10 @@
             $('#config-table').DataTable({
                 responsive: true
             });
+            // responsive table
+            $('#config-table1').DataTable({
+                responsive: true
+            });
             $('#example23').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
@@ -1618,13 +1706,6 @@
             $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
         });
 
-    </script>
-    <script src="assets/node_modules/footable/js/footable.min.js"></script>
-    <!--FooTable init-->
-    <script>
-        $(function () {
-            $('#demo-foo-addrow').footable();
-        });
     </script>
     <!-- Plugin JavaScript -->
     <script src="assets/node_modules/moment/moment.js"></script>
