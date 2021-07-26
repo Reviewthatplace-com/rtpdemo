@@ -37,10 +37,9 @@
     <link href="dist/css/pages/chat-app-page.css" rel="stylesheet"><link href="dist/css/pages/icon-page.css" rel="stylesheet">
     <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
     <!--bootstrap data table css-->
-    <link rel="stylesheet" type="text/css"
-        href="assets/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
-    <link rel="stylesheet" type="text/css"
-        href="assets/node_modules/datatables.net-bs4/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/responsive.dataTables.min.css">
+    <link href="dist/css/pages/stylish-tooltip.css" rel="stylesheet">
         
     <!-- Dashboard 1 Page CSS -->
     <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
@@ -488,7 +487,14 @@
                                                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
                                             </td>
                                             <td>
-                                                <i class="fab fa-vine text-success"></i>
+                                                <span class="mytooltip tooltip-effect-1">
+                                                    <span class="tooltip-item2"><i class="fab fa-vine text-success"></i></span>
+                                                    <span class="tooltip-content4 clearfix">
+                                                        <span class="tooltip-text2">
+                                                            Found via Profile Discovery 
+                                                        </span>
+                                                    </span>
+                                                </span>
                                                 Ravi Agrawal
                                                 <br>
                                                 11/10/1998
@@ -635,12 +641,7 @@
                                 
                                                         <!-- fourth row -->
                                                         <div class="row">
-                                                            <div class="col-lg-6">
-                                                                <div class="form-group m-b-40">
-                                                                    <input type="text" class="form-control" id="" placeholder=""><span class="bar"></span>
-                                                                    <label for="">External ID</label>
-                                                                </div>
-                                                            </div>
+                                                             
                                                             <div class="col-lg-6">
                                                                 <div class="form-group m-b-40">
                                                                     <input type="text" class="form-control" id="" placeholder=""><span class="bar"></span>
