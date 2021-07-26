@@ -354,7 +354,7 @@
                                             data-paging="true" data-paging-size="7">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
+                                                    <th>Action</th>
                                                     <th>Name of file</th>
                                                     <th>Date</th>
                                                     <th>From</th>
@@ -1580,7 +1580,7 @@
                             aria-hidden="true">×</button>
                     </div>
                     <div class="modal-body">
-                        <legend class="text-center font-weight-bold">Send Request Via</legend>
+                        <!-- <legend class="text-center font-weight-bold">Send Request Via</legend>
                         <from class="form-horizontal form-material">
                             <div class="form-group">
                                 <div class="col-md-12 m-b-20">
@@ -1625,14 +1625,200 @@
                                 </div> 
 
                             </div>
-                        </from>
+                        </from> -->
+                        <section id="sr0" class="section mt-3 active">
+                            <legend class="text-center font-weight-bold">Send Request Via</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="fax_number" id="fax_number1" value="1">
+                                            <label class="checklabel required-label srzeronext" for="fax_number1">SMS</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="email" id="email1" value="1">
+                                            <label class="checklabel required-label emailnext" for="email1">Email</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </from>
+                        </section>
+
+                        <section id="sr1" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Enter Phone Number</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Phone Number">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide Fax number!
+                                      </div>
+                                  </div>
+                                </div>
+                            </from>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-left sroneback">Back</a>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-right sronenext">Next</a>
+                        </section>
+
+                        <section id="email" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Enter Email</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                <div class="col-md-12 m-b-20">
+                                    <input type="text" class="form-control" placeholder="Email"> 
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please Provide Email!
+                                    </div>
+                                </div>
+                                </div>
+                            </from>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-left sroneback">Back</a>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-right sronenext">Next</a>
+                        </section>
+
+                        <section id="sr2" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Choose Records</legend>
+                            <div class="table-responsive">
+                                <table id="clmtable1"
+                                    class="table no-wrap table-bordered m-t-30 table-hover contact-list"
+                                    data-paging="true" data-paging-size="7">
+                                    <thead>
+                                        <tr>
+                                            <th>Action</th>
+                                            <th>Name of file</th>
+                                            <th>Date</th>
+                                            <th>From</th>
+                                            <th>Folder</th>
+                                            <th>Tags</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>X.pdf</td>
+                                            <td>05-29-21</td>
+                                            <td>
+                                                4072862965
+                                                <br>
+                                                04/10/2021, 01:12 PM
+                                            </td>
+                                            <td><span class="label label-danger">Dr. Kent - Primary Care</span> </td>
+                                            <td><span class="label label-offwhite text-dark">Broken Arm</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Y.pdf</td>
+                                            <td>05-29-21</td>
+                                            <td>
+                                                info@powerspediatrics.com
+                                                <br>
+                                                08/29/2021, 05:12 PM
+                                            </td>
+                                            <td><span class="label label-info">Radiology</span> </td>
+                                            <td><span class="label label-offwhite text-dark">ER 2012</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Z.pdf</td>
+                                            <td>05-29-21</td>
+                                            <td>
+                                                Shakir Ansari via Portal <br>
+                                                12/25/2021, 01:01 AM
+                                            </td>
+                                            <td><span class="label label-success">Dentist</span></td>
+                                            <td><span class="label label-offwhite text-dark">2010</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>X.pdf</td>
+                                            <td>05-29-21</td>
+                                            <td>
+                                                info@powerspediatrics.com
+                                                <br>
+                                                08/29/2021, 05:12 PM
+                                            </td>
+                                            <td><span class="label label-inverse">ER - Visit</span></td>
+                                            <td><span class="label label-offwhite text-dark">Stomach Cancer</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>W.pdf</td>
+                                            <td>05-29-21</td>
+                                            <td>
+                                                4072862965
+                                                <br>
+                                                04/10/2021, 01:12 PM
+                                            </td>
+                                            <td><span class="label label-danger">Dr. Kent - Primary Care</span> </td>
+                                            <td><span class="label label-offwhite text-dark">Broken Arm</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a href="#" id="srtwoback" class="btn btn-lg btn-info col-xl-5 float-left">Back</a>
+                            <a href="#" id="srtwonext" class="btn btn-lg btn-info col-xl-5 float-right">Next</a>
+                        </section>
+
+                        <section id="sr3" class="section mt-3" style="display: none;">
+                            <div class="container form-container slide">
+                              <div class="col-12">
+                                <h4 class="font-weight-bold my-3 text-center"> Send Records To </h4>
+                              </div>
+                              <table class="table table-striped">
+                                <tbody>
+                                      <tr>
+                                        <th class="float-left">Email</th>
+                                        <td class="float-right">Shakir@gmail.com</td>
+                                      </tr>
+                                </tbody>
+                              </table>
+                    
+                              <div class="col-12" id="strips">
+                                <h4 class="font-weight-bold my-3 text-center"> Choosen Records </h4>
+                              </div>
+                              <table class="table table-striped">
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td>X.pdf</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Y.pdf</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Z.pdf</td>
+                                    </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <a href="#" id="srthreeback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5  float-right send_records">Send</a>
+                        </section>
                     </div>
-                    <div class="modal-footer">
+                    <!-- <div class="modal-footer">
                         <button type="button" class="btn btn-info waves-effect"
                             data-dismiss="modal">Save</button>
                         <button type="button" class="btn btn-default waves-effect"
                             data-dismiss="modal">Cancel</button>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- /.modal-content -->
             </div>
@@ -1723,6 +1909,12 @@
         });
         
         $('#clmtable1').DataTable({
+                scrollCollapse: true,
+                bLengthChange: false,
+                searching: false,
+            });
+        
+        $('#clmtable2').DataTable({
                 scrollCollapse: true,
                 bLengthChange: false,
                 searching: false,
@@ -2105,6 +2297,142 @@
             x.style.display = "none";
             }
         };
+
+        // show and hide for Email
+        function email() {
+            var x = document.getElementById("email");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function fax() {
+            var x = document.getElementById("fax");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+    </script>
+    <script>
+        // AuthorizationRelease Steps Start
+        $(document).ready(function(){
+            $('#sr0').css({'display':'block'});
+            $(".srzeronext").click(function(){
+                $('#sr0').css({'display':'none'});
+                $('#sr1').css({'display':'block'});
+            });
+            $(".emailnext").click(function(){
+                $('#sr0').css({'display':'none'});
+                $('#email').css({'display':'block'});
+            });
+            $(".sronenext").click(function(){
+                $('#sr1').css({'display':'none'});
+                $('#sr2').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $(".sroneback").click(function(){
+                $('#sr1').css({'display':'none'});
+                $('#sr0').css({'display':'block'});
+            });
+            $("#srtwoback").click(function(){
+                $('#sr2').css({'display':'none'});
+                $('#sr1').css({'display':'block'});
+            });
+            $("#srtwonext").click(function(){
+                $('#sr2').css({'display':'none'});
+                $('#sr3').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $("#srthreeback").click(function(){
+                $('#sr3').css({'display':'none'});
+                $('#sr2').css({'display':'block'});
+            });
+            $("#srthreenext").click(function(){
+                $('#sr3').css({'display':'none'});
+                $('#sr4').css({'display':'block'});
+            });
+            $("#srfourback").click(function(){
+                $('#sr4').css({'display':'none'});
+                $('#sr3').css({'display':'block'});
+            });
+            $("#srfournext").click(function(){
+                $('#sr4').css({'display':'none'});
+                $('#sr5').css({'display':'block'});
+            });
+            $("#srfiveback").click(function(){
+                $('#sr5').css({'display':'none'});
+                $('#sr4').css({'display':'block'});
+            });
+            $("#srfivenext").click(function(){
+                $('#sr5').css({'display':'none'});
+                $('#sr6').css({'display':'block'});
+            });
+            $("#srsixback").click(function(){
+                $('#sr6').css({'display':'none'});
+                $('#sr5').css({'display':'block'});
+            });
+            $("#srsixnext").click(function(){
+                $('#sr6').css({'display':'none'});
+                $('#sr7').css({'display':'block'});
+            });
+            $("#srsevenback").click(function(){
+                $('#sr7').css({'display':'none'});
+                $('#sr6').css({'display':'block'});
+            });
+            $("#srsevennext").click(function(){
+                $('#sr7').css({'display':'none'});
+                $('#sr8').css({'display':'block'});
+            });
+            $("#sreightback").click(function(){
+                $('#sr8').css({'display':'none'});
+                $('#sr7').css({'display':'block'});
+            });
+            $("#sreightnext").click(function(){
+                $('#sr8').css({'display':'none'});
+                $('#sr9').css({'display':'block'});
+            });
+            $("#srnineback").click(function(){
+                $('#sr9').css({'display':'none'});
+                $('#sr8').css({'display':'block'});
+            });
+            $("#srninenext").click(function(){
+                $('#sr9').css({'display':'none'});
+                $('#sr10').css({'display':'block'});
+            });
+            $("#srtenback").click(function(){
+                $('#sr10').css({'display':'none'});
+                $('#sr9').css({'display':'block'});
+            });
+            $("#srtennext").click(function(){
+                $('#sr10').css({'display':'none'});
+                $('#sr11').css({'display':'block'});
+            });
+            $("#srelevenback").click(function(){
+                $('#sr11').css({'display':'none'});
+                $('#sr10').css({'display':'block'});
+            });
+            $("#srelevennext").click(function(){
+                $('#sr11').css({'display':'none'});
+                $('#sr12').css({'display':'block'});
+            });
+            $("#srtwelveback").click(function(){
+                $('#sr12').css({'display':'none'});
+                $('#sr11').css({'display':'block'});
+            });
+            $("#srtwelvenext").click(function(){
+                $('#sr12').css({'display':'none'});
+                $('#sr13').css({'display':'block'});
+            });
+            $("#srthirteenenext").click(function(){
+                $('#sr13').css({'display':'none'});
+                $('#sr14').css({'display':'block'});
+            });
+        })
 
         // show and hide for Email
         function email() {
