@@ -603,6 +603,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                     <div class="modal-body">
+
                         <section id="arfstep0" class="section mt-3 active">
                             <legend class="text-center font-weight-bold">Choose Verification Method</legend>
                             <from class="form-horizontal form-material">
@@ -624,6 +625,27 @@
                             </from>
                         </section>
 
+                        <section id="call_text" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Choose Verification Method</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="fax_number" id="call_me" value="1">
+                                            <label class="checklabel required-label call_textnext" for="call_me">Call Me</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="email" id="text_me" value="1">
+                                            <label class="checklabel required-label call_textnext" for="text_me">Text Me</label>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-lg btn-info col-xl-12 arfsteponeback">Back</a>
+                                </div>
+                            </from>
+                        </section>
+
                         <section id="arfstep1" class="section mt-3" style="display: none;">
                             <legend class="text-center font-weight-bold">Enter Phone Number</legend>
                             <from class="form-horizontal form-material">
@@ -639,7 +661,7 @@
                                   </div>
                                 </div>
                             </from>
-                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-left arfsteponeback">Back</a>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-left call_textback">Back</a>
                             <a href="#" class="btn btn-lg btn-info col-xl-5 float-right arfsteponenext">Next</a>
                         </section>
 
@@ -1059,7 +1081,16 @@
             $('#arfstep0').css({'display':'block'});
             $(".arfstepzeronext").click(function(){
                 $('#arfstep0').css({'display':'none'});
+                $('#call_text').css({'display':'block'});
+            });
+            $(".call_textnext").click(function(){
+                $('#arfstep0').css({'display':'none'});
                 $('#arfstep1').css({'display':'block'});
+                $('#call_text').css({'display':'none'});
+            });
+            $(".call_textback").click(function(){
+                $('#arfstep1').css({'display':'none'});
+                $('#call_text').css({'display':'block'});
             });
             $(".emailnext").click(function(){
                 $('#arfstep0').css({'display':'none'});
@@ -1074,6 +1105,7 @@
                 $('#arfstep1').css({'display':'none'});
                 $('#arfstep0').css({'display':'block'});
                 $('#email').css({'display':'none'});
+                $('#call_text').css({'display':'none'});
             });
             $("#arfsteptwoback").click(function(){
                 $('#arfstep2').css({'display':'none'});
