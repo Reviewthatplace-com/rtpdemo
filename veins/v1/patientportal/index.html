@@ -453,11 +453,12 @@
                                 <table data-height="300" class="table display table-bordered text-center table-striped no-wrap dataTable no-footer" id="clmtable" role="grid" aria-describedby="clmtable_info">
                                     <thead class="thead-dark">
                                         <tr role="row">
-                                            <th class="sorting_asc" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Full Name: activate to sort column descending" style="width: 148px;">Full Name</th>
+                                            <th class="sorting_asc" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Full Name: activate to sort column descending" style="width: 148px;">Action</th>
                                             <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="PTID: activate to sort column ascending" style="width: 40px;">Patient Name</th>
+                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="PTID: activate to sort column ascending" style="width: 40px;">Veins Patient Pin</th>
                                             <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="PTID: activate to sort column ascending" style="width: 40px;">Veins PT ID</th>
                                             <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="SSN: activate to sort column ascending" style="width: 62px;">SSN</th>
-                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="DOB: activate to sort column ascending" style="width: 60px;">DOB</th>
+                                            <!-- <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="DOB: activate to sort column ascending" style="width: 60px;">DOB</th> -->
                                             <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 56px;">Gender</th>
                                             <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 94px;">Email</th>
                                             <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="Phone: activate to sort column ascending" style="width: 78px;">Phone</th>
@@ -483,9 +484,10 @@
                                                 <br>
                                                 11/10/1998
                                             </td>
+                                            <td>XD3234CC</td>
                                             <td>VPT1</td>
                                             <td>729131238</td>
-                                            <td>11/10/1999</td>
+                                            <!-- <td>11/10/1999</td> -->
                                             <td>Male</td>
                                             <td>shakir.Ansari@gmail.com</td>
                                             <td>9872712063</td>
@@ -508,9 +510,10 @@
                                                 <br>
                                                 11/10/1998
                                             </td>
+                                            <td>XD3254CC</td>
                                             <td>VPT2</td>
                                             <td>729131238</td>
-                                            <td>11/10/1999</td>
+                                            <!-- <td>11/10/1999</td> -->
                                             <td>Male</td>
                                             <td>ravi.agrawal@gmail.com</td>
                                             <td>9872712063</td>
@@ -533,12 +536,13 @@
                                                 <br>
                                                 11/10/1998
                                             </td>
+                                            <td>XD3264CC</td>
                                             <td>VPT3</td>
                                             <td>729131238</td>
-                                            <td>11/10/1999</td>
+                                            <!-- <td>11/10/1999</td> -->
                                             <td>Male</td>
-                                            <td>saimun.hasan@gmail.com</td>
-                                            <td>9872712063</td>
+                                            <td><i class="fas fa-check-circle text-success mr-2"></i>saimun.hasan@gmail.com</td>
+                                            <td><i class="fas fa-times-circle text-danger mr-2"></i>9872712063</td>
                                         </tr>
                                     </tbody>
 
@@ -583,7 +587,7 @@
     
         <!--View Profile-->
         <div class="modal fade show " id="newptModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog modal-lg">
                 <!--content-->
                 <div class="modal-content" style="width: 145% !important; left: -150px;">
                     <div class="modal-header">
@@ -675,17 +679,47 @@
                                                         <h3 class="font-weight-bold h3Spacing">Contact Information</h3>
                                                             <!-- third row -->
                                                             <div class="row">
-                                                                <div class="col-lg-6">
+                                                                <div class="col-lg-4">
                                                                     <div class="form-group m-b-40">
+                                                                        <i class="fas fa-check-circle text-success float-right"></i>
                                                                         <input type="tel" class="form-control" id="" placeholder=""><span class="bar"></span>
                                                                         <label for="">Phone Number</label>
                                                                     </div>
+                                                                    <div class="form-group m-b-40" id="fax_otp"  style="display: none;">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-6">
+                                                                                <input type="email" class="form-control" id="" placeholder=""><span class="bar"></span>
+                                                                                <label for="">OTP</label>
+                                                                            </div>
+                                                                            <div class="col-lg-2">
+                                                                                <button class="btn btn-success verify">Verify</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="col-lg-6">
+                                                                <div class="col-lg-2">
+                                                                    <button class="btn btn-success"onclick="fax_otp()">Send OTP</button>
+                                                                </div>
+                                                                <div class="col-lg-4">
                                                                     <div class="form-group m-b-40">
+                                                                    <i class="fas fa-times-circle text-danger float-right"></i>
                                                                         <input type="email" class="form-control" id="" placeholder=""><span class="bar"></span>
                                                                         <label for="">Email</label>
                                                                     </div>
+                                                                    <div class="form-group m-b-40" id="email_otp"  style="display: none;">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-6">
+                                                                                <input type="email" class="form-control" id="" placeholder=""><span class="bar"></span>
+                                                                                <label for="">OTP</label>
+                                                                            </div>
+                                                                            <div class="col-lg-2">
+                                                                                <button class="btn btn-success verify">Verify</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-2">
+                                                                    <button class="btn btn-success"onclick="email_otp()">Send OTP</button>
                                                                 </div>
                                                             </div>
                                                         <!-- third row -->
@@ -985,7 +1019,7 @@
                                             </form>
                                             </div>
                                         </div>
-                                        <div class="tab-pane profile-tab-pane" id="paymentRequestList3" role="tabpanel">
+                                        <!-- <div class="tab-pane profile-tab-pane" id="paymentRequestList3" role="tabpanel">
                                             <div class="row justify-content-end">
                                                 <div class="col-sm-4">
                                                     <div class='input-group mb-3'>
@@ -1096,7 +1130,7 @@
                                                     
                                                 </table>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="tab-pane" id="visitHistory3" role="tabpanel">
                                             <div class="row justify-content-end">
                                                 <div class="col-sm-4" style="left: -30px !important;">
@@ -1111,10 +1145,12 @@
                                                 </div>
                                             </div>
                                             <div class="container">
-                                                <div class="table-responsive" style="width: 95% !important; overflow-x:scroll !important ;">
+                                                <div class="table-responsive" style="overflow-x:scroll !important ;">
                                                 <table id="config-table5" class="table display table-bordered table-striped no-wrap">
                                                     <thead class="thead-dark">
                                                         <tr>
+                                                            <th>Location Name</th>
+                                                            <th>Location Address</th>
                                                             <th>Category</th>
                                                             <th>Reason</th>
                                                             <th>DOS</th>
@@ -1124,6 +1160,8 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
+                                                            <td>Power Pediatrics</td>
+                                                            <td>7037 Rose Ave, Orlando, FL, 32810</td>
                                                             <td>Walk In</td>
                                                             <td>Sick</td>
                                                             <td>11/5/2020</td>
@@ -1136,7 +1174,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="tab-pane profile-tab-pane" id="paymentHistory3" role="tabpanel">
+                                        <div class="tab-pane" id="paymentHistory3" role="tabpanel" style="width: 100%">
                                             <div class="row justify-content-end">
                                                 <div class="col-sm-4" style="left: -25px !important;">
                                                     <div class='input-group mb-3'>
@@ -1150,10 +1188,12 @@
                                                 </div>
                                             </div>
                                             <div class="modal-body">
-                                                <div class="table-responsive">
+                                                <div class="table-responsive" style="overflow-x:scroll !important ;">
                                                 <table id="config-table6" class="table display table-bordered table-striped no-wrap">
                                                     <thead class="thead-dark">
                                                         <tr>
+                                                            <th>Location Name</th>
+                                                            <th>Location Address</th>
                                                             <th>DOS</th>
                                                             <th>Amount</th>
                                                             <th>Method</th>
@@ -1163,6 +1203,8 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
+                                                            <td>Power Pediatrics</td>
+                                                            <td>7037 Rose Ave, Orlando, FL, 32810</td>
                                                             <td>DOS</td>
                                                             <td>Amount</td>
                                                             <td>Method</td>
@@ -1170,6 +1212,8 @@
                                                             <td>Collected By</td>
                                                         </tr>
                                                         <tr>
+                                                            <td>Power Pediatrics</td>
+                                                            <td>7037 Rose Ave, Orlando, FL, 32810</td>
                                                             <td>DOS</td>
                                                             <td>Amount</td>
                                                             <td>Method</td>
@@ -2132,6 +2176,7 @@
             $(".arfsteponeback").click(function(){
                 $('#arfstep1').css({'display':'none'});
                 $('#arfstep0').css({'display':'block'});
+                $('#email').css({'display':'none'});
             });
             $("#arfsteptwoback").click(function(){
                 $('#arfstep2').css({'display':'none'});
@@ -2261,6 +2306,26 @@
         // show and hide for Phone
         function fax() {
             var x = document.getElementById("fax");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Email
+        function email_otp() {
+            var x = document.getElementById("email_otp");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function fax_otp() {
+            var x = document.getElementById("fax_otp");
             if (x.style.display === "none") {
             x.style.display = "block";
             } else {

@@ -37,6 +37,50 @@
             padding: 0rem;
         }
 
+.form-checkbox, .form-radio {
+    padding:2px;
+    max-width: 100% !important;
+    display: inline-block;
+    margin-right: 8px;
+    background:white;
+    }
+    .checklabel,.radiolabel{
+    display:block;
+    width: 430px;
+    border:2px solid #FF7062;
+    background: white;
+    border-radius:12px;
+    text-align:center;
+    padding:10px 2em;
+    font-size:1.2rem;
+    font-weight: bold;
+    box-shadow:0 0 1px 1px rgba(0,0,0,0.2);
+    }
+    .label-center-section .checklabel,.label-center-section .radiolabel
+    {
+    text-align:left;
+    }
+    .checklabel:hover, .radiolabel:hover {
+    background:#ddd;
+    }
+    .checkbox, .radio {
+    display: none;
+    }
+    .checkbox:focus + label, .radio:focus + label{
+    border-color:#FF7062;
+    } 
+    .checkbox:active + label {
+    background-color: #ddd;
+    }
+    .checkbox:checked + label, .radio:checked + label {
+    background-position: 0 0;
+    background-color: #FF7062;
+    color: white;
+    }
+    .checkbox, .radio {
+            display: none;
+        }
+
         
 
         /*
@@ -412,7 +456,7 @@
                           <div class="row">
                               <div class="col">
                                   <!-- Button trigger modal -->
-                                  <button type="button" class="btn btn-success float-right plus enterEmail">
+                                  <button type="button" class="btn btn-success float-right plus" data-toggle="modal" data-target="#add_profile">
                                       +
                                   </button>
                                   <!-- Button trigger modal -->
@@ -548,6 +592,360 @@
     <!-- End Wrapper -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
+    <!-- Modal -->
+
+        <!-- Add Profile -->
+        <div id="add_profile" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Profile</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <section id="arfstep0" class="section mt-3 active">
+                            <legend class="text-center font-weight-bold">Choose Verification Method</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="fax_number" id="fax_number1" value="1">
+                                            <label class="checklabel required-label arfstepzeronext" for="fax_number1">Phone</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="email" id="email1" value="1">
+                                            <label class="checklabel required-label emailnext" for="email1">Email</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </from>
+                        </section>
+
+                        <section id="arfstep1" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Enter Phone Number</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Phone Number">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide Fax number!
+                                      </div>
+                                  </div>
+                                </div>
+                            </from>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-left arfsteponeback">Back</a>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-right arfsteponenext">Next</a>
+                        </section>
+
+                        <section id="email" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Enter Email</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                <div class="col-md-12 m-b-20">
+                                    <input type="text" class="form-control" placeholder="Email"> 
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please Provide Email!
+                                    </div>
+                                </div>
+                                </div>
+                            </from>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-left arfsteponeback">Back</a>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-right arfsteponenext">Next</a>
+                        </section>
+
+                        <section id="arfstep2" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Enter OTP</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control" placeholder="Enter OTP"> 
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide OTP!
+                                      </div>
+                                  </div>
+                                </div>
+                            </from>
+                            <a href="#" id="arfsteptwoback" class="btn btn-lg btn-info col-xl-5 float-left">Back</a>
+                            <a href="#" id="" class="btn btn-lg btn-info col-xl-5 float-right verify">Verify</a>
+                        </section>
+
+                        <section id="arfstep3" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Contact Information</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Phone Number">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide Phone number!
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control" placeholder="Email">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide Email!
+                                      </div>
+                                  </div>
+                                </div>
+                            </from>
+                            <a href="#" id="arfstepthreeback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                            <a href="#" id="arfstepthreenext" class="btn btn-lg btn-info col-xl-5  float-right">Next</a>
+                        </section>
+
+                        <section id="arfstep4" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Basic Details</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control" placeholder="First Name">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide First Name!
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control" placeholder="Last Name">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide Last Name!
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12 m-b-20">
+                                      <label for="">Date of Birth</label>
+                                      <input type="date" class="form-control" placeholder="date of birth">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide date of birth!
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12 m-b-20">
+                                    <select required="" class="form-control required" id="Gender" name="Gender" placeholder="Choose a Gender">
+                                        <option value="">Choose a Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control" placeholder="Social Security Number">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide Social Security Number!
+                                      </div>
+                                  </div>
+                                </div>
+                            </from>
+                            <a href="#" id="arfstepfourback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                            <a href="#" id="arfstepfournext" class="btn btn-lg btn-info col-xl-5  float-right">Next</a>
+                        </section>
+
+                        <section id="arfstep5" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Address</legend>
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Street"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide Street!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="City"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide City!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <select required="" class="form-control required" id="practice2_state" name="practice2_state" placeholder="State">
+                                                <option value="">Select State</option>
+                                                <option value="Alabama">Alabama</option>
+                                                <option value="Alaska">Alaska</option>
+                                                <option value="Arizona">Arizona</option>
+                                                <option value="Arkanasas">Arkanasas</option>
+                                                <option value="California">California</option>
+                                                <option value="Colorado">Colorado</option>
+                                                <option value="Connecticut">Connecticut</option>
+                                                <option value="Delaware">Delaware</option>
+                                                <option value="Florida">Florida</option>
+                                                <option value="Georgia">Georgia</option>
+                                                <option value="Hawaii">Hawaii</option>
+                                                <option value="Idaho">Idaho</option>
+                                                <option value="Illinois">Illinois</option>
+                                                <option value="Indiana">Indiana</option>
+                                                <option value="Iowa">Iowa</option>
+                                                <option value="Kankas">Kankas</option>
+                                                <option value="Kentucky">Kentucky</option>
+                                                <option value="Louisiana">Louisiana</option>
+                                                <option value="Maine">Maine</option>
+                                                <option value="Maryland">Maryland</option>
+                                                <option value="Massachusetts">Massachusetts</option>
+                                                <option value="Michigan">Michigan</option>
+                                                <option value="Minnesota">Minnesota</option>
+                                                <option value="Mississippi">Mississippi</option>
+                                                <option value="Missouri">Missouri</option>
+                                                <option value="Montana">Montana</option>
+                                                <option value="Nebraska">Nebraska</option>
+                                                <option value="Nevada">Nevada</option>
+                                                <option value="New Hampshire">New Hampshire</option>
+                                                <option value="New Jersey">New Jersey</option>
+                                                <option value="New Mexico">New Mexico</option>
+                                                <option value="New York">New York</option>
+                                                <option value="North Carolina">North Carolina</option>
+                                                <option value="North Dakota">North Dakota</option>
+                                                <option value="Ohio">Ohio</option>
+                                                <option value="Oklahoma">Oklahoma</option>
+                                                <option value="Oregon">Oregon</option>
+                                                <option value="Pennsylvania">Pennsylvania</option>
+                                                <option value="Rhode Island">Rhode Island</option>
+                                                <option value="South Carolina">South Carolina</option>
+                                                <option value="South Dakota">South Dakota</option>
+                                                <option value="Tennessee">Tennessee</option>
+                                                <option value="Texas">Texas</option>
+                                                <option value="Utah">Utah</option>
+                                                <option value="Vermont">Vermont</option>
+                                                <option value="Virginia">Virginia</option>
+                                                <option value="Washington">Washington</option>
+                                                <option value="Washington,D.C.(DC)">Washington,D.C.(DC)</option>
+                                                <option value="West Virginia">West Virginia</option>
+                                                <option value="Wisconsin">Wisconsin</option>
+                                                <option value="Wyoming">Wyoming</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Zip Code"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide Zip Code!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </from>
+                            <a href="#" id="arfstepfiveback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                            <a href="#" id="arfstepfivenext" class="btn btn-lg btn-info col-xl-5  float-right">Next</a>
+                        </section>
+
+                        <section id="arfstep6" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Primary Insurance</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Primary Insurance"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Primary Insurance!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Primary Insurance Number"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Primary Insurance Number!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Primary Insurance group ID"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Primary Insurance group ID!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <form action="#" class="dropzone">
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </from>
+                            <legend class="text-center font-weight-bold">Secondary Insurance</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Secondary Insurance"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Secondary Insurance!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Secondary Insurance Number"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Secondary Insurance Number!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Secondary Insurance group ID"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Secondary Insurance group ID!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <form action="#" class="dropzone">
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </from>
+                            <a href="#" id="arfstepsixback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                            <a href="#" id="" class="btn btn-lg btn-info col-xl-5  float-right add_profile">Add</a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Profile  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
     <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
@@ -654,6 +1052,163 @@
             $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
         });
 
+    </script>
+    <script>
+        // AuthorizationRelease Steps Start
+        $(document).ready(function(){
+            $('#arfstep0').css({'display':'block'});
+            $(".arfstepzeronext").click(function(){
+                $('#arfstep0').css({'display':'none'});
+                $('#arfstep1').css({'display':'block'});
+            });
+            $(".emailnext").click(function(){
+                $('#arfstep0').css({'display':'none'});
+                $('#email').css({'display':'block'});
+            });
+            $(".arfsteponenext").click(function(){
+                $('#arfstep1').css({'display':'none'});
+                $('#arfstep2').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $(".arfsteponeback").click(function(){
+                $('#arfstep1').css({'display':'none'});
+                $('#arfstep0').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $("#arfsteptwoback").click(function(){
+                $('#arfstep2').css({'display':'none'});
+                $('#arfstep1').css({'display':'block'});
+            });
+            $("#arfsteptwonext").click(function(){
+                $('#arfstep2').css({'display':'none'});
+                $('#arfstep3').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $("#arfstepthreeback").click(function(){
+                $('#arfstep3').css({'display':'none'});
+                $('#arfstep2').css({'display':'block'});
+            });
+            $("#arfstepthreenext").click(function(){
+                $('#arfstep3').css({'display':'none'});
+                $('#arfstep4').css({'display':'block'});
+            });
+            $("#arfstepfourback").click(function(){
+                $('#arfstep4').css({'display':'none'});
+                $('#arfstep3').css({'display':'block'});
+            });
+            $("#arfstepfournext").click(function(){
+                $('#arfstep4').css({'display':'none'});
+                $('#arfstep5').css({'display':'block'});
+            });
+            $("#arfstepfiveback").click(function(){
+                $('#arfstep5').css({'display':'none'});
+                $('#arfstep4').css({'display':'block'});
+            });
+            $("#arfstepfivenext").click(function(){
+                $('#arfstep5').css({'display':'none'});
+                $('#arfstep6').css({'display':'block'});
+            });
+            $("#arfstepsixback").click(function(){
+                $('#arfstep6').css({'display':'none'});
+                $('#arfstep5').css({'display':'block'});
+            });
+            $("#arfstepsixnext").click(function(){
+                $('#arfstep6').css({'display':'none'});
+                $('#arfstep7').css({'display':'block'});
+            });
+            $("#arfstepsevenback").click(function(){
+                $('#arfstep7').css({'display':'none'});
+                $('#arfstep6').css({'display':'block'});
+            });
+            $("#arfstepsevennext").click(function(){
+                $('#arfstep7').css({'display':'none'});
+                $('#arfstep8').css({'display':'block'});
+            });
+            $("#arfstepeightback").click(function(){
+                $('#arfstep8').css({'display':'none'});
+                $('#arfstep7').css({'display':'block'});
+            });
+            $("#arfstepeightnext").click(function(){
+                $('#arfstep8').css({'display':'none'});
+                $('#arfstep9').css({'display':'block'});
+            });
+            $("#arfstepnineback").click(function(){
+                $('#arfstep9').css({'display':'none'});
+                $('#arfstep8').css({'display':'block'});
+            });
+            $("#arfstepninenext").click(function(){
+                $('#arfstep9').css({'display':'none'});
+                $('#arfstep10').css({'display':'block'});
+            });
+            $("#arfsteptenback").click(function(){
+                $('#arfstep10').css({'display':'none'});
+                $('#arfstep9').css({'display':'block'});
+            });
+            $("#arfsteptennext").click(function(){
+                $('#arfstep10').css({'display':'none'});
+                $('#arfstep11').css({'display':'block'});
+            });
+            $("#arfstepelevenback").click(function(){
+                $('#arfstep11').css({'display':'none'});
+                $('#arfstep10').css({'display':'block'});
+            });
+            $("#arfstepelevennext").click(function(){
+                $('#arfstep11').css({'display':'none'});
+                $('#arfstep12').css({'display':'block'});
+            });
+            $("#arfsteptwelveback").click(function(){
+                $('#arfstep12').css({'display':'none'});
+                $('#arfstep11').css({'display':'block'});
+            });
+            $("#arfsteptwelvenext").click(function(){
+                $('#arfstep12').css({'display':'none'});
+                $('#arfstep13').css({'display':'block'});
+            });
+            $("#arfstepthirteenenext").click(function(){
+                $('#arfstep13').css({'display':'none'});
+                $('#arfstep14').css({'display':'block'});
+            });
+        })
+
+        // show and hide for Email
+        function emailType() {
+            var x = document.getElementById("emailType");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function faxType() {
+            var x = document.getElementById("faxType");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Email
+        function email() {
+            var x = document.getElementById("email");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function fax() {
+            var x = document.getElementById("fax");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
     </script>
 
 </body>
