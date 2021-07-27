@@ -748,4 +748,13 @@ const months = [
       x.style.display = "none";
     }
   };
+
+  function subcontractors() {
+    var x = document.getElementById("subcontractors");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  };
 // General functions End
