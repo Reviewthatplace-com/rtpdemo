@@ -687,7 +687,7 @@
               <legend class="font-weight-bold" id="pagetitles">Restrict Disclosure</legend>
             </div>
             <p>Do you want to restrict disclosure for any records related to the following?</p>
-            <legend class="font-weight-bold">If no please continue to next step</legend>
+            <legend class="font-weight-bold text-danger">If no please continue to next step</legend>
             
             <div class="form-checkbox ">
                 <input class="form-check-input checkbox" type="radio" name="s10" id="s10q1" value="">
@@ -1362,7 +1362,7 @@
               <legend class="font-weight-bold" id="pagetitles">Restrict Disclosure</legend>
             </div>
             <p>Do you want to restrict disclosure for any records related to the following?</p>
-            <legend class="font-weight-bold">If no please continue to next step</legend>
+            <legend class="font-weight-bold text-danger">If no please continue to next step</legend>
             
             <div class="form-checkbox ">
                 <input class="form-check-input checkbox" type="radio" name="s10" id="s10q1" value="">
@@ -1685,25 +1685,72 @@
 
       <!-- Somebody flow -->
 
-
-
-
       <section class="section mt-3 arfstep11">
-              <div class="row px-5 pt-3" id="confirm1">
-                <div class="col-xl-6 offset-xl-3 shadow text-center pb-5">
-                  <img src="assest/img/check.png" class="img-fluid  check-img"> 
-                  <h2 class="font-weight-bold mt-4 mb-4">Congrats! You have successfully completed your Authorization Release Paperwork!</h2>
-                  <img src="assest/img/rtplogo.png" class="img-fluid lazyload" id="check-logo">
-                    <div>
-                      <a href="#" class="mt-3">
-                        <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start arfstepelevennext" onmouseover="this.src='assest/img/buttons/pihover.png'" onmouseout="this.src='assest/img/buttons/pi.png'">
-                      </a>
+        <!-- <div class="row  px-5 pt-3">
+          <div class="col-xl-6 offset-xl-3 shadow text-center pb-5">
+            <img src="assest/img/check.png" class="img-fluid  check-img"> 
+            <h2 class="font-weight-bold mt-4 mb-4">Congrats! <br> You have successfully completed your authorization release paperwork!</h2>
+            <h3 class="font-weight-bold text-success">Your confirmation number: XXXXXX</h3>
+
+              <a type="button" class="btn btn-outline-danger font-weight-bold mb-3 mt-3 ml-3" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank"><i class="fas fa-desktop mr-2"></i><span style="font-size: 25px;">Update Demo</span></a>
+              <a type="button" class="btn btn-outline-danger font-weight-bold mb-3 mt-3 ml-3" href="https://rtpmedsol.rtpdemo.com/demoforms/requestform" target="_blank"><i class="fab fa-wpforms mr-2"></i><span style="font-size: 25px;">Request Form</span></a>
+              <a type="button" class="btn btn-outline-danger font-weight-bold mb-3 mt-3 ml-3" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank"><i class="far fa-calendar-alt mr-2"></i><span style="font-size: 25px;">Take Survey</span></a>
+
+          </div>
+        </div> -->
+        <div class="container form-container slide" style="max-width: 900px; padding: 0px;">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+              <div class="wrapper">
+                <div class="row no-gutters">
+
+                  <div class="col-md-6 d-flex align-items-stretch ml-lg-n5">
+                    <div class="contact-wrap w-100 p-md-5 p-4 text-left">
+                      <p class="font-weight-bold mb-4 mt-3"><span class="text-success" style="font-size: 50px;">Congrats!</span> <br> You have successfully completed your authorization release paperwork!</p>
+                      <h4 class="font-weight-bold text-success">Your confirmation number: XXXXXX</h4>
+                      <form method="POST" id="contactForm" name="contactForm">
+
+                        <div class="row mt-5">
+
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/1.png" alt="" width="40"> Update Demo</h4>
+                              <p style="font-size: 14px;">Update your demo now!</p> 
+                              <a type="button" class="btn btn-outline-success font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank">Let's start</a>
+                            </div>
+                          </div>
+
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/2.png" alt="" width="40"> Request Form</h4>
+                              <p style="font-size: 14px;">Have you filled out the request form yet?</p> 
+                              <a type="button" class="btn btn-outline-success font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/requestform" target="_blank">Let's start</a>
+                            </div>
+                          </div>
+
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/3.png" alt="" width="40"> Survey</h4>
+                              <p style="font-size: 14px;">Please take this Survey</p>  
+                              <a type="button" class="btn btn-outline-success font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank">Let's start</a>
+                            </div>
+                          </div>
+
+                        </div>
+
+                      </form>
                     </div>
+                  </div>
+
+                  <div class="col-md-6 d-flex align-items-stretch"><img src="assest/img/confirm.jpg" alt="" width="825" style="margin-left: -30px;"></div>
                 </div>
+              </div>
             </div>
+          </div>
+        </div>
       </section>
 
-      <section class="section mt-3 arfstep12">
+      <!-- <section class="section mt-3 arfstep12">
         <div class="container-fluid slide">
           <div class="row" id="confirm2">
             <div class="col-xl-6 offset-xl-3 shadow text-center">
@@ -1731,7 +1778,7 @@
             </div> 
           </div> 
         </div>
-      </section>
+      </section> -->
 
         <section class="section active mt-2">
           <div class="container form-container text-center slide" style="padding: 10px 10px;">
