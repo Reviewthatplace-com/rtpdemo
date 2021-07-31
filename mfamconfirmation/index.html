@@ -1,0 +1,2800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>MFAM1</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="assest/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="assest/css/register.css" rel="stylesheet">
+  <link href="assest/css/progress.css" rel="stylesheet">
+  <link href="assest/css/mdb.min.css" rel="stylesheet">
+  <link href="assest/css/typography.css" rel="stylesheet">
+  <link href="assest/css/signature/jquery.signaturepad.css" rel="stylesheet">
+  <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+  <style type="text/css">
+    section
+    {
+      display: none;
+    }
+    ul.stepper li .btn-box a
+    {
+      padding: 0.8rem !important;
+    }
+    @media only screen and (min-width: 750px)
+    {
+     #section1a,#section1b,#section1c,#section1d
+     {
+      background-image: url(assest/img/section1.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+  } 
+  #section1a .inner-section
+  {
+    padding-top: 20px;
+  }
+
+  #section1b .inner-section
+  {
+    padding-top: 70px;
+  }
+  .next-btn,
+  .back-btn
+  {
+    height: 40px;
+  }
+
+  .shadow,.shadow2
+  {
+    box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+    padding: 30px 40px;
+    border-radius: 10px 10px 10px 10px;
+    background: white;
+  }
+
+  .top-rtplogo
+  {
+    height: 120px;
+  }
+
+  .btn-start
+  {
+    height: 85px;
+  }
+  @media only screen and (min-width: 750px){
+    #confirmation
+    {
+      background-image: url(assest/img/481.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      min-height: 100vh;
+      background-attachment: fixed;
+    } 
+    #check-logo
+    {
+      height: 100px;
+    } 
+  }
+
+  #confirmation .shadow
+  {
+    background-color: white;
+    border-radius: 40px;
+  }
+  .check-img
+  {
+    margin-top: -75px;
+    height: 150px;
+  }
+  .btn-box
+  {
+    justify-content: flex-end;
+  }
+  @media only screen and (max-width: 750px){
+    #section1a .inner-section
+    {
+      padding-top: 15px;
+    }
+
+    #section1b .inner-section
+    {
+      padding-top: 15px;
+    }
+
+    .shadow
+    {
+      box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+      padding: 10px 25px;
+      border-radius: 10px 10px 10px 10px;
+      background: white;
+    }
+    .shadow
+    {
+      box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+      padding: 20px 15px;
+      border-radius: 10px 10px 10px 10px;
+      background: white;
+    }
+
+    .top-rtplogo,.top-rtplogo2
+    {
+      height: 100px;
+    }
+
+    .btn-start
+    {
+      height: 50px;
+    }
+    .btn-start2
+    {
+      height: 70px;
+      margin: 15px auto !important;
+    }
+
+    .inner-section
+    {
+      background:rgba(255,255,255,1);
+    }
+    #confirmation
+    {
+      background-image: url(assest/img/481.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    } 
+    .check-img
+    {
+      margin-top: -50px;
+      height: 100px;
+    }
+    .next-btn,
+    .back-btn
+    {
+      height: 30px;
+    }
+    #finish-step .next-btn
+    {
+     max-width: 90%;
+   } 
+   .btn-box
+   {
+    justify-content: center;
+  }
+  #confirmation h2
+  {
+    font-size: 22px;
+  }
+  #confirmation h3
+  {
+    font-size: 20px;
+  }
+
+}
+
+.progress
+{
+  background: none !important;
+}
+
+.mb-n2
+{
+  font-size: 13px;
+}
+
+
+  </style> 
+</head>
+
+<body data-spy="scroll" data-target="#navbar-menu">
+ <div class="progress blue" id="progress">
+  <span class="progress-left">
+    <span class="progress-bar"></span>
+  </span>
+  <span class="progress-right">
+    <span class="progress-bar"></span>
+  </span>
+  <div class="progress-value"><span id="progress-value">0</span>%</div>
+</div>
+
+<form class="floating-labels">
+  <!-- first section -->
+  <section id="section1a">
+    <div class="inner-section">
+      <div class="container-fluid">
+       <div class="row text-center justify-content-center">
+        
+        <div class="col-lg-5 offset-lg-7 col-12 p-4">
+          <img src="assest/img/rtplogo.png" alt="" class="img-fluid top-rtplogo">
+          <img src="assest/img/letstart.jpg" alt="" class="img-fluid">
+          <div class="row">
+            <div class="col-6">
+             <a href="#">
+              <img src="assest/img/startnew.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assest/img/startnew-hover.png'" onmouseout="this.src='assest/img/startnew.png'" onclick="startNew()"> 
+            </a>   
+          </div>
+          <div class="col-6">
+            <a href="#">
+              <img src="assest/img/findsaved.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assest/img/findsaved-hover.png'" onmouseout="this.src='assest/img/findsaved.png'" onclick="findSaved1()">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>  
+  </section>
+  <!-- first section -->
+
+  <!-- first section -->
+  <section id="section1b">
+    <div class="inner-section">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-4 offset-lg-8 col-12">
+            <div class="text-center">
+              <img src="assest/img/rtplogo.png" alt="" class="img-fluid top-rtplogo2 mb-5">
+            </div>
+            <div class="shadow mb-4">
+              <div class="form-group">
+                <label for="s0q1" class="font-weight-bold mb-n2">Your Name</label>
+                <input type="text" class="form-control required" id="s0q1" name="s0q1">
+              </div>
+              <div class="form-group">
+                <label for="s0q2" class="font-weight-bold mb-n2">Email</label>
+                <input type="email" class="form-control required" id="s0q2" name="s0q2">
+              </div>
+
+              <div class="text-center">
+              <a href="#">
+                <img src="assest/img/next.png" class="img-fluid btn-start2" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'" onclick="nextBtn1()"> 
+              </a> 
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>  
+  </section>
+  <!-- first section -->
+
+  <!-- first section -->
+  <section id="section1c">
+    <div class="inner-section">
+      <div class="container text-center">
+        <div class="row">
+          
+          <div class="col-lg-4 offset-lg-8" style="margin-top: 50px;">
+            <img src="assest/img/rtplogo.png" alt="" class="img-fluid top-rtplogo2 mb-5">
+            <div class="shadow mb-4">
+              <p class="lead font-weight-bold">Congrats! You have started your New Patient paperwork!</p>
+              <p class="lead">Please save this PIN <h1 class="font-weight-bold">XXXX</h1>  to be able to gain access to this again. You can save and continue at a later time!</p>
+
+              <a href="#">
+              <img src="assest/img/next.png" class="img-fluid btn-start2" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'" onclick="nextBtn2()"> 
+            </a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div> 
+  </div> 
+  </section>
+  <!-- first section -->
+
+
+  <!-- first section -->
+  <section id="section1d">
+    <div class="inner-section">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-4 offset-lg-8" style="margin-top: 50px;">
+            <div class="text-center">
+            <img src="assest/img/rtplogo.png" alt="" class="img-fluid top-rtplogo2 mb-5"> 
+          </div>
+          <div class="shadow mb-4">
+            <div class="form-group">
+              <label for="s0q3" class="font-weight-bold mb-n2">Email</label>
+              <input type="email" class="form-control required" id="s0q3" name="s0q3">
+            </div>
+
+            <div class="form-group">
+              <label for="s0q4" class="font-weight-bold mb-n2">Pin</label>
+              <input type="text" class="form-control required" id="s0q4" name="s0q4">
+            </div>
+
+            <div class="text-center">
+            <a href="#">
+              <img src="assest/img/findsaved.png" class="img-fluid btn-start2" onmouseover="this.src='assest/img/findsaved-hover.png'" onmouseout="this.src='assest/img/findsaved.png'" onclick="findSaved2()"> 
+            </a> 
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+  </div>  
+  </div>
+  </section>
+  <!-- first section -->
+</form>
+<!-- ======================= new patient form ================================  -->
+<section class="" id="registration-section">
+  <!-- ======================= container ================================  -->
+  <div class="container" id="form-container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1 class="section-heading">New Patient Registration</h1>
+      </div>
+    </div>
+    <!-- ======================= content ================================  -->
+    <div class="card">
+      <div class="card-body">
+        <form class="" method="post" enctype="multipart/form-data" role="form">
+
+          <div class="row">
+            <div class="col-xl-12">
+              <!-- Stepers Wrapper -->
+              <ul class="stepper stepper-vertical">
+                <li class="form-step" id="initial-step">
+                  <a>
+                    <span class="circle" id="step-zero-cirle">0</span>
+                    <span class="label">Form Filled By:</span>
+                  </a>
+
+              <!-- Filler Information -->
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                      <div class="col-xl-12">
+                       <fieldset class="fieldset-outer">
+                        <legend class="custom-legend">Filler Information</legend>
+                        
+                        <div class="row inner-row">
+                          <div class="col-xl-2">
+                            <div class="form-group">
+                              <label for="s1q1" class="font-weight-bold mb-n2">First Name</label>
+                              <P>Shakir Ansari</P>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-3">
+                            <div class="form-group">
+                              <label for="s1q1" class="font-weight-bold mb-n2">Email</label>
+                              <P>Shakir@gmail.com</P>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-2">
+                            <div class="form-group">
+                              <label for="s1q1" class="font-weight-bold mb-n2">Phone</label>
+                              <P>914566650</P>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-3">
+                            <div class="form-group">
+                              <label for="s1q1" class="font-weight-bold mb-n2">Relation to patient</label>
+                              <P>Self</P>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-2">
+                            <div class="form-group">
+                              <label for="s1q1" class="font-weight-bold mb-n2">Pin</label>
+                              <P>WJ3YN4</P>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset> 
+                      </div> 
+                    </div>
+                  </div>
+              <!-- Filler Information -->
+                </li>
+
+                <!-- First Step -->
+                <li class="form-step" id="first-step">
+                  <a>
+                    <span class="circle" id="step-one-cirle">1</span>
+                    <span class="label">Patient Details</span>
+                  </a>
+
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                    <!-- General Information -->
+                      <div class="col-xl-12">
+                       <fieldset class="fieldset-outer">
+                        <legend class="custom-legend">General Information</legend>
+                        <div class="row inner-row">
+
+                          <div class="col-xl-2">
+                            <div class="form-group">
+                              <label for="s1q1" class="font-weight-bold mb-n2">First Name</label>
+                              <h6>Shakir</h6>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-2">
+                            <div class="form-group">
+                              <label for="s1q2" class="font-weight-bold mb-n2">Middle Name</label>
+                              <h6></h6>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-2">
+                              <div class="form-group">
+                              <label for="s1q3" class="font-weight-bold mb-n2">Last Name</label>
+                              <h6>Ansari</h6>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-2">
+                              <div class="form-group">
+                              <label for="s1q4" class="font-weight-bold mb-n2">Date of Birth</label>
+                              <h6>12/07/21</h6>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-2">
+                            <fieldset>
+                              <label for="s1q5" class="font-weight-bold mb-n2">Sex</label>
+                              <h6>Male</h6>
+                          </fieldset>
+                          </div>
+
+                        </div> 
+                       </fieldset> 
+                      </div> 
+                    <!-- General Information -->
+
+                    <!-- Other Information -->
+                      <div class="col-xl-12">
+                        <fieldset class="fieldset-outer">
+                          <legend class="custom-legend">Other Information</legend>
+                          <div class="row inner-row">
+
+                            <div class="col-xl-2">
+                                <div class="form-group">
+                                <label for="s1q6" class="font-weight-bold mb-n2">SSN</label>
+                                <p>2223336655</p>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-2">
+                                <div class="form-group">
+                                  <label for="s1q7" class="font-weight-bold mb-n2">DL/State ID</label>
+                                  <p>FL</p>
+                                </div>
+                            </div> 
+                            
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="s1q8" class="font-weight-bold mb-n2">Race</label>
+                                <p>Black or African American</p>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="s1q9" class="font-weight-bold mb-n2">Ethnicity</label>
+                                <p>Not Hispanic or Latino</p>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-2">
+                              <div class="form-group">
+                                <label for="s1q10" class="font-weight-bold mb-n2">Language</label>
+                                <p>English</p>
+                              </div>
+                            </div>
+                          </div> 
+                        </fieldset> 
+                      </div> 
+                    <!-- Other Information -->
+
+                    <!-- Physical address -->
+                      <div class="col-xl-12">
+                        <fieldset class="fieldset-outer">
+                          <legend class="custom-legend">Physical Address</legend>
+                          <div class="row inner-row">
+
+                            <div class="col-xl-3">
+                                  <div class="form-group">
+                                  <label for="s1q11" class="font-weight-bold mb-n2">Physical Address</label>
+                                  <p>12th St</p>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="s1q12" class="font-weight-bold mb-n2">City</label>
+                                  <p>x city</p>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                                  <div class="form-group">
+                                  <label for="s1q13" class="font-weight-bold mb-n2">State</label>
+                                  <p>FL</p>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                                <div class="form-group">
+                                <label for="s1q14" class="font-weight-bold mb-n2">Zipcode</label>
+                                <p>32651</p>
+                              </div>
+                            </div> 
+
+                          </div> 
+                        </fieldset> 
+                      </div>
+                    <!-- Physical address -->
+
+                    <!-- Mailing address -->
+                      <div class="col-xl-12">
+                        <fieldset class="fieldset-outer">
+                        <legend class="custom-legend">Mailing Information</legend>
+                        <div class="row inner-row">
+
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                              <label for="s1q15" class="font-weight-bold mb-n2">Mailing Address<span class="desktop">(if different from physical address)</span></label>
+                              <p>13th St</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-2">
+                            <div class="form-group">
+                              <label for="s1q16" class="font-weight-bold mb-n2">City</label>
+                              <p>Y city</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-2">
+                            <div class="form-group">
+                              <label for="s1q17" class="font-weight-bold mb-n2">State*</label>
+                              <p>FL</p>
+                              <span id="error_child_state" class="error-span"></span>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-2">
+                            <div class="form-group">
+                              <label for="s1q18" class="font-weight-bold mb-n2">Zipcode</label>
+                              <p>96521</p>
+                            </div>
+                          </div> 
+
+                        </div> 
+                        </fieldset> 
+                      </div>
+                    <!-- Mailing address -->
+
+                    <!-- Contact Information -->
+                      <div class="col-xl-6">
+                        <fieldset class="fieldset-outer">
+                          <legend class="custom-legend">Contact Information</legend>
+                          <div class="row inner-row">
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="s1q19" class="font-weight-bold mb-n2">Home Phone</label>
+                                <p>965541223</p>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="s1q20" class="font-weight-bold mb-n2">Cell Phone</label>
+                                <p>9565474411</p>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-6">
+                              <div class="form-group">
+                                <label for="s1q21" class="font-weight-bold mb-n2">Email</label>
+                                <p>Shakir@gmail.com</p>
+                              </div>
+                            </div> 
+                          </div> 
+                        </fieldset> 
+                      </div>
+                    <!-- Contact Information -->
+
+                    <!-- Marital Status -->
+                      <div class="col-xl-6">
+                      <fieldset class="fieldset-outer">
+                        <legend class="custom-legend">Marital Status</legend> 
+                        <div class="row inner-row">
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="s1q23" class="font-weight-bold mb-n2">Status</label>
+                              <p>Married</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="s1q23" class="font-weight-bold mb-n2">Spouse's Name</label>
+                              <p>Name</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="s1q24" class="font-weight-bold mb-n2">Phone Number</label>
+                              <p>9523655522</p>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                      </div>
+                    <!-- Marital Status -->
+
+                    <!-- Pharmacy Information -->
+                      <div class="col-xl-12">
+                      <fieldset class="fieldset-outer">
+                        <legend class="custom-legend">Pharmacy Information</legend>
+                        <div class="row inner-row">
+                          <div class="col-xl-5">
+                            <div class="form-group">
+                              <label for="s1q25" class="font-weight-bold mb-n2">Name of your pharmacy</label>
+                              <p>X pharmacy</p>
+                            </div>
+                          </div>
+                          <div class="col-xl-5">
+                            <div class="form-group">
+                              <label for="s1q26" class="font-weight-bold mb-n2">Address of your pharmacy</label>
+                              <p>15th St, NY, NY-10001</p>
+                            </div>
+                          </div> 
+                      </div>
+                      </fieldset> 
+                      </div>
+                    <!-- Pharmacy Information -->
+
+                    </div>
+
+                    <!-- Steppers Navigation -->
+                    <div class="row mt-1 btn-box">
+                      <a onclick="saveExit()">
+                        <img src="assest/img/Save & Exit.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/Save & Exit 2.png'" onmouseout="this.src='assest/img/Save & Exit.png'"> 
+                      </a>
+                      <a id="next_step2">
+                        <img src="assest/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'"> 
+                      </a>
+                    </div>
+                    <!-- /.Vertical Steppers -->
+                  </div>
+                </li>
+                <!-- First Step -->
+
+                <!-- second step -->
+                <li class="form-step" id="second-step">
+                  <!-- title -->
+                  <a>
+                    <span class="circle" id="step-second-cirle">2</span>
+                    <span class="label">Emergency Contact <span class="desktop">( Person who does not live in your home)</span></span>
+                  </a>
+
+                  <!-- Section Description -->
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                      <div class="col-xl-12">
+                      <fieldset class="fieldset-outer">
+                        <legend class="custom-legend">Contact Information</legend>
+                        <div class="row inner-row">
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                              <label for="s2q1" class="font-weight-bold mb-n2">Name</label>
+                              <p>Ravi Agrawal</p>
+                            </div>
+                          </div>
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                              <label for="s2q2" class="font-weight-bold mb-n2">Phone Number</label>
+                              <p>9143522255</p>
+                            </div>
+                          </div> 
+                        </div> 
+                      </fieldset> 
+                      </div>
+
+                    </div>
+                    <!-- row -->
+
+                    <!-- Steppers Navigation -->
+                    <div class="row mt-1 btn-box">
+                      <a  onclick="saveExit()">
+                      <img src="assest/img/Save & Exit.png" class="img-fluid back-btn" onmouseover="this.src='assest/img/Save & Exit 2.png'" onmouseout="this.src='assest/img/Save & Exit.png'"> 
+                    </a>
+                    <a id="next_step3">
+                      <img src="assest/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'"> 
+                    </a>
+                  </div>
+                  <!-- /.Vertical Steppers -->
+
+
+                </div>
+                <!-- container -->
+                </li>
+                <!-- second step -->
+
+                <!-- {{-- third step --}} -->
+                <li class="form-step" id="third-step">
+                  <a>
+                    <span class="circle" id="step-third-circle">3</span>
+                    <span class="label">Insurance</span>
+                  </a>
+
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                      <div class="col-xl-12">
+                      <fieldset class="fieldset-outer">
+                        <legend class="custom-legend">Select Type</legend>
+                        <div class="inner-row">
+                          <div class="col-xl-3">
+                            <div class="form-group">
+                              <label for="s3q0o2" class="font-weight-bold mb-n2">Insurance</label>
+                              <P>Insurance 01</P>
+                            </div>
+                          </div>  
+                        </div>
+                      </fieldset> 
+                      </div>
+                      
+                      <div class="col-xl-12" id="insurancetype">
+                        <div class="row">
+
+                          <div class="col-xl-5 ml-2 insurancectnr">
+                            <div class="row">
+                              <fieldset class="fieldset-outer">
+                                <legend class="custom-legend">Primary Insurance Details</legend> 
+                                <div class="row inner-row">
+                                  
+                                  <div class="col-xl-3">
+                                    <div class="form-group">
+                                      <label for="s3q0" class="font-weight-bold mb-n2">Upload ID</label>
+                                      <br>
+                                      <img src="assest/img/481.jpg" width="75" walt="">
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-xl-5">
+                                    <div class="form-group">
+                                      <label for="s3q1" class="font-weight-bold mb-n2">Primary Insurance</label>
+                                      <p>Primary Insurance 01</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-xl-4">
+                                    <div class="form-group">
+                                      <label for="s3q2" class="font-weight-bold mb-n2">Policy Number</label>
+                                      <p>231548654</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-xl-4 offset-3 mt-xl-n5">
+                                    <div class="form-group">
+                                      <label for="s3q3" class="font-weight-bold mb-n2">Group Number</label>
+                                      <p>22556</p>
+                                    </div>
+                                  </div> 
+                                </div>
+                              </fieldset> 
+                            </div> 
+                          </div> 
+
+                          <div class="col-xl-5 ml-2 insurancectnr">
+                            <div class="row">
+                              <fieldset class="fieldset-outer">
+                                <legend class="custom-legend">Secondary Insurance Details</legend>
+                                <div class=" row inner-row">
+                                  
+                                  <div class="col-xl-3">
+                                    <div class="form-group">
+                                      <label for="" class="font-weight-bold mb-n2">Upload ID</label>
+                                      <br>
+                                      <img src="assest/img/481.jpg" width="75" walt="">
+                                    </div>
+                                  </div>
+
+                                  <div class="col-xl-5">
+                                    <div class="form-group">
+                                      <label for="s3q4" class="font-weight-bold mb-n2">Secondary Insurance</label>
+                                      <p>Secondary Insurance 01</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-xl-4">
+                                    <div class="form-group">
+                                      <label for="s3q5" class="font-weight-bold mb-n2">Policy Number</label>
+                                      <p>954642</p>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-xl-4 offset-3 mt-xl-n5">
+                                    <div class="form-group">
+                                      <label for="s3q6" class="font-weight-bold mb-n2">Group Number</label>
+                                      <p>446523</p>
+                                    </div>
+                                  </div> 
+                                </div> 
+                              </fieldset> 
+                            </div> 
+                          </div> 
+
+                        </div> 
+                      </div>
+                    </div>
+                <!-- Steppers Navigation -->
+                <div class="row mt-1 btn-box">
+                  <a onclick="saveExit()">
+                  <img src="assest/img/Save & Exit.png" class="img-fluid back-btn" onmouseover="this.src='assest/img/Save & Exit 2.png'" onmouseout="this.src='assest/img/Save & Exit.png'"> 
+                </a>
+                <a id="next_step4">
+                  <img src="assest/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'"> 
+                </a>
+                </div>
+                <!-- /.Vertical Steppers -->
+
+
+                </div>
+
+                </li>
+                <!-- {{-- third step --}} -->
+
+                <!-- {{-- fourth step --}} -->
+                <li class="form-step" id="fourth-step">
+                  <a>
+                    <span class="circle" id="step-fourth-circle">4</span>
+                    <span class="label">HEALTH QUESTIONNAIRE</span>
+                  </a>
+
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                      <div class="col-xl-12">
+                        <fieldset class="fieldset-outer">
+                          <legend class="custom-legend">Past Medical History</legend> 
+                          <div class="row inner-row">
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">High Blood Pressure</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Heart Disease/Heart attack</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Diabetes</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Stroke</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Cancer</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Thyroid problems</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Asthama</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">COPD/Lung Disease</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">High Cholesterol</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Anemia</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Liver Disease</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Kidney problems</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Migraines</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Alcohol/Drug/Abuse</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Seizures / Epilepsy</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Arthritis</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-5">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Depression/Mental Illness</label>
+                                <h6>Siblings</h6>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-5">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Do you have any Allergies to Medications and reactions</label>
+                                <h6>Yes</h6>
+                              </div>
+                            </div>
+
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+
+                    <!-- Steppers Navigation -->
+                    <div class="row mt-1 btn-box">
+                      <a onclick="saveExit()">
+                        <img src="assest/img/Save & Exit.png" class="img-fluid back-btn" onmouseover="this.src='assest/img/Save & Exit 2.png'" onmouseout="this.src='assest/img/Save & Exit.png'"> 
+                      </a>
+                      <a id="next_step5">
+                        <img src="assest/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'"> 
+                      </a>
+                    </div>
+                    <!-- /.Vertical Steppers -->
+                  </div>
+
+                </li>
+                <!-- {{-- fourth step --}} -->
+
+                <!-- {{-- fifth step --}} -->
+                <li class="form-step" id="fifth-step">
+                  <a>
+                    <span class="circle" id="step-fifth-circle">5</span>
+                    <span class="label">Social History</span>
+                  </a>
+
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                      <div class="col-xl-12">
+                          <div class="row inner-row">
+
+                            <fieldset class="fieldset-outer mt-n4 col-xl-6">
+                              <div class="row inner-row">
+
+                                <div class="col-xl-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Do you smoke?</label>
+                                    <p>No</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">If not, are you a former smoker?</label>
+                                    <p>Yes</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">When did you quit?</label>
+                                    <p>1 Year Ago</p>
+                                  </div>
+                                </div>
+    
+                              </div> 
+                            </fieldset>
+
+                            <fieldset class="fieldset-outer mt-n4 col-xl-6">
+                              <div class="row inner-row">
+    
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Do you use illegal drugs?</label>
+                                    <p>yes</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">If yes, What substance?</label>
+                                    <p>X</p>
+                                  </div>
+                                </div>
+    
+                              </div> 
+                            </fieldset>
+
+                            <fieldset class="fieldset-outer mt-n4 col-xl-6"> 
+                              <div class="row inner-row">
+    
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Do you drink alcohol?</label>
+                                    <p>yes</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">If yes, How many cups a day?</label>
+                                    <p>6</p>
+                                  </div>
+                                </div>
+    
+                              </div>
+                            </fieldset>
+
+                            <fieldset class="fieldset-outer mt-n4 col-xl-6">
+                              <div class="row inner-row">
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Do you drink water?</label>
+                                    <p>Yes</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">If yes, How many cups a day?</label>
+                                    <p>8</p>
+                                  </div>
+                                </div>
+
+                              </div> 
+                            </fieldset>
+                                      
+                            <fieldset class="fieldset-outer mt-n4 col-xl-6">
+                              <div class="row inner-row">
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Do you exercise?</label>
+                                    <p>Yes</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">If yes, How many times a week?</label>
+                                    <p>5</p>
+                                  </div>
+                                </div>
+
+                              </div> 
+                            </fieldset>
+
+                            <fieldset class="fieldset-outer mt-n4 col-xl-6">
+                              <div class="row inner-row">
+
+                                <div class="col-xl-12">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Are you on a low fat diet?</label>
+                                    <p>Yes</p>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </fieldset>
+
+                            <fieldset class="fieldset-outer mt-n4 col-xl-6">
+                              <div class="row inner-row">
+
+                                <div class="col-xl-12">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Have you ever been a victim of abuse?</label>
+                                    <p>No</p>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </fieldset>
+                                      
+                            <fieldset class="fieldset-outer mt-n4 col-xl-6">
+                              <div class="row inner-row">
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Are you currently employed?</label>
+                                    <p>No</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">If No, Please specify reason?</label>
+                                    <p>Semi-retired</p>
+                                  </div>
+                                </div>
+
+                              </div> 
+                            </fieldset>
+                                      
+                            <fieldset class="fieldset-outer mt-n4 col-xl-12">                            
+                              <h6 class="mt-2 text-center font-weight-bold">Past Symptoms</h6>
+                              <div class="row inner-row">
+
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">General</label>
+                                    <p>Weight loss/gain</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Heart</label>
+                                    <p>Swelling in ankles</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Lungs</label>
+                                    <p>Shortness of Breath</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Gastrointestinal</label>
+                                    <p>hange in bowel movements</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Skin</label>
+                                    <p>Change in hair,skin or nail</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Musculoskeletal</label>
+                                    <p>Joint pain/stiffness</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Neurological</label>
+                                    <p>Loss of Sensation</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Psychiatric</label>
+                                    <p>Loss of Sensation</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Eyes</label>
+                                    <p>Glaucoma/Cataracts</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Ears</label>
+                                    <p>Hard of hearing</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Nose</label>
+                                    <p>Sinus Congestion</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Mouth/Throat</label>
+                                    <p>Loss of taste</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Genitourinary</label>
+                                    <p>Painful/frequent urination</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Gynecological Women</label>
+                                    <p>Sexually transmitted disease</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Gynecological Men</label>
+                                    <p>Sexually transmitted disease</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Endocrine</label>
+                                    <p>Heat/Cold intolerance</p>
+                                  </div>
+                                </div>
+    
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Endocrine</label>
+                                    <p>Heat/Cold intolerance</p>
+                                  </div>
+                                </div>
+
+                              </div> 
+                            </fieldset>
+
+                          </div>
+                      </div>
+
+
+                    </div>
+
+                    <!-- Steppers Navigation -->
+                    <div class="row mt-1 btn-box">
+                      <a onclick="saveExit()">
+                        <img src="assest/img/Save & Exit.png" class="img-fluid back-btn" onmouseover="this.src='assest/img/Save & Exit 2.png'" onmouseout="this.src='assest/img/Save & Exit.png'"> 
+                      </a>
+                      <a id="next_step6">
+                        <img src="assest/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'"> 
+                      </a>
+                    </div>
+                    <!-- /.Vertical Steppers -->
+
+                  </div>
+                <!-- {{-- container --}} -->
+
+                </li>
+                <!-- {{-- fifth step --}} -->
+
+                <!-- {{-- sixth step --}} -->
+                <li class="form-step" id="sixth-step">
+                  <a>
+                    <span class="circle" id="step-sixth-circle">6</span>
+                    <span class="label">SCREENING FORM</span>
+                  </a>
+
+                  <div class="step-content container pr-5">
+                    <div class="row">
+
+                      <fieldset class="fieldset-outer mt-n4">
+                        <div class="row inner-row">
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">Do you use any of the following?</label>
+                              <p>Nebulizer</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">Do you use any of the following?</label>
+                              <p>Advanced Directive</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">Do you need aide with walking?</label>
+                              <p>Walker</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">Do you need help with daily living activities?</label>
+                              <p>Yes</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">How are your Vision?</label>
+                              <p>Contact Lenses</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">How are your Hearing?</label>
+                              <p>Good</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">How are your Touch?</label>
+                              <p>Good</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">How are your Taste?</label>
+                              <p>Good</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">How are your Smell?</label>
+                              <p>Good</p>
+                            </div>
+                          </div>
+
+                        </div> 
+                      </fieldset>
+
+                      <fieldset class="fieldset-outer mt-n4">
+                        <div class="row inner-row">
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">Is there any pain that you have most of the time?</label>
+                              <p>Good</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">If yes, where is the pain in your body?</label>
+                              <p>Hand</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">Pain Scale</label>
+                              <p>Severe(9-10)</p>
+                            </div>
+                          </div>
+
+                        </div>
+                      </fieldset>
+                      
+                      <fieldset class="fieldset-outer mt-n4">
+                        <div class="row inner-row">
+
+                          <div class="col-xl-12">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2">Other</label>
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci illum deleniti, saepe nihil ducimus mollitia quisquam, necessitatibus, ratione neque eveniet quas! Odit dignissimos incidunt perspiciatis est corporis asperiores facere possimus!</p>
+                            </div>
+                          </div>
+
+                        </div>
+                      </fieldset>
+
+                    </div>
+
+                    <!-- Steppers Navigation -->
+                    <div class="row mt-1 btn-box">
+                      <a onclick="saveExit()">
+                        <img src="assest/img/Save & Exit.png" class="img-fluid back-btn" onmouseover="this.src='assest/img/Save & Exit 2.png'" onmouseout="this.src='assest/img/Save & Exit.png'"> 
+                      </a>
+                      <a id="next_step7">
+                        <img src="assest/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'"> 
+                      </a>
+                    </div>
+                    <!-- /.Vertical Steppers -->
+
+
+                  </div>
+
+
+                </li>
+                <!-- {{-- sixth step --}} -->
+
+                <!-- {{-- seventh step --}} -->
+                <li class="form-step" id="seventh-step">
+                  <a>
+                    <span class="circle" id="step-seventh-circle">7</span>
+                    <span class="label"><span class="desktop">Please fill in below to the best of your knowledge so we may obtain your</span> medical records.</span>
+                  </a>
+
+
+                  <div class="step-content container pr-5">                  
+                    <Legend class="font-weight-bold text-center mb-5">When was your last:</Legend>
+                    <div class="row">
+                      <div class="col-xl-12">
+                        <div class="row">
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Mammogram</label>
+                                  <p>Abnormal</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Bone Density(DEXA)</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>  
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Colonoscopy / EGD</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>   
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Stool Card</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>   
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Eye Exam</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>    
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Pap Smear</label>
+                                  <p>Abnormal</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>   
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">PSA</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>    
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Stress Test / EKG</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>     
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Labs</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>    
+
+                        </div>
+
+                        <div class="row">
+
+                          <Legend class="font-weight-bold text-center mb-5">Immunization:</Legend>   
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Influenza (FLU) Vaccine</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>   
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Shingles (Zoster) Vaccinee</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div> 
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Pneumonia Vaccine</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Tetanus Vaccine</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>
+
+                          <div class="fieldset-outer mt-n4 ml-2">
+                            <div class="row inner-row">
+
+                              <div class="col-xl-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Tuberculosis (PPD) Test</label>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Date?</label>
+                                  <p>12/21/21</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2">Where?</label>
+                                  <p>X clinic</p>
+                                </div>
+                              </div>
+
+                            </div> 
+                          </div>
+
+                        </div>
+
+                        <div class="row">
+                          <div class="col-xl-6">
+                            <Legend class="font-weight-bold text-center mb-5">Women Only:</Legend>   
+                            <div class="fieldset-outer mt-n4 ml-2">
+                              <div class="row inner-row">
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Date of first day of last menstrual period</label>
+                                    <p>07/20/21</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Number of Pregnancies</label>
+                                    <p>02</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Number of Live Births</label>
+                                    <p>01</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Number of Miscarriages</label>
+                                    <p>01</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-3">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Number of Abortions</label>
+                                    <p>01</p>
+                                  </div>
+                                </div>
+
+                              </div> 
+                            </div> 
+                          </div>
+                          <div class="col-xl-6">
+                            <Legend class="font-weight-bold text-center mb-5">Men Only:</Legend>   
+                            <div class="fieldset-outer mt-n4 ml-2">
+                              <div class="row inner-row">
+
+                                <div class="col-xl-12">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Date of last prostate exam:</label>
+                                    <p>12/21/21</p>
+                                  </div>
+                                </div>
+
+                              </div> 
+                            </div>  
+                          </div>
+  
+                        </div>
+
+                        <div class="table-responsive">
+                          <table class="table table-bordered text-center table-sm">
+                            <tr>
+                              <th>When was your last:</th>
+                              <th>Date?</th>
+                              <th>Where?</th>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <fieldset>
+                                  <legend class="font-weight-bold">Mammogram: <span class="font-weight-normal">Abnormal</span></legend> 
+                                </fieldset>    
+                              </td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Bone Density(DEXA)</td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Colonoscopy / EGD</td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Stool Card</td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Eye Exam</td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <fieldset>
+                                  <legend class="font-weight-bold">Pap Smear: <span class="font-weight-normal">Abnormal</span></legend> 
+                                </fieldset> 
+                              </td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>PSA</td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Stress Test / EKG</td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Labs</td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+
+                        <div><h5 class="font-weight-bold pl-3">Immunization</h5></div>
+                        <div class="col-xl-12">
+                        <div class="table-responsive">
+                          <table class="table table-bordered text-center table-sm">
+                            <tr>
+                              <th>When was your last:</th>
+                              <th>Date?</th>
+                              <th>Where?</th>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                Influenza (FLU) Vaccine
+                              </td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                Shingles (Zoster) Vaccine
+                              </td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                Pneumonia Vaccine
+                              </td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                Tetanus Vaccine
+                              </td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                Tuberculosis (PPD) Test
+                              </td>
+                              <td>
+                                <p>12/22/21</p>
+                              </td>
+                              <td>
+                                <p>X Hospital</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </div> 
+                        </div>
+                      </div>
+
+                      <div class="col-xl-12">
+                        <fieldset class="fieldset-outer">
+                          <legend class="custom-legend">Women Only</legend>
+                          <div class="row inner-row">
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                              <label for="s7q3a" class="font-weight-bold mb-n2">Date of first day of last menstrual period</label>
+                              <p>12/21/21</p>
+                            </div>
+                          </div>
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                              <label for="s7q3b" class="font-weight-bold mb-n2">Number of Pregnancies</label>
+                              <p>02</p>
+                            </div>
+                          </div>
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                              <label for="s7q3c" class="font-weight-bold mb-n2">Number of Live Births</label>
+                              <p>01</p>
+                            </div>
+                          </div>
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                              <label for="s7q3d" class="font-weight-bold mb-n2">Number of Miscarriages</label>
+                              <p>01</p>
+                            </div>
+                          </div>
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                              <label for="s7q3e" class="font-weight-bold mb-n2">Number of Abortions</label>
+                              <p>01</p>
+                            </div>
+                          </div> 
+                        </div> 
+                        </fieldset>
+                      </div>
+
+                      <div class="col-xl-12">
+                        <fieldset class="fieldset-outer">
+                        <legend class="custom-legend">Men Only</legend>
+                        <div class="row inner-row">
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                              <label for="s7q4a" class="font-weight-bold mb-n2">Date of last prostate exam:</label>
+                              <p>12/21/21</p>
+                            </div>
+                          </div> 
+                        </div> 
+                      </fieldset>
+                      </div>
+
+                    </div>
+
+                    <!-- Steppers Navigation -->
+                    <div class="row mt-1 btn-box">
+                      <a onclick="saveExit()">
+                        <img src="assest/img/Save & Exit.png" class="img-fluid back-btn" onmouseover="this.src='assest/img/Save & Exit 2.png'" onmouseout="this.src='assest/img/Save & Exit.png'"> 
+                      </a>
+                      <a id="next_step8">
+                        <img src="assest/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'"> 
+                      </a>
+                    </div>
+                    <!-- /.Vertical Steppers -->
+
+                  </div>
+                </li>
+                <!-- {{-- seventh step --}} -->
+
+                <!-- {{-- eighth step --}} -->
+                <li class="form-step" id="eighth-step">
+                  <a>
+                    <span class="circle" id="step-eighth-step">8</span>
+                    <span class="label">Previous Providers<span class="desktop">/ Specialists</span></span>
+                  </a>
+
+                  <div class="step-content container pr-5">
+                    <div class="row">
+
+                    <div class="col-xl-12 mb-4">
+                      <h5><b>(Note: If you need referrals in the future, you need to identify your doctors here)</b></h5>
+                    </div>
+
+                    <div class="col-xl-3">
+                      <div class="form-group">
+                        <label for="s8q1" class="font-weight-bold mb-n2"><b>1)</b> Physician / Specialist Name</label>
+                        <p>Heather</p>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-2">
+                      <div class="form-group">
+                        <label for="s8q2" class="font-weight-bold mb-n2">Speciality</label>
+                        <p>Phycisian</p>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-2">
+                      <div class="form-group">
+                        <label for="s8q3" class="font-weight-bold mb-n2">Address</label>
+                        <p>15th St</p>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-2">
+                      <div class="form-group">
+                        <label for="s8q4" class="font-weight-bold mb-n2">City</label>
+                        <p>New York</p>
+                      </div>
+                    </div>
+                    
+                    <div class="col-xl-2">
+                      <div class="form-group">
+                        <label for="s8q5" class="font-weight-bold mb-n2">State*</label>
+                        <p>NY</p>
+                        <span id="error_child_state" class="error-span"></span>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-2">
+                      <div class="form-group">
+                        <label for="s8q6" class="font-weight-bold mb-n2">Zipcode</label>
+                        <p>10001</p>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-2">
+                      <div class="form-group">
+                        <label for="s8q7" class="font-weight-bold mb-n2">Phone</label>
+                        <p>9654565588</p>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-2">
+                      <div class="form-group">
+                        <label for="s8q8" class="font-weight-bold mb-n2">Fax</label>
+                        <p>9511595588</p>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-12" id="phydetail" style="display: none">
+                    <div class="row">
+                      <div class="col-xl-4">
+                        <div class="form-group">
+                          <label for="s8q9" class="font-weight-bold mb-n2"><b>2)</b> Physician / Specialist Name</label>
+                          <input type="text" class="form-control optional" id="s8q9" name="s8q9">
+                        </div>
+                      </div>
+                      <div class="col-xl-4">
+                        <div class="form-group">
+                          <label for="s8q10" class="font-weight-bold mb-n2">Speciality</label>
+                          <input type="text" class="form-control optional" id="s8q10" name="s8q10">
+                        </div>
+                      </div>
+                      <div class="col-xl-4">
+                        <div class="form-group">
+                          <label for="s8q11" class="font-weight-bold mb-n2">Address</label>
+                          <input type="text" class="form-control optional" id="s8q11" name="s8q11">
+                        </div>
+                      </div>
+                      <div class="col-xl-4">
+                        <div class="form-group">
+                          <label for="s8q12" class="font-weight-bold mb-n2">City</label>
+                          <input type="text" class="form-control optional" id="s8q12" name="s8q12">
+                        </div>
+                      </div>
+                      <div class="col-xl-4">
+                        <div class="form-group">
+                          <label for="s8q13" class="font-weight-bold mb-n2">State*</label>
+                          <select class="form-control optional" name="s8q13" id="s8q13">
+                            <option></option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkanas">Arkanas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Lowa">Lowa</option>
+                            <option value="Kankas">Kankas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="Washington, D.C.(DC)">Washington, D.C.(DC)</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                          </select>
+                          <span id="error_child_state" class="error-span"></span>
+                        </div>
+                      </div>
+                      <div class="col-xl-4">
+                        <div class="form-group">
+                          <label for="s8q14" class="font-weight-bold mb-n2">Zipcode</label>
+                          <input type="text" class="form-control optional" id="s8q14" name="s8q14">
+                        </div>
+                      </div>
+                      <div class="col-xl-6">
+                        <div class="form-group">
+                          <label for="s8q15" class="font-weight-bold mb-n2">Phone</label>
+                          <input type="tel" class="form-control optional" id="s8q15" name="s8q15">
+                        </div>
+                      </div>
+                      <div class="col-xl-6">
+                        <div class="form-group">
+                          <label for="s8q16" class="font-weight-bold mb-n2">Fax</label>
+                          <input type="tel" class="form-control optional" id="s8q16" name="s8q16">
+                        </div>
+                      </div> 
+                    </div> 
+                    </div>
+
+                  <div class="col-xl-12 text-center">
+                    <button type="button" class="btn btn-primary btn-minus" onclick="document.getElementById('phydetail').style.display='none'">-</button>
+                    <button type="button" class="btn btn-primary btn-add" onclick="document.getElementById('phydetail').style.display='block'">+</button> 
+                  </div>
+
+
+                    </div>
+
+
+                    <!-- Steppers Navigation -->
+                    <div class="row mt-1 btn-box">
+                      <a onclick="saveExit()">
+                        <img src="assest/img/Save & Exit.png" class="img-fluid back-btn" onmouseover="this.src='assest/img/Save & Exit 2.png'" onmouseout="this.src='assest/img/Save & Exit.png'"> 
+                      </a>
+                      <a id="next_step9">
+                      <img src="assest/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'"> 
+                      </a>
+                    </div>
+                    <!-- /.Vertical Steppers -->
+                  </div>
+
+
+                </li>
+                <!-- {{-- eightj step --}} -->
+
+                <!-- {{-- ninth step --}} -->
+                <li class="form-step" id="ninth-step">
+                  <a>
+                    <span class="circle" id="step-ninth-circle">9</span>
+                    <span class="label">E- PRESCRIBING<span class="desktop"> / MEDICATION HISTORY</span> CONSENT FORM</span>
+                  </a>
+
+                  <div class="step-content container pr-5">
+                    <div class="row">
+
+                      <div class="col-xl-12 mb-4">
+                        <small>E- Prescribing is defined as a physician’s ability to electronically send an accurate, error free,
+                          and understandable prescription directly to a pharmacy from the point of care. Congress has
+                          determined that the ability to electronically send prescriptions is an important element in
+                          improving the quality of patient care. E-Prescribing greatly reduces medication errors and
+                          enhances patient safety. The Medicare Modernization Act (MMA) of 2003 listed standards that
+                        have to be included in an ePrescribe program. These include</small>
+                        <small>By signing this consent you are agreeing that West Orlando Internal Medicine can request and
+                          use your prescription medication history from other healthcare providers and/ or third party
+                        pharmacy benefit payors for treatment purposes</small>
+                        <ol style="padding-left: 0px;">
+                          <li>
+                            <small>
+                              Formulary and benefit transactions - Gives the prescriber information about which drugs are covered by the drug benefit plan.
+                            </small>
+                          </li>
+
+                          <li>
+                            <small>
+                              Medication History Transaction- Provides the physician with information about medications the patient is already taking to minimize the number of adverse drug events.
+                            </small>
+                          </li>
+
+                          <li>
+                            <small>
+                              Fill status notification - Allows the prescriber to receive an electronic notice from the pharmacy telling them if 
+                              the patient prescription has been picked up, not picked up, or
+                              partially filled                              
+                            </small>
+                          </li> 
+                        </ol>
+                        <small class="mt-3">
+                            Understanding all of the above, I hereby provide informed consent to West Orlando Internal
+                            Medicine to enroll me in the E-Prescribing Program. I have had the chance to ask questions and
+                            all of my questions have been answered to my satisfaction.
+                        </small> 
+                      </div>
+
+                      <div class="col-xl-6">
+                        <div class="row">
+
+                          <div class="col-xl-12">
+                            <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Signee Info</legend>
+                              <div class="row inner-row">
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="s9q1" class="font-weight-bold mb-n2">Patient Name (Please Print)</label>
+                                    <p>Shakir Ansari</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-4">
+                                  <div class="form-group">
+                                    <label for="s9q2" class="font-weight-bold mb-n2">Date of Birth</label>
+                                    <p>12/21/98</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-4">
+                                  <div class="form-group">
+                                    <label for="s9q4" class="font-weight-bold mb-n2">Your Name</label>
+                                    <p>Shakir Ansari</p>
+                                  </div>
+                                </div> 
+
+                                <div class="col-xl-4">
+                                  <div class="form-group">
+                                    <label for="s9q4" class="font-weight-bold mb-n2">Relationship</label>
+                                    <p>Self</p>
+                                  </div>
+                                </div> 
+
+                              </div> 
+                            </fieldset> 
+                          </div> 
+
+                        </div> 
+                      </div>
+
+                      <div class="col-xl-6">
+                        <label for="s9q1" class="font-weight-bold mb-n2">Signature</label>
+                        <img src="assest/img/sign.png" alt="" width="500">
+                      </div>
+
+                    </div>
+
+                    <!-- Steppers Navigation -->
+                    <div class="row mt-1 btn-box">
+                      <a onclick="saveExit()">
+                        <img src="assest/img/Save & Exit.png" class="img-fluid back-btn" onmouseover="this.src='assest/img/Save & Exit 2.png'" onmouseout="this.src='assest/img/Save & Exit.png'"> 
+                      </a>
+                      <a id="next_step10">
+                      <img src="assest/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'"> 
+                      </a>
+                    </div>
+                    <!-- /.Vertical Steppers -->
+
+                  </div>
+                <!-- {{-- container --}} -->
+                </li>
+                <!-- {{-- ninth step --}} -->
+
+                <!-- {{-- tenth step --}} -->
+                <li class="form-step" id="tenth-step">
+                  <a>
+                    <span class="circle" id="step-tenth-circle">10</span>
+                    <span class="label">FINANCIAL POLICY</span>
+                  </a>
+
+                  <div class="step-content container pr-5">
+                    <div class="row">
+
+                      <div class="col-xl-12">
+                        <p>In order for us to be able to continue to deliver high quality of care, it is necessary to provide a financial policy.<b>PLEASE READ ALL
+                        INFORMATION AND ACKNOWLEDGE BY SIGNING BELOW.</b></p>
+
+                        <p>Please present your insurance card(s) at each visit. It is your responsibility to provide us with the correct information so
+                        that we may submit to your insurance</p>
+
+                        <p>We will collect your deductible, co-payment, or for non-covered services along with any balance due after insurance on
+                        your account at the time of your visit. We accept cash, checks, Visa, Mastercard, and Discover.</p>
+
+                        <small>If we do not participate with your insurance, we will file your claim as a courtesy and ask that you follow up to make sure
+                          payment is made to us in a timely manner. If we do not receive payment from them within 45 days, you will be billed for
+                          any unpaid balance. Balances are expected to be paid in full within 30 days. If payment on your account is not received in
+                          the alloted time, your account may be referred to a collection agency and reported to the credit bureau. We will assess a
+                          1% monthly interest charge on unpaid balances over 60 days old.<br><b>COLLECTION AGENCIES-</b> In the event your account becomes delinquent and is turned over to a collection agency
+                          and/or attorney you will be financially responsible for all associated collection fees and legal fees that West Orlando
+                          Internal Medicine, LLC incurs through the process utilized to collect the delinquent balance. Please be advised if your
+                          account is turned over to a collection agency you can be discharged from the practice.<br><b>RETURNED CHECKS-</b> Check returned to West Orlando Internal Medicine by the bank will be assessed a returned check
+                          fee, in addition to the original amount of the check. You have ten days (10) to clear up the outstanding check. If you do not
+                          pay the check plus the returned check fee in the specified time, the check will be sent to the State Attorney's office for
+                        further collection.</small>
+
+                        <small><b>MEDICARE PATIENTS-</b> We are participating providers with Medicare and we will submit to Medicare for all your covered
+                          services. If you have supplemental insurance, we will also submit that for you. If payment is not received within 30 days of
+                          being submitted, we will ask you for the balance due. If you do not have a supplemental insurance, your portion (20% of
+                          amount allowed by Medicare) will be collected at each time of service. Each yea you will be expected to pay the allowed
+                        amount of your charges until your Medicare deductible is met</small>
+
+                        <small><b>MEDICAID PATIENTS-</b> We are not participating providers with straight Medicaid. We ask that you pay for your services at
+                        the time of each visit. We are participating with Wellcare-Medicaid</small>
+
+                        <small><b>HMO-PPO PATIENTS-</b> If we participate with your plan, we will submit your services to the insurance for you. Your
+                          co-payment will be collected at the time of service- no exceptions- If your plan requires you to choose a primary care
+                          physician, it is your responsibility to make sure you contact your insurance carrier and assign Dr. Osama Ansari as your
+                          PCP. If your plan requires you to have an authorization to see a specialist, you will need to obtain that from our office prior
+                          to seeing the specialist. We cannot obtain retroactive referrals. If we do not participate with your plan, we will verify your
+                          out of network benefits, file your services, and we expect payment of your portion of the services at the time they are
+                        rendered.</small>
+
+                        <small><b>SELF-PAY PATIENTS-</b> Patients without insurance coverage will be expected to pay at the time of services, If you are
+                        unable to pay in full, you must contact our credit manager prior to seeing the doctor to make a payment arrangement</small>
+
+                        <small><b>NO SHOWS / MISSED APPOINTMENTS/ LAST MINUTE CANCELLATION OR RESCHEDULE-</b> Providers and staff of
+                          West Orlando Internal Medicine, LLC rely on the pre-scheduled appointments and plan their day to day activities. Last
+                          minute reschedules or cancellations and no-shows disrupt the daily activities and also curtall the ability to schedule
+                          another patient in your pre-scheduled slot. If you have to cancel or reschedule your appointment, please provide us with at
+                          least 48 hour notice. Therefore any appointments cancelled without proper notice or any missed appointment will result in
+                        a fee of $25.00.</small>   
+
+                        <small>Remember, whether you have insurance or not, you are ultimately financially responsible for payment of your services. If you have
+                        any questions regarding our financial policy please contact our office manager at 407.338.3939.</small>
+
+                      </div>
+
+                      <div class="col-xl-12 mb-4">
+                        <small>I have read and acknowledge the financial policy at West Orlando Internal Medicine.</small>
+                        <small>I hereby authorize my insurance carrier, attorney or any third-party to pay directly to West Orlando Internal Medicine (WOIM) all charges submitted for services incurred by me. I understand I will be responsible for any and charges not paid for by my insurance company. I authorize West Orlando Internal Medicine to release information concerning my medical condition to my insurance company, employer, hospital, physician or attorney for the purpose of processing a claim. I assign payment directly to the providers at WOIM which may be due for me from the Medicare program or any other insurance company, including supplemental insurance, which may cover in whole or in part medical services which I have received. This authorization and assignment shall be valid until I notify West Orlando Internal Medicine in writing of the cancellation. A photocopy of this authorization shall be valid as the original copy.</small> 
+                      </div>
+
+                      <div class="col-xl-6">
+                        <div class="row">
+
+                          <div class="col-xl-12">
+                            <fieldset class="fieldset-outer">
+                              <legend class="custom-legend">Signee information</legend>
+                              <div class="row inner-row">
+
+                                    <div class="col-xl-6">
+                                      <div class="form-group">
+                                      <label for="s10q2" class="font-weight-bold mb-n2">Patient Name</label>
+                                      <p>Shankir Ansari</p>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-xl-4">
+                                      <div class="form-group">
+                                      <label for="s10q1" class="font-weight-bold mb-n2">Date</label>
+                                      <p>12/21/98</p>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-xl-4">
+                                      <div class="form-group">
+                                      <label for="s10q3" class="font-weight-bold mb-n2">Your Name</label>
+                                      <p>Shakir Ansari</p>
+                                    </div>
+                                    </div> 
+
+                                    <div class="col-xl-4">
+                                      <div class="form-group">
+                                      <label for="s10q3" class="font-weight-bold mb-n2">Relationship</label>
+                                      <p>Self</p>
+                                    </div>
+                                    </div> 
+                              </div> 
+                            </fieldset> 
+                          </div>
+
+                         </div> 
+                      </div>
+
+                      <div class="col-xl-6">
+                        <label for="s10q3" class="font-weight-bold mb-n2">Signature</label>
+                        <img src="assest/img/sign.png" width="500" alt="">
+                      </div>
+
+
+                    </div>
+
+                    <!-- Steppers Navigation -->
+                    <div class="row mt-1 btn-box">
+                      <a onclick="saveExit()">
+                        <img src="assest/img/Save & Exit.png" class="img-fluid back-btn" onmouseover="this.src='assest/img/Save & Exit 2.png'" onmouseout="this.src='assest/img/Save & Exit.png'"> 
+                      </a>
+                      <a id="next_step11">
+                      <img src="assest/img/next.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'"> 
+                      </a>
+                    </div>
+                    <!-- /.Vertical Steppers -->
+
+                  </div>
+
+                </li>
+                <!-- {{-- tenth step --}} -->
+
+                <!-- {{-- eleven step --}} -->
+                <li class="form-step active" id="eleventh-step">
+                  <a>
+                    <span class="circle" id="step-eleventh-circle">11</span>
+                    <span class="label">HIPAA NOTICE<span class="desktop"> OF PRIVACY PRACTICES</span></span>
+                  </a>
+
+                  <div class="step-content container pr-5">
+                    <div class="row">
+
+                      <div class="col-xl-12 mb-4">
+                        <small>My signature on this document acknowledges that I have read the West Orlando Internal Medicine, LLC HIPAA Notice of Privacy Practices.</small>
+
+                        <div class="col-xl-12 text-center">
+                          <h5><b>LIFETIME AUTHORIZATION</b></h5>
+                          <small>INSURANCE ASSIGNMENTS AND AUTHORIZATION TO RELEASE INFORMATION</small>  
+                        </div>
+
+                        <small><b>RELEASE OF INFORMATION -</b> I, the below named patient, do hereby authorize any physicians examining and/or treating me to
+                          release any third payer (such as an insurance company or governmental agencies, ie Blue Cross Blue Shield of Florida) any
+                          medical, psychiatric condition, alcohol or drug related condition and any records concerning diagnosis and treatment when
+                        requested by such third party for its use in connection with determining a claim for payment for such treatment and/or diagnosis.</small>
+
+                        <small><b>PHYSICIAN INSURANCE ASSIGNMENT -</b> I, the below named subscriber, hereby authorize payment directly to any physician
+                          examining or treating ,e or any group and /or individual surgical and/ or medical benefits herein specified and otherwise payable to
+                        me for the services as described but not to exceed the reasonable and customary charge for theses services.</small>
+
+                        <small><b>MEDICARE/MEDICAID -</b> Patient’s certification authorization to release information and payment request. I certify that the information
+                          given by me in applying for my payment under Title XVIII XIX of the Social Security Act is correct. I authorize any holder of medical
+                          or other information about meto release to Social Security Administration Division of Family Services or its intermediaries or carries
+                          and information needed for this or a related Medicare/Medicaid claim. I hereby certify all insurance pertaining to treatment shall be
+                        assigned to the physician treating me.</small>
+
+                        <small><b>PERMIT A COPY OF THIS AUTHORIZATION AND ASSIGNMENTS TO BE USED IN PLACE OF THE ORIGINAL WHICH IS ON
+                        FILE AT THE PHYSICIAN'S OFFICE.</b> The assignment will remain in effect until revoked by me in writing.</small>
+
+                        <small><b>CONSENT FOR TREATMENT -</b> I, the below named patient hereby give my consent for treatment to all physicians associated with
+                        West Orlando Internal Medicine, LLC</small>
+
+                        <small><b>CONSENT TO DISCUSS MEDICALCONDITION OR RELEASE RECORDS -</b> I, the below names patient, do hereby authorize West
+                        Orlando Medicine, LLC to discuss my medical conditions with, or release my medical records to the below named person (s):</small>   
+
+                      </div>
+
+                      <div class="col-xl-12">
+                        <fieldset class="fieldset-outer">
+                          <legend class="custom-legend">Contact Information</legend>
+                          <div class="row inner-row">
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="s11q1" class="font-weight-bold mb-n2">Name</label>
+                                  <p>Shakir Ansari</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="s11q2" class="font-weight-bold mb-n2">Phone</label>
+                                  <p>9513215665</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="s11q2" class="font-weight-bold mb-n2">Relationship</label>
+                                  <p>Self</p>
+                                </div>
+                              </div>
+                          </div> 
+                        </fieldset> 
+                      </div>
+                      
+                      <div class="col-xl-12 text-center">
+                        <button type="button" class="btn btn-primary btn-minus"onclick="document.getElementById('stepeleven').style.display='none'">-</button>
+                        <button type="button" class="btn btn-primary btn-add" onclick="document.getElementById('stepeleven').style.display='block'">+</button> 
+                      </div>
+                    </div>
+
+                    <!-- Steppers Navigation -->
+                    <div class="row mt-1 btn-box">
+                      <a onclick="saveExit()">
+                        <img src="assest/img/Save & Exit.png" class="img-fluid back-btn" onmouseover="this.src='assest/img/Save & Exit 2.png'" onmouseout="this.src='assest/img/Save & Exit.png'"> 
+                      </a>
+                      <a id="btn-finish" onclick="submitForm()">
+                        <img src="assest/img/se.png" class="img-fluid next-btn" onmouseover="this.src='assest/img/sehover.png'" onmouseout="this.src='assest/img/se.png'"> 
+                      </a>
+                    </div>
+                    <!-- /.Vertical Steppers -->
+
+
+                  </div>
+
+                </li>
+                <!-- {{-- eleventh step --}} -->
+
+              </ul>
+              <!-- /.Stepers Wrapper -->
+            </div>
+          </div>
+        </form>
+        </div>
+    </div>
+    <!-- ======================= content ================================  -->
+  </div> 
+  <!-- ======================= container ================================  -->
+</section>
+<!-- ======================= new patient form ================================  -->
+
+<section class="pb-3" id="confirmation">
+ <div class="container-fluid" style="background: rgba(255,255,255,0.6);">
+  
+  <div class="row px-5 pt-3 mt-5" id="confirm1" style="display: none;">
+   <div class="col-xl-6 offset-xl-3 shadow text-center pb-5">
+    <img src="assest/img/check.png" class="img-fluid check-img"> 
+    <h2 class="font-weight-bold mt-4 mb-4">Congrats! You have successfully completed your New Patient paperwork!</h2>
+    <img src="assest/img/rtplogo.png" class="img-fluid" id="check-logo">
+    <div><button type="button" class="btn btn-success next-step mt-5" onclick="nextStep()">Next steps<i class="fas fa-arrow-right ml-2 pt-2"></i></button></div>
+  </div>
+</div>
+
+<div class="row px-5 pt-3 mt-5" id="confirm3" style="display: none">
+   <div class="col-xl-6 offset-xl-3 shadow text-center pb-5">
+    <img src="assest/img/check.png" class="img-fluid check-img"> 
+    <h5 class="font-weight-bold mt-4 mb-4">You have Saved and Exited your new patient paperwork.</h5>
+    <h5 class="font-weight-bold mt-4 mb-4">Remember you can start again anytime with the PIN you received in the beginning.</h5>
+    <img src="assest/img/rtplogo.png" class="img-fluid" id="check-logo">
+    <div><button type="button" class="btn btn-success mt-5 mr-3 font-weight-bold" onclick="letStart()">Let's Complete</button><button type="button" class="btn btn-success mt-5 font-weight-bold" onclick="doLater()" style="background-color: #FF621F !important;">Do it Later</button></div>
+  </div>
+</div>
+
+<div class="row" id="confirm2" style="display: none">
+ <div class="col-xl-6 offset-xl-3 shadow text-center">
+  <div class="row justify-content-center">
+   <div class="col-xl-12 text-center shadow2 mb-5 mx-3">
+    <h3 class="font-weight-bold"><i class="fas fa-receipt mr-2"></i>Authorization Release</h3>
+    <p class="lead">Please send fill out an authorization form for all the practices we need to request your records from.</p>
+    <button type="button" class="btn btn-success">Let's start</button> 
+  </div>
+  <div class="col-xl-12 text-center shadow2 mx-3">
+    <h3 class="font-weight-bold"><i class="far fa-calendar-alt mr-2"></i>Book Appointment</h3>
+    <p class="lead">Have you scheduled an appointment yet?</p> 
+    <button type="button" class="btn btn-success">Let's start</button>
+  </div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section>
+
+
+
+<script type="text/javascript" src="assest/js/jquery-3.5.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="assest/js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="assest/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="assest/js/custom.js"></script>
+<script type="text/javascript" src="assest/js/progress.js"></script>
+<script type="text/javascript" src="assest/js/mask.js"></script>
+<script type="text/javascript" src="assest/js/register.js"></script>
+<script type="text/javascript" src="assest/js/signature/bezier.js"></script>
+<script type="text/javascript" src="assest/js/signature/jquery.signaturepad.js"></script>
+<script type="text/javascript" src="assest/js/signature/json2.min.js"></script>
+<script type="text/javascript" src="assest/js/signature/numeric.min.js"></script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+<script>
+  $(document).ready(function() {
+    $('#smoothed1').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    $('#smoothed2').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    $('#smoothed3').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    $('#smoothed4').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    $('#smoothed5').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    $('#smoothed6').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+  });
+</script>
+</body>
+</html>
