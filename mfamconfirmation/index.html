@@ -12,7 +12,6 @@
   <link href="assest/css/bootstrap.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="assest/css/register.css" rel="stylesheet">
-  <link href="assest/css/progress.css" rel="stylesheet">
   <link href="assest/css/mdb.min.css" rel="stylesheet">
   <link href="assest/css/typography.css" rel="stylesheet">
   <link href="assest/css/signature/jquery.signaturepad.css" rel="stylesheet">
@@ -197,148 +196,9 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbar-menu">
- <div class="progress blue" id="progress">
-  <span class="progress-left">
-    <span class="progress-bar"></span>
-  </span>
-  <span class="progress-right">
-    <span class="progress-bar"></span>
-  </span>
-  <div class="progress-value"><span id="progress-value">0</span>%</div>
-</div>
 
-<form class="floating-labels">
-  <!-- first section -->
-  <section id="section1a">
-    <div class="inner-section">
-      <div class="container-fluid">
-       <div class="row text-center justify-content-center">
-        
-        <div class="col-lg-5 offset-lg-7 col-12 p-4">
-          <img src="assest/img/rtplogo.png" alt="" class="img-fluid top-rtplogo">
-          <img src="assest/img/letstart.jpg" alt="" class="img-fluid">
-          <div class="row">
-            <div class="col-6">
-             <a href="#">
-              <img src="assest/img/startnew.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assest/img/startnew-hover.png'" onmouseout="this.src='assest/img/startnew.png'" onclick="startNew()"> 
-            </a>   
-          </div>
-          <div class="col-6">
-            <a href="#">
-              <img src="assest/img/findsaved.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assest/img/findsaved-hover.png'" onmouseout="this.src='assest/img/findsaved.png'" onclick="findSaved1()">
-            </a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    
-  </div>
-</div>  
-  </section>
-  <!-- first section -->
-
-  <!-- first section -->
-  <section id="section1b">
-    <div class="inner-section">
-      <div class="container">
-        <div class="row">
-          
-          <div class="col-lg-4 offset-lg-8 col-12">
-            <div class="text-center">
-              <img src="assest/img/rtplogo.png" alt="" class="img-fluid top-rtplogo2 mb-5">
-            </div>
-            <div class="shadow mb-4">
-              <div class="form-group">
-                <label for="s0q1" class="font-weight-bold mb-n2">Your Name</label>
-                <input type="text" class="form-control required" id="s0q1" name="s0q1">
-              </div>
-              <div class="form-group">
-                <label for="s0q2" class="font-weight-bold mb-n2">Email</label>
-                <input type="email" class="form-control required" id="s0q2" name="s0q2">
-              </div>
-
-              <div class="text-center">
-              <a href="#">
-                <img src="assest/img/next.png" class="img-fluid btn-start2" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'" onclick="nextBtn1()"> 
-              </a> 
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      
-      
-    </div>
-  </div>  
-  </section>
-  <!-- first section -->
-
-  <!-- first section -->
-  <section id="section1c">
-    <div class="inner-section">
-      <div class="container text-center">
-        <div class="row">
-          
-          <div class="col-lg-4 offset-lg-8" style="margin-top: 50px;">
-            <img src="assest/img/rtplogo.png" alt="" class="img-fluid top-rtplogo2 mb-5">
-            <div class="shadow mb-4">
-              <p class="lead font-weight-bold">Congrats! You have started your New Patient paperwork!</p>
-              <p class="lead">Please save this PIN <h1 class="font-weight-bold">XXXX</h1>  to be able to gain access to this again. You can save and continue at a later time!</p>
-
-              <a href="#">
-              <img src="assest/img/next.png" class="img-fluid btn-start2" onmouseover="this.src='assest/img/next-hover.png'" onmouseout="this.src='assest/img/next.png'" onclick="nextBtn2()"> 
-            </a>
-          </div>
-          
-        </div>
-      </div>
-      
-    </div> 
-  </div> 
-  </section>
-  <!-- first section -->
-
-
-  <!-- first section -->
-  <section id="section1d">
-    <div class="inner-section">
-      <div class="container">
-        <div class="row">
-          
-          <div class="col-lg-4 offset-lg-8" style="margin-top: 50px;">
-            <div class="text-center">
-            <img src="assest/img/rtplogo.png" alt="" class="img-fluid top-rtplogo2 mb-5"> 
-          </div>
-          <div class="shadow mb-4">
-            <div class="form-group">
-              <label for="s0q3" class="font-weight-bold mb-n2">Email</label>
-              <input type="email" class="form-control required" id="s0q3" name="s0q3">
-            </div>
-
-            <div class="form-group">
-              <label for="s0q4" class="font-weight-bold mb-n2">Pin</label>
-              <input type="text" class="form-control required" id="s0q4" name="s0q4">
-            </div>
-
-            <div class="text-center">
-            <a href="#">
-              <img src="assest/img/findsaved.png" class="img-fluid btn-start2" onmouseover="this.src='assest/img/findsaved-hover.png'" onmouseout="this.src='assest/img/findsaved.png'" onclick="findSaved2()"> 
-            </a> 
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    
-    
-  </div>  
-  </div>
-  </section>
-  <!-- first section -->
-</form>
 <!-- ======================= new patient form ================================  -->
-<section class="" id="registration-section">
+<section class="" id="registration-section" style="display: block;">
   <!-- ======================= container ================================  -->
   <div class="container" id="form-container">
     <div class="row justify-content-center">
@@ -2104,9 +1964,7 @@
 <script type="text/javascript" src="assest/js/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="assest/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="assest/js/custom.js"></script>
-<script type="text/javascript" src="assest/js/progress.js"></script>
+<!-- <script type="text/javascript" src="assest/js/progress.js"></script> -->
 <script type="text/javascript" src="assest/js/mask.js"></script>
 <script type="text/javascript" src="assest/js/register.js"></script>
 <script type="text/javascript" src="assest/js/signature/bezier.js"></script>
