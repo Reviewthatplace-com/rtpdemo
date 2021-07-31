@@ -5,18 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>MFAM1</title>
+  <title>MFAM1 | New Patient Form</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <link href="assest/css/bootstrap.min.css" rel="stylesheet">
   <link href="assest/css/register.css" rel="stylesheet">
-  <link href="assest/css/mdb.min.css" rel="stylesheet">
   <link href="assest/css/typography.css" rel="stylesheet">
   <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
   <style type="text/css">
-    section
-    {
-      display: none;
-    }
     ul.stepper li .btn-box a
     {
       padding: 0.8rem !important;
@@ -192,7 +187,6 @@
   font-size: 30px !important;
 } */
 
-
   </style> 
 </head>
 
@@ -212,12 +206,10 @@
       <div class="card-body">
         <form class="" method="post" enctype="multipart/form-data" role="form">
           <div class="row">
-            <div class="col-sm-12">
-              <!-- Stepers Wrapper -->
-              <ul class="stepper stepper-vertical">
-
+            <div class="col-sm-12 stepper stepper-vertical">
+              
                 <!-- Initial Step -->
-                <li class="form-step active" id="initial-step">
+                <section class="form-step active" id="initial-step">
                   <a>
                     <span class="circle" id="step-zero-cirle">0</span>
                     <span class="label">Form Filled By:</span>
@@ -228,7 +220,7 @@
                     <div class="row">
                       <div class="col-sm-12">
                        <fieldset class="fieldset-outer">
-                        <legend class="custom-legend">Filler Information</legend>
+                        <legend class="custom-legend text-center">Filler Information</legend>
                         
                         <div class="row inner-row">
                           <div class="col-sm-2">
@@ -271,11 +263,11 @@
                     </div>
                   </div>
               <!-- Filler Information -->
-                </li>
+                </section>
                 <!-- Initial Step -->
 
                 <!-- First Step -->
-                <li class="form-step active" id="first-step">
+                <section class="form-step active" id="first-step">
                   <a>
                     <span class="circle" id="step-one-cirle">1</span>
                     <span class="label">Patient Details</span>
@@ -286,7 +278,7 @@
                     <!-- General Information -->
                       <div class="col-sm-12">
                        <fieldset class="fieldset-outer">
-                        <legend class="custom-legend">General Information</legend>
+                        <legend class="custom-legend text-center">General Information</legend>
                         <div class="row inner-row">
 
                           <div class="col-sm-2">
@@ -332,7 +324,7 @@
                     <!-- Other Information -->
                       <div class="col-sm-12">
                         <fieldset class="fieldset-outer">
-                          <legend class="custom-legend">Other Information</legend>
+                          <legend class="custom-legend text-center">Other Information</legend>
                           <div class="row inner-row">
 
                             <div class="col-sm-2">
@@ -377,7 +369,7 @@
                     <!-- Physical address -->
                       <div class="col-sm-12">
                         <fieldset class="fieldset-outer">
-                          <legend class="custom-legend">Physical Address</legend>
+                          <legend class="custom-legend text-center">Physical Address</legend>
                           <div class="row inner-row">
 
                             <div class="col-sm-3">
@@ -416,7 +408,7 @@
                     <!-- Mailing address -->
                       <div class="col-sm-12">
                         <fieldset class="fieldset-outer">
-                        <legend class="custom-legend">Mailing Information</legend>
+                        <legend class="custom-legend text-center">Mailing Information</legend>
                         <div class="row inner-row">
 
                           <div class="col-sm-6">
@@ -456,7 +448,7 @@
                     <!-- Contact Information -->
                       <div class="col-sm-6">
                         <fieldset class="fieldset-outer">
-                          <legend class="custom-legend">Contact Information</legend>
+                          <legend class="custom-legend text-center">Contact Information</legend>
                           <div class="row inner-row">
 
                             <div class="col-sm-3">
@@ -487,7 +479,7 @@
                     <!-- Marital Status -->
                       <div class="col-sm-6">
                       <fieldset class="fieldset-outer">
-                        <legend class="custom-legend">Marital Status</legend> 
+                        <legend class="custom-legend text-center">Marital Status</legend> 
                         <div class="row inner-row">
 
                           <div class="col-sm-4">
@@ -518,7 +510,7 @@
                     <!-- Pharmacy Information -->
                       <div class="col-sm-12">
                       <fieldset class="fieldset-outer">
-                        <legend class="custom-legend">Pharmacy Information</legend>
+                        <legend class="custom-legend text-center">Pharmacy Information</legend>
                         <div class="row inner-row">
                           <div class="col-sm-5">
                             <div class="form-group">
@@ -539,11 +531,11 @@
 
                     </div>
                   </div>
-                </li>
+                </section>
                 <!-- First Step -->
 
                 <!-- second step -->
-                <li class="form-step active" id="second-step">
+                <section class="form-step active" id="second-step">
                   <!-- title -->
                   <a>
                     <span class="circle" id="step-second-cirle">2</span>
@@ -555,7 +547,7 @@
                     <div class="row">
                       <div class="col-sm-12">
                       <fieldset class="fieldset-outer">
-                        <legend class="custom-legend">Contact Information</legend>
+                        <legend class="custom-legend text-center">Contact Information</legend>
                         <div class="row inner-row">
                           <div class="col-sm-6">
                             <div class="form-group">
@@ -579,11 +571,11 @@
 
                 </div>
                 <!-- container -->
-                </li>
+                </section>
                 <!-- second step -->
 
                 <!-- third step -->
-                <li class="form-step active" id="third-step">
+                <section class="form-step active" id="third-step">
                   <a>
                     <span class="circle" id="step-third-circle">3</span>
                     <span class="label">Insurance</span>
@@ -593,7 +585,7 @@
                     <div class="row">
                       <div class="col-sm-12">
                       <fieldset class="fieldset-outer">
-                        <legend class="custom-legend">Select Type</legend>
+                        <legend class="custom-legend text-center">Select Type</legend>
                         <div class="inner-row">
                           <div class="col-sm-3">
                             <div class="form-group">
@@ -611,7 +603,7 @@
                           <div class="col-sm-5 ml-2 insurancectnr">
                             <div class="row">
                               <fieldset class="fieldset-outer">
-                                <legend class="custom-legend">Primary Insurance Details</legend> 
+                                <legend class="custom-legend text-center">Primary Insurance Details</legend> 
                                 <div class="row inner-row">
                                   
                                   <div class="col-sm-3">
@@ -636,7 +628,7 @@
                                     </div>
                                   </div>
 
-                                  <div class="col-sm-4 offset-3 mt-xl-n5">
+                                  <div class="col-sm-4 offset-3 mt-xl-n4">
                                     <div class="form-group">
                                       <label for="s3q3" class="font-weight-bold mb-n2 question">Group Number</label>
                                       <p class="answers">22556</p>
@@ -650,7 +642,7 @@
                           <div class="col-sm-5 ml-2 insurancectnr">
                             <div class="row">
                               <fieldset class="fieldset-outer">
-                                <legend class="custom-legend">Secondary Insurance Details</legend>
+                                <legend class="custom-legend text-center">Secondary Insurance Details</legend>
                                 <div class=" row inner-row">
                                   
                                   <div class="col-sm-3">
@@ -675,7 +667,7 @@
                                     </div>
                                   </div>
                                   
-                                  <div class="col-sm-4 offset-3 mt-xl-n5">
+                                  <div class="col-sm-4 offset-3 mt-xl-n4">
                                     <div class="form-group">
                                       <label for="s3q6" class="font-weight-bold mb-n2 question">Group Number</label>
                                       <p class="answers">446523</p>
@@ -693,11 +685,11 @@
 
                 </div>
 
-                </li>
+                </section>
                 <!-- third step -->
 
                 <!-- fourth step -->
-                <li class="form-step active" id="fourth-step">
+                <section class="form-step active" id="fourth-step">
                   <a>
                     <span class="circle" id="step-fourth-circle">4</span>
                     <span class="label">HEALTH QUESTIONNAIRE</span>
@@ -707,7 +699,7 @@
                     <div class="row">
                       <div class="col-sm-12">
                         <fieldset class="fieldset-outer">
-                          <legend class="custom-legend">Past Medical History</legend> 
+                          <legend class="custom-legend text-center">Past Medical History</legend> 
                           <div class="row inner-row">
 
                             <div class="col-sm-3">
@@ -842,11 +834,11 @@
                     </div>
                   </div>
 
-                </li>
+                </section>
                 <!-- fourth step -->
 
                 <!-- fifth step -->
-                <li class="form-step active" id="fifth-step">
+                <section class="form-step active" id="fifth-step">
                   <a>
                     <span class="circle" id="step-fifth-circle">5</span>
                     <span class="label">Social History</span>
@@ -1138,18 +1130,16 @@
 
                           </div>
                       </div>
-
-
                     </div>
 
                   </div>
                 <!-- container -->
 
-                </li>
+                </section>
                 <!-- fifth step -->
 
                 <!-- sixth step -->
-                <li class="form-step active" id="sixth-step">
+                <section class="form-step active" id="sixth-step">
                   <a>
                     <span class="circle" id="step-sixth-circle">6</span>
                     <span class="label">SCREENING FORM</span>
@@ -1157,115 +1147,117 @@
 
                   <div class="step-content container pr-5">
                     <div class="row">
-
-                      <fieldset class="fieldset-outer mt-n4">
+                      <div class="col-sm-12">
                         <div class="row inner-row">
+                          <fieldset class="fieldset-outer mt-n4">
+                            <div class="row inner-row">
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2 question">Do you use any of the following?</label>
+                                    <p class="answers">Nebulizer</p>
+                                  </div>
+                                </div>
 
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">Do you use any of the following?</label>
-                              <p class="answers">Nebulizer</p>
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2 question">Do you use any of the following?</label>
+                                    <p class="answers">Advanced Directive</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2 question">Do you need aide with walking?</label>
+                                    <p class="answers">Walker</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2 question">Do you need help with daily living activities?</label>
+                                    <p class="answers">Yes</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2 question">How are your Vision?</label>
+                                    <p class="answers">Contact Lenses</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2 question">How are your Hearing?</label>
+                                    <p class="answers">Good</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2 question">How are your Touch?</label>
+                                    <p class="answers">Good</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2 question">How are your Taste?</label>
+                                    <p class="answers">Good</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2 question">How are your Smell?</label>
+                                    <p class="answers">Good</p>
+                                  </div>
+                                </div>  
                             </div>
-                          </div>
+                          </fieldset>
 
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">Do you use any of the following?</label>
-                              <p class="answers">Advanced Directive</p>
+                          <fieldset class="fieldset-outer mt-n4">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">Is there any pain that you have most of the time?</label>
+                                  <p class="answers">Good</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">If yes, where is the pain in your body?</label>
+                                  <p class="answers">Hand</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">Pain Scale</label>
+                                  <p class="answers">Severe(9-10)</p>
+                                </div>
+                              </div>
+
                             </div>
-                          </div>
+                          </fieldset>
+                          
+                          <fieldset class="fieldset-outer mt-n4">
+                            <div class="row inner-row">
 
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">Do you need aide with walking?</label>
-                              <p class="answers">Walker</p>
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">Other</label>
+                                  <p class="answers">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci illum deleniti, saepe nihil ducimus mollitia quisquam, necessitatibus, ratione neque eveniet quas! Odit dignissimos incidunt perspiciatis est corporis asperiores facere possimus!</p>
+                                </div>
+                              </div>
+
                             </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">Do you need help with daily living activities?</label>
-                              <p class="answers">Yes</p>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">How are your Vision?</label>
-                              <p class="answers">Contact Lenses</p>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">How are your Hearing?</label>
-                              <p class="answers">Good</p>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">How are your Touch?</label>
-                              <p class="answers">Good</p>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">How are your Taste?</label>
-                              <p class="answers">Good</p>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">How are your Smell?</label>
-                              <p class="answers">Good</p>
-                            </div>
-                          </div>
-
-                        </div> 
-                      </fieldset>
-
-                      <fieldset class="fieldset-outer mt-n4">
-                        <div class="row inner-row">
-
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">Is there any pain that you have most of the time?</label>
-                              <p class="answers">Good</p>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">If yes, where is the pain in your body?</label>
-                              <p class="answers">Hand</p>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-4">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">Pain Scale</label>
-                              <p class="answers">Severe(9-10)</p>
-                            </div>
-                          </div>
-
+                          </fieldset>
                         </div>
-                      </fieldset>
-                      
-                      <fieldset class="fieldset-outer mt-n4">
-                        <div class="row inner-row">
+                      </div>
 
-                          <div class="col-sm-12">
-                            <div class="form-group">
-                              <label for="" class="font-weight-bold mb-n2 question">Other</label>
-                              <p class="answers">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci illum deleniti, saepe nihil ducimus mollitia quisquam, necessitatibus, ratione neque eveniet quas! Odit dignissimos incidunt perspiciatis est corporis asperiores facere possimus!</p>
-                            </div>
-                          </div>
-
-                        </div>
-                      </fieldset>
 
                     </div>
 
@@ -1273,11 +1265,11 @@
                   </div>
 
 
-                </li>
+                </section>
                 <!-- sixth step -->
 
                 <!-- seventh step -->
-                <li class="form-step active" id="seventh-step">
+                <section class="form-step active" id="seventh-step">
                   <a>
                     <span class="circle" id="step-seventh-circle">7</span>
                     <span class="label"><span class="desktop">Please fill in below to the best of your knowledge so we may obtain your</span> medical records.</span>
@@ -1285,7 +1277,7 @@
 
 
                   <div class="step-content container pr-5">                  
-                    <Legend class="font-weight-bold text-center mb-5">When was your last:</Legend>
+                    <Legend class="font-weight-bold text-center">When was your last:</Legend>
                     <div class="row">
 
                       <div class="col-sm-12">
@@ -1390,7 +1382,7 @@
                           </table>
                         </div>
 
-                        <div><h5 class="font-weight-bold pl-3">Immunization</h5></div>
+                        <Legend class="font-weight-bold text-center">Immunization</Legend>
                         <div class="col-sm-12">
                         <div class="table-responsive">
                           <table class="table table-bordered text-center table-sm">
@@ -1462,7 +1454,7 @@
 
                       <div class="col-sm-12">
                         <fieldset class="fieldset-outer">
-                          <legend class="custom-legend">Women Only</legend>
+                          <legend class="custom-legend text-center">Women Only</legend>
                           <div class="row inner-row">
                           <div class="col-sm-6">
                             <div class="form-group">
@@ -1500,7 +1492,7 @@
 
                       <div class="col-sm-12">
                         <fieldset class="fieldset-outer">
-                        <legend class="custom-legend">Men Only</legend>
+                        <legend class="custom-legend text-center">Men Only</legend>
                         <div class="row inner-row">
                           <div class="col-sm-6">
                             <div class="form-group">
@@ -1513,13 +1505,12 @@
                       </div>
 
                     </div>
-
                   </div>
-                </li>
+                </section>
                 <!-- seventh step -->
 
                 <!-- eighth step -->
-                <li class="form-step active" id="eighth-step">
+                <section class="form-step active" id="eighth-step">
                   <a>
                     <span class="circle" id="step-eighth-step">8</span>
                     <span class="label">Previous Providers<span class="desktop">/ Specialists</span></span>
@@ -1593,11 +1584,11 @@
                   </div>
 
 
-                </li>
+                </section>
                 <!-- eightj step -->
 
                 <!-- ninth step -->
-                <li class="form-step active" id="ninth-step">
+                <section class="form-step active" id="ninth-step">
                   <a>
                     <span class="circle" id="step-ninth-circle">9</span>
                     <span class="label">E- PRESCRIBING<span class="desktop"> / MEDICATION HISTORY</span> CONSENT FORM</span>
@@ -1649,7 +1640,7 @@
 
                           <div class="col-sm-12">
                             <fieldset class="fieldset-outer">
-                            <legend class="custom-legend">Signee Info</legend>
+                            <legend class="custom-legend text-center">Signee Info</legend>
                               <div class="row inner-row">
 
                                 <div class="col-sm-6">
@@ -1696,11 +1687,11 @@
 
                   </div>
                 <!-- container -->
-                </li>
+                </section>
                 <!-- ninth step -->
 
                 <!-- tenth step -->
-                <li class="form-step active" id="tenth-step">
+                <section class="form-step active" id="tenth-step">
                   <a>
                     <span class="circle" id="step-tenth-circle">10</span>
                     <span class="label">FINANCIAL POLICY</span>
@@ -1773,7 +1764,7 @@
 
                           <div class="col-sm-12">
                             <fieldset class="fieldset-outer">
-                              <legend class="custom-legend">Signee information</legend>
+                              <legend class="custom-legend text-center">Signee information</legend>
                               <div class="row inner-row">
 
                                     <div class="col-sm-6">
@@ -1820,11 +1811,11 @@
 
                   </div>
 
-                </li>
+                </section>
                 <!-- tenth step -->
 
                 <!-- eleven step -->
-                <li class="form-step active" id="eleventh-step">
+                <section class="form-step active" id="eleventh-step">
                   <a>
                     <span class="circle" id="step-eleventh-circle">11</span>
                     <span class="label">HIPAA NOTICE<span class="desktop"> OF PRIVACY PRACTICES</span></span>
@@ -1869,7 +1860,7 @@
 
                       <div class="col-sm-12">
                         <fieldset class="fieldset-outer">
-                          <legend class="custom-legend">Contact Information</legend>
+                          <legend class="custom-legend text-center">Contact Information</legend>
                           <div class="row inner-row">
 
                               <div class="col-sm-6">
@@ -1900,11 +1891,8 @@
 
                   </div>
 
-                </li>
+                </section>
                 <!-- eleventh step -->
-
-              </ul>
-              <!-- /.Stepers Wrapper -->
             </div>
           </div>
         </form>
