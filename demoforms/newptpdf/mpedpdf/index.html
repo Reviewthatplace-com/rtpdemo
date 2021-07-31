@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>MPED1 | New Patient Form</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="assest/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assest/css/register.css" rel="stylesheet">
+  <link rel="stylesheet" href="assest/css/mdb.min.css">
+  <link href="assest/css/typography.css" rel="stylesheet">
+  <link href="assest/css/signature/jquery.signaturepad.css" rel="stylesheet">
+
+  <link rel="icon" href="assest/img/logo.png" type="image/png" sizes="16x16">
+  <style type="text/css">
+    section {
+      display: none;
+    }
+
+    @media only screen and (min-width: 750px) {
+
+      #section1a,
+      #section1b,
+      #section1c,
+      #section1d {
+        background-image: url(assest/img/section1.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        background-attachment: fixed;
+      }
+    }
+
+    #section1a .inner-section {
+      padding-top: 20px;
+    }
+
+    #section1b .inner-section {
+      padding-top: 70px;
+    }
+
+    .next-btn,
+    .back-btn {
+      height: 40px;
+    }
+
+    .shadow,
+    .shadow2 {
+      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+      padding: 30px 40px;
+      border-radius: 10px 10px 10px 10px;
+      background: white;
+    }
+
+    .top-rtplogo {
+      height: 120px;
+    }
+
+    .btn-start {
+      height: 85px;
+    }
+
+    @media only screen and (min-width: 750px) {
+      #confirmation {
+        background-image: url(assest/img/481.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        background-attachment: fixed;
+      }
+
+      #check-logo {
+        height: 100px;
+      }
+    }
+
+    #confirmation .shadow {
+      background-color: white;
+      border-radius: 40px;
+    }
+
+    .check-img {
+      margin-top: -75px;
+      height: 150px;
+    }
+
+    .btn-box {
+      justify-content: flex-end;
+    }
+
+    @media only screen and (max-width: 750px) {
+      #section1a .inner-section {
+        padding-top: 15px;
+      }
+
+      #section1b .inner-section {
+        padding-top: 15px;
+      }
+
+      .shadow {
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+        padding: 10px 25px;
+        border-radius: 10px 10px 10px 10px;
+        background: white;
+      }
+
+      .shadow2 {
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+        padding: 20px 15px;
+        border-radius: 10px 10px 10px 10px;
+        background: white;
+      }
+
+      .top-rtplogo,
+      .top-rtplogo2 {
+        height: 100px;
+      }
+
+      .btn-start {
+        height: 50px;
+      }
+
+      .btn-start2 {
+        height: 70px;
+        margin: 15px auto !important;
+      }
+
+      .inner-section {
+        background: rgba(255, 255, 255, 1);
+      }
+
+      #confirmation {
+        background-image: url(assest/img/481.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      .check-img {
+        margin-top: -50px;
+        height: 100px;
+      }
+
+      .next-btn,
+      .back-btn {
+        height: 30px;
+      }
+
+      #finish-step .next-btn {
+        max-width: 90%;
+      }
+
+      .btn-box {
+        justify-content: center;
+      }
+
+      #confirmation h2 {
+        font-size: 22px;
+      }
+
+      #confirmation h3 {
+        font-size: 20px;
+      }
+
+    }
+
+    .progress {
+      background: none !important;
+    }
+
+    .question
+    {
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example">
+
+  <!-- ======================= new patient form ================================  -->
+  <section class="" id="registration-section" style="display: block;">
+    <!-- ======================= container ================================  -->
+    <div class="container" id="form-container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h1 class="section-heading">New Patient Registration</h1>
+        </div>
+      </div>
+      <!-- ======================= content ================================  -->
+      <div class="card">
+        <div class="card-body">
+          <form class="floating-labels" method="post" enctype="multipart/form-data" role="form">
+            <div class="row">
+              <div class="col-xl-12">
+                <!-- Stepers Wrapper -->
+                <ul class="stepper stepper-vertical">
+
+                <!-- Initial step -->
+                  <li class="form-step active" id="zero-step">
+                    <a>
+                      <span class="circle" id="step-one-cirle">0</span>
+                      <span class="label">Form Filled By:</span>
+                    </a>
+  
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <legend class="legend">Filler Information</legend>
+                            <div class="row">
+
+                              <div class="col-xl-2">
+                                <div class="form-group">
+                                  <label for="filler_name" class="font-weight-bold mb-n2 question">Your Name</label>
+                                  <p class="answers">Shakir Ansari</p>
+                                </div>
+                              </div>
+  
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="filler_email" class="font-weight-bold mb-n2 question">Email</label>
+                                  <p class="answers">Shakir@gmail.com</p>
+                                </div>
+                              </div>
+  
+                              <div class="col-xl-2">
+                                <div class="form-group">
+                                  <label for="filler_phone" class="font-weight-bold mb-n2 question">Phone</label>
+                                  <p class="answers">9133215566</p>
+                                </div>
+                              </div>
+  
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="filler_relation" class="font-weight-bold mb-n2 question">Relation to patient</label>
+                                  <p class="answers">Self</p>
+                                </div>
+                              </div>
+  
+                              <div class="col-xl-2">
+                                <div class="form-group">
+                                  <label for="filler_pin" class="font-weight-bold mb-n2 question">Pin</label>
+                                  <p class="answers">xyz23654</p>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </li>
+                <!-- Initial step -->
+
+                <!-- 1st step -->
+                  <li class="form-step active" id="first-step">
+                    <a>
+                      <span class="circle" id="step-one-cirle">1</span>
+                      <span class="label">Your Info</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <legend class="legend">Your Information</legend>
+                            <div class="row">
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="filler_name" class="font-weight-bold mb-n2 question">Your Name</label>
+                                  <p class="answers">Shakir Ansari</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="filler_email" class="font-weight-bold mb-n2 question">Email</label>
+                                  <p class="answers">Shakir@gmail.com</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">Relation</label>
+                                  <p class="answers">Self</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">How did you hear about us?</label>
+                                  <p class="answers">Sibling/Friend</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label class="font-weight-bold mb-n2 question" for="filler_id">Upload ID</label>
+                                  <br>
+                                  <img src="assest/img/sign.png" width="200" alt="">
+                                </div>
+                              </div>
+
+                              <div class="col-xl-8">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">Reason for your visit today</label>
+                                  <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, debitis? In asperiores iusto maxime officiis architecto laborum modi saepe nobis voluptate, maiores sit. Quasi, sed. Eaque pariatur ipsam et dolorum?</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </li>
+                <!-- 1st step -->
+
+                <!-- 2nd Step -->                
+                  <li class="form-step active" id="second-step">
+                    <a>
+                      <span class="circle" id="step-second-cirle">2</span>
+                      <span class="label">Patient Demographics</span>
+                    </a>
+
+                    <!-- Section Description -->
+                    <div class="step-content container pr-5">
+                      <h4 class="font-weight-bold"></h4>
+
+                      <div class="row">
+
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <legend>Patient Information</legend>
+                            <div class="row">
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="child_name" class="font-weight-bold mb-n2 question">Patient Name*</label>
+                                  <p class="answers">Shakir Ansari</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="child_dob" class="font-weight-bold mb-n2 question">Patient DOB*</label>
+                                  <p class="answers">12/21/98</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="child_ssn" class="font-weight-bold mb-n2 question">Patient SSN</label>
+                                  <p class="answers">3323365544</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <fieldset class="fieldset-border">
+                            <legend>Home Address</legend>
+                            <div class="row">
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="child_home" class="font-weight-bold mb-n2 question">Home Address*</label>
+                                  <p class="answers">15th St</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="child_city" class="font-weight-bold mb-n2 question">City*</label>
+                                  <p class="answers">New York</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">State*</label>
+                                  <p class="answers">NY</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="child_zip" class="font-weight-bold mb-n2 question">Zip*</label>
+                                  <p class="answers">10001</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <fieldset class="fieldset-border">
+                            <legend>Contact Information</legend>
+                            <div class="row">
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="child_phone" class="font-weight-bold mb-n2 question">Cell Phone</label>
+                                  <p class="answers">9511596655</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="child_home_phone" class="font-weight-bold mb-n2 question">Home Phone*</label>
+                                  <p class="answers">9501596655</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-6">
+                                <div class="form-group">
+                                  <label for="child_email" class="font-weight-bold mb-n2 question">Email*</label>
+                                  <p class="answers">Shakir@gmail.com</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+                      <!-- row -->
+
+                      <div class="row">
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <legend>Other Information</legend>
+                            <div class="row">
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="child_race" class="font-weight-bold mb-n2 question">Race</label>
+                                  <p class="answers">Black or African American</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="child_ethnicity" class="font-weight-bold mb-n2 question">Ethnicity</label>
+                                  <p class="answers">Not Hispanic or Latino</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-2">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">Language</label>
+                                  <p class="answers">English</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">Communication Barriers(If Any)</label>
+                                  <p class="answers">Vision</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- container -->
+                  </li>
+                <!-- 2nd Step -->
+
+                <!-- 3rd Step -->
+                  <li class="form-step active" id="third-step">
+                    <a>
+                      <span class="circle" id="step-third-circle">3</span>
+                      <span class="label">Emergency Contact</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <legend>Contact</legend>
+                            <div class="row">
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="emg_contact" class="font-weight-bold mb-n2 question">Emergency Contact</label>
+                                  <p class="answers">Ravi Agrawal</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="emg_phone" class="font-weight-bold mb-n2 question">Phone</label>
+                                  <p class="answers">9511533322</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="emg_relation" class="font-weight-bold mb-n2 question">Relationship</label>
+                                  <p class="answers">Self</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>  
+
+                      </div>
+
+
+                    </div>
+
+
+                  </li>
+                <!-- 3rd Step -->
+
+                <!-- 4th Step -->
+                  <li class="form-step active" id="fourth-step">
+                    <a>
+                      <span class="circle" id="step-four-circle">4</span>
+                      <span class="label">Parent's Information</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <legend>Parent’s Marital Status*:</legend>
+                              <div class="col-xl-4">
+                                <div class="form-group">
+                                  <label for="child_name" class="font-weight-bold mb-n2 question">Parent’s Marital Status*</label>
+                                  <p class="answers">Married</p>
+                                </div>
+                              </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <legend>Mom's Information</legend>
+                            <div class="row">
+                              <div class="col-xl-12">
+                                  <div class="row">
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="mom_name" class="font-weight-bold mb-n2 question">Mom's Name</label>
+                                        <P class="answers">Heather</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="mom_dob" class="font-weight-bold mb-n2 question">Mom’s DOB</label>
+                                        <P class="answers">12/21/85</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="mom_ssn" class="font-weight-bold mb-n2 question">Mom’s SSN</label>
+                                        <P class="answers">5556665544</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="mom_phone" class="font-weight-bold mb-n2 question">Mom’s Phone</label>
+                                        <P class="answers">9511588855</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="mom_email" class="font-weight-bold mb-n2 question">Mom’s Email</label>
+                                        <P class="answers">heather@gmail.com</P>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="mom_employer" class="font-weight-bold mb-n2 question">Mom’s Employer</label>
+                                        <P class="answers">x-company</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="mom_work_phone" class="font-weight-bold mb-n2 question">Work Phone</label>
+                                        <P class="answers">9566544488</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="mom_education" class="font-weight-bold mb-n2 question">Mother’s Education</label>
+                                        <P class="answers">Less than High School</P>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <legend>Dad's Information</legend>
+                            <div class="row">
+
+                              <div class="col-xl-12"> 
+                                  <div class="row">
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="dad_name" class="font-weight-bold mb-n2 question">Dad’s Name</label>
+                                        <P class="answers">Jhonny</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="dad_dob" class="font-weight-bold mb-n2 question">Dad’s DOB</label>
+                                        <P class="answers">12/21/85</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="dad_ssn" class="font-weight-bold mb-n2 question">Dad’s SSN</label>
+                                        <P class="answers">854456955</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="dad_phone" class="font-weight-bold mb-n2 question">Dad’s Phone</label>
+                                        <P class="answers">854556955</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="dad_email" class="font-weight-bold mb-n2 question">Dad’s Email</label>
+                                        <P class="answers">Jhonny@gmail.com</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="dad_employer" class="font-weight-bold mb-n2 question">Dad’s Employer</label>
+                                        <P class="answers">Y Company</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="dad_work_phone" class="font-weight-bold mb-n2 question">Work Phone</label>
+                                        <P class="answers">95115478552</P>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-xl-3">
+                                      <div class="form-group">
+                                        <label for="dad_education" class="font-weight-bold mb-n2 question">Work Phone</label>
+                                        <P class="answers">Less than High School</P>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </li>
+                <!-- 4th Step -->
+
+                <!-- 5th Step -->
+                  <li class="form-step active" id="fifth-step">
+                    <a>
+                      <span class="circle" id="step-fifth-circle">5</span>
+                      <span class="label">Insurance Detail</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <legend>Select Type</legend>
+
+                            <div class="col-xl-3">
+                              <div class="form-group">
+                                <label for="" class="font-weight-bold mb-n2">Insurance</label>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-12" id="insurancetype">
+                          <div class="row">
+                            <div class="col-xl-5 ml-3">
+                              <fieldset class="fieldset-border row">
+                                <legend>Primary</legend>
+
+                                <div class="col-xl-6 mb-5">
+                                  <div class="custom-file mb-4">
+                                    <label class="font-weight-bold mb-n2 question" for="primary_id">Upload ID</label>
+                                    <br>
+                                    <img src="assest/img/481.jpg" width="75" alt="">
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="insurance_company1" class="font-weight-bold mb-n2 question">Insurance Company</label>
+                                    <p class="answers">Z Company</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="insurance_memberid1" class="font-weight-bold mb-n2 question">Member ID Or Policy</label>
+                                    <p class="answers">6544552</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="insurance_who1" class="font-weight-bold mb-n2 question">Under Who</label>
+                                    <p class="answers">Jhonny</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="insurance_group1" class="font-weight-bold mb-n2 question">Group # (If applicable)</label>
+                                    <p class="answers">Z Group</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-12">
+                                  <div class="form-group">
+                                    <label for="insurance_address1" class="font-weight-bold mb-n2 question">Claim Address</label>
+                                    <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iusto fugiat eum pariatur perferendis impedit architecto porro veniam expedita, nulla commodi assumenda eos vero quae nemo magnam hic id vel?</p>
+                                  </div>
+                                </div>
+
+                              </fieldset>
+                            </div>
+
+                            <div class="col-xl-5 ml-3">
+                              <fieldset class="fieldset-border row">
+                                <legend>Secondary</legend>
+
+                                <div class="col-xl-6 mb-5">
+                                  <div class="custom-file mb-4">
+                                    <label class="font-weight-bold mb-n2 question" for="secondary_id">Upload ID</label>
+                                    <br>
+                                    <img src="assest/img/481.jpg" width="75" alt="">
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="insurance_company" class="font-weight-bold mb-n2 question">Insurance Company</label>
+                                    <p class="answers">Y Company</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="insurance_memberid" class="font-weight-bold mb-n2 question">Member ID Or Policy</label>
+                                    <p class="answers">6544552</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="insurance_who" class="font-weight-bold mb-n2 question">Under Who</label>
+                                    <p class="answers">heather</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="insurance_group" class="font-weight-bold mb-n2 question">Group # (If applicable)</label>
+                                    <p class="answers">Z Group</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-12">
+                                  <div class="form-group">
+                                    <label for="insurance_address" class="font-weight-bold mb-n2 question">Claim Address</label>
+                                    <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, ab qui voluptates numquam, dolor est voluptatibus officia consequuntur vel animi laudantium nam non fugit nobis possimus quae facere dolorum similique?</p>
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </li>
+                <!-- 5th Step -->
+
+                <!-- 6th Step -->
+                  <li class="form-step active" id="sixth-step">
+                    <a>
+                      <span class="circle" id="step-sixth-circle">6</span>
+                      <span class="label">Social Information</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-xl-12">
+                          <div class="row">
+
+                            <fieldset class="fieldset-border col-xl-12">
+                                <legend>Social Information</legend>
+                                <div class="row">
+
+                                  <div class="col-xl-2">
+                                    <div class="form-group">
+                                      <label for="" class="font-weight-bold mb-n2">Lives With</label>
+                                      <p class="answers">Grandparents</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-xl-2">
+                                    <div class="form-group">
+                                      <label for="" class="font-weight-bold mb-n2">Brothers</label>
+                                      <p class="answers">01</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-xl-2">
+                                    <div class="form-group">
+                                      <label for="" class="font-weight-bold mb-n2">Sisters</label>
+                                      <p class="answers">01</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-xl-2">
+                                    <div class="form-group">
+                                      <label for="" class="font-weight-bold mb-n2">Pets</label>
+                                      <p class="answers">01</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-xl-4">
+                                    <div class="form-group">
+                                      <label for="" class="font-weight-bold mb-n2">Siblings names and DOBs</label>
+                                      <p class="answers">
+                                        Fahad Azad: 12/21/97
+                                        <br>
+                                        Kate: 12/21/97
+                                      </p>
+                                    </div>
+                                  </div>   
+
+                                </div>
+                            </fieldset>
+                            
+                            <fieldset class="fieldset-border col-xl-6">
+                              <div class="row">
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Smoker in Household</label>
+                                    <p class="answers">Yes</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Who(Smoker Name)</label>
+                                    <p class="answers">Johnny</p>
+                                  </div>
+                                </div>                                
+                              </div>  
+                            </fieldset>
+                            
+                            <fieldset class="fieldset-border col-xl-6">
+                              <div class="row">
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Alcohol use in Household</label>
+                                    <p class="answers">Yes</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Who</label>
+                                    <p class="answers">Heather</p>
+                                  </div>
+                                </div>  
+
+                              </div>  
+                            </fieldset>
+                            
+                            <fieldset class="fieldset-border col-xl-12">
+                              <div class="row">
+
+                                <div class="col-xl-4">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Domestic abuse/violence(If Any)</label>
+                                    <p class="answers">Yes</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-xl-8">
+                                  <div class="form-group">
+                                    <label for="" class="font-weight-bold mb-n2">Explain Situation(Domestic abuse/violence)</label>
+                                    <p class="answers">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum debitis aperiam nisi eius. Veniam quo praesentium adipisci. Quae vero sapiente iusto. Voluptatem natus quod voluptas exercitationem cupiditate quis, eveniet ipsa.</p>
+                                  </div>
+                                </div>  
+                                                              
+                              </div>  
+                            </fieldset>   
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                  </li>
+                <!-- 6th Step -->
+
+                <!-- 7th Step -->
+                  <li class="form-step active" id="seventh-step">
+                    <a>
+                      <span class="circle" id="step-seventh-circle">7</span>
+                      <span class="label">Past History</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <div class="row">
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Any Complication during Pregnancy</label>
+                                <p class="answers">Yes</p>                              
+                              </div>
+
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Explain(Complication)</label>
+                                <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit corrupti facilis atque nesciunt esse eius. Veritatis minus veniam voluptate maiores et soluta molestiae at, voluptatum magni tempora unde illo id!</p>                              
+                              </div>
+                              
+                              <div class="col-xl-2">
+                                <label for="" class="font-weight-bold mb-n2">Delivery</label>
+                                <p class="answers">C-Section</p>                              
+                              </div>
+                              
+                              <div class="col-xl-2">
+                                <label for="" class="font-weight-bold mb-n2">Labor</label>
+                                <p class="answers">yes</p>                              
+                              </div>
+                              
+                              <div class="col-xl-2">
+                                <label for="" class="font-weight-bold mb-n2">Birth Weight</label>
+                                <p class="answers">65lb</p>                              
+                              </div>
+                              
+                              <div class="col-xl-2">
+                                <label for="" class="font-weight-bold mb-n2">Oxygen</label>
+                                <p class="answers">x OZ</p>                              
+                              </div>
+                              
+                              <div class="col-xl-4">
+                                <label for="" class="font-weight-bold mb-n2">Hospital Name Child Was Born In</label>
+                                <p class="answers">x Hospital</p>                              
+                              </div>
+                              
+                              <div class="col-xl-2">
+                                <label for="" class="font-weight-bold mb-n2">At Birth: Hep B</label>
+                                <p class="answers">No</p>                              
+                              </div>
+                              
+                              <div class="col-xl-2">
+                                <label for="" class="font-weight-bold mb-n2">Hearing Screen</label>
+                                <p class="answers">Passed</p>                              
+                              </div>                              
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <fieldset class="fieldset-border">
+                            <div class="row">
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Any Hospital Admission</label>
+                                <p class="answers">Yes</p>                              
+                              </div>
+                              
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Explain(Hospital Admission)</label>
+                                <p class="answers">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi aperiam fugit, dolore porro eos blanditiis distinctio ipsam possimus, nostrum ducimus dignissimos consectetur non consequuntur, unde ipsa id reiciendis necessitatibus omnis.
+                                </p>                              
+                              </div>                              
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <fieldset class="fieldset-border">
+                            <div class="row">
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Any illness</label>
+                                <p class="answers">Yes</p>                              
+                              </div>
+                              
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Explain(Illness)</label>
+                                <p class="answers">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi aperiam fugit, dolore porro eos blanditiis distinctio ipsam possimus, nostrum ducimus dignissimos consectetur non consequuntur, unde ipsa id reiciendis necessitatibus omnis.
+                                </p>                              
+                              </div>                              
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <fieldset class="fieldset-border">
+                            <div class="row">
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Any medication</label>
+                                <p class="answers">Yes</p>                              
+                              </div>
+                              
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Explain(Medication)</label>
+                                <p class="answers">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi aperiam fugit, dolore porro eos blanditiis distinctio ipsam possimus, nostrum ducimus dignissimos consectetur non consequuntur, unde ipsa id reiciendis necessitatibus omnis.
+                                </p>                              
+                              </div>                              
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <fieldset class="fieldset-border">
+                            <div class="row">
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Any known allergies</label>
+                                <p class="answers">Yes</p>                              
+                              </div>
+                              
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Explain(Allergies)</label>
+                                <p class="answers">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi aperiam fugit, dolore porro eos blanditiis distinctio ipsam possimus, nostrum ducimus dignissimos consectetur non consequuntur, unde ipsa id reiciendis necessitatibus omnis.
+                                </p>                              
+                              </div>                              
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                  </li>
+                <!-- 7th Step -->
+
+                <!-- 8th Step -->
+                  <li class="form-step active" id="eighth-step">
+                    <a>
+                      <span class="circle" id="step-eighth-circle">8</span>
+                      <span class="label">Developmental History</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-xl-12">
+                          <small>
+                            For infants to 24 months child, please review the Developmental Milestones of the child and
+                            list the age the milestones was achieved
+                          </small>
+                        </div>
+
+                        <div class="col-xl-12">
+                          <div class="table-responsive">
+                            <table class="table table-bordered table-sm">
+                              <tr>
+                                <th>#</th>
+                                <th>Developmental Milestones</th>
+                                <th>Expected Dates</th>
+                                <th>List Below Date Developmental Milestone achieved or Age</th>
+                              </tr>
+
+                              <tr>
+                                <td>1</td>
+                                <td>Head up 45 degrees; Lifts head</td>
+                                <td>2 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>2</td>
+                                <td>Smile spontaneously;Smile responsively</td>
+                                <td>2 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>3</td>
+                                <td>Roll over; Sit with head steady</td>
+                                <td>4 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>4</td>
+                                <td>Grasp rattle; Turn to see rattling sound; Laugh</td>
+                                <td>4 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>5</td>
+                                <td>Sit- No Support; Roll over</td>
+                                <td>6 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>6</td>
+                                <td>Feed self; Work to obtain toy that is out of reach</td>
+                                <td>6 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>7</td>
+                                <td>Pull to stand; Stand holding up</td>
+                                <td>9 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>8</td>
+                                <td>Says DADA/MAMA- Nonspecific; Use single syllables</td>
+                                <td>9 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>9</td>
+                                <td>Wave Bye-Bye; Imitates activities</td>
+                                <td>9 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>10</td>
+                                <td>Walks well; Walk Backwards; Stops and Recovers</td>
+                                <td>15 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>11</td>
+                                <td>Speak 1 word; Speak 3 words</td>
+                                <td>15 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>12</td>
+                                <td>Removes clothing; Run; Walks up stairs</td>
+                                <td>18 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>13</td>
+                                <td>Dresses themselves; Combines Words</td>
+                                <td>24 months</td>
+                                <td>
+                                  Delayed
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                  </li>
+                <!-- 8th Step -->
+                
+                <!-- 9th Step -->
+                  <li class="form-step active" id="ninth-step">
+                    <a>
+                      <span class="circle" id="step-ninth-circle">9</span>
+                      <span class="label">Family History</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-xl-6">
+                          <fieldset class="fieldset-border">
+                            <div class="col-xl-12">
+                              <label for="" class="font-weight-bold mb-n2">Mother Healthy*</label>
+                              <p class="answers">No</p>                              
+                            </div>
+                            
+                            <div class="col-xl-12">
+                              <label for="" class="font-weight-bold mb-n2">If No Explain(Mother Health)</label>
+                              <p class="answers">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla blanditiis pariatur, laudantium debitis explicabo hic vitae quia quidem impedit, sapiente excepturi nostrum repellat obcaecati necessitatibus eligendi tempore culpa rem odio.
+                              </p>                              
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <fieldset class="fieldset-border">
+                            <div class="col-xl-12">
+                              <label for="" class="font-weight-bold mb-n2">Father Healthy*</label>
+                              <p class="answers">No</p>                              
+                            </div>
+                            
+                            <div class="col-xl-12">
+                              <label for="" class="font-weight-bold mb-n2">If No Explain(Father Health)</label>
+                              <p class="answers">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla blanditiis pariatur, laudantium debitis explicabo hic vitae quia quidem impedit, sapiente excepturi nostrum repellat obcaecati necessitatibus eligendi tempore culpa rem odio.
+                              </p>                              
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <fieldset class="fieldset-border">
+                            <div class="col-xl-12">
+                              <label for="" class="font-weight-bold mb-n2">Siblings Healthy*</label>
+                              <p class="answers">No</p>                              
+                            </div>
+                            
+                            <div class="col-xl-12">
+                              <label for="" class="font-weight-bold mb-n2">If No Explain(Siblings Health)</label>
+                              <p class="answers">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla blanditiis pariatur, laudantium debitis explicabo hic vitae quia quidem impedit, sapiente excepturi nostrum repellat obcaecati necessitatibus eligendi tempore culpa rem odio.
+                              </p>                              
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <fieldset class="fieldset-border">
+                            <div class="col-xl-12">
+                              <label for="" class="font-weight-bold mb-n2">Paternal Grandparents Healthy</label>
+                              <p class="answers">No</p>                              
+                            </div>
+                            
+                            <div class="col-xl-12">
+                              <label for="" class="font-weight-bold mb-n2">If No Explain</label>
+                              <p class="answers">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla blanditiis pariatur, laudantium debitis explicabo hic vitae quia quidem impedit, sapiente excepturi nostrum repellat obcaecati necessitatibus eligendi tempore culpa rem odio.
+                              </p>                              
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <fieldset class="fieldset-border">
+                            <div class="col-xl-12">
+                              <label for="" class="font-weight-bold mb-n2">Maternal Grandparents Healthy</label>
+                              <p class="answers">No</p>                              
+                            </div>
+                            
+                            <div class="col-xl-12">
+                              <label for="" class="font-weight-bold mb-n2">If No Explain</label>
+                              <p class="answers">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla blanditiis pariatur, laudantium debitis explicabo hic vitae quia quidem impedit, sapiente excepturi nostrum repellat obcaecati necessitatibus eligendi tempore culpa rem odio.
+                              </p>                              
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <div class="row">
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Traveled outside USA</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Diabetes</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Mood Disord</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">High Blood Pressure</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Exposure to HIV</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Anger</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Heart Disease</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Exposure to TB</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Schizophrenia</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Coronary Artery Disease</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Bipolar</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Drug Abuse</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Cancer</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">ADHD</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Maternal Depression</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">High Cholesterol</label>
+                                <p class="answers">No</p>                              
+                              </div>
+
+                              <div class="col-xl-3">
+                                <label for="" class="font-weight-bold mb-n2">Behavioral Disorder</label>
+                                <p class="answers">No</p>                              
+                              </div>                              
+                            </div>
+                          </fieldset>
+                          
+                          <fieldset class="fieldset-border">
+                            <legend>Other</legend>
+                            <div class="row">
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Please explain any family Member’s behavior health problem</label>
+                                <p class="answers">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos animi, error quibusdam facilis, numquam magni nesciunt est distinctio dolores minima id, deserunt laudantium? Temporibus magnam nihil atque beatae sed.</p>                              
+                              </div>
+                              <div class="col-xl-12">
+                                <label for="" class="font-weight-bold mb-n2">Please list the child’s health concerns in order of importance. When did it begin?</label>
+                                <p class="answers">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos animi, error quibusdam facilis, numquam magni nesciunt est distinctio dolores minima id, deserunt laudantium? Temporibus magnam nihil atque beatae sed.</p>                              
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                  </li>
+                <!-- 9th Step -->
+
+                <!-- 10th Step -->
+                  <li class="form-step active" id="tenth-step">
+                    <a>
+                      <span class="circle" id="step-tenth-circle">10</span>
+                      <span class="label">Family Health Habits</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+
+                      <fieldset class="fieldset-border">
+                        <div class="row">
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">How strong are your family’s religious beliefs or practices?</label>
+                            <p class="answers">Moderately Strong</p>                              
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">How often does your family eat meals together?</label>
+                            <p class="answers">Occasionally</p>                              
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">How often does your child use a seatbelt? (Car seat)?</label>
+                            <p class="answers">Sometimes</p>                              
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">Does your child ride a bicycle?</label>
+                            <p class="answers">Sometimes</p>                              
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">If yes, how often he/she use a helmet?</label>
+                            <p class="answers">Sometimes</p>                              
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">What kind of guns are in your home?</label>
+                            <p class="answers">Shotgun</p>                              
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">If you have a gun at home, is it locked up?</label>
+                            <p class="answers">Shotgun</p>                              
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">Does your child use a toothpaste with fluoride in it?</label>
+                            <p class="answers">No</p>                              
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">Do you help your child with tooth brushing?</label>
+                            <p class="answers">No</p>                              
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">Do you help your child with tooth brushing?</label>
+                            <p class="answers">No</p>                              
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">How often do you brush your teeth?</label>
+                            <p class="answers">Less than once a day</p>                              
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <label for="" class="font-weight-bold mb-n2">How often do you brush your teeth?</label>
+                            <p class="answers">Less than once a day</p>                              
+                          </div>
+
+                        </div>
+                      </fieldset>
+
+                      <fieldset class="fieldset-border">
+                        <legend>Other</legend>
+                        <div class="row">
+                          
+                          <div class="col-xl-12">
+                            <label for="" class="font-weight-bold mb-n2">What does your family do together for fun?</label>
+                            <p class="answers">
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi quibusdam laborum sapiente, tempora a praesentium id incidunt minima illo alias vero cumque dolorum voluptas, quaerat deleniti veritatis obcaecati temporibus. Obcaecati?
+                            </p>                              
+                          </div>
+                          
+                          <div class="col-xl-12">
+                            <label for="" class="font-weight-bold mb-n2">Any Concerns of oral of oral/dental health</label>
+                            <p class="answers">
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi quibusdam laborum sapiente, tempora a praesentium id incidunt minima illo alias vero cumque dolorum voluptas, quaerat deleniti veritatis obcaecati temporibus. Obcaecati?
+                            </p>                              
+                          </div>
+
+                        </div>
+                      </fieldset>
+                    </div>
+
+                  </li>
+                <!-- 10th Step -->
+
+                <!-- 11th Step -->
+                  <li class="form-step active" id="eleventh-step">
+                    <a>
+                      <span class="circle" id="step-eleventh-circle">11</span>
+                      <span class="label">Financial Responsibility</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <small>Thank you for choosing us as your child’s health care provider. We are committed to providing
+                        your child comprehensive Pediatric care. Please understand that payment of your child’s bill is
+                        considered part of their treatment. The following is a statement of our financial policy which
+                        we require you to read and sign prior to any treatment.</small>
+
+                      <h6 class="mb-n1 mt-2"><b>ALL PARENTS MUST COMPLETE ALL PAPERWORK BEFORE THEIR CHILD IS SEEN.</b></h6>
+                      <small>All professional services rendered are charged to the patient and are due at the time of
+                        service, unless other arrangements have been made in advance with our business office. Necessary
+                        forms will be completed to file for insurance carrier payments.</small>
+
+                      <small>If a check is returned to us for any reason, your child’s account will be charged the amount of
+                        the check plus a $ 25.00 returned check fee. Parents will be responsible for any fees incurred
+                        from collection agencies and/or legal services hired by POWERS PEDIATRICS to secure payment for
+                        services.</small>
+
+                      <h6 class="mb-n1 mt-2"><b>USUAL & CUSTOMARY RATES</b></h6>
+                      <small>Our practice is committed to providing the best treatment for our patients and we charge what
+                        is usual and customary for our area. You are responsible for payment regardless of any insurance
+                        company’s arbitrary determination of usual or customary rates.</small>
+
+                      <h6 class="mb-n1 mt-2"><b>INSURANCE</b></h6>
+                      <small>WE CANNOT BILL YOUR INSURANCE COMPANY UNLESS YOU GIVE US A COPY OF YOUR CHILD’S INSURANCE CARD.
+                        Without a copy of the card, you will be responsible for 100% of the charges on that date of
+                        service. We will file to your insurance company; however, if you must pay a percentage of the
+                        bill, it must be paid at the time of service. All co-pays are due at the time of service.</small>
+
+                      <small>The balance is your responsibility whether your insurance company pays or not. Your insurance
+                        policy is a contract between you and your insurance company. Please be aware that some, and
+                        perhaps all of the services provided may be non-covered services and not considered reasonable
+                        according to your insurance policy.</small>
+
+                      <small>According to Florida State statutes, an HMO has 45 days to process and pay a correct claim. If
+                        your insurance has not paid your child’s claim in full within 6 months, you will be responsible
+                        for the bill within 10 days of receipt of your statement.</small>
+
+                      <small>We will mail 2 statements to you before the account is turned over to a collection agency. If
+                        you are unable to pay the balance in full, we can arrange a payment plan for you which you will
+                        sign. A copy of the payment plan will be given to you and copy will be kept in your child’s
+                        chart. If you default on your payment plan, the account will be forwarded to a collection
+                        agency.</small>
+
+                      <small>In the event that your insurance changes, it is your responsibility to notify us as we may be
+                        non participating providers. Failure to do so will result in you being responsible for all
+                        charges incurred. It is not the responsibility of POWERS PEDIATRICS to ensure we are providers.
+                        Our main concern is the health of our patients.</small>
+
+                      <small>Regarding HMO, Managed Care and Medicaid plan, you are responsible for making sure that our
+                        practice and/or doctors are listed as your child’s Primary Care Physicians. Failure to do so
+                        will result in you being responsible for all charges incurred.</small>
+
+                      <h6 class="mb-n1 mt-2"><b>Assignment of Benefits</b></h6>
+                      <small>I hereby assign all medical, dental and surgical benefits, to include major medical benefits to
+                        which I am entitled. I hereby authorize and direct my insurance carrieres), including Medicare,
+                        private insurance and any other health/medical and dental plan, to issue payment check(s)
+                        directly to POWERS PEDIATRICS for medical and dental services rendered to myself and/or my
+                        dependents regardless of my insurance benefits, if any. I understand that I am responsible for
+                        any amount not covered by insurance.</small>
+
+                      <h6 class="mb-n1 mt-2"><b>Authorization to Release Information</b></h6>
+                      <small>I hereby authorize POWERS PEDIATRICS to: (1) release any information necessary to insurance
+                        carriers regarding my illness and treatments; (2) process insurance claims generated in the
+                        course of examination or treatment; and (3) allow a photocopy of my signature to be used to
+                        process insurance claims for the period of lifetime. This order will remain in effect until
+                        revoked by me in writing.</small>
+
+                      <small>I have requested medical services from POWERS PEDIATRICS on behalf of myself and/or my
+                        dependents, and understand that by making this request, I become fully financially responsible
+                        for any and all charges incurred in the course of the treatment authorized.</small>
+
+                      <small>I further understand that fees are due and payable on the date that services are rendered and
+                        agree to pay all such charges incurred in full immediately upon presentation of the appropriate
+                        statement. A photocopy of this assignment is to be considered as valid as the original.</small>
+
+                      <small>Your Signature Below Confirm that you fully understand POWERS PEDIATRICS financial policy.</small>
+
+                      <fieldset class="fieldset-border">
+                        <div class="row">
+
+                          <div class="col-xl-12">
+                            <label for="" class="font-weight-bold mb-n2">Do you have trouble affording the care or prescriptions prescribed?</label>
+                            <p class="answers">No</p>                              
+                          </div>
+
+                          <div class="col-xl-3">
+                            <div class="form-group">
+                              <label for="finance_parent" class="font-weight-bold mb-n2 question">Parent’s name</label>
+                              <p class="answers">Jhonny</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-3">
+                            <div class="form-group">
+                              <label for="finance_child" class="font-weight-bold mb-n2 question">Patient’s name</label>
+                              <p class="answers">Shakir</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-3">
+                            <div class="form-group">
+                              <label for="finance_date" class="font-weight-bold mb-n2 question">Date</label>
+                              <p class="answers">12/12/21</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-3">
+                            <div class="form-group">
+                              <label for="" class="font-weight-bold mb-n2 question">Signature</label>
+                              <img src="assest/img/sign.png" width="180" alt="">
+                            </div>
+                          </div>
+
+                        </div>
+                      </fieldset>
+
+                    </div>
+
+                  </li>
+                <!-- 11th Step -->
+
+                <!-- 12th Step -->
+                  <li class="form-step active" id="tweleveth-step">
+                    <a>
+                      <span class="circle" id="step-tweleveth-circle">12</span>
+                      <span class="label">HIPAA Patient Questionnaire</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+
+                      <fieldset class="fieldset-border">
+                        <label class="custom-label mobile">1. Please list the family members or other person(s), if any,
+                          whom we may inform about your general medical condition and your diagnosis (including
+                          treatment, payment and health care operations):</label>
+                        <legend class="desktop">1. Please list the family members or other person(s), if any, whom we
+                          may inform about your general medical condition and your diagnosis (including treatment,
+                          payment and health care operations):</legend>
+
+                        <div class="row">
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="gmc_name1" class="font-weight-bold mb-n2 question">Name</label>
+                              <p class="answers">Ravi Agrawal</p>
+                            </div>
+                          </div>
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="gmc_phone1" class="font-weight-bold mb-n2 question">Phone Number</label>
+                              <p class="answers">95122156655l</p>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+
+                      <fieldset class="fieldset-border">
+                        <label class="custom-label mobile">2. Please list the family members or others, if any, whom we
+                          may inform about your medical condition ONLY IN AN EMERGENCY.</label>
+                        <legend class="desktop">2. Please list the family members or others, if any, whom we may inform
+                          about your medical condition ONLY IN AN EMERGENCY.</legend>
+
+                        <div class="row">
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="emg_name1" class="font-weight-bold mb-n2 question">Name</label>
+                              <p class="answers">Fahad</p>
+                            </div>
+                          </div>
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="emg_phone1" class="font-weight-bold mb-n2 question">Phone Number</label>
+                              <p class="answers">6152512244</p>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <fieldset class="fieldset-border">
+                        <label class="custom-label mobile">3. Please print the address of where you would like your
+                          billing statements and/or correspondence from our office to be sent if other than your home.
+                          (Confidential Communications)</label>
+                        <legend class="desktop">3. Please print the address of where you would like your billing
+                          statements and/or correspondence from our office to be sent if other than your home.
+                          (Confidential Communications)</legend>
+
+                        <div class="row">
+
+                          <div class="col-xl-3">
+                            <div class="form-group">
+                              <label for="billing_address" class="font-weight-bold mb-n2 question">Address</label>
+                              <p class="answers">15th St</p>
+                            </div>
+                          </div>
+                          <div class="col-xl-3">
+                            <div class="form-group">
+                              <label for="billing_city" class="font-weight-bold mb-n2 question">City</label>
+                              <p class="answers">New York</p>
+                            </div>
+                          </div>
+                          <div class="col-xl-3">
+                            <div class="form-group">
+                              <label for="billing_state" class="font-weight-bold mb-n2 question">State</label>
+                              <p class="answers">NY</p>
+                            </div>
+                          </div>
+                          <div class="col-xl-3">
+                            <div class="form-group">
+                              <label for="billing_zip" class="font-weight-bold mb-n2 question">Zip</label>
+                              <p class="answers">95135</p>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <fieldset class="fieldset-border">
+                        <label class="custom-label mobile">4. Please indicate if you want all correspondence from our
+                          office sent in a sealed envelope marked “CONFIDENTIAL”.</label>
+                        <legend class="desktop">4. Please indicate if you want all correspondence from our office sent
+                          in a sealed envelope marked “CONFIDENTIAL”.</legend>
+                          <div class="row">
+                            <div class="col-xl-4">
+                              <div class="form-group">
+                                <label class="checklabel optional-label" for="hipaa_4_y">Yes</label>
+                              </div>
+                            </div>
+                          </div>
+                      </fieldset>
+
+                      <fieldset class="fieldset-border">
+                        <label class="custom-label mobile">5. Please print the telephone number or email address where
+                          you want to receive calls about your appointments, labs and x-rays results or other health
+                          care information:</label>
+                        <legend class="desktop">5. Please print the telephone number or email address where you want to
+                          receive calls about your appointments, labs and x-rays results or other health care
+                          information:</legend>
+
+                        <div class="row">
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="health_phoneno" class="font-weight-bold mb-n2 question">Home phone number</label>
+                              <p class="answers">9511559654</p>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label for="health_email" class="font-weight-bold mb-n2 question">Email Address</label>
+                              <p class="answers">x@gmail.com</p>
+                            </div>
+                          </div>
+
+                        </div>
+                      </fieldset>
+
+
+                      <fieldset class="fieldset-border">
+                        <label class="custom-label mobile">6. Can confidential messages (ie., appointment reminders) be
+                          left on your telephone answering machine or voicemail?</label>
+                        <legend class="desktop">6. Can confidential messages (ie., appointment reminders) be left on
+                          your telephone answering machine or voicemail?</legend>
+                        <div id="error_hipaa_6" class="error-span"></div>
+                        
+
+                        <div class="row">
+                          <div class="col-xl-4">
+                            <div class="form-group">
+                              <label class="checklabel optional-label" for="hipaa_6_y">Yes</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+
+                      <p>I understand the Privacy Protection Act and have been offered a copy of the Organization’s
+                        Notice of Privacy Practices updated for the HITECH Omnibus Rule of 2013.</p>
+
+
+                      <div class="row">
+                        <div class="col-xl-12">
+                          <div class="row mt-4">
+                            <div class="col-xl-2">
+                              <div class="form-group">
+                                <label for="hipaa_patient_name" class="font-weight-bold mb-n2 question">Patient Name</label>
+                                <p>Shakir Ansari</p>
+                              </div>
+                            </div>
+                            <div class="col-xl-2">
+                              <div class="form-group">
+                                <label for="hipaa_patient_date" class="font-weight-bold mb-n2 question">Date</label>
+                                <p>12/12/21</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </li>
+                <!-- 12th Step -->
+
+                <!-- 13th Step -->
+                  <li class="form-step active active" id="thirteenth-step">
+                    <a>
+                      <span class="circle" id="step-thirteenth-circle">13</span>
+                      <span class="label">Consent for Treatment</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+
+                      <small>I consent to the use of disclosure of my protected health information by Powers Pediatrics for
+                        the purpose of diagnosing or providing treatment to me/my child, obtaining payment for me/my
+                        child’s health care bills or to conduct health care operations of Powers Pediatrics.</small>
+
+                      <small>I have the right to revoke this consent, in writing, at any time, except to the extent that
+                        Powers Pediatrics has taken action in reliance on this consent.</small>
+
+                      <small>Me/my child’s “protected health information” mean health information, including my demographic
+                        information, collected from me and created or received by my physician, another health care
+                        provider, a health plan, my employer or a health care clearinghouse. This protected health
+                        information relates to me/my child, or there is a reasonable basis to believe the information
+                        may identify me/my child.</small>
+
+                      <small>POWERS PEDIATRICS has an established privacy policy which is displayed in this office and I can
+                        request a printed copy of this policy.</small>
+
+
+
+
+                      <div class="row mt-4">
+                        <div class="col-xl-12">
+                          <fieldset class="fieldset-border">
+                            <div class="row">
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="consent_patient_name" class="font-weight-bold mb-n2 question">Patient Name</label>
+                                  <p class="asnwers">Shakir Ansari</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="consent_patient_date" class="font-weight-bold mb-n2 question">Date</label>
+                                  <p class="asnwers">12/12/97</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="consent_parent_name" class="font-weight-bold mb-n2 question">Parent/Guardian Name</label>
+                                  <p class="asnwers">Jhonny</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">Relationship With Patient*</label>
+                                  <p class="asnwers">Sponsored Dependent</p>
+                                </div>
+                              </div>
+
+                              <div class="col-xl-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mb-n2 question">Signature</label>
+                                  <img src="assest/img/sign.png" width="200" alt="">
+                                </div>
+                              </div>
+
+                            </div>                            
+                          </fieldset>
+
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                  </li>
+                <!-- 13th Step -->
+
+                </ul>
+                <!-- /.Stepers Wrapper -->
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- ======================= content ================================  -->
+    </div>
+    <!-- ======================= container ================================  -->
+  </section>
+  <!-- ======================= new patient form ================================  -->
+
+  <script type="text/javascript" src="assest/js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="assest/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="assest/js/custom.js"></script>
+  <script type="text/javascript" src="assest/js/register.js"></script>
+  <script type="text/javascript" src="assest/js/mask.js"></script>
+  <script type="text/javascript" src="assest/js/signature/bezier.js"></script>
+  <script type="text/javascript" src="assest/js/signature/jquery.signaturepad.js"></script>
+  <script type="text/javascript" src="assest/js/signature/json2.min.js"></script>
+  <script type="text/javascript" src="assest/js/signature/numeric.min.js"></script>
+  <script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+  <script>
+    $(document).ready(function () {
+      $('#smoothed1').signaturePad({ drawOnly: true, drawBezierCurves: true, lineTop: 200 });
+      $('#smoothed2').signaturePad({ drawOnly: true, drawBezierCurves: true, lineTop: 200 });
+      $('#smoothed3').signaturePad({ drawOnly: true, drawBezierCurves: true, lineTop: 200 });
+      $('#smoothed4').signaturePad({ drawOnly: true, drawBezierCurves: true, lineTop: 200 });
+      $('#smoothed5').signaturePad({ drawOnly: true, drawBezierCurves: true, lineTop: 200 });
+      $('#smoothed6').signaturePad({ drawOnly: true, drawBezierCurves: true, lineTop: 200 });
+    });
+  </script>
+</body>
+
+</html>
