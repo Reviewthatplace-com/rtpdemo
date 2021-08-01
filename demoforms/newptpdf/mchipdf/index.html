@@ -1,0 +1,2830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>MCHI1 | New Patient Form</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="icon" href="assest/img/logo.png" type="image/png" sizes="16x16">
+  <!-- Bootstrap core CSS -->
+  <link href="assest/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="assest/css/register.css">
+  <link href="assest/css/typography.css" rel="stylesheet">
+  <style type="text/css">
+    .canvas-image {
+      background-image: url(assest/img/input-image.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media only screen and (min-width: 750px) {
+
+      #section1a,
+      #section1b,
+      #section1c,
+      #section1d {
+        background-image: url(assest/img/section1.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        background-attachment: fixed;
+      }
+    }
+
+    #section1a .inner-section {
+      padding-top: 20px;
+    }
+
+    #section1b .inner-section {
+      padding-top: 70px;
+    }
+
+    .shadow,
+    .shadow2 {
+      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+      padding: 30px 40px;
+      border-radius: 10px 10px 10px 10px;
+      background: white;
+    }
+
+    .top-rtplogo {
+      height: 120px;
+    }
+
+    .btn-start {
+      height: 85px;
+    }
+
+    @media only screen and (max-width: 750px) {
+      #section1a .inner-section {
+        padding-top: 15px;
+      }
+
+      #section1b .inner-section {
+        padding-top: 15px;
+      }
+
+      .shadow {
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+        padding: 10px 25px;
+        border-radius: 10px 10px 10px 10px;
+        background: white;
+      }
+
+      .shadow {
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+        padding: 20px 15px;
+        border-radius: 10px 10px 10px 10px;
+        background: white;
+      }
+
+      .top-rtplogo,
+      .top-rtplogo2 {
+        height: 100px;
+      }
+
+      .btn-start {
+        height: 50px;
+      }
+
+      .btn-start2 {
+        height: 70px;
+        margin: 15px auto !important;
+      }
+
+      .inner-section {
+        background: rgba(255, 255, 255, 1);
+      }
+    }
+
+    .progress {
+      background: none !important;
+    }
+
+    @media only screen and (min-width: 750px) {
+      #confirmation {
+        background-image: url(assest/img/481.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        background-attachment: fixed;
+      }
+
+      #check-logo {
+        height: 100px;
+      }
+    }
+
+    #confirmation .shadow {
+      background-color: white;
+      border-radius: 40px;
+    }
+
+    .check-img {
+      margin-top: -75px;
+      height: 150px;
+    }
+
+    @media only screen and (max-width: 750px) {
+      #confirmation {
+        background-image: url(assest/img/481.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      .check-img {
+        margin-top: -50px;
+        height: 100px;
+      }
+
+      #finish-step .next-btn {
+        max-width: 90%;
+      }
+
+      #confirmation h2 {
+        font-size: 22px;
+      }
+
+      #confirmation h3 {
+        font-size: 20px;
+      }
+    }
+    .question
+    {
+      font-size:13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======================= new patient form ================================  -->
+  <section class="" id="registration-section" style="display: block;">
+    <!-- ======================= container ================================  -->
+    <div class="container" id="form-container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h1 class="section-heading">New Patient Registration</h1>
+        </div>
+      </div>
+      <!-- ======================= content ================================  -->
+      <div class="card">
+        <div class="card-body">
+          <form class="" method="post" enctype="multipart/form-data" role="form">
+            <div class="row">
+              <div class="col-sm-12 stepper stepper-vertical">
+
+                <!-- Initial step -->
+                  <section class="form-step active" id="zero-step">
+                    <a>
+                      <span class="circle" id="step-one-cirle">0</span>
+                      <span class="label">Form Filled By:</span>
+                    </a>
+  
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-border">
+                            <legend class="legend">Filler Information</legend>
+                            <div class="row">
+
+                              <div class="col-sm-2">
+                                <div class="form-group">
+                                  <label for="filler_name" class="font-weight-bold mb-n2 question">Your Name</label>
+                                  <p class="answers">Shakir Ansari</p>
+                                </div>
+                              </div>
+  
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="filler_email" class="font-weight-bold mb-n2 question">Email</label>
+                                  <p class="answers">Shakir@gmail.com</p>
+                                </div>
+                              </div>
+  
+                              <div class="col-sm-2">
+                                <div class="form-group">
+                                  <label for="filler_phone" class="font-weight-bold mb-n2 question">Phone</label>
+                                  <p class="answers">9133215566</p>
+                                </div>
+                              </div>
+  
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="filler_relation" class="font-weight-bold mb-n2 question">Relation to patient</label>
+                                  <p class="answers checklabel required-label">Self</p>
+                                </div>
+                              </div>
+  
+                              <div class="col-sm-2">
+                                <div class="form-group">
+                                  <label for="filler_pin" class="font-weight-bold mb-n2 question">Pin</label>
+                                  <p class="answers">xyz23654</p>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </section>
+                <!-- Initial step -->
+
+                  <!-- 1st Step -->
+                  <section class="form-step active" id="first-step">
+                    <a>
+                      <span class="circle" id="step-one-cirle">1</span>
+                      <span class="label">Patient Demographics</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Patient Information</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-2">
+                                <div class="form-group">
+                                  <label for="s1q1" class="font-weight-bold mt-n2 question">First Name</label>
+                                  <p class="answers">Shakir</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-2">
+                                <div class="form-group">
+                                  <label for="s1q2" class="font-weight-bold mt-n2 question">Middle Name</label>
+                                  <p class="answers"></p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-2">
+                                <div class="form-group">
+                                  <label for="s1q3" class="font-weight-bold mt-n2 question">Last Name</label>
+                                  <p class="answers">Ansari</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-2">
+                                <div class="form-group">
+                                  <label for="s1q4" class="font-weight-bold mt-n2 question">Date of Birth</label>
+                                  <p class="answers">12/21/96</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-2">
+                                <div class="form-group">
+                                  <label for="s1q6" class="font-weight-bold mt-n2 question">Age</label>
+                                  <p class="answers">18</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-2">
+                                <div class="form-group">
+                                  <label for="s1q7" class="font-weight-bold mt-n2 question">Sex</label>
+                                  <p class="answers checklabel required-label">Male</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Patient Address</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q7" class="font-weight-bold mt-n2 question">Street Address</label>
+                                  <p class="answers">15th St</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q8" class="font-weight-bold mt-n2 question">City</label>
+                                  <p class="answers">New York</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q9" class="font-weight-bold mt-n2 question">State</label>
+                                  <p class="answers">NY</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q10" class="font-weight-bold mt-n2 question">Zipcode</label>
+                                  <p class="answers">10001</p>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Patient Contact Information</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="s1q11" class="font-weight-bold mt-n2 question">Phone#</label>
+                                  <p class="answers">9511596655</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="s1q12" class="font-weight-bold mt-n2 question">Cell#</label>
+                                  <p class="answers">9511544455</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="s1q13" class="font-weight-bold mt-n2 question">Email</label>
+                                  <p class="answers">Shakir@gmail.com</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Marital Status</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers  checklabel required-label">Married</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <div class="form-group">
+                                      <label for="s1q19" class="font-weight-bold mt-n2 question">Spouse’s Name</label>
+                                      <p class="answers">Heather</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-3">
+                                    <div class="form-group">
+                                      <label for="s1q20" class="font-weight-bold mt-n2 question">Spouse’s Employer</label>
+                                      <p class="answers">X Company</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-3">
+                                    <div class="form-group">
+                                      <label for="s1q21" class="font-weight-bold mt-n2 question">Number of children</label>
+                                      <p class="answers">2</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-3">
+                                    <div class="form-group">
+                                      <label for="s1q22" class="font-weight-bold mt-n2 question">Age</label>
+                                      <p class="answers">18</p>
+                                    </div>
+                                  </div>                                  
+                                </div>
+
+
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Employee Detail</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q15" class="font-weight-bold mt-n2 question">Work Phone</label>
+                                  <p class="answers">9511544488</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q16" class="font-weight-bold mt-n2 question">Fax</label>
+                                  <p class="answers">915554488</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q17" class="font-weight-bold mt-n2 question">Employer</label>
+                                  <p class="answers">X Employer</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q18" class="font-weight-bold mt-n2 question">Occupation</label>
+                                  <p class="answers">Work</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Whom may we thank for referring you to this office?</legend>
+                            <div class="inner-row">
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers  checklabel required-label">Sibling/Friend</p>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </section>
+                  <!-- 1st Step -->
+
+                  <!-- 2nd Step -->
+                  <section class="form-step active" id="second-step">
+                    <!-- title -->
+                    <a>
+                      <span class="circle" id="step-second-cirle">2</span>
+                      <span class="label">Emergency Contact</span>
+                    </a>
+
+                    <!-- Section Description -->
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Emergency Contact</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s2q1" class="font-weight-bold mt-n2 question">Name</label>
+                                  <p class="answers">Ravi Agrawal</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s2q2" class="font-weight-bold mt-n2 question">Relationship</label>
+                                  <p class="answers  checklabel required-label">Employee</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Emergency Contact Info</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s2q3" class="font-weight-bold mt-n2 question">Phone#</label>
+                                  <p class="answers">3599511155</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s2q4" class="font-weight-bold mt-n2 question">Cell#</label>
+                                  <p class="answers">3599511188</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+
+                      <!-- row -->
+                    </div>
+                    <!-- container -->
+                  </section>
+                  <!-- 2nd Step -->
+
+                  <!-- 3rd Step -->
+                  <section class="form-step active" id="third-step">
+                    <a>
+                      <span class="circle" id="step-third-circle">3</span>
+                      <span class="label">Insurance Information</span>
+                    </a>
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Select Type</legend>
+                            <div class="inner-row">
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers  checklabel required-label">Insurance</p>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12" id="insurancetype">
+                          <div class="row">
+
+                            <!-- primary insurance -->
+                            <div class="col-sm-6">
+                              <div class="row px-3">
+                                <fieldset class="fieldset-outer">
+                                  <legend class="custom-legend">Primary Insurance</legend>
+                                  <div class="row inner-row">
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0a1" class="font-weight-bold mt-n2 question">Insurance Company</label>
+                                        <p class="answers">x Company</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0b1" class="font-weight-bold mt-n2 question">Phone#</label>
+                                        <p class="answers">6544566655</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0c1" class="font-weight-bold mt-n2 question">Id#</label>
+                                        <p class="answers">65485</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0d1" class="font-weight-bold mt-n2 question">Group#</label>
+                                        <p class="answers">X group</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0e1" class="font-weight-bold mt-n2 question">Subscriber Name</label>
+                                        <p class="answers">Shakir Ansari</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0f1" class="font-weight-bold mt-n2 question">Subscriber Birthdate</label>
+                                        <p class="answers">12/21/97</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0g1" class="font-weight-bold mt-n2 question">SS Number</label>
+                                        <p class="answers">3322116485</p>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+                            <!-- primary insurance -->
+
+                            <!-- secondary insurance -->
+                            <div class="col-sm-6">
+                              <div class="row px-3">
+                                <fieldset class="fieldset-outer">
+                                  <legend class="custom-legend">Secondary Insurance</legend>
+                                  <div class="row inner-row">
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0a2" class="font-weight-bold mt-n2 question">Insurance Company</label>
+                                        <p class="answers">Y Company</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0b2" class="font-weight-bold mt-n2 question">Phone#</label>
+                                        <p class="answers">3511532211</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0c2" class="font-weight-bold mt-n2 question">Id#</label>
+                                        <p class="answers">65125</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0d2" class="font-weight-bold mt-n2 question">Group#</label>
+                                        <p class="answers">Y Group</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0e2" class="font-weight-bold mt-n2 question">Subscriber Name</label>
+                                        <p class="answers">Ravi Agrawal</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0f2" class="font-weight-bold mt-n2 question">Subscriber Birthdate</label>
+                                        <p class="answers">12/21/97</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label for="s3q0g2" class="font-weight-bold mt-n2 question">SS Number</label>
+                                        <p class="answers">321551254</p>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+                            <!-- secondary insurance -->
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- 3rd Step -->
+
+                  <!-- 4th Step -->
+                  <section class="form-step active" id="fourth-step">
+                    <a>
+                      <span class="circle" id="step-fourth-circle">4</span>
+                      <span class="label">History of Complaint</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Primary Complaint</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <fieldset class="fieldset-border">
+                                  <legend>Please describe the issue</legend>
+                                  <div class="form-group">
+                                    <label for="s4q1aa" class="font-weight-bold mt-n2 question"></label>
+                                    <p class="answers">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quo debitis cumque nemo iusto, exercitationem nesciunt quisquam quam at aperiam explicabo voluptatibus fuga eaque rerum minus voluptas odio praesentium. Est!</p>
+                                  </div>
+                                </fieldset>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <fieldset class="fieldset-border">
+                                  <legend class="">Please choose the type of pain and show us where</legend>
+                                  <div class="row">
+
+                                    <div class="col-sm-3">
+                                      <div class="form-group">
+                                        <p class="answers checklabel required-label">Radiating</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                      <div class="form-group">
+                                        <p class="answers checklabel required-label">Burning</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                      <div class="form-group">
+                                        <p class="answers checklabel required-label">Dull</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                      <div class="form-group">
+                                        <p class="answers checklabel required-label">Aching</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                      <div class="form-group">
+                                        <p class="answers checklabel required-label">Numbness</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                      <div class="form-group">
+                                        <p class="answers checklabel required-label">Sharp/Stabbing</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                      <div class="form-group">
+                                        <p class="answers checklabel required-label">Tingling</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group justify-content-center" id="radiating_type1">
+                                      <canvas class="canvas-image" id="canvas1a" width="300" height="300"
+                                        data-toggle="tooltip" title="Radiating"></canvas>
+                                    </div>
+
+                                    <div class="form-group justify-content-center" id="burning_type1">
+                                      <canvas class="canvas-image" id="canvas2a" width="300" height="300"
+                                        data-toggle="tooltip" title="Burning"></canvas>
+                                    </div>
+
+                                    <div class="form-group justify-content-center" id="dull_type1">
+                                      <canvas class="canvas-image" id="canvas3a" width="300" height="300"
+                                        data-toggle="tooltip" title="Dull"></canvas>
+                                    </div>
+
+                                    <div class="form-group justify-content-center" id="aching_type1">
+                                      <canvas class="canvas-image" id="canvas4a" width="300" height="300"
+                                        data-toggle="tooltip" title="Aching"></canvas>
+                                    </div>
+
+                                    <div class="form-group justify-content-center" id="numbness_type1">
+                                      <canvas class="canvas-image" id="canvas5a" width="300" height="300"
+                                        data-toggle="tooltip" title="Numbness"></canvas>
+                                    </div>
+
+                                    <div class="form-group justify-content-center" id="stabbing_type1">
+                                      <canvas class="canvas-image" id="canvas6a" width="300" height="300"
+                                        data-toggle="tooltip" title="Stabbing"></canvas>
+                                    </div>
+
+                                    <div class="form-group justify-content-center" id="tingling_type1">
+                                      <canvas class="canvas-image" id="canvas7a" width="300" height="300"
+                                        data-toggle="tooltip" title="Tingling"></canvas>
+                                    </div>
+
+                                  </div>
+                                </fieldset>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <fieldset class="fieldset-border">
+                                  <legend class="">Is your problem the result of any type of accident?</legend>
+                                  <div class="">
+
+                                    <div class="col-sm-12">
+                                      <div class="form-group">
+                                        <p class="answers checklabel required-label">Yes</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <fieldset class="fieldset-border">
+                                  <legend class="">Other</legend>
+                                  <div class="row">
+
+                                    <div class="col-sm-12">
+                                      <div class="form-group">
+                                        <label for="s4q1c" class="font-weight-bold mt-n2 question">What relieves your symptoms?</label>
+                                        <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dolores recusandae repellat consequuntur similique quasi? Hic, ad obcaecati, itaque, explicabo tempora omnis doloremque ut eum modi in perspiciatis nihil totam?</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                      <div class="form-group">
+                                        <label for="s4q1d" class="font-weight-bold mt-n2 question">What makes them feel worse?</label>
+                                        <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dolores recusandae repellat consequuntur similique quasi? Hic, ad obcaecati, itaque, explicabo tempora omnis doloremque ut eum modi in perspiciatis nihil totam?</p>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </fieldset>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <fieldset class="fieldset-border">
+                                  <div class="row">
+
+                                    <div class="col-sm-12">
+                                      <div class="form-group">
+                                        <label for="filler_relation" class="font-weight-bold mb-n2 question">Primarily condition Pain level</label>
+                                        <p class="answers checklabel required-label">10</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                      <div class="form-group">
+                                        <label for="filler_relation" class="font-weight-bold mb-n2 question">What is your pain RIGHT NOW?</label>
+                                        <p class="answers checklabel required-label">10</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                      <div class="form-group">
+                                        <label for="filler_relation" class="font-weight-bold mb-n2 question">What is your TYPICAL or AVERAGE pain?</label>
+                                        <p class="answers checklabel required-label">10</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                      <div class="form-group">
+                                        <label for="filler_relation" class="font-weight-bold mb-n2 question">What is your pain level AT ITS BEST (How close to “0” does your pain get at its best)?</label>
+                                        <p class="answers checklabel required-label">10</p>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                      <div class="form-group">
+                                        <label for="filler_relation" class="font-weight-bold mb-n2 question">What is your pain level AT ITS WORST (How close to “10” does your pain get at its worst)?</label>
+                                        <p class="answers checklabel required-label">10</p>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </fieldset>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Do you have any problem(s)?</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+                              
+                              <div class="row p-3" id="problem_group">
+                                <div class="col-sm-7">
+                                  <div class="form-group">
+                                    <label for="s6q1a" class="font-weight-bold mt-n2 question">When did the problem(s) begin?</label>
+                                    <p class="answers">Couple of days ago</p>
+                                  </div>
+                                </div>
+                                <div class="col-sm-6">
+                                  <fieldset class="fieldset-border">
+                                    <legend>When is the problem at its worst?</legend>
+                                    <div class="col-sm-12">
+                                      <div class="form-group">
+                                        <p class="answers checklabel required-label">Mid-Day</p>
+                                      </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                                <div class="col-sm-6">
+                                  <fieldset class="fieldset-border">
+                                    <legend>How long does it last?</legend>
+                                    <div class="col-sm-12">
+                                      <div class="form-group">
+                                        <p class="answers checklabel required-label">It comes and goes throughout the week</p>
+                                      </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <label for="s6q1d" class="font-weight-bold mt-n2 question">How did the injury happen?</label>
+                                    <p class="answers">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ratione dolor. Rerum vitae illum natus! Dolore cumque inventore accusantium, sit explicabo velit aliquid reiciendis aliquam, ut ipsa, obcaecati odio minus!</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Condition(s) ever been treated by anyone in the past?</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <div class="row" id="cond_treat">
+
+                                  <div class="col-sm-4">
+                                    <div class="form-group">
+                                      <label for="s6q2a" class="font-weight-bold mt-n2 question">If yes, when?</label>
+                                      <p class="answers">A week ago</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-4">
+                                    <div class="form-group">
+                                      <label for="s6q2b" class="font-weight-bold mt-n2 question">By whom?</label>
+                                      <p class="answers">Dr. X</p>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-sm-4">
+                                    <div class="form-group">
+                                      <label for="s6q2c" class="font-weight-bold mt-n2 question">How long were you under care?</label>
+                                      <p class="answers">2 weeks</p>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-sm-4">
+                                    <div class="form-group">
+                                      <label for="s6q2d" class="font-weight-bold mt-n2 question">What were the results?</label>
+                                      <p class="answers">Good</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-4">
+                                    <div class="form-group">
+                                      <label for="s6q2e" class="font-weight-bold mt-n2 question">Name of Previous Chiropractor</label>
+                                      <p class="answers">Dr. X</p>
+                                    </div>
+                                  </div>
+
+                                </div>                                
+                              </div>
+
+
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+
+                    </div>
+                  </section>
+                  <!-- 4th Step -->
+
+                  <!-- 5th Step -->
+                  <section class="form-step active" id="fifth-step">
+                    <a>
+                      <span class="circle" id="step-fifth-circle">5</span>
+                      <span class="label">Nerve System Profile</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Most Recent Accident</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="s14q2" class="font-weight-bold mt-n2 question">When was your most recent auto accident?</label>
+                                  <p class="answers">A week ago</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="s14q3" class="font-weight-bold mt-n2 question">What speed wasthe collision?</label>
+                                  <p class="answers">80mp/h</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label for="s14q3" class="font-weight-bold mt-n2 question">Type of impact</label>
+                                    <p class="answers checklabel required-label">Side Impact</p>
+                                  </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="s14q5" class="font-weight-bold mt-n2 question">Was treatment received? Please describe</label>
+                                  <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem animi dolorum molestias eum debitis beatae aspernatur nobis necessitatibus? Praesentium, impedit vitae. Quia voluptatibus architecto incidunt veritatis quam libero fuga.</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Most recent strain / stress at work?</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s14q6" class="font-weight-bold mt-n2 question">When was your most recent strain / stress at work?</label>
+                                  <p class="answers">a week ago</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s14q7" class="font-weight-bold mt-n2 question">Please describe the manner of the injury</label>
+                                  <p class="asnwers">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae corrupti deserunt distinctio, tempora perspiciatis labore magnam libero. Nisi nesciunt ea nihil, placeat aliquid iure! Aspernatur temporibus architecto quidem placeat et.</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s14q8" class="font-weight-bold mt-n2 question">Was treatment received? Please describe</label>
+                                  <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo aliquid deleniti, itaque nam esse temporibus fuga vero. Maiores sit nobis, sint aut eum pariatur odit reprehenderit asperiores voluptate distinctio!</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s14q8" class="font-weight-bold mt-n2 question">Does your job require you remain in long term stressful postures?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Spinal traumas in the past?</label>
+                                  <p class="answers checklabel required-label">Repetitive motion sports</p>
+                                </div>
+                              </div>
+    
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Trauma as a child</label>
+                                  <p class="answers checklabel required-label">all onto your back or tailbone</p>
+                                </div>
+                              </div>
+    
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Work around the house</label>
+                                  <p class="answers checklabel required-label">woke up with stiff neck</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+
+                  </section>
+                  <!-- 5th Step -->
+
+                  <!-- 6th Step -->
+                  <section class="form-step active" id="sixth-step">
+                    <a>
+                      <span class="circle" id="step-sixth-circle">6</span>
+                      <span class="label">Other Conditions</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <p class="mt-3">Please mark any other symptoms you have experienced marking the following:</p>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Headache</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Pregnant</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Dizziness</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Prostate Problems</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Ulcers</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Neck Pain</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Frequent Colds/Flu</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Loss of Balance</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Impotence/Sexual Dys fun</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Heartburn</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Jaw Pain,TMJ</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Fainting</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Digestive Problems</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Heart Problem</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Shoulder Pain</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Tremors</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Double Vision</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Colon Trouble</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">High Blood Pressure</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Upper Back Pain</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Chest Pain</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Blurred Vision</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Diarrhea/Constipation</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Low Blood Pressure</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Mid Back Pain</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Painw/Cough/Sneeze</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Ringing in Ears</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Menopausal Problems</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Asthma</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Low Back Pain</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Foot or Knee Problems</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Hearing Loss</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Menstrual Problem</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Difficulty Breathing</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Hip Pain</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Sinus/Drainage Problem</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Depression</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">PMS</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Lung Problems</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Back Curvature</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Swollen/Painful Joints</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Irritable</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Bed Wetting</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Kidney Trouble</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Scoliosis</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Skin Problems</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Mood Changes</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Learning Disabilty</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Gall Bladder Trouble</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Gall Bladder Trouble</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Numb/Tingling arms, hands,fingers</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">ADD/ADHD</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Eating Disorder</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Liver Trouble</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Numb/Tingling legs, feet,toes</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Allergies</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Trouble Sleeping</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Hepatitis(A,B,C)</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Do you take any other medical/psychiatric conditions that have been previously diagnosed:</legend>
+                              <div class="row inner-row">
+
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <p class="answers checklabel required-label">Yes</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                  <div class="form-group" id="psych_cond">
+                                    <label for="s8q59a" class="font-weight-bold mt-n2 question">List any other medical/psychiatric conditions that have been previously diagnosed:</label>
+                                    <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eaque cumque, laudantium voluptatibus natus dolore facilis fugiat itaque quidem repudiandae commodi magnam atque facere maxime deleniti excepturi alias illum nulla!</p>
+                                  </div>
+                                </div>
+
+                              </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Do you have any previous surgeries or other major medical procedures you have had:</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="s8q60a" class="font-weight-bold mt-n2 question">List any previous surgeries or other major medical procedures you have had:</label>
+                                  <p class="answers">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore perferendis libero repudiandae debitis, ipsum commodi aliquid culpa nisi obcaecati voluptatibus magni cumque ex dolores sit necessitatibus sed hic velit non.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Do you have any other List Prescription & Non-Prescription
+                              drugs you take & How long you have been taking them:</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <label for="s8q61a" class="font-weight-bold mt-n2 question">List Prescription & Non-Prescription drugs you take & How long you have been taking them:</label>
+                                <p class="answers">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore perferendis libero repudiandae debitis, ipsum commodi aliquid culpa nisi obcaecati voluptatibus magni cumque ex dolores sit necessitatibus sed hic velit non.</p>
+                              </div>
+
+                              <div class="form-group" id="drugs_group">
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Is there any other injury(s) to your spine, minor or major,
+                              that the doctor should know about:</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="s8q62a" class="font-weight-bold mt-n2 question">List any other injury(s) to your spine, minor or major, that the doctor should know about:</label>
+                                  <p class="answers">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore perferendis libero repudiandae debitis, ipsum commodi aliquid culpa nisi obcaecati voluptatibus magni cumque ex dolores sit necessitatibus sed hic velit non.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </section>
+                  <!-- 6th Step -->
+
+                  <!-- 7th Step -->
+                  <section class="form-step active" id="seventh-step">
+                    <a>
+                      <span class="circle" id="step-seventh-circle">7</span>
+                      <span class="label">Activities of Daily Living</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-12 text-center">
+                          <h5>Daily Activities: Effects of Current conditions On Performance</h5>
+                          <p>Please identify how your current condition is affecting your ability to carry out
+                            activities that are routinely part of your life:</p>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Bending</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Concentrating</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Doing computer Work</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Gardening</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Playing Sports</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Recreation Activities</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Shoveling</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Sleeping</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Watching TV</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Carrying</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Dancing</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Dressing</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Lifting</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Pushing</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Rolling Over</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Sitting</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Standing</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Working</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Climbing</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Doing Chores</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Driving</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Performing Sexual Activity</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Reading</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Running</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Sitting to Standing</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Walking</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+
+                  </section>
+                  <!-- 7th Step -->
+
+                  <!-- 8th Step -->
+                  <section class="form-step active" id="eighth-step">
+                    <a>
+                      <span class="circle" id="step-eighth-circle">8</span>
+                      <span class="label">Past History</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Have you suffered with any of your current complaints or a similar problem in the past?</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="s10q1a" class="font-weight-bold mt-n2 question">If yes how many times?</label>
+                                  <p class="answers">10 times</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="s10q1b" class="font-weight-bold mt-n2 question">When was the last episode?</label>
+                                  <p class="answers">a day ago</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="s10q1c" class="font-weight-bold mt-n2 question">How did the injury happen?</label>
+                                  <p class="answers">Accident</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Other forms of treatment tried</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="s10q2a" class="font-weight-bold mt-n2 question">If yes, please state what type of treatment</label>
+                                  <p class="answers">x treatment</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="s10q2b" class="font-weight-bold mt-n2 question">who provided it?</label>
+                                  <p class="answers">Dr. X</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="s10q2c" class="font-weight-bold mt-n2 question">How long ago?</label>
+                                  <p class="answers">couple of days ago</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">What were the results</label>
+                                  <p class="answers checklabel required-label">Unfavorable</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-8">
+                                <div class="form-group">
+                                  <label for="s10q2c" class="font-weight-bold mt-n2 question">If Unfavorable , please explain</label>
+                                  <p class="answers">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis voluptatem cum illo esse quaerat exercitationem consequatur animi voluptas.</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Please identify any and all types of jobs you have had in the
+                              past that have imposed any physical stress on you or your body</legend>
+                            <div class="inner-row">
+                              <div class="form-group">
+                                <label for="s10q3" class="font-weight-bold mt-n2 question"></label>
+                                <p class="answers">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem sequi voluptate itaque. Nobis atque minima debitis? Labore, mollitia, autem laborum voluptates officiis dolores eum in esse eos distinctio blanditiis laboriosam.</p>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <h5 class="my-3">If you have ever been diagnosed with any of the following conditions, please
+                            indicate below:</h5>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Broken Bone</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Dislocations</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Tumors</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Rheumatoid Arthritis</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Fracture</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Disability</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Cancer</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Heart Attack</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Osteo Arthritis</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Diabetes</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Cerebral Vascular</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Other serious conditions</label>
+                                  <p class="answers checklabel required-label">Currently have</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Have you tested with high triglycerides or high cholesterol?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Have you tested with high blood pressure?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Are you diabetic, Have you been diagnosed as pre-diabetic or with metabolic syndrome?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you eat breakfast daily from Monday to Friday?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">How many days per week do you skip one meal?</label>
+                                  <p class="answers checklabel required-label">4+</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">How many fast food, refined foods, or pre-pared meals do you eat per week?</label>
+                                  <p class="answers checklabel required-label">7+</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">How many servings of fruit do you have on a given day?</label>
+                                  <p class="answers checklabel required-label">4+</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you regularly drink (1 or more per day) any of the following?</label>
+                                  <p class="answers checklabel required-label">Alcohol</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Please list any supplements you take regularly:</label>
+                                  <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut, maxime dolorum temporibus aperiam tempora deserunt esse est quos provident nemo quod optio eveniet dignissimos voluptatum fugit odit illum veniam?</p>
+                                </div>
+                              </div>
+
+                              
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </section>
+                  <!-- 8th Step -->
+
+                  <!-- 9th Step -->
+                  <section class="form-step active" id="ninth-step">
+                    <a>
+                      <span class="circle" id="step-ninth-circle">9</span>
+                      <span class="label">Social History</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Do you smoke?</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you smoke?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Smoking</label>
+                                  <p class="answers checklabel required-label">Cigarettes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">How often smoke</label>
+                                  <p class="answers checklabel required-label">Occupationally</p>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Alcoholic Beverage: consumption occurs</label>
+                                  <p class="answers checklabel required-label">Occupationally</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Recreational Drug use</label>
+                                  <p class="answers checklabel required-label">Occupationally</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12 text-center">
+                                <h5 class="my-3">How does your present problem affect the following:</h5>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Hobbies</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Recreational Activities</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Exercise Regime</label>
+                                  <p class="answers checklabel required-label">Unable to Perform</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                  </section>
+                  <!-- 9th Step -->
+
+                  <!-- 10th step -->
+                  <section class="form-step active" id="tenth-step">
+                    <a>
+                      <span class="circle" id="step-tenth-circle">10</span>
+                      <span class="label">Family History</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Does anyone in your family suffer with the same condition(s)?</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">If yes whom?</label>
+                                  <p class="answers checklabel required-label">Grandfather</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Have they ever been treated for their condition?</label>
+                                  <p class="answers checklabel required-label">yes</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Any other hereditary conditions the doctor should be aware of?
+                            </legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">If yes, please specify</label>
+                                  <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur natus nam iusto asperiores porro voluptatum accusantium quas aut soluta, dolorem hic dolor distinctio temporibus excepturi quisquam nobis fugit, odio laudantium!</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                  </section>
+                  <!-- 10th step -->
+
+                  <!-- 11th Step -->
+                  <section class="form-step active" id="eleventh-step">
+                    <a>
+                      <span class="circle" id="step-eleventh-circle">11</span>
+                      <span class="label">Patient Health and Nutrition Survey</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h5 class="my-3">We recognize a large percentage of our patients have been asking about
+                            natural ways to address their health issues. In response to your concerns we have done
+                            extensive research to find the most advanced and unique health & wellness programs to bring
+                            to you. Please take a moment to give us your thoughts on how to better serve all your health
+                            needs.</h5>
+                        </div>
+                        <div class="col-sm-12 text-center">
+                          <h5><b><u>INDENTIFYING YOUR HEALTH GOALS:</u></b></h5>
+                          <h5 class="mb-3">To help our office understand your wellness goals and give you the type of
+                            care that you want, please use this chart to answer the questions below it.</h5>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="table-responsive">
+                            <table class="table table-bordered text-center">
+                              <tr>
+                                <th>Score</th>
+                                <th>Your Concern</th>
+                              </tr>
+                              <tr>
+                                <td>-5</td>
+                                <td class="text-left">I have serious concerns about my overall health.</td>
+                              </tr>
+                              <tr>
+                                <td>-4</td>
+                                <td class="text-left">I feel worried about my health.</td>
+                              </tr>
+                              <tr>
+                                <td>-3</td>
+                                <td class="text-left">I have constant concerns that affect my health.</td>
+                              </tr>
+                              <tr>
+                                <td>-2</td>
+                                <td class="text-left">I have health challenges that affect my on a daily basis.</td>
+                              </tr>
+                              <tr>
+                                <td>-1</td>
+                                <td class="text-left">I have some minor complaints about my health.</td>
+                              </tr>
+                              <tr>
+                                <td>0</td>
+                                <td class="text-left">I feel okay about my health with no complaints.</td>
+                              </tr>
+                              <tr>
+                                <td>+1</td>
+                                <td class="text-left">I feel good most days.</td>
+                              </tr>
+                              <tr>
+                                <td>+2</td>
+                                <td class="text-left">I feel well on a daily basis.</td>
+                              </tr>
+                              <tr>
+                                <td>+3</td>
+                                <td class="text-left">I feel energetic and healthy.</td>
+                              </tr>
+                              <tr>
+                                <td>+4</td>
+                                <td class="text-left">I feel active, energenic, and fit.</td>
+                              </tr>
+                              <tr>
+                                <td>+5</td>
+                                <td class="text-left">I feel great and am proactive about my health.</td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">What number above best describes how you feel about your health today?</label>
+                                  <p class="answers checklabel required-label">-5</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">What number above do you want to achieve regarding your health?</label>
+                                  <p class="answers checklabel required-label">-5</p>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                  </section>
+                  <!-- 11th Step -->
+
+                  <!-- 12th Step -->
+                  <section class="form-step active" id="tweleveth-step">
+                    <a>
+                      <span class="circle" id="step-tweleveth-circle">12</span>
+                      <span class="label">Identifying Your Health Goals</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Are you presently taking any type of nutritional supplements (such as vitamins, minerals, antioxidants, herbs, amino acids, fish oils,etc)?</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">If yes, please list them</label>
+                                  <p class="answers">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At similique inventore officiis dicta natus fuga nostrum vero soluta delectus sunt dolor ducimus, eaque non nisi modi aperiam, quis cum in?</p>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Who recommended you to take these supplements? Check all that apply</label>
+                                  <p class="answers checklabel required-label">Family member or friend</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Where did you purchase these supplements? Check all that apply</label>
+                                  <p class="answers checklabel required-label">Nutrition or vitamin shop</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Would you prefer that your doctor recommend specific supplements based on your specific health needs?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <h5 class="my-3">If we offered a simple,non-invasive,genetic testtode termine what
+                            supplemental regimen is best for you based on your genetic/DNA variations,and,if we could
+                            customize your supplements to your specific needs, simplify the way you take your
+                            supplements,and increase the effectiveness of them,would you consider:</h5>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Taking the Genetic test?</label>
+                                  <p class="answers checklabel required-label">Family member or friend</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Purchasing the recommended supplements?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Bring in your Own test results</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">If we offered a comprehensive weight loss management and
+                                    continuing weight maintenance program with coaching and supervision, would you consider
+                                    it?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Please indicate the areas of health that you want to improve:</label>
+                                  <p class="answers checklabel required-label">Improve General Health</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">If you could improve ONE thing about your health,what is your priority?</label>
+                                  <p class="answers checklabel required-label">Improve General Health</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                  </section>
+                  <!-- 12th Step -->
+
+                  <!-- 13th Step -->
+                  <section class="form-step active" id="thirteenth-step">
+                    <a>
+                      <span class="circle" id="step-thirteenth-circle">13</span>
+                      <span class="label">Initial Fitness Profile</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend">Do you exercise?</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s18q1" class="font-weight-bold mt-n2 question">How many times per week do you exercise?</label>
+                                    <p class="answers">5 times</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s18q2" class="font-weight-bold mt-n2 question">What is your target weight?</label>
+                                  <p class="answers">45kg</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s18q3" class="font-weight-bold mt-n2 question">What is your current weight?</label>
+                                  <p class="answers">85kg</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s18q3" class="font-weight-bold mt-n2 question">How willing are you to change any of these things to reach your health goals?</label>
+                                  <p class="answers">10</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                  </section>
+                  <!-- 13th Step -->
+
+                  <!-- 14th Step -->
+                  <section class="form-step active" id="fourteenth-step">
+                    <a>
+                      <span class="circle" id="step-fourteenth-circle">14</span>
+                      <span class="label">Initial Toxicity Profile</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Are you regularly exposed to cleaning products or industrial chemicals?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Have you ever noticed mold growing in your home or your place of work?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Does your home, work, school, or car have damp or mildew smell?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Have you received a full standard profile of vaccinations?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you receive yearly flu shots?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">How many flu shots have you received?</label>
+                                  <p class="answers">10</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Have any members of your family been diagnosed with fibromy
+                                    algia, chronic fatigue or multiple chemical sensitivities?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you have symptoms of hormonal system imbalance (thyroid,
+                                    reproductive, adrenal)?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                  </section>
+                  <!-- 14th Step -->
+
+                  <!-- 15th step -->
+                  <section class="form-step active" id="fifteenth-step">
+                    <a>
+                      <span class="circle" id="step-fifteenth-circle">15</span>
+                      <span class="label">Initial Stress Profile</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you get an average of 8 hours of sleep per night</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you average less than 7 hours of sleep per night</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you ever take pills to go to sleep or relax</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you often feel short on time and procrastinate on projects?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you often feel short on time and procrastinate on projects?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you experience feelings of anxiety about completing tasks?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you feel like you don't give enough time or attention to
+                                    important areas in your life like family, personal growth, or a hobby?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you rely more on your memory than a planner and action list
+                                    to get things done?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="" class="font-weight-bold mt-n2 question">Do you take time to pray, meditate, or visualize on a regular
+                                    basis?</label>
+                                  <p class="answers checklabel required-label">Yes</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                  </section>
+                  <!-- 15th step -->
+
+                  <!-- 16th Step -->
+                  <section class="form-step active" id="sixteenth-step">
+                    <a>
+                      <span class="circle" id="step-sixteenth-circle">16</span>
+                      <span class="label">Finish</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-12 mb-4">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="" value="" name="">
+                            <label for="">I hereby authorize payment to be made directly to RTP Medical Solution, for
+                              all benefits which may be payable under a healthcare plan or from any other collateral
+                              sources. I authorize utilization of this application or copies thereof for the purpose of
+                              processing claims and effecting payments, and further acknowledge that this assignment of
+                              benefits does not in any way relieve me of payment liability and that I will remain
+                              financially responsible to RTP Medical Solution for any and all services I receive at
+                              thisoffice.</label>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <div class="row">
+  
+                          <div class="col-sm-12">
+                            <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Signee Info</legend>
+                              <div class="row inner-row">
+  
+                               <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label for="s21q1" class="font-weight-bold mb-n2 question">Name</label>
+                                      <p class="answers">Shakir Ansari</p>
+                                    </div>
+                                </div>
+  
+                               <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label for="s21q4" class="font-weight-bold mb-n2 question">Relationship</label>
+                                      <p class="answers checklabel required-label">Self</p>
+                                    </div>
+                                </div> 
+  
+                             </div> 
+                            </fieldset> 
+                          </div> 
+  
+                          </div> 
+                        </div>
+  
+                        <div class="col-sm-6">
+                          <label for="s9q1" class="font-weight-bold mb-n2 question">Signature</label>
+                          <img src="assest/img/sign.png" alt="" width="500">
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </section>
+                  <!-- 16th Step -->
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- ======================= content ================================  -->
+
+    </div>
+    <!-- ======================= container ================================  -->
+  </section>
+  <!-- ======================= new patient form ================================  -->
+  
+</body>
+
+</html>
