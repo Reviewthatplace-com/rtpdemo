@@ -336,7 +336,7 @@
             </label>  
           </div>
 
-          <div class="separator font-weight-bold">or</div>
+          <div class="separator font-weight-bold" style="font-size: 30px;">or</div>
 
           <div class="form-checkbox">
             <input required class="form-check-input checkbox somebody_rtp" type="radio" name="s4" id="s4q2">
@@ -785,7 +785,12 @@
 
         <section class="section mt-3 arfstep9">
           <div class="container form-container text-center slide">
-            <div class="container text-justify">
+
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Consent</legend>
+            </div>
+
+            <div class="container text-justify" style="overflow-x: scroll; height: 475px;">
               <p><strong>I understand that</strong>, if the person or entity receiving the information is not a health care provider or health plan covered by federal privacy regulations, the information described above may be re-disclosed and no longer protected by HIPAA and other federal and state regulations. However, the recipient may be prohibited from disclosing substance abuse information under the Federal Substance Abuse Confidentiality Requirements</p>
               <p><strong>I also understand that</strong>, the person I am authorizing to use and/or disclose the information may not receive compensation for doing so.</p>
               <p><strong>I, further understand</strong> that I may refuse to sign this authorization and that my refusal to sign will not affect my ability to obtain treatment or payment of my eligibility for benefits. I may inspect or copy any information to be used and/or disclosed under this authorization</p>
@@ -865,17 +870,6 @@
             </table>
 
             <div class="col-12" id="strips">
-              <h5 class="font-weight-bold my-3" id="p11t">Who is sending the records?</h5>
-            </div>
-            <table class="table table-striped">
-                    <tbody>
-                      <tr>
-                        <p class="font-weight-bold" style="margin-bottom: 0.5rem;"><img src="assest/img/rtplogo.png" width="150" alt=""></p> <i class="fa fa-arrow-down"></i> <p class="font-weight-bold" style="font-size: 18px; margin-bottom: 0rem;">Somebody Else</p>
-                      </tr>
-                    </tbody>
-            </table>
-
-            <div class="col-12" id="strips">
                     <h5 class="font-weight-bold my-3" id="p11t">Send Records Via</h5>
             </div>
             <table class="table table-striped">
@@ -888,13 +882,45 @@
             </table>
 
             <div class="col-12" id="strips">
+              <h5 class="font-weight-bold my-3" id="p11t">Sending Practice Information</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="text-left">Name Of Practice</th>
+                        <td id="td1">RTPMedicalSolutions</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Phone Number</th>
+                        <td id="td1">9153595850</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Street</th>
+                        <td id="td1">2717 US-89</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">City</th>
+                        <td id="td1">Ogden</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">State</th>
+                        <td id="td1">UT</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Zip</th>
+                        <td id="td1">84414</td>
+                      </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
                     <h5 class="font-weight-bold my-3" id="p11t">Receiving Practice Information</h5>
             </div>
             <table class="table table-striped">
                     <tbody>
                       <tr>
                         <th class="text-left">Name Of Practice</th>
-                        <td id="td1">DJIMD</td>
+                        <td id="td1">Somebody Else</td>
                       </tr>
                       <tr>
                         <th class="text-left">Phone Number</th>
@@ -931,17 +957,18 @@
             </table>
             
             <div class="col-12" id="strips">
-                    <h5 class="font-weight-bold my-3" id="p11t">Authorization of Usage and Disclosure 
-                      <small class="mytooltip tooltip-effect-2">
-                        <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
-                        <span class="tooltip-content clearfix"> 
-                          <span class="tooltip-text font-weight-bold"> By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records, If Such Information And/or Records Exist:</span> 
-                        </span> 
-                      </small>
-                    </h5>
+                <h5 class="font-weight-bold my-3" id="p11t">Authorization of Usage and Disclosure </h5>
             </div>
             <table class="table table-striped">
                     <tbody>
+                      <tr>
+                        <td>
+                            <p>
+                                By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records,
+                                If Such Information And/or Records Exist:
+                            </p>
+                        </td>
+                    </tr>
                       <tr>
                         <th id="middata">Authorization of usage and Disclosure 1</th>
                       </tr>
@@ -949,17 +976,18 @@
             </table>
             
             <div class="col-12" id="strips">
-                    <h5 class="font-weight-bold my-3" id="p11t">Restrict Disclosure
-                      <small class="mytooltip tooltip-effect-2">
-                        <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
-                        <span class="tooltip-content clearfix"> 
-                          <span class="tooltip-text font-weight-bold"> Do you want to restrict disclosure for any records related to the following? (Federal regulations require a description of how much and what kind of information is to be disclosed.):</span> 
-                        </span> 
-                      </small>
-                    </h5>
+                    <h5 class="font-weight-bold my-3" id="p11t">Restrict Disclosure</h5>
             </div>
             <table class="table table-striped">
                     <tbody>
+                      <tr>
+                        <td>
+                            <p>
+                                Do you want to restrict disclosure for any records related to the following?
+                                If no please continue to next step
+                            </p>
+                        </td>
+                    </tr>
                       <tr>
                         <th id="middata">Restrict disclosure 1</th>
                       </tr>
@@ -1471,7 +1499,12 @@
 
         <section class="section mt-3 alt_step-9">
           <div class="container form-container text-center slide">
-            <div class="container text-justify">
+
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Consent</legend>
+            </div>
+            
+            <div class="container text-justify" style="overflow-x: scroll; height: 475px;">
               <p><strong>I understand that</strong>, if the person or entity receiving the information is not a health care provider or health plan covered by federal privacy regulations, the information described above may be re-disclosed and no longer protected by HIPAA and other federal and state regulations. However, the recipient may be prohibited from disclosing substance abuse information under the Federal Substance Abuse Confidentiality Requirements</p>
               <p><strong>I also understand that</strong>, the person I am authorizing to use and/or disclose the information may not receive compensation for doing so.</p>
               <p><strong>I, further understand</strong> that I may refuse to sign this authorization and that my refusal to sign will not affect my ability to obtain treatment or payment of my eligibility for benefits. I may inspect or copy any information to be used and/or disclosed under this authorization</p>
@@ -1551,17 +1584,6 @@
             </table>
 
             <div class="col-12" id="strips">
-              <h5 class="font-weight-bold my-3" id="p11t">Who is sending the records?</h5>
-            </div>
-            <table class="table table-striped">
-                    <tbody>
-                      <tr>
-                        <p class="font-weight-bold" style="font-size: 18px; margin-bottom: 0rem;">Somebody Else</p> <i class="fa fa-arrow-down"></i> <p class="font-weight-bold" style="margin-bottom: 0.5rem;"><img src="assest/img/rtplogo.png" width="150" alt=""></p>
-                      </tr>
-                    </tbody>
-            </table>
-
-            <div class="col-12" id="strips">
               <h5 class="font-weight-bold my-3" id="p11t">Send Request Via</h5>
             </div>
             <table class="table table-striped">
@@ -1580,7 +1602,39 @@
                     <tbody>
                       <tr>
                         <th class="text-left">Name Of Practice</th>
-                        <td id="td1">DJIMD</td>
+                        <td id="td1">Somebody Else</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Phone Number</th>
+                        <td id="td1">9153595850</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Street</th>
+                        <td id="td1">2717 US-89</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">City</th>
+                        <td id="td1">Ogden</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">State</th>
+                        <td id="td1">UT</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Zip</th>
+                        <td id="td1">84414</td>
+                      </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+              <h5 class="font-weight-bold my-3" id="p11t">Recieving Practice Information</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="text-left">Name Of Practice</th>
+                        <td id="td1">RTPMedicalSolutions</td>
                       </tr>
                       <tr>
                         <th class="text-left">Phone Number</th>
@@ -1617,17 +1671,18 @@
             </table>
             
             <div class="col-12" id="strips">
-                    <h5 class="font-weight-bold my-3" id="p11t">Authorization of Usage and Disclosure
-                      <small class="mytooltip tooltip-effect-2">
-                        <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
-                        <span class="tooltip-content clearfix"> 
-                          <span class="tooltip-text font-weight-bold"> By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records, If Such Information And/or Records Exist:</span> 
-                        </span> 
-                      </small>
-                    </h5>
+                    <h5 class="font-weight-bold my-3" id="p11t">Authorization of Usage and Disclosure</h5>
             </div>
             <table class="table table-striped">
                     <tbody>
+                      <tr>
+                        <td>
+                            <p>
+                                By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records,
+                                If Such Information And/or Records Exist:
+                            </p>
+                        </td>
+                    </tr>
                       <tr>
                         <th id="middata">Authorization of usage and Disclosure 1</th>
                       </tr>
@@ -1635,17 +1690,18 @@
             </table>
             
             <div class="col-12" id="strips">
-                    <h5 class="font-weight-bold my-3" id="p11t">Restrict Disclosure
-                      <small class="mytooltip tooltip-effect-2">
-                        <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
-                        <span class="tooltip-content clearfix"> 
-                          <span class="tooltip-text font-weight-bold"> Do you want to restrict disclosure for any records related to the following? (Federal regulations require a description of how much and what kind of information is to be disclosed.):</span> 
-                        </span> 
-                      </small>
-                    </h5>
+                    <h5 class="font-weight-bold my-3" id="p11t">Restrict Disclosure</h5>
             </div>
             <table class="table table-striped">
                     <tbody>
+                      <tr>
+                        <td>
+                            <p>
+                                Do you want to restrict disclosure for any records related to the following?
+                                If no please continue to next step
+                            </p>
+                        </td>
+                    </tr>
                       <tr>
                         <th id="middata">Restrict disclosure 1</th>
                       </tr>
@@ -1762,10 +1818,10 @@
               <div class="wrapper">
                 <div class="row no-gutters">
 
-                  <div class="col-md-6 d-flex align-items-stretch ml-lg-n5">
+                  <div class="col-md-7 d-flex align-items-stretch ml-lg-n5">
                     <div class="contact-wrap w-100 p-md-5 p-4 text-left">
-                      <p class="font-weight-bold mb-4 mt-3"><span class="" style="font-size: 50px; color: #ff621f;">Congrats!</span> <br> You have successfully completed your authorization release paperwork!</p>
-                      <h4 class="font-weight-bold text-success">Your confirmation number: XXXXXX</h4>
+                      <p class="font-weight-bold mb-4 mt-3"><span class="text-success" style="font-size: 50px;">Congrats!</span> <br> You have successfully completed your authorization release paperwork!</p>
+                      <h5 class="font-weight-bold text-success">Your confirmation number: <span class="" style="font-size: 50px;">XXXXXX</span></h5>
                       <form method="POST" id="contactForm" name="contactForm">
 
                         <div class="row mt-5">
@@ -1800,7 +1856,7 @@
                     </div>
                   </div>
 
-                  <div class="col-md-6 d-flex align-items-stretch"><img src="assest/img/confirm.png" alt="" height="800" style="margin-left: -30px; margin-top: -25px;"></div>
+                  <div class="col-md-5 d-flex align-items-stretch"><img src="assest/img/confirm.jpg" alt="" style="margin-left: -45px; margin-top: 20px; width: 800px ;"></div>
                 </div>
               </div>
             </div>
