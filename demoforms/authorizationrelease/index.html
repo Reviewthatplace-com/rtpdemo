@@ -28,6 +28,40 @@
     <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/typography.min.css">
     <link href="assest/css/signature/jquery.signaturepad.css" rel="stylesheet">
     <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/stylish-tooltip.css">
+    <style>
+      /* Orange */
+      .btn-outline-orange {
+        border-color: #ff621f;
+        color: #ff621f;
+      }
+
+      .btn-outline-orange:hover {
+        background: #ff621f;
+        color: white;
+      }
+      .separator {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .separator::before,
+      .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #000;
+      }
+
+      .separator:not(:empty)::before {
+        margin-right: .25em;
+      }
+
+      .separator:not(:empty)::after {
+        margin-left: .25em;
+      }
+    </style>
  </head>
  <body>
     <div id="loader"></div>
@@ -301,6 +335,8 @@
               <h4 class="font-weight-bold mb-n2">Somebody Else</h4> <small style="font-size: 12px;">Receiving Practice</small>
             </label>  
           </div>
+
+          <div class="separator font-weight-bold">or</div>
 
           <div class="form-checkbox">
             <input required class="form-check-input checkbox somebody_rtp" type="radio" name="s4" id="s4q2">
@@ -829,6 +865,17 @@
             </table>
 
             <div class="col-12" id="strips">
+              <h5 class="font-weight-bold my-3" id="p11t">Who is sending the records?</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <p class="font-weight-bold" style="margin-bottom: 0.5rem;"><img src="assest/img/rtplogo.png" width="150" alt=""></p> <i class="fa fa-arrow-down"></i> <p class="font-weight-bold" style="font-size: 18px; margin-bottom: 0rem;">Somebody Else</p>
+                      </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
                     <h5 class="font-weight-bold my-3" id="p11t">Send Records Via</h5>
             </div>
             <table class="table table-striped">
@@ -935,8 +982,8 @@
             <div class="col-12" id="strips">
                     <h5 class="font-weight-bold my-3" id="p11t">Confirm your Information</h5>
             </div>
-            <div class="col-12">
-              <p class="font-weight-bold text-justify">Unless Revoked Earlier, this Authorization Will Expire</p>
+            <div class="col-12 mb-2">
+              <h5 class="font-weight-bold text-center">Unless revoked earlier,  this<br> authorization will expire</h5>
             </div>
             <div class="container mt-n4">
               <!--Date-->
@@ -1504,7 +1551,18 @@
             </table>
 
             <div class="col-12" id="strips">
-                    <h5 class="font-weight-bold my-3" id="p11t">Send Request Via</h5>
+              <h5 class="font-weight-bold my-3" id="p11t">Who is sending the records?</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <p class="font-weight-bold" style="font-size: 18px; margin-bottom: 0rem;">Somebody Else</p> <i class="fa fa-arrow-down"></i> <p class="font-weight-bold" style="margin-bottom: 0.5rem;"><img src="assest/img/rtplogo.png" width="150" alt=""></p>
+                      </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+              <h5 class="font-weight-bold my-3" id="p11t">Send Request Via</h5>
             </div>
             <table class="table table-striped">
                     <tbody>
@@ -1611,7 +1669,7 @@
                     <h5 class="font-weight-bold my-3" id="p11t">Confirm your Information</h5>
             </div>
             <div class="col-12">
-                    <p class="font-weight-bold text-justify">Unless Revoked Earlier, this Authorization Will Expire</p>
+              <h5 class="font-weight-bold text-center">Unless revoked earlier,  this<br> authorization will expire</h5>
             </div>
             <div class="container mt-n4">
               <!--Date-->
@@ -1698,7 +1756,7 @@
 
           </div>
         </div> -->
-        <div class="container form-container slide" style="max-width: 900px; padding: 0px;">
+        <div class="container slide" style="max-width: 900px; padding: 0px;">
           <div class="row justify-content-center">
             <div class="col-lg-10 col-md-12">
               <div class="wrapper">
@@ -1706,7 +1764,7 @@
 
                   <div class="col-md-6 d-flex align-items-stretch ml-lg-n5">
                     <div class="contact-wrap w-100 p-md-5 p-4 text-left">
-                      <p class="font-weight-bold mb-4 mt-3"><span class="text-success" style="font-size: 50px;">Congrats!</span> <br> You have successfully completed your authorization release paperwork!</p>
+                      <p class="font-weight-bold mb-4 mt-3"><span class="" style="font-size: 50px; color: #ff621f;">Congrats!</span> <br> You have successfully completed your authorization release paperwork!</p>
                       <h4 class="font-weight-bold text-success">Your confirmation number: XXXXXX</h4>
                       <form method="POST" id="contactForm" name="contactForm">
 
@@ -1716,7 +1774,7 @@
                             <div class="form-group">
                               <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/1.png" alt="" width="40"> Update Demo</h4>
                               <p style="font-size: 14px;">Update your demo now!</p> 
-                              <a type="button" class="btn btn-outline-success font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank">Let's start</a>
+                              <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank">Let's start</a>
                             </div>
                           </div>
 
@@ -1724,7 +1782,7 @@
                             <div class="form-group">
                               <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/2.png" alt="" width="40"> Request Form</h4>
                               <p style="font-size: 14px;">Have you filled out the request form yet?</p> 
-                              <a type="button" class="btn btn-outline-success font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/requestform" target="_blank">Let's start</a>
+                              <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/requestform" target="_blank">Let's start</a>
                             </div>
                           </div>
 
@@ -1732,7 +1790,7 @@
                             <div class="form-group">
                               <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/3.png" alt="" width="40"> Survey</h4>
                               <p style="font-size: 14px;">Please take this Survey</p>  
-                              <a type="button" class="btn btn-outline-success font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank">Let's start</a>
+                              <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank">Let's start</a>
                             </div>
                           </div>
 
@@ -1742,7 +1800,7 @@
                     </div>
                   </div>
 
-                  <div class="col-md-6 d-flex align-items-stretch"><img src="assest/img/confirm.jpg" alt="" width="825" style="margin-left: -30px;"></div>
+                  <div class="col-md-6 d-flex align-items-stretch"><img src="assest/img/confirm.png" alt="" height="800" style="margin-left: -30px; margin-top: -25px;"></div>
                 </div>
               </div>
             </div>
