@@ -26,6 +26,19 @@
  <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/result.min.css">
  <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/style.min.css">
  <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/typography.min.css">
+ <style>
+   
+      /* Orange */
+      .btn-outline-orange {
+        border-color: #ff621f;
+        color: #ff621f;
+      }
+
+      .btn-outline-orange:hover {
+        background: #ff621f;
+        color: white;
+      }
+ </style>
 </head>
 <body>
 	<div id="loader"></div>
@@ -132,14 +145,41 @@
               </div>
             </div>
           <!--Email Address-->
+          
+            <!--Relationship To Patient-->
+              <div class="form-group text-center">
+                <label for="yourname" class="col-sm-12 control-label">Relationship To Patient</label>
+                <div class="col-sm-12">
+                  <select name="" placeholder="Relationship" class="form-control required" style="width: 85%; margin-left: 30px;">
+                      <option value="" selected="">Choose Relationship</option>
+                      <option value="Self">Self</option>
+                      <option value="Spouse">Spouse</option>
+                      <option value="Step Child">Step Child</option>
+                      <option value="Foster Child">Foster Child</option>
+                      <option value="Ward of the court">Ward of the court</option>
+                      <option value="Employee">Employee</option>
+                      <option value="Handicaped dependent">Handicaped dependent</option>
+                      <option value="Organ Donar">Organ Donar</option>
+                      <option value="Cadever Donar">Cadever Donar</option>
+                      <option value="Grandchild">Grandchild</option>
+                      <option value="Niece/Nephew">Niece/Nephew</option>
+                      <option value="Injured Plaintiff">Injured Plaintiff</option>
+                      <option value="Sponsored Dependent">Sponsored Dependent</option>
+                      <option value="Parent">Parent</option>
+                      <option value="Grandparent">Grandparent</option>
+                      <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+            <!--Relationship To Patient-->
 
           <!--Upload ID-->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label id="formlable" for="fileToUpload" class="col-sm-12 ">Upload ID</label>
               <div class="col-sm-12">
                 <input required type="file" id="uploadid" class="fadeInDown" placeholder="Upload ID" autofocus>
               </div>
-            </div>
+            </div> -->
           <!--Upload ID-->
 
           <div class="card" id="btncard">
@@ -293,55 +333,73 @@
 
   <section id="rfstep4" class="section mt-3">
     <div class="container form-container text-center slide">
-  
+      <div class="col-12" id="strips1">
+        <h4 class="font-weight-bold my-3"> Your Information </h4>
+      </div>
+      <table class="table table-striped">
+        <tbody id="tbd">
+            <tr>
+              <th class="text-left">Your Name</th>
+              <td class="text-right">Shakir Ansari</td>
+            </tr>
+            <tr>
+              <th class="text-left">Contact Number</th>
+              <td class="text-right">9143595870</td>
+            </tr>
+            <tr>
+              <th class="text-left">Email Address</th>
+              <td class="text-right">x@gmail.com</td>
+            </tr>
+            <tr>
+              <th class="text-left">Relationship To Patient</th>
+              <td class="text-right">Self</td>
+            </tr>
+        </tbody>
+      </table>
+      
       <div class="" id="strips1">
-            <legend class="font-weight-bold" id="pagetitles">Contact Information</legend>
+        <h4 class="font-weight-bold my-3"> Patient Information </h4>
       </div>
-  
-      <!--Email Address-->
-      <div class="form-group">
-      <label id="formlable" for="email" class="col-sm-12 control-label">Email Address</label>
-          <div class="col-sm-12">
-            <input required type="text" id="email" class="" placeholder="Enter Email Address" class="form-control" autofocus>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please Provide email!
-            </div>
-          </div>
+      <table class="table table-striped">
+        <tbody id="tbd">
+        <tr>
+          <th class="text-left">First Name</th>
+          <td class="text-right">Ravi</td>
+        </tr>
+        <tr>
+          <th class="text-left">Last Name</th>
+          <td class="text-right">Agrawal</td>
+        </tr>
+        <tr>
+              <th class="text-left">Date of Birth</th>
+              <td class="text-right">20/02/1990</td>
+        </tr>
+        </tbody>
+      </table>
+      
+      <div class="" id="strips1">
+        <h4 class="font-weight-bold my-3"> Request Information  </h4>
       </div>
-      <!--Email Address-->
-
-      <!--Phone Number-->
-      <div class="form-group">
-        <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Phone Number</label>
-        <div class="col-sm-12">
-        <input required type="tel" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-        <div class="invalid-feedback">
-          Please Provide phone number!
-        </div>
-        </div>
-      </div>
-      <!--Phone Number-->
-
-      <!--Fax Number-->
-      <div class="form-group">
-        <label id="formlable" for="faxnumber" class="col-sm-12 control-label">Fax Number</label>
-        <div class="col-sm-12">
-        <input required type="tel" id="faxnumber" class="" name="faxNumber" placeholder="Fax Number">
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-        <div class="invalid-feedback">
-          Please Provide fax number!
-        </div>
-        </div>
-      </div>
-      <!--Fax Number-->
+      <table class="table table-striped">
+          <tbody id="tbd">
+          <tr>
+            <th class="text-left">Document Type</th>
+            <td class="text-right">docFile</td>
+          </tr>
+          <tr>
+            <th class="text-left">Collection Type</th>
+            <td class="text-right">Email</td>
+          </tr>
+          <tr>
+            <th class="text-left">Email Address</th>
+            <td class="text-right">x@gmail.com</td>
+          </tr>
+          <tr>
+            <th class="text-left">Upload Document</th>
+            <td class="text-right">docFile</td>
+          </tr>
+          </tbody>
+      </table>
       
       <div class="row">
         <div class="card col" id="backbtncard">
@@ -353,8 +411,8 @@
         
         <div class="card col" id="nextbtncard">
             <a href="#">
-              <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start">
-              <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="rfstepfournext">
+              <img src="assest/img/buttons/se.png" alt="" class="img-fluid  btn-start">
+              <img src="assest/img/buttons/sehover.png" alt="" class="img-fluid  btn-start img-top" id="rfstepfournext">
             </a>
         </div>  
       </div>
@@ -363,91 +421,59 @@
   </section>
 
   <section id="rfstep5" class="section mt-3">
-    <div class="container form-container slide">
-      <div class="col-12" id="strips1">
-        <h4 class="font-weight-bold my-3"> Your Information </h4>
-      </div>
-      <table class="table table-striped">
-        <tbody id="tbd">
-            <tr>
-              <th id="th1">Your Name</th>
-              <td id="td1">Shakir Ansari</td>
-            </tr>
-            <tr>
-              <th id="th1">Contact Number</th>
-              <td id="td1">9143595870</td>
-            </tr>
-            <tr>
-              <th id="th1">Email Address</th>
-              <td id="td1">x@gmail.com</td>
-            </tr>
-            <tr>
-              <th id="th1">Upload ID</th>
-              <td id="td1">File</td>
-            </tr>
-        </tbody>
-      </table>
-      
-      <div class="" id="strips1">
-        <h4 class="font-weight-bold my-3"> Patient Information </h4>
-      </div>
-      <table class="table table-striped">
-        <tbody id="tbd">
-        <tr>
-          <th id="th1">First Name</th>
-          <td id="td1">Ravi</td>
-        </tr>
-        <tr>
-          <th id="th1">Last Name</th>
-          <td id="td1">Agrawal</td>
-        </tr>
-        <tr>
-              <th id="th1">Date of Birth</th>
-              <td id="td1">20/02/1990</td>
-        </tr>
-        </tbody>
-      </table>
-      
-      <div class="" id="strips1">
-        <h4 class="font-weight-bold my-3"> Request Information  </h4>
-      </div>
-      <table class="table table-striped">
-          <tbody id="tbd">
-          <tr>
-            <th id="th1">Document Type</th>
-            <td id="td1">docFile</td>
-          </tr>
-          <tr>
-            <th id="th1">Collection Type</th>
-            <td id="td1">Email</td>
-          </tr>
-          <tr>
-            <th id="th1">Upload Document</th>
-            <td id="td1">docFile</td>
-          </tr>
-          </tbody>
-      </table>
+    <div class="container slide" style="max-width: 900px; padding: 0px; margin-top: -95px;">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12">
+          <div class="wrapper">
+            <div class="row no-gutters">
 
-      <div class="row">
-        <div class="card col" id="backbtncard">
-          <a href="#">
-            <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start">
-            <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="rfstepfiveback">
-          </a>
+              <div class="col-md-7 d-flex align-items-stretch ml-lg-n5">
+                <div class="contact-wrap w-100 p-md-5 p-4 text-center">
+                  <p class="font-weight-bold mb-4 mt-3"><span class="text-success" style="font-size: 50px;">Congrats!</span> <br> You have successfully completed your Request Form paperwork!</p>
+                  <h5 class="font-weight-bold text-success">Your confirmation number: <span class="" style="font-size: 50px;">XXXXXX</span></h5>
+                  <form method="POST" id="contactForm" name="contactForm" class="mt-n5">
+
+                    <div class="row mt-5">
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/1.png" alt="" width="40"> Update Demo</h4>
+                          <p style="font-size: 14px; text-align: left;">If you need to update your demographics informations; email, phone, address, etc. </p> 
+                          <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank">Let's start</a>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/2.png" alt="" width="40"> Book Appointment</h4>
+                          <p style="font-size: 14px; text-align: left;">Do you need to book an appointment?</p> 
+                          <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/bookappointment" target="_blank">Let's start</a>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/3.png" alt="" width="40"> Survey</h4>
+                          <p style="font-size: 14px; text-align: left;">Please tell us how we are doing!</p>  
+                          <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank">Let's start</a>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-md-5 d-flex align-items-stretch"><img src="assest/img/confirm.jpg" alt="" style="margin-left: -45px; margin-top: 20px; width: 800px ;"></div>
+            </div>
+          </div>
         </div>
-
-        <div class="card col" id="nextbtncard">
-            <a href="#">
-              <img src="assest/img/buttons/se.png" alt="" class="img-fluid  btn-start">
-              <img src="assest/img/buttons/sehover.png" alt="" class="img-fluid  btn-start img-top" id="rfstepfivenext">
-            </a>
-        </div>  
       </div>
-        
     </div>
   </section>
 
-  <section id="rfstep6" class="section">
+  <!-- <section id="rfstep6" class="section">
       <div class="container-fluid slide">
           <div class="row px-5 pt-3" id="confirm1">
             <div class="col-xl-6 offset-xl-3 shadow text-center pb-5">
@@ -492,7 +518,7 @@
           </div> 
         </div> 
       </div> 
-  </section>
+  </section> -->
 
   <section class="section active mt-2">
     <div class="container form-container text-center slide" style="padding: 10px 10px;">
