@@ -1,5 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%;"><head>
+<html lang="en" style="height: 100%;">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QM1CH7JSY8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QM1CH7JSY8');
+    </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -24,27 +35,8 @@
   <meta content="How much does culture influence creative thinking?" property="og:description">
   <meta content="https://rtpdemo.com/assest/img/med-solution.jpeg" property="og:image">
   <meta content="419614822201537" property="fb:app_id">
-  
-  <!-- Facebook Pixel Code -->
-  <script id="zsiqscript" src="https://salesiq.zoho.com/widget" defer="" type="text/javascript"></script><script src="https://connect.facebook.net/signals/config/272961703694288?v=2.9.23&amp;r=stable" async=""></script><script src="https://connect.facebook.net/en_US/fbevents.js" async=""></script><script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window,document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-   fbq('init', '272961703694288'); 
-  fbq('track', 'PageView');
-  </script>
-  <noscript>
-   &lt;img alt="facebook pixel" height="1" width="1" 
-  src="https://www.facebook.com/tr?id=272961703694288&amp;ev=PageView
-  &amp;noscript=1"/&gt;
-  </noscript>
-  <!-- End Facebook Pixel Code -->
-<link href="https://translate.googleapis.com/translate_static/css/translateelement.css" rel="stylesheet" type="text/css" charset="UTF-8"><script src="https://translate.googleapis.com/translate_static/js/element/main.js" type="text/javascript" charset="UTF-8"></script><iframe id="vtsiframe" src="https://vts.zohopublic.com/crosdom.html" style="display: none;"></iframe><script src="https://translate.googleapis.com/element/TE_20200506_00/e/js/element/element_main.js" type="text/javascript" charset="UTF-8"></script><link href="https://css.zohocdn.com/salesiq/https/styles/floatbutton_9a34f10066ee384f6018af3a89b5caef_.css" rel="stylesheet"><script src="https://js.zohocdn.com/salesiq/https/js/floatbutton_86a00c7d0869b83c82a6f95f99428bcc_.js"></script></head>
+  <link href="https://translate.googleapis.com/translate_static/css/translateelement.css" rel="stylesheet" type="text/css" charset="UTF-8"><script src="https://translate.googleapis.com/translate_static/js/element/main.js" type="text/javascript" charset="UTF-8"></script><script src="https://translate.googleapis.com/element/TE_20200506_00/e/js/element/element_main.js" type="text/javascript" charset="UTF-8"></script>
+</head>
 
 <body style="top: 0px; position: relative; min-height: 100%;" data-target="#navbar-example" data-spy="scroll">
 
@@ -99,16 +91,16 @@
                   </a>
                 </li>
                 <li class="nav-item main-nav-item">
-                  <a class="nav-link mainNavLinks" href="#about-section">About Us</a>
+                  <a class="nav-link mainNavLinks" href="#about-section">About</a>
                 </li>
                 <li class="nav-item main-nav-item">
-                  <a class="nav-link mainNavLinks" href="#patientPortal">Patient Resource Center</a>
+                  <a class="nav-link mainNavLinks" href="#patientPortal">Resource Center</a>
                 </li>
                 <li class="nav-item main-nav-item">
                   <a class="nav-link mainNavLinks" href="#services">Services</a>
                 </li>
                 <li class="nav-item main-nav-item">
-                  <a class="nav-link mainNavLinks" href="#blog">Blogs</a>
+                  <a class="nav-link mainNavLinks" href="#blog">News</a>
                 </li>
                 <li class="nav-item main-nav-item">
                   <a class="nav-link mainNavLinks" href="#insurance-section">Insurance</a>
@@ -117,7 +109,7 @@
                   <a class="nav-link mainNavLinks" href="#team-section">Our Team</a>
                 </li>
                 <li class="nav-item main-nav-item">
-                  <a class="nav-link mainNavLinks" href="#footer">Contact Us</a>
+                  <a class="nav-link mainNavLinks" href="#footer">Contact</a>
                 </li>
               </ul>
               <!-- Links -->
@@ -137,7 +129,8 @@
         <div class="col-xl-7 text-md-left text-center" id="contentSection">
 
           <h1 class="title black-text" id="welcome">Welcome to <br>
-            <img class="img-fluid" id="logo" alt="Therapy" src="assest/img/rtplogo.png">  </h1>
+            <img class="img-fluid" alt="Therapy" src="assest/img/rtplogo.png" width="500">  
+          </h1>
 
           <h4 class="black-text" id="welcome1">Please look around to see all the features our websites offer!</h4>
 
@@ -162,11 +155,12 @@
             <h4>Helpful Resources</h4> 
           </div>
           <div class="well">
-               @foreach ($categories as $category)
+               <!-- @foreach ($categories as $category) -->
                <a href="{{ route('category', $category->slug) }}" class="mr-3">
-                 <span class="badge badge-info badge-tag mb-3">{{ $category->name }}</span>
+                 <span class="badge badge-info badge-tag mb-3">@drjoi</span>
+                 <span class="badge badge-info badge-tag mb-3">@therapyintegrativecente</span>
                </a> 
-               @endforeach
+               <!-- @endforeach -->
           </div>
         </div>
       </div>
@@ -200,8 +194,8 @@
           <div class="row aboutUsRow">
 
             <div class="col-xl-4 col-md-4 aboutusCol">
-              <img class="img-fluid" alt="Trained Physician" src="assest/img/1.png">
-              <h5 class="feature-title">Trained Physician</h5>
+              <img class="img-fluid" alt="Trained Physician" src="assest/img/1.jpg">
+              <h5 class="feature-title">Trained Physicians</h5>
               <p class="grey-text">Our highly trained physicians and front of office carry out only the highest quality medical services that are of the finest standard.</p>
             </div>
 
@@ -294,112 +288,128 @@
             </div>
   
             <div class="row">
-              <!-- first col -->
-        <div class="col-md-4">
-          <!-- row -->
-          <div class="row">
-            <!-- col -->
-            <div class="col-md-12">
-  
-              <!-- request forms -->
-              <div class="row singleCenter">
-                <div class="col-2"><img src="assest/img/resourcecenter/1.png" alt="" class="resourceimg"></div>
-                <div class="col-10">
-  
-                  <h4 class="font-weight-bold mb-2 indigo-text">Request Forms</h4>
-                  <p class="grey-text">Save time and request any type of form you need from our office online.</p> 
-                  <button class="btn btn-portal" type="button" onclick=" window.open('rf1.html', '_blank'); return false;">Click Here</button> 
-                </div>
+        
+              <div class="col-lg-6" id="commonissue-bg">
+                    <img src="assest/img/resourcecenter.webp" class="img-fluid" alt="" style="max-width: 125% !important; height: 520px; margin-left: -125px;">
               </div>
-              <!-- request forms -->
-  
-  
-              <!-- submit demo -->
-              <div class="row singleCenter">
-                <div class="col-2"><img src="assest/img/resourcecenter/2.png" alt="" class="resourceimg"></i></div>
-                <div class="col-10">
-                  <h4 class="font-weight-bold mb-2 indigo-text">Submit Demo</h4>
-                  <p class="grey-text">Update your demographics; Address, Phone, Email, ect</p>
-                  <button class="btn btn-portal" type="button" onclick=" window.open('ud1.html', '_blank'); return false;">Click Here</button>
-                </div>
+            
+              <div class="col-lg-6">
+                <!-- Resource Center Section 01 -->
+                  <div class="row" id="resource01">
+
+                  <div class="col-md-6">
+                    <!-- request forms -->
+                    <div class="row singleCenter">
+                          <div class="col-2"><img src="assest/img/resourcecenter/1.png" alt="" class="resourceimg"></div>
+                          <div class="col-10">
+            
+                            <h4 class="font-weight-bold mb-2 indigo-text">Request Forms</h4>
+                            <p class="grey-text">Save time and request any type of form you need from our office online.</p> 
+                            <button class="btn btn-portal" type="button" onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/requestform', '_blank'); return false;">Click Here</button> 
+                          </div>
+                    </div>
+                    <!-- request forms -->
+                  </div>
+
+                  <div class="col-md-6">            
+                    <!-- submit demo -->
+                    <div class="row singleCenter">
+                          <div class="col-2"><img src="assest/img/resourcecenter/2.png" alt="" class="resourceimg"></i></div>
+                          <div class="col-10">
+                            <h4 class="font-weight-bold mb-2 indigo-text">Submit Demo</h4>
+                            <p class="grey-text">Update your demographics; Address, Phone, Email, ect</p>
+                            <button class="btn btn-portal" type="button" onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/updatedemo/', '_blank'); return false;">Click Here</button>
+                          </div>
+                    </div>
+                    <!-- submit demo -->
+                  </div>
+
+                  <div class="col-md-6">
+                        <!-- Auth release -->
+                        <div class="row singleCenter">
+                          <div class="col-2">
+                            <img src="assest/img/resourcecenter/3.png" alt="" class="resourceimg">
+                          </div>
+                          <div class="col-10">
+                            <h4 class="font-weight-bold mb-2 indigo-text">Authorization Release</h4>
+                            <p class="grey-text">This forms gives us the ability to obtain or release your medical records.</p>
+                            <button class="btn btn-portal" type="button" onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/authorizationrelease/', '_blank'); return false;">Click Here</button> 
+                          </div>
+                        </div>
+                        <!-- Auth release -->
+                  </div>
+
+                  <div class="col-md-6">
+                    <!-- Book appointments -->
+                    <div class="row singleCenter">
+                      <div class="col-2">
+                        <img src="assest/img/resourcecenter/5.png" alt="" class="resourceimg">
+                      </div>
+                      <div class="col-10">
+                        <h4 class="font-weight-bold mb-2 indigo-text">Book Appointments</h4>
+                        <p class="grey-text">Skip the waiting on the phone and simply request an appointment online.</p>
+                        <button class="btn btn-portal" type="button" onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/bookappointment/', '_blank'); return false;">Click Here</button>
+                      </div>
+                    </div>
+                    <!-- Book appointments -->
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="commonissue-box" onclick="document.getElementById('resource01').style.display='none';document.getElementById('resource02').style.display='flex'">
+                      <a class="commonissue-next btn btn-portal">
+                        <span class="font-weight-bold text-white">See More Resources</span>
+                        <i class="fas fa-arrow-right ml-5 mt-1 text-white"></i>
+                      </a>
+                    </div>
+                  </div> 
+
+                  </div>
+                <!-- Resource Center Section 01 -->
+
+                <!-- Resource Center Section 02 -->
+                <div class="row" id="resource02" style="display: none;">
+
+                  <div class="col-md-6">
+                    <!-- new patient forms -->
+                    <div class="row mb-3">
+                      <div class="col-2">
+                        <img src="assest/img/resourcecenter/4.png" alt="" class="resourceimg">
+                      </div>
+                      <div class="col-10">
+                        <h4 class="font-weight-bold mb-2 indigo-text">New Patient Forms</h4>
+                        <p class="grey-text">If you are a new patient and save time on your first visit by filling out the New Patient Packet here.</p>
+                        <button type="button" class="btn btn-outline-pink btn-rounded" id="btnPrc" onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/mchinewpt', '_blank'); return false;">Click here</button>
+                      </div>
+                    </div>
+                    <!-- New patient forms -->
+                  </div>
+
+                  <div class="col-md-6">
+                        <!-- Patient Portal -->
+                        <div class="row singleCenter">
+                          <div class="col-2">
+                            <img src="assest/img/resourcecenter/6.png" alt="" class="resourceimg">
+                          </div>
+                          <div class="col-10">
+                            <h4 class="font-weight-bold mb-2 indigo-text">Patient Portal</h4>
+                            <p class="grey-text">Access for current patients to their Patient Portal. Access your medical records and much more.</p>
+                            <button type="button" class="btn btn-outline-pink btn-rounded" id="btnPrc" data-toggle="modal" data-target="#">Click Here</button>
+                          </div>
+                        </div>
+                        <!-- Patient Portal -->
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                  <div class="commonissue-box">
+                    <a class="commonissue-back  btn btn-portal" onclick="document.getElementById('resource02').style.display='none';document.getElementById('resource01').style.display='flex'">
+                      <i class="fas fa-arrow-left mt-1 text-white"></i>
+                      <span class="font-weight-bold text-white">Back To Previous Page</span>
+                    </a>
+                  </div>
+                 </div>
+                </div><!-- Resource Center Section 02 -->
               </div>
-              <!-- submit demo -->
-  
-  
-              <!-- Auth release -->
-              <div class="row singleCenter">
-                <div class="col-2">
-                  <img src="assest/img/resourcecenter/3.png" alt="" class="resourceimg">
-                </div>
-                <div class="col-10">
-                  <h4 class="font-weight-bold mb-2 indigo-text">Authorization Release</h4>
-                  <p class="grey-text">This forms gives us the ability to obtain or release your medical records.</p>
-                  <button class="btn btn-portal" type="button" onclick=" window.open('ar1.html', '_blank'); return false;">Click Here</button> 
-                </div>
-              </div>
-              <!-- Auth release -->
-  
-            </div>
-            <!-- col -->
-          </div>
-          <!-- row -->
-        </div>
-        <!-- first coloumn -->
-  
-  
-              <!--Second column-->
-              <div class="col-md-4 flex-center">
-                <img src="https://www.scolicare.com/wp-content/uploads/2018/08/ScoliBrace-No-Background.png" class="z-depth-0 img-fluid" id="ppImage">
-              </div>
-              <!--/Second column-->
-  
-               <!-- third coloumn -->
-        <div class="col-md-4">
-          <div class="row singleCenter">
-            <div class="col-md-12 mb-4">
-              <!-- new patient forms -->
-              <div class="row mb-3">
-                <div class="col-2">
-                  <img src="assest/img/resourcecenter/4.png" alt="" class="resourceimg">
-                </div>
-                <div class="col-10">
-                  <h4 class="font-weight-bold mb-2 indigo-text">New Patient Forms</h4>
-                  <p class="grey-text">If you are a new patient and save time on your first visit by filling out the New Patient Packet here.</p>
-                  <button type="button" class="btn btn-outline-pink btn-rounded" id="btnPrc" onclick="window.location.href='https://rtpmedsol.rtpdemo.com/demoforms/mchinewpt/';">Click here</button>
-                </div>
-              </div>
-              <!-- New patient forms -->
-  
-              <!-- Book appointments -->
-              <div class="row singleCenter">
-                <div class="col-2">
-                  <img src="assest/img/resourcecenter/5.png" alt="" class="resourceimg">
-                </div>
-                <div class="col-10">
-                  <h4 class="font-weight-bold mb-2 indigo-text">Book Appointments</h4>
-                  <p class="grey-text">Skip the waiting on the phone and simply request an appointment online.</p>
-                  <button class="btn btn-portal" type="button" onclick=" window.open('ra1.html', '_blank'); return false;">Click Here</button>
-                </div>
-              </div>
-              <!-- Book appointments -->
-  
-              <!-- Book appointments -->
-              <div class="row singleCenter">
-                <div class="col-2">
-                  <img src="assest/img/resourcecenter/6.png" alt="" class="resourceimg">
-                </div>
-                <div class="col-10">
-                  <h4 class="font-weight-bold mb-2 indigo-text">Patient Portal</h4>
-                  <p class="grey-text">Access for current patients to their Patient Portal. Access your medical records and much more.</p>
-                  <button type="button" class="btn btn-outline-pink btn-rounded" id="btnPrc" data-toggle="modal" data-target="#">Click Here</button>
-                </div>
-              </div>
-              <!-- Book appointments -->
-            </div>
-  
-          </div>
-        </div>
-        <!-- third coloumn -->
+            
             </div>
   
           </div>
@@ -416,7 +426,7 @@
 <!--added section-->
 
   <!-- section : services -->
-  <section id="services">
+  <section id="services" class="style-4">
     <div class="container">
 
     <div class="row">
@@ -427,136 +437,89 @@
       </div>
     </div>
 
-    <!--First row-->
-    <div class="row features-small mb-5 mt-3 wow fadeIn">
-
-      <!--First column-->
-      <div class="col-md-6">
-        <!--First row-->
-        <div class="row">
-          <div class="col-2">
-            <img src="assest/img/services/1.png" class="img-fluid serviceImg">
-          </div>
-          <div class="col-10">
-            <h5 class="feature-title">Chiropractic Care</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <div style="height:15px"></div>
-          </div>
+    <div class="row">
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg" alt="Chiropractic Care" src="assest/img/services/1.png">
+            <h3>Chiropractic Care</h3>
         </div>
-        <!--/First row-->
-
-        <!--Second row-->
-        <div class="row">
-          <div class="col-2">
-            <img src="assest/img/services/3.png" class="img-fluid serviceImg">
-          </div>
-          <div class="col-10">
-            <h5 class="feature-title">Cranial Sacral Technique</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur .
-            </p>
-            <div style="height:15px"></div>
-          </div>
-        </div>
-        <!--/Second row-->
-
-        <!--Third row-->
-        <div class="row">
-          <div class="col-2">
-            <img src="assest/img/services/5.jpg" class="img-fluid serviceImg">
-          </div>
-          <div class="col-10">
-            <h5 class="feature-title">Reiki</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div style="height:15px"></div>
-          </div>
-        </div>
-        <!--/Third row-->
       </div>
-      <!--/First column-->
 
-
-      <!--Third column-->
-      <div class="col-md-6 mt-2">
-        <!--First row-->
-        <div class="row">
-          <div class="col-2">
-            <img src="assest/img/services/2.png" class="img-fluid serviceImg">
-          </div>
-          <div class="col-10">
-            <h5 class="feature-title">Childbirth Education</h5>
-            <p class="grey-text">Lorem ipsum dolor sit magna aliqua.
-            </p>
-            <div style="height:15px"></div>
-          </div>
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg" alt="Functional Medicine" src="assest/img/services/3.png">
+            <h3>Functional Medicine</h3>
         </div>
-        <!--/First row-->
-
-        <!--Second row-->
-        <div class="row">
-          <div class="col-2">
-            <img src="assest/img/services/4.png" class="img-fluid serviceImg">
-          </div>
-          <div class="col-10">
-            <h5 class="feature-title">Prenatal Pain Specialist</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div style="height:15px"></div>
-          </div>
-        </div>
-        <!--/Second row-->
-
-        <!--Third row-->
-        <div class="row">
-          <div class="col-2">
-            <img src="assest/img/services/6.png" class="img-fluid serviceImg">
-          </div>
-          <div class="col-10">
-            <h5 class="feature-title">Physiotherapy</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div style="height:15px"></div>
-          </div>
-        </div>
-        <!--/Third row-->
       </div>
-      <!--/Third column-->
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg" alt="Reiki" src="assest/img/services/5.jpg">
+            <h3>Reiki</h3>
+        </div>
+      </div>
 
-            <!--fourth column-->
-            <div class="col-md-6 mt-2">
-              <!--First row-->
-              <div class="row">
-                <div class="col-2">
-                  <img src="assest/img/services/7.png" class="img-fluid serviceImg">
-                </div>
-                <div class="col-10">
-                  <h5 class="feature-title">Dry Needling</h5>
-                  <p class="grey-text">Lorem ipsum dolor sit magna aliqua.
-                  </p>
-                  <div style="height:15px"></div>
-                </div>
-              </div>
-              <!--/First row-->
-            </div>
-            <!--/fourth column-->
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg" alt="Pelvic Floor Rehabilitation" src="assest/img/services/8.png">
+            <h3>Pelvic Floor Rehabilitation</h3>
+        </div>
+      </div>
 
-      
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg1" alt="Nutrition" src="assest/img/services/9.jpg">
+            <h3>Nutrition</h3>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg1" alt="Massage" src="assest/img/services/10.png">
+            <h3>Massage</h3>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg" alt="Childbirth Education" src="assest/img/services/2.png">
+            <h3>Childbirth Education</h3>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg" alt="Prenatal Pain Specialist" src="assest/img/services/4.png">
+            <h3>Prenatal Pain Specialist</h3>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg" alt="Physical Therapy" src="assest/img/services/6.png">
+            <h3>Physical Therapy</h3>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg" alt="Lactation Support" src="assest/img/services/11.jpg">
+            <h3>Lactation Support</h3>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg" alt="Dry Needling" src="assest/img/services/7.png">
+            <h3>Dry Needling</h3>
+        </div>
+      </div>
+
 
     </div>
-    <!--/First row-->
+
   </div>
 
   </section>
   <!--Section: Not enough-->
   <!-- section : services -->
-
-<!--added section-->
-<section id="as1">
-  <div class="container text-center">
-    <h3 id="ash">Pay your bills easily !</h3>
-    <a href="" target="_blank" ><button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">Pay Bill</button></a>
-  </div>
-</section>
-<!--added section-->
 
   <section class="blog-me" id="blog">
      <div class="container">
@@ -857,6 +820,16 @@
             <!-- row -->
           </div>
 
+          <div class="col-lg-12 mb-3">
+            <!-- row -->
+            <div class="row">
+              <div class="col-lg-12">
+                <img class="img-fluid insuranceImg" alt="Kaiser" src="assest/img/insurance/kaiser.jpg">
+              </div>
+            </div>
+            <!-- row -->
+          </div>
+
         </div>
         <!-- row -->
       </div>
@@ -894,11 +867,8 @@
             <div class="avatar mx-auto mt-3 mb-3">
               <img class="rounded-circle team-img" alt="First sample avatar image" src="assest/img/img1.jpg">
             </div>
-            <h6 class="font-weight-bold">Dr. Eddard</h6>
-
-            <p class="font-small grey-text">"NED" STARK</p>
-
-
+            <h6 class="font-weight-bold">Dr. Joi</h6>
+            <small>Owner/Perinatal Wellness Expert/Chiro/PT</small>
           </div>
         </div>
         <!-- Grid column -->
@@ -909,11 +879,8 @@
             <div class="avatar mx-auto mt-3 mb-3">
               <img class="rounded-circle team-img" alt="First sample avatar image" src="assest/img/img2.jpg">
             </div>
-            <h6 class="font-weight-bold">Dr. Catelyn</h6>
-
-            <p class="font-small grey-text">STARK</p>
-
-
+            <h6 class="font-weight-bold">Dr. Alicia</h6>
+            <small>Lead Physical Therapist/Pelvic Floor Rehabilitation</small>
           </div>
         </div>
         <!-- Grid column -->
@@ -924,11 +891,8 @@
             <div class="avatar mx-auto mt-3 mb-3">
               <img class="rounded-circle team-img" alt="First sample avatar image" src="assest/img/img3.jpg">
             </div>
-            <h6 class="font-weight-bold">Cersel Lannister</h6>
-
-            <p class="font-small grey-text">Front Office Staff</p>
-
-
+            <h6 class="font-weight-bold">Shelly</h6>
+            <small>Office Manager/Mental Health Counselor</small>
           </div>
         </div>
         <!-- Grid column -->
@@ -939,11 +903,8 @@
             <div class="avatar mx-auto mt-3 mb-3">
               <img class="rounded-circle team-img" alt="First sample avatar image" src="assest/img/img4.jpg">
             </div>
-            <h6 class="font-weight-bold">Jalme Lannister</h6>
-
-            <p class="font-small grey-text">Front Office Staff</p>
-
-
+            <h6 class="font-weight-bold">Olivia</h6>
+            <small>Office Staff</small>
           </div>
         </div>
         <!-- Grid column -->
@@ -1074,130 +1035,137 @@
       </div>
     </div>
 </section>
-
    <!-- Footer -->
-  <footer class="page-footer font-small" id="footer">
+  <footer class="page-footer font-small text-white" id="footer">
 
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left pb-5">
+    <div class="overlay">
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left pb-5">
 
-      <!-- Grid row -->
-      <div class="row pt-5">
+        <!-- Grid row -->
+        <div class="row pt-5">
 
 
-        <!-- Grid column -->
-        <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 mb-4">
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 mb-4">
 
-          <!-- Links -->
-          <!--<img alt="cf3" src="assest/img/tiles/cf3.png" class="tiles" data-toggle="tooltip" data-placement="top" data-html="true" title="<span class='tooltipHeading'>Crucial COMMUNICATION Features</span><p class='tooltipPara'>Help your patients easily find direction to your office  </p>">-->
-          <h6 class="text-uppercase font-weight-bold">Contact</h6>
-          <hr class="footer-hr mb-4 mt-0 d-inline-block mx-auto">
+            <!-- Links -->
+            <!--<img alt="cf3" src="assest/img/tiles/cf3.png" class="tiles" data-toggle="tooltip" data-placement="top" data-html="true" title="<span class='tooltipHeading'>Crucial COMMUNICATION Features</span><p class='tooltipPara'>Help your patients easily find direction to your office  </p>">-->
+            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+            <hr class="footer-hr mb-4 mt-0 d-inline-block mx-auto">
 
-          <!--<div class="row mb-3">
-		  <div class="col-md-1">
-              <i class="fas fa-map-marker-alt mr-3"></i>
+            <!--<div class="row mb-3">
+        <div class="col-md-1">
+                <i class="fas fa-map-marker-alt mr-3"></i>
+              </div>
+              <div class="col-md-11">7037 Rose Ave Orlando FL 32810</div>
+            </div>-->
+            <div class="row mb-3">
+              <div class="col-md-1 p-1"><i class="fas fa-envelope mr-3"></i></div>
+              <div class="col-md-11 p-1">
+                <div class="">admin@therapyhealthgroup.com</div>
+              </div>
+
+              <div class="col-md-1 p-1"><i class="fas fa-envelope mr-3"></i></div>
+              <div class="col-md-11 p-1">
+                <div class="">drjoi@therapyhealthgroup.com</div>
+              </div>
+              
+              <div class="col-md-1 p-1"><i class="fas fa-phone mr-3"></i></div>
+              <div class="col-md-11 p-1">
+                <div class="">443-272-1458</div>
+              </div>
             </div>
-            <div class="col-md-11">7037 Rose Ave Orlando FL 32810</div>
-          </div>-->
-          <div class="row mb-3">
-            <div class="col-md-1"><i class="fas fa-envelope mr-3"></i></div>
-            <div class="col-md-11">
-              <div class="">dr.joi@therapy4her.com</div>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col-md-1"><i class="fas fa-phone mr-3"></i></div>
-            <div class="col-md-11">443-272-1458</div>
-          </div>
 
-          <!--<div class="row mb-3">
-            <div class="col-md-1"><i class="fas fa-fax mr-3"></i></div>
-            <div class="col-md-11">Fax</div>
-          </div>-->
-          
+            <!--<div class="row mb-3">
+              <div class="col-md-1"><i class="fas fa-fax mr-3"></i></div>
+              <div class="col-md-11">Fax</div>
+            </div>-->
+            
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
+
+            <!-- Links -->
+            <!--<img alt="cf3" src="assest/img/tiles/cf3.png" class="tiles" data-toggle="tooltip" data-placement="top" data-html="true" title="<span class='tooltipHeading'>Crucial COMMUNICATION Features</span><p class='tooltipPara'>Give Clear Hours your office can be reached set patients expectations to eliminate their frustration.</p>">-->
+            <h6 class="text-uppercase font-weight-bold">Operational Hours</h6>
+            <hr class="footer-hr mb-4 mt-0 d-inline-block mx-auto">
+
+            <div class="row p-1">
+              <div class="col-3">
+                <strong>Monday</strong>
+              </div>
+
+              <div class="col-6">
+                9am - 1pm & 2:30pm - 6:30pm
+              </div>
+            </div>
+
+            <div class="row p-1">
+              <div class="col-3">
+                <strong>Tuesday</strong>
+              </div>
+
+              <div class="col-6">
+                7:00am - 1:00pm
+              </div>
+            </div>
+
+            <div class="row p-1">
+              <div class="col-3">
+                <strong>Wednesday</strong>
+              </div>
+
+              <div class="col-6">
+                9am-1pm & 2:30pm-6:30pm
+              </div>
+            </div>
+
+            <div class="row p-1">
+              <div class="col-3">
+                <strong>Thursday</strong>
+              </div>
+
+              <div class="col-6">
+                CLOSED
+              </div>
+            </div>
+
+            <div class="row p-1">
+              <div class="col-3">
+                <strong>Friday</strong>
+              </div>
+
+              <div class="col-6">
+                1:00pm - 7:00pm
+              </div>
+            </div>
+
+            <div class="row p-1">
+              <div class="col-3">
+                <strong>Saturday</strong>
+              </div>
+
+              <div class="col-6">
+                10:00am - 2:00pm
+              </div>
+            </div>
+
+          </div>
+          <!-- Grid column -->
         </div>
-        <!-- Grid column -->
+        <!-- Grid row -->
 
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-
-          <!-- Links -->
-          <!--<img alt="cf3" src="assest/img/tiles/cf3.png" class="tiles" data-toggle="tooltip" data-placement="top" data-html="true" title="<span class='tooltipHeading'>Crucial COMMUNICATION Features</span><p class='tooltipPara'>Give Clear Hours your office can be reached set patients expectations to eliminate their frustration.</p>">-->
-          <h6 class="text-uppercase font-weight-bold">Operational Hours</h6>
-          <hr class="footer-hr mb-4 mt-0 d-inline-block mx-auto">
-
-          <div class="row">
-            <div class="col">
-              <strong>Monday</strong>
-            </div>
-
-            <div class="col">
-              9:00am - 6:30pm
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <strong>Tuesday</strong>
-            </div>
-
-            <div class="col">
-              7:00am - 1:00pm
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <strong>Wednesday</strong>
-            </div>
-
-            <div class="col">
-              9:00am - 6:30pm
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <strong>Thursday</strong>
-            </div>
-
-            <div class="col">
-              CLOSED
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <strong>Friday</strong>
-            </div>
-
-            <div class="col">
-              1:00pm - 7:30pm
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <strong>Saturday</strong>
-            </div>
-
-            <div class="col">
-              10:00am - 2:00pm
-            </div>
-          </div>
-
-        </div>
-        <!-- Grid column -->
       </div>
-      <!-- Grid row -->
+      <!-- Footer Links -->
 
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2021 Copyright: <a class="white-text" href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a>
+      </div>
+      <!-- Copyright -->      
     </div>
-    <!-- Footer Links -->
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright: <a class="white-text" href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a>
-    </div>
-    <!-- Copyright -->
 
   </footer>
   <!-- Footer -->
@@ -1547,13 +1515,10 @@
 <!-- request appointment -->
   <script src="assest/js/jquery-3.4.1.min.js" type="text/javascript"></script>
   <!-- Bootstrap tooltips -->
-  <script src="assest/js/popper.min.js" type="text/javascript"></script>
+  <!-- <script src="assest/js/popper.min.js" type="text/javascript"></script> -->
   <!-- Bootstrap core JavaScript -->
   <script src="assest/js/bootstrap.min.js" type="text/javascript"></script>
   <!-- MDB core JavaScript -->
-  <script src="assest/js/custom.js" type="text/javascript"></script><div id="zsiqwidget"></div>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2" type="text/javascript"></script><div class="skiptranslate" id="goog-gt-tt" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img width="20" height="20" alt="Google Translate" src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
-
-
-
-<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" viewBox="0 0 66 66" width="96px" height="96px"><circle class="goog-te-spinner-path" fill="none" stroke-linecap="round" stroke-width="6" cx="33" cy="33" r="30" /></svg></div></div><div class="zsiq_custommain siq_bR" style="width: 211px; height: 204px; display: block; visibility: hidden;"><div id="zsiq_float"><img width="400" height="400" onload="$ZSIQWidgetUI.onLoadCustomSticker(this)" src="https://download.zohopublic.com/public?x-service=LiveDesk&amp;event-id=1590070291923_187846000000472005&amp;x-cli-msg=%7B%22x-siq-filetype%22%3A%22fsticker_online%22%2C%22x-siq-lsid%22%3A%22187846000000472005%22%2C%22x-siq-soid%22%3A%22641738961%22%2C%22x-siq-ispreview%22%3Afalse%2C%22x-siq-pfname%22%3A%22ZOHO%20CHAT.png%22%2C%22x-siq-downloadtype%22%3A%22default%22%7D"><em class="zsiq_unrdcnt" id="zsiq_unreadcnt" style="display: none;"></em><em class="zsiqmin_unrdcnt zsiq_unrdcnt siqico-mincall" id="zsiq_avcall" style="display: none;"></em></div></div><style id="zsiqcustomcss">.zsiq_flt_rel{ background-color:#FF6D42 !important;} .zsiq_seasonal .st2 { fill: #FF6D42 !important;}</style><div class="zls-sptwndw  siqembed siqtrans siqhide zsiq-mobhgt zsiq-newtheme siq_rht zsiq_size2" style="top: -10000px; display: block; visibility: hidden;" embedtheme="8"><div class="zls-prelative" id="siqcht"><iframe width="100%" height="460" title="SalesIQ Chatwindow" id="siqiframe" scrolling="no" seamless="seamless"></iframe></div></div></body><iframe style="display: none;" sandbox="allow-scripts"></iframe></html>
+  <script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
+</body>
