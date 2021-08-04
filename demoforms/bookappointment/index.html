@@ -26,7 +26,21 @@
     <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/result.min.css">
     <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/style.min.css">
     <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/typography.min.css">
-    <link href="assest/js/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" rel="prefetch">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/stylish-tooltip.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/js/dropzone.css">
+    <link href="assest/js/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" rel="prefetch">    
+    <style>
+      /* Orange */
+      .btn-outline-orange {
+        border-color: #ff621f;
+        color: #ff621f;
+      }
+
+      .btn-outline-orange:hover {
+        background: #ff621f;
+        color: white;
+      }
+    </style>
  </head>
  <body>
     <div id="loader"></div>
@@ -81,149 +95,8 @@
     </header>
 
     <main>
-      <section id="rastep1" class="section mt-3 active">
+      <section id="ufstep1" class="section mt-3 active">
         <div class="container form-container text-center fadeInDown">
-          <div class="" id="strips1">
-            <legend class="font-weight-bold" id="pagetitles">Patient Informaiton</legend>
-          </div>
-              
-          <!--Patient Full Name-->
-            <div class="form-group">
-                <label for="patientfullname" class="col-sm-12 control-label">Patient Full Name</label>
-                <div class="col-sm-12">
-                  <input required type="text" id="patientfullname" class="" name="patientfullname" placeholder="Patient Full Name">
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                  <div class="invalid-feedback">
-                    Please Provide your name!
-                  </div>
-                </div>
-            </div>
-          <!--Patient Full Name-->
-
-          <!--Date-->
-            <div class="form-group">
-              <label id="formlable" for="birthDate" class="col-sm-12 control-label">Date of Birth</label>
-                <div class="col-sm-12">
-                  <input required type="date" id="birthDate" class="" placeholder="Date of Birth" autofocus>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                  <div class="invalid-feedback">
-                    Please Provide your date of birth!
-                  </div>
-                </div>
-            </div>
-          <!--Date-->
-
-          <div class="card " id="btncard">
-            <a href="#" id="rasteponenext">
-              <img src="assest/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="btnimg1">
-              <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="btnimg1">
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="rastep2" class="section mt-3">
-        <div class="container form-container text-center slide">
-          <div class="" id="strips1">
-            <legend class="font-weight-bold" id="pagetitles">Contact Information</legend>
-          </div>
-            
-          <!--Email Address-->
-            <div class="form-group">
-            <label id="formlable" for="email" class="col-sm-12 control-label">Email Address</label>
-                <div class="col-sm-12">
-                  <input required type="text" id="email" class="" placeholder="Enter Email Address" class="form-control" autofocus>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                  <div class="invalid-feedback">
-                    Please Provide email!
-                  </div>
-                </div>
-            </div>
-          <!--Email Address-->
-
-          <!--Phone Number-->
-            <div class="form-group">
-              <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Phone Number</label>
-              <div class="col-sm-12">
-              <input required type="tel" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
-              <div class="valid-feedback">
-                Looks good!
-              </div>
-              <div class="invalid-feedback">
-                Please Provide phone number!
-              </div>
-              </div>
-            </div>
-          <!--Phone Number-->
-
-          <div class="row">
-            <div class="card col" id="backbtncard">
-              <a href="#" id="rasteptwoback">
-                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
-                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
-              </a>
-            </div>
-
-            <div class="card col" id="nextbtncard">
-                <a href="#" id="rasteptwonext">
-                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
-                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
-                </a>
-              </div>  
-          </div>
-        </div>
-      </section>
-
-      <section id="rastep3" class="section mt-3">
-        <div class="container form-container text-center slide">
-          <div class="" id="strips1">
-            <legend class="font-weight-bold" id="pagetitles">Other Information</legend>
-          </div>
-              
-          <!--Upload Document-->
-            <div class="form-group">
-                    <label id="formlable" for="fileToUpload" class="col-sm-12 control-label">Upload Document</label>
-                    <div class="col-sm-12">
-                      <input required type="file" id="uploaddoc" class="" placeholder="Upload Document" autofocus>
-                  </div>
-            </div>
-          <!--Upload Document-->
-          
-          <!--Comment-->
-            <div class="form-group">
-                <label for="comment" class="col-sm-12 control-label">Comment</label>
-                <div class="col-sm-12">
-                  <textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
-                </div>
-            </div>
-          <!--Comment-->
-
-          <div class="row">
-            <div class="card col" id="backbtncard">
-              <a href="#" id="rastepthreeback">
-                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
-                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
-              </a>
-            </div>
-
-            <div class="card col" id="nextbtncard">
-                <a href="#" id="rastepthreenext">
-                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
-                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
-                </a>
-              </div>  
-          </div>
-        </div>
-      </section>
-
-      <section id="rastep4" class="section mt-3">
-        <div class="container form-container text-center slide">
           <div class="" id="strips1">
             <legend class="font-weight-bold" id="pagetitles">Appointment Information</legend>
           </div>
@@ -233,69 +106,40 @@
             <!--Appointment Type-->
               <div class="form-checkbox">
                 <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                <label class="checklabel" for="">Physical</label>  
+                <label class="checklabel" for="">Appointment 01</label>  
               </div>
 
               <div class="form-checkbox">
                 <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                <label class="checklabel" for="">Sick</label>  
+                <label class="checklabel" for="">Appointment 02</label>  
               </div>
 
               <div class="form-checkbox">
                 <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                <label class="checklabel" for="">Follow up</label>  
+                <label class="checklabel" for="">Appointment 03</label>  
               </div>
 
               <div class="form-checkbox">
                 <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                <label class="checklabel" for="">Telemedicine</label>  
+                <label class="checklabel" for="">Appointment 04</label>  
               </div>
 
               <div class="form-checkbox">
                 <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                <label class="checklabel" for="">Circumcision</label>  
-              </div>
-
-              <div class="form-checkbox">
-                <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                <label class="checklabel" for="">Allergy Test</label>  
-              </div>
-
-              <div class="form-checkbox">
-                <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                <label class="checklabel" for="">Fluoride</label>  
-              </div>
-
-              <div class="form-checkbox">
-                <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                <label class="checklabel" for="">Med Refill</label>  
-              </div>
-
-              <div class="form-checkbox">
-                <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                <label class="checklabel" for="">Post E.R/Urgent Care</label>  
+                <label class="checklabel" for="">Appointment 05</label>  
               </div>
           </div>
 
-          <div class="row">
-            <div class="card col" id="backbtncard">
-              <a href="#" id="rastepfourback">
-                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
-                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
-              </a>
-            </div>
-
-            <div class="card col" id="nextbtncard">
-                <a href="#" id="rastepfournext">
-                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
-                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
-                </a>
-            </div>  
+          <div class="card " id="btncard">
+            <a href="#" id="ufsteponenext">
+              <img src="assest/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="btnimg1">
+              <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="btnimg1">
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="rastep5" class="section mt-3">
+      <section id="ufstep2" class="section mt-3">
         <div class="container form-container text-center slide">
           <div class="" id="strips1">
             <legend class="font-weight-bold" id="pagetitles">Appointment Information</legend>
@@ -332,14 +176,187 @@
 
           <div class="row">
             <div class="card col" id="backbtncard">
-              <a href="#" id="rastepfiveback">
+              <a href="#" id="ufsteptwoback">
                   <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
                   <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
               </a>
             </div>
 
             <div class="card col" id="nextbtncard">
-                <a href="#" id="rastepfivenext">
+                <a href="#" id="ufsteptwonext">
+                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                </a>
+              </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="ufstep3" class="section mt-3">
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Your Informaiton</legend>
+          </div>
+              
+          <!--First Name-->
+            <div class="form-group">
+                <label for="patientfullname" class="col-sm-12 control-label">First Name</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="patientfullname" class="" name="patientfullname" placeholder="First Name">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide your name!
+                  </div>
+                </div>
+            </div>
+          <!--First Name-->
+              
+          <!--Last Name-->
+            <div class="form-group">
+              <label for="patientfullname" class="col-sm-12 control-label">Last Name</label>
+              <div class="col-sm-12">
+                <input required type="text" id="patientfullname" class="" name="patientfullname" placeholder="Last Name">
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please Provide your name!
+                </div>
+              </div>
+            </div>
+          <!--Last Name-->
+              
+          <!--Mobile Number-->
+            <div class="form-group">
+              <label for="patientfullname" class="col-sm-12 control-label">
+                Mobile Number
+                <small class="mytooltip tooltip-effect-2">
+                  <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
+                  <span class="tooltip-content clearfix"> 
+                    <span class="tooltip-text font-weight-bold"> We will send you SMS notifications to the phone number provided.</span> 
+                  </span> 
+                </small>
+              </label>
+              <div class="col-sm-12">
+                <input required type="text" id="patientfullname" class="" name="patientfullname" placeholder="Mobile Number">
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please Provide your name!
+                </div>
+              </div>
+            </div>
+          <!--Mobile Number-->
+              
+          <!--Email Address-->
+            <div class="form-group">
+              <label for="patientfullname" class="col-sm-12 control-label">
+                Email Address
+                <small class="mytooltip tooltip-effect-2">
+                  <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
+                  <span class="tooltip-content clearfix"> 
+                    <span class="tooltip-text font-weight-bold"> We will email you notifications to the email provided.</span> 
+                  </span> 
+                </small>
+              </label>
+              <div class="col-sm-12">
+                <input required type="text" id="patientfullname" class="" name="patientfullname" placeholder="Email Address">
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please Provide your name!
+                </div>
+              </div>
+            </div>
+          <!--Email Address-->
+          
+          <!--Relationship To Patient-->
+            <div class="form-group text-center">
+              <label for="yourname" class="col-sm-12 control-label">Relationship To Patient</label>
+              <div class="col-sm-12">
+                <select name="" placeholder="Relationship" class="form-control required" style="width: 85%; margin-left: 30px;">
+                    <option value="" selected="">Choose Relationship</option>
+                    <option value="Self">Self</option>
+                    <option value="Spouse">Spouse</option>
+                    <option value="Step Child">Step Child</option>
+                    <option value="Foster Child">Foster Child</option>
+                    <option value="Ward of the court">Ward of the court</option>
+                    <option value="Employee">Employee</option>
+                    <option value="Handicaped dependent">Handicaped dependent</option>
+                    <option value="Organ Donar">Organ Donar</option>
+                    <option value="Cadever Donar">Cadever Donar</option>
+                    <option value="Grandchild">Grandchild</option>
+                    <option value="Niece/Nephew">Niece/Nephew</option>
+                    <option value="Injured Plaintiff">Injured Plaintiff</option>
+                    <option value="Sponsored Dependent">Sponsored Dependent</option>
+                    <option value="Parent">Parent</option>
+                    <option value="Grandparent">Grandparent</option>
+                    <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+          <!--Relationship To Patient-->
+
+          <div class="row">
+            <div class="card col" id="backbtncard">
+              <a href="#" id="ufstepthreeback">
+                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card col" id="nextbtncard">
+                <a href="#" id="ufstepthreenext">
+                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                </a>
+              </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="ufstep4" class="section mt-3">
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Other Information</legend>
+          </div>
+              
+          <!--Upload Documents-->
+            <div class="form-group">
+              <label for="" class="col-sm-12 control-label">Upload Document</label>
+                <div class="col-12">
+                  <form action="#" class="dropzone">
+                      <div class="fallback">
+                          <input name="file" type="file" multiple />
+                      </div>
+                  </form>
+              </div>
+            </div>
+          <!--Upload Documents-->
+          
+          <!--Comment-->
+            <div class="form-group">
+                <label for="comment" class="col-sm-12 control-label">Comment</label>
+                <div class="col-sm-12">
+                  <textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
+                </div>
+            </div>
+          <!--Comment-->
+
+          <div class="row">
+            <div class="card col" id="backbtncard">
+              <a href="#" id="ufstepfourback">
+                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card col" id="nextbtncard">
+                <a href="#" id="ufstepfournext">
                   <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
                   <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
                 </a>
@@ -348,36 +365,191 @@
         </div>
       </section>
 
-      <section id="rastep6" class="section mt-3">
+      <section id="ufstep5" class="section mt-3">
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Patient Informaiton</legend>
+          </div>
+              
+          <!--First Name-->
+            <div class="form-group">
+                <label for="patientfullname" class="col-sm-12 control-label">First Name</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="patientfullname" class="" name="patientfullname" placeholder="First Name">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide your name!
+                  </div>
+                </div>
+            </div>
+          <!--First Name-->
+              
+          <!--Last Name-->
+            <div class="form-group">
+              <label for="patientfullname" class="col-sm-12 control-label">Last Name</label>
+              <div class="col-sm-12">
+                <input required type="text" id="patientfullname" class="" name="patientfullname" placeholder="Last Name">
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please Provide your name!
+                </div>
+              </div>
+            </div>
+          <!--Last Name-->
+
+          <!--Date-->
+            <div class="form-group">
+              <label id="formlable" for="birthDate" class="col-sm-12 control-label">Date of Birth</label>
+                <div class="col-sm-12">
+                  <input required type="date" id="birthDate" class="" placeholder="Date of Birth" autofocus>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide your date of birth!
+                  </div>
+                </div>
+            </div>
+          <!--Date-->
+
+          <div class="row">
+            <div class="card col" id="backbtncard">
+              <a href="#" id="ufstepfiveback">
+                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card col" id="nextbtncard">
+                <a href="#" id="ufstepfivenext">
+                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                </a>
+            </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="ufstep6" class="section mt-3">
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Contact Information</legend>
+          </div>
+              
+          <!--Email Address-->
+            <div class="form-group">
+                <label for="" class="col-sm-12 control-label">Email Address</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="text" class="" name="" placeholder="Email Address">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide your name!
+                  </div>
+                </div>
+            </div>
+          <!--Email Address-->
+              
+          <!--Phone Number-->
+            <div class="form-group">
+              <label for="" class="col-sm-12 control-label">Phone Number</label>
+              <div class="col-sm-12">
+                <input required type="text" id="text" class="" name="" placeholder="Phone Number">
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please Provide your name!
+                </div>
+              </div>
+            </div>
+          <!--Phone Number-->
+            
+            <div class="row">
+              <div class="card  col" id="backbtncard">
+                <a href="#" id="ufstepsixback">
+                    <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start">
+                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="ufstepsixback">
+                </a>
+              </div>
+
+              <div class="card  col" id="nextbtncard">
+                  <a href="#" id="ufstepsixnext">
+                    <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start">
+                    <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="ufstepsixnext">
+                  </a>
+              </div>	
+            </div>
+        </div>
+      </section>
+
+      <section id="ufstep7" class="section">
         <div class="container form-container slide">
           <div class="col-12" id="strips1">
-            <h4 class="font-weight-bold my-3"> Patient Information </h4>
+            <h4 class="font-weight-bold my-3"> Your Information </h4>
           </div>
           <table class="table table-striped slide">
               <tbody>
                 <tr>
-                  <th>Patient Full Name</th>
-                  <td id="td1">Heather</td>
+                  <th class="text-left">First Name</th>
+                  <td class="text-right">Heather</td>
                 </tr>
                 <tr>
-                  <th>Patient Date of Birth</th>
-                  <td id="td1">20/02/1990</td>
+                  <th class="text-left">Last Name</th>
+                  <td class="text-right">Jones</td>
+                </tr>
+                <tr>
+                  <th class="text-left">Phone</th>
+                  <td class="text-right">9511456655</td>
+                </tr>
+                <tr>
+                  <th class="text-left">Email</th>
+                  <td class="text-right">x@gmail.com</td>
+                </tr>
+                <tr>
+                  <th class="text-left">Relationship</th>
+                  <td class="text-right">Self</td>
                 </tr>
               </tbody>
           </table>
 
+            <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3"> Patient Information </h4>
+            </div>
+            <table class="table table-striped slide">
+              <tbody>
+                <tr>
+                  <th class="text-left">First Name</th>
+                  <td class="text-right">Heather</td>
+                </tr>
+                <tr>
+                  <th class="text-left">Last Name</th>
+                  <td class="text-right">Jones</td>
+                </tr>
+                <tr>
+                  <th class="text-left">Patient Date of Birth</th>
+                  <td class="text-right">12/21/21</td>
+                </tr>
+              </tbody>
+            </table>
+            
             <div class="col-12" id="strips1">
               <h4 class="font-weight-bold my-3"> Contact Information </h4>
             </div>
             <table class="table table-striped slide">
               <tbody>
                 <tr>
-                  <th>Email Address</th>
-                  <td id="td1">heather@gmail.com</td>
+                  <th class="text-left">Email Address</th>
+                  <td class="text-right">x@gmail.com</td>
                 </tr>
                 <tr>
-                  <th>Phone Number</th>
-                  <td id="td1">9153595831</td>
+                  <th class="text-left">Phone Number</th>
+                  <td class="text-right">9511546655</td>
                 </tr>
               </tbody>
             </table>
@@ -388,12 +560,12 @@
             <table class="table table-striped slide">
               <tbody>
                 <tr>
-                  <th>Comment</th>
-                  <td id="td1">Great Demo</td>
+                  <th class="text-left">Upload Document</th>
+                  <td class="text-right">x.pdf</td>
                 </tr>
                 <tr>
-                  <th>Upload Document</th>
-                  <td id="td1">DocFile</td>
+                  <th class="text-left">Comment</th>
+                  <td class="text-right">Lorem ipsum dolor sit amet</td>
                 </tr>
               </tbody>
             </table>
@@ -404,89 +576,97 @@
             <table class="table table-striped slide">
               <tbody>
                 <tr>
-                  <th>Appointment Type</th>
-                  <td id="td1">New Patient Appointment</td>
+                  <th class="text-left">Appointment Type</th>
+                  <td class="text-right">Appointment 01</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3"> Date & Time </h4>
+            </div>
+            <table class="table table-striped slide">
+              <tbody>
+                <tr>
+                  <th class="text-left">Appointment Date</th>
+                  <td class="text-right">08/17/2021</td>
                 </tr>
                 <tr>
-                  <th>Appointment Date</th>
-                  <td id="td1">12/09/2020</td>
-                </tr>
-                <tr>
-                  <th>Appointment Time</th>
-                  <td id="td1">02.00 PM</td>
+                  <th class="text-left">Appointment Time</th>
+                  <td class="text-right">10:00 AM-10:10 AM</td>
                 </tr>
               </tbody>
             </table>
             
             <div class="row">
               <div class="card  col" id="backbtncard">
-                <a href="#" id="rastepsixback">
+                <a href="#" id="ufstepsixback">
                     <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start">
-                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="ufstepsixback">
+                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="ufstepsevenback">
                 </a>
               </div>
 
               <div class="card  col" id="nextbtncard">
-                  <a href="#" id="rastepsevennext">
-                    <img src="assest/img/buttons/se.png" alt="" class="img-fluid  btn-start">
-                    <img src="assest/img/buttons/sehover.png" alt="" class="img-fluid  btn-start img-top" id="ufstepsixnext">
+                  <a href="#" id="ufstepsevennext">
+                    <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start">
+                    <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="ufstepsevennext">
                   </a>
               </div>	
-          </div>
-          </div>
-      </section>
-
-      <section id="rastep7" class="section">
-          <div class="container-fluid slide">
-              <div class="row px-5 pt-3" id="confirm1">
-                <div class="col-xl-6 offset-xl-3 shadow text-center pb-5">
-                  <img src="assest/img/check.png" class="img-fluid  check-img"> 
-                  <h2 class="font-weight-bold mt-4 mb-4">Congrats! You have successfully completed your Book Appointment Paperwork!</h2>
-                  <img src="assest/img/rtplogo.png" class="img-fluid lazyload" id="check-logo">
-                    <div>
-                      <a href="#" class="mt-3">
-                        <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" onmouseover="this.src='assest/img/buttons/pihover.png'" onmouseout="this.src='assest/img/buttons/pi.png'" id="rastepeightnext">
-                      </a>
-                    </div>
-                </div>
             </div>
-          </div> 
+        </div>
       </section>
 
-      <section id="rastep8" class="section">
-          <div class="container-fluid slide">
-            <div class="row" id="confirm2">
-              <div class="col-xl-6 offset-xl-3 shadow text-center">
-                <div class="row justify-content-center">
+      <section id="ufstep8" class="section">
+        <div class="container slide" style="max-width: 900px; padding: 0px; margin-top: -95px;">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+              <div class="wrapper">
+                <div class="row no-gutters">
 
-                  <div class="col-xl-12 text-center shadow2 mb-40">
-                    <h3 class="font-weight-bold"><i class="fas fa-receipt mr-2"></i>Authorization Release</h3>
-                    <p class="lead">Please send fill out an authorization form for all the practices we need to request your records from.</p>
-                    <a type="button" class="btn btn-outline-success font-weight-bold mb-3" href="http://rtpmedsol.rtpdemo.com/demoforms/authorizationrelease" target="_blank">Let's start</a>
+                  <div class="col-md-7 d-flex align-items-stretch ml-lg-n5">
+                    <div class="contact-wrap w-100 p-md-5 p-4 text-center">
+                      <p class="font-weight-bold mb-4 mt-3"><span class="text-success" style="font-size: 50px;">Congrats!</span> <br> You have successfully booked an appointment!</p>
+                      <h5 class="font-weight-bold text-success">Your confirmation number: <span class="" style="font-size: 50px;">XXXXXX</span></h5>
+                      <form method="POST" id="contactForm" name="contactForm" class="mt-n5">
+
+                        <div class="row mt-5">
+
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/1.png" alt="" width="40"> Update Demo</h4>
+                              <p style="font-size: 14px; text-align: left;">If you need to update your demographics informations; email, phone, address, etc. </p> 
+                              <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank">Let's start</a>
+                            </div>
+                          </div>
+
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/1.png" alt="" width="40"> Authorization Request</h4>
+                              <p style="font-size: 14px; text-align: left;">To obtain or send medical records easily!</p> 
+                              <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="http://rtpmedsol.rtpdemo.com/demoforms/authorizationrelease" target="_blank">Let's start</a>
+                            </div>
+                          </div>
+
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/3.png" alt="" width="40"> Survey</h4>
+                              <p style="font-size: 14px; text-align: left;">Please tell us how we are doing!</p>  
+                              <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank">Let's start</a>
+                            </div>
+                          </div>
+
+                        </div>
+
+                      </form>
+                    </div>
                   </div>
 
-                  <div class="col-xl-12 text-center shadow2 mb-40">
-                    <h3 class="font-weight-bold"><i class="fas fa-desktop mr-2"></i>Update Demo</h3>
-                    <p class="lead">Update your demo now!</p> 
-                    <a type="button" class="btn btn-outline-success font-weight-bold mb-3" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank">Let's start</a>
-                  </div>
-
-                  <div class="col-xl-12 text-center shadow2 mb-40">
-                    <h3 class="font-weight-bold"><i class="fab fa-wpforms mr-2"></i>Request Form</h3>
-                    <p class="lead">Hae you filled out the request form yet?</p> 
-                    <a type="button" class="btn btn-outline-success font-weight-bold mb-3" href="https://rtpmedsol.rtpdemo.com/demoforms/requestform" target="_blank">Let's start</a>
-                  </div>
-
-                  <div class="col-xl-12 text-center shadow2 mb-40">
-                    <h3 class="font-weight-bold"><i class="far fa-calendar-alt mr-2"></i>Survey</h3>
-                    <p class="lead">Please take this Survey</p> 
-                    <a type="button" class="btn btn-outline-success font-weight-bold mb-3" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank">Let's start</a>
-                  </div>
-
+                  <div class="col-md-5 d-flex align-items-stretch"><img src="assest/img/confirm.jpg" alt="" style="margin-left: -45px; margin-top: 65px; width: 800px ;"></div>
                 </div>
-              </div> 
-            </div> 
-          </div> 
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="section active mt-2">
@@ -505,6 +685,7 @@
     <script defer src="assest/js/bootstrap.min.js" type="text/javascript"></script>
     <script defer src="assest/js/lazysizes.min.js" type="text/javascript"></script>
     <script defer src="assest/js/custom.min.js" type="text/javascript"></script>
+    <script defer src="assest/js/dropzone.js" type="text/javascript"></script>
     <!-- Plugin JavaScript -->
     <script defer src="assest/js/moment/moment.js"></script>
     <script defer src="assest/js/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
