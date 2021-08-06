@@ -28,6 +28,26 @@
   <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/style.min.css">
   <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/stylish-tooltip.css">
   <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/typography.min.css">
+  <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/stylish-tooltip.css">
+  <style>
+    /* Orange */
+    .btn-outline-orange {
+      border-color: #ff621f;
+      color: #ff621f;
+    }
+
+    .btn-outline-orange:hover {
+      background: #ff621f;
+      color: white;
+    }
+
+    #btncard
+    {
+      background-color: rgba(245, 245, 245, 0) !important;
+    justify-content: center !important;
+    text-align: center !important;
+    }
+  </style>
   <!-- signature -->
   <link href="assest/css/signature/jquery.signaturepad.css" rel="stylesheet" rel="prefetch">
 </head>
@@ -86,8 +106,8 @@
   <main>
 
     <section id="arfstep1" class="section mt-3 active">
-      <div class="container form-container text-center slide">
-        <!-- <div class="text-justify firstPage">
+      <div class="container form-container text-center slide" style="max-width: 950px !important; height: 525px; overflow-y: scroll; padding: 50px;">
+        <div class="text-justify">
                 <p><strong>Introduction</strong></p>
                 <p>A “business associate” is a person or entity, other than a member of the workforce of a covered entity, who performs functions or activities on behalf of, or provides certain services to, a covered entity that involve access by the business associate to protected health information. A “business associate” also is a subcontractor that creates, receives, maintains, or transmits protected health information on behalf of another business associate. The HIPAA Rules generally require that covered entities and business associates enter into contracts with their business associates to ensure that the business associates will appropriately safeguard protected health information. The business associate contract also serves to clarify and limit, as appropriate, the permissible uses and disclosures of protected health information by the business associate, based on the relationship between the parties and the activities or services being performed by the business associate. A business associate may use or disclose protected health information only as permitted or required by its business associate contract or as required by law. A business associate is directly liable under the HIPAA Rules and subject to civil and, in some cases, criminal penalties for making uses and disclosures of protected health information that are not authorized by its contract or required by law. A business associate also is directly liable and subject to civil penalties for failing to safeguard electronic protected health information in accordance with the HIPAA Security Rule.</p>
                 <p>A written contract between a covered entity and a business associate must: (1) establish the permitted and required uses and disclosures of protected health information by the business associate; (2) provide that the business associate will not use or further disclose the information other than as permitted or required by the contract or as required by law; (3) require the business associate to implement appropriate safeguards to prevent unauthorized use or disclosure of the information, including implementing requirements of the HIPAA Security Rule with regard to electronic protected health information; (4) require the business associate to report to the covered entity any use or disclosure of the information not provided for by its contract, including incidents that constitute breaches of unsecured protected health information; (5) require the business associate to disclose protected health information as specified in its contract to satisfy a covered entity’s obligation with respect to individuals' requests for copies of their protected health information, as well as make available protected health information for amendments (and incorporate any amendments, if required) and accountings; (6) to the extent the business associate is to carry out a covered entity’s obligation under the Privacy Rule, require the business associate to comply with the requirements applicable to the obligation; (7) require the business associate to make available to HHS its internal practices, books, and records relating to the use and disclosure of protected health information received from, or created or received by the business associate on behalf of, the covered entity for purposes of HHS determining the covered entity’s compliance with the HIPAA Privacy Rule; (8) at termination of the contract, if feasible, require the business associate to return or destroy all protected health information received from, or created or received by the business associate on behalf of, the covered entity; (9) require the business associate to ensure that any subcontractors it may engage on its behalf that will have access to protected health information agree to the same restrictions and conditions that apply to the business associate with respect to such information; and (10) authorize termination of the contract by the covered entity if the business associate violates a material term of the contract. Contracts between business associates and business associates that are subcontractors are subject to these same requirements.</p>
@@ -161,210 +181,118 @@
                 <p style=" margin-left: 20.0px;">(a) [Optional] <u>Regulatory References</u>. A reference in this Agreement to a section in the HIPAA Rules means the section as in effect or as amended.</p>
                 <p style=" margin-left: 20.0px;">(b) [Optional] <u>Amendment</u>. The Parties agree to take such action as is necessary to amend this Agreement from time to time as is necessary for compliance with the requirements of the HIPAA Rules and any other applicable law.</p>
                 <p style=" margin-left: 20.0px;">(c) [Optional] <u>Interpretation</u>. Any ambiguity in this Agreement shall be interpreted to permit compliance with the HIPAA Rules.</p>
-          </div> -->
-          
-          <div class="" id="strips1">
-            <legend class="font-weight-bold" id="pagetitles">Business Information</legend>
-          </div>
-            <!--Business Associate Name-->
-              <div class="form-group">
-                  <label for="yourname" class="col-sm-12 control-label">Business Associate Name</label>
-                  <div class="col-sm-12">
-                    <input required type="text" id="yourname" class="" name="yourname" placeholder="Business Associate Name">
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                      Please Provide business associate name!
-                    </div>
-                  </div>
-              </div>
-
-              <div class="form-group">
-                  <label for="yourname" class="col-sm-12 control-label">
-                    Contact Email 
-                    <small class="mytooltip tooltip-effect-2">
-                      <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
-                      <span class="tooltip-content clearfix"> 
-                        <span class="tooltip-text font-weight-bold"> We will email you notifications to the email provided.</span> 
-                      </span> 
-                    </small>
-                  </label>
-                  <div class="col-sm-12">
-                    <input required type="text" id="yourname" class="" name="yourname" placeholder="Contact Email">
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                      Please Provide Contact Email!
-                    </div>
-                  </div>
-              </div>
-
-              <div class="form-group">
-                  <label for="yourname" class="col-sm-12 control-label">
-                    Contact Phone
-                    <small class="mytooltip tooltip-effect-2">
-                      <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
-                      <span class="tooltip-content clearfix"> 
-                        <span class="tooltip-text font-weight-bold"> We will send you SMS notifications to the phone number provided.</span> 
-                      </span> 
-                    </small>
-                  </label>
-                  <div class="col-sm-12">
-                    <input required type="text" id="yourname" class="" name="yourname" placeholder="Contact Phone">
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                      Please Provide Contact Phone!
-                    </div>
-                  </div>
-              </div>
-                  
-              <div class="form-group">
-                  <label for="yourname" class="col-sm-12 control-label">HIPAA Security/Privacy Officer</label>
-                  <div class="col-sm-12">
-                    <input required type="text" id="yourname" class="" name="yourname" placeholder="HIPAA Security/Privacy Officer">
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                      Please Provide your HIPAA Security/Privacy Officer name!
-                    </div>
-                  </div>
-              </div>    
-
-              <div class="form-group">
-                  <label for="yourname" class="col-sm-12 control-label">Services you will provide</label>
-                  <div class="col-sm-12">
-                    <input required type="text" id="yourname" class="" name="yourname" placeholder="Services you will provide">
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                      Please Provide the services you will provide!
-                    </div>
-                  </div>
-              </div>    
-              
-              <div class="form-group">
-                  <label for="yourname" class="col-sm-12 control-label">Do you currently have a BAA signed with the covered entity, RTP - MedSol?</label>
-                    <div class="form-checkbox">
-                    <input required class="form-check-input checkbox" type="checkbox" name="" id="s2q6" value="">
-                    <label class="checklabel" for="s2q6">Yes</label>  
-                    </div>
-                    <div class="form-checkbox">
-                      <input required class="form-check-input checkbox" type="checkbox" name="" id="s2q7" value="">
-                      <label class="checklabel" for="s2q7">No</label>  
-                    </div>
-              </div>
-            <!--Business Associate Name-->
-
-          <div class="card" id="btncard">
+        </div>
+      </div>
+      
+      <div class="text-center slide">
+        <div class="card" id="btncard">
             <a href="#" id="arfsteponenext">
               <img src="assest/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="btnimg1">
               <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="btnimg1">
             </a>
-          </div>
+        </div>
       </div>
     </section>
 
     <section id="arfstep2" class="section mt-3">
       <div class="container form-container text-center slide">
-          <div class="" id="strips1">
-            <legend class="font-weight-bold" id="pagetitles">Background</legend>
-          </div>
-
-          <div class="form-group">
-              <label id="formlable" for="" class="col-sm-12 control-label">Has your company conducted HIPAA Training?</label>
-              <div class="form-checkbox ">
-              <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q1" value="">
-              <label class="checklabel" for="s3q1" onclick="insType()">Yes</label>  
-              </div>
-              <div class="form-checkbox ">
-              <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q2" value="">
-              <label class="checklabel" for="s3q2">No</label>  
-              </div>
-          </div>
-
-          <!--Date-->
-            <div class="form-group slide" style="display:none" id="insurancetype">
-              <label id="formlable" for="" class="col-sm-12 control-label">Date of your most recent HIPAA Training</label>
+        <div class="" id="strips1">
+          <legend class="font-weight-bold" id="pagetitles">Business Information</legend>
+        </div>
+          <!--Business Associate Name-->
+            <div class="form-group">
+                <label for="yourname" class="col-sm-12 control-label">Business Associate Name</label>
                 <div class="col-sm-12">
-                  <input required type="date" id="" class="" placeholder="Date of your most recent HIPAA Training" autofocus>
+                  <input required type="text" id="yourname" class="" name="yourname" placeholder="Business Associate Name">
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                   <div class="invalid-feedback">
-                    Please Provide the date!
+                    Please Provide business associate name!
                   </div>
                 </div>
             </div>
-          <!--Date-->
-        <br>
-          
-          <div class="form-group">
-              <label id="formlable" for="" class="col-sm-12 control-label">Has your company undergone a Risk Assessment</label>
-              <div class="form-checkbox ">
-              <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q3" value="yes">
-              <label class="checklabel" for="s3q3" onclick="riskType()">Yes</label>  
-              </div>
-              <div class="form-checkbox ">
-              <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q4" value="">
-              <label class="checklabel" for="s3q4">No</label>  
-              </div>
-          </div>
 
-          <!--Date-->
-            <div class="form-grou slide" style="display:none" id="risktype">
-              <label id="formlable" for="" class="col-sm-12 control-label">Date of your most recent Risk Assessment</label>
+            <div class="form-group">
+                <label for="yourname" class="col-sm-12 control-label">
+                  Contact Email 
+                  <small class="mytooltip tooltip-effect-2">
+                    <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
+                    <span class="tooltip-content clearfix"> 
+                      <span class="tooltip-text font-weight-bold"> We will email you notifications to the email provided.</span> 
+                    </span> 
+                  </small>
+                </label>
                 <div class="col-sm-12">
-                  <input required type="date" id="" class="" placeholder="Date of your most recent Risk Assessment" autofocus>
+                  <input required type="text" id="yourname" class="" name="yourname" placeholder="Contact Email">
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                   <div class="invalid-feedback">
-                    Please Provide the date!
+                    Please Provide Contact Email!
                   </div>
                 </div>
             </div>
-          <!--Date-->
-        <br>
 
-          <div class="form-group">
-              <label id="formlable" for="" class="col-sm-12 control-label">Do you have a set of polices and procedures?</label>
-              <div class="form-checkbox ">
-              <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q5" value="">
-              <label class="checklabel" for="s3q5">Yes</label>  
-              </div>
-              <div class="form-checkbox ">
-              <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q6" value="">
-              <label class="checklabel" for="s3q6">No</label>  
-              </div>
-          </div>
-        <br>
-
-          <div class="form-group">
-            <label id="formlable" for="" class="col-sm-12 control-label">Has the organization been investigated for a HIPAA violation?</label>
-            <div class="form-checkbox ">
-              <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q7" value="">
-              <label class="checklabel" for="s3q7" onclick="explainType()">Yes</label>  
-              </div>
-              <div class="form-checkbox ">
-              <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q8" value="">
-              <label class="checklabel" for="s3q8">No</label>  
-              </div>
-          </div>
-
-          <!--Comment-->
-            <div class="form-group slide" style="display: none;" id="explaintype">
-              <label for="comment" class="col-sm-12 control-label">Please explain </label>
-              <div class="col-sm-12">
-                <textarea name="comment" class="form-control" id="text" required rows="3"></textarea>
-              </div>
+            <div class="form-group">
+                <label for="yourname" class="col-sm-12 control-label">
+                  Contact Phone
+                  <small class="mytooltip tooltip-effect-2">
+                    <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
+                    <span class="tooltip-content clearfix"> 
+                      <span class="tooltip-text font-weight-bold"> We will send you SMS notifications to the phone number provided.</span> 
+                    </span> 
+                  </small>
+                </label>
+                <div class="col-sm-12">
+                  <input required type="text" id="yourname" class="" name="yourname" placeholder="Contact Phone">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide Contact Phone!
+                  </div>
+                </div>
             </div>
-          <!--Comment-->
+                
+            <div class="form-group">
+                <label for="yourname" class="col-sm-12 control-label">HIPAA Security/Privacy Officer</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="yourname" class="" name="yourname" placeholder="HIPAA Security/Privacy Officer">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide your HIPAA Security/Privacy Officer name!
+                  </div>
+                </div>
+            </div>    
+
+            <div class="form-group">
+                <label for="yourname" class="col-sm-12 control-label">Services you will provide</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="yourname" class="" name="yourname" placeholder="Services you will provide">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide the services you will provide!
+                  </div>
+                </div>
+            </div>    
+            
+            <div class="form-group">
+                <label for="yourname" class="col-sm-12 control-label">Do you currently have a BAA signed with the covered entity, RTP - MedSol?</label>
+                  <div class="form-checkbox">
+                  <input required class="form-check-input checkbox" type="checkbox" name="" id="s2q6" value="">
+                  <label class="checklabel" for="s2q6">Yes</label>  
+                  </div>
+                  <div class="form-checkbox">
+                    <input required class="form-check-input checkbox" type="checkbox" name="" id="s2q7" value="">
+                    <label class="checklabel" for="s2q7">No</label>  
+                  </div>
+            </div>
+          <!--Business Associate Name-->
 
         <div class="row">
           <div class="card  col" id="backbtncard">
@@ -386,168 +314,99 @@
 
     <section id="arfstep3" class="section mt-3">
       <div class="container form-container text-center slide">
-          <div class="" id="strips1">
-            <legend class="font-weight-bold" id="pagetitles">Subcontractors</legend>
+        <div class="" id="strips1">
+          <legend class="font-weight-bold" id="pagetitles">Background</legend>
+        </div>
+
+        <div class="form-group">
+            <label id="formlable" for="" class="col-sm-12 control-label">Has your company conducted HIPAA Training?</label>
+            <div class="form-checkbox ">
+            <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q1" value="">
+            <label class="checklabel" for="s3q1" onclick="insType()">Yes</label>  
+            </div>
+            <div class="form-checkbox ">
+            <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q2" value="">
+            <label class="checklabel" for="s3q2">No</label>  
+            </div>
+        </div>
+
+        <!--Date-->
+          <div class="form-group slide" style="display:none" id="insurancetype">
+            <label id="formlable" for="" class="col-sm-12 control-label">Date of your most recent HIPAA Training</label>
+              <div class="col-sm-12">
+                <input required type="date" id="" class="" placeholder="Date of your most recent HIPAA Training" autofocus>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please Provide the date!
+                </div>
+              </div>
           </div>
-          
-          <div class="form-group">
-              <div class="form-checkbox ">
-                <input required class="form-check-input checkbox" type="checkbox" name="" id="s4q1" value="yes">
-                <label class="checklabel" for="s4q1" onclick="subcontractors()">Yes</label>  
-              </div>
-
-              <div class="form-checkbox ">
-                <input required class="form-check-input checkbox" type="checkbox" name="" id="s4q2" value="">
-                <label class="checklabel" for="s4q2">No</label>  
-              </div>
-          </div>
-
-          <div id="subcontractors" style="display: none;">        
-            <small>Please provide a list of any subcontractors you will work with who will also have access to PHI information</small>
-            <div class="form-group">
-              <label for="" class="col-sm-12 control-label">Company Name</label>
-              <div class="col-sm-12">
-                <input required type="text" id="" class="" name="" placeholder="Company Name">
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please Provide company name!
-                </div>
-              </div>
-            </div>
-          
-
-            <div class="form-group">
-              <label for="" class="col-sm-12 control-label">Contact Name</label>
-              <div class="col-sm-12">
-                <input required type="text" id="" class="" name="" placeholder="Contact Name">
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please Provide contact name!
-                </div>
-              </div>
-            </div>
-          
-
-            <div class="form-group">
-              <label for="" class="col-sm-12 control-label">Phone</label>
-              <div class="col-sm-12">
-                <input required type="text" id="" class="" name="" placeholder="Phone">
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please Provide phone number!
-                </div>
-              </div>
-            </div>
-            
+        <!--Date-->
+      <br>
         
-            <div class="form-group">
-              <label for="" class="col-sm-12 control-label">Email</label>
+        <div class="form-group">
+            <label id="formlable" for="" class="col-sm-12 control-label">Has your company undergone a Risk Assessment</label>
+            <div class="form-checkbox ">
+            <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q3" value="yes">
+            <label class="checklabel" for="s3q3" onclick="riskType()">Yes</label>  
+            </div>
+            <div class="form-checkbox ">
+            <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q4" value="">
+            <label class="checklabel" for="s3q4">No</label>  
+            </div>
+        </div>
+
+        <!--Date-->
+          <div class="form-grou slide" style="display:none" id="risktype">
+            <label id="formlable" for="" class="col-sm-12 control-label">Date of your most recent Risk Assessment</label>
               <div class="col-sm-12">
-                <input required type="text" id="" class="" name="" placeholder="Email">
+                <input required type="date" id="" class="" placeholder="Date of your most recent Risk Assessment" autofocus>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
                 <div class="invalid-feedback">
-                  Please Provide email!
+                  Please Provide the date!
                 </div>
               </div>
-            </div>
-
-            <div class="form-group">
-              <label id="formlable" for="" class="col-sm-12 control-label">Are they verified as HIPAA compliant?</label>
-                <div class="form-checkbox ">
-                  <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                  <label class="checklabel" for="">Yes</label>  
-                  </div>
-                  <div class="form-checkbox ">
-                  <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                  <label class="checklabel" for="">No</label>  
-                  </div>
-            </div> 
-
-            <div id="stepeleven" style="display: none;">
-              <div class="" id="strips1">
-                    <legend class="font-weight-bold" id="pagetitles">Subcontractor</legend>
-              </div>
-                  <div class="form-group">
-                    <label for="" class="col-sm-12 control-label">Company Name</label>
-                    <div class="col-sm-12">
-                      <input required type="text" id="" class="" name="" placeholder="Company Name">
-                      <div class="valid-feedback">
-                        Looks good!
-                      </div>
-                      <div class="invalid-feedback">
-                        Please Provide company name!
-                      </div>
-                    </div>
-                  </div>
-                  
-              
-                  <div class="form-group">
-                    <label for="" class="col-sm-12 control-label">Contact Name</label>
-                    <div class="col-sm-12">
-                      <input required type="text" id="" class="" name="" placeholder="Contact Name">
-                      <div class="valid-feedback">
-                        Looks good!
-                      </div>
-                      <div class="invalid-feedback">
-                        Please Provide contact name!
-                      </div>
-                    </div>
-                  </div>
-                  
-              
-                  <div class="form-group">
-                    <label for="" class="col-sm-12 control-label">Phone</label>
-                    <div class="col-sm-12">
-                      <input required type="text" id="" class="" name="" placeholder="Phone">
-                      <div class="valid-feedback">
-                        Looks good!
-                      </div>
-                      <div class="invalid-feedback">
-                        Please Provide phone number!
-                      </div>
-                    </div>
-                  </div>
-                  
-              
-                  <div class="form-group">
-                    <label for="" class="col-sm-12 control-label">Email</label>
-                    <div class="col-sm-12">
-                      <input required type="text" id="" class="" name="" placeholder="Email">
-                      <div class="valid-feedback">
-                        Looks good!
-                      </div>
-                      <div class="invalid-feedback">
-                        Please Provide email!
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label id="formlable" for="" class="col-sm-12 control-label">Are they verified as HIPAA compliant?</label>
-                      <div class="form-checkbox ">
-                        <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                        <label class="checklabel" for="">Yes</label>  
-                        </div>
-                        <div class="form-checkbox ">
-                        <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
-                        <label class="checklabel" for="">No</label>  
-                        </div>
-                  </div>            
-            </div>
-
-            <div class="col-lg-12 text-center">
-              <button type="button" class="btn btn-primary btn-minus"onclick="document.getElementById('stepeleven').style.display='none'" style="padding: 12px 20px !important;">-</button>
-              <button type="button" class="btn btn-primary btn-add" onclick="document.getElementById('stepeleven').style.display='block'" style="padding: 12px 20px !important;">+</button> 
-            </div>           
           </div>
+        <!--Date-->
+      <br>
+
+        <div class="form-group">
+            <label id="formlable" for="" class="col-sm-12 control-label">Do you have a set of polices and procedures?</label>
+            <div class="form-checkbox ">
+            <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q5" value="">
+            <label class="checklabel" for="s3q5">Yes</label>  
+            </div>
+            <div class="form-checkbox ">
+            <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q6" value="">
+            <label class="checklabel" for="s3q6">No</label>  
+            </div>
+        </div>
+      <br>
+
+        <div class="form-group">
+          <label id="formlable" for="" class="col-sm-12 control-label">Has the organization been investigated for a HIPAA violation?</label>
+          <div class="form-checkbox ">
+            <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q7" value="">
+            <label class="checklabel" for="s3q7" onclick="explainType()">Yes</label>  
+            </div>
+            <div class="form-checkbox ">
+            <input required class="form-check-input checkbox" type="checkbox" name="" id="s3q8" value="">
+            <label class="checklabel" for="s3q8">No</label>  
+            </div>
+        </div>
+
+        <!--Comment-->
+          <div class="form-group slide" style="display: none;" id="explaintype">
+            <label for="comment" class="col-sm-12 control-label">Please explain </label>
+            <div class="col-sm-12">
+              <textarea name="comment" class="form-control" id="text" required rows="3"></textarea>
+            </div>
+          </div>
+        <!--Comment-->
 
         <div class="row">
           <div class="card col" id="backbtncard">
@@ -569,133 +428,169 @@
 
     <section id="arfstep4" class="section mt-3">
       <div class="container form-container text-center slide">
-          <div class="" id="strips1">
-            <legend class="font-weight-bold" id="pagetitles">Business Information</legend>
-          </div>
-          <table class="table table-striped">
-            <tbody>
-              <tr >
-                <th class="text-left">Business Associate Name</th>
-                <td class="text-right">Shakir</td>
-              </tr>
-              <tr >
-                <th class="text-left">Phone Number</th>
-                <td class="text-right">9356459950</td>
-              </tr>
-              <tr >
-                <th class="text-left">Email Address</th>
-                <td class="text-right">Shakir@gmail.com</td>
-              </tr>
-              <tr>
-                <th class="text-left">HIPAA Security/Privacy Officer</th>
-                <td class="text-right">Ansari</td>
-              </tr>
-              <tr>
-                <th class="text-left">Services you will provide</th>
-                <td class="text-right">Physical</td>
-              </tr>
-              <tr>
-                <th class="text-left">Do you currently have a BAA signed with the covered entity?</th>
-                <td class="text-right">NO</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="" id="strips1">
+          <legend class="font-weight-bold" id="pagetitles">Subcontractors</legend>
+        </div>
+        
+        <div class="form-group">
+            <div class="form-checkbox ">
+              <input required class="form-check-input checkbox" type="checkbox" name="" id="s4q1" value="yes">
+              <label class="checklabel" for="s4q1" onclick="subcontractors()">Yes</label>  
+            </div>
 
-          <div class="col-12" id="strips">
-            <h4 class="font-weight-bold my-3" id="p11t"> Background </h4>
-          </div>
-          <table class="table table-striped">
-              <tbody>
-                <tr>
-                  <th class="text-left">Has your company conducted HIPAA Training?</th>
-                  <td class="text-right">Yes</td>
-                </tr>
-                <tr>
-                  <th class="text-left">Date of your most recent HIPAA Training</th>
-                  <td class="text-right">10/09/2020</td>
-                </tr>
-                <tr>
-                  <th class="text-left">Has your company undergone a Risk Assessment</th>
-                  <td class="text-right">Yes</td>
-                </tr>
-                <tr>
-                  <th class="text-left">Date of your most recent Risk Assessment</th>
-                  <td class="text-right">12/09/2020</td>
-                </tr>
-                <tr>
-                  <th class="text-left">Do you have a set of polices and procedures?</th>
-                  <td class="text-right">Yes</td>
-                </tr>
-                <tr>
-                  <th class="text-left">Has the organization been investigated for a HIPAA violation?</th>
-                  <td class="text-right">yes</td>
-                </tr>
-                <tr>
-                  <th class="text-left">Explanation</th>
-                  <td class="text-right">Reason for vialoation</td>
-                </tr>
-              </tbody>
-          </table>
+            <div class="form-checkbox ">
+              <input required class="form-check-input checkbox" type="checkbox" name="" id="s4q2" value="">
+              <label class="checklabel" for="s4q2">No</label>  
+            </div>
+        </div>
 
-          <div class="col-12" id="strips">
-            <h4 class="font-weight-bold my-3" id="p11t">Subcontractors</h4>
+        <div id="subcontractors" style="display: none;">        
+          <small>Please provide a list of any subcontractors you will work with who will also have access to PHI information</small>
+          <div class="form-group">
+            <label for="" class="col-sm-12 control-label">Company Name</label>
+            <div class="col-sm-12">
+              <input required type="text" id="" class="" name="" placeholder="Company Name">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please Provide company name!
+              </div>
+            </div>
           </div>
-          <table class="table table-striped">
-            <tbody>
-              <tr>
-                  <th class="text-left">Company Name</th>
-                  <td class="text-right">Veines</td>
-              </tr>
-              <tr>
-                  <th class="text-left">Contact Name</th>
-                  <td class="text-right">Ravi</td>
-              </tr>
-              <tr>
-                  <th class="text-left">Phone</th>
-                  <td class="text-right">9153595860</td>
-              </tr>
-              <tr>
-                  <th class="text-left">Email</th>
-                  <td class="text-right">x@gmail.com</td>
-              </tr>
-              <tr>
-                  <th class="text-left">Are they verified as HIPAA compliant?</th>
-                  <td class="text-right">Yes</td>
-              </tr>
-            </tbody>
-          </table>
+        
 
-          <div class="col-12" id="strips">
-            <h5 class="font-weight-bold my-3" id="p11t">Business Associate Signature</h5>
+          <div class="form-group">
+            <label for="" class="col-sm-12 control-label">Contact Name</label>
+            <div class="col-sm-12">
+              <input required type="text" id="" class="" name="" placeholder="Contact Name">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please Provide contact name!
+              </div>
+            </div>
           </div>
-          <div class="text-center">
-              <div class="form-group">
-                <label for="" class="col-sm-12 control-label">Your Name</label>
-                <div class="col-sm-12">
-                <input required type="text" id="" class="" name="" placeholder="Your Name">
+        
+
+          <div class="form-group">
+            <label for="" class="col-sm-12 control-label">Phone</label>
+            <div class="col-sm-12">
+              <input required type="text" id="" class="" name="" placeholder="Phone">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please Provide phone number!
+              </div>
+            </div>
+          </div>
+          
+      
+          <div class="form-group">
+            <label for="" class="col-sm-12 control-label">Email</label>
+            <div class="col-sm-12">
+              <input required type="text" id="" class="" name="" placeholder="Email">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please Provide email!
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label id="formlable" for="" class="col-sm-12 control-label">Are they verified as HIPAA compliant?</label>
+              <div class="form-checkbox ">
+                <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
+                <label class="checklabel" for="">Yes</label>  
                 </div>
-              </div>
-            
-              <div class="form-group">
-                <label for="" class="col-sm-12 control-label">Signature</label>
-                <div class="col-12">
-                      <div class="sigPad" style="width:404px;" id="smoothed7">
-                          <ul class="sigNav">
-                <li class="drawIt"><a href="#draw-it">Do your Signature</a></li>
-                <li class="clearButton"><a href="#clear">Clear</a></li>
-                          </ul>
-                          <div class="sig sigWrapper" style="height:auto;">
-                <div class="typed"></div>
-                <canvas class="pad" width="400" height="250"></canvas>
-                <input type="hidden" name="sign5" class="output" id="sign5">
-                          </div>
-                          <span class="error-span" id="error_sign5"></span>
-                      </div>
+                <div class="form-checkbox ">
+                <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
+                <label class="checklabel" for="">No</label>  
+                </div>
+          </div> 
+
+          <div id="stepeleven" style="display: none;">
+            <div class="" id="strips1">
+                  <legend class="font-weight-bold" id="pagetitles">Subcontractor</legend>
+            </div>
+                <div class="form-group">
+                  <label for="" class="col-sm-12 control-label">Company Name</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="" class="" name="" placeholder="Company Name">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide company name!
+                    </div>
                   </div>
-              </div>
+                </div>
+                
+            
+                <div class="form-group">
+                  <label for="" class="col-sm-12 control-label">Contact Name</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="" class="" name="" placeholder="Contact Name">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide contact name!
+                    </div>
+                  </div>
+                </div>
+                
+            
+                <div class="form-group">
+                  <label for="" class="col-sm-12 control-label">Phone</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="" class="" name="" placeholder="Phone">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide phone number!
+                    </div>
+                  </div>
+                </div>
+                
+            
+                <div class="form-group">
+                  <label for="" class="col-sm-12 control-label">Email</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="" class="" name="" placeholder="Email">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide email!
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label id="formlable" for="" class="col-sm-12 control-label">Are they verified as HIPAA compliant?</label>
+                    <div class="form-checkbox ">
+                      <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Yes</label>  
+                      </div>
+                      <div class="form-checkbox ">
+                      <input required class="form-check-input checkbox" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">No</label>  
+                      </div>
+                </div>            
           </div>
 
-
+          <div class="col-lg-12 text-center">
+            <button type="button" class="btn btn-primary btn-minus"onclick="document.getElementById('stepeleven').style.display='none'" style="padding: 12px 20px !important;">-</button>
+            <button type="button" class="btn btn-primary btn-add" onclick="document.getElementById('stepeleven').style.display='block'" style="padding: 12px 20px !important;">+</button> 
+          </div>           
+        </div>
+      
         <div class="row">
           <div class="card  col" id="backbtncard">
             <a href="#" id="arfstepfourback">
@@ -705,30 +600,6 @@
           </div>
           <div class="card  col" id="nextbtncard">
               <a href="#" id="arfstepfournext">
-                <img src="assest/img/buttons/se.png" alt="" class="img-fluid  btn-start" id="nextbtn">
-                <img src="assest/img/buttons/sehover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
-              </a>
-          </div>  
-        </div>
-      </div>
-    </section>
-
-    <section id="arfstep5" class="section mt-3">
-      <div class="container form-container text-center slide">
-        <img src="assest/img/check.png" class="img-fluid  check-img"> 
-        <h2 class="font-weight-bold mt-4 mb-4">Congrats! You have successfully completed your BAA Paperwork!</h2>
-        <img src="assest/img/rtplogo.png" class="img-fluid lazyload" id="check-logo">
-
-        <div class="row">
-          <div class="card  col" id="backbtncard">
-            <a href="#" id="arfstepfiveback">
-                <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
-                <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
-            </a>
-          </div>
-
-          <div class="card  col" id="nextbtncard">
-              <a href="#" id="arfstepfivenext">
                 <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
                 <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
               </a>
@@ -737,26 +608,203 @@
       </div>
     </section>
 
+    <section id="arfstep5" class="section mt-3">
+    
+      <div class="container form-container slide">
+        <div class="" id="strips1">
+          <legend class="font-weight-bold" id="pagetitles">Business Information</legend>
+        </div>
+        <table class="table table-striped">
+          <tbody>
+            <tr >
+              <th class="text-left">Business Associate Name</th>
+              <td class="text-right">Shakir</td>
+            </tr>
+            <tr >
+              <th class="text-left">Phone Number</th>
+              <td class="text-right">9356459950</td>
+            </tr>
+            <tr >
+              <th class="text-left">Email Address</th>
+              <td class="text-right">Shakir@gmail.com</td>
+            </tr>
+            <tr>
+              <th class="text-left">HIPAA Security/Privacy Officer</th>
+              <td class="text-right">Ansari</td>
+            </tr>
+            <tr>
+              <th class="text-left">Services you will provide</th>
+              <td class="text-right">Physical</td>
+            </tr>
+            <tr>
+              <th class="text-left">Do you currently have a BAA signed with the covered entity?</th>
+              <td class="text-right">NO</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="col-12" id="strips">
+          <h4 class="font-weight-bold my-3" id="p11t"> Background </h4>
+        </div>
+        <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th class="text-left">Has your company conducted HIPAA Training?</th>
+                <td class="text-right">Yes</td>
+              </tr>
+              <tr>
+                <th class="text-left">Date of your most recent HIPAA Training</th>
+                <td class="text-right">10/09/2020</td>
+              </tr>
+              <tr>
+                <th class="text-left">Has your company undergone a Risk Assessment</th>
+                <td class="text-right">Yes</td>
+              </tr>
+              <tr>
+                <th class="text-left">Date of your most recent Risk Assessment</th>
+                <td class="text-right">12/09/2020</td>
+              </tr>
+              <tr>
+                <th class="text-left">Do you have a set of polices and procedures?</th>
+                <td class="text-right">Yes</td>
+              </tr>
+              <tr>
+                <th class="text-left">Has the organization been investigated for a HIPAA violation?</th>
+                <td class="text-right">yes</td>
+              </tr>
+              <tr>
+                <th class="text-left">Explanation</th>
+                <td class="text-right">Reason for vialoation</td>
+              </tr>
+            </tbody>
+        </table>
+
+        <div class="col-12" id="strips">
+          <h4 class="font-weight-bold my-3" id="p11t">Subcontractors</h4>
+        </div>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+                <th class="text-left">Company Name</th>
+                <td class="text-right">Veines</td>
+            </tr>
+            <tr>
+                <th class="text-left">Contact Name</th>
+                <td class="text-right">Ravi</td>
+            </tr>
+            <tr>
+                <th class="text-left">Phone</th>
+                <td class="text-right">9153595860</td>
+            </tr>
+            <tr>
+                <th class="text-left">Email</th>
+                <td class="text-right">x@gmail.com</td>
+            </tr>
+            <tr>
+                <th class="text-left">Are they verified as HIPAA compliant?</th>
+                <td class="text-right">Yes</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="col-12" id="strips">
+          <h5 class="font-weight-bold my-3" id="p11t">Business Associate Signature</h5>
+        </div>
+        <div class="text-center">
+            <div class="form-group">
+              <label for="" class="col-sm-12 control-label">Your Name</label>
+              <div class="col-sm-12">
+              <input required type="text" id="" class="" name="" placeholder="Your Name">
+              </div>
+            </div>
+          
+            <div class="form-group">
+              <label for="" class="col-sm-12 control-label">Signature</label>
+              <div class="col-12">
+                    <div class="sigPad" style="width:404px;" id="smoothed7">
+                        <ul class="sigNav">
+              <li class="drawIt"><a href="#draw-it">Do your Signature</a></li>
+              <li class="clearButton"><a href="#clear">Clear</a></li>
+                        </ul>
+                        <div class="sig sigWrapper" style="height:auto;">
+              <div class="typed"></div>
+              <canvas class="pad" width="400" height="250"></canvas>
+              <input type="hidden" name="sign5" class="output" id="sign5">
+                        </div>
+                        <span class="error-span" id="error_sign5"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="row">
+          <div class="card  col" id="backbtncard">
+            <a href="#" id="arfstepfiveback">
+                <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+            </a>
+          </div>
+          <div class="card  col" id="nextbtncard">
+              <a href="#" id="arfstepfivenext">
+                <img src="assest/img/buttons/se.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                <img src="assest/img/buttons/sehover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+              </a>
+          </div>  
+        </div>
+      </div>
+    </section>
+
     <section id="arfstep6" class="section mt-3">
-      <div class="container form-container text-center slide"> 
-        <div class="row" id="confirm2">
-          <div class="col-xl-6 offset-xl-3 text-center">
-            <div class="row justify-content-center">
+      <div class="container slide" style="max-width: 900px; padding: 0px; margin-top: -95px;">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-12">
+            <div class="wrapper">
+              <div class="row no-gutters">
 
-              <div class="col-xl-12 text-center">
-                <h3 class="font-weight-bold"><i class="fas fa-desktop mr-2"></i>HIPAA</h3>
-                <a type="button" class="btn btn-outline-success font-weight-bold mb-3" href="https://rtpmedsol.rtpdemo.com/demoforms/hipaa" target="_blank">Let's start</a>
+                <div class="col-md-7 d-flex align-items-stretch ml-lg-n5">
+                  <div class="contact-wrap w-100 p-md-5 p-4 text-center">
+                    <p class="font-weight-bold mb-4 mt-3"><span class="text-success" style="font-size: 50px;">Congrats!</span> <br> You have successfully completed your business associate agreement paperwork!</p>
+                    <h5 class="font-weight-bold text-success">Your confirmation number: <span class="" style="font-size: 50px;">XXXXXX</span></h5>
+                    <form method="POST" id="contactForm" name="contactForm" class="mt-n5">
+
+                      <div class="row mt-5">
+
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/1.png" alt="" width="40"> Update Demo</h4>
+                            <p style="font-size: 14px; text-align: left;">If you need to update your demographics informations; email, phone, address, etc. </p> 
+                            <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank">Let's start</a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/2.png" alt="" width="40"> Book Appointment</h4>
+                            <p style="font-size: 14px; text-align: left;">Do you need to book an appointment?</p> 
+                            <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/bookappointment" target="_blank">Let's start</a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/3.png" alt="" width="40"> Survey</h4>
+                            <p style="font-size: 14px; text-align: left;">Please tell us how we are doing!</p>  
+                            <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank">Let's start</a>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
+                <div class="col-md-5 d-flex align-items-stretch"><img src="assest/img/confirm.jpg" alt="" style="margin-left: -45px; margin-top: 20px; width: 800px ;"></div>
               </div>
-
-              <div class="col-xl-12 text-center">
-                <h3 class="font-weight-bold"><i class="fas fa-desktop mr-2"></i>Nondisclosure</h3>
-                <a type="button" class="btn btn-outline-success font-weight-bold mb-3" href="https://rtpmedsol.rtpdemo.com/demoforms/nondisclosure" target="_blank">Let's start</a>
-              </div>
-
-            </div> 
-          </div> 
-        </div> 
-      </div>  
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section active mt-2">

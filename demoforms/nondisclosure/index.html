@@ -29,6 +29,41 @@
   <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/typography.min.css">
   <!-- signature -->
   <link href="assest/css/signature/jquery.signaturepad.css" rel="stylesheet" rel="prefetch">
+  <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/stylish-tooltip.css">
+  <style>
+    /* Orange */
+    .btn-outline-orange {
+      border-color: #ff621f;
+      color: #ff621f;
+    }
+
+    .btn-outline-orange:hover {
+      background: #ff621f;
+      color: white;
+    }
+    .separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .separator::before,
+    .separator::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #000;
+    }
+
+    .separator:not(:empty)::before {
+      margin-right: .25em;
+    }
+
+    .separator:not(:empty)::after {
+      margin-left: .25em;
+    }
+  </style>
 </head>
 <body>
 	<div id="loader"></div>
@@ -125,6 +160,19 @@
       <div class="container form-container text-center slide">
         <div class="" id="strips1">
           <legend class="font-weight-bold" id="pagetitles">Your Information</legend>
+        </div>
+  
+        <div class="form-group">
+          <label for="" class="col-sm-12 control-label">Organization Name</label>
+          <div class="col-sm-12">
+            <input required type="text" id="text1" class="" name="" placeholder="Organization Name">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please Provide Organization Name!
+            </div>
+          </div>
         </div>
         
         <label for="yourname" class="col-sm-12 control-label">First Name</label>
@@ -253,7 +301,15 @@
           <legend class="font-weight-bold" id="pagetitles">Your Contact</legend>
         </div>
         <div class="form-group">
-          <label for="" class="col-sm-12 control-label">Phone</label>
+          <label for="" class="col-sm-12 control-label">
+            Phone
+            <small class="mytooltip tooltip-effect-2">
+              <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
+              <span class="tooltip-content clearfix"> 
+                <span class="tooltip-text font-weight-bold"> We will send you SMS notifications to the phone number provided.</span> 
+              </span> 
+            </small>
+          </label>
           <div class="col-sm-12">
             <input required type="text" id="" class="" name="" placeholder="Phone">
             <div class="valid-feedback">
@@ -264,24 +320,19 @@
             </div>
           </div>
         </div>
-    
-        <div class="form-group">
-          <label for="" class="col-sm-12 control-label">Cell</label>
-          <div class="col-sm-12">
-            <input required type="text" id="text1" class="" name="" placeholder="Cell">
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please Provide cell number!
-            </div>
-          </div>
-        </div>
         
         <div class="form-group">
-          <label for="" class="col-sm-12 control-label">Email</label>
+          <label for="" class="col-sm-12 control-label">
+            Email
+            <small class="mytooltip tooltip-effect-2">
+              <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
+              <span class="tooltip-content clearfix"> 
+                <span class="tooltip-text font-weight-bold"> We will email you notifications to the email provided.</span> 
+              </span> 
+            </small>
+          </label>
           <div class="col-sm-12">
-            <input required type="text" id="text1" class="" name="" placeholder="Email">
+            <input required type="text" id="" class="" name="" placeholder="Email">
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -310,67 +361,16 @@
     </section>
 
     <section id="arfstep5" class="section mt-3">
-      <div class="container form-container text-center slide">
-        <div class="" id="strips1">
-          <legend class="font-weight-bold" id="pagetitles">Confirm your Information</legend>
-        </div>
-
-        <div class="form-group">
-          <label for="" class="col-sm-12 control-label">Your Name</label>
-          <div class="col-sm-12">
-            <input required type="text" id="" class="" name="" placeholder="Your Name">
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please Provide your name!
-            </div>
-          </div>
-        </div>
-        
-        <div class="form-group">
-            <label for="" class="col-sm-12 control-label">Signature</label>
-            <div class="col-12">
-                  <div class="sigPad" style="width:404px;" id="smoothed1">
-                      <ul class="sigNav">
-            <li class="drawIt"><a href="#draw-it">Do your Signature</a></li>
-            <li class="clearButton"><a href="#clear">Clear</a></li>
-                      </ul>
-                      <div class="sig sigWrapper" style="height:auto;">
-            <div class="typed"></div>
-            <canvas class="pad" width="400" height="250"></canvas>
-            <input type="hidden" name="sign5" class="output" id="sign5">
-                      </div>
-                      <span class="error-span" id="error_sign5"></span>
-                  </div>
-              </div>
-        </div>
-
-      <div class="row">
-        <div class="card  col" id="backbtncard">
-          <a href="#" id="arfstepfiveback">
-              <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
-              <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
-          </a>
-        </div>
-
-        <div class="card  col" id="nextbtncard">
-            <a href="#" id="arfstepfivenext">
-              <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
-              <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
-            </a>
-        </div>  
-      </div>
-      </div>
-    </section>
-
-    <section id="arfstep6" class="section mt-3">
-      <div class="container form-container text-center slide">
+      <div class="container form-container slide">
         <div class="" id="strips1">
             <legend class="font-weight-bold" id="pagetitles">Your Information</legend>
         </div>
           <table class="table table-striped">
             <tbody>
+              <tr>
+                <th class="text-left">Organization Name</th>
+                <td id="td1">RTPMED</td>
+              </tr>
               <tr>
                 <th class="text-left">First Name</th>
                 <td id="td1">Shakir</td>
@@ -420,10 +420,6 @@
                   <td id="td1">9153595860</td>
               </tr>
               <tr>
-                  <th class="text-left">Cell</th>
-                  <td id="td1">9156548752</td>
-              </tr>
-              <tr>
                   <th class="text-left">Email</th>
                   <td id="td1">X@gmail.com</td>
               </tr>
@@ -460,70 +456,74 @@
               </div>
           </div>
 
-        <div class="row">
-          <div class="card col" id="backbtncard">
-            <a href="#" id="arfstepsixback">
-                <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
-                <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
-            </a>
-          </div>
-
-          <div class="card col" id="nextbtncard">
-              <a href="#" id="arfstepsixnext">
-                <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
-                <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
-              </a>
-          </div>  
-        </div>
-      </div>
-    </section>
-
-    <section id="arfstep7" class="section mt-4">
-      <div class="container form-container text-center slide">
-          <img src="assest/img/check.png" class="img-fluid  check-img"> 
-          <h2 class="font-weight-bold mt-4 mb-4">Congrats! You have successfully completed your Non-disclosure Paperwork!</h2>
-          <img src="assest/img/rtplogo.png" class="img-fluid lazyload" id="check-logo">
-
-        <div class="row">
-        
+      <div class="row">
         <div class="card  col" id="backbtncard">
-          <a href="#" id="arfstepsevenback">
+          <a href="#" id="arfstepfiveback">
               <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
               <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
           </a>
         </div>
 
         <div class="card  col" id="nextbtncard">
-            <a href="#" id="arfstepsevennext">
+            <a href="#" id="arfstepfivenext">
               <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
               <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
             </a>
-          </div>  
-          
-        </div>
-
+        </div>  
+      </div>
       </div>
     </section>
 
-    <section id="arfstep8" class="section mt-3">
-        <div class="container form-container text-center slide">
-          <div class="row" id="confirm2">
-            <div class="col-xl-6 offset-xl-3 text-center">
-              <div class="row justify-content-center">
-    
-                <div class="col-xl-12 text-center mb-2">
-                  <h3 class="font-weight-bold"><i class="fas fa-desktop mr-2"></i>BAA</h3>
-                  <a type="button" class="btn btn-outline-success font-weight-bold mb-3" href="https://rtpmedsol.rtpdemo.com/demoforms/baa" target="_blank">Let's start</a>
+    <section id="arfstep6" class="section mt-3">
+      <div class="container slide" style="max-width: 900px; padding: 0px; margin-top: -95px;">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-12">
+            <div class="wrapper">
+              <div class="row no-gutters">
+  
+                <div class="col-md-7 d-flex align-items-stretch ml-lg-n5">
+                  <div class="contact-wrap w-100 p-md-5 p-4 text-center">
+                    <p class="font-weight-bold mb-4 mt-3"><span class="text-success" style="font-size: 50px;">Congrats!</span> <br> You have successfully completed your Non-Disclosure paperwork!</p>
+                    <h5 class="font-weight-bold text-success">Your confirmation number: <span class="" style="font-size: 50px;">XXXXXX</span></h5>
+                    <form method="POST" id="contactForm" name="contactForm" class="mt-n5">
+  
+                      <div class="row mt-5">
+  
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/1.png" alt="" width="40"> Update Demo</h4>
+                            <p style="font-size: 14px; text-align: left;">If you need to update your demographics informations; email, phone, address, etc. </p> 
+                            <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank">Let's start</a>
+                          </div>
+                        </div>
+  
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/2.png" alt="" width="40"> Book Appointment</h4>
+                            <p style="font-size: 14px; text-align: left;">Do you need to book an appointment?</p> 
+                            <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/bookappointment" target="_blank">Let's start</a>
+                          </div>
+                        </div>
+  
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/3.png" alt="" width="40"> Survey</h4>
+                            <p style="font-size: 14px; text-align: left;">Please tell us how we are doing!</p>  
+                            <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank">Let's start</a>
+                          </div>
+                        </div>
+  
+                      </div>
+  
+                    </form>
+                  </div>
                 </div>
-    
-                <div class="col-xl-12 text-center">
-                  <h3 class="font-weight-bold"><i class="fas fa-desktop mr-2"></i>HIPAA</h3>
-                  <a type="button" class="btn btn-outline-success font-weight-bold" href="https://rtpmedsol.rtpdemo.com/demoforms/hipaa" target="_blank">Let's start</a>
-                </div>
-    
-              </div> 
-            </div> 
+  
+                <div class="col-md-5 d-flex align-items-stretch"><img src="assest/img/confirm.jpg" alt="" style="margin-left: -45px; margin-top: 20px; width: 800px ;"></div>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
     </section>
 
