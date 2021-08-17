@@ -40,7 +40,7 @@
 
 <body style="top: 0px; position: relative; min-height: 100%;" data-target="#navbar-example" data-spy="scroll">
 
-    <header>
+  <header>
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light py-0" id="topbar">
       <div class="container">
@@ -69,7 +69,6 @@
       </div>
     </nav>
     <!--/.Navbar-->
-
 
     <!--Navbar-->
     <div class="container" id="menu-bar">
@@ -100,7 +99,7 @@
                   <a class="nav-link mainNavLinks" href="#services">Services</a>
                 </li>
                 <li class="nav-item main-nav-item">
-                  <a class="nav-link mainNavLinks" href="#blog">News</a>
+                  <a class="nav-link mainNavLinks" href="#blog">Blogs</a>
                 </li>
                 <li class="nav-item main-nav-item">
                   <a class="nav-link mainNavLinks" href="#insurance-section">Insurance</a>
@@ -120,7 +119,6 @@
     </div>
     <!--/.Navbar-->
 
-
     <div class="container" id="home-section">
       <!--Grid row-->
       <div class="row pt-lg-5 ">
@@ -131,10 +129,7 @@
           <h1 class="title black-text" id="welcome">
             <img class="img-fluid" alt="Therapy" src="assest/img/rtplogo.png" width="500">  
           </h1>
-
-          <h4 class="black-text" id="welcome1">Please look around to see all the features our websites offer!</h4>
-
-          <button class="btn btn-eta ml-0">Call Us Today 😃</button>
+          <a href="tel:4435422480"  class="btn btn-eta ml-0">Call Us Today 😃</a>
         </div>
         <!--Grid column-->
 
@@ -143,39 +138,39 @@
       </div>
       <!--Grid row-->
     </div>
-    </header>
+  </header>
 <!--Main layout-->
 <main>
 
-<section>
-    <div class="flex-container" style="display: flex; justify-content: center;">
-      <div class="row justify-content-center">
-        <div class="col-xl-12 mx-auto text-center">
-          <div class="section-title well1">
-            <h4>Helpful Resources</h4> 
-          </div>
-          <div class="well">
-               <!-- @foreach ($categories as $category) -->
-               <a href="{{ route('category', $category->slug) }}" class="mr-3">
-                 <span class="badge badge-info badge-tag mb-3">@drjoi</span>
-                 <span class="badge badge-info badge-tag mb-3">@therapyintegrativecente</span>
-               </a> 
-               <!-- @endforeach -->
+  <section>
+      <div class="flex-container" style="display: flex; justify-content: center;">
+        <div class="row justify-content-center">
+          <div class="col-xl-12 mx-auto text-center">
+            <div class="section-title well1">
+              <h4>Helpful Resources</h4> 
+            </div>
+            <div class="well">
+                <!-- @foreach ($categories as $category) -->
+                <a href="{{ route('category', $category->slug) }}" class="mr-3">
+                  <span class="badge badge-info badge-tag mb-3">@drjoi</span>
+                  <span class="badge badge-info badge-tag mb-3">@therapywellmd</span>
+                </a> 
+                <!-- @endforeach -->
+            </div>
           </div>
         </div>
-      </div>
   </section>
 
 <!--added section-->
-<section id="as1">
-  <div class="container text-center">
-    <h3 id="ash">Save time and fill out your New Patient Paperwork online!</h3>
-    <a href="https://rtpmedsol.rtpdemo.com/demoforms/mchinewpt/" target="_blank" ><button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">New Patient Form</button></a>
-  </div>
-</section>
+  <section id="as1">
+    <div class="container text-center">
+      <h3 id="ash">Save time and fill out your New Patient Paperwork online!</h3>
+      <a href="https://rtpmedsol.rtpdemo.com/demoforms/mchinewpt/" target="_blank" ><button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">New Patient Form</button></a>
+    </div>
+  </section>
 <!--added section-->
 
-  <!--Section: Main info-->
+<!--Section: Main info-->
   <section id="about-section">
     <div class="container">
 
@@ -206,78 +201,77 @@
             </div>
 
             <div class="col-xl-4 col-md-4 aboutusCol">
-              <img class="img-fluid" alt="24 X 7 Support" src="https://image.flaticon.com/icons/png/512/235/235804.png">
-              <h5 class="feature-title">24 X 7 Support</h5>
-              <p class="grey-text">Please feel free to view our range of insurance options. We also offer a 24-hour service for out of hour questions and emergency services.</p>
+              <img class="img-fluid" alt="24 X 7 Support" src="assest/img/cc.png">
+              <h5 class="feature-title">comprehensive care</h5>
+              <p class="grey-text">Please feel free to view our range of services that we offer</p>
             </div>
 
           </div>
           <!--Grid row-->
     </div>
   </section>
-  <!--Section: Main info-->
+<!--Section: Main info-->
 
 <!--added section-->
-<section id="as1">
-  <div class="container text-center">
-    <h3 id="ash">Collect and Distribute reviews from your patients from your RMS Listing!</h3>
-    <a href="https://rtprms.com/rtpmedsol" target="_blank" ><button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">Take Me To My Listing</button></a>
-  </div>
-</section>
-<!--added section-->
-
-
-<!-- Section: RMS -->
-<section>
-  <div class="container">
-    <div class="row  justify-content-center">
-      <div class="col-xl-6" id="rms">
-        <h1 class="section-heading1">
-          <img src="assest/img/icons/f1.png" alt="follow us" id="rmsimg1">
-        </h1>
-        <div class="social-buttons" >
-          <div class="row justify-content-center" id="rmsico1">
-          <a href="https://www.facebook.com/RTPMedSol" target="_blank"><i class=""><img src="assest/img/icons/03.png" alt="facebook" id="rmsico2"></i></a>
-          <a href="https://www.google.com/search?rlz=1C1GCEA_enUS878US878&sxsrf=ALeKk0035SPZlyQXIWXYmhwEd0uDnGWMoA%3A1598546999959&ei=N-RHX6SJOu6k_QaZ_angBQ&q=reviewthatplace&oq=reviewthatplace&gs_lcp=CgZwc3ktYWIQAzIECCMQJzIECCMQJzIECAAQDTIGCAAQDRAeMgYIABANEB4yBggAEA0QHjIICAAQCBANEB4yCAgAEAgQDRAeMggIABAIEA0QHjIICAAQCBANEB46BAgAEEc6BwgjELACECc6CAgAEAgQBxAeUL0vWIs4YN05aABwAXgAgAF5iAHvAZIBAzAuMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&ved=0ahUKEwjkgNvQ67vrAhVuUt8KHZl-ClwQ4dUDCA0&uact=5#lrd=0x88e7775087a21f57:0x568749b03f559c74,1" target="_blank">
-            <i class=""><img src="assest/img/icons/04.png" alt="google" id="rmsico2"></i></a>
-        </div>
-        <div class="row justify-content-center">
-          <a href="https://www.youtube.com/user/sansari2" target="_blank"><i class=""><img src="assest/img/icons/13.png" alt="youtube" id="rmsico3"></i></a>
-          <a href="https://www.healthgrades.com/" target="_blank"><i class=""><img src="assest/img/icons/06.png" alt="healthgrades" id="rmsico3"></i></a>
-          <a href="https://www.instagram.com/rtpmedsol/" target="_blank"><i class=""><img src="assest/img/icons/07.png" alt="instagram" id="rmsico3"></i></a>
-          <a href="https://www.ratemds.com/" target="_blank"><i class=""><img src="assest/img/icons/08.png" alt="ratemds" id="rmsico3"></i></a>
-          <a href="https://twitter.com/MedRtp" target="_blank"><i class=""><img src="assest/img/icons/09.png" alt="twitter" id="rmsico3"></i></a>
-          <a href="https://www.vitals.com/" target="_blank"><i class=""><img src="assest/img/icons/10.png" alt="vitals" id="rmsico3"></i></a>
-          <a href="https://www.webmd.com/" target="_blank"><i class=""><img src="assest/img/icons/11.png" alt="webmd" id="rmsico3" ></i></a>
-          <a href="https://www.yelp.com/" target="_blank"><i class=""><img src="assest/img/icons/12.jpg" alt="yelp" id="rmsico4"></i></a>
-          <a href="https://www.doctor.com/" target="_blank"><i class=""><img src="assest/img/icons/01.png" alt="doctor.com" id="rmsico5"></i></a>
-        </div>
-        <a href="" target="_blank"><i class=""><img src="assest/img/icons/ts.png" alt="survey" id="ts"></i></a>
-        </div>
-      </div>
-      <div class="col-xl-6">
-        <h1 class="section-heading1">
-          <img src="assest/img/icons/02.png" alt="rms" id="rmsimg">
-        </h1>
-        <div class="container-fluid" id="review-frame">
-          <iframe src="https://rtprms.com/Home/Reviews/62340" frameborder="0" scrolling="" ;=""></iframe>
-        </div>
-      </div>
+  <section id="as1">
+    <div class="container text-center">
+      <h3 id="ash">Collect and Distribute reviews from your patients from your RMS Listing!</h3>
+      <a href="https://rtprms.com/rtpmedsol" target="_blank" ><button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">Take Me To My Listing</button></a>
     </div>
-</section>
+  </section>
+<!--added section-->
+
+<!-- Section: RMS -->
+  <section>
+    <div class="container">
+      <div class="row  justify-content-center">
+        <div class="col-xl-6" id="rms">
+          <h1 class="section-heading1">
+            <img src="assest/img/icons/f1.png" alt="follow us" id="rmsimg1">
+          </h1>
+          <div class="social-buttons" >
+            <div class="row justify-content-center" id="rmsico1">
+            <a href="https://www.facebook.com" target="_blank"><i class=""><img src="assest/img/icons/03.png" alt="facebook" id="rmsico2"></i></a>
+            <a href="https://www.google.com" target="_blank">
+              <i class=""><img src="assest/img/icons/04.png" alt="google" id="rmsico2"></i></a>
+          </div>
+          <div class="row justify-content-center">
+            <a href="https://www.youtube.com" target="_blank"><i class=""><img src="assest/img/icons/13.png" alt="youtube" id="rmsico3"></i></a>
+            <a href="https://www.healthgrades.com" target="_blank"><i class=""><img src="assest/img/icons/06.png" alt="healthgrades" id="rmsico3"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class=""><img src="assest/img/icons/07.png" alt="instagram" id="rmsico3"></i></a>
+            <a href="https://www.ratemds.com" target="_blank"><i class=""><img src="assest/img/icons/08.png" alt="ratemds" id="rmsico3"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class=""><img src="assest/img/icons/09.png" alt="twitter" id="rmsico3"></i></a>
+            <a href="https://www.vitals.com" target="_blank"><i class=""><img src="assest/img/icons/10.png" alt="vitals" id="rmsico3"></i></a>
+            <a href="https://www.webmd.com" target="_blank"><i class=""><img src="assest/img/icons/11.png" alt="webmd" id="rmsico3" ></i></a>
+            <a href="https://www.yelp.com" target="_blank"><i class=""><img src="assest/img/icons/12.jpg" alt="yelp" id="rmsico4"></i></a>
+            <a href="https://www.doctor.com" target="_blank"><i class=""><img src="assest/img/icons/01.png" alt="doctor.com" id="rmsico5"></i></a>
+          </div>
+          <a href="" target="_blank"><i class=""><img src="assest/img/icons/ts.png" alt="survey" id="ts"></i></a>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <h1 class="section-heading1">
+            <img src="assest/img/icons/02.png" alt="rms" id="rmsimg">
+          </h1>
+          <div class="container-fluid" id="review-frame">
+            <iframe src="https://rtprms.com/Home/Reviews/RTP115738" frameborder="0" scrolling="" ;=""></iframe>
+          </div>
+        </div>
+      </div>
+  </section>
 <!-- Section: RMS -->
 
 <!--added section-->
-<section id="as1">
-  <div class="container text-center">
-    <h3 id="ash">Schedule an appointment today !</h3>
-    <a href="" target="_blank" ><button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">Schedule Now</button></a>
-  </div>
-</section>
+  <section id="as1">
+    <div class="container text-center">
+      <h3 id="ash">Schedule an appointment today !</h3>
+      <a href="https://practice.chirotouch.com/portal/therapyLLC#/" target="_blank" ><button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">Schedule Now</button></a>
+    </div>
+  </section>
 <!--added section-->
 
-        <!-- Section: Patient Portal -->
-        <section id="patientPortal" class="mt-5">
+<!-- Section: Patient Portal -->
+  <section id="patientPortal" class="mt-5">
           <div class="container">
             <div class="row">
               <div class="col-xl-8 mx-auto text-center">
@@ -348,7 +342,7 @@
                       <div class="col-10">
                         <h4 class="font-weight-bold mb-2 indigo-text">Book Appointments</h4>
                         <p class="grey-text">Skip the waiting on the phone and simply request an appointment online.</p>
-                        <button class="btn btn-portal" type="button" onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/bookappointment/', '_blank'); return false;">Click Here</button>
+                        <button class="btn btn-portal" type="button" onclick=" window.open('https://practice.chirotouch.com/portal/therapyLLC#/', '_blank'); return false;">Click Here</button>
                       </div>
                     </div>
                     <!-- Book appointments -->
@@ -413,19 +407,19 @@
             </div>
   
           </div>
-        </section>
-      <!-- Section: Patient Portal -->
+  </section>
+<!-- Section: Patient Portal -->
 
 <!--added section-->
-<section id="as1">
-  <div class="container text-center">
-    <h3 id="ash">Email our provider to get a quick session!</h3>
-    <a href="" target="_blank" ><button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">Email Now</button></a>
-  </div>
-</section>
+  <section id="as1">
+    <div class="container text-center">
+      <h3 id="ash">Email our provider to get a quick session!</h3>
+      <a href="" target="_blank" ><button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">Email Now</button></a>
+    </div>
+  </section>
 <!--added section-->
 
-  <!-- section : services -->
+<!-- section : services -->
   <section id="services" class="style-4">
     <div class="container">
 
@@ -451,6 +445,7 @@
             <h3>Functional Medicine</h3>
         </div>
       </div>
+
       <div class="col-xl-4 col-md-6">
         <div class="single-service">
             <img class="img-fluid serviceImg" alt="Reiki" src="assest/img/services/5.jpg">
@@ -471,12 +466,14 @@
             <h3>Nutrition</h3>
         </div>
       </div>
+      
       <div class="col-xl-4 col-md-6">
         <div class="single-service">
             <img class="img-fluid serviceImg1" alt="Massage" src="assest/img/services/10.png">
             <h3>Massage</h3>
         </div>
       </div>
+
       <div class="col-xl-4 col-md-6">
         <div class="single-service">
             <img class="img-fluid serviceImg" alt="Childbirth Education" src="assest/img/services/2.png">
@@ -486,8 +483,8 @@
 
       <div class="col-xl-4 col-md-6">
         <div class="single-service">
-            <img class="img-fluid serviceImg" alt="Prenatal Pain Specialist" src="assest/img/services/4.png">
-            <h3>Prenatal Pain Specialist</h3>
+            <img class="img-fluid serviceImg" alt="Dry Needling" src="assest/img/services/7.png">
+            <h3>Dry Needling</h3>
         </div>
       </div>
 
@@ -507,8 +504,22 @@
 
       <div class="col-xl-4 col-md-6">
         <div class="single-service">
-            <img class="img-fluid serviceImg" alt="Dry Needling" src="assest/img/services/7.png">
-            <h3>Dry Needling</h3>
+            <img class="img-fluid serviceImg" alt="Webster's Certified" src="assest/img/services/13.jpg">
+            <h3>Webster's Certified</h3>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg" alt="Prenatal Pain Treatments" src="assest/img/services/4.png">
+            <h3>Prenatal Pain Treatments</h3>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+            <img class="img-fluid serviceImg" alt="Active Release Technique" src="assest/img/services/12.png">
+            <h3>Active Release Technique</h3>
         </div>
       </div>
 
@@ -518,8 +529,7 @@
   </div>
 
   </section>
-  <!--Section: Not enough-->
-  <!-- section : services -->
+<!-- section : services -->
 
   <section class="blog-me" id="blog">
      <div class="container">
@@ -711,137 +721,124 @@
      </div>
   </section>
 
-  <!--added section-->
-<section id="as1">
-  <div class="container text-center">
-    <h3 id="ash">Need access to your records? Get them in your patient portal!</h3>
-    <button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">Patient Portal</button>
-  </div>
-</section>
+<!--added section-->
+  <section id="as1">
+    <div class="container text-center">
+      <h3 id="ash">Need access to your records? Get them in your patient portal!</h3>
+      <button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">Patient Portal</button>
+    </div>
+  </section>
 <!--added section-->
 
 <!--Section: More-->
-<section id="insurance-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-8 mx-auto text-center">
-        
-        <div class="section-title">
-          <h4>Insurance</h4>  
+  <section id="insurance-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-8 mx-auto text-center">
+          
+          <div class="section-title">
+            <h4>Insurance</h4>  
+          </div>
         </div>
       </div>
-    </div>
 
 
 
-    <div class="row">
-    <div class="col-xl-6" id="insuranceBg"></div>
-    <!-- col -->
-    <div class="col-xl-6 col-md-12" id="insurance-content">
-      <!-- container -->
-      <div class="container">
-        
+      <div class="row">
+      <div class="col-xl-6" id="insuranceBg"></div>
+      <!-- col -->
+      <div class="col-xl-6 col-md-12" id="insurance-content">
+        <!-- container -->
+        <div class="container">
+          
 
-        <div class="row">
-          <!-- col -->
-          <div class="col-lg-6 mb-3">
-            <!-- row -->
-            <div class="row">
-              <div class="col-8">
-                <img class="img-fluid insuranceImg" alt="Aetna" src="assest/img/insurance/aetna.png">
+          <div class="row">
+            <!-- col -->
+            <div class="col-lg-6 mb-3">
+              <!-- row -->
+              <div class="row">
+                <div class="col-8">
+                  <img class="img-fluid insuranceImg" alt="Aetna" src="assest/img/insurance/aetna.png">
+                </div>
               </div>
+              <!-- row -->
             </div>
-            <!-- row -->
-          </div>
-          <!-- col -->
+            <!-- col -->
 
-          <div class="col-lg-6 mb-3">
-            <!-- row -->
-            <div class="row">
-              <div class="col-8">
-                <img class="img-fluid insuranceImg" alt="Cigna" src="assest/img/insurance/cigna-logo-1.jpg">
+            <div class="col-lg-6 mb-3">
+              <!-- row -->
+              <div class="row">
+                <div class="col-8">
+                  <img class="img-fluid insuranceImg" alt="Cigna" src="assest/img/insurance/cigna-logo-1.jpg">
+                </div>
+                <!--<div class="col-8">
+                  <h5 class="font-weight-bold">Cigna</h5>
+                </div>-->
               </div>
-              <!--<div class="col-8">
-                <h5 class="font-weight-bold">Cigna</h5>
-              </div>-->
+              <!-- row -->
             </div>
-            <!-- row -->
-          </div>
 
-          <div class="col-lg-6 mb-3">
-            <!-- row -->
-            <div class="row">
-              <div class="col-8">
-                <img class="img-fluid insuranceImg" alt="Medicaid" src="assest/img/insurance/medicaid.jpg">
+            <div class="col-lg-6 mb-3">
+              <!-- row -->
+              <div class="row">
+                <div class="col-8">
+                  <img class="img-fluid insuranceImg" alt="Medicaid" src="assest/img/insurance/uhc-logo.jpg">
+                </div>
+                <!--<div class="col-8">
+                  <h5 class="font-weight-bold">united</h5>
+                </div>-->
               </div>
-              <!--<div class="col-8">
-                <h5 class="font-weight-bold">Medicaid</h5>
-              </div>-->
+              <!-- row -->
             </div>
-            <!-- row -->
-          </div>
 
-          <div class="col-lg-6 mb-3">
-            <!-- row -->
-            <div class="row">
-              <div class="col-8">
-                <img class="img-fluid insuranceImg" alt="Medicaid" src="assest/img/insurance/uhc-logo.jpg">
+            <div class="col-lg-6 mb-3">
+              <!-- row -->
+              <div class="row">
+                <div class="col-8">
+                  <img class="img-fluid insuranceImg" alt="Medicaid" src="assest/img/insurance/blue-cross-blue-shield-vector-logo.png">
+                </div>
+                <!--<div class="col-8">
+                  <h5 class="font-weight-bold">bluecross</h5>
+                </div>-->
               </div>
-              <!--<div class="col-8">
-                <h5 class="font-weight-bold">united</h5>
-              </div>-->
+              <!-- row -->
             </div>
-            <!-- row -->
-          </div>
 
-          <div class="col-lg-6 mb-3">
-            <!-- row -->
-            <div class="row">
-              <div class="col-8">
-                <img class="img-fluid insuranceImg" alt="Medicaid" src="assest/img/insurance/blue-cross-blue-shield-vector-logo.png">
+            <div class="col-lg-6 mb-3">
+              <!-- row -->
+              <div class="row">
+                <div class="col-8">
+                  <img class="img-fluid insuranceImg" alt="Medicaid" src="assest/img/insurance/johns-hopkins-medicine-logo-vector.png">
+                </div>
+                <!--<div class="col-8">
+                  <h5 class="font-weight-bold">john hopkins</h5>
+                </div>-->
               </div>
-              <!--<div class="col-8">
-                <h5 class="font-weight-bold">bluecross</h5>
-              </div>-->
+              <!-- row -->
             </div>
-            <!-- row -->
-          </div>
 
-          <div class="col-lg-6 mb-3">
-            <!-- row -->
-            <div class="row">
-              <div class="col-8">
-                <img class="img-fluid insuranceImg" alt="Medicaid" src="assest/img/insurance/johns-hopkins-medicine-logo-vector.png">
+            <div class="col-lg-6 mb-3">
+              <!-- row -->
+              <div class="row">
+                <div class="col-lg-8">
+                  <img class="img-fluid insuranceImg" alt="Kaiser" src="assest/img/insurance/kaiser.jpg">
+                </div>
               </div>
-              <!--<div class="col-8">
-                <h5 class="font-weight-bold">john hopkins</h5>
-              </div>-->
+              <!-- row -->
             </div>
-            <!-- row -->
-          </div>
 
-          <div class="col-lg-12 mb-3">
-            <!-- row -->
-            <div class="row">
-              <div class="col-lg-12">
-                <img class="img-fluid insuranceImg" alt="Kaiser" src="assest/img/insurance/kaiser.jpg">
-              </div>
-            </div>
-            <!-- row -->
           </div>
-
+          <!-- row -->
         </div>
-        <!-- row -->
+        <!-- container -->
       </div>
-      <!-- container -->
+      <!-- col -->
     </div>
-    <!-- col -->
   </div>
-</div>
-</section>
+  </section>
 <!--Section: More-->
 
-  <!-- Our team -->
+<!-- Our team -->
   <section id="team-section">
     <div class="container">
 
@@ -865,7 +862,7 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card card-body">
             <div class="avatar mx-auto mt-3 mb-3">
-              <img class="rounded-circle team-img" alt="First sample avatar image" src="assest/img/img1.jpg">
+              <img class="rounded-circle team-img" alt="Dr. Joi" src="assest/img/team/drjoi.JPG">
             </div>
             <h6 class="font-weight-bold">Dr. Joi</h6>
             <small>Owner/Perinatal Wellness Expert/Chiro/PT</small>
@@ -877,7 +874,7 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card card-body">
             <div class="avatar mx-auto mt-3 mb-3">
-              <img class="rounded-circle team-img" alt="First sample avatar image" src="assest/img/img2.jpg">
+              <img class="rounded-circle team-img" alt="Dr. Alicia" src="assest/img/">
             </div>
             <h6 class="font-weight-bold">Dr. Alicia</h6>
             <small>Lead Physical Therapist/Pelvic Floor Rehabilitation</small>
@@ -889,7 +886,7 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card card-body">
             <div class="avatar mx-auto mt-3 mb-3">
-              <img class="rounded-circle team-img" alt="First sample avatar image" src="assest/img/img3.jpg">
+              <img class="rounded-circle team-img" alt="Shelly" src="assest/img/team/shelly.PNG">
             </div>
             <h6 class="font-weight-bold">Shelly</h6>
             <small>Office Manager/Mental Health Counselor</small>
@@ -901,7 +898,7 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card card-body">
             <div class="avatar mx-auto mt-3 mb-3">
-              <img class="rounded-circle team-img" alt="First sample avatar image" src="assest/img/img4.jpg">
+              <img class="rounded-circle team-img" alt="Olivia" src="assest/img/team/olivia.jpeg">
             </div>
             <h6 class="font-weight-bold">Olivia</h6>
             <small>Office Staff</small>
@@ -913,78 +910,11 @@
       <!-- Grid row -->
     </div>
   </div>
-</section>
+  </section>
 <!-- Our team-->
 
 </main>
 <!--Main layout-->
-
-
-
-<!-- inital popup -->
-<div tabindex="-1" class="modal fade" id="initalPopup" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel" style="display: none;">
-<div class="modal-dialog modal-notify cascading-modal modal-info modal-lg" role="document">
-  <!-- Content -->
-  <div class="modal-content">
-    <!-- Header -->
-    <div class="modal-header modal-primary">
-      <p class="heading lead" style="font-size: 150%;">Hello and Welcome 🙂, T[her]apy</p>
-
-      <button class="close" aria-label="Close" type="button" data-dismiss="modal">
-        <span class="white-text" aria-hidden="true">×</span>
-      </button>
-    </div>
-
-    <!-- Body -->
-    <div class="modal-body">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="row">
-            <div class="col-xl-1 col-2">
-              <i class="fas fa-info-circle fa-2x primary-color"></i>
-            </div>
-            <div class="col-xl-10 col-10">
-              <p class="lead">Follow the <span class="yellow">Yellow Icons</span> to learn more about the CRUCIAL features EVERY Family Medicine website needs.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="row">
-        <div class="col-xl-6">
-          <div class="row">
-            <div class="col-2">
-              <i class="fas fa-gift fa-3x primary-color"></i>
-            </div>
-            <div class="col-10">
-              <p class="lead"><i class="fas fa-check green-text pr-2"></i>ALL the elements here</p>
-              <p class="lead"><i class="fas fa-check green-text pr-2"></i>Hosting</p>
-              <p class="lead"><i class="fas fa-check green-text pr-2"></i>Domain</p>
-              <p class="lead"><i class="fas fa-check green-text pr-2"></i>Design and Development</p>
-              <p class="lead"><i class="fas fa-check green-text pr-2"></i>Ongoing Maintenance</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-1 flex-center">
-          <i class="fa fa-arrow-right forDesktop fa-3x" id="popup-arrow"></i>
-        </div>
-
-        <div class="col-xl-5 text-center">
-          <img class="img-fluid" alt="pricing banner" src="assest/img/banner.png">
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-footer justify-content-center text-center">
-      <button class="btn btn-indigo" id="startBtn" data-dismiss="modal">Let's Start</button>
-    </div>
-
-  </div>
-  <!-- Content -->
-</div>
-</div>
-<!-- intial popup -->
 
 <script type="text/javascript">
    window.onscroll = function() {myFunction()};
@@ -1006,36 +936,7 @@
 
 </script>
 
-<section>
-  <div class="flex-container" style="display: flex; justify-content: center;">
-    <!--<div class="row justify-content-center">
-      <div class="col-xl-12 mb-3 text-center">
-        <div class="well">
-            <h4 class="font-weight-bold mb-4">Helpful Resources</h4>
-             @foreach ($categories as $category)
-             <a href="{{ route('category', $category->slug) }}" class="mr-3">
-               <span class="badge badge-info badge-tag mb-3">{{ $category->name }}</span>
-             </a> 
-             @endforeach
-        </div>
-      </div>
-    </div>-->
-    <div class="row justify-content-center">
-      <div class="col-xl-12 mx-auto text-center">
-        <div class="section-title">
-          <h4><i class="fa fa-tags"></i>Popular Tags</h4> 
-        </div>
-        <div class="well">
-          @foreach ($tags as $tag)
-          <a href="{{ route('tag', $tag->slug) }}" class="mr-3">
-            <span class="badge badge-info badge-tag mb-3">{{ $tag->name }}</span>
-          </a> 
-        @endforeach
-        </div>
-      </div>
-    </div>
-</section>
-   <!-- Footer -->
+<!-- Footer -->
   <footer class="page-footer font-small text-white" id="footer">
 
     <div class="overlay">
@@ -1050,16 +951,9 @@
           <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 mb-4">
 
             <!-- Links -->
-            <!--<img alt="cf3" src="assest/img/tiles/cf3.png" class="tiles" data-toggle="tooltip" data-placement="top" data-html="true" title="<span class='tooltipHeading'>Crucial COMMUNICATION Features</span><p class='tooltipPara'>Help your patients easily find direction to your office  </p>">-->
             <h6 class="text-uppercase font-weight-bold">Contact</h6>
             <hr class="footer-hr mb-4 mt-0 d-inline-block mx-auto">
 
-            <!--<div class="row mb-3">
-        <div class="col-md-1">
-                <i class="fas fa-map-marker-alt mr-3"></i>
-              </div>
-              <div class="col-md-11">7037 Rose Ave Orlando FL 32810</div>
-            </div>-->
             <div class="row mb-3">
               <div class="col-md-1 p-1"><i class="fas fa-envelope mr-3"></i></div>
               <div class="col-md-11 p-1">
@@ -1073,22 +967,15 @@
               
               <div class="col-md-1 p-1"><i class="fas fa-phone mr-3"></i></div>
               <div class="col-md-11 p-1">
-                <div class="">443-272-1458</div>
+                <div class="">443-542-2480</div>
               </div>
             </div>
-
-            <!--<div class="row mb-3">
-              <div class="col-md-1"><i class="fas fa-fax mr-3"></i></div>
-              <div class="col-md-11">Fax</div>
-            </div>-->
             
           </div>
-          <!-- Grid column -->
           <!-- Grid column -->
           <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
 
             <!-- Links -->
-            <!--<img alt="cf3" src="assest/img/tiles/cf3.png" class="tiles" data-toggle="tooltip" data-placement="top" data-html="true" title="<span class='tooltipHeading'>Crucial COMMUNICATION Features</span><p class='tooltipPara'>Give Clear Hours your office can be reached set patients expectations to eliminate their frustration.</p>">-->
             <h6 class="text-uppercase font-weight-bold">Operational Hours</h6>
             <hr class="footer-hr mb-4 mt-0 d-inline-block mx-auto">
 
@@ -1168,351 +1055,352 @@
 
 
   </footer>
-  <!-- Footer -->
+<!-- Footer -->
 
-	<div tabindex="-1" class="modal fade show" id="requestForms" role="dialog" aria-labelledby="myModalLabel" aria-modal="true">
-  <div class="modal-dialog cascading-modal modal-lg" role="document">
-    <!-- Content -->
-    <div class="modal-content">
+  <div tabindex="-1" class="modal fade show" id="requestForms" role="dialog" aria-labelledby="myModalLabel" aria-modal="true">
+    <div class="modal-dialog cascading-modal modal-lg" role="document">
+      <!-- Content -->
+      <div class="modal-content">
 
-      <!-- Header -->
-      <div class="modal-header light-blue darken-3 white-text">
-        <h4><i class="fab fa-wpforms"></i> Request form</h4>
-        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
-          <span class="white-text" aria-hidden="true">×</span>
-        </button>
+        <!-- Header -->
+        <div class="modal-header light-blue darken-3 white-text">
+          <h4><i class="fab fa-wpforms"></i> Request form</h4>
+          <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+            <span class="white-text" aria-hidden="true">×</span>
+          </button>
+        </div>
+        <!-- Body -->
+        <div class="modal-body">
+          <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
+            <!-- choose file -->
+            <div class="form-group">
+              <label for="fileToUpload">Upload Here</label>
+              <input name="fileToUpload" class="form-control" id="fileToUpload" type="file">
+            </div>
+
+            <!-- Patient Name -->
+            <div class="form-group">
+              <label for="patientName">Patient Full Name</label>
+              <input name="patientName" class="form-control" id="patientName" required="" type="text">
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input name="email" class="form-control" id="email" required="" type="email">
+            </div>
+
+            <!--Phone Number-->
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number</label>
+              <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
+            </div>
+
+            <!-- Fax Number-->
+            <div class="form-group">
+              <label for="faxNumber">Fax Number</label>
+              <input name="faxNumber" class="form-control" id="faxNumber" required="" type="text">
+            </div>
+
+            <!-- Date-->
+            <div class="form-group">
+              <label>Date</label>
+              <input name="date" class="form-control" id="date" required="" type="date">
+            </div>
+
+            <!--Document Types -->
+            <label>Document Types</label>
+            <select name="documentTypes" class="form-control" required="">
+              <option value="" selected="">Choose Your Option</option>
+              <option value="Physical">Physical</option>
+              <option value="Shot Records">Shot Records</option>
+              <option value="School Records">School Records</option>
+              <option value="Others">Others</option>
+            </select>
+
+            <!--Collection Types -->
+            <label class="mt-3">Collection Types</label>
+            <select name="collectionTypes" class="form-control" required="">
+              <option value="" selected="">Choose Your Option</option>
+              <option value="Pick Up In Office">Pick Up In Office</option>
+              <option value="Email">Email</option>
+              <option value="Fax">Fax</option>
+              <option value="Others">Others</option>
+            </select>
+
+            <!--comment-->
+            <div class="my-3">
+              <label for="comment">Comment</label>
+              <textarea name="comment" class="md-textarea form-control" id="comment" rows="3"></textarea>
+            </div>
+                  
+
+            <input name="requestForms" class="btn btn-success waves-effect" type="submit" value="Submit">
+          </form>
+        </div>
+        <!--body -->
+
       </div>
-      <!-- Body -->
-      <div class="modal-body">
-        <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
-          <!-- choose file -->
-          <div class="form-group">
-            <label for="fileToUpload">Upload Here</label>
-            <input name="fileToUpload" class="form-control" id="fileToUpload" type="file">
-          </div>
-
-          <!-- Patient Name -->
-          <div class="form-group">
-            <label for="patientName">Patient Full Name</label>
-            <input name="patientName" class="form-control" id="patientName" required="" type="text">
-          </div>
-
-          <!-- Email Address -->
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input name="email" class="form-control" id="email" required="" type="email">
-          </div>
-
-          <!--Phone Number-->
-          <div class="form-group">
-            <label for="phoneNumber">Phone Number</label>
-            <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
-          </div>
-
-          <!-- Fax Number-->
-          <div class="form-group">
-            <label for="faxNumber">Fax Number</label>
-            <input name="faxNumber" class="form-control" id="faxNumber" required="" type="text">
-          </div>
-
-          <!-- Date-->
-          <div class="form-group">
-            <label>Date</label>
-            <input name="date" class="form-control" id="date" required="" type="date">
-          </div>
-
-          <!--Document Types -->
-          <label>Document Types</label>
-          <select name="documentTypes" class="form-control" required="">
-            <option value="" selected="">Choose Your Option</option>
-            <option value="Physical">Physical</option>
-            <option value="Shot Records">Shot Records</option>
-            <option value="School Records">School Records</option>
-            <option value="Others">Others</option>
-          </select>
-
-          <!--Collection Types -->
-          <label class="mt-3">Collection Types</label>
-          <select name="collectionTypes" class="form-control" required="">
-            <option value="" selected="">Choose Your Option</option>
-            <option value="Pick Up In Office">Pick Up In Office</option>
-            <option value="Email">Email</option>
-            <option value="Fax">Fax</option>
-            <option value="Others">Others</option>
-          </select>
-
-          <!--comment-->
-          <div class="my-3">
-            <label for="comment">Comment</label>
-            <textarea name="comment" class="md-textarea form-control" id="comment" rows="3"></textarea>
-          </div>
-                
-
-          <input name="requestForms" class="btn btn-success waves-effect" type="submit" value="Submit">
-        </form>
-      </div>
-      <!--body -->
-
+      <!-- Content -->
     </div>
-    <!-- Content -->
   </div>
-</div>
 <!-- request forms -->
 
 
-<!--  -->
-<div tabindex="-1" class="modal fade show" id="submitDemo" role="dialog" aria-labelledby="myModalLabel" aria-modal="true">
-  <div class="modal-dialog cascading-modal modal-lg" role="document">
-    <!-- Content -->
-        <div class="modal-content">
-          <!-- Header -->
-          <div class="modal-header light-blue darken-3 white-text">
-            <p class="heading lead">Submit Demo</p>
+<!-- submit demo -->
+  <div tabindex="-1" class="modal fade show" id="submitDemo" role="dialog" aria-labelledby="myModalLabel" aria-modal="true">
+    <div class="modal-dialog cascading-modal modal-lg" role="document">
+      <!-- Content -->
+          <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-header light-blue darken-3 white-text">
+              <p class="heading lead">Submit Demo</p>
 
-            <button class="close" aria-label="Close" type="button" data-dismiss="modal">
-              <span class="white-text" aria-hidden="true">×</span>
-            </button>
+              <button class="close" aria-label="Close" type="button" data-dismiss="modal">
+                <span class="white-text" aria-hidden="true">×</span>
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <form enctype="multipart/form-data" method="post" siq_id="autopick_1002">
+                <!-- choose file -->
+                <div class="form-group">
+                  <label for="fileToUpload">Upload Here</label>
+                  <input name="fileToUpload" class="form-control" id="fileToUpload" type="file">
+                </div>
+
+                <!-- Patient Name -->
+                <div class="form-group">
+                  <label for="patientName">Patient Full Name</label>
+                  <input name="patientName" class="form-control" id="patientName" required="" type="text">
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input name="email" class="form-control" id="email" required="" type="email">
+                </div>
+
+                <!--Phone Number-->
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
+                </div>
+
+                <!-- Date-->
+                <div class="form-group">
+                  <label>Date</label>
+                  <input name="date" class="form-control" id="date" required="" type="date">
+                </div>
+
+                <label>Sex</label>
+                <select name="gender" class="form-control" required="">
+                  <option value="" selected="">Choose Your Option</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+
+                <!-- street -->
+                <div class="form-group">
+                  <label for="street">Street</label>
+                  <input name="street" class="form-control" id="street" required="" type="text">
+                </div>
+
+                <!-- city -->
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <input name="city" class="form-control" id="city" required="" type="text">
+                </div>
+
+                <label>State</label>
+                <select name="state" class="form-control" required="">
+                  <option value="" selected="">Choose Your Option</option>
+                <option value="FL" selected="">FL</option>
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AZ">AZ</option>
+                <option value="AR">AR</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DE">DE</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="IA">IA</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="ME">ME</option>
+                <option value="MD">MD</option>
+                <option value="MA">MA</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MS">MS</option>
+                <option value="MO">MO</option>
+                <option value="MT">MT</option>
+                <option value="NE">NE</option>
+                <option value="NV">NV</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>
+                <option value="NY">NY</option>
+                <option value="NC">NC</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WV">WV</option>
+                <option value="WI">WI</option>
+                <option value="WY">WY</option>
+                </select>
+
+                <!-- Zip -->
+                <div class="form-group">
+                  <label for="Zip">Zip</label>
+                  <input name="zip" class="form-control" id="Zip" required="" type="text">
+                </div>
+
+                <label>Insurance</label>
+                <select name="insurance" class="form-control" required="">
+                  <option value="" selected="">Choose Your Option</option>
+                  <option value="Self Pay" selected="">Self Pay</option>
+                  <option value="Aetna">Aetna</option>
+                  <option value="Avmed">Avmed</option>
+                  <option value="Cigna">Cigna</option>
+                  <option value="Humana">Humana</option>
+                  <option value="Wellcare / Staywell">Wellcare / Staywell</option>
+                  <option value="Simply / Amerigroup">Simply / Amerigroup</option>
+                  <option value="Medicaid">Medicaid</option>
+                  <option value="Sunshine">Sunshine</option>
+                  <option value="Sunshine – Ambetter">Sunshine – Ambetter</option>
+                  <option value="United Health Care">United Health Care</option>
+                  <option value="CignaTri Care / Out of Network">CignaTri Care / Out of Network</option>
+                  <option value="Av-Med / True Blue">Av-Med / True Blue</option>
+                  <option value="Bluecross Blue Shield / True Blue">Bluecross Blue Shield / True Blue</option>
+                </select>
+
+                <!-- ssn -->
+                <div class="form-group">
+                  <label for="ssn">SSN/ Insurance Id</label>
+                  <input name="ssn" class="form-control" id="ssn" required="" type="text">
+                </div>
+
+                <!--Comment-->
+                <div>
+                  <label for="comment">Comment</label>
+                  <textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
+                </div>
+
+                <input name="submitDemo" class="btn btn-success waves-effect" type="submit" value="Submit">
+              </form>
+            </div>
+            <!-- body -->
           </div>
-
-          <!-- Body -->
-          <div class="modal-body">
-            <form enctype="multipart/form-data" method="post" siq_id="autopick_1002">
-              <!-- choose file -->
-              <div class="form-group">
-                <label for="fileToUpload">Upload Here</label>
-                <input name="fileToUpload" class="form-control" id="fileToUpload" type="file">
-              </div>
-
-              <!-- Patient Name -->
-              <div class="form-group">
-                <label for="patientName">Patient Full Name</label>
-                <input name="patientName" class="form-control" id="patientName" required="" type="text">
-              </div>
-
-              <!-- Email Address -->
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input name="email" class="form-control" id="email" required="" type="email">
-              </div>
-
-              <!--Phone Number-->
-              <div class="form-group">
-                <label for="phoneNumber">Phone Number</label>
-                <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
-              </div>
-
-              <!-- Date-->
-              <div class="form-group">
-                <label>Date</label>
-                <input name="date" class="form-control" id="date" required="" type="date">
-              </div>
-
-              <label>Sex</label>
-              <select name="gender" class="form-control" required="">
-                <option value="" selected="">Choose Your Option</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-              </select>
-
-              <!-- street -->
-              <div class="form-group">
-                <label for="street">Street</label>
-                <input name="street" class="form-control" id="street" required="" type="text">
-              </div>
-
-              <!-- city -->
-              <div class="form-group">
-                <label for="city">City</label>
-                <input name="city" class="form-control" id="city" required="" type="text">
-              </div>
-
-              <label>State</label>
-              <select name="state" class="form-control" required="">
-                <option value="" selected="">Choose Your Option</option>
-               <option value="FL" selected="">FL</option>
-              <option value="AL">AL</option>
-              <option value="AK">AK</option>
-              <option value="AZ">AZ</option>
-              <option value="AR">AR</option>
-              <option value="CA">CA</option>
-              <option value="CO">CO</option>
-              <option value="CT">CT</option>
-              <option value="DE">DE</option>
-              <option value="GA">GA</option>
-              <option value="HI">HI</option>
-              <option value="ID">ID</option>
-              <option value="IL">IL</option>
-              <option value="IN">IN</option>
-              <option value="IA">IA</option>
-              <option value="KS">KS</option>
-              <option value="KY">KY</option>
-              <option value="ME">ME</option>
-              <option value="MD">MD</option>
-              <option value="MA">MA</option>
-              <option value="MI">MI</option>
-              <option value="MN">MN</option>
-              <option value="MS">MS</option>
-              <option value="MO">MO</option>
-              <option value="MT">MT</option>
-              <option value="NE">NE</option>
-              <option value="NV">NV</option>
-              <option value="NH">NH</option>
-              <option value="NJ">NJ</option>
-              <option value="NM">NM</option>
-              <option value="NY">NY</option>
-              <option value="NC">NC</option>
-              <option value="ND">ND</option>
-              <option value="OH">OH</option>
-              <option value="OK">OK</option>
-              <option value="OR">OR</option>
-              <option value="PA">PA</option>
-              <option value="RI">RI</option>
-              <option value="SC">SC</option>
-              <option value="SD">SD</option>
-              <option value="TN">TN</option>
-              <option value="TX">TX</option>
-              <option value="UT">UT</option>
-              <option value="VT">VT</option>
-              <option value="VA">VA</option>
-              <option value="WA">WA</option>
-              <option value="WV">WV</option>
-              <option value="WI">WI</option>
-              <option value="WY">WY</option>
-              </select>
-
-              <!-- Zip -->
-              <div class="form-group">
-                <label for="Zip">Zip</label>
-                <input name="zip" class="form-control" id="Zip" required="" type="text">
-              </div>
-
-              <label>Insurance</label>
-              <select name="insurance" class="form-control" required="">
-                <option value="" selected="">Choose Your Option</option>
-                <option value="Self Pay" selected="">Self Pay</option>
-                <option value="Aetna">Aetna</option>
-                <option value="Avmed">Avmed</option>
-                <option value="Cigna">Cigna</option>
-                <option value="Humana">Humana</option>
-                <option value="Wellcare / Staywell">Wellcare / Staywell</option>
-                <option value="Simply / Amerigroup">Simply / Amerigroup</option>
-                <option value="Medicaid">Medicaid</option>
-                <option value="Sunshine">Sunshine</option>
-                <option value="Sunshine – Ambetter">Sunshine – Ambetter</option>
-                <option value="United Health Care">United Health Care</option>
-                <option value="CignaTri Care / Out of Network">CignaTri Care / Out of Network</option>
-                <option value="Av-Med / True Blue">Av-Med / True Blue</option>
-                <option value="Bluecross Blue Shield / True Blue">Bluecross Blue Shield / True Blue</option>
-              </select>
-
-              <!-- ssn -->
-              <div class="form-group">
-                <label for="ssn">SSN/ Insurance Id</label>
-                <input name="ssn" class="form-control" id="ssn" required="" type="text">
-              </div>
-
-              <!--Comment-->
-              <div>
-                <label for="comment">Comment</label>
-                <textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
-              </div>
-
-              <input name="submitDemo" class="btn btn-success waves-effect" type="submit" value="Submit">
-            </form>
-          </div>
-          <!-- body -->
-        </div>
-        <!-- Content -->
+          <!-- Content -->
+    </div>
   </div>
-</div>
 <!-- submit demo -->
 
 <!-- request appointment -->
-<div tabindex="-1" class="modal fade show" id="requestAppointment" role="dialog" aria-labelledby="myModalLabel" aria-modal="true">
-  <div class="modal-dialog cascading-modal modal-lg" role="document">
-    <!-- Content -->
-    <div class="modal-content">
-      <!-- Header -->
-      <div class="modal-header light-blue darken-3 white-text">
-        <p class="heading lead">Request Appointment</p>
+  <div tabindex="-1" class="modal fade show" id="requestAppointment" role="dialog" aria-labelledby="myModalLabel" aria-modal="true">
+    <div class="modal-dialog cascading-modal modal-lg" role="document">
+      <!-- Content -->
+      <div class="modal-content">
+        <!-- Header -->
+        <div class="modal-header light-blue darken-3 white-text">
+          <p class="heading lead">Request Appointment</p>
 
-        <button class="close" aria-label="Close" type="button" data-dismiss="modal">
-          <span class="white-text" aria-hidden="true">×</span>
-        </button>
-      </div>
+          <button class="close" aria-label="Close" type="button" data-dismiss="modal">
+            <span class="white-text" aria-hidden="true">×</span>
+          </button>
+        </div>
 
-      <!-- Body -->
-      <div class="modal-body">
-        <form enctype="multipart/form-data" method="post" siq_id="autopick_4293">
-          <!-- choose file -->
-          <div class="form-group">
-            <label for="fileToUpload">Upload Here</label>
-            <input name="fileToUpload" class="form-control" id="fileToUpload" type="file">
-          </div>
+        <!-- Body -->
+        <div class="modal-body">
+          <form enctype="multipart/form-data" method="post" siq_id="autopick_4293">
+            <!-- choose file -->
+            <div class="form-group">
+              <label for="fileToUpload">Upload Here</label>
+              <input name="fileToUpload" class="form-control" id="fileToUpload" type="file">
+            </div>
 
-          <!-- Patient Name -->
-          <div class="form-group">
-            <label for="patientName">Patient Full Name</label>
-            <input name="patientName" class="form-control" id="patientName" required="" type="text">
-          </div>
+            <!-- Patient Name -->
+            <div class="form-group">
+              <label for="patientName">Patient Full Name</label>
+              <input name="patientName" class="form-control" id="patientName" required="" type="text">
+            </div>
 
-          <!-- Date-->
-          <div class="form-group">
-            <label>Date Of Birth</label>
-            <input name="dob" class="form-control" id="dob" required="" type="date">
-          </div>
+            <!-- Date-->
+            <div class="form-group">
+              <label>Date Of Birth</label>
+              <input name="dob" class="form-control" id="dob" required="" type="date">
+            </div>
 
-          <!-- Email Address -->
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input name="email" class="form-control" id="email" required="" type="email">
-          </div>
+            <!-- Email Address -->
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input name="email" class="form-control" id="email" required="" type="email">
+            </div>
 
-          <!--Phone Number-->
-          <div class="form-group">
-            <label for="phoneNumber">Phone Number</label>
-            <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
-          </div>
+            <!--Phone Number-->
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number</label>
+              <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
+            </div>
 
-          <!-- Date-->
-          <div class="form-group">
-            <label>Date</label>
-            <input name="date" class="form-control" id="datepicker" required="" onchange="DateChange();" type="date">
-          </div>
+            <!-- Date-->
+            <div class="form-group">
+              <label>Date</label>
+              <input name="date" class="form-control" id="datepicker" required="" onchange="DateChange();" type="date">
+            </div>
 
-          <!-- Time-->
-          <div class="form-group">
-            <label for="time">Select Time</label>
-            <input name="time" class="form-control" id="time" required="" type="text">
-          </div>            
-                 
+            <!-- Time-->
+            <div class="form-group">
+              <label for="time">Select Time</label>
+              <input name="time" class="form-control" id="time" required="" type="text">
+            </div>            
                   
-          <label>Appointment Type</label>
-          <select name="appointmentType" class="form-control" required="">
-            <option value="" selected="">Choose Your Option</option>
-            <option value="Physical">Physical</option>
-            <option value="Sick Visit">Sick Visit</option>
-            <option value="Telemedicine">Telemedicine</option>
-          </select>
+                    
+            <label>Appointment Type</label>
+            <select name="appointmentType" class="form-control" required="">
+              <option value="" selected="">Choose Your Option</option>
+              <option value="Physical">Physical</option>
+              <option value="Sick Visit">Sick Visit</option>
+              <option value="Telemedicine">Telemedicine</option>
+            </select>
 
+                    
+            <!--Comment-->
+            <div class="my-3">
+              <label for="comment">Comment</label>
+              <textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
+            </div>
                   
-          <!--Comment-->
-          <div class="my-3">
-            <label for="comment">Comment</label>
-            <textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
-          </div>
-                
 
-          <input name="bookAppointment" class="btn btn-success waves-effect" type="submit" value="Submit">
-        </form>
+            <input name="bookAppointment" class="btn btn-success waves-effect" type="submit" value="Submit">
+          </form>
+        </div>
+        <!--body -->
       </div>
-      <!--body -->
+      <!-- Content -->
     </div>
-    <!-- Content -->
   </div>
-</div>
 <!-- request appointment -->
+
   <script src="assest/js/jquery-3.4.1.min.js" type="text/javascript"></script>
   <!-- Bootstrap tooltips -->
   <!-- <script src="assest/js/popper.min.js" type="text/javascript"></script> -->
