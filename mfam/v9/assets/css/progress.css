@@ -1,0 +1,203 @@
+body
+{
+  position: relative;
+}
+
+.progress{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    box-shadow: none;
+    position: fixed;
+    right: 15px;
+    top: 82vh;
+    z-index: 1000;
+    display: none;
+}
+
+.progress:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 12px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progress > span{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.progress .progress-value{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    line-height: 85px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.progress .progress-left{
+    left: 0;
+}
+.progress .progress-right{
+    right: 0;
+}
+.progress .progress-bar{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 12px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+
+.progress .progress-left .progress-bar{
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+
+.progress .progress-right .progress-bar{
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+}
+
+
+.progress.blue .progress-bar{
+    border-color:green;
+}
+
+@media only screen and (max-width: 750px){
+ .progress{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    right: 1.2rem;
+    top: 91vh;
+}
+
+.progress:after{
+    border: 6px solid red;
+}
+.progress .progress-value{
+    font-size: 14px;
+    line-height: 55px;
+}
+.progress .progress-bar{
+    border-width: 6px;
+}
+
+.progress .progress-left .progress-bar{
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+}
+
+.progress .progress-right .progress-bar{
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+}
+}
+
+.progress .progress-right .progress-bar.active1
+{
+  animation: loading-1 1s linear forwards;
+}
+
+.progress .progress-right .progress-bar.active2
+{
+  animation: loading-2 1s linear forwards;
+}
+
+.progress .progress-right .progress-bar.active3
+{
+  animation: loading-3 1s linear forwards;
+}
+
+.progress .progress-right .progress-bar.active4
+{
+  animation: loading-4 1s linear forwards;
+}
+
+.progress .progress-right .progress-bar.active5
+{
+  animation: loading-5 1s linear forwards;
+}
+
+.progress .progress-right .progress-bar.active6a
+{
+  animation: loading-61 1s linear forwards;
+}
+
+.progress .progress-left .progress-bar.active6b
+{
+  animation: loading-62 1s linear forwards;
+  animation-delay: 1s;
+}
+
+.progress .progress-left .progress-bar.active7
+{
+  animation: loading-7 1s linear forwards;
+}
+
+.progress .progress-left .progress-bar.active8
+{
+  animation: loading-8 1s linear forwards;
+}
+
+.progress .progress-left .progress-bar.active9
+{
+  animation: loading-9 1s linear forwards;
+}
+
+.progress .progress-left .progress-bar.active10
+{
+  animation: loading-10 1s linear forwards;
+}
+
+.progress .progress-left .progress-bar.active11
+{
+  animation: loading-11 1s linear forwards;
+}
+
+
+@keyframes loading-1{0%{-webkit-transform: rotate(0deg);transform: rotate(0deg);}100%{-webkit-transform: rotate(32.4deg);transform: rotate(32.4deg);}}
+@keyframes loading-2{0%{-webkit-transform: rotate(32.4deg);transform: rotate(32.4deg);}100%{-webkit-transform: rotate(64.8deg);transform: rotate(64.8deg);}}
+@keyframes loading-3{0%{-webkit-transform: rotate(64.8deg);transform: rotate(64.8deg);}100%{-webkit-transform: rotate(97.2deg);transform: rotate(97.2deg);}}
+@keyframes loading-4{0%{-webkit-transform: rotate(97.2deg);transform: rotate(97.2deg);}100%{-webkit-transform: rotate(129.6deg);transform: rotate(129.6deg);}}
+@keyframes loading-5{0%{-webkit-transform: rotate(129.6deg);transform: rotate(129.6deg);}100%{-webkit-transform: rotate(162deg);transform: rotate(162deg);}}
+@keyframes loading-61{0%{-webkit-transform: rotate(162deg);transform: rotate(162deg);}100%{-webkit-transform: rotate(180deg);transform: rotate(180deg);}}
+
+@keyframes loading-62{0%{-webkit-transform: rotate(0deg);transform: rotate(0deg);}100%{-webkit-transform: rotate(14.4deg);transform: rotate(14.4deg);}}
+@keyframes loading-7{0%{-webkit-transform: rotate(14.4deg);transform: rotate(14.4deg);}100%{-webkit-transform: rotate(46.8deg);transform: rotate(46.8deg);}}
+@keyframes loading-8{0%{-webkit-transform: rotate(46.8deg);transform: rotate(46.8deg);}100%{-webkit-transform: rotate(79.2deg);transform: rotate(79.2deg);}}
+@keyframes loading-9{0%{-webkit-transform: rotate(79.2deg);transform: rotate(79.2deg);}100%{-webkit-transform: rotate(111.6deg);transform: rotate(111.6deg);}}
+@keyframes loading-10{0%{-webkit-transform: rotate(111.6deg);transform: rotate(111.6deg);}100%{-webkit-transform: rotate(144deg);transform: rotate(144deg);}}
+@keyframes loading-11{0%{-webkit-transform: rotate(144deg);transform: rotate(144deg);}100%{-webkit-transform: rotate(180deg);transform: rotate(180deg);}}
+
+
+
+

@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MDEN12</title>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.jpg" rel="icon">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/widget.css" rel="stylesheet">
+  <link href="assets/css/result2.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+       <a href="index.html" class="logo"><img src="assets/img/rtplogo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#resources">Resources</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Insurance</a></li>
+          <li><a class="nav-link scrollto" href="#latestblog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
+      <h1>GET STARTED WITH <br>RTP GUIDED DEMO</h1>
+      <h2>Please look around to see all the features our websites offer!</h2>
+      <div>
+       <a href="#about" class="btn-get-started scrollto">Call To Action</a>
+       <a data-bs-toggle="modal" data-bs-target="#appointmentwidget" class="btn-get-started" id="appointment-btn">Get An Appointment</a> 
+      </div>
+      <img src="assets/img/hero-img.png" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150">
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="about-content col-xl-5 d-flex align-items-stretch" data-aos="fade-right">
+            <div class="about-content">
+             <img src="assets/img/about-us.jpg" class="img-fluid">
+             <div style="margin-top: -18px;"><a data-bs-toggle="modal" data-bs-target="#aboutusmodal" class="about-btn">About Me <i class="bx bx-chevron-right"></i></a></div> 
+            </div>
+          </div>
+          <div class="col-xl-7 d-flex align-items-stretch" data-aos="fade-left">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-receipt"></i>
+                  <h4>Trained Physician</h4>
+                  <p>Our highly trained physicians and front of office carry out only the highest quality medical services that are of the finest standard</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4>Extra Care</h4>
+                  <p>We pride ourselves on getting to see our patients FAST – taking extra care to ensure you land a same-day appointment with a short waiting time</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bx bx-images"></i>
+                  <h4>24 X 7 Support</h4>
+                  <p>Please feel free to view our range of insurance options. We also offer a 24-hour service for out of hour questions and emergency services</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bx bx-shield"></i>
+                  <h4>Focused</h4>
+                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <section class="pt-0 section-bg">
+     <div class="container-fluid">
+      <div class="section-title">
+        <h2 class="mb-0">Helpful Resources</h2>
+      </div> 
+      <div class="well text-center">
+        @foreach ($categories as $category)
+        <a href="{{ route('category', $category->slug) }}" class="mr-3">
+          <span>{{ $category->name }}</span>
+        </a> 
+        @endforeach
+      </div>
+    </div> 
+    </section>
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container" data-aos="zoom-in">
+        <div class="section-title">
+          <h2>Connect With Us On Social Platform</h2>
+        </div>
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
+            <a href="https://www.facebook.com/RTPMedSol" target="_blank"><img src="assets/img/icons/03.png" class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
+            <a href="https://www.google.com/search?rlz=1C1GCEA_enUS878US878&sxsrf=ALeKk0035SPZlyQXIWXYmhwEd0uDnGWMoA%3A1598546999959&ei=N-RHX6SJOu6k_QaZ_angBQ&q=reviewthatplace&oq=reviewthatplace&gs_lcp=CgZwc3ktYWIQAzIECCMQJzIECCMQJzIECAAQDTIGCAAQDRAeMgYIABANEB4yBggAEA0QHjIICAAQCBANEB4yCAgAEAgQDRAeMggIABAIEA0QHjIICAAQCBANEB46BAgAEEc6BwgjELACECc6CAgAEAgQBxAeUL0vWIs4YN05aABwAXgAgAF5iAHvAZIBAzAuMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&ved=0ahUKEwjkgNvQ67vrAhVuUt8KHZl-ClwQ4dUDCA0&uact=5#lrd=0x88e7775087a21f57:0x568749b03f559c74,1" target="_blank"><img src="assets/img/icons/04.png" class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
+            <a href="https://www.youtube.com/user/sansari2" target="_blank"><img src="assets/img/icons/13.png" class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
+            <a href="https://www.healthgrades.com/" target="_blank"><img src="assets/img/icons/06.png" class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
+            <a href="https://www.instagram.com/rtpmedsol/" target="_blank"><img src="assets/img/icons/07.png" class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
+            <a href="https://www.ratemds.com/" target="_blank"><img src="assets/img/icons/08.png" class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
+            <a href="https://twitter.com/MedRtp" target="_blank"><img src="assets/img/icons/09.png" class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
+            <a href="https://www.vitals.com/" target="_blank"><img src="assets/img/icons/10.png" class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
+            <a href="https://www.webmd.com/" target="_blank"><img src="assets/img/icons/11.png" class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
+            <a href="https://www.yelp.com/" target="_blank"><img src="assets/img/icons/12.jpg" class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-4 d-flex align-items-center justify-content-center">
+            <a href="https://www.doctor.com/" target="_blank"><img src="assets/img/icons/01.png" class="img-fluid" alt=""></a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Strips Section ======= -->
+    <section id="impressed-strip" class="strip" data-aos="zoom-in">
+      <div class="container-fluid strip-container">
+
+        <div class="row">
+          <div class="col-lg-11 strip-column">
+            <h3>Impressed yet? Wait we have lot of interesting things for you!</h3>
+            <a href="#resources" data-toggle="tooltip" data-placement="top" title="See More" class="strip-icon d-flex align-items-center justify-content-center scrollto"><i class="bi bi-arrow-right-short"></i></a>
+          </div>
+          <div class="col strip-rightarrow"></div>
+        </div>
+
+      </div>
+    </section><!-- End Strip Section -->
+
+    <!-- ======= Patient Resource Center Section ======= -->
+    <section id="resources" class="resources section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Patient Resource Center</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="resources-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="resource-item">
+                <div class="resource-desc">
+                 <p>Save time and request any type of form you need from our office online</p> 
+                </div>
+                <div class="resource-icon">
+                 <i class="fab fa-wpforms"></i> 
+                </div>
+                <h3>Request Forms</h3>
+                <h4><a href="https://rtpmedsol.rtpdemo.com/demoforms/requestform/" target="_blank">Click here</a></h4>
+              </div>
+
+            </div><!-- End resource item -->
+
+            <div class="swiper-slide">
+              <div class="resource-item">
+                <div class="resource-desc">
+                 <p>Update your demographics; Address, Phone, Email, ect</p> 
+                </div>
+                <div class="resource-icon">
+                 <i class="fas fa-desktop"></i> 
+                </div>
+                <h3>Update Demo</h3>
+                <h4><a href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo/" target="_blank">Click here</a></h4>
+              </div>
+
+            </div><!-- End resource item -->
+
+            <div class="swiper-slide">
+              <div class="resource-item">
+                <div class="resource-desc">
+                 <p>This forms gives us the ability to obtain or release your medical records</p> 
+                </div>
+                <div class="resource-icon">
+                 <i class="fas fa-receipt"></i> 
+                </div>
+                <h3>Authorization Release</h3>
+                <h4><a href="https://rtpmedsol.rtpdemo.com/demoforms/authorizationrelease/" target="_blank">Click here</a></h4>
+              </div>
+
+            </div><!-- End resource item -->
+
+            <div class="swiper-slide">
+              <div class="resource-item">
+                <div class="resource-desc">
+                 <p>If you are a new patient and save time on your first visit by filling out the New Patient Packet here</p> 
+                </div>
+                <div class="resource-icon">
+                 <i class="fas fa-info"></i> 
+                </div>
+                <h3>New Patient Forms</h3>
+                <h4><a href="https://rtpmedsol.rtpdemo.com/demoforms/mdennewpt/" target="_blank">Click here</a></h4>
+              </div>
+
+            </div><!-- End resource item -->
+
+            <div class="swiper-slide">
+              <div class="resource-item">
+                <div class="resource-desc">
+                 <p>Skip the waiting on the phone and simply request an appointment online</p> 
+                </div>
+                <div class="resource-icon">
+                 <i class="far fa-calendar-alt"></i> 
+                </div>
+                <h3>Book Appointments</h3>
+                <h4><a href="https://rtpmedsol.rtpdemo.com/demoforms/bookappointment/" target="_blank">Click here</a></h4>
+              </div>
+
+            </div><!-- End resource item -->
+
+            <div class="swiper-slide">
+              <div class="resource-item">
+                <div class="resource-desc">
+                 <p>Access for current patients to their Patient Portal. Access your medical records and much more</p> 
+                </div>
+                <div class="resource-icon">
+                 <i class="fas fa-users-cog"></i> 
+                </div>
+                <h3>Patient Portal</h3>
+                <h4><a href="#">Click here</a></h4>
+              </div>
+
+            </div><!-- End resource item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Patient Resource Center Section -->
+
+    <!-- ======= Strips Section ======= -->
+    <section id="paperwork-strip" class="strip" data-aos="zoom-in">
+      <div class="container-fluid strip-container">
+
+        <div class="row">
+          <div class="col-lg-11 strip-column">
+            <h3>Get your message to your patients....reduce staff hours on paperwork!</h3>
+            <a href="#services" data-toggle="tooltip" data-placement="top" title="See More" class="strip-icon d-flex align-items-center justify-content-center scrollto"><i class="bi bi-arrow-right-short"></i></a>
+          </div>
+          <div class="col strip-rightarrow"></div>
+        </div>
+
+      </div>
+    </section><!-- End Strip Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg" data-aos="fade-up">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Dental Services</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+      </div>
+
+      <div class="container" id="service1">
+        <div class="row service-content">
+          <div class="col-md-5" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/service/image1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
+            <h3>Cleaning & Prevention</h3>
+            <p class="fst-italic">
+              A focus on preventive dentistry helps you maintain the highest standard of oral health while limiting dental expenditures
+            </p>
+            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
+            </ul>
+            <div class="text-center text-lg-start">
+              <a data-bs-toggle="modal" data-bs-target="#servicemodal1" class="service-readmore d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Read More</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row service-content">
+          <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
+            <img src="assets/img/service/image2.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4 order-2 order-md-1" data-aos="fade-right">
+            <h3>Family Dentistry</h3>
+            <p class="fst-italic">
+              When you step into Church Street Dental in Chicopee, MA, you'll know you've found the perfect place for your family's care
+            </p>
+            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
+            </ul>
+            <div class="text-center text-lg-start">
+              <a data-bs-toggle="modal" data-bs-target="#servicemodal2" class="service-readmore d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Read More</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row service-content">
+          <div class="col-md-5" data-aos="fade-right">
+            <img src="assets/img/service/image3.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4" data-aos="fade-left">
+            <h3>Pediatric Services</h3>
+            <p class="fst-italic">Church Street Dental in Chicopee, MA offers a wide range of pediatric services that focus on prevention, education, and gentle treatment</p>
+            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+            </ul>
+            <div class="text-center text-lg-start">
+              <a data-bs-toggle="modal" data-bs-target="#servicemodal3" class="service-readmore d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Read More</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row service-content">
+          <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
+            <img src="assets/img/service/image4.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4 order-2 order-md-1" data-aos="fade-right">
+            <h3>Oral Appliances</h3>
+            <p class="fst-italic">
+              Oral appliances offer simple, non-invasive care for a variety of conditions
+            </p>
+            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
+            </ul>
+            <div class="text-center text-lg-start">
+              <a data-bs-toggle="modal" data-bs-target="#servicemodal4" class="service-readmore d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Read More</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <div class="container" id="service2" style="display: none;">
+        <div class="row service-content">
+          <div class="col-md-5" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/service/image5.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
+            <h3>Orthodontics</h3>
+            <p class="fst-italic">
+              Orthodontics involves teeth straightening and jaw alignment, combining beauty and function
+            </p>
+            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
+            </ul>
+            <div class="text-center text-lg-start">
+              <a data-bs-toggle="modal" data-bs-target="#servicemodal5" class="service-readmore d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Read More</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row service-content">
+          <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
+            <img src="assets/img/service/image6.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4 order-2 order-md-1" data-aos="fade-right">
+            <h3>Sedation Dentistry</h3>
+            <p class="fst-italic">
+              You can experience dental treatment in a comfortable, customized approach with several different methods of sedation
+            </p>
+            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
+            </ul>
+            <div class="text-center text-lg-start">
+              <a data-bs-toggle="modal" data-bs-target="#servicemodal6" class="service-readmore d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Read More</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row service-content">
+          <div class="col-md-5" data-aos="fade-right">
+            <img src="assets/img/service/image7.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4" data-aos="fade-left">
+            <h3>Cosmetic Dentistry</h3>
+            <p class="fst-italic">
+             Volumes of research confirm the influential role of smiles on our relationships and our self-esteem
+            </p>
+            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+            </ul>
+            <div class="text-center text-lg-start">
+              <a data-bs-toggle="modal" data-bs-target="#servicemodal7" class="service-readmore d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Read More</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row service-content">
+          <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
+            <img src="assets/img/service/image8.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4 order-2 order-md-1" data-aos="fade-right">
+            <h3>Tooth Replacement</h3>
+            <p class="fst-italic">
+              Dr. Khan's background in restorative dentistry allows him to develop solutions for every scenario
+            </p>
+            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
+            </ul>
+            <div class="text-center text-lg-start">
+              <a data-bs-toggle="modal" data-bs-target="#servicemodal8" class="service-readmore d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Read More</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+       <div class="row mt-5 justify-content-center">
+        <button type="button" class="btn service-btn" id="service-btn1" style="margin-right: 15px;">1</button>
+        <button type="button" class="btn service-btn" id="service-btn2">2</button> 
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= Strips Section ======= -->
+    <section id="package-strip" class="strip" data-aos="zoom-in">
+      <div class="container-fluid strip-container">
+
+        <div class="row">
+          <div class="col-lg-11 strip-column">
+            <h3>Try our Resident package for 3 months(No Commitments Required)!</h3>
+            <a href="https://rtpmedicalsolution.com" data-toggle="tooltip" data-placement="top" title="Click Here" class="strip-icon d-flex align-items-center justify-content-center" target="_blank"><i class="bi bi-arrow-right-short"></i></a>
+          </div>
+          <div class="col strip-rightarrow"></div>
+        </div>
+
+      </div>
+    </section><!-- End Strip Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Choose Your Plan</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="box">
+              <h3>New patient welcome packageFree</h3>
+              <h4><sup>$</sup>49.00</h4>
+              <ul>
+                <li>Exam, X-Rays, Cleaning</li>
+                <li>(D0150, D0220, D0230, D0274)</li>
+                <li>Hurry, limited time offers</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box featured">
+              <h3>New patient welcome package</h3>
+              <h4><sup>$</sup>550Off!</h4>
+              <ul>
+                <li>Free Dental Implant</li>
+                <li>(D0150, D0220, D0230, D0274)</li>
+                <li>Hurry, limited time offers</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="box">
+              <h3>Invisalign</h3>
+              <h4><sup>$</sup>500.Off!</h4>
+              <ul>
+                <li>Free Consultation</li>
+                <li>Hurry up</li>
+                <li>limited time offers</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Strips Section ======= -->
+    <section id="portal-strip" class="strip" data-aos="zoom-in">
+      <div class="container-fluid strip-container">
+
+        <div class="row">
+          <div class="col-lg-11 strip-column">
+            <h3>Need access to your records? Get them in your patient portal!</h3>
+            <a href="#" data-toggle="tooltip" data-placement="top" title="Patient Portal" class="strip-icon d-flex align-items-center justify-content-center scrollto"><i class="bi bi-arrow-right-short"></i></a>
+          </div>
+          <div class="col strip-rightarrow"></div>
+        </div>
+
+      </div>
+    </section><!-- End Strip Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Medical Insurance</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Primary</li>
+              <li data-filter=".filter-card">Secondary</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/insurance/01.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Primary</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/insurance/01.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Primary"><i class="bx bx-plus"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/insurance/02.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Secondary</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/insurance/02.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Secondary"><i class="bx bx-plus"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/insurance/03.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Primary</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/insurance/03.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Primary"><i class="bx bx-plus"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/insurance/04.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Secondary</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/insurance/04.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Secondary"><i class="bx bx-plus"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/insurance/05.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Primary</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/insurance/05.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Primary"><i class="bx bx-plus"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/insurance/06.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Secondary</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/insurance/06.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Secondary"><i class="bx bx-plus"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/insurance/07.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Primary</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/insurance/07.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Primary"><i class="bx bx-plus"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/insurance/08.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Secondary</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/insurance/08.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Secondary"><i class="bx bx-plus"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/insurance/09.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Primary</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/insurance/09.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Primary"><i class="bx bx-plus"></i></a>
+                  <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Strips Section ======= -->
+    <section id="seo-strip" class="strip" data-aos="zoom-in">
+      <div class="container-fluid strip-container">
+
+        <div class="row">
+          <div class="col-lg-11 strip-column">
+            <h3>RTP websites are build for SEO and Performance!</h3>
+            <a href="https://developers.google.com/speed/pagespeed/insights/?url=rtpdemo.com%2Fmden1t1&tab=desktop" data-toggle="tooltip" data-placement="top" title="Run Now" class="strip-icon d-flex align-items-center justify-content-center" target="_blank"><i class="bi bi-arrow-right-short"></i></a>
+          </div>
+          <div class="col strip-rightarrow"></div>
+        </div>
+
+      </div>
+    </section><!-- End Strip Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="latestblog" class="latestblog section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Latest Blogs</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card card-blog">
+              <div class="card-img">
+                <a href="blog-single1.html"><img src="assets/img/blog/post-1.jpg" alt="" class="img-fluid"></a>
+              </div>
+              <div class="card-body">
+                <div class="card-category-box">
+                  <div class="card-category">
+                    <h6 class="category">27 Mar 2020</h6>
+                  </div>
+                </div>
+                <h3 class="card-title"><a href="blog-single1.html">See more ideas about Medical</a></h3>
+                <p class="card-description">
+                  Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
+                  a pellentesque nec,
+                  egestas non nisi.
+                </p>
+              </div>
+              <div class="card-footer">
+                <div class="post-author">
+                  <a href="#">
+                    <img src="assets/img/blog/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                    <span class="author">Morgan Freeman</span>
+                  </a>
+                </div>
+                <div class="post-date">
+                  <span class="ion-ios-clock-outline"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-blog">
+              <div class="card-img">
+                <a href="blog-single2.html"><img src="assets/img/blog/post-2.jpg" alt="" class="img-fluid"></a>
+              </div>
+              <div class="card-body">
+                <div class="card-category-box">
+                  <div class="card-category">
+                    <h6 class="category">08 Aug 2020</h6>
+                  </div>
+                </div>
+                <h3 class="card-title"><a href="blog-single2.html">See more ideas about Medical</a></h3>
+                <p class="card-description">
+                  Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
+                  a pellentesque nec,
+                  egestas non nisi.
+                </p>
+              </div>
+              <div class="card-footer">
+                <div class="post-author">
+                  <a href="#">
+                    <img src="assets/img/blog/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                    <span class="author">Morgan Freeman</span>
+                  </a>
+                </div>
+                <div class="post-date">
+                  <span class="ion-ios-clock-outline"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-blog">
+              <div class="card-img">
+                <a href="blog-single3.html"><img src="assets/img/blog/post-3.jpg" alt="" class="img-fluid"></a>
+              </div>
+              <div class="card-body">
+                <div class="card-category-box">
+                  <div class="card-category">
+                    <h6 class="category">31 Oct 2020</h6>
+                  </div>
+                </div>
+                <h3 class="card-title"><a href="blog-single3.html">See more ideas about Medical</a></h3>
+                <p class="card-description">
+                  Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
+                  a pellentesque nec,
+                  egestas non nisi.
+                </p>
+              </div>
+              <div class="card-footer">
+                <div class="post-author">
+                  <a href="#">
+                    <img src="assets/img/blog/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                    <span class="author">Morgan Freeman</span>
+                  </a>
+                </div>
+                <div class="post-date">
+                  <span class="ion-ios-clock-outline"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Our Doctors</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="assets/img/team/team-1.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Walter White</h4>
+                  <span>Chief Executive Officer</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="assets/img/team/team-2.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Product Manager</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="assets/img/team/team-3.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>William Anderson</h4>
+                  <span>CTO</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <img src="assets/img/team/team-4.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Amanda Jepson</h4>
+                  <span>Accountant</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+    
+    <!-- ======= Strips Section ======= -->
+    <section id="review-strip" class="strip" data-aos="zoom-in">
+      <div class="container-fluid strip-container">
+
+        <div class="row">
+          <div class="col-lg-11 strip-column">
+            <h3>Collect and Distribute reviews from your patients from your RMS Listing!</h3>
+            <a href="https://rtprms.com/rtpmedsol" data-toggle="tooltip" data-placement="top" title="My Listings" class="strip-icon d-flex align-items-center justify-content-center" target="_blank"><i class="bi bi-arrow-right-short"></i></a>
+          </div>
+          <div class="col strip-rightarrow"></div>
+        </div>
+
+      </div>
+    </section><!-- End Strip Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Get In Touch</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-map"></i>
+                  <h3>Our Address</h3>
+                  <p>7037 Rose Ave Suite B Orlando FL 32810</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>rtpdemo@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>888-503-1636</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-md-0">
+           <iframe src="https://rtprms.com/Home/Reviews/62340" frameborder="0" scrolling="" ;="" data-aos="fade-up" data-aos-delay="100" style="width: 100%;height: 350px;"></iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <section class="pt-0 section-bg">
+     <div class="container-fluid">
+      <div class="section-title">
+        <h2 class="mb-0"><i class="fa fa-tags"></i> Popular Tags</h2>
+      </div> 
+      <div class="well text-center">
+        @foreach ($tags as $tag)
+        <a href="{{ route('tag', $tag->slug) }}" class="mr-3">
+          <span>{{ $tag->name }}</span>
+        </a> 
+        @endforeach
+      </div>
+    </div> 
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#resources">Resources</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Compliance</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://rtpmedsol.rtpdemo.com/demoforms/baa/" target="_blank">BAA</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://rtpmedsol.rtpdemo.com/demoforms/hipaa/" target="_blank">HIPAA</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://rtpmedsol.rtpdemo.com/demoforms/nondisclosure/" target="_blank">Nondisclosure</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              7037 Rose Ave Suite <br>
+              B Orlando<br>
+              FL 32810 <br>
+              <strong>Phone:</strong> 888-503-1636<br>
+              <strong>Email:</strong> rtpdemo@gmail.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About RTP</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; 2021 Copyright <strong><span><a style="color: #fff;" href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a></span></strong>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://rtpmedicalsolution.com/">RTP Medical Solution</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a data-bs-toggle="modal" data-bs-target="#selectlanguage" class="language d-flex align-items-center justify-content-center"><i class="fa fa-globe" aria-hidden="true"></i><span>Language</span></a>
+  <a href="https://rtpmedsol.rtpdemo.com/demoforms/survey/" target="_blank" class="take-survey d-flex align-items-center justify-content-center"><i class="fas fa-poll" aria-hidden="true"></i><span>Survey</span></a>
+
+  <!-- select language -->
+  <div class="modal fade" id="selectlanguage" tabindex="-1" aria-labelledby="selectlanguage" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #3b4ef8;color: white;">
+          <h5 class="modal-title" id="exampleModalLabel">Select language</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <select class="form-control" onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|af">Afrikaans</option><option value="en|sq">Albanian</option><option value="en|ar">Arabic</option><option value="en|hy">Armenian</option><option value="en|az">Azerbaijani</option><option value="en|eu">Basque</option><option value="en|be">Belarusian</option><option value="en|bg">Bulgarian</option><option value="en|ca">Catalan</option><option value="en|zh-CN">Chinese (Simplified)</option><option value="en|zh-TW">Chinese (Traditional)</option><option value="en|hr">Croatian</option><option value="en|cs">Czech</option><option value="en|da">Danish</option><option value="en|nl">Dutch</option><option value="en|en">English</option><option value="en|et">Estonian</option><option value="en|tl">Filipino</option><option value="en|fi">Finnish</option><option value="en|fr">French</option><option value="en|gl">Galician</option><option value="en|ka">Georgian</option><option value="en|de">German</option><option value="en|el">Greek</option><option value="en|ht">Haitian Creole</option><option value="en|iw">Hebrew</option><option value="en|hi">Hindi</option><option value="en|hu">Hungarian</option><option value="en|is">Icelandic</option><option value="en|id">Indonesian</option><option value="en|ga">Irish</option><option value="en|it">Italian</option><option value="en|ja">Japanese</option><option value="en|ko">Korean</option><option value="en|lv">Latvian</option><option value="en|lt">Lithuanian</option><option value="en|mk">Macedonian</option><option value="en|ms">Malay</option><option value="en|mt">Maltese</option><option value="en|no">Norwegian</option><option value="en|fa">Persian</option><option value="en|pl">Polish</option><option value="en|pt">Portuguese</option><option value="en|ro">Romanian</option><option value="en|ru">Russian</option><option value="en|sr">Serbian</option><option value="en|sk">Slovak</option><option value="en|sl">Slovenian</option><option value="en|es">Spanish</option><option value="en|sw">Swahili</option><option value="en|sv">Swedish</option><option value="en|th">Thai</option><option value="en|tr">Turkish</option><option value="en|uk">Ukrainian</option><option value="en|ur">Urdu</option><option value="en|vi">Vietnamese</option><option value="en|cy">Welsh</option><option value="en|yi">Yiddish</option></select>
+         <div id="google_translate_element2"></div>
+         <script type="text/javascript">
+          function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+        </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+        <script type="text/javascript">
+          /* <![CDATA[ */
+          eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+          /* ]]> */
+        </script>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+  <!-- select language -->
+
+  <!-- appointment widget -->
+  <div class="modal fade" id="appointmentwidget" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body" style="padding: 0px 0px !important;">
+          <!-- step1 -->
+          <div class="rastep" id="rastep0"> 
+           <div class="calendar">
+            <div class="year-header"> 
+              <span class="left-button" id="prev"> &lang; </span> 
+              <span class="year" id="label"></span> 
+              <span class="right-button" id="next"> &rang; </span>
+            </div>
+            <table class="months-table table table-responsive"> 
+              <tbody>
+                <tr class="months-row">
+                  <td class="month">Jan</td> 
+                  <td class="month">Feb</td> 
+                  <td class="month">Mar</td> 
+                  <td class="month">Apr</td> 
+                  <td class="month">May</td> 
+                  <td class="month">Jun</td> 
+                  <td class="month">Jul</td>
+                  <td class="month">Aug</td> 
+                  <td class="month">Sep</td> 
+                  <td class="month">Oct</td>          
+                  <td class="month">Nov</td>
+                  <td class="month">Dec</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="days-table"> 
+              <td class="day">Sun</td> 
+              <td class="day">Mon</td> 
+              <td class="day">Tue</td> 
+              <td class="day">Wed</td> 
+              <td class="day">Thu</td> 
+              <td class="day">Fri</td> 
+              <td class="day">Sat</td>
+            </table>
+            <div class="frame"> 
+              <table class="dates-table table-responsive"> 
+                <tbody class="tbody">             
+                </tbody> 
+              </table>
+            </div> 
+            <div class="mt-5"><button class="button" id="add-button">Add Event</button></div>
+          </div>
+        </div>
+        <!-- step1 -->
+
+        <!-- step2 -->
+        <section id="rastep1" class="rastep">
+          <div class="row justify-content-center">
+            <h3 class="widget-header"><span class="widget-text">Pick A Service</span><span class="widget-close">&times;</span></h3>
+            <div class="px-4">
+             <div class="col-12 text-center">
+               <div class="form-checkbox">
+                 <input class="checkbox" type="radio" name="s1q1" id="s1q1o1" value="">
+                 <label class="checklabel" for="s1q1o1">Initial visit</label>
+               </div>
+             </div>
+             <div class="col-12 text-center">
+               <div class="form-checkbox">
+                 <input class="checkbox" type="radio" name="s1q1" id="s1q1o2" value="">
+                 <label class="checklabel" for="s1q1o2">Physical</label>
+               </div>
+             </div>
+             <div class="col-12 text-center">
+               <div class="form-checkbox">
+                 <input class="checkbox" type="radio" name="s1q1" id="s1q1o3" value="">
+                 <label class="checklabel" for="s1q1o3">Follow Up</label>
+               </div>
+             </div>
+             <div class="col-12 text-center">
+               <div class="form-checkbox">
+                 <input class="checkbox" type="radio" name="s1q1" id="s1q1o4" value="">
+                 <label class="checklabel" for="s1q1o4">Lab</label>
+               </div>
+             </div> 
+           </div>
+           <div class="row justify-content-center px-4 py-4">
+
+            <div class="card col" id="backbtncard">
+              <a href="#" id="rasteponeback">
+                <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/bahover.png'" onmouseout="this.src='assets/img/buttons/ba.png'">
+              </a>
+            </div>
+
+            <div class="card col" id="nextbtncard">
+              <a href="#" id="rasteponenext">
+                <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/pihover.png'" onmouseout="this.src='assets/img/buttons/pi.png'">
+              </a>
+            </div>  
+            
+          </div>
+        </div>                        
+      </section>
+      <!-- step2 -->
+      <!-- step3 -->
+      <section id="rastep2" class="rastep">
+       <div class="row justify-content-center">
+         <h3 class="widget-header"><span class="widget-text">Available Hours</span><span class="widget-close">&times;</span></h3>
+         <div class="px-4">
+          <div class="col-12 text-center">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="s1q2" id="s1q2o1" value="">
+              <label class="checklabel" for="s1q2o1">08:00 AM - 09:00 AM</label>
+            </div>
+          </div>
+          <div class="col-12 text-center">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="s1q2" id="s1q2o2" value="">
+              <label class="checklabel" for="s1q2o2">09:00 AM - 10:00 AM</label>
+            </div>
+          </div>
+          <div class="col-12 text-center">
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="s1q2" id="s1q2o3" value="">
+              <label class="checklabel" for="s1q2o3">10:00 AM - 11:00 AM</label>
+            </div>
+          </div>
+        </div>
+        <div class="row px-4 py-4">
+
+         <div class="card col" id="backbtncard">
+           <a href="#" id="rasteptwoback">
+             <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/bahover.png'" onmouseout="this.src='assets/img/buttons/ba.png'">
+           </a>
+         </div>
+
+         <div class="card col" id="nextbtncard">
+           <a href="#" id="rasteptwonext">
+             <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/pihover.png'" onmouseout="this.src='assets/img/buttons/pi.png'">
+           </a>
+         </div>  
+         
+       </div>
+     </div>                      
+   </section>
+   <!-- step3 -->
+   <!-- step4 -->
+   <section id="rastep3" class="rastep">
+     <div class="row justify-content-center">
+      <h3 class="widget-header"><span class="widget-text">Request Appointment</span><span class="widget-close">&times;</span></h3> 
+      <div class="container text-center px-4">
+        <div>
+          <legend class="font-weight-bold" id="pagetitles">Patient Informaiton</legend>
+        </div>
+        
+        <!--Patient Full Name-->
+        <div class="form-group">
+          <label for="patientfullname" class="col-sm-12 font-weight-3">Patient Full Name</label>
+          <div class="col-sm-12">
+            <input required type="text" id="patientfullname" name="patientfullname" placeholder="Patient Full Name">
+          </div>
+        </div>
+        <!--Patient Full Name-->
+
+        <!--Date-->
+        <div class="form-group">
+          <label id="formlable" for="birthDate" class="col-sm-12 font-weight-3">Date of Birth</label>
+          <div class="col-sm-12">
+            <input required type="date" id="birthDate" placeholder="Date of Birth" autofocus>
+          </div>
+        </div>
+        <!--Date-->
+      </div>
+      <div class="row px-4 py-4">
+
+        <div class="card col" id="backbtncard">
+          <a href="#" id="rastepthreeback">
+            <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/bahover.png'" onmouseout="this.src='assets/img/buttons/ba.png'">
+          </a>
+        </div>
+
+        <div class="card col" id="nextbtncard">
+          <a href="#" id="rastepthreenext">
+            <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/pihover.png'" onmouseout="this.src='assets/img/buttons/pi.png'">
+          </a>
+        </div>  
+        
+      </div>
+    </div>       
+  </section>
+  <!-- step4 -->
+  <!-- step5 -->
+  <section id="rastep4" class="rastep">
+   <div class="row justify-content-center">
+    <h3 class="widget-header"><span class="widget-text">Request Appointment</span><span class="widget-close">&times;</span></h3>
+    <div class="container text-center px-4">
+      <div class="">
+        <legend class="font-weight-bold" id="pagetitles">Contact Information</legend>
+      </div>
+      
+      <!--Email Address-->
+      <div class="form-group">
+        <label id="formlable" for="email" class="col-sm-12 font-weight-3">Email Address</label>
+        <div class="col-sm-12">
+          <input required type="text" id="email" class="" placeholder="Enter Email Address" class="" autofocus>
+        </div>
+      </div>
+      <!--Email Address-->
+
+      <!--Phone Number-->
+      <div class="form-group">
+        <label id="formlable" for="phonenumber" class="col-sm-12 font-weight-3">Phone Number</label>
+        <div class="col-sm-12">
+          <input required type="tel" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
+        </div>
+      </div>
+      <!--Phone Number-->
+    </div>
+
+    <div class="row px-4 py-4">
+
+      <div class="card col" id="backbtncard">
+        <a href="#" id="rastepfourback">
+          <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/bahover.png'" onmouseout="this.src='assets/img/buttons/ba.png'">
+        </a>
+      </div>
+
+      <div class="card col" id="nextbtncard">
+        <a href="#" id="rastepfournext">
+          <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/pihover.png'" onmouseout="this.src='assets/img/buttons/pi.png'">
+        </a>
+      </div>  
+      
+    </div>
+
+  </div>
+  </section>
+  <!-- step5 -->
+  <!-- step6 -->
+  <section id="rastep5" class="rastep">
+   <div class="row justify-content-center">
+    <h3 class="widget-header"><span class="widget-text">Request Appointment</span><span class="widget-close">&times;</span></h3>
+    <div class="container text-center px-4">
+      <div class="">
+        <legend class="font-weight-bold" id="pagetitles">Other Information</legend>
+      </div>
+      
+      <!--Upload Document-->
+      <div class="form-group">
+        <label id="formlable" for="fileToUpload" class="col-sm-12 font-weight-3">Upload Document</label>
+        <div class="col-sm-12">
+          <input required type="file" id="uploaddoc" class="" placeholder="Upload Document" autofocus>
+        </div>
+      </div>
+      <!--Upload Document-->
+      
+      <!--Comment-->
+      <div class="form-group">
+        <label for="comment" class="col-sm-12 font-weight-3">Comment</label>
+        <div class="col-sm-12">
+          <textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
+        </div>
+      </div>
+      <!--Comment-->
+    </div>
+    <div class="row px-4 py-4">
+      <div class="card col" id="backbtncard">
+        <a href="#" id="rastepfiveback">
+          <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/bahover.png'" onmouseout="this.src='assets/img/buttons/ba.png'">
+        </a>
+      </div>
+      <div class="card col" id="nextbtncard">
+        <a href="#" id="rastepfivenext">
+          <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/pihover.png'" onmouseout="this.src='assets/img/buttons/pi.png'">
+        </a>
+      </div>  
+    </div>
+  </div>
+  </section>
+  <!-- step6 -->
+  <!-- step7 -->
+  <section id="rastep6" class="rastep">
+   <div class="row justify-content-center">
+    <h3 class="widget-header"><span class="widget-text">Request Appointment</span><span class="widget-close">&times;</span></h3>
+    <div class="container text-center px-4">
+      <div class="container" style="overflow-y: scroll !important; height: 350px !important;">
+        <div class="col-12" id="pagetitles">
+          <h4 class="font-weight-bold my-3"> Patient Information </h4>
+        </div>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th class="text-left">Patient Full Name</th>
+              <td class="text-right">Heather</td>
+            </tr>
+            <tr>
+              <th class="text-left">Patient Date of Birth</th>
+              <td class="text-right">20/02/1990</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="col-12" id="pagetitles">
+          <h4 class="font-weight-bold my-3"> Contact Information </h4>
+        </div>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th class="text-left">Email Address</th>
+              <td class="text-right">heather@gmail.com</td>
+            </tr>
+            <tr>
+              <th class="text-left">Phone Number</th>
+              <td class="text-right">9153595831</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="col-12" id="pagetitles">
+          <h4 class="font-weight-bold my-3"> Other Information </h4>
+        </div>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th class="text-left">Comment</th>
+              <td class="text-right">Great Demo</td>
+            </tr>
+            <tr>
+              <th class="text-left">Upload Document</th>
+              <td class="text-right">DocFile</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="col-12" id="pagetitles">
+          <h4 class="font-weight-bold my-3"> Appointment Information </h4>
+        </div>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th class="text-left">Appointment Type</th>
+              <td class="text-right">New Patient Appointment</td>
+            </tr>
+            <tr>
+              <th class="text-left">Appointment Date</th>
+              <td class="text-right">12/09/2020</td>
+            </tr>
+            <tr>
+              <th class="text-left">Appointment Time</th>
+              <td class="text-right">02.00 PM</td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+    </div>
+    <div class="row px-4 py-4">
+      <div class="card col" id="backbtncard">
+        <a href="#" id="rastepsixback">
+          <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/bahover.png'" onmouseout="this.src='assets/img/buttons/ba.png'">
+        </a>
+      </div>
+      <div class="card col" id="nextbtncard">
+        <a href="#" id="rastepsevennext">
+          <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/pihover.png'" onmouseout="this.src='assets/img/buttons/pi.png'">
+        </a>
+      </div>  
+    </div> 
+  </div>
+  </section>
+  <!-- step7 -->
+  <!-- step8 -->
+  <section id="rastep7" class="rastep">
+   <div class="row justify-content-center">
+    <h3 class="widget-header"><span class="widget-text">Form Submitted</span><span class="widget-close">&times;</span></h3>
+    <div class="container text-center px-4">
+      <img src="assets/img/check.png" class="img-fluid check-img"> 
+      <h2 class="font-weight-bold mt-4 mb-4">Congrats! You have successfully completed your Book Appointment Paperwork!</h2>
+      <img src="assets/img/rtplogo.png" class="img-fluid" id="check-logo">
+    </div>
+    <div class="row px-4 py-4">
+      <div class="card col" id="backbtncard">
+        <a href="#" id="rastepsevenback">
+          <img src="assets/img/buttons/ba.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/bahover.png'" onmouseout="this.src='assets/img/buttons/ba.png'">
+        </a>
+      </div>
+      <div class="card col" id="nextbtncard">
+        <a href="#" id="rastepeightnext">
+          <img src="assets/img/buttons/pi.png" alt="" class="img-fluid btn-start" onmouseover="this.src='assets/img/buttons/pihover.png'" onmouseout="this.src='assets/img/buttons/pi.png'">
+        </a>
+      </div>  
+    </div>
+  </div>       
+  </section>
+  <!-- step8 -->
+  <!-- step9 -->
+  <section id="rastep8" class="rastep">
+   <div class="row justify-content-center">
+    <h3 class="widget-header"><span class="widget-text">Other Forms</span><span class="widget-close">&times;</span></h3>
+    <div class="container text-center px-4">
+     <div class="col-12">
+      <a href="autherization-release.html" target="_blank">
+       <div class="form-checkbox">
+         <input class="checkbox" type="radio" name="s1q3" id="s1q3o1" value="">
+         <label class="checklabel" for="s1q3o1">Authorization Release</label>
+       </div> 
+     </a> 
+   </div>
+   <div class="col-12">
+    <a href="update-demo.html" target="_blank">
+     <div class="form-checkbox">
+       <input class="checkbox" type="radio" name="s1q3" id="s1q3o2" value="">
+       <label class="checklabel" for="s1q3o2">Update Demo</label>
+     </div> 
+   </a> 
+  </div>
+  <div class="col-12">
+    <a href="request-form.html" target="_blank">
+     <div class="form-checkbox">
+       <input class="checkbox" type="radio" name="s1q3" id="s1q3o3" value="">
+       <label class="checklabel" for="s1q3o3">Request Form</label>
+     </div> 
+   </a> 
+  </div>
+  <div class="col-12 mb-4">
+    <a href="ts.html" target="_blank">
+     <div class="form-checkbox">
+       <input class="checkbox" type="radio" name="s1q3" id="s1q3o4" value="">
+       <label class="checklabel" for="s1q3o4">Survey</label>
+     </div> 
+   </a> 
+  </div> 
+  </div>
+
+
+  </div>
+  </section>
+  <!-- step9 -->
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- appointment widget -->
+
+  <!-- About Us Modal -->
+  <div class="modal fade servicemodal" id="aboutusmodal" tabindex="-1" aria-labelledby="aboutusmodal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header service-modalheader">
+          <h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div class="service-modalimg">
+          <img src="assets/img/about-us.jpg" class="img-fluid"> 
+         </div>
+         <div class="service-modalcontent">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+         </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- About Us Modal -->
+
+  <!-- Service Modal 1 -->
+  <div class="modal fade servicemodal" id="servicemodal1" tabindex="-1" aria-labelledby="servicemodal1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header service-modalheader">
+          <h5 class="modal-title" id="exampleModalLabel">Cleaning & Prevention</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div class="service-modalimg">
+          <img src="assets/img/service/image1.jpg" class="img-fluid"> 
+         </div>
+         <div class="service-modalcontent">
+          <p>A focus on preventive dentistry helps you maintain the highest standard of oral health while limiting dental expenditures</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+         </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Service Modal 1 -->
+
+  <!-- Service Modal 2 -->
+  <div class="modal fade servicemodal" id="servicemodal2" tabindex="-1" aria-labelledby="servicemodal2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header service-modalheader">
+          <h5 class="modal-title" id="exampleModalLabel">Family Dentistry</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div class="service-modalimg">
+          <img src="assets/img/service/image2.jpg" class="img-fluid"> 
+         </div>
+         <div class="service-modalcontent">
+          <p>When you step into Church Street Dental in Chicopee, MA, you'll know you've found the perfect place for your family's care</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+         </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Service Modal 2 -->
+
+  <!-- Service Modal 3 -->
+  <div class="modal fade servicemodal" id="servicemodal3" tabindex="-1" aria-labelledby="servicemodal3" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header service-modalheader">
+          <h5 class="modal-title" id="exampleModalLabel">Pediatric Services</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div class="service-modalimg">
+          <img src="assets/img/service/image3.jpg" class="img-fluid"> 
+         </div>
+         <div class="service-modalcontent">
+          <p>Church Street Dental in Chicopee, MA offers a wide range of pediatric services that focus on prevention, education, and gentle treatment</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+         </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Service Modal 3 -->
+
+  <!-- Service Modal 4 -->
+  <div class="modal fade servicemodal" id="servicemodal4" tabindex="-1" aria-labelledby="servicemodal4" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header service-modalheader">
+          <h5 class="modal-title" id="exampleModalLabel">Oral Appliances</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div class="service-modalimg">
+          <img src="assets/img/service/image4.jpg" class="img-fluid"> 
+         </div>
+         <div class="service-modalcontent">
+          <p>Oral appliances offer simple, non-invasive care for a variety of conditions</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+         </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Service Modal 4 -->
+
+  <!-- Service Modal 5 -->
+  <div class="modal fade servicemodal" id="servicemodal5" tabindex="-1" aria-labelledby="servicemodal5" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header service-modalheader">
+          <h5 class="modal-title" id="exampleModalLabel">Orthodontics</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div class="service-modalimg">
+          <img src="assets/img/service/image5.jpg" class="img-fluid"> 
+         </div>
+         <div class="service-modalcontent">
+          <p>Orthodontics involves teeth straightening and jaw alignment, combining beauty and function</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+         </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Service Modal 5 -->
+
+  <!-- Service Modal 6 -->
+  <div class="modal fade servicemodal" id="servicemodal6" tabindex="-1" aria-labelledby="servicemodal6" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header service-modalheader">
+          <h5 class="modal-title" id="exampleModalLabel">Sedation Dentistry</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div class="service-modalimg">
+          <img src="assets/img/service/image6.jpg" class="img-fluid"> 
+         </div>
+         <div class="service-modalcontent">
+          <p>You can experience dental treatment in a comfortable, customized approach with several different methods of sedation</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+         </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Service Modal 6 -->
+
+  <!-- Service Modal 7 -->
+  <div class="modal fade servicemodal" id="servicemodal7" tabindex="-1" aria-labelledby="servicemodal7" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header service-modalheader">
+          <h5 class="modal-title" id="exampleModalLabel">Cosmetic Dentistry</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div class="service-modalimg">
+          <img src="assets/img/service/image7.jpg" class="img-fluid"> 
+         </div>
+         <div class="service-modalcontent">
+          <p>Volumes of research confirm the influential role of smiles on our relationships and our self-esteem</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+         </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Service Modal 7 -->
+
+  <!-- Service Modal 8 -->
+  <div class="modal fade servicemodal" id="servicemodal8" tabindex="-1" aria-labelledby="servicemodal8" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header service-modalheader">
+          <h5 class="modal-title" id="exampleModalLabel">Tooth Replacement</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div class="service-modalimg">
+          <img src="assets/img/service/image8.jpg" class="img-fluid"> 
+         </div>
+         <div class="service-modalcontent">
+          <p>Dr. Khan's background in restorative dentistry allows him to develop solutions for every scenario</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> 
+         </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Service Modal 8 -->
+
+  <!-- Vendor JS Files -->
+  <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/widget.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+     $('#service-btn1').css({"backgroundColor":"#3b4ef8","color":"white"});
+     $('#service-btn2').click(function(){
+      $(this).css({"backgroundColor":"#3b4ef8","color":"white"});
+      $('#service-btn1').css({"backgroundColor":"#fff","color":"black"});
+      $('#service2').show();
+      $('#service1').hide();
+    })
+     $('#service-btn1').click(function(){
+      $(this).css({"backgroundColor":"#3b4ef8","color":"white"});
+      $('#service-btn2').css({"backgroundColor":"#fff","color":"black"});
+      $('#service1').show();
+      $('#service2').hide();
+    })
+   })  
+  </script>
+  <script type="text/javascript">
+   $('#appointment').on('click',function(){
+    $('#appointmentwidget').modal('show');
+  });
+   $('.widget-close').on('click',function(){
+    $('#appointmentwidget').modal('hide');
+  });
+  </script>
+</body>
+
+</html>
