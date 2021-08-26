@@ -1,6 +1,6 @@
     <!DOCTYPE html>
     <html lang="en">
-<head>
+    <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-QM1CH7JSY8"></script>
       <script>
@@ -21,7 +21,7 @@
       <!-- Vendor CSS Files -->
       <link href="assest/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" rel="prefetch" >
       <link href="assest/vendor/icofont/icofont.min.css" rel="stylesheet" rel="prefetch">
-      <link href="assest/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" rel="prefetch">
+      <link href="assest/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" rel=preload>
       <link href="assest/vendor/owl.carousel/owl.carousel.min.css" rel="stylesheet" rel="prefetch">
       <link href="assest/vendor/aos/aos.css" rel="stylesheet" rel="prefetch">
       <link rel="icon" href="assest/img/favicon.jpg" type="image/jpg" sizes="32x32">
@@ -92,369 +92,7 @@
             <div class="">
             <button type="button" class="btn call-to-action">Call to Action Button</button> 
             </div> 
-          </div>  
-
-          <div class="hero-container text-md-center" data-aos="fade-in">
-            <!-- Calendar -->
-              <div class="content1" id="rastep0">
-                      <div class="calendar-container">
-                        <div class="calendar"> 
-                          <div class="year-header"> 
-                            <span class="left-button" id="prev"> &lang; </span> 
-                            <span class="year" id="label"></span> 
-                            <span class="right-button" id="next"> &rang; </span>
-                          </div> 
-                          <table class="months-table"> 
-                            <tbody>
-                              <tr class="months-row">
-                                <td class="month">Jan</td> 
-                                <td class="month">Feb</td> 
-                                <td class="month">Mar</td> 
-                                <td class="month">Apr</td> 
-                                <td class="month">May</td> 
-                                <td class="month">Jun</td> 
-                                <td class="month">Jul</td>
-                                <td class="month">Aug</td> 
-                                <td class="month">Sep</td> 
-                                <td class="month">Oct</td>          
-                                <td class="month">Nov</td>
-                                <td class="month">Dec</td>
-                              </tr>
-                            </tbody>
-                          </table> 
-                          
-                          <table class="days-table"> 
-                            <td class="day">Sun</td> 
-                            <td class="day">Mon</td> 
-                            <td class="day">Tue</td> 
-                            <td class="day">Wed</td> 
-                            <td class="day">Thu</td> 
-                            <td class="day">Fri</td> 
-                            <td class="day">Sat</td>
-                          </table> 
-                          <div class="frame"> 
-                            <table class="dates-table"> 
-                                <tbody class="tbody">             
-                                </tbody> 
-                            </table>
-                          </div> 
-                          <button class="button" id="add-button">Request Appiontment</button>
-                        </div>
-                      </div>
-                      <div class="event-container"></div>
-                      <div class="dialog" id="dialog">
-                        <section id="rastep1" class="section slide">
-                          <div class="row">
-                            <h3 class="font-weight800">Pick A Service</h3>
-                            <div class="col-12 text-center">
-                              <button class="btn btn-outline-success customButtonWidth font-weight-1 mt-2 text-black" id="rasteponenext">Initial visit</button>
-                            </div>
-                            <div class="col-12 text-center">
-                              <button class="btn btn-outline-success customButtonWidth font-weight-1 mt-2 text-black">Physical</button>
-                            </div>
-                            <div class="col-12 text-center">
-                              <button class="btn btn-outline-success customButtonWidth font-weight-1 mt-2 text-black">Follow Up</button>
-                            </div>
-                            <div class="col-12 text-center">
-                              <button class="btn btn-outline-success customButtonWidth font-weight-1 mt-2 text-black">Lab</button>
-                            </div>
-                          </div>                        
-                        </section>
-  
-                        <section id="rastep2" class="section1 slide">
-                          <button class="btn btn-outline-success customButtonWidth font-weight-2 text-black" id="rasteptwoback" style="margin-top: -25px;">Back</button>
-                          <div class="row">
-                            <p class="font-weight800 mt-1" style="font-size: 15px; ">Available Appointment Times</p>
-                            <div class="col-12 text-center">
-                              <button class="btn btn-outline-success customButtonWidth font-weight-2 text-black" id="rasteptwonext">08:00 AM - 09:00 AM</button>
-                            </div>
-                            <div class="col-12 text-center mt-2">
-                              <button class="btn btn-outline-success customButtonWidth font-weight-2 text-black">09:00 AM - 10:00 AM</button>
-                            </div>
-                            <div class="col-12 text-center mt-2">
-                              <button class="btn btn-outline-success customButtonWidth font-weight-2 text-black">10:00 AM - 11:00 AM</button>
-                            </div>  
-                          </div>                     
-                        </section>
-                      </div>
-              </div>
-  
-              <!-- Request Form-->
-              <section id="rastep3" class="section2 slide">
-                      <div class="content2">
-                          <div class="container">
-                                <div class="row">
-                                  <div class="col-md-12 text-center">
-                                    <h2><b>Request Appointment</b></h2>
-                                  </div>
-                                </div>
-                          </div>
-                          
-                          <div class="container text-center">
-                            <div>
-                               <legend class="font-weight-bold" id="pagetitles">Patient Informaiton</legend>
-                            </div>
-                                
-                            <!--Patient Full Name-->
-                            <div class="form-group">
-                                  <label for="patientfullname" class="col-sm-12 font-weight-3">Patient Full Name</label>
-                                  <div class="col-sm-12">
-                                    <input required type="text" id="patientfullname" name="patientfullname" placeholder="Patient Full Name">
-                                  </div>
-                            </div>
-                            <!--Patient Full Name-->
-                    
-                            <!--Date-->
-                              <div class="form-group">
-                                <label id="formlable" for="birthDate" class="col-sm-12 font-weight-3">Date of Birth</label>
-                                  <div class="col-sm-12">
-                                    <input required type="date" id="birthDate" placeholder="Date of Birth" autofocus>
-                                  </div>
-                              </div>
-                            <!--Date-->
-                            
-                            <div class="row text-center">
-                              <div class="col-md-6">
-                                <button class="btn btn-outline-success formbackButton font-weight-1 col-md-6" id="rastepthreeback">Back</button> 
-                              </div>
-                              <div class="col-md-6">
-                                <button class="btn btn-outline-success formnextButton font-weight-1 col-md-6" id="rastepthreenext">Next</button> 
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-              </section>
-  
-              <section id="rastep4" class="section2 slide">
-                      <div class="content2">
-                        <div class="container">
-                              <div class="row">
-                                <div class="col-md-12 text-center">
-                                  <h2><b>Request Appointment</b></h2>
-                                </div>
-                              </div>
-                        </div>
-                        
-                        <div class="container text-center">
-                          <div class="">
-                                <legend class="font-weight-bold" id="pagetitles">Contact Information</legend>
-                          </div>
-                              
-                          <!--Email Address-->
-                            <div class="form-group">
-                            <label id="formlable" for="email" class="col-sm-12 font-weight-3">Email Address</label>
-                                <div class="col-sm-12">
-                                  <input required type="text" id="email" class="" placeholder="Enter Email Address" class="form-control" autofocus>
-                                </div>
-                            </div>
-                          <!--Email Address-->
-                    
-                          <!--Phone Number-->
-                            <div class="form-group">
-                              <label id="formlable" for="phonenumber" class="col-sm-12 font-weight-3">Phone Number</label>
-                              <div class="col-sm-12">
-                              <input required type="tel" id="phonenumber" class="" name="phoneNumber" placeholder="Phone Number">
-                              </div>
-                            </div>
-                          <!--Phone Number-->
-                            
-                          <div class="row text-center">
-                            <div class="col-md-6">
-                              <button class="btn btn-outline-success  formbackButton font-weight-1 col-md-6" id="rastepfourback">Back</button> 
-                            </div>
-                            <div class="col-md-6">
-                              <button class="btn btn-outline-success  formnextButton font-weight-1 col-md-6" id="rastepfournext">Next</button> 
-                            </div>
-                          </div>                      
-                        </div>
-                    </div>
-              </section>
-  
-              <section id="rastep5" class="section2 slide">
-                      <div class="content2">
-                        <div class="container">
-                              <div class="row">
-                                <div class="col-md-12 text-center">
-                                  <h2><b>Request Appointment</b></h2>
-                                </div>
-                              </div>
-                        </div>
-                        
-                        <div class="container text-center">
-                          <div class="">
-                                <legend class="font-weight-bold" id="pagetitles">Other Information</legend>
-                          </div>
-               
-                          <!--Upload Document-->
-                            <div class="form-group">
-                                    <label id="formlable" for="fileToUpload" class="col-sm-12 font-weight-3">Upload Document</label>
-                                    <div class="col-sm-12">
-                                       <input required type="file" id="uploaddoc" class="" placeholder="Upload Document" autofocus>
-                                   </div>
-                            </div>
-                          <!--Upload Document-->
-                          
-                          <!--Comment-->
-                            <div class="form-group">
-                                <label for="comment" class="col-sm-12 font-weight-3">Comment</label>
-                                <div class="col-sm-12">
-                            <textarea name="comment" class="form-control" id="comment" required="" rows="3"></textarea>
-                                </div>
-                            </div>
-                          <!--Comment-->
-                            
-                          <div class="row text-center">
-                            <div class="col-md-6">
-                              <button class="btn btn-outline-success  formbackButton font-weight-1 col-md-6" id="rastepfiveback">Back</button> 
-                            </div>
-                            <div class="col-md-6">
-                              <button class="btn btn-outline-success  formnextButton font-weight-1 col-md-6" id="rastepfivenext">Next</button> 
-                            </div>
-                          </div>                      
-                        </div>
-                    </div>
-              </section>
-  
-              <section id="rastep6" class="section3 slide">
-                      <div class="content2">
-                        <div class="container">
-                              <div class="row">
-                                <div class="col-md-12 text-center">
-                                  <h2><b>Request Appointment</b></h2>
-                                </div>
-                              </div>
-                        </div>
-                        
-                        <div class="container text-center">
-                          <div class="container" style="overflow-y: scroll !important; height: 350px !important;">
-                            <div class="col-12" id="pagetitles">
-                              <h4 class="font-weight-bold my-3"> Patient Information </h4>
-                            </div>
-                            <table class="table table-striped">
-                                  <tbody>
-                                    <tr>
-                                      <th class="text-left">Patient Full Name</th>
-                                      <td class="text-right">Heather</td>
-                                    </tr>
-                                    <tr>
-                                      <th class="text-left">Patient Date of Birth</th>
-                                      <td class="text-right">20/02/1990</td>
-                                    </tr>
-                                  </tbody>
-                            </table>
-                    
-                            <div class="col-12" id="pagetitles">
-                              <h4 class="font-weight-bold my-3"> Contact Information </h4>
-                            </div>
-                            <table class="table table-striped">
-                              <tbody>
-                                <tr>
-                                  <th class="text-left">Email Address</th>
-                                  <td class="text-right">heather@gmail.com</td>
-                                </tr>
-                                <tr>
-                                  <th class="text-left">Phone Number</th>
-                                  <td class="text-right">9153595831</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                             
-                            <div class="col-12" id="pagetitles">
-                            <h4 class="font-weight-bold my-3"> Other Information </h4>
-                            </div>
-                            <table class="table table-striped">
-                              <tbody>
-                                <tr>
-                                  <th class="text-left">Comment</th>
-                                  <td class="text-right">Great Demo</td>
-                                </tr>
-                                <tr>
-                                  <th class="text-left">Upload Document</th>
-                                  <td class="text-right">DocFile</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                             
-                            <div class="col-12" id="pagetitles">
-                              <h4 class="font-weight-bold my-3"> Appointment Information </h4>
-                            </div>
-                            <table class="table table-striped">
-                              <tbody>
-                                <tr>
-                                  <th class="text-left">Appointment Type</th>
-                                  <td class="text-right">New Patient Appointment</td>
-                                </tr>
-                                <tr>
-                                  <th class="text-left">Appointment Date</th>
-                                  <td class="text-right">12/09/2020</td>
-                                </tr>
-                                <tr>
-                                  <th class="text-left">Appointment Time</th>
-                                  <td class="text-right">02.00 PM</td>
-                                </tr>
-                              </tbody>
-                            </table> 
-                            
-                          <div class="row text-center">
-                            <div class="col-md-6">
-                              <button class="btn btn-outline-success  formbackButton font-weight-1 col-md-6" id="rastepsixback">Back</button> 
-                            </div>
-                            <div class="col-md-6">
-                              <button class="btn btn-outline-success  formnextButton font-weight-1 col-md-6" id="rastepsevennext">Submit</button> 
-                            </div>
-                          </div>                     
-                          </div>
-                        </div>
-                      </div>
-              </section>
-  
-              <section id="rastep7" class="section2 slide">
-                      <div class="content2">
-                          <div class="container text-center">
-                            <img data-src="assest/img/check.png" class="img-fluid lazyload check-img"> 
-                            <h2 class="font-weight-bold mt-4 mb-4">Congrats! You have successfully completed your Book Appointment Paperwork!</h2>
-                            <img data-src="assest/img/rtplogo.png" class="img-fluid lazyload" id="check-logo">
-                              
-                            <div class="row text-center">
-                              <div class="col-md-6">
-                                <button class="btn btn-outline-success  formbackButton font-weight-1 col-md-6" id="rastepsevenback">Back</button> 
-                              </div>
-                              <div class="col-md-6">
-                                <button class="btn btn-outline-success  formnextButton font-weight-1 col-md-6" id="rastepeightnext">Next</button> 
-                              </div>
-                            </div>                      
-                          </div>
-                      </div>
-              </section>
-  
-              <section id="rastep8" class="section2 slide">
-                      <div class="content2">
-                        <div class="container">
-                              <div class="row">
-                                <div class="col-md-12 text-center">
-                                  <h2><b>Other Forms</b></h2>
-                                </div>
-                              </div>
-                        </div>
-                          <div class="container text-center">
-                            <div class="col-12 text-center">
-                              <a href="https://rtpmedsol.rtpdemo.com/demoforms/authorizationrelease" target="_blank" class="btn btn-outline-success  customButtonWidth font-weight-1 mt-2 text-black" id="rasteponenext">Authorization Release</a>
-                            </div>
-                            <div class="col-12 text-center">
-                              <a href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank"  class="btn btn-outline-success  customButtonWidth font-weight-1 mt-2 text-black">Update Demo</a>
-                            </div>
-                            <div class="col-12 text-center">
-                              <a href="https://rtpmedsol.rtpdemo.com/demoforms/requestform" target="_blank"  class="btn btn-outline-success  customButtonWidth font-weight-1 mt-2 text-black">Request Form</a>
-                            </div>
-                            <div class="col-12 text-center">
-                              <a href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank"  class="btn btn-outline-success  customButtonWidth font-weight-1 mt-2 text-black">Survey</a>
-                            </div>                   
-                          </div>
-                      </div>
-              </section>
-              <!-- Request Form-->
-            <!-- Calendar -->
-          </div>        
+          </div>       
         </div>
       </section><!-- End Hero -->
 
@@ -499,7 +137,7 @@
 
             <div class="row">
               <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-               <img data-src="assest/img/aboutus.jpg" class="img-fluid lazyload" id="about-image"> 
+               <img data-src="assest/img/aboutus.webp" class="img-fluid lazyload" id="about-image"> 
               </div>
 
               <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-up">
@@ -810,55 +448,55 @@
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-wrap">
-                  <img src="assest/img/insurance/aetna.png" class="img-fluid" alt="">
+                  <img data-src="assest/img/insurance/aetna.png" class="img-fluid lazyload" alt="">
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div class="portfolio-wrap">
-                  <img src="assest/img/insurance/ambetter.png" class="img-fluid" alt="">
+                  <img data-src="assest/img/insurance/ambetter.png" class="img-fluid lazyload" alt="">
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-wrap">
-                  <img src="assest/img/insurance/ambetter-florida-logo.jpg" class="img-fluid" alt="">
+                  <img data-src="assest/img/insurance/ambetter-florida-logo.jpg" class="img-fluid lazyload" alt="">
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div class="portfolio-wrap">
-                  <img src="assest/img/insurance/avmed.png" class="img-fluid" alt="">
+                  <img data-src="assest/img/insurance/avmed.png" class="img-fluid lazyload" alt="">
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-wrap">
-                  <img src="assest/img/insurance/bluecross.jpg" class="img-fluid" alt="">
+                  <img data-src="assest/img/insurance/bluecross.jpg" class="img-fluid lazyload" alt="">
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div class="portfolio-wrap">
-                  <img src="assest/img/insurance/blue-cross-blue-shield-vector-logo.png" class="img-fluid" alt="">
+                  <img data-src="assest/img/insurance/blue-cross-blue-shield-vector-logo.png" class="img-fluid lazyload" alt="">
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-wrap">
-                  <img src="assest/img/insurance/cigna-logo-1.jpg" class="img-fluid" alt="">
+                  <img data-src="assest/img/insurance/cigna-logo-1.jpg" class="img-fluid lazyload" alt="">
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div class="portfolio-wrap">
-                  <img src="assest/img/insurance/florida-blue-logo.jpg" class="img-fluid" alt="">
+                  <img data-src="assest/img/insurance/florida-blue-logo.jpg" class="img-fluid lazyload" alt="">
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-wrap">
-                  <img src="assest/img/insurance/humana.png" class="img-fluid" alt="">
+                  <img data-src="assest/img/insurance/humana.png" class="img-fluid lazyload" alt="">
                 </div>
               </div>
 
@@ -936,7 +574,7 @@
 
               <div class="col-lg-6" data-aos="fade-up">
                 <div class="member d-flex align-items-start">
-                  <div class="pic"><img data-src="assest/img/doctors/doctors-1.jpg" class="img-fluid lazyload" alt=""></div>
+                  <div class="pic"><img data-src="assest/img/doctors/doctors-1.webp" class="img-fluid lazyload" alt=""></div>
                   <div class="member-info">
                     <h4>Walter White</h4>
                     <span>Chief Medical Officer</span>
@@ -953,7 +591,7 @@
 
               <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
                 <div class="member d-flex align-items-start">
-                  <div class="pic"><img data-src="assest/img/doctors/doctors-2.jpg" class="img-fluid lazyload" alt=""></div>
+                  <div class="pic"><img data-src="assest/img/doctors/doctors-2.webp" class="img-fluid lazyload" alt=""></div>
                   <div class="member-info">
                     <h4>Sarah Jhonson</h4>
                     <span>Anesthesiologist</span>
@@ -970,7 +608,7 @@
 
               <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="member d-flex align-items-start">
-                  <div class="pic"><img data-src="assest/img/doctors/doctors-3.jpg" class="img-fluid lazyload" alt=""></div>
+                  <div class="pic"><img data-src="assest/img/doctors/doctors-3.webp" class="img-fluid lazyload" alt=""></div>
                   <div class="member-info">
                     <h4>William Anderson</h4>
                     <span>Cardiology</span>
@@ -987,7 +625,7 @@
 
               <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="member d-flex align-items-start">
-                  <div class="pic"><img data-src="assest/img/doctors/doctors-4.jpg" class="img-fluid lazyload" alt=""></div>
+                  <div class="pic"><img data-src="assest/img/doctors/doctors-4.webp" class="img-fluid lazyload" alt=""></div>
                   <div class="member-info">
                     <h4>Amanda Jepson</h4>
                     <span>Neurosurgeon</span>
@@ -1006,6 +644,7 @@
 
           </div>
         </section><!-- End Doctors Section -->
+
         <section>
          <div class="container-fluid">
           <div class="section-title">
@@ -1101,7 +740,7 @@
       <!-- intial popup -->
 
     <!-- Vendor JS Files -->
-    <script src="assest/vendor/jquery/jquery.min.js" defer></script>
+    <script src="assest/vendor/jquery/jquery.min.js" async></script>
     <script src="assest/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
     <script src="assest/vendor/jquery.easing/jquery.easing.min.js" defer></script>
     <script src="assest/vendor/waypoints/jquery.waypoints.min.js" defer></script>
@@ -1114,5 +753,5 @@
     <script src="assest/js/custom.min.js" defer></script>
     <script src="assest/js/lazysizes.min.js" defer></script>
     <script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
-</body>
+    </body>
   </html>

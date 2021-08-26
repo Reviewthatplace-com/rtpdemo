@@ -4,7 +4,6 @@
   position: relative; 
   min-height: 100%;
 }
-
 header {
   background: #049cdc;
   background-image: url(../img/bg.jpg);
@@ -49,17 +48,6 @@ header {
 }
 .btn-eta:hover {
   color: white;
-}
-#welcome
-{
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-}
-#welcome1
-{
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-   font-weight: bold;
 }
 #as1
 {
@@ -141,7 +129,6 @@ color: white !important;
 {
   padding-left: 20%;
 }
-
 @media only screen and (max-width: 700px) {
   header {
     background-image: none;
@@ -155,6 +142,7 @@ color: white !important;
   }
   .btn-eta {
     font-size: 13px;
+    margin-left: 50px !important;
   }
   header {
     height: auto;
@@ -353,64 +341,25 @@ color: white !important;
 }
 /* ======================= blogs section =========================== */
 
-/*============================== Service Section ===============================*/
-.single-service h3
-{
-  font-weight: bold;
-}
+/* ========================= service section ==========================*/
 .style-4 .single-service {
   border: 1px solid #ddd;
   padding: 25px 40px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   box-shadow: 0 5px 30px -5px #ccc;
-  position:relative;
-  -webkit-transition:.3s;
-  transition:.3s;
-  text-align:center;
-  min-height: 390px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-align: center;
 }
-.serviceImg
-{
-  height: 100px;
-}
-.style-4 .single-service:after, .single-team:after {
-  position: absolute;
-  content: "";
-  width: 0%;
-  border-top: 3px solid #FF3547;
-  left: 0;
-  top: 0;
-  border-left: 3px solid #FF3547;
-  height: 0%;
-  z-index: 2;
-  opacity:0;
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  visibility:hidden;
-  -webkit-transition:.5s;
-  transition:.5s
-}
-.style-4 .single-service:before,  .single-team:before {
-  position: absolute;
-  content: "";
-  width: 0%;
-  border-bottom: 3px solid #FF3547;
-  right: 0;
-  bottom: 0;
-  border-right: 3px solid #FF3547;
-  height: 0%;
-  z-index: 2;
-  opacity:0;
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  visibility:hidden;
-  -webkit-transition:.5s;
-  transition:.5s
-}
-.style-4 .single-service:hover:before, .single-service:hover:after{
-  opacity:1;
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  visibility:visible;
-  height:50%;
-  width:50%;
+
+.style-4 .single-service:hover:before,
+.single-service:hover:after {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  visibility: visible;
+  height: 50%;
+  width: 50%;
 }
 
 .style-4 .single-service h3 {
@@ -422,18 +371,11 @@ color: white !important;
 }
 .style-4 .single-service p {
   font-weight: 300;
-  
 }
-
-/* ipad setting */
-@media (min-width: 768px) and (max-width: 1024px)
-{
- .style-4 .single-service
- {
-  min-height: 180px;
- } 
+.serviceImg {
+  height: 80px;
 }
-/*============================== Service Section ===============================*/
+/* ========================= service section ==========================*/
 
 /* ========================= insurance section ==========================*/
 #insuranceBg {
