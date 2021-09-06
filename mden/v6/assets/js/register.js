@@ -4,6 +4,7 @@ $("a").click(function(){
 });
 $('.intial_hidden').hide();
 
+
 // show and hide for insurance type
 function insType() {
   var x = document.getElementById("insurancetype");
@@ -14,9 +15,9 @@ function insType() {
   }
 }
 
-// show and hide for physician care
-function physicianCare() {
-  var x = document.getElementById("physiciancare");
+// show and hide for allergy
+function allergyYes() {
+  var x = document.getElementById("allergyyes");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -24,9 +25,9 @@ function physicianCare() {
   }
 }
 
-// show and hide for current supplement
-function currentSupp() {
-  var x = document.getElementById("currentsupplement");
+// show and hide for marital status
+function marriedDetail() {
+  var x = document.getElementById("married-group");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -34,9 +35,10 @@ function currentSupp() {
   }
 }
 
-// show and hide for pregnancy report
-function pregnantReport() {
-  var x = document.getElementById("pregnantreport");
+
+// show and hide on yes and no
+function smokeYes() {
+  var x = document.getElementById("smokeyes");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -44,9 +46,8 @@ function pregnantReport() {
   }
 }
 
-// show and hide for smoke
-function smokeCigrate() {
-  var x = document.getElementById("smokecigrate");
+function smokeNo() {
+  var x = document.getElementById("smokeno");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -54,69 +55,8 @@ function smokeCigrate() {
   }
 }
 
-// show and hide for diabetes
-function diaBetes() {
-  var x = document.getElementById("diabetes_group");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for pre-medication
-function preMedication() {
-  var x = document.getElementById("pre-medication");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for illness
-function illNess() {
-  var x = document.getElementById("illness");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for x-ray
-function xrayTaken() {
-  var x = document.getElementById("xraytaken");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for dental problem
-function dentalProblem() {
-  var x = document.getElementById("dental_problem");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for gum disease
-function gumDisease() {
-  var x = document.getElementById("gum_disease");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide for former dentist
-function formerDentist() {
-  var x = document.getElementById("former_dentist");
+function smokeQuit() {
+  var x = document.getElementById("smokequit");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -125,16 +65,64 @@ function formerDentist() {
 }
 
 // show and hide on yes and no
-$("select#any_alcohol").change(function(){
-    if($.trim($('#any_alcohol').val()) == 'Yes')
-	{
-		$('#alcohol_group').show();
-	}
-	else
-	{
-		$('#alcohol_group').hide();
-	}
-});
+function drugsYes() {
+  var x = document.getElementById("drugsyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function alcohalYes() {
+  var x = document.getElementById("alcohalyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function waterYes() {
+  var x = document.getElementById("wateryes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function exerciseYes() {
+  var x = document.getElementById("exerciseyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function employYes() {
+  var x = document.getElementById("employyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function bodyPain() {
+  var x = document.getElementById("bodypain");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 
 
 $(function () {
