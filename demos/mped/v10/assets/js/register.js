@@ -15,9 +15,19 @@ function insType() {
   }
 }
 
-// show and hide on yes and no
-function smoke() {
-  var x = document.getElementById("smoker_group");
+// show and hide for allergy
+function allergyYes() {
+  var x = document.getElementById("allergyyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide for marital status
+function marriedDetail() {
+  var x = document.getElementById("married-group");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -27,8 +37,86 @@ function smoke() {
 
 
 // show and hide on yes and no
-function alcohal() {
-  var x = document.getElementById("alcohol_group");
+function smokeYes() {
+  var x = document.getElementById("smokeyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function smokeNo() {
+  var x = document.getElementById("smokeno");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function smokeQuit() {
+  var x = document.getElementById("smokequit");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function drugsYes() {
+  var x = document.getElementById("drugsyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function alcohalYes() {
+  var x = document.getElementById("alcohalyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function waterYes() {
+  var x = document.getElementById("wateryes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function exerciseYes() {
+  var x = document.getElementById("exerciseyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function employYes() {
+  var x = document.getElementById("employyes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show and hide on yes and no
+function bodyPain() {
+  var x = document.getElementById("bodypain");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -48,108 +136,104 @@ $(function () {
 });
 
 // show and hide on yes and no
-function pregnancy() {
-  var x = document.getElementById("pregnancy_group");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+$("select#pregnancy_comp").change(function(){
+    if($.trim($('#pregnancy_comp').val()) == 'Yes')
+	{
+		$('#pregnancy_group').show();
+	}
+	else
+	{
+		$('#pregnancy_group').hide();
+	}
+});
 
 // show and hide on yes and no
-function admHospital() {
-  var x = document.getElementById("hospital_admission_group");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-
-// show and hide on yes and no
-function anyIllness() {
-  var x = document.getElementById("any_illness_group");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide on yes and no
-function anymedication() {
-  var x = document.getElementById("any_medication_group");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// show and hide on yes and no
-function anyallergy() {
-  var x = document.getElementById("any_allergy_group");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+$("select#hospital_admission").change(function(){
+    if($.trim($('#hospital_admission').val()) == 'Yes')
+	{
+		$('#hospital_admission_group').show();
+	}
+	else
+	{
+		$('#hospital_admission_group').hide();
+	}
+});
 
 
 // show and hide on yes and no
-function motherHealth() {
-  var x = document.getElementById("mother_healthy_group");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+$("select#any_illness").change(function(){
+    if($.trim($('#any_illness').val()) == 'Yes')
+	{
+		$('#any_illness_group').show();
+	}
+	else
+	{
+		$('#any_illness_group').hide();
+	}
+});
+
+
+// show and hide on yes and no
+$("select#mother_healthy").change(function(){
+    if($.trim($('#mother_healthy').val()) == 'No')
+	{
+		$('#mother_healthy_group').show();
+	}
+	else
+	{
+		$('#mother_healthy_group').hide();
+	}
+});
 
 // show and hide on No and no
-function fatherHealth() {
-  var x = document.getElementById("father_health_group");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+$("select#father_health").change(function(){
+    if($.trim($('#father_health').val()) == 'No')
+	{
+		$('#father_health_group').show();
+	}
+	else
+	{
+		$('#father_health_group').hide();
+	}
+});
 
 // show and hide on No and no
-function siblingHealth() {
-  var x = document.getElementById("sibling_group");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+$("select#sibling_health").change(function(){
+    if($.trim($('#sibling_health').val()) == 'No')
+	{
+		$('#sibling_group').show();
+	}
+	else
+	{
+		$('#sibling_group').hide();
+	}
+});
 
 
 // show and hide on No and no
-function paternalHealth() {
-  var x = document.getElementById("pgrandparent_group");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+$("select#pgrandparent").change(function(){
+    if($.trim($('#pgrandparent').val()) == 'No')
+	{
+		$('#pgrandparent_group').show();
+	}
+	else
+	{
+		$('#pgrandparent_group').hide();
+	}
+});
 
 
 // show and hide on No and no
-function maternalHealth() {
-  var x = document.getElementById("mgrandparent_group");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+$("select#mgrandparent").change(function(){
+    if($.trim($('#mgrandparent').val()) == 'No')
+	{
+		$('#mgrandparent_group').show();
+	}
+	else
+	{
+		$('#mgrandparent_group').hide();
+	}
+});
 
 
 
