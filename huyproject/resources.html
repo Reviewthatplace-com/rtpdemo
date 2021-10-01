@@ -293,7 +293,7 @@
                     <li>
                         <a href="" >
                             <i class="glyph-icon icon-cog"></i>
-                            <span>Workflow</span>
+                            <span>Operations Settings</span>
                         </a>
                         <div class="sidebar-submenu">
                 
@@ -364,14 +364,14 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="patients.html" >
                             <i class="glyph-icon icon-users"></i>
                             <span>Patients</span>
                             <span class="bs-badge badge-success">68</span>
                         </a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="#" >
                             <i class="glyph-icon icon-calendar"></i>
                             <span>Check-In</span>
@@ -491,6 +491,13 @@
                         </div> 
                     </li> -->
                     <li>
+                      <a href="readytobill.html" title="Elements">
+                          <i class="glyph-icon icon-money"></i>
+                          <span>Billing</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
+                    <!-- <li>
                         <a href="#" >
                             <i class="glyph-icon icon-money"></i>
                             <span>Billing</span>
@@ -503,14 +510,14 @@
                                 <li><a href="missinginformation.html" ><span>Missing Information</span></a></li>
                                 <li><a href="cleanandclear.html" ><span>Clean & Clear</span></a></li>
                                 <li><a href="submittedclaims.html" ><span>Submitted Claims</span></a></li>
-                                <!--<li><a href="followupneeded.html" ><span>Follow up Needed</span></a></li>
+                                <li><a href="followupneeded.html" ><span>Follow up Needed</span></a></li>
                                 <li><a href="patientresponsibility.html" ><span>Patient Responsibility</span></a></li>
                                 <li><a href="denied.html" ><span>Denied</span></a></li>
-                                <li><a href="paid.html" ><span>Paid</span></a></li>-->
+                                <li><a href="paid.html" ><span>Paid</span></a></li>
                             </ul>
                 
                         </div>
-                    </li>
+                    </li> -->
 
                     <!-- <li class="header"><span>Reports</span></li>  
                     <li>
@@ -805,14 +812,14 @@
         <tr>
             <th>Action</th>
             <th>Status</th>
-            <th>Location ID</th>
-            <th>Location Name</th>
+            <th>Resource ID</th>
+            <th>Resource Name</th>
             <!-- <th>Street</th>
             <th>City</th>
             <th>State</th>
             <th>Zip</th>
             <th>Email</th> -->
-            <th>Phone</th>
+            <th>Description</th>
             <th>Created Date</th>
         </tr>
     </thead>
@@ -821,14 +828,14 @@
         <tr>
             <th>Action</th>
             <th>Status</th>
-            <th>Location ID</th>
-            <th>Location Name</th>
+            <th>Resource ID</th>
+            <th>Resource Name</th>
             <!-- <th>Street</th>
             <th>City</th>
             <th>State</th>
             <th>Zip</th>
             <th>Email</th> -->
-            <th>Phone</th>
+            <th>Description</th>
             <th>Created Date</th>
         </tr>
     </tfoot>
@@ -843,6 +850,7 @@
                        <li><a href="#" data-toggle="modal" data-target="#keyModal">Private Key</a></li>
                        <li><a href="#" data-toggle="modal" data-target="#scheduleModal">Schedule</a></li>
                        <li><a href="#" data-toggle="modal" data-target="" class="locations-archive-started locations-archive-success locations-archive-failed">Archive</a></li> -->
+                       <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
                        <li><a href="#" data-toggle="modal" data-target="#editModal">Edit</a></li>
                     </ul>
                </div>
@@ -850,14 +858,14 @@
             <td>
                 <span class="bs-label label-success">Active</span>
             </td>
-            <td>LID-1-1</td>
+            <td>RID-1-1</td>
             <td>OC FAIR GROUND</td>
             <!-- <td>7037 Rose Ave</td>
             <td>Orlando</td>
             <td>FL</td>
             <td>32810</td>
             <td>x@gmail.com</td> -->
-            <td>888-503-1636</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. </td>
             <td>10/15/2020</td>
         </tr>
         <tr>
@@ -869,6 +877,7 @@
                        <li><a href="#" data-toggle="modal" data-target="#keyModal">Private Key</a></li>
                        <li><a href="#" data-toggle="modal" data-target="#scheduleModal">Schedule</a></li>
                        <li><a href="#" data-toggle="modal" data-target="" class="locations-active-started locations-active-success locations-active-failed">Active</a></li> -->
+                       <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
                        <li><a href="#" data-toggle="modal" data-target="#editModal">Edit</a></li>
                     </ul>
                </div>
@@ -876,14 +885,14 @@
             <td>
                 <span class="bs-label label-danger">Archive</span>
             </td>
-            <td>LID-1-2</td>
+            <td>RID-1-2</td>
             <td>OC FAIR GROUND</td>
             <!-- <td>7037 Rose Ave</td>
             <td>Orlando</td>
             <td>FL</td>
             <td>32810</td>
             <td>x@gmail.com</td> -->
-            <td>888-503-1636</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. </td>
             <td>10/15/2020</td>
         </tr>
     </tbody>
@@ -901,13 +910,39 @@
         </div>
     </div>
 
+
+
+
+<!-- Tracking QR -->
+  <div class="modal fade" id="tracking_qr" tabindex="-1" role="dialog" aria-labelledby="keyModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content modal-sm">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Tracking QR</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <img class="img-fluid" src="assets/images/qr1.png" alt="" width="300">
+      </div>
+      <!--body -->
+      </div>
+    </div>
+  </div>
+<!-- Tracking QR -->
+
 <!-- Add New Modal -->
 <div class="modal fade" id="addnewModal" tabindex="-1" role="dialog" aria-labelledby="addnewModalLabel">
     <div class="modal-dialog generalmodalws" role="document">
       <div class="modal-content generalmodalws">
         <!-- Header -->
       <div class="modal-header light-blue darken-3 white-text">
-        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add New Location</h4>
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add New Resource</h4>
         <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
           <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
         </button>
@@ -937,12 +972,12 @@
           </div> -->
           <!-- Time Zone -->
 
-          <!-- Location Name -->
+          <!-- Resource Name -->
            <div class="form-group">
-            <label for="locationName">Location Name</label>
-            <input name="locationName" class="form-control" id="locationName" required="" type="text">
+            <label for="ResourceName">Resource Name</label>
+            <input name="ResourceName" class="form-control" id="ResourceName" required="" type="text">
            </div>
-          <!-- Location Name -->    
+          <!-- Resource Name -->    
 
           <!-- street -->
             <!-- <div class="form-group">
@@ -1030,13 +1065,14 @@
             </div> -->
           <!--Email-->    
 
-          <!--Phone Number-->
+          <!--Description-->
             <div class="form-group">
-                <label for="phoneNumber">Phone Number</label>
-                 <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
-            </div>
-          <!--Phone Number-->
-          <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover locations-add-started locations-add-success locations-add-failed"><span >Add Location</span><i class="glyph-icon icon-arrow-right"></i></button>
+              <label for="">Description</label>
+               <textarea name="" class="form-control" id="" cols="20" rows="5"></textarea>
+          </div>
+        <!--Description-->
+
+          <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover locations-add-started locations-add-success locations-add-failed"><span >Add Resource</span><i class="glyph-icon icon-arrow-right"></i></button>
         </form>
       </div>
       <!--body -->
@@ -1055,7 +1091,7 @@
     <div class="modal-content generalmodalws">
       <!-- Header -->
     <div class="modal-header light-blue darken-3 white-text">
-      <h4 class="modalh4"><i class="fab fa-wpforms"></i>Edit OC Fair Ground</h4>
+      <h4 class="modalh4"><i class="fab fa-wpforms"></i>Update Resource</h4>
       <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
         <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
       </button>
@@ -1078,12 +1114,12 @@
         </div> -->
         <!-- Time Zone -->
 
-        <!-- Location Name -->
+        <!-- Resource Name -->
          <div class="form-group">
-          <label for="locationName">Location Name</label>
-          <input name="locationName" class="form-control" id="locationName" required="" type="text">
+          <label for="ResourceName">Resource Name</label>
+          <input name="ResourceName" class="form-control" id="ResourceName" required="" type="text">
          </div>
-        <!-- Location Name -->    
+        <!-- Resource Name -->    
 
         <!-- street -->
           <!-- <div class="form-group">
@@ -1171,13 +1207,14 @@
           </div> -->
         <!--Email-->    
 
-        <!--Phone Number-->
-          <div class="form-group">
-              <label for="phoneNumber">Phone Number</label>
-               <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
-          </div>
-        <!--Phone Number-->
-        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover locations-edit-started locations-edit-success locations-edit-failed"><span >Update OC FAIR GROUND</span><i class="glyph-icon icon-arrow-right"></i></button>
+          <!--Description-->
+            <div class="form-group">
+                <label for="">Description</label>
+                 <textarea name="" class="form-control" id="" cols="20" rows="5"></textarea>
+            </div>
+          <!--Description-->
+
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover locations-edit-started locations-edit-success locations-edit-failed"><span >Update Resource</span><i class="glyph-icon icon-arrow-right"></i></button>
       </form>
     </div>
     <!--body -->

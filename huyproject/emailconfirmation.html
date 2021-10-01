@@ -280,7 +280,7 @@
                     <li>
                         <a href="" >
                             <i class="glyph-icon icon-cog"></i>
-                            <span>Workflow</span>
+                            <span>Operations Settings</span>
                         </a>
                         <div class="sidebar-submenu">
                 
@@ -351,14 +351,14 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="patients.html" >
                             <i class="glyph-icon icon-users"></i>
                             <span>Patients</span>
                             <span class="bs-badge badge-success">68</span>
                         </a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="#" >
                             <i class="glyph-icon icon-calendar"></i>
                             <span>Check-In</span>
@@ -478,6 +478,13 @@
                         </div> 
                     </li> -->
                     <li>
+                      <a href="readytobill.html" title="Elements">
+                          <i class="glyph-icon icon-money"></i>
+                          <span>Billing</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
+                    <!-- <li>
                         <a href="#" >
                             <i class="glyph-icon icon-money"></i>
                             <span>Billing</span>
@@ -490,14 +497,14 @@
                                 <li><a href="missinginformation.html" ><span>Missing Information</span></a></li>
                                 <li><a href="cleanandclear.html" ><span>Clean & Clear</span></a></li>
                                 <li><a href="submittedclaims.html" ><span>Submitted Claims</span></a></li>
-                                <!--<li><a href="followupneeded.html" ><span>Follow up Needed</span></a></li>
+                                <li><a href="followupneeded.html" ><span>Follow up Needed</span></a></li>
                                 <li><a href="patientresponsibility.html" ><span>Patient Responsibility</span></a></li>
                                 <li><a href="denied.html" ><span>Denied</span></a></li>
-                                <li><a href="paid.html" ><span>Paid</span></a></li>-->
+                                <li><a href="paid.html" ><span>Paid</span></a></li>
                             </ul>
                 
                         </div>
-                    </li>
+                    </li> -->
 
                     <!-- <li class="header"><span>Reports</span></li>  
                     <li>
@@ -795,6 +802,7 @@
                     <div class="btn-group">
                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
                         <ul class="dropdown-menu" role="menu">
+                           <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
                            <li><a href="#" data-toggle="modal" data-target="#emaileditModal">Edit</a></li>
                            <li><a href="#" data-toggle="modal" data-target="" class="email-archive-started email-archive-success email-archive-failed">Archive</a></li>
                         </ul>
@@ -815,6 +823,7 @@
                     <div class="btn-group">
                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
                             <li><a href="#" data-toggle="modal" data-target="#emaileditModal">Edit</a></li>
                             <li><a href="#" data-toggle="modal" data-target="" class="email-active-started email-active-success email-active-failed">Active</a></li>
                         </ul>
@@ -843,6 +852,31 @@
             </div>
         </div>
     </div>
+
+
+<!-- Tracking QR -->
+<div class="modal fade" id="tracking_qr" tabindex="-1" role="dialog" aria-labelledby="keyModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content modal-sm">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Tracking QR</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <img class="img-fluid" src="assets/images/qr1.png" alt="" width="300">
+      </div>
+      <!--body -->
+      </div>
+    </div>
+  </div>
+<!-- Tracking QR -->
+
 
 <!-- Add Modal -->
   <div class="modal fade" id="emailaddModal" tabindex="-1" role="dialog" aria-labelledby="emailaddModalLabel">
