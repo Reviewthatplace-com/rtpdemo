@@ -280,19 +280,19 @@
                     <li>
                         <a href="" >
                             <i class="glyph-icon icon-cog"></i>
-                            <span>Intake</span>
+                            <span>Workflow</span>
                         </a>
                         <div class="sidebar-submenu">
                 
                             <ul>
-                                <li><a href="locations.html" ><span>Testing Locations</span></a></li>
+                                <li><a href="resources.html" ><span>Resources</span></a></li>
                                 <!-- <li><a href="products.html" ><span>Products</span></a></li>
                                 <li><a href="consents.html" ><span>Consents</span></a></li>
                                 <li><a href="paymenttypes.html" ><span>Payment Types</span></a></li>
                                 <li><a href="demo.html" ><span>Demo</span></a></li>
                                 <li><a href="questionnaire.html" ><span>Questionnaire</span></a></li>
                                 <li><a href="lab.html" ><span>Labs</span></a></li> -->
-                                <li><a href="emailconfirmation.html" ><span>Email Confirmation</span></a></li>
+                                <li><a href="emailconfirmation.html" ><span>Products</span></a></li>
                                 <!-- <li><a href="resultDelivery.html" ><span>Result Delivery</span></a></li> -->
                             </ul>
                         </div> 
@@ -746,7 +746,7 @@
 </script>
 
 <div id="page-title">
-<legend class="font-weight-bold">Email Confirmation</legend>
+<legend class="font-weight-bold">Products</legend>
 </div>
 
 <div class="panel">
@@ -757,7 +757,7 @@
         <div class="row">
             <div class="col modalbutton">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-success float-right plus" data-toggle="modal" data-target="#emailaddModal">
+                <button type="button" class="btn btn-success float-right plus mb-1" data-toggle="modal" data-target="#emailaddModal">
                     +
                 </button>
                 <!-- Button trigger modal -->
@@ -771,9 +771,9 @@
             <tr>
                 <th>Action</th>
                 <th>Status</th>
-                <th>Email ID</th>
-                <th>Email Name</th>
-                <th>Email Content</th>
+                <th>Products ID</th>
+                <th>Products Name</th>
+                <th>Products Content</th>
                 <th>Products</th>
             </tr>
         </thead>
@@ -782,9 +782,9 @@
             <tr>
                 <th>Action</th>
                 <th>Status</th>
-                <th>Email ID</th>
-                <th>Email Name</th>
-                <th>Email Content</th>
+                <th>Products ID</th>
+                <th>Products Name</th>
+                <th>Products Content</th>
                 <th>Products</th>
             </tr>
         </tfoot>
@@ -803,9 +803,9 @@
                 <td>
                     <span class="bs-label label-success">Active</span>
                 </td>
-                <td>EID-1-1</td>
-                <td>Email Name</td>
-                <td>Email Content</td>
+                <td>PID-1-1</td>
+                <td>Products Name</td>
+                <td>Products Content</td>
                 <td>
                     <span class="bs-label label-danger">Covid-19</span>
                 </td>
@@ -823,9 +823,9 @@
                 <td>
                     <span class="bs-label label-danger">Inactive</span>
                 </td>
-                <td>EID-1-2</td>
-                <td>Email Name</td>
-                <td>Email Content</td>
+                <td>PID-1-2</td>
+                <td>Products Name</td>
+                <td>Products Content</td>
                 <td>
                     <span class="bs-label label-primary">Flu</span>
                 </td>
@@ -850,7 +850,7 @@
       <div class="modal-content generalmodalws">
         <!-- Header -->
       <div class="modal-header light-blue darken-3 white-text">
-        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Email</h4>
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Products</h4>
         <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
           <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
         </button>
@@ -861,20 +861,20 @@
       <div class="modal-body">
         <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
 
-          <!-- Email Name -->
+          <!-- Products Name -->
           <div class="form-group">
-            <label for="Name">Email Name</label>
+            <label for="Name">Products Name</label>
             <input name="Name" class="form-control" id="Name" required="" type="text">
         </div>
-        <!-- Email Name -->
+        <!-- Products Name -->
 
-        <!-- Email Content -->
+        <!-- Products Content -->
         <div class="form-group">
-            <label for="">Email Content</label>
+            <label for="">Products Content</label>
             <textarea name="" id="" class="form-control"></textarea>
         </div>
-        <!-- Email Content -->
-        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-addc-started email-addc-success email-addc-failed"><span >ADD Email</span><i class="glyph-icon icon-arrow-right"></i></button>
+        <!-- Products Content -->
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-addc-started email-addc-success email-addc-failed"><span >ADD Products</span><i class="glyph-icon icon-arrow-right"></i></button>
         </form>
       </div>
       <!--body -->
@@ -889,7 +889,7 @@
       <div class="modal-content generalmodalws">
         <!-- Header -->
       <div class="modal-header light-blue darken-3 white-text">
-        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Update email</h4>
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Update Products</h4>
         <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
           <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
         </button>
@@ -900,20 +900,20 @@
       <div class="modal-body">
         <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
 
-          <!-- email Name -->
+          <!-- Products Name -->
           <div class="form-group">
-            <label for="Name">email Name</label>
+            <label for="Name">Products Name</label>
             <input name="Name" class="form-control" id="Name" required="" type="text">
         </div>
-        <!-- email Name -->
+        <!-- Products Name -->
 
-        <!-- email Content -->
+        <!-- Products Content -->
         <div class="form-group">
-            <label for="">email Content</label>
+            <label for="">Products Content</label>
             <textarea name="" id="" class="form-control"></textarea>
         </div>
-        <!-- email Content -->
-        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-editc-started email-editc-success email-editc-failed"><span >Update Email</span><i class="glyph-icon icon-arrow-right"></i></button>
+        <!-- Products Content -->
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-editc-started email-editc-success email-editc-failed"><span >Update Products</span><i class="glyph-icon icon-arrow-right"></i></button>
         </form>
       </div>
       <!--body -->
