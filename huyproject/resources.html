@@ -120,6 +120,8 @@
 <link rel="stylesheet" type="text/css" href="assets/widgets/uniform/uniform.css">
 <link rel="stylesheet" type="text/css" href="assets/widgets/wizard/wizard.css">
 <link rel="stylesheet" type="text/css" href="assets/widgets/xeditable/xeditable.css">
+<link rel="stylesheet" type="text/css" href="assets/node_modules/dropify/dist/css/dropify.min.css">
+
 
 <!-- SNIPPETS -->
 
@@ -161,17 +163,55 @@
     <!--<script type="text/javascript" src="assets/js-core/transition.js"></script>-->
     <script type="text/javascript" src="assets/js-core/modernizr.js"></script>
     <script type="text/javascript" src="assets/js-core/jquery-cookie.js"></script>
-
-
-
-
-
     <script type="text/javascript">
         $(window).load(function(){
             setTimeout(function() {
                 $('#loading').fadeOut( 400, "linear" );
             }, 300);
         });
+    </script>
+    <script type="text/javascript" src="assets/node_modules/dropify/dist/js/dropify.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          // Basic
+          $('.dropify').dropify();
+  
+          // Translated
+          $('.dropify-fr').dropify({
+              messages: {
+                  default: 'Glissez-déposez un fichier ici ou cliquez',
+                  replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                  remove: 'Supprimer',
+                  error: 'Désolé, le fichier trop volumineux'
+              }
+          });
+  
+          // Used events
+          var drEvent = $('#input-file-events').dropify();
+  
+          drEvent.on('dropify.beforeClear', function(event, element) {
+              return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+          });
+  
+          drEvent.on('dropify.afterClear', function(event, element) {
+              alert('File deleted');
+          });
+  
+          drEvent.on('dropify.errors', function(event, element) {
+              console.log('Has Errors');
+          });
+  
+          var drDestroy = $('#input-file-to-destroy').dropify();
+          drDestroy = drDestroy.data('dropify')
+          $('#toggleDropify').on('click', function(e) {
+              e.preventDefault();
+              if (drDestroy.isDropified()) {
+                  drDestroy.destroy();
+              } else {
+                  drDestroy.init();
+              }
+          })
+      });
     </script>
 
 
@@ -232,6 +272,9 @@
         </div><!-- #header-nav-left -->
     
         <div id="header-nav-right">
+          <a class="header-btn" id="logout-btn" href="javascript:void(0)" data-toggle="modal" data-target="#QR">
+             <img src="assets/images/whitebarcode.png" alt="" style="height: 38px; margin-top: -3px;">
+          </a>
             <div class="dropdown" id="dashnav-btn">
                 <a href="#" data-toggle="dropdown" data-placement="bottom" class="popover-button-header tooltip-button" title="Dashboard Quick Menu">
                     <i class="glyph-icon icon-linecons-cog"></i>
@@ -493,7 +536,7 @@
                     <li>
                       <a href="readytobill.html" title="Elements">
                           <i class="glyph-icon icon-money"></i>
-                          <span>Billing</span>
+                          <span>Resource 1</span>
                           <span class="bs-badge badge-yellow">33</span>
                       </a>
                     </li>
@@ -911,6 +954,28 @@
     </div>
 
 
+<!-- QR Modal -->
+<div class="modal fade" id="QR" tabindex="-1" role="dialog" aria-labelledby="QRLabel">
+  <div class="modal-dialog generalmodalws" role="document">
+    <div class="modal-content">
+      <!-- Header -->
+    <div class="modal-header light-blue darken-3 white-text">
+      <h4 class="modalh4"><i class="fab fa-wpforms"></i>QR</h4>
+      <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+        <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+      </button>
+    </div>
+    <!-- Header -->
+
+    <!-- Body -->
+    <div class="modal-body">
+      <legend class="legendtitle">QR SCANNER HERE</legend>
+    </div>
+    <!--body -->
+    </div>
+  </div>
+</div>
+<!-- QR Modal -->
 
 
 <!-- Tracking QR -->
@@ -1069,8 +1134,15 @@
             <div class="form-group">
               <label for="">Description</label>
                <textarea name="" class="form-control" id="" cols="20" rows="5"></textarea>
-          </div>
+            </div>
         <!--Description-->
+
+          <!--Upload Image-->
+            <div class="form-group">
+              <label for="">Upload Image</label>
+              <input type="file" id="input-file-now" class="dropify" />
+            </div>
+        <!--Upload Image-->
 
           <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover locations-add-started locations-add-success locations-add-failed"><span >Add Resource</span><i class="glyph-icon icon-arrow-right"></i></button>
         </form>
@@ -1213,6 +1285,13 @@
                  <textarea name="" class="form-control" id="" cols="20" rows="5"></textarea>
             </div>
           <!--Description-->
+
+          <!--Upload Image-->
+            <div class="form-group">
+              <label for="">Upload Image</label>
+              <input type="file" id="input-file-now" class="dropify" />
+            </div>
+        <!--Upload Image-->
 
         <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover locations-edit-started locations-edit-success locations-edit-failed"><span >Update Resource</span><i class="glyph-icon icon-arrow-right"></i></button>
       </form>
@@ -1928,6 +2007,10 @@
 <!--scheduleedit Modal -->
 
 
+
+
+<!-- Dropzone Plugin JavaScript -->
+<script src="assets/widgets/dropzone/dropzone.js"></script>
 
 <!-- Input switch -->
 <link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch.css">

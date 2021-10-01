@@ -236,6 +236,9 @@
 
         
             <div id="header-nav-right">
+                <a class="header-btn" id="logout-btn" href="javascript:void(0)" data-toggle="modal" data-target="#QR">
+                   <img src="assets/images/whitebarcode.png" alt="" style="height: 38px; margin-top: -3px;">
+                </a>
                 <div class="dropdown" id="dashnav-btn">
                     <a href="#" data-toggle="dropdown" data-placement="bottom" class="popover-button-header tooltip-button" title="Dashboard Quick Menu">
                         <i class="glyph-icon icon-linecons-cog"></i>
@@ -506,7 +509,7 @@
                     <li>
                       <a href="readytobill.html" title="Elements">
                           <i class="glyph-icon icon-money"></i>
-                          <span>Billing</span>
+                          <span>Resource 1</span>
                           <span class="bs-badge badge-yellow">33</span>
                       </a>
                     </li>
@@ -788,7 +791,7 @@
 
 <div class="row">
     <div class="col">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-xl-3">
                     <label for="street">Start Date of Service:</label>
                 <div class="form-group">
@@ -816,7 +819,7 @@
             <div class="col-xl-3" style="margin-top: 22px;">
                 <button type="button" class="btn btn-success">Submit</button>
             </div>
-        </div>
+        </div> -->
 
         <div class="row tiles">
             <div class="col-3 col-md-3 col-xl-3">
@@ -1163,26 +1166,27 @@
 
         <!--Billing Start-->    
         <div class="row tiles">
-            <legend class="legendtitle">Billing</legend>
+            <legend class="legendtitle">Operations</legend>
 
             <div class="col-3 col-md-3 col-xl-3 mb-3">
                 <a href="readytobill.html" class="a_underline" target="_blank">
                     <div class="card card-stats">
                         <div class="card-header card-header-success card-header-icon">
-                        <div class="card-icon">
-                            <h1 class="card-title">90</h1>
-                        </div>
+                            <div class="card-icon">
+                                <h1 class="card-title">90</h1>
+                            </div>
                         </div>
                         <div class="card-footer">
-                            <p class="font-weight-bold font-size-18">READY TO BILL</p>
+                            <p class="font-weight-bold font-size-18">Resource 1</p>
                         </div>
+                        <img src="assets/images/location-1.jpg" alt="" class="img-fluid" style="border-radius: 6px;">
                     </div>                    
                 </a>
 
             </div>
 
             <div class="col-3 col-md-3 col-xl-3 mb-3">
-             <a href="missinginformation.html" class="a_underline" target="_blank">
+             <a href="readytobill.html" class="a_underline" target="_blank">
                 <div class="card card-stats">
                     <div class="card-header card-header-success card-header-icon">
                     <div class="card-icon">
@@ -1190,14 +1194,15 @@
                     </div>
                     </div>
                     <div class="card-footer">
-                        <p class="font-weight-bold font-size-18">MISSING INFORMATION</p>
+                        <p class="font-weight-bold font-size-18">Resource 2</p>
                     </div>
+                        <img src="assets/images/location-1.jpg" alt="" class="img-fluid" style="border-radius: 6px;">
                 </div>
              </a>
             </div>
 
             <div class="col-3 col-md-3 col-xl-3 mb-3">
-             <a href="cleanandclear.html" class="a_underline" target="_blank">
+             <a href="readytobill.html" class="a_underline" target="_blank">
                 <div class="card card-stats">
                     <div class="card-header card-header-success card-header-icon">
                     <div class="card-icon">
@@ -1205,14 +1210,15 @@
                     </div>
                     </div>
                     <div class="card-footer">
-                        <p class="font-weight-bold font-size-18">CLEAN & CLEAR</p>
+                        <p class="font-weight-bold font-size-18">Resource 3</p>
                     </div>
+                        <img src="assets/images/location-1.jpg" alt="" class="img-fluid" style="border-radius: 6px;">
                 </div>
              </a>
             </div>
 
             <div class="col-3 col-md-3 col-xl-3 mb-3">
-             <a href="submittedclaims.html" class="a_underline" target="_blank">
+             <a href="sreadytobill.html" class="a_underline" target="_blank">
                 <div class="card card-stats">
                     <div class="card-header card-header-success card-header-icon">
                     <div class="card-icon">
@@ -1220,8 +1226,9 @@
                     </div>
                     </div>
                     <div class="card-footer">
-                        <p class="font-weight-bold font-size-18">SUBMITTED CLAIMS</p>
+                        <p class="font-weight-bold font-size-18">Resource 4</p>
                     </div>
+                        <img src="assets/images/location-1.jpg" alt="" class="img-fluid" style="border-radius: 6px;">
                 </div>
              </a>
             </div>
@@ -1288,6 +1295,30 @@
             </div>
         </div>
     </div>
+
+    
+<!-- QR Modal -->
+<div class="modal fade" id="QR" tabindex="-1" role="dialog" aria-labelledby="QRLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>QR</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <legend class="legendtitle">QR SCANNER HERE</legend>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- QR Modal -->
 
 <!-- Profile Modal -->
 <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel">

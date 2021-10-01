@@ -179,6 +179,28 @@
 
     <body>
 
+<!-- QR Modal -->
+<div class="modal fade" id="QR" tabindex="-1" role="dialog" aria-labelledby="QRLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>QR</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <legend class="legendtitle">QR SCANNER HERE</legend>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- QR Modal -->
 
 <!-- clean & clear modal -->
 <div class="modal fade" id="cleanandclearModal" tabindex="-1" role="dialog" aria-labelledby="checkinModalLabel">
@@ -206,7 +228,7 @@
                                     <li><a href="#tab7" data-toggle="tab">Payment type</a></li>
                                     <li><a href="#tab8" data-toggle="tab">Demo</a></li>
                                     <li><a href="#tab9" data-toggle="tab">Custom Demo Fields</a></li> -->
-                                    <li class="active"><a href="#tab11" data-toggle="tab">Missing Info</a></li>
+                                    <li class="active"><a href="#tab11" data-toggle="tab">Product Info</a></li>
                                 </ul>
                                 <div class="tab-content">
     
@@ -1353,20 +1375,21 @@
 
                                         <form enctype="multipart/form-data" method="post" siq_id="" class="">
                                             <div class="row">
-                                                <!-- Missing Information -->
+                                                <!-- Notes -->
                                                 <div class="form-group col-12">
-                                                    <label for="">Missing Information</label>
+                                                    <label for="">Notes</label>
                                                     <textarea name="" id="" class="form-control"></textarea>
                                                 </div>
-                                                <!-- Missing Information -->
+                                                <!-- Notes -->
 
                                                 <div class="form-group col-12" style="z-index: 1099 !important;">
-                                                            <label for="">Notify and Attach User</label>
+                                                            <label for="">Resource</label>
                                                             <div style="margin-top: -5px; padding: 5px;">
-                                                                <select name="" multiple data-placeholder="Choose User" class="chosen-select">
-                                                                        <option>Shakir Ansari</option>
-                                                                        <option>Ravi Agrawal</option>
-                                                                        <option>Saimun Hasan</option>
+                                                                <select name="" data-placeholder="Choose User" class="chosen-select">
+                                                                        <option>Choose Resource</option>
+                                                                        <option>Resource 1</option>
+                                                                        <option>Resource 2</option>
+                                                                        <option>Resource 3</option>
                                                                 </select>
                                                             </div>
                                                 </div>
@@ -1540,6 +1563,9 @@
             </div><!-- #header-nav-left -->
         
             <div id="header-nav-right">
+                <a class="header-btn" id="logout-btn" href="javascript:void(0)" data-toggle="modal" data-target="#QR">
+                   <img src="assets/images/whitebarcode.png" alt="" style="height: 38px; margin-top: -3px;">
+                </a>
                 <div class="dropdown" id="dashnav-btn">
                     <a href="#" data-toggle="dropdown" data-placement="bottom" class="popover-button-header tooltip-button" title="Dashboard Quick Menu">
                         <i class="glyph-icon icon-linecons-cog"></i>
@@ -1807,7 +1833,7 @@
                     <li>
                       <a href="readytobill.html" title="Elements">
                           <i class="glyph-icon icon-money"></i>
-                          <span>Billing</span>
+                          <span>Resource 1</span>
                           <span class="bs-badge badge-yellow">33</span>
                       </a>
                     </li>
@@ -2177,13 +2203,13 @@
             <th>Action</th>
             <!-- <th>Labels</th>
             <th>DOS</th> -->
-            <th>Appointment ID</th>
-            <th>Confirmation No</th>
+            <th>Product ID</th>
+            <!-- <th>Confirmation No</th> -->
             <!-- <th>Patient</th>
             <th>Payment</th> -->
-            <th>DX</th>
-            <th>CPT</th>
-            <!-- <th>Appointment</th> -->
+            <th>Product Name</th>
+            <!-- <th>CPT</th>
+            <th>Appointment</th> -->
         </tr>
     </thead>
         
@@ -2192,13 +2218,13 @@
             <th>Action</th>
             <!-- <th>Labels</th>
             <th>DOS</th> -->
-            <th>Appointment ID</th>
-            <th>Confirmation No</th>
+            <th>Product ID</th>
+            <!-- <th>Confirmation No</th> -->
             <!-- <th>Patient</th>
             <th>Payment</th> -->
-            <th>DX</th>
-            <th>CPT</th>
-            <!-- <th>Appointment</th> -->
+            <th>Product Name</th>
+            <!-- <th>CPT</th>
+            <th>Appointment</th> -->
         </tr>
     </tfoot>
         
@@ -2227,8 +2253,8 @@
                 04/25/2020
                 <label class="bs-label label-success labelwidth">30 Days</label> 
             </td> -->
-            <td class="font-bold">APTID-1-1</td>
-            <td class="font-bold">X34G56</td>
+            <td class="font-bold">PID-1-1</td>
+            <!-- <td class="font-bold">X34G56</td> -->
             <!-- <td>
                 PTID-1-2
                 <br>
@@ -2243,9 +2269,9 @@
                     <li>$45.00</li>
                 </ul>
             </td> -->
-            <td>DX</td>
-            <td>CPT</td>
-            <!-- <td style="width: 700px;">
+            <td>Product 1</td>
+            <!-- <td>CPT</td>
+            <td style="width: 700px;">
                 <ul class="list-unstyled">
                     <li class="font-bold">OC FAIR GROUND</li>
                     <li>10/25/2020</li>
@@ -2278,8 +2304,8 @@
                 <label class="bs-label label-yellow labelwidth">30 to 90 Days</label> 
             </td> -->
             </td>
-            <td class="font-bold">APTID-1-2</td>
-            <td class="font-bold">TR45H4</td>
+            <td class="font-bold">PID-1-2</td>
+            <!-- <td class="font-bold">TR45H4</td> -->
             <!-- <td>
                 PTID-1-1
                 <br>
@@ -2294,9 +2320,9 @@
                     <li>Valid</li>
                 </ul>
             </td> -->
-            <td>DX</td>
-            <td>CPT</td>
-            <!-- <td style="width: 700px;">
+            <td>Product 2</td>
+            <!-- <td>CPT</td>
+            <td style="width: 700px;">
                 <ul class="list-unstyled">
                     <li class="font-bold">OC FAIR GROUND</li>
                     <li>10/25/2020</li>
@@ -2305,57 +2331,6 @@
             </td> -->
         </tr>
 
-
-
-        <tr>
-            <td>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#cleanandclearModal">Edit</button>
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        <span class="sr-only">Toggle Dropdown</span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
-                        <!-- <li><a href="#" data-toggle="modal" data-target="">SOAP</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#profileModal">Profile</a></li>
-                       <li><a href="#" data-toggle="modal" data-target="#mergeModal">Merge Pt</a></li> -->
-                    </ul>
-                </div>
-            </td>
-            <!-- <td>
-                <label class="bs-label label-success labelwidth">Est. PT</label>
-                <label class="bs-label label-danger labelwidth">Covid</label>
-            </td>
-            <td>
-                04/25/2020
-                <label class="bs-label label-danger labelwidth">>90 days</label> </td>
-            </td> -->
-            <td class="font-bold">APTID-1-2</td>
-            <td class="font-bold">TR45H4</td>
-            <!-- <td>
-                PTID-1-2
-                <br>
-                <span class="font-bold">Shakir Ansari</span>
-                <br>
-                11/29/1982
-            </td>
-            <td style="width: 300px;">
-                <ul class="list-unstyled">
-                    <li class="font-bold">P-Verify</li>
-                    <li>22523366523</li>
-                    <li>Valid</li>
-                </ul>
-            </td> -->
-            <td>DX</td>
-            <td>CPT</td>
-            <!-- <td style="width: 700px;">
-                <ul class="list-unstyled">
-                    <li class="font-bold">OC FAIR GROUND</li>
-                    <li>10/25/2020</li>
-                    <li>8:00 PM - 8:30 PM</li>
-                </ul>
-            </td> -->
-        </tr>
     </tbody>
         
 </table>
