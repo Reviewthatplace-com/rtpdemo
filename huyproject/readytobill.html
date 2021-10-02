@@ -229,7 +229,7 @@
       <div class="modal-content" style="width: 49rem;">
         <!-- Header -->
       <div class="modal-header light-blue darken-3 white-text">
-        <h4 class="modalh4"><i class="fab fa-wpforms"></i>QR</h4>
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Assemble </h4>
         <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
           <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
         </button>
@@ -238,19 +238,27 @@
 
       <!-- Body -->
       <div class="modal-body">
+        <section class="section mt-3 arfstep1 active">
+            <legend class="legendtitle">Scan Product QR</legend>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover arfsteponenext col-12"><span >Add Materials</span><i class="glyph-icon icon-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
 
-        <section class="section mt-3">
-            <legend class="legendtitle">Scan QR</legend>
+        <section class="section mt-3 arfstep2" style="display: none;">
+            <legend class="legendtitle">Scan Material QR</legend>
             
             <div class="row">
                 <div class="col-4">
-                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 workstation-scan"><span >Waste</span></button>                    
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 arfsteptwoback"><span >Back</span></button>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 workstation-scan"><span >Add to Product</span></button>                    
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12"><span >Waste</span></button>                    
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 workstation-scan"><span >Add Materials</span></button>                    
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 qr-scan"><span >Install Complete</span></button>                    
                 </div>
             </div>
         </section>
@@ -2325,7 +2333,7 @@
                     Admin
                 </button>
                 <ul class="dropdown-menu float-right" role="menu">
-                        <li><a href="#" class="" data-toggle="modal" data-target="#workstation-scan">Scan Workstation QR</a></li>
+                        <li><a href="#" class="" data-toggle="modal" data-target="#workstation-scan">Assemble</a></li>
                         <li><a href="assets/Billing Status - CSV Download.xlsx" target="_blank" class="onsiteact-csv-started onsiteact-csv-success onsiteact-csv-failed">CSV</a></li>
                  </ul>
                 <!-- Button trigger modal -->
