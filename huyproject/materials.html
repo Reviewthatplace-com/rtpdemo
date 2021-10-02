@@ -10,7 +10,7 @@
 
     <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-<title> Multi Uploader </title>
+<title> Huy Project </title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -60,8 +60,6 @@
 <link rel="stylesheet" type="text/css" href="assets/elements/tables.css">
 <link rel="stylesheet" type="text/css" href="assets/elements/tile-box.css">
 <link rel="stylesheet" type="text/css" href="assets/elements/timeline.css">
-
-
 
 <!-- ICONS -->
 
@@ -120,6 +118,7 @@
 <link rel="stylesheet" type="text/css" href="assets/widgets/uniform/uniform.css">
 <link rel="stylesheet" type="text/css" href="assets/widgets/wizard/wizard.css">
 <link rel="stylesheet" type="text/css" href="assets/widgets/xeditable/xeditable.css">
+<link rel="stylesheet" type="text/css" href="assets/node_modules/dropify/dist/css/dropify.min.css">
 
 <!-- SNIPPETS -->
 
@@ -161,17 +160,55 @@
     <!--<script type="text/javascript" src="assets/js-core/transition.js"></script>-->
     <script type="text/javascript" src="assets/js-core/modernizr.js"></script>
     <script type="text/javascript" src="assets/js-core/jquery-cookie.js"></script>
-
-
-
-
-
     <script type="text/javascript">
         $(window).load(function(){
             setTimeout(function() {
                 $('#loading').fadeOut( 400, "linear" );
             }, 300);
         });
+    </script>
+    <script type="text/javascript" src="assets/node_modules/dropify/dist/js/dropify.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          // Basic
+          $('.dropify').dropify();
+  
+          // Translated
+          $('.dropify-fr').dropify({
+              messages: {
+                  default: 'Glissez-déposez un fichier ici ou cliquez',
+                  replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                  remove: 'Supprimer',
+                  error: 'Désolé, le fichier trop volumineux'
+              }
+          });
+  
+          // Used events
+          var drEvent = $('#input-file-events').dropify();
+  
+          drEvent.on('dropify.beforeClear', function(event, element) {
+              return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+          });
+  
+          drEvent.on('dropify.afterClear', function(event, element) {
+              alert('File deleted');
+          });
+  
+          drEvent.on('dropify.errors', function(event, element) {
+              console.log('Has Errors');
+          });
+  
+          var drDestroy = $('#input-file-to-destroy').dropify();
+          drDestroy = drDestroy.data('dropify')
+          $('#toggleDropify').on('click', function(e) {
+              e.preventDefault();
+              if (drDestroy.isDropified()) {
+                  drDestroy.destroy();
+              } else {
+                  drDestroy.init();
+              }
+          })
+      });
     </script>
 
 
@@ -180,86 +217,94 @@
 
 
     <body>
-        <div id="sb-site">
-           <div id="loading">
-               <div class="spinner">
-                   <div class="bounce1"></div>
-                   <div class="bounce2"></div>
-                   <div class="bounce3"></div>
-               </div>
-           </div>
-       
-           <div id="page-wrapper">
-            <div id="page-header" class="bg-gradient-9">
-                <div id="mobile-navigation">
-                    <button id="nav-toggle" class="collapsed" data-toggle="collapse" data-target="#page-sidebar"><span></span></button>
-                    <a href="index.html" class="logo-content-small" title="MonarchUI"></a>
-                </div>
-                <div id="header-logo" class="logo-bg">
-                    <a href="index.html" class="" >
-                        <img src="assets/image-resources/logo.png" alt="" style="height: 50px; margin-top: 10px;"> 
-                        <br>
-                        <label for="">Huy Project</label>
+    <div id="sb-site">
+    <div id="loading">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div id="page-wrapper">
+        <div id="page-header" class="bg-gradient-9">
+            <div id="mobile-navigation">
+                <button id="nav-toggle" class="collapsed" data-toggle="collapse" data-target="#page-sidebar"><span></span></button>
+                <a href="index.html" class="logo-content-small" title="MonarchUI"></a>
+            </div>
+            <div id="header-logo" class="logo-bg">
+                <a href="index.html" class="" >
+                    <img src="assets/image-resources/logo.png" alt="" class="logoimg">
+                    <br>
+                    <label for="">Huy Project</label>
+                </a>
+                <a href="index.html" class="logo-content-small" title="MonarchUI">
+                    <img src="assets/image-resources/logo.png" alt="" class="logoimg">
+                    <br>
+                    <label for="">Huy Project</label>
+                </a>
+                <a id="close-sidebar" href="#" title="Close sidebar">
+                    <i class="glyph-icon icon-angle-left"></i>
+                </a>
+            </div>
+            <div id="header-nav-left">
+                <label for=""class="text-white networklabel" ><h1 class="font-weight-bold">Huy's Dashboard</h1></label>
+            </div><!-- #header-nav-left -->
+        
+            <div id="header-nav-right">
+                <a class="header-btn" id="logout-btn" href="javascript:void(0)" data-toggle="modal" data-target="#QR">
+                   <img src="assets/images/whitebarcode.png" alt="" style="height: 38px; margin-top: -3px;">
+                </a>
+                <div class="dropdown" id="dashnav-btn">
+                    <a href="#" data-toggle="dropdown" data-placement="bottom" class="popover-button-header tooltip-button" title="Dashboard Quick Menu">
+                        <i class="glyph-icon icon-linecons-cog"></i>
                     </a>
-                    <a href="index.html" class="logo-content-small" title="MonarchUI">
-                        <img src="assets/image-resources/logo.png" alt="" style="height: 50px; margin-top: 10px;"> 
-                        <br>
-                        <label for="">Huy Project</label>
-                    </a>
-                    <a id="close-sidebar" href="#" title="Close sidebar">
-                        <i class="glyph-icon icon-angle-left"></i>
-                    </a>
-                </div>
-                <div id="header-nav-left">
-                    <label for=""class="text-white" style="margin-top: 15px;"><h1 style="font-weight: bolder; padding: 3px;">Julie's Intake</h1></label>
-                </div><!-- #header-nav-left -->
-            
-                <div id="header-nav-right">
-                    <div class="dropdown" id="dashnav-btn">
-                        <a href="#" data-toggle="dropdown" data-placement="bottom" class="popover-button-header tooltip-button" title="Dashboard Quick Menu">
-                            <i class="glyph-icon icon-linecons-cog"></i>
-                        </a>
-                        <div class="dropdown-menu float-right">
-                            <div class="box-sm">
-                                <div class="pad5T pad5B pad10L pad10R dashboard-buttons clearfix">
-                                    <a href="networks.html" class="btn vertical-button remove-border btn-blue-alt" title="">
-                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
-                                            <i class="glyph-icon icon-sitemap opacity-80 font-size-20"></i>
-                                        </span>
-                                        Network
-                                    </a>
-                                    <a href="patients.html" class="btn vertical-button remove-border btn-success" title="">
-                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
-                                            <i class="glyph-icon icon-users opacity-80 font-size-20"></i>
-                                        </span>
-                                        Patients
-                                    </a>
-                                    <a href="editprofile.html" class="btn vertical-button remove-border btn-azure" title="">
-                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
-                                            <i class="glyph-icon icon-user opacity-80 font-size-20"></i>
-                                        </span>
-                                        Edit Profile
-                                    </a>
-                                    <a href="" class="btn vertical-button remove-border btn-danger" title="">
-                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
-                                            <i class="glyph-icon icon-sign-out opacity-80 font-size-20"></i>
-                                        </span>
-                                        Logout
-                                    </a>
-                                </div>
+                    <div class="dropdown-menu float-right">
+                        <div class="box-sm">
+                            <div class="pad5T pad5B pad10L pad10R dashboard-buttons clearfix">
+                                <a href="networks.html" class="btn vertical-button remove-border btn-blue-alt" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-sitemap opacity-80 font-size-20"></i>
+                                    </span>
+                                    Network
+                                </a>
+                                <a href="patients.html" class="btn vertical-button remove-border btn-success" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-users opacity-80 font-size-20"></i>
+                                    </span>
+                                    Patients
+                                </a>
+                                <a href="editprofile.html" class="btn vertical-button remove-border btn-azure" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-user opacity-80 font-size-20"></i>
+                                    </span>
+                                    Edit Profile
+                                </a>
+                                <a href="" class="btn vertical-button remove-border btn-primary" data-toggle="modal" data-target="#signModal">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-lock opacity-80 font-size-20"></i>
+                                    </span>
+                                    Upload Signature
+                                </a>
+                                <a href="" class="btn vertical-button remove-border btn-danger" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-sign-out opacity-80 font-size-20"></i>
+                                    </span>
+                                    Logout
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <a class="header-btn" id="logout-btn" href="lockscreen-3.html" title="Lockscreen page example">
-                        <i class="glyph-icon icon-linecons-lock"></i>
-                    </a>
-                </div><!-- #header-nav-right -->
-            
-            </div>
+                </div>
+                <a class="header-btn" id="logout-btn" href="lockscreen-3.html" title="Lockscreen page example">
+                    <i class="glyph-icon icon-linecons-lock"></i>
+                </a>
+            </div><!-- #header-nav-right -->
+        
+        </div>
 
 
-
-    
+ 
 
         <div id="page-sidebar">
             <div class="scroll-sidebar">
@@ -739,215 +784,300 @@
         </div>
 
 
-
-
-
-
-
-
-
-
-
-
+        
         <div id="page-content-wrapper">
             <div id="page-content">
 
                     <div class="container">
 
 
-<!--<link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">-->
-<!--<link rel="stylesheet" href="assets/widgets/multi-upload/fileupload.css">-->
+<!-- Data tables -->
 
-<!-- The Templates plugin is included to render the upload/download listings -->
-<script src="//blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
-<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
-<!-- The Canvas to Blob plugin is included for image resizing functionality -->
-<script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
-<!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<!-- blueimp Gallery script -->
-<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<!--<link rel="stylesheet" type="text/css" href="assets/widgets/datatable/datatable.css">-->
+<script type="text/javascript" src="assets/widgets/datatable/datatable.js"></script>
+<script type="text/javascript" src="assets/widgets/datatable/datatable-bootstrap.js"></script>
+<script type="text/javascript" src="assets/widgets/datatable/datatable-responsive.js"></script>
+<script type="text/javascript" src="assets/widgets/datatable/datatable-tabletools.js"></script>
 
-<script src="assets/widgets/multi-upload/jquery.iframe-transport.js"></script>
-<!-- The basic File Upload plugin -->
-<script src="assets/widgets/multi-upload/jquery.fileupload.js"></script>
-<!-- The File Upload processing plugin -->
-<script src="assets/widgets/multi-upload/jquery.fileupload-process.js"></script>
-<!-- The File Upload image preview & resize plugin -->
-<script src="assets/widgets/multi-upload/jquery.fileupload-image.js"></script>
-<!-- The File Upload audio preview plugin -->
-<script src="assets/widgets/multi-upload/jquery.fileupload-audio.js"></script>
-<!-- The File Upload video preview plugin -->
-<script src="assets/widgets/multi-upload/jquery.fileupload-video.js"></script>
-<!-- The File Upload validation plugin -->
-<script src="assets/widgets/multi-upload/jquery.fileupload-validate.js"></script>
-<!-- The File Upload user interface plugin -->
-<script src="assets/widgets/multi-upload/jquery.fileupload-ui.js"></script>
-<!-- The main application script -->
-<script src="assets/widgets/multi-upload/main.js"></script>
-<!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9 -->
-<!--[if (gte IE 8)&(lt IE 10)]>
-<script src="assets/widgets/multi-upload/cors/jquery.xdr-transport.js"></script>
-<![endif]-->
+<script type="text/javascript">
+
+    /* Datatables responsive */
+
+    $(document).ready(function() {
+        $('#datatable-responsive').DataTable( {
+            responsive: true
+            
+        } );
+    } );
+
+    $(document).ready(function() {
+        $('.dataTables_filter input').attr("placeholder", "Search...");
+    });
+
+</script>
 
 <div id="page-title">
-    <p>File Upload widget with multiple file selection.</p>
+<legend class="font-weight-bold">Materials</legend>
 </div>
 
 <div class="panel">
-    <div class="panel-body">
-        <h3 class="title-hero">
-            Basic
-        </h3>
-        <div class="example-box-wrapper">
-            <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
-                <div class="row fileupload-buttonbar">
-                    <div class="col-lg-6">
-                        <div class="float-left">
-                  <span class="btn btn-md btn-success fileinput-button">
-                        <i class="glyph-icon icon-plus"></i>
-                        Add files...
-                      <input type="file" name="files[]" multiple>
-                  </span>
-                            <button type="submit" class="btn btn-md btn-default start">
-                                <i class="glyph-icon icon-upload"></i>
-                                Start upload
-                            </button>
-                            <button type="reset" class="btn btn-md btn-warning cancel">
-                                <i class="glyph-icon icon-ban"></i>
-                                Cancel upload
-                            </button>
-                            <button type="button" class="btn btn-md btn-danger delete">
-                                <i class="glyph-icon icon-trash-o"></i>
-                                Delete
-                            </button>
-                        </div>
-                        <input type="checkbox" class="toggle width-reset float-left">
-                        <!-- The global file processing state -->
-                        <span class="fileupload-process"></span>
-                    </div>
-                    <!-- The global progress state -->
-                    <div class="col-lg-6 fileupload-progress fade">
-                        <!-- The global progress bar -->
-
-                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar progress-bar-success bg-green">
-                                <div class="progressbar-overlay"></div>
-                            </div>
-                        </div>
-                        <!-- The extended global progress state -->
-                        <div class="progress-extended">&nbsp;</div>
-                    </div>
-                </div>
-                <!-- The table listing the files available for upload/download -->
-                <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
-            </form>
-
-            <!-- The blueimp Gallery widget -->
-            <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-filter=":even">
-                <div class="slides"></div>
-                <h3 class="title"></h3>
-                <a class="prev">‹</a>
-                <a class="next">›</a>
-                <a class="close">×</a>
-                <a class="play-pause"></a>
-                <ol class="indicator"></ol>
+<div class="panel-body">
+<div class="example-box-wrapper">
+    <!--Add Account Button-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col modalbutton">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success float-right plus mb-1" data-toggle="modal" data-target="#emailaddModal">
+                    +
+                </button>
+                <!-- Button trigger modal -->
             </div>
-            <!-- The template to display files available for upload -->
-            <script id="template-upload" type="text/x-tmpl">
-              {% for (var i=0, file; file=o.files[i]; i++) { %}
-                  <tr class="template-upload fade">
-                      <td>
-                          <span class="preview"></span>
-                      </td>
-                      <td>
-                          <p class="name">{%=file.name%}</p>
-                          <strong class="error text-danger"></strong>
-                      </td>
-                      <td>
-                          <p class="size">Processing...</p>
-                          <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success bg-green" style="width:0%;"></div></div>
-                      </td>
-                      <td>
-                          {% if (!i && !o.options.autoUpload) { %}
-                              <button class="btn btn-md btn-default start" disabled>
-                                <span class="button-content">
-                                  <i class="glyph-icon icon-upload"></i>
-                                  Start
-                                </span>
-                              </button>
-                          {% } %}
-                          {% if (!i) { %}
-                              <button class="btn btn-md btn-warning cancel">
-                                  <span class="button-content">
-                                    <i class="glyph-icon icon-ban-circle"></i>
-                                    Cancel
-                                  </span>
-                              </button>
-                          {% } %}
-                      </td>
-                  </tr>
-              {% } %}
-              </script>
-                    <!-- The template to display files available for download -->
-                    <script id="template-download" type="text/x-tmpl">
-              {% for (var i=0, file; file=o.files[i]; i++) { %}
-                  <tr class="template-download fade">
-                      <td>
-                          <span class="preview">
-                              {% if (file.thumbnailUrl) { %}
-                                  <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
-                              {% } %}
-                          </span>
-                      </td>
-                      <td>
-                          <p class="name">
-                              {% if (file.url) { %}
-                                  <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
-                              {% } else { %}
-                                  <span>{%=file.name%}</span>
-                              {% } %}
-                          </p>
-                          {% if (file.error) { %}
-                              <div><span class="label label-danger">Error</span> {%=file.error%}</div>
-                          {% } %}
-                      </td>
-                      <td>
-                          <span class="size">{%=o.formatFileSize(file.size)%}</span>
-                      </td>
-                      <td>
-                          {% if (file.deleteUrl) { %}
-                              <button class="btn btn-md btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
-                                  <span class="button-content">
-                                    <i class="glyph-icon icon-trash"></i>
-                                    Delete
-                                  </span>
-                              </button>
-                              <input type="checkbox" name="delete" value="1" class="toggle width-reset float-left">
-                          {% } else { %}
-                              <button class="btn btn-md btn-warning cancel">
-                                  <span class="button-content">
-                                    <i class="glyph-icon icon-ban-circle"></i>
-                                    Cancel
-                                  </span>
-                              </button>
-                          {% } %}
-                      </td>
-                  </tr>
-              {% } %}
-              </script>
         </div>
+    </div>
+    <!--Add Account Button-->
+<table id="datatable-responsive" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%"> 
+
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Status</th>
+                <th>Materials ID</th>
+                <th>Materials Name</th>
+                <th>Materials Content</th>
+                <th>Materials</th>
+            </tr>
+        </thead>
+            
+        <tfoot>
+            <tr>
+                <th>Action</th>
+                <th>Status</th>
+                <th>Materials ID</th>
+                <th>Materials Name</th>
+                <th>Materials Content</th>
+                <th>Materials</th>
+            </tr>
+        </tfoot>
+            
+        <tbody>
+            <tr>
+                <td>
+                    <div class="btn-group">
+                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
+                        <ul class="dropdown-menu" role="menu">
+                           <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
+                           <li><a href="#" data-toggle="modal" data-target="#emaileditModal">Edit</a></li>
+                           <li><a href="#" data-toggle="modal" data-target="" class="email-archive-started email-archive-success email-archive-failed">Archive</a></li>
+                        </ul>
+                   </div>
+                </td>
+                <td>
+                    <span class="bs-label label-success">Active</span>
+                </td>
+                <td>PID-1-1</td>
+                <td>Materials Name</td>
+                <td>Materials Content</td>
+                <td>
+                    <span class="bs-label label-danger">Covid-19</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="btn-group">
+                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#emaileditModal">Edit</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="" class="email-active-started email-active-success email-active-failed">Active</a></li>
+                        </ul>
+                   </div>
+                </td>
+                <td>
+                    <span class="bs-label label-danger">Inactive</span>
+                </td>
+                <td>PID-1-2</td>
+                <td>Materials Name</td>
+                <td>Materials Content</td>
+                <td>
+                    <span class="bs-label label-primary">Flu</span>
+                </td>
+            </tr>
+        </tbody>
+            
+    
+</table>
+</div>
+</div>
+</div>
+
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+<!-- QR Modal -->
+<div class="modal fade" id="QR" tabindex="-1" role="dialog" aria-labelledby="QRLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width: 49rem;">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>QR</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <section class="section mt-3 arfstep1 active">
+            <legend class="legendtitle">Scan Workstation QR</legend>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover arfsteponenext col-12"><span >Next</span><i class="glyph-icon icon-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section mt-3 arfstep2" style="display: none;">
+            <legend class="legendtitle">Scan Product QR</legend>
+            
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover col-12 arfsteptwoback"><span >Back</span><i class="glyph-icon icon-arrow-left"></i></button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover col-12 qr-scan"><span >Confirm</span><i class="glyph-icon icon-arrow-right"></i></button>                    
+                </div>
+            </div>
+        </section>
+      </div>
+      <!--body -->
+      </div>
     </div>
 </div>
-                    </div>
+<!-- QR Modal -->
 
+<!-- Tracking QR -->
+<div class="modal fade" id="tracking_qr" tabindex="-1" role="dialog" aria-labelledby="keyModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content modal-sm">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Tracking QR</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
 
-
-            </div>
-        </div>
+      <!-- Body -->
+      <div class="modal-body">
+        <img class="img-fluid" src="assets/images/qr1.png" alt="" width="300">
+      </div>
+      <!--body -->
+      </div>
     </div>
+  </div>
+<!-- Tracking QR -->
+
+
+<!-- Add Modal -->
+  <div class="modal fade" id="emailaddModal" tabindex="-1" role="dialog" aria-labelledby="emailaddModalLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Materials</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
+
+          <!-- Materials Name -->
+          <div class="form-group">
+            <label for="Name">Materials Name</label>
+            <input name="Name" class="form-control" id="Name" required="" type="text">
+        </div>
+        <!-- Materials Name -->
+
+        <!-- Materials Content -->
+        <div class="form-group">
+            <label for="">Materials Content</label>
+            <textarea name="" id="" class="form-control"></textarea>
+        </div>
+        <!-- Materials Content -->
+
+          <!--Upload Image-->
+            <div class="form-group">
+                <label for="">Upload Image</label>
+                <input type="file" id="input-file-now" class="dropify" />
+              </div>
+          <!--Upload Image-->
+
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-addc-started email-addc-success email-addc-failed"><span >Add Materials</span><i class="glyph-icon icon-arrow-right"></i></button>
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+  </div>
+<!-- Add Modal -->
+
+<!-- Edit Modal -->
+  <div class="modal fade" id="emaileditModal" tabindex="-1" role="dialog" aria-labelledby="emaileditModalLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Update Materials</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
+
+          <!-- Materials Name -->
+          <div class="form-group">
+            <label for="Name">Materials Name</label>
+            <input name="Name" class="form-control" id="Name" required="" type="text">
+        </div>
+        <!-- Materials Name -->
+
+        <!-- Materials Content -->
+        <div class="form-group">
+            <label for="">Materials Content</label>
+            <textarea name="" id="" class="form-control"></textarea>
+        </div>
+        <!-- Materials Content -->
+
+          <!--Upload Image-->
+            <div class="form-group">
+                <label for="">Upload Image</label>
+                <input type="file" id="input-file-now" class="dropify" />
+              </div>
+          <!--Upload Image-->
+
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-editc-started email-editc-success email-editc-failed"><span >Update Materials</span><i class="glyph-icon icon-arrow-right"></i></button>
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+  </div>
+<!-- Edit Modal -->
 
 <!-- Input switch -->
 <link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch.css">
@@ -988,7 +1118,6 @@
 <script type="text/javascript" src="assets/widgets/chosen/chosen.js"></script>
 <script type="text/javascript" src="assets/widgets/chosen/chosen-demo.js"></script>
 <!-- Chosen -->
-
 
     <!-- WIDGETS -->
 <script type="text/javascript" src="assets/tether/js/tether.js"></script>
@@ -1067,6 +1196,29 @@
 <!-- Theme switcher -->
 
 <script type="text/javascript" src="assets/widgets/theme-switcher/themeswitcher.js"></script>
+
+<script type="text/javascript">
+    /* Datatable row highlight */
+
+    $(document).ready(function() {
+        var table = $('#datatable-row-highlight').DataTable();
+
+        $('#datatable-row-highlight tbody').on( 'click', 'tr', function () {
+            $(this).toggleClass('tr-selected');
+        } );
+    });
+
+
+
+    $(document).ready(function() {
+        $('.dataTables_filter input').attr("placeholder", "Search...");
+    });
+
+</script>
+<!-- Sweet-Alert  -->
+<script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+<script src="assets/widgets/custom.js"></script>
 
 </div>
 </body>
