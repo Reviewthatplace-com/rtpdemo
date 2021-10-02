@@ -119,6 +119,7 @@
 <link rel="stylesheet" type="text/css" href="assets/widgets/wizard/wizard.css">
 <link rel="stylesheet" type="text/css" href="assets/widgets/xeditable/xeditable.css">
 <link rel="stylesheet" type="text/css" href="assets/node_modules/dropify/dist/css/dropify.min.css">
+<link href="assets/node_modules/switchery/dist/switchery.min.css" rel="stylesheet" />
 
 <!-- SNIPPETS -->
 
@@ -808,6 +809,10 @@
             responsive: true
             
         } );
+        $('#datatable-responsive-1').DataTable( {
+            responsive: true
+            
+        } );
     } );
 
     $(document).ready(function() {
@@ -865,7 +870,7 @@
                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
                         <ul class="dropdown-menu" role="menu">
                            <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
-                           <li><a href="#" data-toggle="modal" data-target="">Materials Needed</a></li>
+                           <li><a href="#" data-toggle="modal" data-target="#materials_needed">Materials Needed</a></li>
                            <li><a href="#" data-toggle="modal" data-target="#emaileditModal">Edit</a></li>
                            <li><a href="#" data-toggle="modal" data-target="" class="email-archive-started email-archive-success email-archive-failed">Archive</a></li>
                         </ul>
@@ -884,7 +889,7 @@
                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="">Materials Needed</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#materials_needed">Materials Needed</a></li>
                             <li><a href="#" data-toggle="modal" data-target="#emaileditModal">Edit</a></li>
                             <li><a href="#" data-toggle="modal" data-target="" class="email-active-started email-active-success email-active-failed">Active</a></li>
                         </ul>
@@ -994,7 +999,7 @@
 
       <!-- Body -->
       <div class="modal-body">
-        <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
+        <form enctype="multipart/form-data" method="post"  >
 
           <!-- Products Name -->
           <div class="form-group">
@@ -1041,7 +1046,7 @@
 
       <!-- Body -->
       <div class="modal-body">
-        <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
+        <form enctype="multipart/form-data" method="post"  >
 
           <!-- Products Name -->
           <div class="form-group">
@@ -1072,6 +1077,60 @@
     </div>
   </div>
 <!-- Edit Modal -->
+
+
+<!-- Materials needed -->
+  <div class="modal fade" id="materials_needed" tabindex="-1" role="dialog" aria-labelledby="materials_neededLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Materials Needed</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <table id="datatable-responsive-1" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%">
+
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>Material Name</th>
+                </tr>
+            </thead>
+                
+            <tfoot>
+                <tr>
+                    <th>Action</th>
+                    <th>Material Name</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" checked class="js-switch" data-color="#00c292" />
+                    </td>
+                    <td>Material 01</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" checked class="js-switch" data-color="#00c292" />
+                    </td>
+                    <td>Material 02</td>
+                </tr>
+            </tbody>
+                
+        </table>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+  </div>
+<!-- Materials needed -->
 
 <!-- Input switch -->
 <link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch.css">
@@ -1213,6 +1272,16 @@
 <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 <script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
 <script src="assets/widgets/custom.js"></script>
+<script src="assets/node_modules/switchery/dist/switchery.min.js"></script>
+<script>
+    $(function () {
+        // Switchery
+        var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+        $('.js-switch').each(function () {
+            new Switchery($(this)[0], $(this).data());
+        });
+    });
+</script>
 
 </div>
 </body>
