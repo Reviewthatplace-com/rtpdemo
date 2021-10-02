@@ -865,8 +865,8 @@
                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
                         <ul class="dropdown-menu" role="menu">
                            <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
-                           <li><a href="#" data-toggle="modal" data-target="#">Update Levels</a></li>
-                           <li><a href="#" data-toggle="modal" data-target="#emaileditModal">Edit</a></li>
+                           <li><a href="#" data-toggle="modal" data-target="#update_levels">Update Levels</a></li>
+                           <li><a href="#" data-toggle="modal" data-target="#emaileditModal">View & Edit</a></li>
                            <li><a href="#" data-toggle="modal" data-target="" class="email-archive-started email-archive-success email-archive-failed">Archive</a></li>
                         </ul>
                    </div>
@@ -884,8 +884,8 @@
                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#">Update Levels</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#emaileditModal">Edit</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#update_levels">Update Levels</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#emaileditModal">View & Edit</a></li>
                             <li><a href="#" data-toggle="modal" data-target="" class="email-active-started email-active-success email-active-failed">Active</a></li>
                         </ul>
                    </div>
@@ -928,7 +928,7 @@
       <!-- Body -->
       <div class="modal-body">
         <section class="section mt-3 arfstep1 active">
-            <legend class="legendtitle">Scan Workstation QR</legend>
+            <legend class="legendtitle">Scan QR</legend>
             <div class="row">
                 <div class="col-12">
                     <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover arfsteponenext col-12"><span >Next</span><i class="glyph-icon icon-arrow-right"></i></button>
@@ -977,6 +977,61 @@
     </div>
   </div>
 <!-- Tracking QR -->
+
+<!-- Update Levels -->
+<div class="modal fade" id="update_levels" tabindex="-1" role="dialog" aria-labelledby="QRLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width: 49rem;">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Update Levels</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form enctype="multipart/form-data" method="post" siq_id="autopick_7211">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Add Materials -->
+                    <div class="form-group">
+                        <label for="Name">Add Materials</label>
+                        <input name="Name" class="form-control" id="Name" required="" type="number">
+                    </div>
+                    <!-- Add Materials -->
+                </div>
+
+                <div class="col-md-12">
+                    <!-- Remove Materials -->
+                    <div class="form-group">
+                        <label for="Name">Remove Materials</label>
+                        <input name="Name" class="form-control" id="Name" required="" type="number">
+                    </div>
+                    <!-- Remove Materials -->
+                </div>
+
+                <div class="col-md-12">
+                    <!-- Waste Materials -->
+                    <div class="form-group">
+                        <label for="Name">Waste Materials</label>
+                        <input name="Name" class="form-control" id="Name" required="" type="number">
+                    </div>
+                    <!-- Waste Materials -->
+                </div>
+            </div>
+
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-editc-started email-editc-success email-editc-failed"><span >Update Levels</span><i class="glyph-icon icon-arrow-right"></i></button>
+
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- Update Levels -->
 
 
 <!-- Add Modal -->
