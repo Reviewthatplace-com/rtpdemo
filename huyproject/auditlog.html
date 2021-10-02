@@ -487,6 +487,27 @@
                           <span class="bs-badge badge-yellow">33</span>
                       </a>
                     </li>
+                    <li>
+                      <a href="readytobill.html" title="Elements">
+                          <i class="glyph-icon icon-money"></i>
+                          <span>Resource 2</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="readytobill.html" title="Elements">
+                          <i class="glyph-icon icon-money"></i>
+                          <span>Resource 3</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="readytobill.html" title="Elements">
+                          <i class="glyph-icon icon-money"></i>
+                          <span>Resource 4</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
                     <!-- <li>
                         <a href="#" >
                             <i class="glyph-icon icon-money"></i>
@@ -1344,8 +1365,8 @@
     
 <!-- QR Modal -->
 <div class="modal fade" id="QR" tabindex="-1" role="dialog" aria-labelledby="QRLabel">
-    <div class="modal-dialog generalmodalws" role="document">
-      <div class="modal-content">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width: 49rem;">
         <!-- Header -->
       <div class="modal-header light-blue darken-3 white-text">
         <h4 class="modalh4"><i class="fab fa-wpforms"></i>QR</h4>
@@ -1357,7 +1378,28 @@
 
       <!-- Body -->
       <div class="modal-body">
-        <legend class="legendtitle">QR SCANNER HERE</legend>
+        <section class="section mt-3 arfstep1 active">
+            <legend class="legendtitle">Scan Resource QR</legend>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover arfsteponenext col-12"><span >Next</span><i class="glyph-icon icon-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section mt-3 arfstep2" style="display: none;">
+            <legend class="legendtitle">Scan Product QR</legend>
+            <img class="mb-3" src="assets/images/qr1.png" alt="">
+            
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover col-12 arfsteptwoback"><span >Back</span><i class="glyph-icon icon-arrow-left"></i></button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover col-12 qr-scan"><span >Confirm</span><i class="glyph-icon icon-arrow-right"></i></button>                    
+                </div>
+            </div>
+        </section>
       </div>
       <!--body -->
       </div>
@@ -1492,6 +1534,10 @@
 <!-- Theme switcher -->
 
 <script type="text/javascript" src="assets/widgets/theme-switcher/themeswitcher.js"></script>
+<!-- Sweet-Alert  -->
+<script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+<script src="assets/widgets/custom.js"></script>
 
 </div>
 </body>

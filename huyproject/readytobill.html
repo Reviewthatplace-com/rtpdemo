@@ -181,8 +181,8 @@
 
 <!-- QR Modal -->
 <div class="modal fade" id="QR" tabindex="-1" role="dialog" aria-labelledby="QRLabel">
-    <div class="modal-dialog generalmodalws" role="document">
-      <div class="modal-content">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width: 49rem;">
         <!-- Header -->
       <div class="modal-header light-blue darken-3 white-text">
         <h4 class="modalh4"><i class="fab fa-wpforms"></i>QR</h4>
@@ -194,13 +194,67 @@
 
       <!-- Body -->
       <div class="modal-body">
-        <legend class="legendtitle">QR SCANNER HERE</legend>
+        <section class="section mt-3 arfstep1 active">
+            <legend class="legendtitle">Scan Resource QR</legend>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover arfsteponenext col-12"><span >Next</span><i class="glyph-icon icon-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section mt-3 arfstep2" style="display: none;">
+            <legend class="legendtitle">Scan Product QR</legend>
+            <img class="mb-3" src="assets/images/qr1.png" alt="">
+            
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover col-12 arfsteptwoback"><span >Back</span><i class="glyph-icon icon-arrow-left"></i></button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover col-12 qr-scan"><span >Confirm</span><i class="glyph-icon icon-arrow-right"></i></button>                    
+                </div>
+            </div>
+        </section>
       </div>
       <!--body -->
       </div>
     </div>
 </div>
 <!-- QR Modal -->
+
+<!-- resource-scan -->
+<div class="modal fade" id="resource-scan" tabindex="-1" role="dialog" aria-labelledby="QRLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width: 49rem;">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>QR</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+
+        <section class="section mt-3">
+            <legend class="legendtitle">Scan Resource QR</legend>
+            <img class="mb-3" src="assets/images/qr1.png" alt="">
+            
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover col-12 resource-scan"><span >Confirm</span><i class="glyph-icon icon-arrow-right"></i></button>                    
+                </div>
+            </div>
+        </section>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- resource-scan -->
 
 <!-- clean & clear modal -->
 <div class="modal fade" id="cleanandclearModal" tabindex="-1" role="dialog" aria-labelledby="checkinModalLabel">
@@ -1837,6 +1891,27 @@
                           <span class="bs-badge badge-yellow">33</span>
                       </a>
                     </li>
+                    <li>
+                      <a href="readytobill.html" title="Elements">
+                          <i class="glyph-icon icon-money"></i>
+                          <span>Resource 2</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="readytobill.html" title="Elements">
+                          <i class="glyph-icon icon-money"></i>
+                          <span>Resource 3</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="readytobill.html" title="Elements">
+                          <i class="glyph-icon icon-money"></i>
+                          <span>Resource 4</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
                     <!-- <li>
                         <a href="#" >
                             <i class="glyph-icon icon-money"></i>
@@ -2189,7 +2264,7 @@
                     Admin
                 </button>
                 <ul class="dropdown-menu float-right" role="menu">
-                     
+                        <li><a href="#" class="" data-toggle="modal" data-target="#resource-scan">Scan Resource QR</a></li>
                         <li><a href="assets/Billing Status - CSV Download.xlsx" target="_blank" class="onsiteact-csv-started onsiteact-csv-success onsiteact-csv-failed">CSV</a></li>
                  </ul>
                 <!-- Button trigger modal -->
@@ -4313,6 +4388,10 @@
         });
     });
 </script>
+<!-- Sweet-Alert  -->
+<script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+<script src="assets/widgets/custom.js"></script>
 
 </div>
 </body>
