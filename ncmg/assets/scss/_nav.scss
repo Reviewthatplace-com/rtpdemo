@@ -19,18 +19,23 @@
   li {
     position: relative;
   }
+
+  > ul > li {
+    position: relative;
+    white-space: nowrap;
+    padding: 8px 0 8px 20px;
+  }
   
   a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0 10px 30px;
-    font-family: $font-secondary;
-    font-size: 15px; 
-    font-weight: 500;
+    font-size: 14px; 
     color: $secondary;
     white-space: nowrap;
     transition: 0.3s;
+    border-bottom: 2px solid #fff;
+    padding: 5px 2px;
 
     i {
       font-size: 12px;
@@ -41,19 +46,7 @@
 
   a:hover, .active, li:hover > a  {
     color: $primary;
-  }
-
-  .getstarted {
-    background: $primary;
-    padding: 8px 25px;
-    margin-left: 30px;
-    border-radius: 4px;
-    font-weight: 400;
-    color: #fff;
-    &:hover {
-      color: #fff;
-      background: lighten($primary, 8);
-    }
+    border-color: $primary;
   }
 
   .dropdown {
@@ -61,7 +54,7 @@
     ul {
       display: block;
       position: absolute;
-      left: 14px;
+      left: 20px;
       top: calc(100% + 30px);
       margin: 0;
       padding: 10px 0;
@@ -78,9 +71,11 @@
 
       a {
         padding: 10px 20px;
-        font-size: 15px;
+        font-size: 14px;
+        font-weight: 500;
         text-transform: none;
-        font-weight: 400;
+        color: darken($primary, 30);
+        border: none;
         i {
           font-size: 12px;
         }
@@ -156,7 +151,6 @@
 }
 
 .navbar-mobile {
-
   position: fixed;
   overflow: hidden;
   top: 0;
@@ -186,10 +180,15 @@
     transition: 0.3s;
   }
 
+  > ul > li {
+    padding: 0;
+  }
+
   a {
     padding: 10px 20px;
     font-size: 15px; 
     color: $secondary;
+    border: none;
   }
 
   a:hover, .active, li:hover > a  {
