@@ -482,18 +482,19 @@
                                         <tr>
                                             <td>
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">Ravi Agrawal<br><strong>11/10/1998</strong></button>
+                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#view_visits">View Visits</strong></button>
                                                     <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <span class="sr-only">Toggle Dropdown</span>
                                                     </button>
                                                     <div class="dropdown-menu animated flipInY">
+                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Patient Profile</a>
                                                         <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#mergeModal">Merge Patients</a>
-                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#questionModal">Questionnaire</a>
+                                                        <!-- <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#questionModal">Questionnaire</a>
                                                         <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#commentModal">Comment Left</a>
-                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#editVisit">Edit Visit Type</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#editVisit">Edit Visit Type</a> -->
                                                         <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#paymentMethod">Collect Payment</a>
-                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendText">Send Text</a>
-                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendEmail">Send Email</a>
+                                                        <!-- <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendText">Send Text</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendEmail">Send Email</a> -->
                                                         <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#assignPhysician">Assign Physician</a>
                                                         <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#paymentRequest">Request Payment</a>
                                                         <a class="dropdown-item" href="javascript:void(0)" id="stagedisplayDelete">Delete</a>
@@ -574,11 +575,35 @@
                                                             </span>
                                                         </span>
                                                 </a>
+                                            
+                                                <a href="javascript:void(0)" class="mytooltip btn btn-sm btn-block btn-success text-white mt-2">
+                                                    RM1
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2">
+                                                                <div class="timeline-panel">
+                                                                    <div class="timeline-heading">
+                                                                        <p class="timeline-title" style="font-size: 20px; font-weight: 800;">Resource Captured</p>
+                                                                        <h4 class="timeline-title">Ravi Agrawal</h4>
+                                                                    </div>
+                                                                    <p>
+                                                                        <small class="text-muted">
+                                                                            <i class="fa fa-clock-o"></i>11/10/1998 12.21 AM
+                                                                        </small>
+                                                                    </p>
+                                                                </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
                                             </td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-block btn-success" data-toggle="modal" data-target="#resourceidmodal">
+                                            <td style="font-weight: 900;">
+                                                Ravi Agrawal<i class="fas fa-exclamation-circle ml-2 text-danger" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()"></i>
+                                                <br>
+                                                11/10/1998
+                                                <!-- <button type="button" class="btn btn-sm btn-block btn-success" data-toggle="modal" data-target="#resourceidmodal">
                                                     RM1, AL1, CR2
-                                                </button>
+                                                </button> -->
                                             </td>
                                             <td class="text-center" style="font-weight: 900;">
                                                 Visit Type <br>
@@ -596,28 +621,118 @@
                                                 4:14 PM
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-block btn-sm btn-outline-info stepAcknowledge">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
                                                     Insurance
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2">
+                                                                <span class="mb-3">
+                                                                    Step Resource: <span class="bs-label label-success badgeBorder">Resource 01</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step Alerts: <span class="bs-label label-danger badgeBorder">5 Minutes</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step SMS: <span class="bs-label label-success badgeBorder">SMS 02</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step Email: <span class="bs-label label-success badgeBorder">Email 02</span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
                                                 </button>
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-block btn-sm btn-outline-success stepAcknowledge">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-success mytooltip stepAcknowledge">
                                                     S.Ansari <br> 9/20/2020 <br>3:01PM
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2">
+                                                                <span class="mb-3">
+                                                                    Step Resource: <span class="bs-label label-success badgeBorder">Resource 01</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step Alerts: <span class="bs-label label-danger badgeBorder">5 Minutes</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step SMS: <span class="bs-label label-success badgeBorder">SMS 02</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step Email: <span class="bs-label label-success badgeBorder">Email 02</span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
                                                 </button>
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-block btn-sm btn-outline-danger stepAcknowledge">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-danger mytooltip stepAcknowledge">
                                                     S.Ansari <br> 9/20/2020 <br>3:01PM
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2">
+                                                                <span class="mb-3">
+                                                                    Step Resource: <span class="bs-label label-success badgeBorder">Resource 01</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step Alerts: <span class="bs-label label-danger badgeBorder">5 Minutes</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step SMS: <span class="bs-label label-success badgeBorder">SMS 02</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step Email: <span class="bs-label label-success badgeBorder">Email 02</span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
                                                 </button>
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-block btn-sm btn-outline-info stepAcknowledge">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
                                                     Payments
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2">
+                                                                <span class="mb-3">
+                                                                    Step Resource: <span class="bs-label label-success badgeBorder">Resource 01</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step Alerts: <span class="bs-label label-danger badgeBorder">5 Minutes</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step SMS: <span class="bs-label label-success badgeBorder">SMS 02</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step Email: <span class="bs-label label-success badgeBorder">Email 02</span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
                                                 </button>
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-block btn-sm btn-outline-info stepAcknowledge">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
                                                     Vitals
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2">
+                                                                <span class="mb-3">
+                                                                    Step Resource: <span class="bs-label label-success badgeBorder">Resource 01</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step Alerts: <span class="bs-label label-danger badgeBorder">5 Minutes</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step SMS: <span class="bs-label label-success badgeBorder">SMS 02</span>
+                                                                </span>
+                                                                <span class="mb-3">
+                                                                    Step Email: <span class="bs-label label-success badgeBorder">Email 02</span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
                                                 </button>
                                             </td>
                                             <td>
@@ -903,6 +1018,333 @@
     <!-- End Wrapper -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
+
+    
+    <!-- View Visits -->
+    <div class="modal fade" id="view_visits" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal modal-lg">
+            <div class="modal-content" style="width: 145% !important; left: -150px;">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Ravi Agrawal - 11/10/1988 - PTID321</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+
+                <div class="modal-body mb-1 pt-2">
+                    <div class="vtabs customvtab">
+                        <ul class="nav nav-tabs tabs-vertical" role="tablist">
+                            <li class="nav-item"> <a class="nav-link text-nowrap active" data-toggle="tab" href="#questionnaire" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Questionnaire</span> </a> </li>
+                            <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#commentleft" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Comment Left</span> </a> </li>
+                            <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#edit_visit" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Edit Visit Type</span> </a> </li>
+                            <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#send_text" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Send Text</span> </a> </li>
+                            <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#send_email" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">Send Email</span></a> </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content" style="width: 950px;">
+                            <div class="tab-pane active" id="questionnaire" role="tabpanel">
+                                <button class="btn btn-outline-success waves-effect col-12 questionnaireUpdate">Save</button> 
+                                <div class="modal-body">
+                                    <h3 class="font-weight-bold h3Spacing">Questionnaire</h3>
+                                    <form>  
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <fieldset class="floating-labels">
+                                                    <div class="form-group m-b-40">
+                                                        <input type="text" class="form-control" id=""><span class="bar"></span>
+                                                        <label for="">What Country are you from?</label>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                
+                                            <div class="col-6">
+                                                <fieldset class="floating-labels">
+                                                    <div class="form-group" style="margin-bottom: 2px !important;">
+                                                        <p class="boldText">What are you symptoms (check the options below):</p>
+                                                    </div> 
+                                                </fieldset>
+                                                <div class="input-group">
+                                                        <div class="row">
+                                                            <div>
+                                                                <input class="input1" type='checkbox' value='3' name='checkbox' id=''/>
+                                                                <label for='checkbox1' class="btn btn-outline-info label2">Option O1</label>
+                                                            </div>
+                                                            <div>
+                                                                <input class="input1" type='checkbox' value='4' name='checkbox' id=''/>
+                                                                <label for='checkbox1' class="btn btn-outline-info label2">Option O2</label>
+                                                            </div>
+                                                        </div>
+                                                </div>                                                
+                                            </div>
+                                             
+                                            <div class="col-6">
+                                                    <label class="boldText m-b-20">Rate Your experience:</label>
+                                                <div class="form-group"  style="margin-left: -40px;"> 
+                                                    <div class="input-group" style="width: 200% !important;">
+                                                        <ul class="ul1">
+                                                            <fieldset class="floating-labels">
+                                                                <div class="row">
+                                                                    <div class="form-group col-1 m-r-40">
+                                                                        <input class="input1" type='radio' value='1' name='radio' id='radio1'/>
+                                                                        <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Very Bad">O1</label>
+                                                                    </div>
+                                    
+                                                                    <div class="form-group col-1 m-r-40">
+                                                                        <input class="input1" type='radio' value='2' name='radio' id='radio2'/>
+                                                                        <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Bad">O2</label>
+                                                                    </div> 
+
+                                                                    <div class="form-group col-1 m-r-40">
+                                                                        <input class="input1" type='radio' value='3' name='radio' id='radio3'/>
+                                                                        <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Modarate">O3</label>
+                                                                    </div> 
+
+                                                                    <div class="form-group col-1 m-r-40">
+                                                                        <input class="input1" type='radio' value='4' name='radio' id='radio4'/>
+                                                                        <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Good">O4</label>
+                                                                    </div>   
+
+                                                                    <div class="form-group col-1 m-r-40">
+                                                                        <input class="input1" type='radio' value='5' name='radio' id='radio5'/>
+                                                                        <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Very Good">O5</label>
+                                                                    </div>                                              
+                                                                </div>
+                                                            </fieldset>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                
+                                            </div>
+                
+                                            <div class="col-6">
+                                                <fieldset class="floating-labels">
+                                                <div class="form-group"  style="margin-bottom: 2px !important;">
+                                                    <p class="boldText">What are you symptoms (check the options below):</p>
+                                                </div> 
+                                                </fieldset>
+                                                <div class="input-group">
+                                                    <div class="row">
+                                                        <div>
+                                                            <input class="input1" type='radio' value='1' name='radio' id='radio1'/>
+                                                            <label for='radio1' class="btn btn-outline-info label1">Option O1</label>
+                                                        </div>
+                                                        <div>
+                                                            <input class="input1" type='radio' value='2' name='radio' id='radio2'/>
+                                                            <label for='radio2' class="btn btn-outline-info label1">Option O2</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             
+                                            <div class="col-6">
+                                                <fieldset class="floating-labels">
+                                                <div class="form-group m-b-40">
+                                                    <input type="text" class="form-control" id=""><span class="bar"></span>
+                                                    <label for="">Provide your Email Address:</label>
+                                                </div> 
+                                                </fieldset>
+                                            </div>
+                
+                                            <div class="col-6">
+                                                <fieldset class="floating-labels">
+                                                <div class="form-group">
+                                                    <input type="tel" class="form-control phone-inputmask" id=""><span class="bar"></span>
+                                                    <label for="">Provide your Phone Number:</label>
+                                                </div> 
+                                                </fieldset>
+                                            </div>
+                
+                                            <div class="col-6" style="margin-top: -20px;">
+                                                <fieldset class="floating-labels">
+                                                <div class="form-group"  style="margin-bottom: 2px !important;">
+                                                    <p class="boldText">Put in your Date of Service:</p>
+                                                </div>
+                                                <div class="form-group" style="margin-top: -18px;">
+                                                    <input type="date" class="form-control" id=""><span class="bar"></span>
+                                                </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="commentleft" role="tabpanel">
+                                <h3 class="font-weight-bold h3Spacing">Comment Left</h3>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="comment-text" class="control-label">Comment:</label>
+                                            <textarea class="form-control" id="comment-text"></textarea>
+                                        </div>
+                
+                                        <div class="row mb-4">
+                                            <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 commentleftStage">Leave Comment</button>
+                                        </div>
+                
+                                        <div class="form-group">
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="" style="font-size: 20px; font-weight: 800;">Ravi Agrawal</h4>
+                                                    <p style="margin-top: -10px;">
+                                                        <small class="text-muted">
+                                                            <i class="fa fa-clock-o"></i>11/10/1998 12.21 AM
+                                                        </small>
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>Comment Left</p>
+                                                </div>
+                                            </div>
+                                            <hr class="solid bg-white">
+                                            
+                                            <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h4 class="" style="font-size: 20px; font-weight: 800;">Ravi Agrawal</h4>
+                                                    <p style="margin-top: -10px;">
+                                                        <small class="text-muted">
+                                                            <i class="fa fa-clock-o"></i>11/10/1998 12.21 AM
+                                                        </small>
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-body">
+                                                    <p>Comment Left</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                               
+                            </div>
+
+                            <div class="tab-pane" id="edit_visit" role="tabpanel">
+                                <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 updateVisitStage">Update Visit Type</button>
+                                <div class="modal-body">
+                                    <h3 class="font-weight-bold h3Spacing">Edit Visit Type</h3>
+                                    <form class=" m-t-40">
+                                        <div class="form-group">
+                                            <label class="control-label">Visit Type</label>
+                                            <select class="form-control custom-select" data-placeholder="Choose a Visit Type" tabindex="1">
+                                                <option value="Visit Type 1">Visit Type 1</option>
+                                                <option value="Visit Type 2">Visit Type 2</option>
+                                                <option value="Visit Type 3">Visit Type 5</option>
+                                                <option value="Visit Type 4">Visit Type 4</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Visit Reason</label>
+                                            <select class="form-control custom-select" data-placeholder="Choose a Visit Reason" tabindex="1">
+                                                <option value="Visit Reason 1">Visit Reason 1</option>
+                                                <option value="Visit Reason 2">Visit Reason 2</option>
+                                                <option value="Visit Reason 3">Visit Reason 5</option>
+                                                <option value="Visit Reason 4">Visit Reason 4</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label">Date of Service</label>
+                                            <input type="date" class="form-control" id="dos"><span class="bar"></span>
+                                        </div>
+                                    </form>
+                                    <form>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane profile-tab-pane" id="send_text" role="tabpanel">
+                                <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 textoptStage mb-4">Send Text</button>
+                                <h3 class="font-weight-bold h3Spacing">Send a text</h3>
+                                <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-4 col-md-4">
+                                                <div class="row">
+                                                    <div class="col-xl">
+                                                      <div class="list-group text-left" id="list-tab" role="tablist">
+                                                        <a class="list-group-item list-group-item-action btn-success" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" aria-selected="false"><i class="fas fa-envelope mr-3"></i>Compose</a>
+                                                        <a class="list-group-item list-group-item-action active show" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" aria-selected="true"><i class="far fa-file-alt mr-3"></i>Welcome To Got</a>
+                                                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile" aria-selected="false"><i class="far fa-file-alt mr-3"></i>Trying To Reach</a>
+                                                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages" aria-selected="false"><i class="far fa-file-alt mr-3"></i>Update Records</a>
+                                                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" aria-selected="false"><i class="far fa-file-alt mr-3"></i>Hello There!</a>
+                                                      </div>
+                              
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-8 col-md-8">
+                                                <form class="floating-labels m-t-40">
+                                                    <div class="form-group m-b-40">
+                                                        <input type="text" class="form-control" id="templateName"><span class="bar"></span>
+                                                        <label for="templateName">Template Name</label>
+                                                    </div>
+                                                    <div class="form-group m-b-40">
+                                                        <input type="email" class="form-control" id="to"><span class="bar"></span>
+                                                        <label for="to">To</label>
+                                                    </div>
+                                                    <div class="form-group m-b-40">
+                                                        <label for="comment-text" class="control-label">Type your text</label>
+                                                        <textarea class="form-control" id="comment-text"></textarea>
+                                                    </div>
+                                                </form>          
+                                            </div>
+                                        </div>
+                
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="send_email" role="tabpanel">
+                                <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 emailoptStage mb-4">Send Email</button>
+                                <h3 class="font-weight-bold h3Spacing">Mailbox</h3>
+                                <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-4 col-md-4">
+                                                <div class="row">
+                                                    <div class="col-xl">
+                                                      <div class="list-group text-left" id="list-tab" role="tablist">
+                                                        <a class="list-group-item list-group-item-action btn-success" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" aria-selected="false"><i class="fas fa-envelope mr-3"></i>Compose</a>
+                                                        <a class="list-group-item list-group-item-action active show" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" aria-selected="true"><i class="far fa-file-alt mr-3"></i>Welcome To Got</a>
+                                                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile" aria-selected="false"><i class="far fa-file-alt mr-3"></i>Trying To Reach</a>
+                                                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages" aria-selected="false"><i class="far fa-file-alt mr-3"></i>Update Records</a>
+                                                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" aria-selected="false"><i class="far fa-file-alt mr-3"></i>Hello There!</a>
+                                                      </div>
+                              
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-8 col-md-8">
+                                                <form class="">
+                                                    <div class="card-body">
+                                                        <h3 class="card-title">Compose New Message</h3>
+                                                        <div class="form-group">
+                                                            <input class="form-control" placeholder="Template Name:">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input class="form-control" placeholder="Send:">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input class="form-control" placeholder="Subject:">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <textarea class="textarea_editor form-control" rows="15" placeholder="Enter text ..."></textarea>
+                                                        </div>
+                                                        <h4><i class="ti-link"></i> Attachment</h4>
+                                                        <form action="#" class="dropzone">
+                                                            <div class="fallback">
+                                                                <input name="file" type="file" multiple />
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </form>        
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- View Visits -->
 
     
     <!-- New Patients Modal -->
