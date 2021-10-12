@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="assets/node_modules/html5-editor/bootstrap-wysihtml5.css">
     <!-- Dropzone css -->
     <link href="assets/node_modules/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/node_modules/dropify/dist/css/dropify.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -575,8 +576,9 @@
                                                             </span>
                                                         </span>
                                                 </a>
-                                            
-                                                <a href="javascript:void(0)" class="mytooltip btn btn-sm btn-block btn-success text-white mt-2">
+                                            </br>
+                                            <div class="row">
+                                                <a href="javascript:void(0)" class="mytooltip bs-label label-success m-1 p-2x  style="padding: 4px; border-radius: 0.2rem;"text-dark">
                                                     RM1
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
@@ -595,10 +597,32 @@
                                                             </span>
                                                         </span>
                                                     </span>
-                                                </a>
+                                                </a>    
+                                                <a href="javascript:void(0)" class="mytooltip bs-label label-danger m-1 p-2x  style="padding: 4px; border-radius: 0.2rem;"text-dark">
+                                                    RM2
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2">
+                                                                <div class="timeline-panel">
+                                                                    <div class="timeline-heading">
+                                                                        <p class="timeline-title" style="font-size: 20px; font-weight: 800;">Resource Captured</p>
+                                                                        <h4 class="timeline-title">Ravi Agrawal</h4>
+                                                                    </div>
+                                                                    <p>
+                                                                        <small class="text-muted">
+                                                                            <i class="fa fa-clock-o"></i>11/10/1998 12.21 AM
+                                                                        </small>
+                                                                    </p>
+                                                                </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>                                             
+                                            </div>
+
                                             </td>
                                             <td style="font-weight: 900;">
-                                                Ravi Agrawal<i class="fas fa-exclamation-circle ml-2 text-danger" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()"></i>
+                                                Ravi Agrawal<i class="fas fa-user-circle ml-2 text-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()"></i>
                                                 <br>
                                                 11/10/1998
                                                 <!-- <button type="button" class="btn btn-sm btn-block btn-success" data-toggle="modal" data-target="#resourceidmodal">
@@ -625,65 +649,119 @@
                                                     Insurance
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
-                                                            <span class="tooltip-inner2">
-                                                                <span class="mb-3">
-                                                                    Step Resource: <span class="bs-label label-success badgeBorder">Resource 01</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step Alerts: <span class="bs-label label-danger badgeBorder">5 Minutes</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step SMS: <span class="bs-label label-success badgeBorder">SMS 02</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step Email: <span class="bs-label label-success badgeBorder">Email 02</span>
-                                                                </span>
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">Email 02</span>
+                                                                        </div>
+                                                                    </div>
                                                             </span>
                                                         </span>
                                                     </span>
                                                 </button>
                                             </td>
                                             <td>
-                                                <button type="" class="btn btn-block btn-sm btn-outline-success mytooltip stepAcknowledge">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
                                                     S.Ansari <br> 9/20/2020 <br>3:01PM
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
-                                                            <span class="tooltip-inner2">
-                                                                <span class="mb-3">
-                                                                    Step Resource: <span class="bs-label label-success badgeBorder">Resource 01</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step Alerts: <span class="bs-label label-danger badgeBorder">5 Minutes</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step SMS: <span class="bs-label label-success badgeBorder">SMS 02</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step Email: <span class="bs-label label-success badgeBorder">Email 02</span>
-                                                                </span>
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">Email 02</span>
+                                                                        </div>
+                                                                    </div>
                                                             </span>
                                                         </span>
                                                     </span>
                                                 </button>
                                             </td>
                                             <td>
-                                                <button type="" class="btn btn-block btn-sm btn-outline-danger mytooltip stepAcknowledge">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
                                                     S.Ansari <br> 9/20/2020 <br>3:01PM
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
-                                                            <span class="tooltip-inner2">
-                                                                <span class="mb-3">
-                                                                    Step Resource: <span class="bs-label label-success badgeBorder">Resource 01</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step Alerts: <span class="bs-label label-danger badgeBorder">5 Minutes</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step SMS: <span class="bs-label label-success badgeBorder">SMS 02</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step Email: <span class="bs-label label-success badgeBorder">Email 02</span>
-                                                                </span>
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">Email 02</span>
+                                                                        </div>
+                                                                    </div>
                                                             </span>
                                                         </span>
                                                     </span>
@@ -694,19 +772,37 @@
                                                     Payments
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
-                                                            <span class="tooltip-inner2">
-                                                                <span class="mb-3">
-                                                                    Step Resource: <span class="bs-label label-success badgeBorder">Resource 01</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step Alerts: <span class="bs-label label-danger badgeBorder">5 Minutes</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step SMS: <span class="bs-label label-success badgeBorder">SMS 02</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step Email: <span class="bs-label label-success badgeBorder">Email 02</span>
-                                                                </span>
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">Email 02</span>
+                                                                        </div>
+                                                                    </div>
                                                             </span>
                                                         </span>
                                                     </span>
@@ -717,19 +813,37 @@
                                                     Vitals
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
-                                                            <span class="tooltip-inner2">
-                                                                <span class="mb-3">
-                                                                    Step Resource: <span class="bs-label label-success badgeBorder">Resource 01</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step Alerts: <span class="bs-label label-danger badgeBorder">5 Minutes</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step SMS: <span class="bs-label label-success badgeBorder">SMS 02</span>
-                                                                </span>
-                                                                <span class="mb-3">
-                                                                    Step Email: <span class="bs-label label-success badgeBorder">Email 02</span>
-                                                                </span>
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x" style="padding: 4px; border-radius: 0.2rem;">Email 02</span>
+                                                                        </div>
+                                                                    </div>
                                                             </span>
                                                         </span>
                                                     </span>
@@ -1037,6 +1151,8 @@
                             <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#edit_visit" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Edit Visit Type</span> </a> </li>
                             <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#send_text" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Send Text</span> </a> </li>
                             <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#send_email" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">Send Email</span></a> </li>
+                            <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#collect_payment" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">Collect Payment</span></a> </li>
+                            <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#assign_physician" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">Assign Physician</span></a> </li>
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content" style="width: 950px;">
@@ -1326,14 +1442,247 @@
                                                         </div>
                                                         <h4><i class="ti-link"></i> Attachment</h4>
                                                         <form action="#" class="dropzone">
-                                                            <div class="fallback">
-                                                                <input name="file" type="file" multiple />
-                                                            </div>
+                                                            <input type="file" id="input-file-now" class="dropify" />
                                                         </form>
                                                     </div>
                                                 </form>        
                                             </div>
                                         </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="collect_payment" role="tabpanel">
+                                <div class="modal-body">
+                                    <form class="collect_payment_screen">
+                                        <div class="row text-center">
+                                            <div class="col m-2 p-2">
+                                              <a href="javascript:(void)" class="cred_debit" >
+                                                <i class="far fa-credit-card fa-5x mb-3 blue-text"></i>
+                                                <h4 class="font-weight-bold">Credit Or Debit Card</h4>
+                                              </a>
+                                            </div>
+                            
+                                            <div class="col m-2 p-2">
+                                              <a href="javascript:(void)" class="cash_collect">
+                                                <i class="fas fa-hand-holding-usd fa-5x mb-3 blue-text"></i>
+                                                <h4 class="font-weight-bold">Cash</h4>
+                                              </a>
+                                            </div>
+                            
+                                            <div class="col m-2 p-2">
+                                              <a href="javascript:(void)"  class="cheque_collect">
+                                                <i class="fas fa-money-check-alt fa-5x mb-3 blue-text"></i>
+                                                <h4 class="font-weight-bold">Cheque</h4>
+                                              </a>
+                                            </div>
+                            
+                                            <div class="col m-2 p-2">
+                                              <a href="javascript:(void)"  class="payment_collect">
+                                                <i class="fas fa-cash-register fa-5x mb-3 blue-text"></i>
+                                                <h4 class="font-weight-bold">Payment Requested</h4>
+                                              </a>
+                                            </div>
+                                          </div>
+                                    </form>
+
+                                    <section class="section mt-3 credit_info">
+                                        <h4 class="font-weight-bold h4-responsive">Payment Verfication will be Done</h4>
+                                        <form class="floating-labels m-t-40">
+                                            <div class="form-group m-b-40">
+                                                <input type="text" class="form-control" id=""><span class="bar"></span>
+                                                <label for="">Card Holder Name</label>
+                                            </div>
+                                            <div class="form-group m-b-40">
+                                                <input type="text" class="form-control" id=""><span class="bar"></span>
+                                                <label for="">Card Number</label>
+                                            </div>
+                                            <div class="form-group m-b-40">
+                                                <input type="text" class="form-control" id=""><span class="bar"></span>
+                                                <label for="">Card CVC</label>
+                                            </div>
+                                            <div class="form-group m-b-40">
+                                                <input type="text" class="form-control" id=""><span class="bar"></span>
+                                                <label for="zip">Zip</label>
+                                            </div>
+                                            <div class="form-group m-b-40">
+                                                <input type="text" class="form-control" id=""><span class="bar"></span>
+                                                <label for="">Amount</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Comment:</label>
+                                                <textarea class="form-control" id=""></textarea>
+                                            </div>
+                                        </form>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 backto_payment_screen">Back</button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-outline-success waves-effect waves-light col-12" id="creditCardPayment">Process</button>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <section class="section mt-3 cash_info">
+                                        <h4 class="font-weight-bold h4-responsive">Cash On The Spot</h4>
+                                        <form class="floating-labels m-t-40">
+                                            <div class="form-group m-b-40">
+                                                <input type="text" class="form-control" id=""><span class="bar"></span>
+                                                <label for="">Amount(In $)</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Comment:</label>
+                                                <textarea class="form-control" id=""></textarea>
+                                            </div>
+                                        </form>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 backto_payment_screen">Back</button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-outline-success waves-effect waves-light col-12" id="cashPayment">Collect</button>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <section class="section mt-3 cheque_info">
+                                        <h4 class="font-weight-bold h4-responsive">Payment Via Cheque</h4>
+                                        <form class="floating-labels m-t-40">
+                                        <div class="form-group m-b-40">
+                                            <input type="text" class="form-control" id=""><span class="bar"></span>
+                                            <label for="">Cheque Number</label>
+                                        </div>
+                                        <div class="form-group m-b-40">
+                                            <input type="text" class="form-control" id=""><span class="bar"></span>
+                                            <label for="">Amount(In $)</label>
+                                        </div>
+                                        <div class="form-group m-b-40">
+                                            <input type="text" class="form-control" id=""><span class="bar"></span>
+                                            <label for="">Cheque Holder Name</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="" class="control-label">Comment:</label>
+                                            <textarea class="form-control" id=""></textarea>
+                                        </div>
+                                    </form>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 backto_payment_screen">Back</button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-outline-success waves-effect waves-light col-12" id="chequePayment">Collect</button>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <section class="section mt-3 payment_info">
+                                        <h4 class="font-weight-bold h4-responsive">Payment Request</h4>
+                                        <fieldset class="floating-labels row mb-3">
+                                            <div class="col-6">
+                                                <h4 class="font-weight-bold">Patient Name:</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="name" name="name" placeholder="Patient Name"><span class="bar"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <h4 class="font-weight-bold">Date Of Birth:</h4>
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control" id="dob" name="dob" ><span class="bar"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <h4 class="font-weight-bold">Date Of Service:</h4>
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control" id="dos" name="dos" value=""><span class="bar"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <h4 class="font-weight-bold">Amount Requested:</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount Requested (In $$)"><span class="bar"></span>
+                                                </div>
+                                            </div>
+
+                                            <span class="mb-2" style="color: red; font-weight: bolder; font-size: small;"><strong>Disclaimer</strong>: The patient will be sent request to entered delivery methods. If blank no notification will be sent.</span>
+
+
+                                            <div class="col-6">
+                                                <h4 class="font-weight-bold">Phone:</h4>
+                                                <div class="form-group">
+                                                    <input type="tel" class="form-control optional phone-inputmask" id="phone" name="phone" placeholder="Phone"><span class="bar"></span>
+                                                    <span class="text-danger" class="text-danger" id="error_ptphone"></span>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <h4 class="font-weight-bold">Email:</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="" name="email" placeholder="Email"><span class="bar"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <h4 class="font-weight-bold">Notes:</h4>
+                                                <textarea class="form-control" rows="4"  name="note" placeholder="Notes"></textarea>
+                                                <span class="bar"></span>
+                                            </div>
+                                            <div class="custom-file col-6" style="margin-top: 7px; height: 100%">
+                                                <h4 class="font-weight-bold">Attach:</h4>
+                                                <input type="file" id="input-file-now" class="dropify" />
+                                            </div>
+                                        </fieldset>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 backto_payment_screen">Back</button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-outline-success waves-effect waves-light col-12" id="requestPayment">Send Payment Request</button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="assign_physician" role="tabpanel">
+                                <h3 class="font-weight-bold h3Spacing">Assign Physician</h3>
+                                <div class="modal-body">
+                                    <div class="table-responsive">
+                                      <table id="config-table8" class="table display table-bordered table-striped no-wrap">
+                                          <thead class="thead-dark">
+                                              <tr>
+                                                  <th>Action</th>
+                                                  <th>Name</th>
+                                                  <th>DOB</th>
+                                                  <th>Email</th>
+                                                  <th>Phone</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                                  <td>
+                                                      <button class="btn btn-dark assignPhyStage">Assign Physician</button>
+                                                  </td>
+                                                  <td>Shakir</td>
+                                                  <td>11/10/1999</td>
+                                                  <td>x@gmail.com</td>
+                                                  <td>9872712063</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>
+                                                      <button class="btn btn-info unassignPhyStage">Assigned</button>
+                                                  </td>
+                                                  <td>Shakir</td>
+                                                  <td>11/10/1999</td>
+                                                  <td>x@gmail.com</td>
+                                                  <td>9872712063</td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -3915,14 +4264,14 @@
 
     <!-- Payment Request Modal -->
     <div id="paymentRequest" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Payment Request</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
-                    <form class="floating-labels m-t-40">
+                    <!-- <form class="floating-labels m-t-40">
                         <div class="form-group m-b-40">
                             <input type="text" class="form-control" id="amount"><span class="bar"></span>
                             <label for="amount">Amount(In $)</label>
@@ -3939,7 +4288,66 @@
                             <label for="comment-text" class="control-label">Comment:</label>
                             <textarea class="form-control" id="comment-text"></textarea>
                         </div>
-                    </form>
+                    </form> -->
+
+                    <fieldset class="floating-labels row mb-3">
+                        <div class="col-6">
+                            <h4 class="font-weight-bold">Patient Name:</h4>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Patient Name"><span class="bar"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <h4 class="font-weight-bold">Date Of Birth:</h4>
+                            <div class="form-group">
+                                <input type="date" class="form-control" id="dob" name="dob" ><span class="bar"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <h4 class="font-weight-bold">Date Of Service:</h4>
+                            <div class="form-group">
+                                <input type="date" class="form-control" id="dos" name="dos" value=""><span class="bar"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <h4 class="font-weight-bold">Amount Requested:</h4>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount Requested (In $$)"><span class="bar"></span>
+                            </div>
+                        </div>
+
+                        <span class="mb-2" style="color: red; font-weight: bolder; font-size: small;"><strong>Disclaimer</strong>: The patient will be sent request to entered delivery methods. If blank no notification will be sent.</span>
+
+
+                        <div class="col-6">
+                            <h4 class="font-weight-bold">Phone:</h4>
+                            <div class="form-group">
+                                <input type="tel" class="form-control optional phone-inputmask" id="phone" name="phone" placeholder="Phone"><span class="bar"></span>
+                                <span class="text-danger" class="text-danger" id="error_ptphone"></span>
+
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <h4 class="font-weight-bold">Email:</h4>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="" name="email" placeholder="Email"><span class="bar"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <h4 class="font-weight-bold">Notes:</h4>
+                            <textarea class="form-control" rows="4"  name="note" placeholder="Notes"></textarea>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="custom-file col-6" style="margin-top: 7px; height: 100%">
+                            <h4 class="font-weight-bold">Attach:</h4>
+                            <input type="file" id="input-file-now" class="dropify" />
+                        </div>
+                    </fieldset>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-success waves-effect waves-light col-12" id="requestPayment">Send Payment Request</button>
@@ -5530,6 +5938,94 @@
                 //templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
             });
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".rtp_flow").css({ display: "none" }),
+            $(".rtp_somebody").click(function () {
+                $(".rtp_flow").css({ display: "block" }),
+                $(".somebody_flow").css({ display: "none" });
+            }),
+            $(".collect_payment_screen").css({ display: "block" }),
+            $(".cred_debit").click(function () {
+                $(".collect_payment_screen").css({ display: "none" }),
+                $(".credit_info").css({ display: "block" });
+            }),
+            $(".backto_payment_screen").click(function () {
+                $(".credit_info").css({ display: "none" }),
+                $(".collect_payment_screen").css({ display: "block" });
+            }),
+            
+            $(".cash_collect").click(function () {
+                $(".collect_payment_screen").css({ display: "none" }),
+                $(".cash_info").css({ display: "block" });
+            }),
+            $(".backto_payment_screen").click(function () {
+                $(".cash_info").css({ display: "none" }),
+                $(".collect_payment_screen").css({ display: "block" });
+            }),
+            
+            $(".cheque_collect").click(function () {
+                $(".collect_payment_screen").css({ display: "none" }),
+                $(".cheque_info").css({ display: "block" });
+            }),
+            $(".backto_payment_screen").click(function () {
+                $(".cheque_info").css({ display: "none" }),
+                $(".collect_payment_screen").css({ display: "block" });
+            }),
+            
+            $(".payment_collect").click(function () {
+                $(".collect_payment_screen").css({ display: "none" }),
+                $(".payment_info").css({ display: "block" });
+            }),
+            $(".backto_payment_screen").click(function () {
+                $(".payment_info").css({ display: "none" }),
+                $(".collect_payment_screen").css({ display: "block" });
+            });
+        })
+    </script>
+    <script src="assets/node_modules/dropify/dist/js/dropify.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Basic
+        $('.dropify').dropify();
+
+        // Translated
+        $('.dropify-fr').dropify({
+            messages: {
+                default: 'Glissez-déposez un fichier ici ou cliquez',
+                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                remove: 'Supprimer',
+                error: 'Désolé, le fichier trop volumineux'
+            }
+        });
+
+        // Used events
+        var drEvent = $('#input-file-events').dropify();
+
+        drEvent.on('dropify.beforeClear', function(event, element) {
+            return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+        });
+
+        drEvent.on('dropify.afterClear', function(event, element) {
+            alert('File deleted');
+        });
+
+        drEvent.on('dropify.errors', function(event, element) {
+            console.log('Has Errors');
+        });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify')
+        $('#toggleDropify').on('click', function(e) {
+            e.preventDefault();
+            if (drDestroy.isDropified()) {
+                drDestroy.destroy();
+            } else {
+                drDestroy.init();
+            }
+        })
+    });
     </script>
 
 </body>
