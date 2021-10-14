@@ -336,7 +336,7 @@
                                 <li><a href="lab.html" ><span>Labs</span></a></li> -->
                                 <li><a href="emailconfirmation.html" ><span>Products</span></a></li>
                                 <!-- <li><a href="resultDelivery.html" ><span>Result Delivery</span></a></li> -->
-                                <li><a href="materials.html" ><span>Materials</span></a></li>
+                                 <li><a href="parts.html" ><span>Parts</span></a></li>
                             </ul>
                         </div> 
                     </li>
@@ -520,6 +520,13 @@
                 
                         </div> 
                     </li> -->
+                    <li>
+                      <a href="partstracking.html" title="Elements">
+                          <i class="glyph-icon icon-wrench"></i>
+                          <span>Parts Tracking</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
                     <li>
                       <a href="workstationx.html" title="Elements">
                           <i class="glyph-icon icon-wrench"></i>
@@ -817,44 +824,42 @@
 </script>
 
 <div id="page-title">
-<legend class="font-weight-bold">Materials</legend>
+<legend class="font-weight-bold">Parts Tracking</legend>
 </div>
 
 <div class="panel">
 <div class="panel-body">
 <div class="example-box-wrapper">
     <!--Add Account Button-->
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         <div class="row">
             <div class="col modalbutton">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-success float-right plus mb-1" data-toggle="modal" data-target="#emailaddModal">
+                <!-- Button trigger modal --
+                <button type="button" class="btn btn-success float-right plus mb-1" data-toggle="modal" data-target="#addparts_tracking">
                     +
                 </button>
-                <!-- Button trigger modal -->
+                <!-- Button trigger modal --
             </div>
         </div>
-    </div>
+    </div> -->
     <!--Add Account Button-->
 <table id="datatable-responsive" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%"> 
 
         <thead>
             <tr>
-                <th>Action</th>
+                <th>View</th>
+                <th>Part Number</th>
+                <th>Part Name</th>
                 <th>Status</th>
-                <th>Materials ID</th>
-                <th>Materials Name</th>
-                <th>Materials Content</th>
             </tr>
         </thead>
             
         <tfoot>
             <tr>
-                <th>Action</th>
+                <th>View</th>
+                <th>Part Number</th>
+                <th>Part Name</th>
                 <th>Status</th>
-                <th>Materials ID</th>
-                <th>Materials Name</th>
-                <th>Materials Content</th>
             </tr>
         </tfoot>
             
@@ -862,7 +867,7 @@
             <tr>
                 <td>
                     <div class="btn-group">
-                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
+                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">View</button>
                         <ul class="dropdown-menu" role="menu">
                            <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
                            <li><a href="#" data-toggle="modal" data-target="#update_levels">Update Levels</a></li>
@@ -872,16 +877,17 @@
                    </div>
                 </td>
                 <td>
+                    P-1234
+                </td>
+                <td>Part Name</td>
+                <td>
                     <span class="bs-label label-success">Active</span>
                 </td>
-                <td>PID-1-1</td>
-                <td>Materials Name</td>
-                <td>Materials Content</td>
             </tr>
             <tr>
                 <td>
                     <div class="btn-group">
-                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
+                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">View</button>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
                             <li><a href="#" data-toggle="modal" data-target="#update_levels">Update Levels</a></li>
@@ -890,12 +896,11 @@
                         </ul>
                    </div>
                 </td>
+                <td>P-1235</td>
+                <td>Part Name</td>
                 <td>
                     <span class="bs-label label-danger">Inactive</span>
                 </td>
-                <td>PID-1-2</td>
-                <td>Materials Name</td>
-                <td>Materials Content</td>
             </tr>
         </tbody>
             
@@ -1032,6 +1037,88 @@
     </div>
 </div>
 <!-- Update Levels -->
+
+
+<!-- Add Parts Modal -->
+  <div class="modal fade" id="addparts_tracking" tabindex="-1" role="dialog" aria-labelledby="addparts_trackingLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Parts</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form enctype="multipart/form-data" method="post"  >
+
+          <!-- Part Name -->
+          <div class="form-group">
+            <label for="Name">Part Name</label>
+            <input name="Name" class="form-control" id="Name" required="" type="text">
+        </div>
+        <!-- Part Name -->
+
+        <!-- Part Number -->
+        <div class="form-group">
+            <label for="">Part Number</label>
+            <input name="Name" class="form-control" id="Name" required="" type="text">
+        </div>
+        <!-- Part Number -->
+
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-addc-started email-addc-success email-addc-failed"><span >Add Parts</span><i class="glyph-icon icon-arrow-right"></i></button>
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+  </div>
+<!-- Add Parts Modal -->
+
+
+<!-- Edit Parts Modal -->
+  <div class="modal fade" id="editparts_tracking" tabindex="-1" role="dialog" aria-labelledby="editparts_trackingLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Edit Parts</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form enctype="multipart/form-data" method="post"  >
+
+          <!-- Part Name -->
+          <div class="form-group">
+            <label for="Name">Part Name</label>
+            <input name="Name" class="form-control" id="Name" required="" type="text">
+        </div>
+        <!-- Part Name -->
+
+        <!-- Part Number -->
+        <div class="form-group">
+            <label for="">Part Number</label>
+            <input name="Name" class="form-control" id="Name" required="" type="text">
+        </div>
+        <!-- Part Number -->
+
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-addc-started email-addc-success email-addc-failed"><span >Edit Parts</span><i class="glyph-icon icon-arrow-right"></i></button>
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+  </div>
+<!-- Edit Parts Modal -->
 
 
 <!-- Add Modal -->

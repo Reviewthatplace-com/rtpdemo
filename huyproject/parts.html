@@ -118,6 +118,7 @@
 <link rel="stylesheet" type="text/css" href="assets/widgets/uniform/uniform.css">
 <link rel="stylesheet" type="text/css" href="assets/widgets/wizard/wizard.css">
 <link rel="stylesheet" type="text/css" href="assets/widgets/xeditable/xeditable.css">
+<link rel="stylesheet" type="text/css" href="assets/node_modules/dropify/dist/css/dropify.min.css">
 
 <!-- SNIPPETS -->
 
@@ -159,17 +160,55 @@
     <!--<script type="text/javascript" src="assets/js-core/transition.js"></script>-->
     <script type="text/javascript" src="assets/js-core/modernizr.js"></script>
     <script type="text/javascript" src="assets/js-core/jquery-cookie.js"></script>
-
-
-
-
-
     <script type="text/javascript">
         $(window).load(function(){
             setTimeout(function() {
                 $('#loading').fadeOut( 400, "linear" );
             }, 300);
         });
+    </script>
+    <script type="text/javascript" src="assets/node_modules/dropify/dist/js/dropify.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          // Basic
+          $('.dropify').dropify();
+  
+          // Translated
+          $('.dropify-fr').dropify({
+              messages: {
+                  default: 'Glissez-déposez un fichier ici ou cliquez',
+                  replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                  remove: 'Supprimer',
+                  error: 'Désolé, le fichier trop volumineux'
+              }
+          });
+  
+          // Used events
+          var drEvent = $('#input-file-events').dropify();
+  
+          drEvent.on('dropify.beforeClear', function(event, element) {
+              return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+          });
+  
+          drEvent.on('dropify.afterClear', function(event, element) {
+              alert('File deleted');
+          });
+  
+          drEvent.on('dropify.errors', function(event, element) {
+              console.log('Has Errors');
+          });
+  
+          var drDestroy = $('#input-file-to-destroy').dropify();
+          drDestroy = drDestroy.data('dropify')
+          $('#toggleDropify').on('click', function(e) {
+              e.preventDefault();
+              if (drDestroy.isDropified()) {
+                  drDestroy.destroy();
+              } else {
+                  drDestroy.init();
+              }
+          })
+      });
     </script>
 
 
@@ -750,8 +789,9 @@
             
             </div>
         </div>
-        
 
+
+        
         <div id="page-content-wrapper">
             <div id="page-content">
 
@@ -784,21 +824,34 @@
 </script>
 
 <div id="page-title">
-<legend class="font-weight-bold">Payment Types</legend>
+<legend class="font-weight-bold">Materials</legend>
 </div>
 
 <div class="panel">
 <div class="panel-body">
 <div class="example-box-wrapper">
+    <!--Add Account Button-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col modalbutton">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success float-right plus mb-1" data-toggle="modal" data-target="#emailaddModal">
+                    +
+                </button>
+                <!-- Button trigger modal -->
+            </div>
+        </div>
+    </div>
+    <!--Add Account Button-->
 <table id="datatable-responsive" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%"> 
 
         <thead>
             <tr>
                 <th>Action</th>
                 <th>Status</th>
-                <th>Payment ID</th>
-                <th>Payment Type</th>
-                <th>Products</th>
+                <th>Parts ID</th>
+                <th>Parts Name</th>
+                <th>Parts Content</th>
             </tr>
         </thead>
             
@@ -806,9 +859,9 @@
             <tr>
                 <th>Action</th>
                 <th>Status</th>
-                <th>Payment ID</th>
-                <th>Payment Type</th>
-                <th>Products</th>
+                <th>Parts ID</th>
+                <th>Parts Name</th>
+                <th>Parts Content</th>
             </tr>
         </tfoot>
             
@@ -818,66 +871,38 @@
                     <div class="btn-group">
                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
                         <ul class="dropdown-menu" role="menu">
-                           <li><a href="#" data-toggle="modal" data-target="#api1Modal">API</a></li>
+                           <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
+                           <li><a href="#" data-toggle="modal" data-target="#update_levels">Update Levels</a></li>
+                           <li><a href="#" data-toggle="modal" data-target="#emaileditModal">View & Edit</a></li>
+                           <li><a href="#" data-toggle="modal" data-target="" class="email-archive-started email-archive-success email-archive-failed">Archive</a></li>
                         </ul>
                    </div>
                 </td>
                 <td>
                     <span class="bs-label label-success">Active</span>
                 </td>
-                <td>PMTID-1-1</td>
-                <td>Authorize.net</td>
-                <td>
-                    <span class="bs-label label-danger">Covid-19</span>
-                </td>
+                <td>PID-1-1</td>
+                <td>Parts Name</td>
+                <td>Parts Content</td>
             </tr>
             <tr>
                 <td>
                     <div class="btn-group">
                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#" data-toggle="modal" data-target="#apiModal">API</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#tracking_qr">Tracking QR</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#update_levels">Update Levels</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#emaileditModal">View & Edit</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="" class="email-active-started email-active-success email-active-failed">Active</a></li>
                         </ul>
                    </div>
                 </td>
                 <td>
-                    <span class="bs-label label-danger">Archive</span>
+                    <span class="bs-label label-danger">Inactive</span>
                 </td>
-                <td>PMTID-1-2</td>
-                <td>Insurance</td>
-                <td>
-                    <span class="bs-label label-danger">Covid-19</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="btn-group">
-                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#" data-toggle="modal" data-target="#editModal">Edit</a></li>
-                        </ul>
-                   </div>
-                </td>
-                <td>
-                    <span class="bs-label label-danger">Archive</span>
-                </td>
-                <td>PMTID-1-3</td>
-                <td>ID Type</td>
-                <td>
-                    <span class="bs-label label-primary">Flu</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>
-                    <span class="bs-label label-success">Active</span>
-                </td>
-                <td>PMTID-1-4</td>
-                <td>Cash</td>
-                <td>
-                    <span class="bs-label label-primary">Flu</span>
-                </td>
+                <td>PID-1-2</td>
+                <td>Parts Name</td>
+                <td>Parts Content</td>
             </tr>
         </tbody>
             
@@ -893,13 +918,14 @@
         </div>
     </div>
 
-<!-- Edit Modal -->
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel">
+    
+<!-- QR Modal -->
+<div class="modal fade" id="QR" tabindex="-1" role="dialog" aria-labelledby="QRLabel">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content" style="width: 49rem;">
         <!-- Header -->
       <div class="modal-header light-blue darken-3 white-text">
-        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Update ID Type</h4>
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>QR</h4>
         <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
           <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
         </button>
@@ -908,112 +934,167 @@
 
       <!-- Body -->
       <div class="modal-body">
-        <form enctype="multipart/form-data" method="post" siq_id="">           
-        <div class="row">
-
-            <!--Multiselect-->
-            <div class="col-xl-12" style="margin-bottom: 10px;">
-             <div class="form-group">
-                <label class="col-sm-3 control-label">Chosen multiselect</label>
-                <div class="col-sm-10">
-                    <select name="" multiple data-placeholder="Click to see available options" class="chosen-select">
-                            <option>Driver License</option>
-                            <option>State Identification</option>
-                            <option>Passport</option>
-                            <option>Birth Certification</option>
-                            <option>Social Security Number</option>
-                            <option>Other Identification</option>
-                    </select>
+        <section class="section mt-3 arfstep1 active">
+            <legend class="legendtitle">Scan QR</legend>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover arfsteponenext col-12"><span >Next</span><i class="glyph-icon icon-arrow-right"></i></button>
                 </div>
-                <div class="col-sm-2">
-                    <input  style="margin-top: 13px;" type="checkbox" data-on-color="btn-success" name="" class="checkbox-success" checked data-size="medium" data-on-text="And" data-off-text="Or" style="display: inline-block;">
-                    <label for=""style="display: inline-block;">Image Required</label>
-                </div>
-             </div>                
             </div>
-            <!--Multiselect-->
+        </section>
+
+        <section class="section mt-3 arfstep2" style="display: none;">
+            <legend class="legendtitle">Scan Product QR</legend>
             
-            <!--Switch-->
-            <div class="col-xl-12" style="margin-bottom: 5px;">
-             <div class="form-group">
-                <div class="col-sm-6" style="margin-left: 350px;">
-                    <input type="checkbox" data-on-color="info" name="" class="input-switch" checked data-size="medium" data-on-text="And" data-off-text="Or">
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover col-12 arfsteptwoback"><span >Back</span><i class="glyph-icon icon-arrow-left"></i></button>
                 </div>
-             </div>
-            </div>
-            <!--Switch-->
-
-            <!--Multiselect-->
-             <div class="col-xl-12" style="margin-bottom: 10px;">
-                <div class="form-group">
-                   <label class="col-sm-3 control-label">Chosen multiselect</label>
-                   <div class="col-sm-10">
-                       <select name="" multiple data-placeholder="Click to see available options..." class="chosen-select">
-                        <option>Driver License</option>
-                        <option>State Identification</option>
-                        <option>Passport</option>
-                        <option>Birth Certification</option>
-                        <option>Social Security Number</option>
-                        <option>Other Identification</option>
-                       </select>
-                   </div>
-                   <div class="col-sm-2">
-                       <input  style="margin-top: 13px;" type="checkbox" data-on-color="btn-success" name="" class="checkbox-success" checked data-size="medium" data-on-text="And" data-off-text="Or" style="display: inline-block;">
-                       <label for=""style="display: inline-block;">Image Required</label>
-                   </div>
-                </div>                
-             </div>
-            <!--Multiselect-->
-               
-            <!--Switch-->
-             <div class="col-xl-12" style="margin-bottom: 5px;">
-                <div class="form-group">
-                   <div class="col-sm-6" style="margin-left: 350px;">
-                       <input type="checkbox" data-on-color="info" name="" class="input-switch" checked data-size="medium" data-on-text="And" data-off-text="Or">
-                   </div>
+                <div class="col-6">
+                    <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt btnfont btn-hover col-12 qr-scan"><span >Confirm</span><i class="glyph-icon icon-arrow-right"></i></button>                    
                 </div>
-             </div>
-             <!--Switch-->
-
-            <!--Multiselect-->
-            <div class="col-xl-12" style="margin-bottom: 10px;">
-                <div class="form-group">
-                   <label class="col-sm-3 control-label">Chosen multiselect</label>
-                   <div class="col-sm-10">
-                       <select name="" multiple data-placeholder="Click to see available options..." class="chosen-select">
-                        <option>Driver License</option>
-                        <option>State Identification</option>
-                        <option>Passport</option>
-                        <option>Birth Certification</option>
-                        <option>Social Security Number</option>
-                        <option>Other Identification</option>
-                       </select>
-                   </div>
-                   <div class="col-sm-2">
-                       <input  style="margin-top: 13px;" type="checkbox" data-on-color="btn-success" name="" class="checkbox-success" checked data-size="medium" data-on-text="And" data-off-text="Or" style="display: inline-block;">
-                       <label for=""style="display: inline-block;">Image Required</label>
-                   </div>
-                </div>                
             </div>
-            <!--Multiselect-->
+        </section>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- QR Modal -->
 
+<!-- Tracking QR -->
+<div class="modal fade" id="tracking_qr" tabindex="-1" role="dialog" aria-labelledby="keyModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content modal-sm">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Tracking QR</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <img class="img-fluid" src="assets/images/qr1.png" alt="" width="300">
+      </div>
+      <!--body -->
+      </div>
+    </div>
+  </div>
+<!-- Tracking QR -->
+
+<!-- Update Levels -->
+<div class="modal fade" id="update_levels" tabindex="-1" role="dialog" aria-labelledby="QRLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width: 49rem;">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Update Levels</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form enctype="multipart/form-data" method="post"  >
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Add Materials -->
+                    <div class="form-group">
+                        <label for="Name">Add Materials</label>
+                        <input name="Name" class="form-control" id="Name" required="" type="number">
+                    </div>
+                    <!-- Add Materials -->
+                </div>
+
+                <div class="col-md-12">
+                    <!-- Remove Materials -->
+                    <div class="form-group">
+                        <label for="Name">Remove Materials</label>
+                        <input name="Name" class="form-control" id="Name" required="" type="number">
+                    </div>
+                    <!-- Remove Materials -->
+                </div>
+
+                <div class="col-md-12">
+                    <!-- Waste Materials -->
+                    <div class="form-group">
+                        <label for="Name">Waste Materials</label>
+                        <input name="Name" class="form-control" id="Name" required="" type="number">
+                    </div>
+                    <!-- Waste Materials -->
+                </div>
+            </div>
+
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-editc-started email-editc-success email-editc-failed"><span >Update Levels</span><i class="glyph-icon icon-arrow-right"></i></button>
+
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- Update Levels -->
+
+
+<!-- Add Modal -->
+  <div class="modal fade" id="emailaddModal" tabindex="-1" role="dialog" aria-labelledby="emailaddModalLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Parts</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form enctype="multipart/form-data" method="post"  >
+
+          <!-- Parts Name -->
+          <div class="form-group">
+            <label for="Name">Parts Name</label>
+            <input name="Name" class="form-control" id="Name" required="" type="text">
         </div>
-        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover paymenttypes-editid-started paymenttypes-editid-success paymenttypes-editid-failed"><span >Update ID Type</span><i class="glyph-icon icon-arrow-right"></i></button>
+        <!-- Parts Name -->
+
+        <!-- Parts Content -->
+        <div class="form-group">
+            <label for="">Parts Content</label>
+            <textarea name="" id="" class="form-control"></textarea>
+        </div>
+        <!-- Parts Content -->
+
+          <!--Upload Image-->
+            <div class="form-group">
+                <label for="">Upload Image</label>
+                <input type="file" id="input-file-now" class="dropify" />
+              </div>
+          <!--Upload Image-->
+
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-addc-started email-addc-success email-addc-failed"><span >Add Parts</span><i class="glyph-icon icon-arrow-right"></i></button>
         </form>
       </div>
       <!--body -->
       </div>
     </div>
-</div>
+  </div>
+<!-- Add Modal -->
+
 <!-- Edit Modal -->
-
-<!--API Modal -->
-<div class="modal fade" id="apiModal" tabindex="-1" role="dialog" aria-labelledby="apiModalLabel">
+  <div class="modal fade" id="emaileditModal" tabindex="-1" role="dialog" aria-labelledby="emaileditModalLabel">
     <div class="modal-dialog generalmodalws" role="document">
       <div class="modal-content generalmodalws">
         <!-- Header -->
       <div class="modal-header light-blue darken-3 white-text">
-        <h4 class="modalh4"><i class="fab fa-wpforms"></i>ADD API</h4>
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Update Parts</h4>
         <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
           <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
         </button>
@@ -1022,54 +1103,63 @@
 
       <!-- Body -->
       <div class="modal-body">
-        <form enctype="multipart/form-data" method="post" siq_id="">
-          
-          <!-- api -->
-            <div class="form-group">
-             <label for="api">API</label>
-                <input name="api" class="form-control" id="api" required="" type="text">
+        <form enctype="multipart/form-data" method="post"  >
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Parts Name -->
+                    <div class="form-group">
+                        <label for="Name">Parts Name</label>
+                        <input name="Name" class="form-control" id="Name" required="" type="text">
+                    </div>
+                    <!-- Parts Name -->
+                </div>
+
+                <div class="col-md-12">
+                    <!-- Parts Content -->
+                    <div class="form-group">
+                        <label for="">Parts Content</label>
+                        <textarea name="" id="" class="form-control"></textarea>
+                    </div>
+                    <!-- Parts Content -->                    
+                </div>
+
+                <div class="col-md-6">
+                    <!-- Parts Content -->
+                    <div class="form-group">
+                        <label for="">Current</label>
+                        <input name="Name" disabled class="form-control" id="Name" required="" type="number"  placeholder="50">
+                    </div>
+                    <!-- Parts Content -->                    
+                </div>
+
+                <div class="col-md-6">
+                    <!-- Parts Content -->
+                    <div class="form-group">
+                        <label for="">Total Wasted</label>
+                        <input name="Name" disabled class="form-control" id="Name" required="" type="number"  placeholder="05">
+                    </div>
+                    <!-- Parts Content -->                                        
+                </div>
+
+                <div class="col-md-12">
+                    <!--Upload Image-->
+                        <div class="form-group">
+                            <label for="">Upload Image</label>
+                            <input type="file" id="input-file-now" class="dropify" />
+                        </div>
+                    <!--Upload Image-->                    
+                </div>
             </div>
-          <!-- api -->
-          <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover paymenttypes-apiins-started paymenttypes-apiins-success paymenttypes-apiins-failed"><span >Add API</span><i class="glyph-icon icon-arrow-right"></i></button>
+
+        <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover email-editc-started email-editc-success email-editc-failed"><span >Update Parts</span><i class="glyph-icon icon-arrow-right"></i></button>
+
         </form>
       </div>
       <!--body -->
       </div>
     </div>
-</div>
-<!--API Modal -->
-
-<!--API1 Modal -->
-<div class="modal fade" id="api1Modal" tabindex="-1" role="dialog" aria-labelledby="api1ModalLabel">
-    <div class="modal-dialog generalmodalws" role="document">
-      <div class="modal-content generalmodalws">
-        <!-- Header -->
-      <div class="modal-header light-blue darken-3 white-text">
-        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add API</h4>
-        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
-          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
-        </button>
-      </div>
-      <!-- Header -->
-
-      <!-- Body -->
-      <div class="modal-body">
-        <form enctype="multipart/form-data" method="post" siq_id="">
-          
-          <!-- api -->
-            <div class="form-group">
-             <label for="api">API</label>
-                <input name="api" class="form-control" id="api" required="" type="text">
-            </div>
-          <!-- api -->
-          <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover paymenttypes-apiauth-started paymenttypes-apiauth-success paymenttypes-apiauth-failed"><span >Add API</span><i class="glyph-icon icon-arrow-right"></i></button>
-        </form>
-      </div>
-      <!--body -->
-      </div>
-    </div>
-</div>
-<!--API1 Modal -->
+  </div>
+<!-- Edit Modal -->
 
 <!-- Input switch -->
 <link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch.css">
@@ -1207,6 +1297,10 @@
     });
 
 </script>
+<!-- Sweet-Alert  -->
+<script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+<script src="assets/widgets/custom.js"></script>
 
 </div>
 </body>
