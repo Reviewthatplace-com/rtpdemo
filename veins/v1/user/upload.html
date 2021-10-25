@@ -415,15 +415,15 @@
                 <div class="row" id="selectcallList">
                     <div class="col-10">
                      <label class="float-left font-weight-bold">Upload to</label>
-                     <select class="select2 m-b-10 select2-multiple" style="width: 100%"  data-placeholder="Choose">
+                     <select class="select2 m-b-10 select2-multiple" style="width: 100%"  data-placeholder="Choose" id="patient-portal-selection">
                          <option value="">Choose</option>
-                         <option value="">Section 01</option>
-                         <option value="">Section 02</option>
-                         <option value="">Patient Portal</option>
+                         <option value="section 01">Section 01</option>
+                         <option value="section 02">Section 02</option>
+                         <option value="patient-portal">Patient Portal</option>
                      </select>                             
                     </div>
                     <button type="button" class="btn btn-success m-t-30 m-b-10" id="goBtn">Go</button> 
-                    <a href="assets/veinspatientuploadtemplate.xlsx" download="veins patient upload template"><button class="btn btn-success m-t-30 m-b-10 m-l-5">Download Template</button></a>
+                    <a href="assets/veinspatientuploadtemplate.xlsx" download="veins patient upload template" class="dl-template-button" id="patient-portal" style="display:none"><button class="btn btn-success m-t-30 m-b-10 m-l-5">Download Template</button></a>
                 </div>
 
                  <div class="card">
@@ -5079,6 +5079,14 @@
         // For select 2
         $(".select2").select2();
         $('.selectpicker').selectpicker();
+    });
+</script>
+<script>
+    $(function() {
+        $('#patient-portal-selection').change(function(){
+            $('.dl-template-button').hide();
+            $('#' + $(this).val()).show();
+        });
     });
 </script>
 </body>
