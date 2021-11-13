@@ -3945,7 +3945,11 @@
       <div class="modal-dialog cascading-modal modal-lg">
           <div class="modal-content" style="width: 130% !important;">
               <div class="modal-header">
-                  <h4 class="modal-title" id="myLargeModalLabel">Update Visit Type and Reasons</h4>
+                  <h4 class="modal-title m-r-15" id="myLargeModalLabel">Update Visit Type and Reasons</h4>
+                  <button class="btn btn-outline-success waves-effect  col-6 m-r-10 visittypeUpdate">Update Visit Type</button>
+                  <button class="btn btn-success m-r-10 visitReasonAdd" onclick="addNewStep();" type="button">
+                      <i class="fa fa-plus"></i>
+                  </button> 
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
               </div>
 
@@ -3984,15 +3988,9 @@
                       <!-- Tab panes -->
                       <div class="tab-content">
                           <div class="tab-pane active" id="stage01" role="tabpanel" style="width: 750px;">
-                              <div class="row">
-                                    <button class="btn btn-outline-success waves-effect col-6 m-r-10 visittypeUpdate">Update Visit Type</button>
-                                    <button class="btn btn-success m-r-10 visitReasonAdd" onclick="addNewStep();" type="button">
-                                        <i class="fa fa-plus"></i>
-                                    </button> 
-                                    <button class="btn btn-outline-danger waves-effect col-2" id="vtArchiveV4">Archive</button>
-                              </div>
 
                               <div class="modal-body">
+                                    <button class="btn btn-outline-danger waves-effect col-2 m-b-10" id="vtArchiveV4">Archive</button>
                                     <h3 class="font-weight-bold h3Spacing">Visit Type</h3>
                                     <form class="floating-labels">
                                         <div class="row">
@@ -4007,12 +4005,9 @@
                                 </div>
                           </div>
 
-                          <div class="tab-pane" id="step01" role="tabpanel">
-                            <div class="row">
-                               <button class="btn btn-outline-success waves-effect col-9 m-r-10 visitReason">Update Visit Reasons</button> 
-                               <button class="btn btn-outline-danger waves-effect col-2" id="vtArchiveV3">Archive</button>
-                            </div>
+                          <div class="tab-pane" id="step01" role="tabpanel" style="height: 800px;overflow-y: auto;">
                               <div class="modal-body">
+                               <button class="btn btn-outline-danger waves-effect col-2 m-b-10" id="vtArchiveV3">Archive</button>
                                 <h3 class="font-weight-bold h3Spacing">Visit Reason</h3>
                                   <div class="row">
                                       <div class="col-6">
@@ -4066,14 +4061,9 @@
                                             </h3>
                                         
                                             <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
-                                                <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                    <option value="AK">Alaska</option>
-                                                    <option value="HI">Hawaii</option>
-                                                </optgroup>
-                                                <optgroup label="Pacific Time Zone">
-                                                    <option value="CA">California</option>
-                                                    <option value="NV">Nevada</option>
-                                                </optgroup>
+                                                    <option value="">Dynamic Test</option>
+                                                    <option value="">NewTemplate</option>
+                                                    <option value="">Test</option>
                                             </select>
                                         </div>
                                         
@@ -4097,14 +4087,8 @@
                                                 </span>
                                             </h3>
                                             <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
-                                                <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                    <option value="AK">Alaska</option>
-                                                    <option value="HI">Hawaii</option>
-                                                </optgroup>
-                                                <optgroup label="Pacific Time Zone">
-                                                    <option value="CA">California</option>
-                                                    <option value="NV">Nevada</option>
-                                                </optgroup>
+                                                <option value="">Dynamic Test</option>
+                                                <option value="">Test</option>
                                             </select>
                                         </div>
                                     </div>
@@ -4112,33 +4096,410 @@
                                 </form>
 
                                 <div class="row">
-                                    <div class="col-lg-6 col-xlg-4">
-                                    <h3 class="font-weight-bold h3Spacing m-t-10">Questionnaire</h3>
-                                        <select multiple id="que0" name="que0[]">
-                                            <option value="elem_1">Que 01</option>
-                                            <option value="elem_2">Que 02</option>
-                                            <option value="elem_3">Que 03</option>
-                                            <option value="elem_4">Que 04</option>
-                                            <option value="elem_5">Que 05</option>
-                                        </select>
-                                        <div class="button-box m-t-20">
-                                            <a id="select-all" class="btn btn-danger" href="javascript:void(0)">select all</a>
-                                            <a id="deselect-all" class="btn btn-info" href="javascript:void(0)">deselect all</a>
+                                    <div class="col-lg-12">
+                                        <h3 class="font-weight-bold h3Spacing m-t-10">Questionnaire</h3>
+                                        <div class="table-responsive">
+                                            <table id="config-table8" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                    <th>Choose</th>
+                                                    <th>Required</th>
+                                                    <th>Question</th>
+                                                    </tr>
+                                                </thead>
+            
+                                                <tbody>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Phone Number Test</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Date Test Test</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Date - Ques - Optional</td>
+                                                    </tr>
+            
+            
+                                                </tbody>
+                                                
+                                            </table>                                
                                         </div>
+                                        
                                     </div>
 
-                                    <div class="col-lg-6 col-xlg-4">
-                                    <h3 class="font-weight-bold h3Spacing m-t-10">Demos</h3>
-                                        <select multiple id="demoSelection1" name="demoSelection1[]">
-                                            <option value="elem_1">Demo 01</option>
-                                            <option value="elem_2">Demo 02</option>
-                                            <option value="elem_3">Demo 03</option>
-                                            <option value="elem_4">Demo 04</option>
-                                            <option value="elem_5">Demo 05</option>
-                                        </select>
-                                        <div class="button-box m-t-20">
-                                            <a id="select-all" class="btn btn-danger" href="javascript:void(0)">select all</a>
-                                            <a id="deselect-all" class="btn btn-info" href="javascript:void(0)">deselect all</a>
+                                    <div class="col-lg-12">
+                                        <h3 class="font-weight-bold h3Spacing m-t-10">Demos</h3>
+                                        <div class="table-responsive">
+                                            <table id="config-table9" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                    <th>Choose</th>
+                                                    <th>Required</th>
+                                                    <th>Question</th>
+                                                    </tr>
+                                                </thead>
+            
+                                                <tbody>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>First Name</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Last Name</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>DOB</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Gender</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>SSN</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Phone</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Email</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Street</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>City</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>State</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>DOB</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>zip</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Primary Insurance Name</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Primary Insurance Number</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Primary Insurance Group Name</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Primary Insurance Image Upload</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Secondary Insurance Name</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Secoondary Insurance Number</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Secoondary Insurance Group Name</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Secoondary Insurance Image Upload</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Textbox - Demo - Required</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Phone - Demo - Required</td>
+                                                    </tr>
+            
+                                                    <tr>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-lg-3 switchery-demo">
+                                                                <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Date - Demo - Required</td>
+                                                    </tr>
+            
+            
+                                                </tbody>
+                                                
+                                            </table>                                
                                         </div>
                                     </div>                                        
                                 </div>
@@ -4146,246 +4507,1006 @@
                               </div>
                           </div>
 
-                          <div class="tab-pane" id="step02" role="tabpanel">
-                            <div class="row">
-                               <button class="btn btn-outline-success waves-effect col-9 m-r-10" data-dismiss="modal">Update Visit Reasons</button> 
-                               <button class="btn btn-outline-danger waves-effect col-2" id="vtArchiveV3">Archive</button>
-                            </div>
+                          <div class="tab-pane" id="step02" role="tabpanel" style="height: 800px;overflow-y: auto;">
                             <div class="modal-body">
-                                <h3 class="font-weight-bold h3Spacing">Visit Reason</h3>
-                                <form class="floating-labels">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                        <div class="form-group m-b-40">
-                                            <input type="text" class="form-control" id="" placeholder="" maxlength="15"><span class="bar"></span>
-                                            <label for="">Visit Reason</label>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </form>
-
-                                <form class="floating-labels">
-
-                                            <!-- fifth row -->
-                                            <div class="row">
-                                                <div class="col">
-                                                    <h3 class="font-weight-bold h3Spacing">SMS
-                                                        <span class="subText">
-                                                            <a href="javascript:void(0)" class="mytooltip" >
-                                                                <i class="fas fa-exclamation-circle fa-sm"></i>
-                                                                    <span class="tooltip-content5">
-                                                                        <span class="tooltip-text3">
-                                                                            <span class="tooltip-inner2">
-                                                                                <div class="timeline-panel">
-                                                                                    <div class="timeline-body">
-                                                                                        <p>Please be aware that the SMS will be sent after record has completed sign in</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </span>
-                                                                        </span>
-                                                                    </span>
-                                                            </a>
-                                                        </span>
-                                                    </h3>
-                                                    <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
-                                                        <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                            <option value="AK">Alaska</option>
-                                                            <option value="HI">Hawaii</option>
-                                                        </optgroup>
-                                                        <optgroup label="Pacific Time Zone">
-                                                            <option value="CA">California</option>
-                                                            <option value="NV">Nevada</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
-                                                
-                                                <div class="col">
-                                                    <h3 class="font-weight-bold h3Spacing">Email
-                                                        <span class="subText">
-                                                            <a href="javascript:void(0)" class="mytooltip" >
-                                                                <i class="fas fa-exclamation-circle fa-sm"></i>
-                                                                    <span class="tooltip-content5">
-                                                                        <span class="tooltip-text3">
-                                                                            <span class="tooltip-inner2">
-                                                                                <div class="timeline-panel">
-                                                                                    <div class="timeline-body">
-                                                                                        <p>Please be aware that the Email will be sent after record has completed sign in</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </span>
-                                                                        </span>
-                                                                    </span>
-                                                            </a>
-                                                        </span>
-                                                    </h3>
-                                                    <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
-                                                        <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                            <option value="AK">Alaska</option>
-                                                            <option value="HI">Hawaii</option>
-                                                        </optgroup>
-                                                        <optgroup label="Pacific Time Zone">
-                                                            <option value="CA">California</option>
-                                                            <option value="NV">Nevada</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <!-- fifth row -->
-                                </form>
-
+                             <button class="btn btn-outline-danger waves-effect col-2 m-b-10" id="vtArchiveV3">Archive</button>
+                              <h3 class="font-weight-bold h3Spacing">Visit Reason</h3>
                                 <div class="row">
-                                    <div class="col-lg-6 col-xlg-4">
-                                    <h3 class="font-weight-bold h3Spacing m-t-10">Questionnaire</h3>
-                                        <select multiple id="que3" name="que3[]">
-                                            <option value="elem_1">Que 01</option>
-                                            <option value="elem_2">Que 02</option>
-                                            <option value="elem_3">Que 03</option>
-                                            <option value="elem_4">Que 04</option>
-                                            <option value="elem_5">Que 05</option>
-                                        </select>
-                                        <div class="button-box m-t-20">
-                                            <a id="select-all" class="btn btn-danger" href="javascript:void(0)">select all</a>
-                                            <a id="deselect-all" class="btn btn-info" href="javascript:void(0)">deselect all</a>
-                                        </div>
+                                    <div class="col-6">
+                                      <form class="floating-labels">
+                                          <div class="row">
+                                              <div class="col-lg-12">
+                                              <div class="form-group m-b-40">
+                                                  <input type="text" class="form-control" id="" placeholder="" maxlength="15"><span class="bar"></span>
+                                                  <label for="">Visit Reason</label>
+                                              </div>
+                                              </div>
+                                          </div>
+                                      </form>
                                     </div>
 
-                                    <div class="col-lg-6 col-xlg-4">
-                                    <h3 class="font-weight-bold h3Spacing m-t-10">Demos</h3>
-                                        <select multiple id="demoSelection2" name="demoSelection2[]">
-                                            <option value="elem_1">Demo 01</option>
-                                            <option value="elem_2">Demo 02</option>
-                                            <option value="elem_3">Demo 03</option>
-                                            <option value="elem_4">Demo 04</option>
-                                            <option value="elem_5">Demo 05</option>
-                                        </select>
-                                        <div class="button-box m-t-20">
-                                            <a id="select-all" class="btn btn-danger" href="javascript:void(0)">select all</a>
-                                            <a id="deselect-all" class="btn btn-info" href="javascript:void(0)">deselect all</a>
-                                        </div>
-                                    </div>                                        
+                                    <div class="col-6 floating-labels">
+                                      <div class="form-group m-b-40">
+                                          <select class="form-control p-0" id="input6">
+                                              <option></option>
+                                              <option>Physician 01</option>
+                                              <option>Physician 02</option>
+                                              <option>Physician 03</option>
+                                          </select><span class="bar"></span>
+                                          <label for="input6">Physicians</label>
+                                      </div>
+                                    </div>
                                 </div>
+
+
+                              <form class="floating-labels">
+                                  <!-- fifth row -->
+                                    <div class="row">
+                                        <div class="col">
+                                            <h3 class="font-weight-bold h3Spacing">SMS
+                                                <span class="subText">
+                                                    <a href="javascript:void(0)" class="mytooltip" >
+                                                        <i class="fas fa-exclamation-circle fa-sm"></i>
+                                                            <span class="tooltip-content5">
+                                                                <span class="tooltip-text3">
+                                                                    <span class="tooltip-inner2">
+                                                                        <div class="timeline-panel">
+                                                                            <div class="timeline-body">
+                                                                                <p>Please be aware that the SMS will be sent after record has completed sign in</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                    </a>
+                                                </span>
+                                            </h3>
+                                        
+                                            <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                                                    <option value="">Dynamic Test</option>
+                                                    <option value="">NewTemplate</option>
+                                                    <option value="">Test</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col">
+                                            <h3 class="font-weight-bold h3Spacing">Email
+                                                <span class="subText">
+                                                    <a href="javascript:void(0)" class="mytooltip" >
+                                                        <i class="fas fa-exclamation-circle fa-sm"></i>
+                                                            <span class="tooltip-content5">
+                                                                <span class="tooltip-text3">
+                                                                    <span class="tooltip-inner2">
+                                                                        <div class="timeline-panel">
+                                                                            <div class="timeline-body">
+                                                                                <p>Please be aware that the Email will be sent after record has completed sign in</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                    </a>
+                                                </span>
+                                            </h3>
+                                            <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                                                <option value="">Dynamic Test</option>
+                                                <option value="">Test</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                  <!-- fifth row -->
+                              </form>
+
+                              <div class="row">
+                                  <div class="col-lg-12">
+                                      <h3 class="font-weight-bold h3Spacing m-t-10">Questionnaire</h3>
+                                      <div class="table-responsive">
+                                          <table id="config-table8" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                              <thead class="thead-dark">
+                                                  <tr>
+                                                  <th>Choose</th>
+                                                  <th>Required</th>
+                                                  <th>Question</th>
+                                                  </tr>
+                                              </thead>
+          
+                                              <tbody>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Phone Number Test</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Date Test Test</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Date - Ques - Optional</td>
+                                                  </tr>
+          
+          
+                                              </tbody>
+                                              
+                                          </table>                                
+                                      </div>
+                                      
+                                  </div>
+
+                                  <div class="col-lg-12">
+                                      <h3 class="font-weight-bold h3Spacing m-t-10">Demos</h3>
+                                      <div class="table-responsive">
+                                          <table id="config-table9" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                              <thead class="thead-dark">
+                                                  <tr>
+                                                  <th>Choose</th>
+                                                  <th>Required</th>
+                                                  <th>Question</th>
+                                                  </tr>
+                                              </thead>
+          
+                                              <tbody>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>First Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Last Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>DOB</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Gender</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>SSN</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Phone</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Email</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Street</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>City</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>State</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>DOB</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>zip</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Primary Insurance Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Primary Insurance Number</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Primary Insurance Group Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Primary Insurance Image Upload</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Secondary Insurance Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Secoondary Insurance Number</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Secoondary Insurance Group Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Secoondary Insurance Image Upload</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Textbox - Demo - Required</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Phone - Demo - Required</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Date - Demo - Required</td>
+                                                  </tr>
+          
+          
+                                              </tbody>
+                                              
+                                          </table>                                
+                                      </div>
+                                  </div>                                        
+                              </div>
                   
                             </div>
                           </div>
 
-                          <div class="tab-pane" id="step03" role="tabpanel">
-                            <div class="row">
-                               <button class="btn btn-outline-success waves-effect col-9 m-r-10" data-dismiss="modal">Update Visit Reasons</button> 
-                               <button class="btn btn-outline-danger waves-effect col-2" id="vtArchiveV3">Archive</button>
-                            </div>
+                          <div class="tab-pane" id="step03" role="tabpanel" style="height: 800px;overflow-y: auto;">
                             <div class="modal-body">
-                                <h3 class="font-weight-bold h3Spacing">Visit Reason</h3>
-                                <form class="floating-labels">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                        <div class="form-group m-b-40">
-                                            <input type="text" class="form-control" id="" placeholder="" maxlength="15"><span class="bar"></span>
-                                            <label for="">Visit Reason</label>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </form>
-
-                                <form class="floating-labels">
-
-                                            <!-- fifth row -->
-                                            <div class="row">
-                                                <div class="col">
-                                                    <h3 class="font-weight-bold h3Spacing">SMS
-                                                        <span class="subText">
-                                                            <a href="javascript:void(0)" class="mytooltip" >
-                                                                <i class="fas fa-exclamation-circle fa-sm"></i>
-                                                                    <span class="tooltip-content5">
-                                                                        <span class="tooltip-text3">
-                                                                            <span class="tooltip-inner2">
-                                                                                <div class="timeline-panel">
-                                                                                    <div class="timeline-body">
-                                                                                        <p>Please be aware that the SMS will be sent after record has completed sign in</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </span>
-                                                                        </span>
-                                                                    </span>
-                                                            </a>
-                                                        </span>
-                                                    </h3>
-                                                    <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
-                                                        <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                            <option value="AK">Alaska</option>
-                                                            <option value="HI">Hawaii</option>
-                                                        </optgroup>
-                                                        <optgroup label="Pacific Time Zone">
-                                                            <option value="CA">California</option>
-                                                            <option value="NV">Nevada</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
-                                                
-                                                <div class="col">
-                                                    <h3 class="font-weight-bold h3Spacing">Email
-                                                        <span class="subText">
-                                                            <a href="javascript:void(0)" class="mytooltip" >
-                                                                <i class="fas fa-exclamation-circle fa-sm"></i>
-                                                                    <span class="tooltip-content5">
-                                                                        <span class="tooltip-text3">
-                                                                            <span class="tooltip-inner2">
-                                                                                <div class="timeline-panel">
-                                                                                    <div class="timeline-body">
-                                                                                        <p>Please be aware that the Email will be sent after record has completed sign in</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </span>
-                                                                        </span>
-                                                                    </span>
-                                                            </a>
-                                                        </span>
-                                                    </h3>
-                                                    <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
-                                                        <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                            <option value="AK">Alaska</option>
-                                                            <option value="HI">Hawaii</option>
-                                                        </optgroup>
-                                                        <optgroup label="Pacific Time Zone">
-                                                            <option value="CA">California</option>
-                                                            <option value="NV">Nevada</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <!-- fifth row -->
-                                </form>
-
+                             <button class="btn btn-outline-danger waves-effect col-2 m-b-10" id="vtArchiveV3">Archive</button>
+                              <h3 class="font-weight-bold h3Spacing">Visit Reason</h3>
                                 <div class="row">
-                                    <div class="col-lg-6 col-xlg-4">
-                                    <h3 class="font-weight-bold h3Spacing m-t-10">Questionnaire</h3>
-                                        <select multiple id="que2" name="que2[]">
-                                            <option value="elem_1">Que 01</option>
-                                            <option value="elem_2">Que 02</option>
-                                            <option value="elem_3">Que 03</option>
-                                            <option value="elem_4">Que 04</option>
-                                            <option value="elem_5">Que 05</option>
-                                        </select>
-                                        <div class="button-box m-t-20">
-                                            <a id="select-all" class="btn btn-danger" href="javascript:void(0)">select all</a>
-                                            <a id="deselect-all" class="btn btn-info" href="javascript:void(0)">deselect all</a>
-                                        </div>
+                                    <div class="col-6">
+                                      <form class="floating-labels">
+                                          <div class="row">
+                                              <div class="col-lg-12">
+                                              <div class="form-group m-b-40">
+                                                  <input type="text" class="form-control" id="" placeholder="" maxlength="15"><span class="bar"></span>
+                                                  <label for="">Visit Reason</label>
+                                              </div>
+                                              </div>
+                                          </div>
+                                      </form>
                                     </div>
 
-                                    <div class="col-lg-6 col-xlg-4">
-                                    <h3 class="font-weight-bold h3Spacing m-t-10">Demos</h3>
-                                        <select multiple id="demoSelection3" name="demoSelection3[]">
-                                            <option value="elem_1">Demo 01</option>
-                                            <option value="elem_2">Demo 02</option>
-                                            <option value="elem_3">Demo 03</option>
-                                            <option value="elem_4">Demo 04</option>
-                                            <option value="elem_5">Demo 05</option>
-                                        </select>
-                                        <div class="button-box m-t-20">
-                                            <a id="select-all" class="btn btn-danger" href="javascript:void(0)">select all</a>
-                                            <a id="deselect-all" class="btn btn-info" href="javascript:void(0)">deselect all</a>
-                                        </div>
-                                    </div>                                        
+                                    <div class="col-6 floating-labels">
+                                      <div class="form-group m-b-40">
+                                          <select class="form-control p-0" id="input6">
+                                              <option></option>
+                                              <option>Physician 01</option>
+                                              <option>Physician 02</option>
+                                              <option>Physician 03</option>
+                                          </select><span class="bar"></span>
+                                          <label for="input6">Physicians</label>
+                                      </div>
+                                    </div>
                                 </div>
+
+
+                              <form class="floating-labels">
+                                  <!-- fifth row -->
+                                    <div class="row">
+                                        <div class="col">
+                                            <h3 class="font-weight-bold h3Spacing">SMS
+                                                <span class="subText">
+                                                    <a href="javascript:void(0)" class="mytooltip" >
+                                                        <i class="fas fa-exclamation-circle fa-sm"></i>
+                                                            <span class="tooltip-content5">
+                                                                <span class="tooltip-text3">
+                                                                    <span class="tooltip-inner2">
+                                                                        <div class="timeline-panel">
+                                                                            <div class="timeline-body">
+                                                                                <p>Please be aware that the SMS will be sent after record has completed sign in</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                    </a>
+                                                </span>
+                                            </h3>
+                                        
+                                            <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                                                    <option value="">Dynamic Test</option>
+                                                    <option value="">NewTemplate</option>
+                                                    <option value="">Test</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col">
+                                            <h3 class="font-weight-bold h3Spacing">Email
+                                                <span class="subText">
+                                                    <a href="javascript:void(0)" class="mytooltip" >
+                                                        <i class="fas fa-exclamation-circle fa-sm"></i>
+                                                            <span class="tooltip-content5">
+                                                                <span class="tooltip-text3">
+                                                                    <span class="tooltip-inner2">
+                                                                        <div class="timeline-panel">
+                                                                            <div class="timeline-body">
+                                                                                <p>Please be aware that the Email will be sent after record has completed sign in</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                    </a>
+                                                </span>
+                                            </h3>
+                                            <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                                                <option value="">Dynamic Test</option>
+                                                <option value="">Test</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                  <!-- fifth row -->
+                              </form>
+
+                              <div class="row">
+                                  <div class="col-lg-12">
+                                      <h3 class="font-weight-bold h3Spacing m-t-10">Questionnaire</h3>
+                                      <div class="table-responsive">
+                                          <table id="config-table8" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                              <thead class="thead-dark">
+                                                  <tr>
+                                                  <th>Choose</th>
+                                                  <th>Required</th>
+                                                  <th>Question</th>
+                                                  </tr>
+                                              </thead>
+          
+                                              <tbody>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Phone Number Test</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Date Test Test</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Date - Ques - Optional</td>
+                                                  </tr>
+          
+          
+                                              </tbody>
+                                              
+                                          </table>                                
+                                      </div>
+                                      
+                                  </div>
+
+                                  <div class="col-lg-12">
+                                      <h3 class="font-weight-bold h3Spacing m-t-10">Demos</h3>
+                                      <div class="table-responsive">
+                                          <table id="config-table9" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                              <thead class="thead-dark">
+                                                  <tr>
+                                                  <th>Choose</th>
+                                                  <th>Required</th>
+                                                  <th>Question</th>
+                                                  </tr>
+                                              </thead>
+          
+                                              <tbody>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>First Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Last Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>DOB</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Gender</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>SSN</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Phone</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Email</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Street</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>City</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>State</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>DOB</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>zip</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Primary Insurance Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Primary Insurance Number</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Primary Insurance Group Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Primary Insurance Image Upload</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Secondary Insurance Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Secoondary Insurance Number</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Secoondary Insurance Group Name</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Secoondary Insurance Image Upload</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Textbox - Demo - Required</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Phone - Demo - Required</td>
+                                                  </tr>
+          
+                                                  <tr>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>
+                                                          <div class="col-lg-3 switchery-demo">
+                                                              <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                          </div>
+                                                      </td>
+                                                      <td>Date - Demo - Required</td>
+                                                  </tr>
+          
+          
+                                              </tbody>
+                                              
+                                          </table>                                
+                                      </div>
+                                  </div>                                        
+                              </div>
                   
                             </div>
                           </div>
@@ -5237,7 +6358,10 @@
                   
       // responsive table2
       $('#config-table8').DataTable({
-          responsive: true
+          responsive: true,
+          paging: false,
+          searching: false,
+          info: false
       });
       $('#example31').DataTable({
           dom: 'Bfrtip',
@@ -5246,6 +6370,14 @@
           ]
       });
       $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+
+      // responsive table2
+      $('#config-table9').DataTable({
+          responsive: true,
+          paging: false,
+          searching: false,
+          info: false
+      });
 
       });
 
