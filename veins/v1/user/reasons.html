@@ -48,6 +48,11 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+    <style>
+        .table th, .table td {
+        padding: .4rem;
+        };
+    </style>
 </head>
 
 <body class="skin-blue fixed-layout">
@@ -3958,7 +3963,7 @@
                       <ul class="nav nav-tabs tabs-vertical" role="tablist" id="step-tabs">
                           <li class="nav-item fixed"><a class="nav-link active" data-toggle="tab" href="#stage01" role="tab"><span class="boldText">Visit Type 01</span> </a> </li>
                           <li class="nav-item step"> 
-                              <a class="nav-link" data-toggle="tab" href="#step01" role="tab">
+                              <a class="nav-link border-green" data-toggle="tab" href="#step01" role="tab">
                                   <span class="hidden-xs-down">
                                     <span class="btn-floating btn-sm btn-success up visitReasonOrder"><i class="fas fa-arrow-up white-text"></i></span>
                                     <span class="btn-floating btn-sm btn-success down visitReasonOrder" id="down"><i class="fas fa-arrow-down white-text"></i></span>
@@ -4096,10 +4101,10 @@
                                 </form>
 
                                 <div class="row">
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-7">
                                         <h3 class="font-weight-bold h3Spacing m-t-10">Questionnaire</h3>
                                         <div class="table-responsive">
-                                            <table id="config-table8" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                            <table id="config-table8" data-height="300" class="table display table-bordered table-striped no-wrap noSearch" style="width: 50% !important;">
                                                 <thead class="thead-dark">
                                                     <tr>
                                                     <th>Choose</th>
@@ -4160,7 +4165,7 @@
                                         
                                     </div>
 
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-8">
                                         <h3 class="font-weight-bold h3Spacing m-t-10">Demos</h3>
                                         <div class="table-responsive">
                                             <table id="config-table9" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
@@ -4598,10 +4603,10 @@
                               </form>
 
                               <div class="row">
-                                  <div class="col-lg-12">
+                                  <div class="col-lg-7">
                                       <h3 class="font-weight-bold h3Spacing m-t-10">Questionnaire</h3>
                                       <div class="table-responsive">
-                                          <table id="config-table8" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                          <table id="config-table10" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
                                               <thead class="thead-dark">
                                                   <tr>
                                                   <th>Choose</th>
@@ -4662,10 +4667,10 @@
                                       
                                   </div>
 
-                                  <div class="col-lg-12">
+                                  <div class="col-lg-8">
                                       <h3 class="font-weight-bold h3Spacing m-t-10">Demos</h3>
                                       <div class="table-responsive">
-                                          <table id="config-table9" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                          <table id="config-table11" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
                                               <thead class="thead-dark">
                                                   <tr>
                                                   <th>Choose</th>
@@ -5100,10 +5105,10 @@
                               </form>
 
                               <div class="row">
-                                  <div class="col-lg-12">
+                                  <div class="col-lg-7">
                                       <h3 class="font-weight-bold h3Spacing m-t-10">Questionnaire</h3>
                                       <div class="table-responsive">
-                                          <table id="config-table8" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                          <table id="config-table12" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
                                               <thead class="thead-dark">
                                                   <tr>
                                                   <th>Choose</th>
@@ -5164,10 +5169,10 @@
                                       
                                   </div>
 
-                                  <div class="col-lg-12">
+                                  <div class="col-lg-8">
                                       <h3 class="font-weight-bold h3Spacing m-t-10">Demos</h3>
                                       <div class="table-responsive">
-                                          <table id="config-table9" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                          <table id="config-table13" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
                                               <thead class="thead-dark">
                                                   <tr>
                                                   <th>Choose</th>
@@ -5544,20 +5549,9 @@
   <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
   <script src="dist/js/pages/toastr.js"></script>
   <script src="dist/js/pages/chat.js"></script>
-  <!-- This is data table -->
-  <script src="assets/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="assets/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
   <!-- Sweet-Alert  -->
   <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
   <script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
-  <!-- start - This is for export functionality only -->
-  <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
-  <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
-  <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
-  <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
   <!-- jQuery peity -->
   <script src="assets/node_modules/peity/jquery.peity.min.js"></script>
   <script src="assets/node_modules/peity/jquery.peity.init.js"></script>
@@ -6162,66 +6156,16 @@
             });
         });
     </script>
-  <script src="assets/node_modules/html5-editor/wysihtml5-0.3.0.js"></script>
-  <script src="assets/node_modules/html5-editor/bootstrap-wysihtml5.js"></script>
-  <script src="assets/node_modules/dropzone-master/dist/dropzone.js"></script>
-  <script>
-  $(document).ready(function() {
-
-      $('.textarea_editor').wysihtml5();
-
-  });
-  </script>
-  <!-- Editable -->
-  <script src="assets/node_modules/jquery-datatables-editable/jquery.dataTables.js"></script>
-  <script src="assets/node_modules/datatables/media/js/dataTables.bootstrap.js"></script>
-  <script src="assets/node_modules/tiny-editable/mindmup-editabletable.js"></script>
-  <script src="assets/node_modules/tiny-editable/numeric-input-example.js"></script>
-   <script>
-  $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
-  $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus();
-  $(function () {
-  $('#editable-datatable').DataTable();
-    });
-  </script>
-
-  <script src="assets/node_modules/moment/moment.js"></script>
-  <script src="assets/node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
-  <script>
-  // Always Show Calendar on Ranges
-  $('.shawCalRanges').daterangepicker({
-      ranges: {
-          'Today': [moment(), moment()],
-          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-          'This Month': [moment().startOf('month'), moment().endOf('month')],
-          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-      },
-      alwaysShowCalendars: true,
-  });
-  </script>
-
-  <script>
-      $(function () {
-          // responsive table
-          $('#clmtable').DataTable({
-              scrollY:        "50vh",
-              scrollX:        true,
-              scrollCollapse: true,
-              "bFilter": false,
-          });
-
-          // responsive table
-          $('#clmtable1').DataTable({
-              scrollY:        "50vh",
-              scrollX:        true,
-              scrollCollapse: true,
-          });
-      });
-
-  </script>
-
+  <!-- This is data table -->
+  <script src="assets/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="assets/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
   <script>
       $(function () {
 
@@ -6265,19 +6209,6 @@
           $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
 
           
-          // responsive table1
-          $('#config-table1').DataTable({
-              responsive: true
-          });
-          $('#example24').DataTable({
-              dom: 'Bfrtip',
-              buttons: [
-                  'copy', 'csv', 'excel', 'pdf', 'print'
-              ]
-          });
-          $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
-
-          
           // responsive table2
           $('#config-table2').DataTable({
               responsive: true
@@ -6305,19 +6236,6 @@
 
           
           // responsive table2
-          $('#config-table4').DataTable({
-              responsive: true
-          });
-          $('#example27').DataTable({
-              dom: 'Bfrtip',
-              buttons: [
-                  'copy', 'csv', 'excel', 'pdf', 'print'
-              ]
-          });
-          $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
-
-          
-          // responsive table2
           $('#config-table5').DataTable({
               responsive: true,
           });
@@ -6327,60 +6245,100 @@
                   'copy', 'csv', 'excel', 'pdf', 'print'
               ]
           });
-      $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+          $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
 
           
-      // responsive table2
-      $('#config-table6').DataTable({
-          responsive: true
-      });
-      $('#example29').DataTable({
-          dom: 'Bfrtip',
-          buttons: [
-              'copy', 'csv', 'excel', 'pdf', 'print'
-          ]
-      });
-      $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+          // responsive table2
+          $('#config-table6').DataTable({
+              responsive: true
+          });
+          $('#example29').DataTable({
+              dom: 'Bfrtip',
+              buttons: [
+                  'copy', 'csv', 'excel', 'pdf', 'print'
+              ]
+          });
+          $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
 
-          
-      // responsive table2
-      $('#config-table7').DataTable({
-          responsive: true
-      });
-      $('#example30').DataTable({
-          dom: 'Bfrtip',
-          buttons: [
-              'copy', 'csv', 'excel', 'pdf', 'print'
-          ]
-      });
-      $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+                      
+          // responsive table2
+          $('#config-table8').DataTable({
+              responsive: true
+          });
+          $('#example31').DataTable({
+              dom: 'Bfrtip',
+              buttons: [
+                  'copy', 'csv', 'excel', 'pdf', 'print'
+              ]
+          });
+          $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
 
-                  
-      // responsive table2
-      $('#config-table8').DataTable({
-          responsive: true,
-          paging: false,
-          searching: false,
-          info: false
-      });
-      $('#example31').DataTable({
-          dom: 'Bfrtip',
-          buttons: [
-              'copy', 'csv', 'excel', 'pdf', 'print'
-          ]
-      });
-      $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+          // responsive table2
+          $('#config-table9').DataTable({
+              responsive: true
+          });
 
-      // responsive table2
-      $('#config-table9').DataTable({
-          responsive: true,
-          paging: false,
-          searching: false,
-          info: false
-      });
+          // responsive table2
+          $('#config-table10').DataTable({
+              responsive: true
+          });
+
+          // responsive table2
+          $('#config-table11').DataTable({
+              responsive: true
+          });
+
+          // responsive table2
+          $('#config-table12').DataTable({
+              responsive: true
+          });
+
+          // responsive table2
+          $('#config-table13').DataTable({
+              responsive: true
+          });
 
       });
 
+  </script>
+  <script src="assets/node_modules/html5-editor/wysihtml5-0.3.0.js"></script>
+  <script src="assets/node_modules/html5-editor/bootstrap-wysihtml5.js"></script>
+  <script src="assets/node_modules/dropzone-master/dist/dropzone.js"></script>
+  <script>
+  $(document).ready(function() {
+
+      $('.textarea_editor').wysihtml5();
+
+  });
+  </script>
+  <!-- Editable -->
+  <script src="assets/node_modules/jquery-datatables-editable/jquery.dataTables.js"></script>
+  <script src="assets/node_modules/datatables/media/js/dataTables.bootstrap.js"></script>
+  <script src="assets/node_modules/tiny-editable/mindmup-editabletable.js"></script>
+  <script src="assets/node_modules/tiny-editable/numeric-input-example.js"></script>
+   <script>
+  $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+  $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus();
+  $(function () {
+  $('#editable-datatable').DataTable();
+    });
+  </script>
+
+  <script src="assets/node_modules/moment/moment.js"></script>
+  <script src="assets/node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script>
+  // Always Show Calendar on Ranges
+  $('.shawCalRanges').daterangepicker({
+      ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+      },
+      alwaysShowCalendars: true,
+  });
   </script>
   
   <script type="text/javascript">
