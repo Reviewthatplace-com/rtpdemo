@@ -1132,4 +1132,4 @@ $.fn.signaturePad.defaults = {
                    // is easier. Only use 1/bezierSkip points. Also reduces computational effort.
 }
 
-});
+}(jQuery))
