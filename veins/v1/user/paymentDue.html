@@ -60,54 +60,38 @@
                 <table class="table table-striped">
                   <tbody>
                     <tr>
-                      <th>Patient Name</th>
+                      <th class="font-weight-bold">Patient Name</th>
                       <td id="td1">Shakir Ansari</td>
                     </tr>
                     <tr>
-                      <th>Date Of Birth</th>
+                      <th class="font-weight-bold">Date Of Birth</th>
                       <td id="td1">11/22/1998</td>
                     </tr>
                     <tr>
-                      <th>Date of Service</th>
+                      <th class="font-weight-bold">Date of Service</th>
                       <td id="td1">11/27/2020</td>
                     </tr>
                     <tr>
-                      <th>Product:</th>
-                      <td id="td1">Med</td>
-                    </tr>
-                    <tr>
-                      <th>Amount Requested</th>
-                      <td id="td1">$120</td>
-                    </tr>
-                    <tr>
-                    <th>Sent By</th>
+                      <th class="font-weight-bold">Sent By</th>
                       <td id="td1">Veins</td>
                     </tr>
                     <tr>
-                      <th>Sent Date</th>
+                      <th class="font-weight-bold">Sent Date</th>
                       <td id="td1">11/26/2020</td>
                     </tr>
-                  </tbody>
-                </table>
-                
-                <small class="text-danger">Disclaimer: The patient will be sent request to entered delivery methods. If blank no notification will be sent.</small>
-                <table class="table table-striped">
-                  <tbody>
                     <tr>
-                      <th>Phone</th>
-                      <td id="td1">111-111-1111</td>
+                      <th class="font-weight-bold">Amount</th>
+                      <td id="td1">$120</td>
                     </tr>
                     <tr>
-                      <th>Email</th>
-                      <td id="td1">Shakr@gmail.com</td>
+                      <th class="font-weight-bold">Notes:</th>
+                      <td id="td1">Med</td>
                     </tr>
                     <tr>
-                      <th>Notes</th>
-                      <td id="td1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
-                    </tr>
-                    <tr>
-                      <th>Attachment</th>
-                      <td id="td1">test.pdf</td>
+                      <th class="font-weight-bold">Attachments:</th>
+                      <td id="td1">
+                        <button class="btn btn-sm btn-outline-success">Download Attachment</button>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -135,22 +119,25 @@
   
         <section id="step-1" class="section active m-b-40">
           <div class="container form-container">
-              <h3 class="font-weight-bold h3Spacing text-center">Payment</h3>
+            <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3 text-center"> Payment Receipt </h4>
+            </div>
+            <p><small class="mb-5">Please enter information below.</small></p>
+
                 <form class="floating-labels">
                       <!-- first row -->
                       <div class="row">
                         <div class="col-lg-12">
-                          <!-- first name -->
                           <div class="form-group focused m-b-40">
                             <input type="text" class="form-control required" id="filler_name" name="filler_name">
                             <label for="float-label">Card Holder Name</label>
                           </div>
-                          <!-- first name -->
                         </div>
                         <div class="col-lg-12">
                           <!-- last name -->
                           <div class="form-group m-b-40">
-                            <input type="text" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                            <input type="text" class="form-control required" id="cc" onkeypress="return checkDigit(event)"><span class="bar"></span>
+                            
                             <label for="">Card Number</label>
                           </div>
                           <!-- last name -->
@@ -161,12 +148,16 @@
                       <!-- second row -->
                       <div class="row">
                         <div class="col-lg-12">
-                          <!-- first name -->
                           <div class="form-group focused m-b-40">
-                            <input type="text" class="form-control required" id="filler_name" name="filler_name">
+                            <input type="number" class="form-control required" id="filler_name" name="filler_name">
                             <label for="float-label">Card CVC</label>
                           </div>
-                          <!-- first name -->
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="form-group focused m-b-40">
+                            <h6 class="font-weight-bold">Card Expiry:</h6>
+                            <input type="date" class="form-control required" id="filler_name" name="filler_name">
+                          </div>
                         </div>
                         <div class="col-lg-12">
                           <!-- last name -->
@@ -182,12 +173,10 @@
                       <!-- Third row -->
                       <div class="row">
                         <div class="col-lg-12">
-                          <!-- first name -->
                           <div class="form-group focused m-b-40">
                             <input type="text" class="form-control required" id="filler_name" name="filler_name">
                             <label for="float-label">Amount</label>
                           </div>
-                          <!-- first name -->
                         </div>
                         <div class="col-lg-12">
                           <!-- last name -->
@@ -221,7 +210,155 @@
           </div>
         </section>
 
-        <section id="step-2" class="section active m-b-40">
+        <section id="step-3" class="section active m-b-40">
+          <div class="container form-container slide">
+            <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3 text-center"> Payment Receipt: Credit Card </h4>
+            </div>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th class="font-weight-bold">Patient Name</th>
+                      <td id="td1">Shakir Ansari</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Date Of Birth</th>
+                      <td id="td1">11/22/1998</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Date of Service:</th>
+                      <td id="td1">11/27/2020</td>
+                    </tr>
+                    <!-- <tr>
+                      <th class="font-weight-bold">Products:</th>
+                      <td id="td1">Med</td>
+                    </tr> -->
+                    <tr>
+                      <th class="font-weight-bold">Sent By:</th>
+                      <td id="td1">Veins</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Sent Date:</th>
+                      <td id="td1">11/26/2020</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Paid Date:</th>
+                      <td id="td1">11/26/2020</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Card Number:</th>
+                      <td id="td1">xxx-xxxx-xxxx-1111</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Expiration Date:</th>
+                      <td id="td1">2022-02</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Amount:</th>
+                      <td id="td1">$120</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Notes:</th>
+                      <td id="td1">asd</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+        </section>
+        
+        <section id="step-4" class="section active m-b-40">
+          <div class="container form-container slide">
+            <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3 text-center"> Payment Receipt: Cheque </h4>
+            </div>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th class="font-weight-bold">Patient Name</th>
+                      <td id="td1">Shakir Ansari</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Date Of Birth</th>
+                      <td id="td1">11/22/1998</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Date of Service:</th>
+                      <td id="td1">11/27/2020</td>
+                    </tr>
+                    <!-- <tr>
+                      <th class="font-weight-bold">Products:</th>
+                      <td id="td1">Med</td>
+                    </tr> -->
+                    <tr>
+                      <th class="font-weight-bold">Sent By:</th>
+                      <td id="td1">Veins</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Sent Date:</th>
+                      <td id="td1">11/26/2020</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Paid Date:</th>
+                      <td id="td1">11/26/2020</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Cheque Holder Name:</th>
+                      <td id="td1">Shakir Ansari</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Cheque Number:</th>
+                      <td id="td1">XXXX</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Amount:</th>
+                      <td id="td1">$120</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+        </section>
+        
+        <section id="step-5" class="section active m-b-40">
+          <div class="container form-container slide">
+            <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3 text-center"> Payment Receipt: Cash </h4>
+            </div>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th class="font-weight-bold">Patient Name</th>
+                      <td id="td1">Shakir Ansari</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Date Of Birth</th>
+                      <td id="td1">11/22/1998</td>
+                    </tr>
+                    <!-- <tr>
+                      <th class="font-weight-bold">Products:</th>
+                      <td id="td1">Med</td>
+                    </tr> -->
+                    <tr>
+                      <th class="font-weight-bold">Date of Service:</th>
+                      <td id="td1">11/27/2020</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Collection Date:</th>
+                      <td id="td1">11/26/2020</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Collected By:</th>
+                      <td id="td1">Ravi Agrawal</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold">Amount:</th>
+                      <td id="td1">$120</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+        </section>
+
+        <section id="" class="section active m-b-40">
           <div class="container form-container slide">
             <h3 class="text-center boldText">THANK YOU FOR VISITING VEINS</h3> 
           </div>
@@ -297,6 +434,37 @@
             $('.required-upload').on('change', function (ev) {
                 $(this).toggleClass('upload-green-border', !!$(this).val().trim());
             });
+        </script>
+        <script>
+          function cc_format(value) {
+              var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
+                  var matches = v.match(/\d{4,16}/g);
+                  var match = matches && matches[0] || ''
+                  var parts = []
+                  for (i=0, len=match.length; i<len; i+=4) {
+                    parts.push(match.substring(i, i+4))
+                  }
+                  if (parts.length) {
+                    return parts.join(' ')
+                  } else {
+                    return value
+                  }
+                }
+
+                onload = function() {
+                  document.getElementById('cc').oninput = function() {
+                    this.value = cc_format(this.value)
+                  }
+                }
+                function checkDigit(event) {
+                    var code = (event.which) ? event.which : event.keyCode;
+
+                    if ((code < 48 || code > 57) && (code > 31)) {
+                        return false;
+                    }
+
+                    return true;
+                }
         </script>
 </body>
 </html>
