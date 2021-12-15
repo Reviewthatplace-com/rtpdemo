@@ -57,7 +57,8 @@
   </noscript>
   <!-- End Facebook Pixel Code -->
  
-</head>
+    <link href="assest/css/select2.min.css" rel="stylesheet" rel="prefetch">
+ </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
 

@@ -33,7 +33,8 @@
     <link href="assest/css/rtp.min.css" rel="stylesheet" rel="prefetch">
     <!-- Font Awesome -->
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" rel="prefetch">
-  </head>
+      <link href="assest/css/select2.min.css" rel="stylesheet" rel="prefetch">
+ </head>
 
 <body>
 
@@ -74,7 +75,7 @@
       <div class="contact-detail mt-3">
        <ul style="list-style: none;padding-left: 0;">
         <li class="mb-1"><a href="#"><i class="fas fa-map-marker-alt mr-1"></i> <span>7037 Rose Ave Orlando FL 32810</span></a></li>
-          <li class="mb-1"><a href="#"><i class="fas fa-envelope mr-1"></i> <span>rtpdemo@gmail.com</span></a></li>
+          <li class="mb-1"><a href="#"><i class="fas fa-envelope"></i> <span>support@reviewthatplace.com</span></a></li>
           <li class="mb-1"><a href="#"><i class="fas fa-phone mr-1"></i> <span>888-503-1636</span></a></li> 
        </ul>
       </div>
@@ -96,10 +97,10 @@
             
             <div class="btn-toolbar mb-5 ml-2" role="toolbar" aria-label="Toolbar with button groups">
               <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-success facebook"><a href="https://facebook.com/#"><i class="icofont-facebook"></i> Share</a></button>
-                <button type="button" class="btn btn-outline-success twitter"><a href="https://twitters.com/#"><i class="icofont-twitter"></i></a></button>
-                <button type="button" class="btn btn-outline-success instagram"><a href="https://instagram.com/#"><i class="icofont-instagram"></i></a></button>
-                <button type="button" class="btn btn-outline-success linkedin"><a href="https://in.linkedin.com/"><i class="icofont-linkedin"></i></a></button>
+                <button type="button" class="btn btn-outline-success facebook"><a href="https://facebook.com/#"><i class="fab fa-facebook"></i> Share</a></button>
+                <button type="button" class="btn btn-outline-success twitter"><a href="https://twitters.com/#"><i class="fab fa-twitter"></i></a></button>
+                <button type="button" class="btn btn-outline-success instagram"><a href="https://instagram.com/#"><i class="fab fa-instagram"></i></a></button>
+                <button type="button" class="btn btn-outline-success linkedin"><a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a></button>
               </div>
             </div>
 
@@ -181,9 +182,9 @@
                 </div>
 
                 <div class="float-right share">
-                  <a href="" title="Share on Twitter"><i class="icofont-twitter"></i></a>
-                  <a href="" title="Share on Facebook"><i class="icofont-facebook"></i></a>
-                  <a href="" title="Share on Instagram"><i class="icofont-instagram"></i></a>
+                  <a href="" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                  <a href="" title="Share on Facebook"><i class="fab fa-facebook"></i></a>
+                  <a href="" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
 
               </div>
@@ -194,9 +195,9 @@
               <img src="assest/img/blog/blog-author.jpg" class="rounded-circle float-left" alt="">
               <h4>Jane Smith</h4>
               <div class="social-links">
-                <a href="https://twitters.com/#"><i class="icofont-twitter"></i></a>
-                <a href="https://facebook.com/#"><i class="icofont-facebook"></i></a>
-                <a href="https://instagram.com/#"><i class="icofont-instagram"></i></a>
+                <a href="https://twitters.com/#"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com/#"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/#"><i class="fab fa-instagram"></i></a>
               </div>
               <p>
                 Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
@@ -412,7 +413,15 @@
 <script src="assest/js/main.min.js" defer></script>
 <script src="assest/js/custom.min.js" defer></script>
 <script src="assest/js/lazysizes.min.js" defer></script>
-<script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
+
+    <script type="text/javascript" src="assest/js/select2.min.js"></script>    
+    <script>
+      $(function () {
+          // For select 2
+          $(".select2").select2();
+      });
+    </script>
+    <script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
 </body>
 
 </html>

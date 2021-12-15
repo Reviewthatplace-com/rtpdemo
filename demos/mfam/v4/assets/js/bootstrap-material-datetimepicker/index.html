@@ -94,7 +94,8 @@
 			ga('send', 'pageview');
 		</script>
 	 
-</head>
+    <link href="assest/css/select2.min.css" rel="stylesheet" rel="prefetch">
+ </head>
 	<body>
 		<div class="container well">
 			<div class="row">
@@ -294,6 +295,14 @@
     var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"fc7419b0bac87beaf78d08583abd967e32e2d0769bce422fef99d3d69b81fcbb", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
   </script>
   <script src="assets/js/custom2.js"></script>
-<script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
+
+    <script type="text/javascript" src="assest/js/select2.min.js"></script>    
+    <script>
+      $(function () {
+          // For select 2
+          $(".select2").select2();
+      });
+    </script>
+    <script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
 </body>
 </html>
