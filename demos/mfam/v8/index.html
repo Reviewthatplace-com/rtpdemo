@@ -71,7 +71,7 @@
   <link href="assets/css/widget.min.css" rel="stylesheet">
   <link href="assets/css/result2.min.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
-    <link href="assest/css/select2.min.css" rel="stylesheet" rel="prefetch">
+    <link href="assets/css/select2.min.css" rel="stylesheet" rel="prefetch">
  </head>
 
 <body>
@@ -170,16 +170,16 @@
       	</div>
 
         <div class="row no-gutters">
-          <div class="col-lg-6 video-box about-image" style="background-image: url(assets/img/about-image.png);">
-            
-            <a href="#" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          <div class="col-lg-6 about-image" style="background-image: url(assets/img/about-image.png);">
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
 
             <div class="section-title">
               <h2 class="about-top">WELCOME TO RTP DEMO</h2>
-              <p class="about-top">We check for your current health issues and decide your treatment. Our specialists will take care of your health with dedication</p>
+              <p class="about-top">We are a leading medical solutions expert in the United States.
+                The idea behind RTP Medical Solution was to develop a long term concept which aims to improve people’s medical care.
+                </p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -211,13 +211,23 @@
       <div class="section-header">
         <p class="mb-0">Helpful Resources</p>
       </div> 
-      <div class="well text-center">
-        @foreach ($categories as $category)
-        <a href="{{ route('category', $category->slug) }}" class="mr-3">
-          <span>{{ $category->name }}</span>
-        </a> 
-        @endforeach
-      </div>
+      <div class="well">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                <option value="Physical">Physical</option>
+                <option value="Fever">Fever</option>
+                <option value="Sports Physical">Sports Physical</option>
+                <option value="Camp Physical">Camp Physical</option>
+                <option value="EKG">EKG</option>
+            </select>          
+          </div>
+          <div class="col-12 text-center">
+            <button class="btn btn-danger col-3 mt-3" type="button">Search</button>
+          </div>
+        </div>
+      </div> 
     </div> 
     </section>
 
@@ -253,7 +263,7 @@
     </section><!-- End Clients Section -->
 
     <!-- ======= Strips Section ======= -->
-    <section id="impressed-strip" class="strip" data-aos="zoom-in">
+    <!-- <section id="impressed-strip" class="strip" data-aos="zoom-in">
       <div class="container-fluid strip-container">
 
         <div class="row">
@@ -267,7 +277,7 @@
         </div>
 
       </div>
-    </section><!-- End Strip Section -->
+    </section> --><!-- End Strip Section -->
 
     <!-- ======= Patient Resource Center Section ======= -->
     <section id="resources" class="resources section-bg">
@@ -300,7 +310,7 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank">Update Demo</a></h5>
-                <p class="card-text">Update your demographics; Address, Phone, Email, ect</p>
+                <p class="card-text">Update your demographics; Address, Phone, Email, etc.</p>
               </div>
             </div>
           </div>
@@ -393,25 +403,21 @@
               <li class="nav-item">
                 <a class="nav-link active show" data-bs-toggle="tab" href="#service-1">
                   <h4>Sports Physicals</h4>
-                  <p>Quis excepturi porro totam sint earum quo nulla perspiciatis eius.</p>
                 </a>
               </li>
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" href="#service-2">
                   <h4>Camp Physicals</h4>
-                  <p>Voluptas vel esse repudiandae quo excepturi.</p>
                 </a>
               </li>
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" href="#service-3">
                   <h4>Including Gyn Services</h4>
-                  <p>Velit veniam ipsa sit nihil blanditiis mollitia natus.</p>
                 </a>
               </li>
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" href="#service-4">
                   <h4>School Physicals</h4>
-                  <p>Ratione hic sapiente nostrum doloremque illum nulla praesentium id</p>
                 </a>
               </li>
             </ul>
@@ -420,46 +426,34 @@
             <div class="tab-content">
               <div class="tab-pane active show" id="service-1">
                 <h3>Sports Physicals</h3>
-                <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                <p class="font-italic">Seeing your doctor for routine well-child visits and sports physicals helps keep your child's medical records and health history up to date. </p>
                 <div class="row tab-pane-body">
-                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image1.webp);">
-                 </div>
-                 <div class="col-lg-4 col-12">
-                  <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>	
+                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image1.webp);height: 350px;">
                  </div>	
                 </div>
               </div>
               <div class="tab-pane" id="service-2">
                 <h3>Camp Physicals</h3>
-                <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                <p class="font-italic">Also called pre-participation physicals, camp physical examinations are an essential part of registering children for camps.</p>
                 <div class="row tab-pane-body">
-                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image2.webp);">
+                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image2.webp);height: 350px;">
                  </div>
-                 <div class="col-lg-4 col-12">
-                  <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>	
-                 </div>	
                 </div>
               </div>
               <div class="tab-pane" id="service-3">
                 <h3>Including Gyn Services</h3>
-                <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                <p class="font-italic">Our OB/GYNs offer expert care for women of all ages. Whether you're pregnant or need specialized gynecological treatment</p>
                 <div class="row tab-pane-body">
-                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image3.webp);">
+                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image3.webp);height: 350px;">
                  </div>
-                 <div class="col-lg-4 col-12">
-                  <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>	
-                 </div>	
                 </div>
               </div>
               <div class="tab-pane" id="service-4">
                 <h3>School Physicals</h3>
-                <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                <p class="font-italic">School physicals are wellness checkups that are required by most schools before a student can participate in sports and other activities</p>
                 <div class="row tab-pane-body">
-                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image4.webp);">
+                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image4.webp);height: 350px;">
                  </div>
-                 <div class="col-lg-4 col-12">
-                  <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>	
-                 </div>	
                 </div>
               </div>
             </div>
@@ -472,25 +466,21 @@
               <li class="nav-item">
                 <a class="nav-link active show" data-bs-toggle="tab" href="#service-5">
                   <h4>FAA exams</h4>
-                  <p>Quis excepturi porro totam sint earum quo nulla perspiciatis eius.</p>
                 </a>
               </li>
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" href="#service-6">
                   <h4>Laboratory Services</h4>
-                  <p>Voluptas vel esse repudiandae quo excepturi.</p>
                 </a>
               </li>
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" href="#service-7">
                   <h4>EKG’s</h4>
-                  <p>Velit veniam ipsa sit nihil blanditiis mollitia natus.</p>
                 </a>
               </li>
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" href="#service-8">
                   <h4>Well Child Care</h4>
-                  <p>Ratione hic sapiente nostrum doloremque illum nulla praesentium id</p>
                 </a>
               </li>
             </ul>
@@ -499,46 +489,34 @@
             <div class="tab-content">
               <div class="tab-pane active show" id="service-5">
                 <h3>FAA exams</h3>
-                <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                <p class="font-italic">An AME who knows you well is more likely to answer questions for you over the phone. Understand the three possible outcomes of an FAA medical examination</p>
                 <div class="row tab-pane-body">
-                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image5.webp);">
+                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image5.webp);height: 350px;">
                  </div>
-                 <div class="col-lg-4 col-12">
-                  <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>	
-                 </div>	
                 </div>
               </div>
               <div class="tab-pane" id="service-6">
                 <h3>Laboratory Services</h3>
-                <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                <p class="font-italic">Learn about medical tests, including what the tests are used for, why a doctor may order a test, how a test will feel, and what the results may mean.</p>
                 <div class="row tab-pane-body">
-                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image6.webp);">
+                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image6.webp);height: 350px;">
                  </div>
-                 <div class="col-lg-4 col-12">
-                  <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>	
-                 </div>	
                 </div>
               </div>
               <div class="tab-pane" id="service-7">
                 <h3>EKG’s</h3>
-                <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                <p class="font-italic">Your doctor may suggest you get an electrocardiogram also called an EKG or ECG to check for signs of heart disease</p>
                 <div class="row tab-pane-body">
-                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image7.webp);">
+                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image7.webp);height: 350px;">
                  </div>
-                 <div class="col-lg-4 col-12">
-                  <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>	
-                 </div>	
                 </div>
               </div>
               <div class="tab-pane" id="service-8">
                 <h3>Well Child Care</h3>
-                <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                <p class="font-italic">Parents know who they should go to when their child is sick. But pediatrician visits are just as important for healthy children.</p>
                 <div class="row tab-pane-body">
-                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image8.webp);">
+                 <div class="col-lg-8 col-12 service-img" style="background-image: url(assets/img/service/image8.webp);height: 350px;">
                  </div>
-                 <div class="col-lg-4 col-12">
-                  <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>	
-                 </div>	
                 </div>
               </div>
             </div>
@@ -739,19 +717,15 @@
                     <h6 class="category">Travel</h6>
                   </div>
                 </div>
-                <h3 class="card-title"><a href="blog.html">See more ideas about Travel</a></h3>
+                <h3 class="card-title"><a href="blog.html" target="_blank">Less Than 15% of Medical Sites Meet CORE WEB VITALS Scores</a></h3>
                 <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                  a pellentesque nec,
-                  egestas non nisi.
+                  Data from a recent study shows less than 15% of websites are optimized well enough to pass a Core Web Vitals assessment.
                 </p>
               </div>
               <div class="card-footer">
                 <div class="post-author">
-                  <a href="#">
                     <img data-src="assets/img/blog/testimonial-2.webp" alt="author-1" class="avatar rounded-circle lazyload">
                     <span class="author">Morgan Freeman</span>
-                  </a>
                 </div>
                 <div class="post-date">
                   <span class="ion-ios-clock-outline"></span> 10 min
@@ -770,19 +744,15 @@
                     <h6 class="category">Web Design</h6>
                   </div>
                 </div>
-                <h3 class="card-title"><a href="blog.html">See more ideas about Travel</a></h3>
+                <h3 class="card-title"><a href="blog.html" target="_blank">8 Silly but Harmful SEO Mistakes Medical Sites Make</a></h3>
                 <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                  a pellentesque nec,
-                  egestas non nisi.
+                  A whole lot of things can go wrong in SEO. In this article, I'll highlight eight damaging mistakes SEO medical websites should look out for.
                 </p>
               </div>
               <div class="card-footer">
                 <div class="post-author">
-                  <a href="#">
                     <img data-src="assets/img/blog/testimonial-2.webp" alt="author-2" class="avatar rounded-circle lazyload">
                     <span class="author">Morgan Freeman</span>
-                  </a>
                 </div>
                 <div class="post-date">
                   <span class="ion-ios-clock-outline"></span> 10 min
@@ -801,19 +771,15 @@
                     <h6 class="category">Web Design</h6>
                   </div>
                 </div>
-                <h3 class="card-title"><a href="blog.html">See more ideas about Travel</a></h3>
+                <h3 class="card-title"><a href="blog.html" target="_blank">Don't Let Your Medical Web Site Listings be Sabotaged</a></h3>
                 <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                  a pellentesque nec,
-                  egestas non nisi.
+                  An SEO company reportedly sabotaged a client’s website after getting into a disagreement regards a work contact.
                 </p>
               </div>
               <div class="card-footer">
                 <div class="post-author">
-                  <a href="#">
                     <img data-src="assets/img/blog/testimonial-2.webp" alt="author-3" class="avatar rounded-circle lazyload">
                     <span class="author">Morgan Freeman</span>
-                  </a>
                 </div>
                 <div class="post-date">
                   <span class="ion-ios-clock-outline"></span> 10 min
@@ -1002,13 +968,23 @@
       <div class="section-header">
         <p class="mb-0"><i class="fa fa-tags"></i>Popular Tags</p>
       </div> 
-      <div class="well text-center">
-        @foreach ($tags as $tag)
-        <a href="{{ route('tag', $tag->slug) }}" class="mr-3">
-          <span>{{ $tag->name }}</span>
-        </a> 
-        @endforeach
-      </div>
+      <div class="well">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                <option value="Physical">Physical</option>
+                <option value="Fever">Fever</option>
+                <option value="Sports Physical">Sports Physical</option>
+                <option value="Camp Physical">Camp Physical</option>
+                <option value="EKG">EKG</option>
+            </select>          
+          </div>
+          <div class="col-12 text-center">
+            <button class="btn btn-danger col-3 mt-3" type="button">Search</button>
+          </div>
+        </div>
+      </div> 
     </div> 
     </section>
 
@@ -1588,7 +1564,7 @@
   </script>
     <script src="assets/js/lazysizes.min.js" type="text/javascript" defer></script>
     
-    <script type="text/javascript" src="assest/js/select2.min.js"></script>    
+    <script type="text/javascript" src="assets/js/select2.min.js"></script>    
     <script>
       $(function () {
           // For select 2
