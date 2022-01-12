@@ -2264,6 +2264,18 @@ $(function() {
           });
      });
      //Active requests End
+
+     $(".email-sent").click(function(){
+          $.toast({
+               heading: '',
+               text: 'Email Sent',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'success',
+               hideAfter: 3500, 
+               stack: 6
+     });
+     });
   
 });
           
