@@ -17,6 +17,9 @@
   <link href="assest/css/progress.css" rel="stylesheet">
   <link href="assest/css/typography.css" rel="stylesheet">
   <link href="assest/css/signature/jquery.signaturepad.css" rel="stylesheet">
+  <link href="assest/css/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
+  <link href="assest/css/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+  <link href="assest/css/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
   <style type="text/css">
     section
     {
@@ -538,25 +541,25 @@
     <div class="col-xl-6">
      <div class="form-group">
       <label for="s1q19" class="float-label">Spouse’sName</label>
-      <input type="text" class="form-control required" id="s1q19" name="s1q19"> 
+      <input type="text" class="form-control optional" id="s1q19" name="s1q19"> 
     </div>  
   </div>
   <div class="col-xl-6">
    <div class="form-group">
     <label for="s1q20" class="float-label">Spouse’sEmployer</label>
-    <input type="text" class="form-control required" id="s1q20" name="s1q20"> 
+    <input type="text" class="form-control optional" id="s1q20" name="s1q20"> 
   </div>  
 </div>
 <div class="col-xl-6">
  <div class="form-group">
   <label for="s1q21" class="float-label">Number of children</label>
-  <input type="number" class="form-control required" id="s1q21" name="s1q21"> 
+  <input type="number" class="form-control optional" id="s1q21" name="s1q21"> 
 </div>  
 </div>
 <div class="col-xl-6">
  <div class="form-group">
   <label for="s1q22" class="float-label">Age</label>
-  <input type="number" class="form-control required" id="s1q22" name="s1q22"> 
+  <input type="number" class="form-control optional" id="s1q22" name="s1q22"> 
 </div>  
 </div> 
 </div> 
@@ -672,7 +675,30 @@
              <input type="text" class="form-control required" id="s2q1" name="">
            </div>
          </div>
-         <div class="col-xl-12">
+         <div class="col-xl-6">
+          <div class="form-group">
+            <label for="s2q1" class="float-label">Relationship</label>
+            <select class="select2 form-control custom-select mt-3" style="width: 100%; height:36px;">
+                <option>Select</option>
+                    <option value="s2q2o1">Self</option>
+                    <option value="s2q2o2">Spouse</option>
+                    <option value="s2q2o3">Step Child</option>
+                    <option value="s2q2o4">Foster Child</option>
+                    <option value="s2q2o5">Ward of the court</option>
+                    <option value="s2q2o6">Employee</option>
+                    <option value="s2q2o7">Handicaped dependent</option>
+                    <option value="s2q2o8">Organ Donar</option>
+                    <option value="s2q2o9">Cadever Donar</option>
+                    <option value="s2q2o10">Grandchild</option>
+                    <option value="s2q2o11">Niece/Nephew</option>
+                    <option value="s2q2o12">Injured Plaintiff</option>
+                    <option value="s2q2o13">Sponsored Dependent</option>
+                    <option value="s2q2o14">Parent</option>
+                    <option value="s2q2o15">Grandparent</option>
+                    <option value="s2q2o16">Other</option>
+            </select>
+          </div>
+         <!-- <div class="col-xl-12">
            <fieldset class="fieldset-border">
              <legend class="legend">Relationship</legend>
              <div class="form-radio">
@@ -740,7 +766,7 @@
                <label class="radiolabel required-label" for="s2q2o16">Other</label>
              </div>
            </fieldset>
-         </div> 
+         </div> --> 
        </div> 
      </fieldset> 
    </div>
@@ -1057,6 +1083,115 @@
 </div> 
 </div>  
 </fieldset>  
+</div>
+
+<div class="col-xl-12" id="problem_group">
+    <fieldset class="fieldset-border">
+    <legend class="">Do you have any problem(s)?</legend>
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="s6q1a" class="float-label">When did the problem(s) begin?</label>
+            <input type="text" class="form-control required" id="s6q1a" name="s6q1a"> 
+          </div>  
+        </div>
+        <div class="col-xl-6">
+          <fieldset class="fieldset-border">
+            <legend>When is the problem at its worst?</legend>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo1" value="">
+              <label class="checklabel required-label" for="s6q1bo1">AM</label>  
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo2" value="">
+              <label class="checklabel required-label" for="s6q1bo2">PM</label>  
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo3" value="">
+              <label class="checklabel required-label" for="s6q1bo3">Mid-day</label> 
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo4" value="">
+              <label class="checklabel required-label" for="s6q1bo4">Late PM</label> 
+            </div>
+          </fieldset>  
+        </div>
+        <div class="col-xl-12">
+          <fieldset class="fieldset-border">
+            <legend>How long does it last?</legend>
+            <div class="row">
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="s6q1cn1" id="s6q1co1" value="">
+                <label class="checklabel required-label" for="s6q1co1">It is constant</label>  
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="s6q1cn1" id="s6q1co2" value="">
+                <label class="checklabel required-label" for="s6q1co2">I experience it on and off during the day</label> 
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="s6q1cn1" id="s6q1co3" value="">
+                <label class="checklabel required-label" for="s6q1co3">It comes and goes throughout the week</label> 
+              </div>              
+            </div>
+          </fieldset>  
+        </div>
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="s6q1d" class="float-label">How did the injury happen?</label>
+            <input type="text" class="form-control required" id="s6q1d" name="s6q1d">  
+          </div> 
+        </div>
+      </div>  
+  </fieldset>  
+</div>
+
+
+<div class="col-xl-12">
+  <fieldset class="fieldset-border">
+      <legend class="">Condition(s) ever been treated by anyone in the past?</legend>
+      <div class="inner-row">
+          <div class="form-checkbox">
+            <input class="checkbox" type="radio" name="s6q2n1" id="s6q2o1" value="">
+            <label class="checklabel required-label" for="s6q2o1" onclick="condTreat()">Yes</label> 
+          </div>
+          <div class="form-checkbox">
+            <input class="checkbox" type="radio" name="s6q2n1" id="s6q2o2" value="">
+            <label class="checklabel required-label" for="s6q2o2">No</label>  
+          </div>
+          <div class="row intial_hidden" id="cond_treat">
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="s6q2a" class="float-label">If yes, when?</label>
+                <input type="text" class="form-control required" id="s6q2a" name="s6q2a">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="s6q2b" class="float-label">By whom?</label>
+                <input type="text" class="form-control required" id="s6q2b" name="s6q2b">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="s6q2c" class="float-label">How long were you under care?</label>
+                <input type="text" class="form-control required" id="s6q2c" name="s6q2c">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="s6q2d" class="float-label">What were the results?</label>
+                <input type="text" class="form-control required" id="s6q2d" name="s6q2d">  
+              </div> 
+            </div>
+            <div class="col-xl-12">
+              <div class="form-group">
+                <label for="s6q2e" class="float-label">Name of Previous Chiropractor</label>
+                <input type="text" class="form-control required" id="s6q2e" name="s6q2e">  
+              </div> 
+            </div> 
+          </div>  
+      </div>
+  </fieldset>  
 </div>
 
 <div class="col-xl-12">
@@ -1427,6 +1562,115 @@
 </fieldset>  
 </div>
 
+<div class="col-xl-12" id="problem_group">
+    <fieldset class="fieldset-border">
+    <legend class="">Do you have any problem(s)?</legend>
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="add1q1a" class="float-label">When did the problem(s) begin?</label>
+            <input type="text" class="form-control required" id="add1q1a" name="add1q1a"> 
+          </div>  
+        </div>
+        <div class="col-xl-6">
+          <fieldset class="fieldset-border">
+            <legend>When is the problem at its worst?</legend>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add1q1bn1" id="add1q1bo1" value="">
+              <label class="checklabel required-label" for="add1q1bo1">AM</label>  
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add1q1bn1" id="add1q1bo2" value="">
+              <label class="checklabel required-label" for="add1q1bo2">PM</label>  
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add1q1bn1" id="add1q1bo3" value="">
+              <label class="checklabel required-label" for="add1q1bo3">Mid-day</label> 
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add1q1bn1" id="add1q1bo4" value="">
+              <label class="checklabel required-label" for="add1q1bo4">Late PM</label> 
+            </div>
+          </fieldset>  
+        </div>
+        <div class="col-xl-12">
+          <fieldset class="fieldset-border">
+            <legend>How long does it last?</legend>
+            <div class="row">
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="add1q1cn1" id="add1q1co1" value="">
+                <label class="checklabel required-label" for="add1q1co1">It is constant</label>  
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="add1q1cn1" id="add1q1co2" value="">
+                <label class="checklabel required-label" for="add1q1co2">I experience it on and off during the day</label> 
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="add1q1cn1" id="add1q1co3" value="">
+                <label class="checklabel required-label" for="add1q1co3">It comes and goes throughout the week</label> 
+              </div>              
+            </div>
+          </fieldset>  
+        </div>
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="add1q1d" class="float-label">How did the injury happen?</label>
+            <input type="text" class="form-control required" id="add1q1d" name="add1q1d">  
+          </div> 
+        </div>
+      </div>  
+  </fieldset>  
+</div>
+
+
+<div class="col-xl-12">
+  <fieldset class="fieldset-border">
+      <legend class="">Condition(s) ever been treated by anyone in the past?</legend>
+      <div class="inner-row">
+          <div class="form-checkbox">
+            <input class="checkbox" type="radio" name="add1q2n1" id="add1q2o1" value="">
+            <label class="checklabel required-label" for="add1q2o1" onclick="condTreat2()">Yes</label> 
+          </div>
+          <div class="form-checkbox">
+            <input class="checkbox" type="radio" name="add1q2n1" id="add1q2o2" value="">
+            <label class="checklabel required-label" for="add1q2o2">No</label>  
+          </div>
+          <div class="row intial_hidden" id="cond_treat2">
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add1q2a" class="float-label">If yes, when?</label>
+                <input type="text" class="form-control required" id="add1q2a" name="add1q2a">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add1q2b" class="float-label">By whom?</label>
+                <input type="text" class="form-control required" id="add1q2b" name="add1q2b">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add1q2c" class="float-label">How long were you under care?</label>
+                <input type="text" class="form-control required" id="add1q2c" name="add1q2c">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add1q2d" class="float-label">What were the results?</label>
+                <input type="text" class="form-control required" id="add1q2d" name="add1q2d">  
+              </div> 
+            </div>
+            <div class="col-xl-12">
+              <div class="form-group">
+                <label for="add1q2e" class="float-label">Name of Previous Chiropractor</label>
+                <input type="text" class="form-control required" id="add1q2e" name="add1q2e">  
+              </div> 
+            </div> 
+          </div>  
+      </div>
+  </fieldset>  
+</div>
+
 <div class="col-xl-12">
  <fieldset class="fieldset-border">
   <legend class="">Secondary condition Pain level</legend>
@@ -1793,6 +2037,115 @@
 </div> 
 </div>  
 </fieldset>  
+</div>
+
+<div class="col-xl-12" id="problem_group">
+    <fieldset class="fieldset-border">
+    <legend class="">Do you have any problem(s)?</legend>
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="add2_1a" class="float-label">When did the problem(s) begin?</label>
+            <input type="text" class="form-control required" id="add2_1a" name="add2_1a"> 
+          </div>  
+        </div>
+        <div class="col-xl-6">
+          <fieldset class="fieldset-border">
+            <legend>When is the problem at its worst?</legend>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add2_1bn1" id="add2_1bo1" value="">
+              <label class="checklabel required-label" for="add2_1bo1">AM</label>  
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add2_1bn1" id="add2_1bo2" value="">
+              <label class="checklabel required-label" for="add2_1bo2">PM</label>  
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add2_1bn1" id="add2_1bo3" value="">
+              <label class="checklabel required-label" for="add2_1bo3">Mid-day</label> 
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add2_1bn1" id="add2_1bo4" value="">
+              <label class="checklabel required-label" for="add2_1bo4">Late PM</label> 
+            </div>
+          </fieldset>  
+        </div>
+        <div class="col-xl-12">
+          <fieldset class="fieldset-border">
+            <legend>How long does it last?</legend>
+            <div class="row">
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="add2_1cn1" id="add2_1co1" value="">
+                <label class="checklabel required-label" for="add2_1co1">It is constant</label>  
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="add2_1cn1" id="add2_1co2" value="">
+                <label class="checklabel required-label" for="add2_1co2">I experience it on and off during the day</label> 
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="add2_1cn1" id="add2_1co3" value="">
+                <label class="checklabel required-label" for="add2_1co3">It comes and goes throughout the week</label> 
+              </div>              
+            </div>
+          </fieldset>  
+        </div>
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="add2_1d" class="float-label">How did the injury happen?</label>
+            <input type="text" class="form-control required" id="add2_1d" name="add2_1d">  
+          </div> 
+        </div>
+      </div>  
+  </fieldset>  
+</div>
+
+
+<div class="col-xl-12">
+  <fieldset class="fieldset-border">
+      <legend class="">Condition(s) ever been treated by anyone in the past?</legend>
+      <div class="inner-row">
+          <div class="form-checkbox">
+            <input class="checkbox" type="radio" name="add2_2n1" id="add2_2o1" value="">
+            <label class="checklabel required-label" for="add2_2o1" onclick="condTreat3()">Yes</label> 
+          </div>
+          <div class="form-checkbox">
+            <input class="checkbox" type="radio" name="add2_2n1" id="add2_2o2" value="">
+            <label class="checklabel required-label" for="add2_2o2">No</label>  
+          </div>
+          <div class="row intial_hidden" id="cond_treat3">
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add2_2a" class="float-label">If yes, when?</label>
+                <input type="text" class="form-control required" id="add2_2a" name="add2_2a">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add2_2b" class="float-label">By whom?</label>
+                <input type="text" class="form-control required" id="add2_2b" name="add2_2b">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add2_2c" class="float-label">How long were you under care?</label>
+                <input type="text" class="form-control required" id="add2_2c" name="add2_2c">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add2_2d" class="float-label">What were the results?</label>
+                <input type="text" class="form-control required" id="add2_2d" name="add2_2d">  
+              </div> 
+            </div>
+            <div class="col-xl-12">
+              <div class="form-group">
+                <label for="add2_2e" class="float-label">Name of Previous Chiropractor</label>
+                <input type="text" class="form-control required" id="add2_2e" name="add2_2e">  
+              </div> 
+            </div> 
+          </div>  
+      </div>
+  </fieldset>  
 </div>
 
 <div class="col-xl-12">
@@ -2163,6 +2516,115 @@
 </fieldset>  
 </div>
 
+<div class="col-xl-12" id="problem_group">
+    <fieldset class="fieldset-border">
+    <legend class="">Do you have any problem(s)?</legend>
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="form-group">
+            <label for="add3_1a" class="float-label">When did the problem(s) begin?</label>
+            <input type="text" class="form-control required" id="add3_1a" name="add3_1a"> 
+          </div>  
+        </div>
+        <div class="col-xl-6">
+          <fieldset class="fieldset-border">
+            <legend>When is the problem at its worst?</legend>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add3_1bn1" id="add3_1bo1" value="">
+              <label class="checklabel required-label" for="add3_1bo1">AM</label>  
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add3_1bn1" id="add3_1bo2" value="">
+              <label class="checklabel required-label" for="add3_1bo2">PM</label>  
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add3_1bn1" id="add3_1bo3" value="">
+              <label class="checklabel required-label" for="add3_1bo3">Mid-day</label> 
+            </div>
+            <div class="form-checkbox">
+              <input class="checkbox" type="radio" name="add3_1bn1" id="add3_1bo4" value="">
+              <label class="checklabel required-label" for="add3_1bo4">Late PM</label> 
+            </div>
+          </fieldset>  
+        </div>
+        <div class="col-xl-12">
+          <fieldset class="fieldset-border">
+            <legend>How long does it last?</legend>
+            <div class="row">
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="add3_1cn1" id="add3_1co1" value="">
+                <label class="checklabel required-label" for="add3_1co1">It is constant</label>  
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="add3_1cn1" id="add3_1co2" value="">
+                <label class="checklabel required-label" for="add3_1co2">I experience it on and off during the day</label> 
+              </div>
+              <div class="form-checkbox">
+                <input class="checkbox" type="radio" name="add3_1cn1" id="add3_1co3" value="">
+                <label class="checklabel required-label" for="add3_1co3">It comes and goes throughout the week</label> 
+              </div>              
+            </div>
+          </fieldset>  
+        </div>
+        <div class="col-xl-12">
+          <div class="form-group">
+            <label for="add3_1d" class="float-label">How did the injury happen?</label>
+            <input type="text" class="form-control required" id="add3_1d" name="add3_1d">  
+          </div> 
+        </div>
+      </div>  
+  </fieldset>  
+</div>
+
+
+<div class="col-xl-12">
+  <fieldset class="fieldset-border">
+      <legend class="">Condition(s) ever been treated by anyone in the past?</legend>
+      <div class="inner-row">
+          <div class="form-checkbox">
+            <input class="checkbox" type="radio" name="add3_2n1" id="add3_2o1" value="">
+            <label class="checklabel required-label" for="add3_2o1" onclick="condTreat4()">Yes</label> 
+          </div>
+          <div class="form-checkbox">
+            <input class="checkbox" type="radio" name="add3_2n1" id="add3_2o2" value="">
+            <label class="checklabel required-label" for="add3_2o2">No</label>  
+          </div>
+          <div class="row intial_hidden" id="cond_treat4">
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add3_2a" class="float-label">If yes, when?</label>
+                <input type="text" class="form-control required" id="add3_2a" name="add3_2a">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add3_2b" class="float-label">By whom?</label>
+                <input type="text" class="form-control required" id="add3_2b" name="add3_2b">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add3_2c" class="float-label">How long were you under care?</label>
+                <input type="text" class="form-control required" id="add3_2c" name="add3_2c">  
+              </div> 
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group">
+                <label for="add3_2d" class="float-label">What were the results?</label>
+                <input type="text" class="form-control required" id="add3_2d" name="add3_2d">  
+              </div> 
+            </div>
+            <div class="col-xl-12">
+              <div class="form-group">
+                <label for="add3_2e" class="float-label">Name of Previous Chiropractor</label>
+                <input type="text" class="form-control required" id="add3_2e" name="add3_2e">  
+              </div> 
+            </div> 
+          </div>  
+      </div>
+  </fieldset>  
+</div>
+
 <div class="col-xl-12">
  <fieldset class="fieldset-border">
   <legend class="">Fourth condition Pain level</legend>
@@ -2434,71 +2896,71 @@
 
 
 
-<div class="col-xl-12">
+<!-- <div class="col-xl-12">
  <fieldset class="fieldset-outer">
   <legend class="custom-legend">Do you have any problem(s)?</legend>
   <div class="inner-row">
-   <div class="form-checkbox">
-     <input class="checkbox" type="radio" name="s6q1n1" id="s6q1o1" value="">
-     <label class="checklabel required-label" for="s6q1o1" onclick="problemGroup()">Yes</label>  
-   </div>
-   <div class="form-checkbox">
-     <input class="checkbox" type="radio" name="s6q1n1" id="s6q1o2" value="">
-     <label class="checklabel required-label" for="s6q1o2">No</label>  
-   </div>
-   <div class="row intial_hidden" id="problem_group">
-    <div class="col-xl-6">
-     <div class="form-group">
-      <label for="s6q1a" class="float-label">When did the problem(s) begin?</label>
-      <input type="text" class="form-control required" id="s6q1a" name="s6q1a">  
-    </div> 
-  </div>
-  <div class="col-xl-6">
-   <fieldset class="fieldset-border">
-    <legend>When is the problem at its worst?</legend>
     <div class="form-checkbox">
-     <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo1" value="">
-     <label class="checklabel required-label" for="s6q1bo1">AM</label>  
-   </div>
-   <div class="form-checkbox">
-     <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo2" value="">
-     <label class="checklabel required-label" for="s6q1bo2">PM</label>  
-   </div>
-   <div class="form-checkbox">
-     <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo3" value="">
-     <label class="checklabel required-label" for="s6q1bo3">Mid-day</label> 
-   </div>
-   <div class="form-checkbox">
-     <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo4" value="">
-     <label class="checklabel required-label" for="s6q1bo4">Late PM</label> 
-   </div>
- </fieldset>  
-</div>
-<div class="col-xl-12">
- <fieldset class="fieldset-border">
-  <legend>How long does it last?</legend>
+      <input class="checkbox" type="radio" name="s6q1n1" id="s6q1o1" value="">
+      <label class="checklabel required-label" for="s6q1o1" onclick="problemGroup()">Yes</label>  
+    </div>
+    <div class="form-checkbox">
+      <input class="checkbox" type="radio" name="s6q1n1" id="s6q1o2" value="">
+      <label class="checklabel required-label" for="s6q1o2">No</label>  
+    </div>
+    <div class="row intial_hidden" id="problem_group">
+      <div class="col-xl-6">
+      <div class="form-group">
+        <label for="s6q1a" class="float-label">When did the problem(s) begin?</label>
+        <input type="text" class="form-control required" id="s6q1a" name="s6q1a">  
+      </div> 
+    </div>
+    <div class="col-xl-6">
+    <fieldset class="fieldset-border">
+      <legend>When is the problem at its worst?</legend>
+      <div class="form-checkbox">
+      <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo1" value="">
+      <label class="checklabel required-label" for="s6q1bo1">AM</label>  
+    </div>
+    <div class="form-checkbox">
+      <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo2" value="">
+      <label class="checklabel required-label" for="s6q1bo2">PM</label>  
+    </div>
+    <div class="form-checkbox">
+      <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo3" value="">
+      <label class="checklabel required-label" for="s6q1bo3">Mid-day</label> 
+    </div>
+    <div class="form-checkbox">
+      <input class="checkbox" type="radio" name="s6q1bn1" id="s6q1bo4" value="">
+      <label class="checklabel required-label" for="s6q1bo4">Late PM</label> 
+    </div>
+  </fieldset>  
+  </div>
+  <div class="col-xl-12">
+  <fieldset class="fieldset-border">
+    <legend>How long does it last?</legend>
+    <div class="form-checkbox">
+    <input class="checkbox" type="radio" name="s6q1cn1" id="s6q1co1" value="">
+    <label class="checklabel required-label" for="s6q1co1">It is constant</label>  
+  </div>
   <div class="form-checkbox">
-   <input class="checkbox" type="radio" name="s6q1cn1" id="s6q1co1" value="">
-   <label class="checklabel required-label" for="s6q1co1">It is constant</label>  
- </div>
- <div class="form-checkbox">
-   <input class="checkbox" type="radio" name="s6q1cn1" id="s6q1co2" value="">
-   <label class="checklabel required-label" for="s6q1co2">I experience it on and off during the day</label> 
- </div>
- <div class="form-checkbox">
-   <input class="checkbox" type="radio" name="s6q1cn1" id="s6q1co3" value="">
-   <label class="checklabel required-label" for="s6q1co3">It comes and goes throughout the week</label> 
- </div>
-</fieldset>  
-</div>
-<div class="col-xl-12">
- <div class="form-group">
-  <label for="s6q1d" class="float-label">How did the injury happen?</label>
-  <input type="text" class="form-control required" id="s6q1d" name="s6q1d">  
-</div> 
-</div>
-</div>  
-</div>
+    <input class="checkbox" type="radio" name="s6q1cn1" id="s6q1co2" value="">
+    <label class="checklabel required-label" for="s6q1co2">I experience it on and off during the day</label> 
+  </div>
+  <div class="form-checkbox">
+    <input class="checkbox" type="radio" name="s6q1cn1" id="s6q1co3" value="">
+    <label class="checklabel required-label" for="s6q1co3">It comes and goes throughout the week</label> 
+  </div>
+  </fieldset>  
+  </div>
+  <div class="col-xl-12">
+  <div class="form-group">
+    <label for="s6q1d" class="float-label">How did the injury happen?</label>
+    <input type="text" class="form-control required" id="s6q1d" name="s6q1d">  
+  </div> 
+  </div>
+    </div>  
+  </div>
 </fieldset>  
 </div>  
 
@@ -2549,7 +3011,7 @@
 </div>
 </fieldset>  
 </div>
-</div>
+</div> -->
 
 
 <!-- Steppers Navigation -->
@@ -2579,8 +3041,22 @@
     <div class="row">
      <div class="col-xl-12">
       <fieldset class="fieldset-outer">
-       <legend class="custom-legend">Most Recent Accident</legend>
+       <legend class="custom-legend">Have you had a recent auto accident?</legend>
        <div class="row inner-row">
+        <div class="form-group">
+          <div class="form-checkbox">
+            <input class="checkbox" type="radio" name="s14q1A" id="s14q1A" value="">
+            <label class="checklabel required-label" for="s14q1A" onclick="accident()">Yes</label> 
+          </div>
+          <div class="form-checkbox">
+          <input class="checkbox" type="radio" name="s14q1B" id="s14q1B" value="">
+          <label class="checklabel required-label" for="s14q1B">No</label> 
+        </div>           
+        </div>
+       </div>
+
+
+       <div class="row inner-row intial_hidden" id="accident">
         <div class="col-xl-6">
          <div class="form-group">
           <label for="s14q2" class="float-label">When was your most recent auto accident?</label>
@@ -2589,7 +3065,7 @@
       </div>
       <div class="col-xl-6">
        <div class="form-group">
-        <label for="s14q3" class="float-label">What speed wasthe collision?</label>
+        <label for="s14q3" class="float-label">What speed was the collision?</label>
         <input type="text" class="form-control required" id="s14q3" name="s14q3">  
       </div> 
     </div>
@@ -2616,14 +3092,26 @@
     <textarea id="s14q5" rows="3" class="form-control required"></textarea> 
   </div> 
 </div>
-</div>
+       </div>
 </fieldset>  
 </div>
 
 <div class="col-xl-12">
   <fieldset class="fieldset-outer">
-   <legend class="custom-legend">Most recent strain / stress at work?</legend>
+   <legend class="custom-legend">Do you feel strain or stress on your body from work?</legend>
    <div class="row inner-row">
+    <div class="form-group">
+      <div class="form-checkbox">
+        <input class="checkbox" type="radio" name="s14qC" id="s14qC" value="">
+        <label class="checklabel required-label" for="s14qC" onclick="stress()">Yes</label> 
+      </div>
+      <div class="form-checkbox">
+      <input class="checkbox" type="radio" name="s14q1D" id="s14q1D" value="">
+      <label class="checklabel required-label" for="s14q1D">No</label> 
+    </div>           
+    </div>
+   </div>
+   <div class="row inner-row intial_hidden" id="stress">
     <div class="col-xl-12">
      <div class="form-group">
       <label for="s14q6" class="float-label">When was your most recent strain / stress at work?</label>
@@ -2687,23 +3175,23 @@
    <div class="inner-row">
     <div class="form-checkbox">
      <input class="checkbox" type="radio" name="s15q11n1" id="s15q11o1" value="">
-     <label class="checklabel required-label" for="s15q11o1">fall on your head</label> 
+     <label class="checklabel required-label" for="s15q11o1">Fall on your head</label> 
    </div>
    <div class="form-checkbox">
      <input class="checkbox" type="radio" name="s15q11n1" id="s15q11o2" value="">
-     <label class="checklabel required-label" for="s15q11o2">impact to your head</label> 
+     <label class="checklabel required-label" for="s15q11o2">Impact to your head</label> 
    </div>
    <div class="form-checkbox">
      <input class="checkbox" type="radio" name="s15q11n1" id="s15q11o3" value="">
-     <label class="checklabel required-label" for="s15q11o3">concussion</label> 
+     <label class="checklabel required-label" for="s15q11o3">Concussion</label> 
    </div>
    <div class="form-checkbox">
      <input class="checkbox" type="radio" name="s15q11n1" id="s15q11o4" value="">
-     <label class="checklabel required-label" for="s15q11o4">fall onto your back or tailbone</label> 
+     <label class="checklabel required-label" for="s15q11o4">Fall onto your back or tailbone</label> 
    </div>
    <div class="form-checkbox">
      <input class="checkbox" type="radio" name="s15q11n1" id="s15q11o5" value="">
-     <label class="checklabel required-label" for="s15q11o5">biking accident</label> 
+     <label class="checklabel required-label" for="s15q11o5">Biking accident</label> 
    </div>  
  </div>
 </fieldset>  
@@ -2715,19 +3203,19 @@
    <div class="inner-row">
     <div class="form-checkbox">
      <input class="checkbox" type="radio" name="s15q12n1" id="s15q12o1" value="">
-     <label class="checklabel required-label" for="s15q12o1">lifting</label> 
+     <label class="checklabel required-label" for="s15q12o1">Lifting</label> 
    </div>
    <div class="form-checkbox">
      <input class="checkbox" type="radio" name="s15q12n1" id="s15q12o2" value="">
-     <label class="checklabel required-label" for="s15q12o2">bending</label> 
+     <label class="checklabel required-label" for="s15q12o2">Bending</label> 
    </div>
    <div class="form-checkbox">
      <input class="checkbox" type="radio" name="s15q12n1" id="s15q12o3" value="">
-     <label class="checklabel required-label" for="s15q12o3">woke up with stiff neck</label> 
+     <label class="checklabel required-label" for="s15q12o3">Woke up with stiff neck</label> 
    </div>
    <div class="form-checkbox">
      <input class="checkbox" type="radio" name="s15q12n1" id="s15q12o4" value="">
-     <label class="checklabel required-label" for="s15q12o4">back went out</label> 
+     <label class="checklabel required-label" for="s15q12o4">Back went out</label> 
    </div>  
  </div>
 </fieldset>  
@@ -6315,14 +6803,36 @@
        <label for="">I hereby authorize payment to be made directly to RTP Medical Solution, for all benefits which may be payable under a healthcare  plan or from any other collateral sources. I authorize utilization of this application or copies thereof for the purpose of processing claims and effecting payments, and further acknowledge that this assignment of benefits does not in any way relieve me of payment liability and that I will remain financially responsible to RTP Medical Solution for any and all services I receive at thisoffice.</label> 
      </div> 
    </div>
-   <div class="col-xl-12">
+   <div class="col-xl-6">
      <div class="form-group">
        <label for="s21q1" class="float-label">Name</label>
        <input type="text" class="form-control required" id="s21q1" name="">
      </div>
    </div>
    <div class="col-xl-6">
-    <div class="row">
+     <div class="form-group">
+       <label for="s2q1" class="float-label">Relationship</label>
+       <select class="select2 form-control custom-select mt-3" style="width: 100%; height:36px;">
+           <option>Select</option>
+               <option value="s2q2o1">Self</option>
+               <option value="s2q2o2">Spouse</option>
+               <option value="s2q2o3">Step Child</option>
+               <option value="s2q2o4">Foster Child</option>
+               <option value="s2q2o5">Ward of the court</option>
+               <option value="s2q2o6">Employee</option>
+               <option value="s2q2o7">Handicaped dependent</option>
+               <option value="s2q2o8">Organ Donar</option>
+               <option value="s2q2o9">Cadever Donar</option>
+               <option value="s2q2o10">Grandchild</option>
+               <option value="s2q2o11">Niece/Nephew</option>
+               <option value="s2q2o12">Injured Plaintiff</option>
+               <option value="s2q2o13">Sponsored Dependent</option>
+               <option value="s2q2o14">Parent</option>
+               <option value="s2q2o15">Grandparent</option>
+               <option value="s2q2o16">Other</option>
+       </select>
+     </div> 
+    <!-- <div class="row">
 
      <div class="col-xl-12">
        <fieldset class="fieldset-outer">
@@ -6395,7 +6905,7 @@
         </div>
       </fieldset>
     </div> 
-  </div> 
+  </div>  -->
 </div>
 <div class="col-xl-6">
  <div class="sigPad" style="width:404px;" id="smoothed5">
@@ -6508,6 +7018,114 @@
     $('#smoothed5').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
     $('#smoothed6').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
   });
+</script>
+<script src="assest/css/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
+<script src="assest/css/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assest/css/multiselect/js/jquery.multi-select.js"></script>
+<script>
+    $(function () {
+        // Switchery
+        var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+        $('.js-switch').each(function () {
+            new Switchery($(this)[0], $(this).data());
+        });
+        // For select 2
+        $(".select2").select2();
+        $('.selectpicker').selectpicker();
+        //Bootstrap-TouchSpin
+        $(".vertical-spin").TouchSpin({
+            verticalbuttons: true
+        });
+        var vspinTrue = $(".vertical-spin").TouchSpin({
+            verticalbuttons: true
+        });
+        if (vspinTrue) {
+            $('.vertical-spin').prev('.bootstrap-touchspin-prefix').remove();
+        }
+        $("input[name='tch1']").TouchSpin({
+            min: 0,
+            max: 100,
+            step: 0.1,
+            decimals: 2,
+            boostat: 5,
+            maxboostedstep: 10,
+            postfix: '%'
+        });
+        $("input[name='tch2']").TouchSpin({
+            min: -1000000000,
+            max: 1000000000,
+            stepinterval: 50,
+            maxboostedstep: 10000000,
+            prefix: '$'
+        });
+        $("input[name='tch3']").TouchSpin();
+        $("input[name='tch3_22']").TouchSpin({
+            initval: 40
+        });
+        $("input[name='tch5']").TouchSpin({
+            prefix: "pre",
+            postfix: "post"
+        });
+        // For multiselect
+        $('#pre-selected-options').multiSelect();
+        $('#optgroup').multiSelect({
+            selectableOptgroup: true
+        });
+        $('#public-methods').multiSelect();
+        $('#select-all').click(function () {
+            $('#public-methods').multiSelect('select_all');
+            return false;
+        });
+        $('#deselect-all').click(function () {
+            $('#public-methods').multiSelect('deselect_all');
+            return false;
+        });
+        $('#refresh').on('click', function () {
+            $('#public-methods').multiSelect('refresh');
+            return false;
+        });
+        $('#add-option').on('click', function () {
+            $('#public-methods').multiSelect('addOption', {
+                value: 42,
+                text: 'test 42',
+                index: 0
+            });
+            return false;
+        });
+        $(".ajax").select2({
+            ajax: {
+                url: "https://api.github.com/search/repositories",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        q: params.term, // search term
+                        page: params.page
+                    };
+                },
+                processResults: function (data, params) {
+                    // parse the results into the format expected by Select2
+                    // since we are using custom formatting functions we do not need to
+                    // alter the remote JSON data, except to indicate that infinite
+                    // scrolling can be used
+                    params.page = params.page || 1;
+                    return {
+                        results: data.items,
+                        pagination: {
+                            more: (params.page * 30) < data.total_count
+                        }
+                    };
+                },
+                cache: true
+            },
+            escapeMarkup: function (markup) {
+                return markup;
+            }, // let our custom formatter work
+            minimumInputLength: 1,
+            //templateResult: formatRepo, // omitted for brevity, see the source of this page
+            //templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+        });
+    });
 </script>
 </body>
 </html>

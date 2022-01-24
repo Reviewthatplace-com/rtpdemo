@@ -694,6 +694,47 @@ function condTreat() {
     x.style.display = "none";
   }
 }
+function condTreat2() {
+  var x = document.getElementById("cond_treat2");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
+function condTreat3() {
+  var x = document.getElementById("cond_treat3");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
+function condTreat4() {
+  var x = document.getElementById("cond_treat4");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function accident() {
+  var x = document.getElementById("accident");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
+function stress() {
+  var x = document.getElementById("stress");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
 
 // show and hide for past complaint
 function pastComplaint() {
