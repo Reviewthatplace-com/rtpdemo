@@ -424,6 +424,121 @@
                 <!--/. modal-->
 
                 <!--/. modal-->
+                <div class="card p-3">
+                    <div id="clmtable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                        <button class="btn btn-success float-right" data-target="#add_profile" data-toggle="modal"><i class="fas fa-plus"></i></button>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="clmtable_length"><label>Show <select name="clmtable_length" aria-controls="clmtable" class="form-control form-control-sm">
+                                            <option value="10">10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                        </select> entries</label></div>
+                            </div>
+                            <div class="col-sm-12 col-md-6"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table data-height="300" class="table display table-bordered text-center table-striped no-wrap dataTable no-footer" id="clmtable" role="grid" aria-describedby="clmtable_info">
+                                    <thead class="thead-dark">
+                                        <tr role="row">
+                                            <th class="sorting_asc" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Full Name: activate to sort column descending" style="width: 148px;">Action</th>
+                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="PTID: activate to sort column ascending" style="width: 40px;">Patient Name</th>
+                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="PTID: activate to sort column ascending" style="width: 40px;">Veins Patient Pin</th>
+                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="PTID: activate to sort column ascending" style="width: 40px;">Veins PT ID</th>
+                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="SSN: activate to sort column ascending" style="width: 62px;">SSN</th>
+                                            <!-- <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="DOB: activate to sort column ascending" style="width: 60px;">DOB</th> -->
+                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 56px;">Gender</th>
+                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 94px;">Email</th>
+                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="Phone: activate to sort column ascending" style="width: 78px;">Phone</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">
+                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                            </td>
+                                            <td>
+                                                Shakir Ansari
+                                                <br>
+                                                11/10/1998
+                                            </td>
+                                            <td>XD3234CC</td>
+                                            <td>VPT1</td>
+                                            <td>729131238</td>
+                                            <!-- <td>11/10/1999</td> -->
+                                            <td>Male</td>
+                                            <td><i class="fas fa-times-circle text-danger"></i> shakir.Ansari@gmail.com</td>
+                                            <td><i class="fas fa-times-circle text-danger"></i> 9872712063</td>
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td class="sorting_1">
+                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                            </td>
+                                            <td>
+                                                <span class="mytooltip tooltip-effect-1">
+                                                    <span class="tooltip-item2"><i class="fab fa-vine text-success"></i></span>
+                                                    <span class="tooltip-content4 clearfix">
+                                                        <span class="tooltip-text2">
+                                                            Found via Profile Discovery 
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                Ravi Agrawal
+                                                <br>
+                                                11/10/1998
+                                            </td>
+                                            <td>XD3254CC</td>
+                                            <td>VPT2</td>
+                                            <td>729131238</td>
+                                            <!-- <td>11/10/1999</td> -->
+                                            <td>Male</td>
+                                            <td><i class="fas fa-check-circle text-success"></i> ravi.agrawal@gmail.com</td>
+                                            <td><i class="fas fa-check-circle text-success"></i> 9872712063</td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">
+                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                            </td>
+                                            <td>
+                                                Saimun Hasan
+                                                <br>
+                                                11/10/1998
+                                            </td>
+                                            <td>XD3264CC</td>
+                                            <td>VPT3</td>
+                                            <td>729131238</td>
+                                            <!-- <td>11/10/1999</td> -->
+                                            <td>Male</td>
+                                            <td><i class="fas fa-check-circle text-success"></i> saimun.hasan@gmail.com</td>
+                                            <td><i class="fas fa-times-circle text-danger"></i> 9872712063</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-5">
+                                <div class="dataTables_info" id="clmtable_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div>
+                            </div>
+                            <div class="col-sm-12 col-md-7">
+                                <div class="dataTables_paginate paging_simple_numbers" id="clmtable_paginate">
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous disabled" id="clmtable_previous"><a href="#" aria-controls="clmtable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                                        <li class="paginate_button page-item active"><a href="#" aria-controls="clmtable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                        <li class="paginate_button page-item next disabled" id="clmtable_next"><a href="#" aria-controls="clmtable" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
                 <div class="row el-element-overlay">
                     <div class="col-lg-2 col-md-6">
                         <div class="card">
@@ -482,7 +597,17 @@
                                     </div>
                                 </div>
                                 <div class="el-card-content text-left p-3">
-                                    <h4 class="box-title">Ravi Agrawal</h4>
+                                    <h4 class="box-title">
+                                        Ravi Agrawal
+                                        <span class="mytooltip tooltip-effect-1">
+                                            <span class="tooltip-item2"><i class="fab fa-vine text-success"></i></span>
+                                            <span class="tooltip-content4 clearfix">
+                                                <span class="tooltip-text2">
+                                                    Found via Profile Discovery 
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </h4>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
