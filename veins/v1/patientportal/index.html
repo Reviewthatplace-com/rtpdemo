@@ -40,6 +40,8 @@
     <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/responsive.dataTables.min.css">
     <link href="dist/css/pages/stylish-tooltip.css" rel="stylesheet">
+    <link href="dist/css/pages/user-card.css" rel="stylesheet">
+    <link href="assets/node_modules/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet">
         
     <!-- Dashboard 1 Page CSS -->
     <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
@@ -251,17 +253,17 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="far fa-user text-danger"></i><span class="hide-menu">My Profiles</span></a></li>
-                        <li> <a class="waves-effect waves-dark" href="profile_discovery.html" aria-expanded="false"><i class="fa fa-users text-danger"></i><span class="hide-menu">Profile Discovery</span></a></li>
-                        <li> <a class="waves-effect waves-dark" href="records.html" aria-expanded="false"><i class="fa fa-clipboard-check text-danger"></i><span class="hide-menu">Records</span></a></li>
-                        <li> <a class="waves-effect waves-dark" href="authorize_practice.html" aria-expanded="false"><i class="fa fa-map-marker text-danger"></i><span class="hide-menu">My Practices</span></a></li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-money-bill-alt text-danger"></i><span class="hide-menu">Payment<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
+                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><img src="assets/images/navbar/myprofile.png" class="mb-1 mr-1" alt="My Profiles" height="20"><span class="hide-menu">My Profiles</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="profile_discovery.html" aria-expanded="false"><img src="assets/images/navbar/profilediscovery.png" class="mb-1 mr-1" alt="Profile Discovery" height="20"><span class="hide-menu">Profile Discovery</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="records.html" aria-expanded="false"><img src="assets/images/navbar/records.png" class="mb-1 mr-1" alt="Records" height="20"><span class="hide-menu">Records</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="authorize_practice.html" aria-expanded="false"><img src="assets/images/navbar/mypractices.png" class="mb-1 mr-1" alt="My Practices" height="20"><span class="hide-menu">My Practices</span></a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><img src="assets/images/navbar/payments.png" class="mb-1 mr-1" alt="Payments" height="20"><span class="hide-menu">Payment<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="pay_Request.html">Payment Request</a></li>
                                 <li><a href="payment_Complete.html">Payments Completed</a></li>
                             </ul>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="com_center.html" aria-expanded="false"><i class="fa fa-phone text-danger"></i><span class="hide-menu">Communication</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="com_center.html" aria-expanded="false"><img src="assets/images/navbar/communication.png" class="mb-1 mr-1" alt="Communication" height="20"><span class="hide-menu">Communication</span></a></li>
                         <!-- temporary dropdown -->
                         <!--
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-layout-grid2"></i><span class="hide-menu">My Records</span></a>
@@ -275,7 +277,7 @@
                         </li>
 -->
                          
-                          <li> <a class="waves-effect waves-dark" href="login.html" aria-expanded="false"><i class="fas fa-sign-in-alt text-danger"></i><span class="hide-menu">Log Out</span></a></li>
+                          <li> <a class="waves-effect waves-dark" href="login.html" aria-expanded="false"><img src="assets/images/navbar/logout.png" class="mb-1 mr-1" alt="Logout" height="20"><span class="hide-menu">Log Out</span></a></li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -307,19 +309,7 @@
                     </div>
                 </div>
                 <!-- Row -->
-
-
-                <!-- section-1 -->
-<!--
-                <div class="row justify-content-end">
-                    <div class="col-sm-4">
-                        <div class="text-right">
-                            <button class="btn btn-success waves-effect mt-2 mb-2" type="button" data-toggle="modal" data-target="#upload">Upload</button>
-                        </div>
-                    </div>
-                </div>
--->
-                <!--modal-->
+                
                 <!--modal-->
                 <div class="modal fade show " id="upload" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
                     <div class="modal-dialog modal-xl">
@@ -432,114 +422,133 @@
                     <!-- /.modal-dialog -->
                 </div>
                 <!--/. modal-->
+
                 <!--/. modal-->
-                <div class="card p-3">
-                    <div id="clmtable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                        <button class="btn btn-success float-right" data-target="#add_profile" data-toggle="modal"><i class="fas fa-plus"></i></button>
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="dataTables_length" id="clmtable_length"><label>Show <select name="clmtable_length" aria-controls="clmtable" class="form-control form-control-sm">
-                                            <option value="10">10</option>
-                                            <option value="25">25</option>
-                                            <option value="50">50</option>
-                                            <option value="100">100</option>
-                                        </select> entries</label></div>
-                            </div>
-                            <div class="col-sm-12 col-md-6"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <table data-height="300" class="table display table-bordered text-center table-striped no-wrap dataTable no-footer" id="clmtable" role="grid" aria-describedby="clmtable_info">
-                                    <thead class="thead-dark">
-                                        <tr role="row">
-                                            <th class="sorting_asc" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Full Name: activate to sort column descending" style="width: 148px;">Action</th>
-                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="PTID: activate to sort column ascending" style="width: 40px;">Patient Name</th>
-                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="PTID: activate to sort column ascending" style="width: 40px;">Veins Patient Pin</th>
-                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="PTID: activate to sort column ascending" style="width: 40px;">Veins PT ID</th>
-                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="SSN: activate to sort column ascending" style="width: 62px;">SSN</th>
-                                            <!-- <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="DOB: activate to sort column ascending" style="width: 60px;">DOB</th> -->
-                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 56px;">Gender</th>
-                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 94px;">Email</th>
-                                            <th class="sorting" tabindex="0" aria-controls="clmtable" rowspan="1" colspan="1" aria-label="Phone: activate to sort column ascending" style="width: 78px;">Phone</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr role="row" class="odd">
-                                            <td class="sorting_1">
+                <div class="row el-element-overlay">
+                    <div class="col-lg-2 col-md-6">
+                        <div class="card">
+                            <div class="el-card-item">
+                                <div class="el-card-avatar el-overlay-1">
+                                    <img src="assets/images/users/5.jpg" alt="user" />
+                                    <div class="el-overlay scrl-dwn">
+                                        <ul class="el-info">
+                                            <li>
                                                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </td>
-                                            <td>
-                                                Shakir Ansari
-                                                <br>
-                                                11/10/1998
-                                            </td>
-                                            <td>XD3234CC</td>
-                                            <td>VPT1</td>
-                                            <td>729131238</td>
-                                            <!-- <td>11/10/1999</td> -->
-                                            <td>Male</td>
-                                            <td><i class="fas fa-times-circle text-danger"></i> shakir.Ansari@gmail.com</td>
-                                            <td><i class="fas fa-times-circle text-danger"></i> 9872712063</td>
-                                        </tr>
-                                        <tr role="row" class="even">
-                                            <td class="sorting_1">
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </td>
-                                            <td>
-                                                <span class="mytooltip tooltip-effect-1">
-                                                    <span class="tooltip-item2"><i class="fab fa-vine text-success"></i></span>
-                                                    <span class="tooltip-content4 clearfix">
-                                                        <span class="tooltip-text2">
-                                                            Found via Profile Discovery 
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                                Ravi Agrawal
-                                                <br>
-                                                11/10/1998
-                                            </td>
-                                            <td>XD3254CC</td>
-                                            <td>VPT2</td>
-                                            <td>729131238</td>
-                                            <!-- <td>11/10/1999</td> -->
-                                            <td>Male</td>
-                                            <td><i class="fas fa-check-circle text-success"></i> ravi.agrawal@gmail.com</td>
-                                            <td><i class="fas fa-check-circle text-success"></i> 9872712063</td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td class="sorting_1">
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </td>
-                                            <td>
-                                                Saimun Hasan
-                                                <br>
-                                                11/10/1998
-                                            </td>
-                                            <td>XD3264CC</td>
-                                            <td>VPT3</td>
-                                            <td>729131238</td>
-                                            <!-- <td>11/10/1999</td> -->
-                                            <td>Male</td>
-                                            <td><i class="fas fa-check-circle text-success"></i> saimun.hasan@gmail.com</td>
-                                            <td><i class="fas fa-times-circle text-danger"></i> 9872712063</td>
-                                        </tr>
-                                    </tbody>
-
-                                </table>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="el-card-content text-left p-3">
+                                    <h4 class="box-title">Shakir Ansari</h4>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">SSN:</span> 729131238</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Gender:</span> Male</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Email:</span> shakir.Ansari@gmail.com <i class="fas fa-times-circle text-danger"></i></small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fa-times-circle text-danger"></i></small>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12 col-md-5">
-                                <div class="dataTables_info" id="clmtable_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="card">
+                            <div class="el-card-item">
+                                <div class="el-card-avatar el-overlay-1">
+                                    <img src="assets/images/users/2.jpg" alt="user" />
+                                    <div class="el-overlay scrl-dwn">
+                                        <ul class="el-info">
+                                            <li>
+                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="el-card-content text-left p-3">
+                                    <h4 class="box-title">Ravi Agrawal</h4>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">SSN:</span> 729131238</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Gender:</span> Male</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Email:</span> ravi@gmail.com <i class="fas fas fa-check-circle text-success"></i></small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fas fa-check-circle text-success"></i></small>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-12 col-md-7">
-                                <div class="dataTables_paginate paging_simple_numbers" id="clmtable_paginate">
-                                    <ul class="pagination">
-                                        <li class="paginate_button page-item previous disabled" id="clmtable_previous"><a href="#" aria-controls="clmtable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-                                        <li class="paginate_button page-item active"><a href="#" aria-controls="clmtable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                                        <li class="paginate_button page-item next disabled" id="clmtable_next"><a href="#" aria-controls="clmtable" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
-                                    </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="card">
+                            <div class="el-card-item">
+                                <div class="el-card-avatar el-overlay-1">
+                                    <img src="assets/images/users/3.jpg" alt="user" />
+                                    <div class="el-overlay scrl-dwn">
+                                        <ul class="el-info">
+                                            <li>
+                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="el-card-content text-left p-3">
+                                    <h4 class="box-title">Saimun Hasan</h4>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">SSN:</span> 729131238</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Gender:</span> Male</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Email:</span> saimun@gmail.com <i class="fas fa-times-circle text-danger"></i></small>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fas fa-check-circle text-success"></i></small>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2308,6 +2317,9 @@
     </script>
     <script src="assets/node_modules/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
     <script src="dist/js/pages/mask.init.js"></script>
+    <!-- Magnific popup JavaScript -->
+    <script src="assets/node_modules/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
+    <script src="assets/node_modules/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
 
 
 
