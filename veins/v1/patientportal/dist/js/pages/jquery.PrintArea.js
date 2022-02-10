@@ -128,7 +128,8 @@
                 htm += '<div ' + attributes + '>' + $(ele).html() + '</div>';
             });
 
-            return "<body>" + htm + "</body>";
+            return "<body>" + htm + "<script src="https://kit.fontawesome.com/78e9e48f87.js" crossorigin="anonymous"></script>
+</body>";
         },
         getFormData : function ( ele ) {
             var copy = ele.clone();
