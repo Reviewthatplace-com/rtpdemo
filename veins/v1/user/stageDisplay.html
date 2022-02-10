@@ -643,20 +643,22 @@
                     <div class="tab-content pb-3"> 
                         <div class="tab-pane active" id="home2" role="tabpanel">
                             <div class="table-responsive">
-                                <table id="clmtable" data-height="300" class="table display table-bordered table-striped no-wrap noSearch">
+                                <table id="clmtable" data-height="300" class="table display table-bordered table-striped no-wrap noSearch" style="margin-top: 65px !important;">
                                     <thead class="thead-dark">
                                         <tr>
-                                        <th>View Visits</th>
-                                        <th>Name & DOB</th>
-                                        <th>DOS</th>
-                                        <th>Time In</th>
-                                        <th>1. Insurance</th>
-                                        <th>2. Demo</th>
-                                        <th>3. Pharmacy</th>
-                                        <th>4. Payments</th>
-                                        <th>5. vitals</th>
-                                        <th>Next Stage</th>
-                                        <th>Visit Type</th>
+                                            <th>View Visits</th>
+                                            <th>Name & DOB</th>
+                                            <th>DOS</th>
+                                            <th>Visit Type</th>
+                                            <th>Time In</th>
+                                            <th>1. Update Demo</th>
+                                            <th>2. Demo Verified</th>
+                                            <th>3. Update Insurance</th>
+                                            <th>4. Update PCP</th>
+                                            <th>5. Insurance Verified</th>
+                                            <th>6. Update Pharmacy</th>
+                                            <th>7. Pharmacy Verified</th>
+                                            <th>Next Stage</th>
                                         </tr>
                                     </thead>
 
@@ -683,12 +685,19 @@
                                                     </div>
                                                 </div> 
                                             </td>
-                                            <td style="font-weight: 900;">
-                                                Shakri Ansari <a href="javascript:(void)" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()"><i class="fas fa-user-circle ml-2 text-success"></i></a>
-                                                <br>
-                                                11/11/1998
-                                                <br>
-                                                PT2
+                                            <td class="text-left">
+                                                <div class="btn-group">
+                                                    <a class="mr-2" href="javascript:(void)" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">
+                                                        <i class="fas fa-user-circle ml-2 text-success"></i>
+                                                    </a>
+                                                    <strong>
+                                                        <strong>
+                                                            shakir alert
+                                                            <br> 11/29/1986 
+                                                            <br>PT1122122
+                                                        </strong>
+                                                    </strong>
+                                                </div>
                                             </td>
                                             <td class="text-left">
 
@@ -821,10 +830,97 @@
                                                 </div>
 
                                             </td>
+                                            <td class="text-left">
+                                                Visit Type <br>
+                                                Visit Reason <br>
+                                                Physician
+                                            </td>
                                             <td>
                                                 11/06/2020
                                                 <br>
                                                 4:14 PM
+                                            </td>
+                                            <td class="bg-success">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
+                                                   Update Demo
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">Email 02</span>
+                                                                        </div>
+                                                                    </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </td>
+                                            <td class="bg-success">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
+                                                   Demo Verified
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">Email 02</span>
+                                                                        </div>
+                                                                    </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
                                             </td>
                                             <td>
                                                 <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
@@ -869,7 +965,7 @@
                                             </td>
                                             <td>
                                                 <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
-                                                    S.Ansari <br> 9/20/2020 <br>3:01PM
+                                                    Update PCP
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
                                                             <span class="tooltip-inner2" style="font-size: 12px;">
@@ -910,7 +1006,7 @@
                                             </td>
                                             <td>
                                                 <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
-                                                    S.Ansari <br> 9/20/2020 <br>3:01PM
+                                                    Insurance Verified
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
                                                             <span class="tooltip-inner2" style="font-size: 12px;">
@@ -951,7 +1047,7 @@
                                             </td>
                                             <td>
                                                 <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
-                                                    Payments
+                                                    Update Pharmacy
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
                                                             <span class="tooltip-inner2" style="font-size: 12px;">
@@ -1044,11 +1140,6 @@
                                                     </div>
                                                 </div>                   
                                             </td>
-                                            <td class="text-center" style="font-weight: 900;">
-                                                Visit Type <br>
-                                                Visit Reason <br>
-                                                Physician
-                                            </td>
                                         </tr>
 
                                         <tr>
@@ -1072,15 +1163,19 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td style="font-weight: 900;">
-                                                Ravi Agrawal <a href="javascript:(void)" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()"><i class="fas fa-user-circle ml-2 text-success"></i></a>
-                                                <br>
-                                                11/10/1998
-                                                <br>
-                                                PT1
-                                                <!-- <button type="button" class="btn btn-sm btn-block btn-dark">
-                                                    Non Captured
-                                                </button> -->
+                                            <td class="text-left">
+                                                <div class="btn-group">
+                                                    <a class="mr-2" href="javascript:(void)" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">
+                                                        <i class="fas fa-user-circle ml-2 text-success"></i>
+                                                    </a>
+                                                    <strong>
+                                                        <strong>
+                                                            Ravi Agrawal
+                                                            <br> 11/29/1986 
+                                                            <br>PT1122122
+                                                        </strong>
+                                                    </strong>
+                                                </div>
                                             </td>
                                             <td class="text-left">
 
@@ -1213,10 +1308,97 @@
 
                                                 </div>
                                             </td>
+                                            <td class="text-left">
+                                                Visit Type <br>
+                                                Visit Reason <br>
+                                                Physician
+                                            </td>
                                             <td>
                                                 11/06/2020
                                                 <br>
                                                 4:14 PM
+                                            </td>
+                                            <td class="bg-warning">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
+                                                   Update Demo
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">Email 02</span>
+                                                                        </div>
+                                                                    </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </td>
+                                            <td class="bg-warning">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
+                                                   Demo Verified
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">Email 02</span>
+                                                                        </div>
+                                                                    </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
                                             </td>
                                             <td>
                                                 <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
@@ -1259,9 +1441,9 @@
                                                     </span>
                                                 </button>
                                             </td>
-                                            <td class="bg-danger">
+                                            <td>
                                                 <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
-                                                    Demo
+                                                    Update PCP
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
                                                             <span class="tooltip-inner2" style="font-size: 12px;">
@@ -1302,7 +1484,7 @@
                                             </td>
                                             <td>
                                                 <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
-                                                    Pharmacy
+                                                    Insurance Verified
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
                                                             <span class="tooltip-inner2" style="font-size: 12px;">
@@ -1343,7 +1525,7 @@
                                             </td>
                                             <td>
                                                 <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
-                                                    Payments
+                                                    Update Pharmacy
                                                     <span class="tooltip-content5">
                                                         <span class="tooltip-text3">
                                                             <span class="tooltip-inner2" style="font-size: 12px;">
@@ -1381,7 +1563,6 @@
                                                         </span>
                                                     </span>
                                                 </button>
-                                            </td>
                                             </td>
                                             <td>
                                                 <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
@@ -1428,8 +1609,7 @@
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-primary jumptoNxtstage">Next Stage</button>
                                                     <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <span class="sr-only">Toggle Dropdown</span>
-                                                    </button>
+                                                        <span class="sr-only">Toggle Dropdown</span>        </button>
                                                     <div class="dropdown-menu animated flipInY">
                                                         <a class="dropdown-item" type="button" data-toggle="modal" id="stage-jump0">MGR</a>
                                                         <a class="dropdown-item" type="button" data-toggle="modal" id="stage-jump1">Superbill Submitted</a>
@@ -1437,12 +1617,6 @@
                                                         <a class="dropdown-item" type="button" data-toggle="modal" id="stage-jump3">Checkout</a>
                                                     </div>
                                                 </div>                   
-                                            </td>
-                                            
-                                            <td class="text-center" style="font-weight: 900;">
-                                                Visit Type <br>
-                                                Visit Reason <br>
-                                                Physician
                                             </td>
                                         </tr>
 
@@ -1467,12 +1641,19 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td style="font-weight: 900;">
-                                                Saimun Hasan <a href="javascript:(void)" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()"><i class="fas fa-user-circle ml-2 text-success"></i></a>
-                                                <br>
-                                                10/10/1997
-                                                <br>
-                                                PT3
+                                            <td class="text-left">
+                                                <div class="btn-group">
+                                                    <a class="mr-2" href="javascript:(void)" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">
+                                                        <i class="fas fa-user-circle ml-2 text-success"></i>
+                                                    </a>
+                                                    <strong>
+                                                        <strong>
+                                                            Saimun Hasan
+                                                            <br> 11/29/1986 
+                                                            <br>PT1122122
+                                                        </strong>
+                                                    </strong>
+                                                </div>
                                             </td>
                                             <td class="text-left">
 
@@ -1562,21 +1743,315 @@
 
                                                 </div>
                                             </td>
-                                            <td class="bg-danger" style="font-weight: 900;"><i class="fas fa-exclamation text-white mytooltip" style="margin-right: 2px;"><span class="tooltip-content5"><span class="tooltip-text3"><span class="tooltip-inner2"><span style="font-weight: 700;">Stage Alert: Time Limit</span><span class="">Limit - 30 Min</span><span class="font-weight-bolder"></span>Current - 32 Min</span></span></span></span></i>
-                                                11/06/2020
-                                                <br>
-                                                <span style="margin-left: 10px;">4:14 PM</span>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td class="text-center" style="font-weight: 900;">
+                                            <td class="text-left">
                                                 Visit Type <br>
                                                 Visit Reason <br>
                                                 Physician
+                                            </td>
+                                            <td>
+                                                11/06/2020
+                                                <br>
+                                                4:14 PM
+                                            </td>
+                                            <td class="bg-danger">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
+                                                   Update Demo
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">Email 02</span>
+                                                                        </div>
+                                                                    </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </td>
+                                            <td class="bg-danger">
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
+                                                   Demo Verified
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">Email 02</span>
+                                                                        </div>
+                                                                    </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
+                                                    Insurance
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">Email 02</span>
+                                                                        </div>
+                                                                    </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
+                                                    Update PCP
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">Email 02</span>
+                                                                        </div>
+                                                                    </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
+                                                    Insurance Verified
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">Email 02</span>
+                                                                        </div>
+                                                                    </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
+                                                    Update Pharmacy
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">Email 02</span>
+                                                                        </div>
+                                                                    </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="" class="btn btn-block btn-sm btn-outline-info mytooltip stepAcknowledge">
+                                                    Vitals
+                                                    <span class="tooltip-content5">
+                                                        <span class="tooltip-text3">
+                                                            <span class="tooltip-inner2" style="font-size: 12px;">
+                                                                    <div class="row">
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Resource:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">RM1</span>
+                                                                            <span class="bs-label label-danger m-1 p-2x">RM2</span>
+                                                                        </div>
+
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Alerts:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-danger m-1 p-2x">1 day, 2 hr, 5 min</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step SMS:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">SMS 02</span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-4 text-left m-1">
+                                                                            Step Email:
+                                                                        </div>
+                                                                        <div class="col-6 row">
+                                                                            <span class="bs-label label-success m-1 p-2x">Email 02</span>
+                                                                        </div>
+                                                                    </div>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-primary jumptoNxtstage">Next Stage</button>
+                                                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>        </button>
+                                                    <div class="dropdown-menu animated flipInY">
+                                                        <a class="dropdown-item" type="button" data-toggle="modal" id="stage-jump0">MGR</a>
+                                                        <a class="dropdown-item" type="button" data-toggle="modal" id="stage-jump1">Superbill Submitted</a>
+                                                        <a class="dropdown-item" type="button" data-toggle="modal" id="stage-jump2">Payment Recieved</a>
+                                                        <a class="dropdown-item" type="button" data-toggle="modal" id="stage-jump3">Checkout</a>
+                                                    </div>
+                                                </div>                   
                                             </td>
                                         </tr>
 
