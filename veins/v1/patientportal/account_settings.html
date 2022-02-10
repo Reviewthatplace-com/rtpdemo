@@ -165,7 +165,7 @@
                     <ul id="sidebarnav">
                         <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><img src="assets/images/navbar/myprofile.png" class="mb-1 mr-1" alt="My Profiles" height="20"><span class="hide-menu">My Profiles</span></a></li>
                         <li> <a class="waves-effect waves-dark" href="profile_discovery.html" aria-expanded="false"><img src="assets/images/navbar/profilediscovery.png" class="mb-1 mr-1" alt="Profile Discovery" height="20"><span class="hide-menu">Profile Discovery</span></a></li>
-                        <li> <a class="waves-effect waves-dark" href="records.html" aria-expanded="false"><img src="assets/images/navbar/records.png" class="mb-1 mr-1" alt="Records" height="20"><span class="hide-menu">Records</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="records.html" aria-expanded="false"><img src="assets/images/navbar/records.png" class="mb-1 mr-1" alt="Records" height="20"><span class="hide-menu">Records ❗</span></a></li>
                         <li> <a class="waves-effect waves-dark" href="authorize_practice.html" aria-expanded="false"><img src="assets/images/navbar/mypractices.png" class="mb-1 mr-1" alt="My Practices" height="20"><span class="hide-menu">My Practices</span></a></li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><img src="assets/images/navbar/payments.png" class="mb-1 mr-1" alt="Payments" height="20"><span class="hide-menu">Payment<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
                             <ul aria-expanded="false" class="collapse">
@@ -223,75 +223,98 @@
 
                 <div class="card">
                     <div class="card-body">
-                            <form class="needs-validation floating-labels m-t-40" novalidate>
-                                <div class="row">
-                                    <div class="form-group m-b-40 col-md-6 mb-3">
-                                        <label for="validationCustom01">First Name</label>
-                                        <input type="text" class="form-control" id="validationCustom01" required><span class="bar"></span>
-                                        <div class="valid-feedback">
-                                            Looks good!
-                                        </div>
-                                    </div>
 
-                                    <div class="form-group m-b-40 col-md-6 mb-3">
-                                        <label for="validationCustom02">Last Name</label>
-                                        <input type="text" class="form-control" id="validationCustom02" required><span class="bar"></span>
-                                        <div class="valid-feedback">
-                                            Looks good!
-                                        </div>
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/images/property/prop6.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-md-8">
+                                    <form class="needs-validation floating-labels m-t-40" novalidate>
+                                        <div class="row">
+                                            <div class="form-group m-b-40 col-md-4 mb-4">
+                                                <label for="validationCustom01">First Name</label>
+                                                <input type="text" class="form-control" id="validationCustom01" required><span class="bar"></span>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
 
-                                    <div class="form-group m-b-40 col-md-6 mb-3">
-                                        <input type="date" class="form-control" placeholder="Date Of Birth" id="mdate">
-                                    </div>
+                                            <div class="form-group m-b-40 col-md-4 mb-4">
+                                                <label for="validationCustom02">Last Name</label>
+                                                <input type="text" class="form-control" id="validationCustom02" required><span class="bar"></span>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
 
-                                    <div class="form-group m-b-40 col-md-6 mb-3">
-                                        <label for="validationCustom03">Email</label>
-                                            <input type="email" class="form-control" id="validationCustom03" required><span class="bar"></span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid email.
-                                        </div>
-                                    </div>
+                                            <div class="form-group m-b-40 col-md-4 mb-4">
+                                                <input type="date" class="form-control" placeholder="Date Of Birth" id="mdate">
+                                            </div>
 
-                                    <div class="form-group m-b-40 col-md-6 mb-3">
-                                        <label for="validationCustom03">Phone Number <small class="text-muted">(999) 999-9999</small></label>
-                                        <input type="text" class="form-control phone-inputmask" id="validationCustom03" required><span class="bar"></span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid Phone Number.
-                                        </div>
-                                    </div>
+                                            <div class="form-group m-b-40 col-md-4 mb-4">
+                                                <label for=""><i class="fas fa-check-circle text-success" aria-hidden="true"></i> Email</label>
+                                                    <input type="email" class="form-control" id="validationCustom03" required><span class="bar"></span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid email.
+                                                </div>
+                                            </div>
 
-                                    <div class="form-group m-b-40 col-md-12 mb-3">
-                                        <p class="boldText">Upload Picture</p>
-                                        <input type="file" class="form-control" id=""><span class="bar"></span>
-                                    </div>
+                                            <div class="form-group m-b-40 col-md-4 mb-4">
+                                                <label for="validationCustom03"><i class="fas fa-times-circle text-danger" aria-hidden="true"></i> Phone Number <small class="text-muted">(999) 999-9999</small></label>
+                                                <input type="text" class="form-control phone-inputmask" id="validationCustom03" required><span class="bar"></span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid Phone Number.
+                                                </div>
+                                                <div class="form-group mt-3" id="fax_otp"  style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <input type="email" class="form-control" id="" placeholder=""><span class="bar"></span>
+                                                            <label for="">OTP</label>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <a href="javascript:void(0);" class="btn btn-success verify">Verify</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <a href="javascript:void(0);" class="btn btn-success" onclick="fax_otp()">Send OTP</a>
+                                            </div>
 
-                                    <div class="form-group m-b-40 col-md-6 mb-3">
-                                        <a type="button" class="btn btn-success" id="restPassword"> Reset Password </a>
-                                    </div>
-                                    
-                                    <button class="btn btn-lg mt-4 btn-outline-success col-12" type="submit">Save</button>
-                            </form>
-                        <script>
-                        // Example starter JavaScript for disabling form submissions if there are invalid fields
-                        (function() {
-                            'use strict';
-                            window.addEventListener('load', function() {
-                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                                var forms = document.getElementsByClassName('needs-validation');
-                                // Loop over them and prevent submission
-                                var validation = Array.prototype.filter.call(forms, function(form) {
-                                    form.addEventListener('submit', function(event) {
-                                        if (form.checkValidity() === false) {
-                                            event.preventDefault();
-                                            event.stopPropagation();
-                                        }
-                                        form.classList.add('was-validated');
+                                            <div class="form-group m-b-40 col-md-12 mb-4">
+                                                <p class="boldText">Upload Picture</p>
+                                                <input type="file" class="form-control" id=""><span class="bar"></span>
+                                            </div>
+
+                                            <div class="form-group m-b-40 col-md-6 mb-4">
+                                                <a type="button" class="btn btn-success" id="restPassword"> Reset Password </a>
+                                            </div>
+                                            
+                                            <button class="btn btn-lg mt-4 btn-outline-success col-12" type="submit">Save</button>
+                                    </form>
+                                <script>
+                                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                                (function() {
+                                    'use strict';
+                                    window.addEventListener('load', function() {
+                                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                        var forms = document.getElementsByClassName('needs-validation');
+                                        // Loop over them and prevent submission
+                                        var validation = Array.prototype.filter.call(forms, function(form) {
+                                            form.addEventListener('submit', function(event) {
+                                                if (form.checkValidity() === false) {
+                                                    event.preventDefault();
+                                                    event.stopPropagation();
+                                                }
+                                                form.classList.add('was-validated');
+                                            }, false);
+                                        });
                                     }, false);
-                                });
-                            }, false);
-                        })();
-                        </script>
+                                })();
+                                </script>                                
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <!--  table end -->
@@ -356,6 +379,184 @@
     </script>
     <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+    
+    <script>
+        // AuthorizationRelease Steps Start
+        $(document).ready(function(){
+            $('#arfstep0').css({'display':'block'});
+            $(".arfstepzeronext").click(function(){
+                $('#arfstep0').css({'display':'none'});
+                $('#arfstep1').css({'display':'block'});
+            });
+            $(".emailnext").click(function(){
+                $('#arfstep0').css({'display':'none'});
+                $('#email').css({'display':'block'});
+            });
+            $(".arfsteponenext").click(function(){
+                $('#arfstep1').css({'display':'none'});
+                $('#arfstep2').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $(".arfsteponeback").click(function(){
+                $('#arfstep1').css({'display':'none'});
+                $('#arfstep0').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $("#arfsteptwoback").click(function(){
+                $('#arfstep2').css({'display':'none'});
+                $('#arfstep1').css({'display':'block'});
+            });
+            $("#arfsteptwonext").click(function(){
+                $('#arfstep2').css({'display':'none'});
+                $('#arfstep3').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $("#arfstepthreeback").click(function(){
+                $('#arfstep3').css({'display':'none'});
+                $('#arfstep2').css({'display':'block'});
+            });
+            $("#arfstepthreenext").click(function(){
+                $('#arfstep3').css({'display':'none'});
+                $('#arfstep4').css({'display':'block'});
+            });
+            $("#arfstepfourback").click(function(){
+                $('#arfstep4').css({'display':'none'});
+                $('#arfstep3').css({'display':'block'});
+            });
+            $("#arfstepfournext").click(function(){
+                $('#arfstep4').css({'display':'none'});
+                $('#arfstep5').css({'display':'block'});
+            });
+            $("#arfstepfiveback").click(function(){
+                $('#arfstep5').css({'display':'none'});
+                $('#arfstep4').css({'display':'block'});
+            });
+            $("#arfstepfivenext").click(function(){
+                $('#arfstep5').css({'display':'none'});
+                $('#arfstep6').css({'display':'block'});
+            });
+            $("#arfstepsixback").click(function(){
+                $('#arfstep6').css({'display':'none'});
+                $('#arfstep5').css({'display':'block'});
+            });
+            $("#arfstepsixnext").click(function(){
+                $('#arfstep6').css({'display':'none'});
+                $('#arfstep7').css({'display':'block'});
+            });
+            $("#arfstepsevenback").click(function(){
+                $('#arfstep7').css({'display':'none'});
+                $('#arfstep6').css({'display':'block'});
+            });
+            $("#arfstepsevennext").click(function(){
+                $('#arfstep7').css({'display':'none'});
+                $('#arfstep8').css({'display':'block'});
+            });
+            $("#arfstepeightback").click(function(){
+                $('#arfstep8').css({'display':'none'});
+                $('#arfstep7').css({'display':'block'});
+            });
+            $("#arfstepeightnext").click(function(){
+                $('#arfstep8').css({'display':'none'});
+                $('#arfstep9').css({'display':'block'});
+            });
+            $("#arfstepnineback").click(function(){
+                $('#arfstep9').css({'display':'none'});
+                $('#arfstep8').css({'display':'block'});
+            });
+            $("#arfstepninenext").click(function(){
+                $('#arfstep9').css({'display':'none'});
+                $('#arfstep10').css({'display':'block'});
+            });
+            $("#arfsteptenback").click(function(){
+                $('#arfstep10').css({'display':'none'});
+                $('#arfstep9').css({'display':'block'});
+            });
+            $("#arfsteptennext").click(function(){
+                $('#arfstep10').css({'display':'none'});
+                $('#arfstep11').css({'display':'block'});
+            });
+            $("#arfstepelevenback").click(function(){
+                $('#arfstep11').css({'display':'none'});
+                $('#arfstep10').css({'display':'block'});
+            });
+            $("#arfstepelevennext").click(function(){
+                $('#arfstep11').css({'display':'none'});
+                $('#arfstep12').css({'display':'block'});
+            });
+            $("#arfsteptwelveback").click(function(){
+                $('#arfstep12').css({'display':'none'});
+                $('#arfstep11').css({'display':'block'});
+            });
+            $("#arfsteptwelvenext").click(function(){
+                $('#arfstep12').css({'display':'none'});
+                $('#arfstep13').css({'display':'block'});
+            });
+            $("#arfstepthirteenenext").click(function(){
+                $('#arfstep13').css({'display':'none'});
+                $('#arfstep14').css({'display':'block'});
+            });
+        })
+
+        // show and hide for Email
+        function emailType() {
+            var x = document.getElementById("emailType");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function faxType() {
+            var x = document.getElementById("faxType");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Email
+        function email() {
+            var x = document.getElementById("email");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function fax() {
+            var x = document.getElementById("fax");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Email
+        function email_otp() {
+            var x = document.getElementById("email_otp");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function fax_otp() {
+            var x = document.getElementById("fax_otp");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+    </script>
 </body>
 
 </html>
