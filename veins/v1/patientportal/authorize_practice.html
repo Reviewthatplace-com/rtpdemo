@@ -319,7 +319,7 @@
                             </div>
                         </div> -->
                         <select class="select2 form-control custom-select select2-hidden-accessible" style="width: 100%; height:36px;" data-select2-id="1" tabindex="-1" aria-hidden="true" id="practiceselector">
-                            <option data-select2-id="3">Select Authorized Practice</option>
+                                <option value="zero">Select Authorized Practice</option>
                                 <option value="first">Powers Pediatrics: 7037 Rose Ave, Orlando, FL 32810</option>
                                 <option value="second">Powers Pediatrics - Daytona: 254 Daytona Blvd, Daytona Beach, FL 32114</option>
                                 <option value="third">Powers Family - Tampa: 5877 New Way Road, Tampa, FL 32547</option>
@@ -451,56 +451,167 @@
                 <!--/. modal-->
 
                 <!--/. modal-->
-                <div class="row el-element-overlay users" style="display: none;" id="first">
-
-                    <div class="col-lg-2 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1">
-                                    <img src="assets/images/property/prop6.jpg" alt="user" />
-                                    <!-- <div class="el-overlay scrl-dwn">
-                                        <ul class="el-info">
-                                            <li>
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </li>
-                                        </ul>
-                                    </div> -->
-                                </div>
-                                <div class="el-card-content text-left p-3">
-                                    <h4 class="box-title">Powers Pediatrics</h4>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Website:</span> powerspediatrics.com</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Practice Type:</span> Pediatrics</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Phone:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Fax:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Email:</span> powers@gmail.com</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Street:</span> 7037 Rose Ave</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">City:</span> Orlando</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">State:</span> Maine</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Zip:</span> 32810</small>
+                <div class="row el-element-overlay locations zero" id="zero">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/property/prop6.jpg" alt="user" />
+                                        <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success view-first">View Location</button>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-12">
-                                            <a href="https://dev-checkin.veinspracticesolution.com/?cra=Mw==%26resu=NDI=" target="_blank" class="btn btn-sm p-1 m-1 font-weight-bold btn-info">Check In</a> 
-                                            <a href="com_center.html" class="btn btn-sm p-1 m-1 font-weight-bold btn-success">Message Us</a> 
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">Powers Pediatrics</h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Website:</span> powerspediatrics.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Practice Type:</span> Pediatrics</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Fax:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> powers@gmail.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Street:</span> 7037 Rose Ave</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">City:</span> Orlando</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">State:</span> Maine</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Zip:</span> 32810</small>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-12">
+                                                <a href="https://dev-checkin.veinspracticesolution.com/?cra=Mw==%26resu=NDI=" target="_blank" class="btn btn-sm p-1 m-1 font-weight-bold btn-info">Check In</a> 
+                                                <a href="com_center.html" class="btn btn-sm p-1 m-1 font-weight-bold btn-success">Message Us</a> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/property/prop6.jpg" alt="user" />
+                                        <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success view-second">View Location</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">Powers Pediatrics: Daytona</h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Website:</span> powerspediatrics.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Practice Type:</span> Pediatrics</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Fax:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> powers@gmail.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Street:</span> 7037 Rose Ave</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">City:</span> Orlando</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">State:</span> Maine</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Zip:</span> 32810</small>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-12">
+                                                <a href="https://dev-checkin.veinspracticesolution.com/?cra=Mw==%26resu=NDI=" target="_blank" class="btn btn-sm p-1 m-1 font-weight-bold btn-info">Check In</a> 
+                                                <a href="com_center.html" class="btn btn-sm p-1 m-1 font-weight-bold btn-success">Message Us</a> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/property/prop6.jpg" alt="user" />
+                                        <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success view-third">View Location</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">Powers Pediatrics: Tampa</h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Website:</span> powerspediatrics.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Practice Type:</span> Pediatrics</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Fax:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> powers@gmail.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Street:</span> 7037 Rose Ave</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">City:</span> Orlando</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">State:</span> Maine</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Zip:</span> 32810</small>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-12">
+                                                <a href="https://dev-checkin.veinspracticesolution.com/?cra=Mw==%26resu=NDI=" target="_blank" class="btn btn-sm p-1 m-1 font-weight-bold btn-info">Check In</a> 
+                                                <a href="com_center.html" class="btn btn-sm p-1 m-1 font-weight-bold btn-success">Message Us</a> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -508,402 +619,471 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-2 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1">
-                                    <img src="assets/images/users/5.jpg" alt="user" />
-                                    <div class="el-overlay scrl-dwn">
-                                        <ul class="el-info">
-                                            <li>
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </li>
-                                        </ul>
+                </div>
+                
+                <div class="row el-element-overlay users first" style="display: none;">
+                        <a href="javascript:(void)" class="first-back"><i class="fa-solid fa-circle-arrow-left fa-2x mb-3"></i></a>
+                    <div class="row">
+
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/property/prop6.jpg" alt="user" />
+                                        <!-- <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                                </li>
+                                            </ul>
+                                        </div> -->
                                     </div>
-                                </div>
-                                <div class="el-card-content text-left p-3">
-                                    <h4 class="box-title">Shakir Ansari</h4>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">Powers Pediatrics</h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Website:</span> powerspediatrics.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Practice Type:</span> Pediatrics</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Fax:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> powers@gmail.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Street:</span> 7037 Rose Ave</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">City:</span> Orlando</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">State:</span> Maine</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Zip:</span> 32810</small>
+                                            </div>
                                         </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">SSN:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Gender:</span> Male</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Email:</span> shakir.Ansari@gmail.com <i class="fas fa-times-circle text-danger"></i></small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fa-times-circle text-danger"></i></small>
+                                        <div class="row mt-2">
+                                            <div class="col-md-12">
+                                                <a href="https://dev-checkin.veinspracticesolution.com/?cra=Mw==%26resu=NDI=" target="_blank" class="btn btn-sm p-1 m-1 font-weight-bold btn-info">Check In</a> 
+                                                <a href="com_center.html" class="btn btn-sm p-1 m-1 font-weight-bold btn-success">Message Us</a> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="col-lg-2 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1">
-                                    <img src="assets/images/users/2.jpg" alt="user" />
-                                    <div class="el-overlay scrl-dwn">
-                                        <ul class="el-info">
-                                            <li>
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </li>
-                                        </ul>
+
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/users/5.jpg" alt="user" />
+                                        <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">Shakir Ansari</h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">SSN:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Gender:</span> Male</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> shakir.Ansari@gmail.com <i class="fas fa-times-circle text-danger"></i></small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fa-times-circle text-danger"></i></small>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="el-card-content text-left p-3">
-                                    <h4 class="box-title">
-                                        Ravi Agrawal
-                                        <span class="mytooltip tooltip-effect-1">
-                                            <span class="tooltip-item2"><i class="fab fa-vine text-success"></i></span>
-                                            <span class="tooltip-content4 clearfix">
-                                                <span class="tooltip-text2">
-                                                    Found at Medical Office with 987-654-4455
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/users/2.jpg" alt="user" />
+                                        <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">
+                                            Ravi Agrawal
+                                            <span class="mytooltip tooltip-effect-1">
+                                                <span class="tooltip-item2"><i class="fab fa-vine text-success"></i></span>
+                                                <span class="tooltip-content4 clearfix">
+                                                    <span class="tooltip-text2">
+                                                        Found at Medical Office with 987-654-4455
+                                                    </span>
                                                 </span>
                                             </span>
-                                        </span>
-                                    </h4>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">SSN:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Gender:</span> Male</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Email:</span> ravi@gmail.com <i class="fas fas fa-check-circle text-success"></i></small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fas fa-check-circle text-success"></i></small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-2 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1">
-                                    <img src="assets/images/users/3.jpg" alt="user" />
-                                    <div class="el-overlay scrl-dwn">
-                                        <ul class="el-info">
-                                            <li>
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="el-card-content text-left p-3">
-                                    <h4 class="box-title">Saimun Hasan</h4>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">SSN:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Gender:</span> Male</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Email:</span> saimun@gmail.com <i class="fas fa-times-circle text-danger"></i></small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fas fa-check-circle text-success"></i></small>
+                                        </h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">SSN:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Gender:</span> Male</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> ravi@gmail.com <i class="fas fas fa-check-circle text-success"></i></small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fas fa-check-circle text-success"></i></small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/users/3.jpg" alt="user" />
+                                        <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">Saimun Hasan</h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">SSN:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Gender:</span> Male</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> saimun@gmail.com <i class="fas fa-times-circle text-danger"></i></small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fas fa-check-circle text-success"></i></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
                     </div>
                 </div>
 
                 
-                <div class="row el-element-overlay users" style="display: none;" id="second">
+                <div class="row el-element-overlay users second" style="display: none;">
+                    <a href="javascript:(void)" class="second-back"><i class="fa-solid fa-circle-arrow-left fa-2x mb-3"></i></a>
                     
-
-                    <div class="col-lg-2 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1">
-                                    <img src="assets/images/property/prop6.jpg" alt="user" />
-                                    <!-- <div class="el-overlay scrl-dwn">
-                                        <ul class="el-info">
-                                            <li>
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </li>
-                                        </ul>
-                                    </div> -->
-                                </div>
-                                <div class="el-card-content text-left p-3">
-                                    <h4 class="box-title">Powers Pediatrics: Daytona</h4>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Website:</span> powerspediatrics.com</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Practice Type:</span> Pediatrics</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Phone:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Fax:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Email:</span> powers@gmail.com</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Street:</span> 7037 Rose Ave</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">City:</span> Orlando</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">State:</span> Maine</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Zip:</span> 32810</small>
-                                        </div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/property/prop6.jpg" alt="user" />
+                                        <!-- <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                                </li>
+                                            </ul>
+                                        </div> -->
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-12">
-                                            <a href="https://dev-checkin.veinspracticesolution.com/?cra=Mw==%26resu=NDI=" target="_blank" class="btn btn-sm p-1 m-1 font-weight-bold btn-info">Check In</a> 
-                                            <a href="com_center.html" class="btn btn-sm p-1 m-1 font-weight-bold btn-success">Message Us</a> 
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">Powers Pediatrics: Daytona</h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Website:</span> powerspediatrics.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Practice Type:</span> Pediatrics</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Fax:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> powers@gmail.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Street:</span> 7037 Rose Ave</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">City:</span> Orlando</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">State:</span> Maine</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Zip:</span> 32810</small>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-12">
+                                                <a href="https://dev-checkin.veinspracticesolution.com/?cra=Mw==%26resu=NDI=" target="_blank" class="btn btn-sm p-1 m-1 font-weight-bold btn-info">Check In</a> 
+                                                <a href="com_center.html" class="btn btn-sm p-1 m-1 font-weight-bold btn-success">Message Us</a> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-2 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1">
-                                    <img src="assets/images/users/5.jpg" alt="user" />
-                                    <div class="el-overlay scrl-dwn">
-                                        <ul class="el-info">
-                                            <li>
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </li>
-                                        </ul>
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/users/5.jpg" alt="user" />
+                                        <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="el-card-content text-left p-3">
-                                    <h4 class="box-title">Shakir Ansari</h4>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">SSN:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Gender:</span> Male</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Email:</span> shakir.Ansari@gmail.com <i class="fas fa-times-circle text-danger"></i></small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fa-times-circle text-danger"></i></small>
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">Shakir Ansari</h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">SSN:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Gender:</span> Male</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> shakir.Ansari@gmail.com <i class="fas fa-times-circle text-danger"></i></small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fa-times-circle text-danger"></i></small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="col-lg-2 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1">
-                                    <img src="assets/images/users/2.jpg" alt="user" />
-                                    <div class="el-overlay scrl-dwn">
-                                        <ul class="el-info">
-                                            <li>
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </li>
-                                        </ul>
+                        
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/users/2.jpg" alt="user" />
+                                        <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="el-card-content text-left p-3">
-                                    <h4 class="box-title">
-                                        Ravi Agrawal
-                                        <span class="mytooltip tooltip-effect-1">
-                                            <span class="tooltip-item2"><i class="fab fa-vine text-success"></i></span>
-                                            <span class="tooltip-content4 clearfix">
-                                                <span class="tooltip-text2">
-                                                    Found at Medical Office with 987-654-4455
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">
+                                            Ravi Agrawal
+                                            <span class="mytooltip tooltip-effect-1">
+                                                <span class="tooltip-item2"><i class="fab fa-vine text-success"></i></span>
+                                                <span class="tooltip-content4 clearfix">
+                                                    <span class="tooltip-text2">
+                                                        Found at Medical Office with 987-654-4455
+                                                    </span>
                                                 </span>
                                             </span>
-                                        </span>
-                                    </h4>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">SSN:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Gender:</span> Male</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Email:</span> ravi@gmail.com <i class="fas fas fa-check-circle text-success"></i></small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fas fa-check-circle text-success"></i></small>
+                                        </h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">SSN:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Gender:</span> Male</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> ravi@gmail.com <i class="fas fas fa-check-circle text-success"></i></small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fas fa-check-circle text-success"></i></small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                        
                     </div>
+
                 </div>
 
                 
-                <div class="row el-element-overlay users" style="display: none;" id="third">
-
-                    <div class="col-lg-2 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1">
-                                    <img src="assets/images/property/prop6.jpg" alt="user" />
-                                    <!-- <div class="el-overlay scrl-dwn">
-                                        <ul class="el-info">
-                                            <li>
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </li>
-                                        </ul>
-                                    </div> -->
-                                </div>
-                                <div class="el-card-content text-left p-3">
-                                    <h4 class="box-title">Powers Pediatrics: Tampa</h4>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Website:</span> powerspediatrics.com</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Practice Type:</span> Pediatrics</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Phone:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Fax:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Email:</span> powers@gmail.com</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Street:</span> 7037 Rose Ave</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">City:</span> Orlando</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">State:</span> Maine</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Zip:</span> 32810</small>
-                                        </div>
+                <div class="row el-element-overlay users third" style="display: none;">
+                    <a href="javascript:(void)" class="third-back"><i class="fa-solid fa-circle-arrow-left fa-2x mb-3"></i></a>
+                    
+                    <div class="row">
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/property/prop6.jpg" alt="user" />
+                                        <!-- <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                                </li>
+                                            </ul>
+                                        </div> -->
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-12">
-                                            <a href="https://dev-checkin.veinspracticesolution.com/?cra=Mw==%26resu=NDI=" target="_blank" class="btn btn-sm p-1 m-1 font-weight-bold btn-info">Check In</a> 
-                                            <a href="com_center.html" class="btn btn-sm p-1 m-1 font-weight-bold btn-success">Message Us</a> 
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">Powers Pediatrics: Tampa</h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Website:</span> powerspediatrics.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Practice Type:</span> Pediatrics</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Fax:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> powers@gmail.com</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Street:</span> 7037 Rose Ave</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">City:</span> Orlando</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">State:</span> Maine</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Zip:</span> 32810</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6">
-                        <div class="card">
-                            <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1">
-                                    <img src="assets/images/users/5.jpg" alt="user" />
-                                    <div class="el-overlay scrl-dwn">
-                                        <ul class="el-info">
-                                            <li>
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="el-card-content text-left p-3">
-                                    <h4 class="box-title">Shakir Ansari</h4>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">SSN:</span> 729131238</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Gender:</span> Male</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Email:</span> shakir.Ansari@gmail.com <i class="fas fa-times-circle text-danger"></i></small>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fa-times-circle text-danger"></i></small>
+                                        <div class="row mt-2">
+                                            <div class="col-md-12">
+                                                <a href="https://dev-checkin.veinspracticesolution.com/?cra=Mw==%26resu=NDI=" target="_blank" class="btn btn-sm p-1 m-1 font-weight-bold btn-info">Check In</a> 
+                                                <a href="com_center.html" class="btn btn-sm p-1 m-1 font-weight-bold btn-success">Message Us</a> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1">
+                                        <img src="assets/images/users/5.jpg" alt="user" />
+                                        <div class="el-overlay scrl-dwn">
+                                            <ul class="el-info">
+                                                <li>
+                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newptModal" onclick="showProfilePopup()">View Profile</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="el-card-content text-left p-3">
+                                        <h4 class="box-title">Shakir Ansari</h4>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Birth Date:</span> 11/10/1998</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">SSN:</span> 729131238</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Gender:</span> Male</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins Patient Pin:</span> XD3234CC</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Veins PT ID:</span> VPT1</small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Email:</span> shakir.Ansari@gmail.com <i class="fas fa-times-circle text-danger"></i></small>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <small><span class="font-weight-bold">Phone:</span> 9876544455 <i class="fas fa-times-circle text-danger"></i></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
                     </div>
+
                 </div>
                 <!-- end section-1 -->
             </div>
@@ -2476,10 +2656,33 @@
                 $('#arfstep6').css({'display':'none'});
                 $('#arfstep7').css({'display':'block'});
             });
-            $("#arfstepsevenback").click(function(){
-                $('#arfstep7').css({'display':'none'});
-                $('#arfstep6').css({'display':'block'});
+            
+            $(".view-first").click(function(){
+                $('.zero').css({'display':'none'});
+                $('.first').css({'display':'block'});
             });
+            $(".view-second").click(function(){
+                $('.zero').css({'display':'none'});
+                $('.second').css({'display':'block'});
+            });
+            $(".view-third").click(function(){
+                $('.zero').css({'display':'none'});
+                $('.third').css({'display':'block'});
+            });
+
+            $(".first-back").click(function(){
+                $('.first').css({'display':'none'});
+                $('.zero').css({'display':'block'});
+            });
+            $(".second-back").click(function(){
+                $('.second').css({'display':'none'});
+                $('.zero').css({'display':'block'});
+            });
+            $(".third-back").click(function(){
+                $('.third').css({'display':'none'});
+                $('.zero').css({'display':'block'});
+            });
+
             $("#arfstepsevennext").click(function(){
                 $('#arfstep7').css({'display':'none'});
                 $('#arfstep8').css({'display':'block'});
