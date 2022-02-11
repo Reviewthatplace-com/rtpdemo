@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Payment Request</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="assest/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assest/css/register.css" rel="stylesheet">
+  <link href="assest/css/typography.css" rel="stylesheet">
+  <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+  <style type="text/css">
+    ul.stepper li .btn-box a
+    {
+      padding: 0.8rem !important;
+    }
+    @media only screen and (min-width: 750px)
+    {
+     #section1a,#section1b,#section1c,#section1d
+     {
+      background-image: url(assest/img/section1.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+  } 
+  #section1a .inner-section
+  {
+    padding-top: 20px;
+  }
+
+  #section1b .inner-section
+  {
+    padding-top: 70px;
+  }
+  .next-btn,
+  .back-btn
+  {
+    height: 40px;
+  }
+
+  .shadow,.shadow2
+  {
+    box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+    padding: 30px 40px;
+    border-radius: 10px 10px 10px 10px;
+    background: white;
+  }
+
+  .top-rtplogo
+  {
+    height: 120px;
+  }
+
+  .btn-start
+  {
+    height: 85px;
+  }
+  @media only screen and (min-width: 750px){
+    #confirmation
+    {
+      background-image: url(assest/img/481.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      min-height: 100vh;
+      background-attachment: fixed;
+    } 
+    #check-logo
+    {
+      height: 100px;
+    } 
+  }
+
+  #confirmation .shadow
+  {
+    background-color: white;
+    border-radius: 40px;
+  }
+  .check-img
+  {
+    margin-top: -75px;
+    height: 150px;
+  }
+  .btn-box
+  {
+    justify-content: flex-end;
+  }
+  @media only screen and (max-width: 750px){
+    #section1a .inner-section
+    {
+      padding-top: 15px;
+    }
+
+    #section1b .inner-section
+    {
+      padding-top: 15px;
+    }
+
+    .shadow
+    {
+      box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+      padding: 10px 25px;
+      border-radius: 10px 10px 10px 10px;
+      background: white;
+    }
+    .shadow
+    {
+      box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+      padding: 20px 15px;
+      border-radius: 10px 10px 10px 10px;
+      background: white;
+    }
+
+    .top-rtplogo,.top-rtplogo2
+    {
+      height: 100px;
+    }
+
+    .btn-start
+    {
+      height: 50px;
+    }
+    .btn-start2
+    {
+      height: 70px;
+      margin: 15px auto !important;
+    }
+
+    .inner-section
+    {
+      background:rgba(255,255,255,1);
+    }
+    #confirmation
+    {
+      background-image: url(assest/img/481.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    } 
+    .check-img
+    {
+      margin-top: -50px;
+      height: 100px;
+    }
+    .next-btn,
+    .back-btn
+    {
+      height: 30px;
+    }
+    #finish-step .next-btn
+    {
+     max-width: 90%;
+   } 
+   .btn-box
+   {
+    justify-content: center;
+  }
+  #confirmation h2
+  {
+    font-size: 22px;
+  }
+  #confirmation h3
+  {
+    font-size: 20px;
+  }
+
+}
+
+.progress
+{
+  background: none !important;
+}
+
+.question
+{
+  font-size: 13px;
+}
+
+/* .answers
+{
+  font-size: 30px !important;
+} */
+
+      .font-12
+      {
+        font-size: 13px;
+      }
+      .font-14
+      {
+        font-size: 14px;
+      }
+      .list-square
+      {
+        list-style-type: square;
+      }
+  </style> 
+</head>
+
+<body data-spy="scroll" data-target="#navbar-menu">
+
+<!-- ======================= Payment Request ================================  -->
+<section class="" id="registration-section" style="display: block;">
+  <!-- ======================= container ================================  -->
+  <div class="container mt-5 mb-5" id="form-container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <img src="assest/img/rtplogo.png" alt="" class="img-fluid" width="500">
+      </div>
+      <div class="col-md-6">
+        <div class="row text-right">
+          <div class="col-md-12">
+            <h1 class="font-weight-bold h1-color">ReviewThatPlace.com</h1>
+          </div>
+          <div class="col-md-12">
+           <p>
+             <strong>7037 Rose Ave, Orlando, FL, 32810</strong>
+             <br>
+             <strong>Tel:</strong> 888-503-1636
+             <strong>Fax:</strong> 888-503-1636
+             <br>
+             <strong>Email:</strong> Info@rtp.com
+             <br>
+             <strong>Page:</strong> 1 of 1
+            </p> 
+            <h1 class="font-weight-bold h1-color">Payment Request</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-color">
+    <!-- ======================= content ================================  -->
+    <div class="card">
+      <div class="card-body">
+          <div class="row">
+            <div class="col-sm-12 m-2">
+
+                <section class="form-step active">
+                  <h2 class="font-weight-bold h1-color">Payment Information <hr style="border: 2px solid grey;"></h2>
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                    <!-- Payment Information -->
+                    <div class="col-sm-12">
+                      <div class="row inner-row">
+                          <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="col-md-8 font-weight-bold">Patient Name:</td>
+                                    <td class="col-md-4"> Shakir Ansari </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-8 font-weight-bold">Date Of Birth:</td>
+                                    <td class="col-md-4"> 11/22/1997 </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-8 font-weight-bold">Date of Service:</td>
+                                    <td class="col-md-4"> 11/27/2022 </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-8 font-weight-bold">Products:</td>
+                                    <td class="col-md-4"> Physical </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-8 font-weight-bold">Phone:</td>
+                                    <td class="col-md-4"> 111-111-1111 </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-8 font-weight-bold">Email:</td>
+                                    <td class="col-md-4"> x@gmail.com </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-8 font-weight-bold">Notes:</td>
+                                    <td class="col-md-4"> Lorem ipsum dolor sit amet </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-8 font-weight-bold">Attachments:</td>
+                                    <td class="col-md-4"> payment.pdf </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-8 font-weight-bold">Amount Requested:</td>
+                                    <td class="col-md-4"> $120 </td>
+                                </tr>
+                                <tr style="color: #F81D2D;" class="text-right">
+                                    <td class="text-right">
+                                        <h4><strong>Total:</strong></h4>
+                                    </td>
+                                    <td class="text-left">
+                                        <h4><strong> $120 </strong></h4>
+                                    </td>
+                                </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                    </div> 
+                    <!-- Payment Informtion -->
+                    </div>
+                  </div>
+                </section>
+
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- ======================= content ================================  -->
+  </div> 
+  <!-- ======================= container ================================  -->
+</section>
+<!-- ======================= Payment Request ================================  -->
+
+</body>
+</html>
