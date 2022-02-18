@@ -589,11 +589,14 @@
             <h4>Helpful Resources</h4> 
           </div>
           <div class="well">
-               @foreach ($categories as $category)
-               <a href="{{ route('category', $category->slug) }}" class="mr-3">
-                 <span class="badge badge-info badge-tag mb-3">{{ $category->name }}</span>
-               </a> 
-               @endforeach
+            <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                <option value="Physical">Physical</option>
+                <option value="Fever">Fever</option>
+                <option value="Sports Physical">Sports Physical</option>
+                <option value="Camp Physical">Camp Physical</option>
+                <option value="EKG">EKG</option>
+            </select>
+            <button class="btn btn-portal col-8 mt-3" type="button">Search</button>
           </div>
         </div>
       </div>
@@ -899,7 +902,7 @@
           </div>
           <div class="col-10">
             <h5 class="feature-title">Chiropractic Care</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <p class="grey-text">Chiropractors can develop and carry out a comprehensive treatment plan, recommend therapeutic exercise and other non-invasive therapies, and provide nutritional, dietary and lifestyle counselling.
             </p>
             <div style="height:15px"></div>
           </div>
@@ -913,7 +916,7 @@
           </div>
           <div class="col-10">
             <h5 class="feature-title">Corrective Exercises</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur .
+            <p class="grey-text">Understand what Corrective Exercise is, why it is important and how it can benefit personal trainers, health and fitness professionals.
             </p>
             <div style="height:15px"></div>
           </div>
@@ -927,7 +930,7 @@
           </div>
           <div class="col-10">
             <h5 class="feature-title">Lifestyle Advice</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="grey-text">Small changes in life can make a big difference - and our Lifestyle Advice and Wellbeing Coaches, provided by Onside Advocacy, are here to support you.</p>
             <div style="height:15px"></div>
           </div>
         </div>
@@ -945,7 +948,8 @@
           </div>
           <div class="col-10">
             <h5 class="feature-title">Nutritional Counseling</h5>
-            <p class="grey-text">Lorem ipsum dolor sit magna aliqua.
+            <p class="grey-text">We consider not just the nutritional CONTENT of food, 
+              but also, the QUALITY of food.               
             </p>
             <div style="height:15px"></div>
           </div>
@@ -959,7 +963,7 @@
           </div>
           <div class="col-10">
             <h5 class="feature-title">Spinal & Postural Screenings</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="grey-text">Spinal and postural screening are essential tools that can help uncover posture and spinal alignment issues that can lead to chronic neck and back pain.</p>
             <div style="height:15px"></div>
           </div>
         </div>
@@ -972,7 +976,7 @@
           </div>
           <div class="col-10">
             <h5 class="feature-title">Physiotherapy</h5>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p class="grey-text">It uses physical approaches to promote, maintain and restore physical, psychological and social well-being, taking into account variations in health status. 
             </p>
             <div style="height:15px"></div>
           </div>
@@ -998,195 +1002,196 @@
 </section>
 <!--added section-->
 
-  <section class="blog-me" id="blog">
-     <div class="container">
-        <!-- main title -->
-         <div class="row">
-          <div class="col-xl-8 mx-auto text-center">
-            <div class="section-title">
-              <h4>Latest Blog</h4>  
+      <section class="blog-me" id="blog">
+        <div class="container">
+            <!-- main title -->
+            <div class="row">
+              <div class="col-xl-8 mx-auto text-center">
+                <div class="section-title">
+                  <h4>Latest Blog</h4>  
+                </div>
+              </div>
             </div>
-          </div>
+            <!-- main title -->
+
+            <!-- row -->
+            <div class="row">
+              <div class="col-lg-4 col-md-6 mb-3">
+                  <!-- Single Blog -->
+                  <div class="single-blog">
+                    <div class="blog-img">
+                        <img class="img-fluid lazyload" alt="blog img" data-src="assest/img/blog/blog-1.jpg">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-title">
+                          <h4 class="font-weight-bold">Less Than 15% of Medical Sites Meet CORE WEB VITALS Scores</h4>
+                          <div class="meta">
+                              <ul>
+                                <li>03/12/2020</li>
+                              </ul>
+                          </div>
+                        </div>
+                        <p>Data from a recent study shows less than 15% of websites are optimized well enough to pass a Core Web Vitals assessment.</p>
+
+                        <!-- Sharingbutton Facebook -->
+                        <a class="resp-sharing-button__link" aria-label="" href="https://facebook.com/sharer/sharer.php?u=https://rtpdemo.com" target="_blank" rel="noopener">
+                          <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
+                            <i class="fab fa-facebook-f"></i>
+                            </div>
+                          </div>
+                        </a>
+
+                        <!-- Sharingbutton Twitter -->
+                        <a class="resp-sharing-button__link" aria-label="" href="https://twitter.com/intent/tweet/?url=https://rtpdemo.com" target="_blank" rel="noopener">
+                          <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
+                            <i class="fab fa-twitter"></i>
+                            </div>
+                          </div>
+                        </a>
+
+
+                        <!-- Sharingbutton LinkedIn -->
+                        <a class="resp-sharing-button__link" aria-label="" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://rtpdemo.com&amp;title=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;summary=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;source=http%3A%2F%2Fsharingbuttons.io" target="_blank" rel="noopener">
+                          <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
+                            <i class="fab fa-linkedin-in"></i>
+                            </div>
+                          </div>
+                        </a>
+
+                      
+
+                        
+                        <form siq_id="autopick_3378">
+                          <input name="page_url" type="hidden" value="blogs">
+                          <a href="blog-single1.html" target="_blank" class="box_btn">Read More</a>
+                        </form>
+
+                    </div>
+                  </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 mb-3">
+                  <!-- Single Blog -->
+                  <div class="single-blog">
+                    <div class="blog-img">
+                        <img class="img-fluid lazyload" alt="blog img" data-src="assest/img/blog/blog-2.jpg">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-title">
+                          <h4 class="font-weight-bold">8 Silly But Harmful SEO Mistakes Medical Sites Make</h4>
+                          <div class="meta">
+                              <ul>
+                                <li>03/12/2020</li>
+                              </ul>
+                          </div>
+                        </div>
+                        <p>A whole lot of things can go wrong in SEO. In this article, I'll highlight eight damaging mistakes SEO medical websites should look out for.</p>
+
+                        <!-- Sharingbutton Facebook -->
+                        <a class="resp-sharing-button__link" aria-label="" href="https://facebook.com/sharer/sharer.php?u=https://rtpdemo.com" target="_blank" rel="noopener">
+                          <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
+                            <i class="fab fa-facebook-f"></i>
+                            </div>
+                          </div>
+                        </a>
+
+                        <!-- Sharingbutton Twitter -->
+                        <a class="resp-sharing-button__link" aria-label="" href="https://twitter.com/intent/tweet/?url=https://rtpdemo.com" target="_blank" rel="noopener">
+                          <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
+                            <i class="fab fa-twitter"></i>
+                            </div>
+                          </div>
+                        </a>
+
+
+                        <!-- Sharingbutton LinkedIn -->
+                        <a class="resp-sharing-button__link" aria-label="" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://rtpdemo.com&amp;title=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;summary=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;source=http%3A%2F%2Fsharingbuttons.io" target="_blank" rel="noopener">
+                          <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
+                            <i class="fab fa-linkedin-in"></i>
+                            </div>
+                          </div>
+                        </a>
+
+                      
+
+                        
+                        <form siq_id="autopick_2259">
+                          <input name="page_url" type="hidden" value="blogs">
+                          <a href="blog-single2.html" target="_blank" class="box_btn">Read More</a>
+                        </form>
+
+                    </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-3">
+                  <!-- Single Blog -->
+                  <div class="single-blog">
+                    <div class="blog-img">
+                        <img class="img-fluid lazyload" alt="blog img" data-src="assest/img/blog/blog-3.jpg">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-title">
+                          <h4 class="font-weight-bold">Don't Let Your Medical Web Site Listings be Sabotaged</h4>
+                          <div class="meta">
+                              <ul>
+                                <li>03/12/2020</li>
+                              </ul>
+                          </div>
+                        </div>
+                        <p>An SEO company reportedly sabotaged a clients website after getting into a disagreement regards a work contact.</p>
+
+                        <!-- Sharingbutton Facebook -->
+                        <a class="resp-sharing-button__link" aria-label="" href="https://facebook.com/sharer/sharer.php?u=https://rtpdemo.com" target="_blank" rel="noopener">
+                          <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
+                            <i class="fab fa-facebook-f"></i>
+                            </div>
+                          </div>
+                        </a>
+
+                        <!-- Sharingbutton Twitter -->
+                        <a class="resp-sharing-button__link" aria-label="" href="https://twitter.com/intent/tweet/?url=https://rtpdemo.com" target="_blank" rel="noopener">
+                          <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
+                            <i class="fab fa-twitter"></i>
+                            </div>
+                          </div>
+                        </a>
+
+
+                        <!-- Sharingbutton LinkedIn -->
+                        <a class="resp-sharing-button__link" aria-label="" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://rtpdemo.com&amp;title=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;summary=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;source=http%3A%2F%2Fsharingbuttons.io" target="_blank" rel="noopener">
+                          <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
+                            <i class="fab fa-linkedin-in"></i>
+                            </div>
+                          </div>
+                        </a>
+
+                      
+
+                        
+                        <form siq_id="autopick_6961">
+                          <input name="page_url" type="hidden" value="blogs">
+                          <a href="blog-single3.html" target="_blank" class="box_btn">Read More</a>
+                        </form>
+
+                    </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-12 text-center">
+                <a href="blog.html" target="_blank" class="box_btn"><h3 class="font-weight-bold">All Blogs</h3></a>
+              </div>
+
+
+
+
+            </div>
+            <!-- row -->
+
+          
         </div>
-        <!-- main title -->
-
-        <!-- row -->
-        <div class="row">
-           <div class="col-lg-4 col-md-6 mb-3">
-              <!-- Single Blog -->
-              <div class="single-blog">
-                 <div class="blog-img">
-                    <img class="img-fluid lazyload" alt="blog img" data-src="assest/img/blog.jpg">
-                 </div>
-                 <div class="blog-content">
-                    <div class="blog-title">
-                       <h4 class="font-weight-bold">Blog Heading</h4>
-                       <div class="meta">
-                          <ul>
-                             <li>03/12/2020</li>
-                          </ul>
-                       </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                    <!-- Sharingbutton Facebook -->
-                    <a class="resp-sharing-button__link" aria-label="" href="https://facebook.com/sharer/sharer.php?u=https://rtpdemo.com" target="_blank" rel="noopener">
-                      <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
-                        <i class="fab fa-facebook-f"></i>
-                        </div>
-                      </div>
-                    </a>
-
-                    <!-- Sharingbutton Twitter -->
-                    <a class="resp-sharing-button__link" aria-label="" href="https://twitter.com/intent/tweet/?url=https://rtpdemo.com" target="_blank" rel="noopener">
-                      <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
-                        <i class="fab fa-twitter"></i>
-                        </div>
-                      </div>
-                    </a>
-
-
-                    <!-- Sharingbutton LinkedIn -->
-                    <a class="resp-sharing-button__link" aria-label="" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://rtpdemo.com&amp;title=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;summary=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;source=http%3A%2F%2Fsharingbuttons.io" target="_blank" rel="noopener">
-                      <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
-                        <i class="fab fa-linkedin-in"></i>
-                        </div>
-                      </div>
-                    </a>
-
-                  
-
-                    
-                    <form siq_id="autopick_3378">
-                      <input name="page_url" type="hidden" value="blogs">
-                      <a href="blog.html" target="_blank" class="box_btn">Read More</a>
-                    </form>
-
-                 </div>
-              </div>
-           </div>
-
-
-
-           <div class="col-lg-4 col-md-6 mb-3">
-              <!-- Single Blog -->
-              <div class="single-blog">
-                 <div class="blog-img">
-                    <img class="img-fluid lazyload" alt="blog img" data-src="assest/img/blog.jpg">
-                 </div>
-                 <div class="blog-content">
-                    <div class="blog-title">
-                       <h4 class="font-weight-bold">Blog Heading</h4>
-                       <div class="meta">
-                          <ul>
-                             <li>03/12/2020</li>
-                          </ul>
-                       </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                    <!-- Sharingbutton Facebook -->
-                    <a class="resp-sharing-button__link" aria-label="" href="https://facebook.com/sharer/sharer.php?u=https://rtpdemo.com" target="_blank" rel="noopener">
-                      <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
-                        <i class="fab fa-facebook-f"></i>
-                        </div>
-                      </div>
-                    </a>
-
-                    <!-- Sharingbutton Twitter -->
-                    <a class="resp-sharing-button__link" aria-label="" href="https://twitter.com/intent/tweet/?url=https://rtpdemo.com" target="_blank" rel="noopener">
-                      <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
-                        <i class="fab fa-twitter"></i>
-                        </div>
-                      </div>
-                    </a>
-
-
-                    <!-- Sharingbutton LinkedIn -->
-                    <a class="resp-sharing-button__link" aria-label="" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://rtpdemo.com&amp;title=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;summary=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;source=http%3A%2F%2Fsharingbuttons.io" target="_blank" rel="noopener">
-                      <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
-                        <i class="fab fa-linkedin-in"></i>
-                        </div>
-                      </div>
-                    </a>
-
-                  
-
-                    
-                    <form siq_id="autopick_2259">
-                      <input name="page_url" type="hidden" value="blogs">
-                      <a href="blog.html" target="_blank" class="box_btn">Read More</a>
-                    </form>
-
-                 </div>
-              </div>
-           </div>
-
-           <div class="col-lg-4 col-md-6 mb-3">
-              <!-- Single Blog -->
-              <div class="single-blog">
-                 <div class="blog-img">
-                    <img class="img-fluid lazyload" alt="blog img" data-src="assest/img/blog.jpg">
-                 </div>
-                 <div class="blog-content">
-                    <div class="blog-title">
-                       <h4 class="font-weight-bold">Blog Heading</h4>
-                       <div class="meta">
-                          <ul>
-                             <li>03/12/2020</li>
-                          </ul>
-                       </div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                    <!-- Sharingbutton Facebook -->
-                    <a class="resp-sharing-button__link" aria-label="" href="https://facebook.com/sharer/sharer.php?u=https://rtpdemo.com" target="_blank" rel="noopener">
-                      <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
-                        <i class="fab fa-facebook-f"></i>
-                        </div>
-                      </div>
-                    </a>
-
-                    <!-- Sharingbutton Twitter -->
-                    <a class="resp-sharing-button__link" aria-label="" href="https://twitter.com/intent/tweet/?url=https://rtpdemo.com" target="_blank" rel="noopener">
-                      <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
-                        <i class="fab fa-twitter"></i>
-                        </div>
-                      </div>
-                    </a>
-
-
-                    <!-- Sharingbutton LinkedIn -->
-                    <a class="resp-sharing-button__link" aria-label="" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://rtpdemo.com&amp;title=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;summary=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;source=http%3A%2F%2Fsharingbuttons.io" target="_blank" rel="noopener">
-                      <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div class="resp-sharing-button__icon resp-sharing-button__icon--circle" aria-hidden="true">
-                        <i class="fab fa-linkedin-in"></i>
-                        </div>
-                      </div>
-                    </a>
-
-                  
-
-                    
-                    <form siq_id="autopick_6961">
-                      <input name="page_url" type="hidden" value="blogs">
-                      <a href="blog.html" target="_blank" class="box_btn">Read More</a>
-                    </form>
-
-                 </div>
-              </div>
-           </div>
-
-
-
-
-
-
-        </div>
-        <!-- row -->
-
-       
-     </div>
-  </section>
+      </section>
 
 
   <!--added section-->
@@ -1459,11 +1464,14 @@
               <h4><i class="fa fa-tags"></i>Popular Tags</h4> 
             </div>
             <div class="well">
-              @foreach ($tags as $tag)
-              <a href="{{ route('tag', $tag->slug) }}" class="mr-3">
-                <span class="badge badge-info badge-tag mb-3">{{ $tag->name }}</span>
-              </a> 
-            @endforeach
+              <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                  <option value="Physical">Physical</option>
+                  <option value="Fever">Fever</option>
+                  <option value="Sports Physical">Sports Physical</option>
+                  <option value="Camp Physical">Camp Physical</option>
+                  <option value="EKG">EKG</option>
+              </select>
+              <button class="btn btn-portal col-8 mt-3" type="button">Search</button>
             </div>
           </div>
         </div>
@@ -1946,7 +1954,7 @@
   </div>
 </div>
 <!-- request appointment -->
-    <script src="assest/js/jquery-3.4.1.min.js" type="text/javascript" defer></script>
+    <script src="assest/js/jquery-3.4.1.min.js" type="text/javascript"></script>
     <!-- Bootstrap tooltips -->
     <script src="assest/js/popper.min.js" type="text/javascript" defer></script>
     <!-- Bootstrap core JavaScript -->
