@@ -6,7 +6,7 @@
  * Examples at http://veno.es/venobox/
  * License: MIT License
  * License URI: https://github.com/nicolafranchini/VenoBox/blob/master/LICENSE
- * Copyright 2013-2021 Nicola Franchini - @nicolafranchini
+ * Copyright 2013-2022 Nicola Franchini - @nicolafranchini
  *
  */
 
