@@ -44,18 +44,26 @@ a {
 }
 .blog-content a.box_btn {
 	display: inline-block;
-	background-color: #68CEFF;
-	padding: 5px 15px;
+	background-color: #ff621f;
+	padding: 5px 10px;
 	color: #fff;
 	text-transform: capitalize;
 	margin-top: 20px;
+}
+.badge-cat
+{
+	background-color: #ff621f;
+}
+.badge-tag
+{
+	background-color: #17A2B8;
 }
 a.box_btn::before {
 	position: absolute;
 	content: "";
 	width: 100%;
 	height: 100%;
-	background-color: #68CEFF;
+	background-color: #ff621f;
 	left: -100%;
 	top: 0;
 	-webkit-transition: .5s;
@@ -77,7 +85,7 @@ a.box_btn:hover::before {
 
 .btn-read
 {
-	background-color: #68CEFF;
+	background-color: #ff621f;
 	border-radius: 10rem;
 	color: white;
 }
@@ -92,50 +100,12 @@ a.box_btn:hover::before {
 	color: #0FB4E9;
 }
 
-.right-menu
-{
-	background-color: #F5F5F5;
-	padding: 20px;
-	border-radius: 10px;
-	margin-bottom: 30px;
-}
-
-.right-menu h4
-{
-	margin-bottom: 20px;
-}
-.right-menu h4 i
-{
-	color: grey;
-}
-
-.tag-badges, .category-badges
-{
-	background-color: #0FB4E9;
-	padding: 1px 5px;
-	color: white;
-	border-radius: 5px;
-	font-size: 13px;
-	font-weight: bold;
-}
 .single-tag, .single-category
 {
 	margin-bottom: 15px;
 }
-.right-menu h5
-{
-	margin-bottom: 20px;
-}
-.right-menu .single-blog
-{
-	margin-bottom: 15px;
-}
-.right-menu .single-blog a
-{
-	font-size: 15px;
-	text-decoration: none;
-	color: black;
-}
+
+
 .single-blog-top img
 {
 	margin-bottom: 20px;
@@ -154,34 +124,8 @@ a.box_btn:hover::before {
 	font-weight: bold;
 	color: #0FB4E9;
 }
-.badges-list
-{
-	position: absolute !important;
-	bottom: 0px !important;
-	padding-left: 0px;
-}
-@media only screen and (max-width: 750px)
-{
-	.badges-list
-	{
-		position: relative !important;
-		bottom: 0px !important;
-		padding-left: 0px;
-	}
-}
-.badges-list i 
-{
-	color: grey;
-}
-.badges-list li
-{
-	display: inline !important;
-}
-.badges-list li span
-{
-	padding-right: 5px;
 
-}
+
 
 .post-divider
 {
@@ -205,21 +149,13 @@ a.box_btn:hover::before {
 	font-weight: bold;
 	margin-bottom: 20px;
 }
-#sharing-icons
-{
-	margin: 0px;
-	padding: 0px;
-}
-#sharing-icons li
-{
-	text-decoration: none;
-	margin-left: 0px;
-	padding-left: 0px;
-	padding-right: 20px;
-	display: inline !important;
 
-}
 
+.well
+{
+	margin-bottom: 20px;
+	padding: 20px;
+}
 
 
 
@@ -242,3 +178,25 @@ a.box_btn:hover::before {
 {
 	color: black;
 }
+
+
+ #social-links ul
+    {
+      margin: 0px !important;
+      padding-left: 0px;
+    }
+
+    #social-links ul li
+    {
+      margin-left: 0px !important;
+      text-decoration: none;
+      display: inline;
+      margin-right: 9px;
+    }
+
+
+
+    #social-links img
+    {
+      height: 30px;
+    }
