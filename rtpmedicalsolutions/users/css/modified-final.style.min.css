@@ -1962,3 +1962,75 @@ Vertical tabs
   margin-top: -30px;
 }
 /*blogs end*/
+
+/*--------------------------------------------------------------
+# Strips
+--------------------------------------------------------------*/
+
+#portal-strip{
+  background: linear-gradient(rgba(255,88,33, 0.75), rgba(255,88,33, 0.80)), url("../img/sections-new/featurepage/webdev/seo.webp") center center;
+}
+
+.strip {
+  background-size: cover;
+  padding: 0px 0;
+}
+
+.strip-container{
+  padding: 10px 0 5px;
+}
+
+.strip h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.strip .strip-btn {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 7px 24px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  border-radius: 50px;
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+.strip .strip-btn:hover {
+  background: #f6b024;
+}
+
+@media (max-width: 1024px) {
+  .strip {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 769px) {
+  .strip .strip-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+@media(max-width: 768px){
+  .strip-container{
+    padding: 15px 10px;
+  }
+
+  .strip h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .strip .strip-btn {
+    padding: 7px 24px;
+    font-size: 14px;
+  }
+}
