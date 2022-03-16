@@ -105,9 +105,9 @@ jQuery(document).ready(function() {
 		$('.sidebar').addClass('light');
 	});
 	/* replace the default browser scrollbar in the sidebar, in case the sidebar menu has a height that is bigger than the viewport */
-	$('.sidebar').mCustomScrollbar({
+	/* $('.sidebar').mCustomScrollbar({
 		theme: "minimal-dark"
-	});
+	}); */
 	
 	/*
 	    Navigation
