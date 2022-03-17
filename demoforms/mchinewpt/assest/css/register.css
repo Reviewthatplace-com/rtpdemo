@@ -1,0 +1,377 @@
+.cross-btn
+{
+  float: right;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.next-step {
+  font-weight: bold;
+  font-size: 20px !important;
+  -webkit-animation: bounce .3s infinite alternate;
+  -moz-animation: bounce .3s infinite alternate;
+  animation: popup .5s infinite alternate;
+}
+@-webkit-keyframes popup {
+  to { -webkit-transform: scale(1.2); }
+}
+@-moz-keyframes popup {
+  to { -moz-transform: scale(1.2); }
+}
+@keyframes popup {
+  to { transform: scale(1.2); }
+}
+
+.btn-add
+{
+  padding: 3px 8px !important;
+  font-size: 20px;
+}
+
+.custom-legend
+{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+.fieldset-outer
+{
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.inner-row
+{
+  padding: 20px;
+}
+
+@media only screen and (max-width: 750px){
+  .custom-legend
+{
+  padding: 8px;
+}
+.fieldset-outer
+{
+  padding: 0;
+}
+.inner-row
+{
+  padding: 18px 15px;
+}  
+}
+
+#third-step p,
+#fifth-step p,
+#sixth-step p,
+#seventh-step p,
+#eighth-step p,
+#ninth-step p
+{
+  font-size: 16px !important;
+}
+
+fieldset
+{
+  background-color:white;
+}
+fieldset.fieldset-border
+{
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+fieldset.fieldset-border legend
+{
+  font-size: 17px;
+  font-weight: bold;
+}
+.legend
+{
+  font-weight: bold;
+}
+legend
+{
+  font-size: 1rem;
+  margin-left:0px;
+}
+
+.form-checkbox, .form-radio {
+  padding:2px;
+  max-width: 100% !important;
+  display: inline-block;
+  margin-right: 8px;
+  background:white;
+}
+.checklabel,.radiolabel{
+  display:block;
+  width:100%;
+  background: white;
+  border-radius:0px !important;
+  text-align:center;
+  padding:5px 1em;
+  font-size:1rem;
+  box-shadow:0 0 1px 1px rgba(0,0,0,0.2);
+}
+.checklabel:hover, .radiolabel:hover {
+  background:#ddd;
+}
+.checkbox, .radio {
+  display: none;
+}
+
+/*======optional=====*/
+
+.form-checkbox .optional-label,
+.form-radio .optional-label
+{
+  border: 2px solid yellow;
+}
+.form-checkbox .checkbox:checked + .optional-label,
+.form-radio .radio:checked + .optional-label
+{
+  background-color: green;
+  border: 2px solid green;
+  color: white;
+}
+
+/*====optional=====*/
+
+.radio:checked + label,
+.checkbox:checked + label
+{
+  background-position: 0 0;
+  background-color: green;
+  border: 2px solid green !important;
+  color: white;
+}
+
+.form-radio .required-label,
+.form-checkbox .required-label
+{
+  border: 2px solid red !important;
+}
+.radiolabel.checkbox-yellow,
+.checklabel.checkbox-yellow
+{
+  border: 2px solid yellow !important;
+}
+
+/*===================floating labels===========================*/
+.required
+{
+  border-bottom: 3px solid red !important;
+}
+
+.required.green-border
+{
+  border-bottom: 3px solid green !important;
+}
+
+.optional
+{
+  border-bottom: 3px solid yellow !important;
+}
+
+.optional.green-border
+{
+  border-bottom: 3px solid green !important;
+}
+
+.floating-labels .form-group 
+{
+  position: relative; 
+  margin-bottom: 30px;
+}
+
+.floating-labels .form-control[type='text'], .form-control[type='email'], .form-control[type='number'], .form-control[type='tel'], .form-control[type='password'], .form-control[type='date'], 
+select.form-control , textarea.form-control 
+{
+  padding: 7px 7px 7px 0px !important;
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  font-family: inherit;
+  font-size: 1.3rem;
+  color: black;
+  background: none;
+}
+
+.floating-labels .form-control:focus 
+{
+  outline: none;
+  border: none; 
+  box-shadow: none;
+}
+
+.floating-labels .float-label 
+{
+  color: black;
+  font-size: 1.3rem;
+  position: absolute;
+  cursor: auto;
+  top: 5px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all; 
+}
+
+.floating-labels .focused .float-label 
+{
+  top: -20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  box-shadow: none !important;
+  outline: none !important; 
+}
+
+/*============================registration section==================================*/
+#registration-section h1
+{
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.step-content
+{
+  display: none !important;
+}
+.active .step-content
+{
+  display: block !important;
+}
+.has-error
+{
+  padding: 10px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.intial_hidden
+{
+  display: none;
+  margin: 25px 0px !important;
+  padding-left: 0px !important;
+}
+
+/*==============================mobile view===========================*/
+@media only screen and (max-width: 750px)
+{
+  #registration-section h1
+  {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .form-checkbox, .form-radio
+  {
+    margin-right: 5px !important;
+    display: block;
+  }
+  .checklabel, .radiolabel
+  {
+    padding:8px !important;
+    font-size:14px !important;
+  }
+  fieldset
+  {
+    padding: 12px;
+  }
+  legend
+  {
+    font-size: 16px;
+  }
+  .step-content 
+  {
+    padding-right: 20px;
+  }
+  .floating-labels .form-control[type='text'], .form-control[type='email'], .form-control[type='number'], .form-control[type='tel'], .form-control[type='password'], .form-control[type='date'], 
+  select.form-control , textarea.form-control 
+  {
+    font-size: 1rem;
+  }
+
+  .floating-labels .float-label 
+  {
+    font-size: 1rem;
+    bottom: 3px !important;
+    top: auto;
+  }
+
+  .floating-labels .focused .float-label 
+  {
+    top: -20px !important;
+  }
+  .desktop
+  {
+    display: none;
+  }
+  .stepper-vertical
+  {
+    padding-left: 0px !important;
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+    padding-right: 0px !important;
+  }
+  .step-content
+  {
+    padding-left: 0px !important;
+    margin-left: 1.4rem !important;
+    padding-right: 2.8rem !important;
+  }
+  .stepper-vertical li a
+  {
+    padding-left: 0.5rem !important;
+  }
+  .stepper-vertical .form-step:after
+  {
+    left: 1.4rem !important;
+  }
+  .sigPad
+  {
+    width: 100% !important;
+  }
+  canvas
+  {
+    width: 98% !important;
+  }
+  #form-container
+  {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    overflow: hidden !important;
+  }
+  .next-step
+  {
+    font-size: 16px !important;
+  }
+}
+
+ul.stepper li .btn-box a
+{
+  padding: 0.8rem !important;
+}
+.btn-box
+{
+  justify-content: flex-end !important;
+}
+.next-btn,
+.back-btn
+{
+  height: 40px;
+}
+@media only screen and (max-width: 750px){
+  .next-btn,
+  .back-btn
+  {
+    height: 30px;
+  }
+  .btn-box
+  {
+    justify-content: center !important;
+  }
+}
