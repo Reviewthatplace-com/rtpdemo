@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>RTP Medical Solutions</title>
+
+    <!-- This page CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/responsive.dataTables.min.css">
+    <link href="dist/css/pages/floating-label.css" rel="stylesheet">
+
+    <!-- chartist CSS -->
+    <link href="assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+     <link href="dist/css/style.css" rel="stylesheet">
+
+     <!-- page css -->
+     <link href="dist/css/pages/other-pages.css" rel="stylesheet">
+     <link href="dist/css/pages/chat-app-page.css" rel="stylesheet">
+     <link href="dist/css/pages/inbox.css" rel="stylesheet">
+     <link href="dist/css/pages/tab-page.css" rel="stylesheet">
+
+     <!--alerts CSS -->
+     <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+     <!-- toast CSS -->
+     <link href="assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+     <link href="dist/css/form.css" rel="stylesheet">
+
+     <!-- wysihtml5 CSS -->
+     <link rel="stylesheet" href="assets/node_modules/html5-editor/bootstrap-wysihtml5.css">
+
+     <!-- Dropzone css -->
+     <link href="assets/node_modules/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css">
+
+    <!-- signature -->
+    <link href="dist/css/signature/jquery.signaturepad.css" rel="stylesheet">
+
+    <!-- Dashboard 1 Page CSS -->
+    <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+
+    <!-- Color picker plugins css -->
+    <link href="assets/node_modules/jquery-asColorPicker-master/dist/css/asColorPicker.css" rel="stylesheet">
+    <!-- Date picker plugins css -->
+    <link href="assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <!-- Daterange picker plugins css -->
+    <link href="assets/node_modules/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+    <link href="assets/node_modules/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    
+    <!--This page Plugin-->
+    <link href="assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/node_modules/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/node_modules/switchery/dist/switchery.min.css" rel="stylesheet" />
+    <link href="assets/node_modules/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="assets/node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
+    <link href="assets/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+    <link href="assets/node_modules/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+     
+</head>
+
+<body class="skin-blue fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">RTP Medical Solutions</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                         <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+<li class="nav-item"><h1 class="dashboardName">RTP MedSol Dashboard</h1><p class="boldText text-white">Shakir Ansari - 7037 Rose Ave Orlando, FL 32810 - 407-286-2965</p></li>
+                        <!-- ============================================================== -->
+                        <!--<li class="nav-item">
+                            <form class="app-search d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control" placeholder="Search & enter">
+                            </form>
+                        </li>-->
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- User Profile -->
+                        <!-- ============================================================== -->
+                        <div class="text-center mt-3">
+                            <input class="btn btn-success punchedIn" id="punchInButtonProfile" type="button" value="Punched In" data-toggle="tooltip" data-html="true"  data-placement="left" title="" data-original-title="02/26/21 6:00am <br> Punched In">
+                            <input class="btn btn-danger punchedOut" id="punchOutButtonProfile" type="button" value="Punched Out" data-toggle="tooltip" data-html="true" data-placement="left" title="" data-original-title="02/26/21 6:00am <br> Punched Out">
+                            <p class="lead output"></p>
+                        </div>
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class=""> <span class="hidden-md-down">Mark &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <!-- text-->
+                                 <a href="myProfile.html" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                                <!-- text--> 
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="firstLogin.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                                <!-- text-->
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End User Profile -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap font-weight-bold m-l-20">Content Management</li>
+        
+                        <li><a href="alert.html"><i class="fas fa-bell text-primary"></i><span class="hide-menu">Alert</span></a></li>
+
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-blog text-primary"></i><span class="hide-menu">Blogs</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="blogsCategories.html">Catagory</a></li>
+                                <li class="m-l-10"><a href="blogsTags.html">Tag</a></li>
+                            </ul>
+                        </li>
+        
+                        <li><a href="contentStaff.html"><i class="fas fa-user-nurse text-primary"></i><span class="hide-menu">Staff Highlights</span></a></li>
+                        <li><a href="contentInsurance.html"><i class="fas fa-hospital text-primary"></i><span class="hide-menu">Insurances</span></a></li>
+                        <li><a href="contentSocialMedia.html"><i class="fas fa-photo-video text-primary"></i><span class="hide-menu">Social Media</span></a></li>
+                        <li><a href="contentServices.html"><i class="fas fa-concierge-bell text-primary"></i><span class="hide-menu">Services</span></a></li>
+        
+                        <li class="nav-small-cap font-weight-bold m-l-20">Patient Submissions</li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-user-injured text-primary"></i><span class="hide-menu">New Patient<span class="badge badge-pill badge-success text-white ml-auto">25</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="newptInprogress.html">In Progress</a></li>
+                                <li class="m-l-10"><a href="newptCompleted.html">Complete</a></li>
+                                <li class="m-l-10"><a href="newptArchived.html">Archived</a></li>
+                            </ul>
+                        </li>
+        
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-id-card  text-primary"></i><span class="hide-menu">Update Demo<span class="badge badge-pill badge-success text-white ml-auto">25</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="updatedemoSubmitted.html">Submitted</a></li>
+                                <li class="m-l-10"><a href="updatedemoCompleted.html">Complete</a></li>
+                                <li class="m-l-10"><a href="updatedemoArchived.html">Archived</a></li>
+                            </ul>
+                        </li>
+        
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-file-prescription text-primary"></i><span class="hide-menu">Request Form<span class="badge badge-pill badge-success text-white ml-auto">15</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="requestformSubmitted.html">Submitted</a></li>
+                                <li class="m-l-10"><a href="requestformCompleted.html">Complete</a></li>
+                                <li class="m-l-10"><a href="requestformArchived.html">Archived</a></li>
+                            </ul>
+                        </li>
+        
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-clipboard-check  text-primary"></i><span class="hide-menu">Authorization<span class="badge badge-pill badge-success text-white ml-auto">05</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="authorizationrleaseSubmitted.html">Submitted</a></li>
+                                <li class="m-l-10"><a href="authorizationrleaseCompleted.html">Complete</a></li>
+                                <li class="m-l-10"><a href="authorizationrleaseArchived.html">Archived</a></li>
+                            </ul>
+                        </li>
+        
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-calendar-alt text-primary"></i><span class="hide-menu">Appointments<span class="badge badge-pill badge-success text-white ml-auto">65</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="bookappointmentsSubmitted.html">Submitted</a></li>
+                                <li class="m-l-10"><a href="bookappointmentsCompleted.html">Upcoming</a></li>
+                                <li class="m-l-10"><a href="bookappointmentsArchived.html">Archived</a></li>
+                            </ul>
+                        </li>
+        
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-poll text-primary"></i><span class="hide-menu">Survey<span class="badge badge-pill badge-success text-white ml-auto">95</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="SurveyTotalResponses.html">Total Responses</a></li>
+                                <li class="m-l-10"><a href="SurveyCompleted.html">Complete</a></li>
+                                <li class="m-l-10"><a href="SurveyArchived.html">Archived</a></li>
+                            </ul>
+                        </li>
+        
+                        <li class="nav-small-cap font-weight-bold m-l-20">Internal</li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-clock text-primary"></i><span class="hide-menu">Clock In/Out</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="timeSheet.html">Time Sheets</a></li>
+                                <li class="m-l-10"><a href="punchOut.html">Punch</a></li>
+                                <li class="m-l-10"><a href="InternalTimeoff.html">Time Off</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-phone text-primary"></i></i><span class="hide-menu">Call Lists<span class="badge badge-pill badge-success text-white ml-auto">115</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="calllistPending.html">Pending</a></li>
+                                <li class="m-l-10"><a href="calllistCompleted.html">completed</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)"><i class="fas fa-clock text-primary"></i><span class="hide-menu">Risk Assessment </span></a></li>
+
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-money-bill text-primary"></i><span class="hide-menu">Payments</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="paymentRequest.html">Requested</a></li>
+                                <li class="m-l-10"><a href="paymentPaid.html">Paid</a></li>
+                            </ul>
+                        </li>
+
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-signature text-primary"></i><span class="hide-menu">Compliance</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">BAA</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="InternalCBAAActive.html">Active</a></li>
+                                        <li class="m-l-10"><a href="InternalCBAAInactive.html">Inactive</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">HIPAA</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="InternalCHIPAAActive.html">Active</a></li>
+                                        <li class="m-l-10"><a href="InternalCHIPAAInactive.html">Inactive</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">Non-Disclosure</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="InternalCNondisclosureActive.html">Active</a></li>
+                                        <li class="m-l-10"><a href="InternalCNondisclosureInactive.html">Inactive</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-clipboard-list text-primary"></i><span class="hide-menu">License Management</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="InternalLicensemgtActive.html">Active</a></li>
+                                <li class="m-l-10"><a href="InternalLicensemgtInactive.html">Inactive</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-small-cap font-weight-bold m-l-20">Administration</li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-clock text-primary"></i><span class="hide-menu">Clock In/Out</span></a>
+                            <ul aria-expanded="false" class="collapse"> 
+                                 <li class="m-l-10"><a href="types.html">Users</a></li> 
+                                 <li class="m-l-10"><a href="adminTimeoffRequest.html">Time Off Request</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="adminCalllist.html"><i class="fas fa-phone text-primary"></i><span class="hide-menu">Call Lists</span></a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-signature text-primary"></i><span class="hide-menu">Compliance</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="adminCBAA.html">BAA</a></li>
+                                <li class="m-l-10"><a href="adminCPrivacypolicy.html">Privacy Policy</a></li>
+                                <li class="m-l-10"><a href="adminCHIPAA.html">HIPAA</a></li>
+                                <li class="m-l-10"><a href="adminCNondisclosure.html">Non-Disclosure</a></li>
+                            </ul>
+                        </li> 
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-align-justify text-primary"></i><span class="hide-menu">Website Forms</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="adminNewpatient.html">New Patient</a></li>
+                                <li class="m-l-10"><a href="adminRequestform.html">Request Form</a></li>
+                                <li class="m-l-10"><a href="adminAuthorizationrequest.html">Authorization Request</a></li>
+                                <li class="m-l-10"><a href="adminAppointments.html">Appointments</a></li>
+                                <li class="m-l-10"><a href="SurveyActive.html">Survey</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-cogs text-primary"></i><span class="hide-menu">Settings</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li> <a href="companyDetails.html" aria-expanded="false">Company Details</span></a></li>
+                                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">Users</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="settingsUsersAuthorized.html">Authorized Users</a></li>
+                                        <li class="m-l-10"><a href="settingsUsersPending.html">Pending Users</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">Roles</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="settingsCreateRoles.html">Create Roles</a></li>
+                                        <li class="m-l-10"><a href="settingsActiveRoles.html">Active Roles</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a href="settingsPayment.html" aria-expanded="false">Payment</span></a></li>
+                            </ul>
+                        </li>
+                  
+                        <li> 
+                            <a class="waves-effect waves-dark" href="javascript:void(0)"
+                                  onclick="event.preventDefault();
+                                           document.getElementById('logout-form').submit();" aria-expanded="false">
+                                <i class="fa fa-power-off text-success"></i>
+                                <span class="hide-menu">Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Payment Request</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">Payment Request</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Info box -->
+                <!-- ============================================================== -->
+                <div class="text-right">
+                    <div class="row">
+                        <div class="col-6 m-b-10"></div>
+                        <div class="col-4 m-b-10">
+                                    <label class="float-left font-weight-bold">Date</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control shawCalRanges">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <span class="ti-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>                    
+                        </div>
+                        <div class="col-1">
+                            <button type="button" class="btn btn-success  m-t-30">Apply</button>                  
+                        </div>
+                        <div class="col-1">
+                            <button type="button" class="btn btn-success  m-t-30" data-toggle="modal" data-target="#AddpaymentRequest">+</button>            
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive-xl">
+                                <table id="config-table" class="table display table-bordered table-striped no-wrap">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Full Name</th>
+                                            <th>Patient Name</th>
+                                            <th>Request ID</th>
+                                            <th>Date of Service</th>
+                                            <th>Date Requested</th>
+                                            <th>Sent To</th>
+                                            <th>Amount Requested</th>
+                                            <th>Note</th>
+                                        </tr>
+                                    </thead>
+        
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#paymentMethodv2">Collect Payment</button>
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu animated flipInY">
+                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#reminder">Reminder</a>
+                                                      <a class="dropdown-item" href="javascript:void(0)" id="Delete">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </td>
+                                            <td>
+                                                Shakir Ansari
+                                                <br>
+                                                02/02/1980
+                                            </td>
+                                            <td>RQID 255</td>
+                                            <td>10/28/2019</td>
+                                            <td>10/28/2019</td>
+                                            <td>
+                                                <label class="bs-label label-success">shakir@gmail.com</label>
+                                                <br>
+                                                <label class="bs-label label-success">9153595860</label>
+                                            </td>
+                                            <td>200$</td>
+                                            <td>Payment yet to be made</td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#paymentMethodv2">Collect Payment</button>
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu animated flipInY">
+                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#reminder">Reminder</a>
+                                                      <a class="dropdown-item" href="javascript:void(0)" id="Delete">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </td>
+                                            <td>
+                                                Ravi Agrawal
+                                                <br>
+                                                02/02/1990
+                                            </td>
+                                            <td>RQID 256</td>
+                                            <td>10/28/2019</td>
+                                            <td>10/28/2019</td>
+                                            <td>
+                                                <label class="bs-label label-warning">ravi@gmail.com</label>
+                                                <br>
+                                                <label class="bs-label label-warning">9153598960</label>
+                                            </td>
+                                            <td>200$</td>
+                                            <td>Payment not going through</td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#paymentMethodv2">Collect Payment</button>
+                                                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu animated flipInY">
+                                                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#reminder">Reminder</a>
+                                                      <a class="dropdown-item" href="javascript:void(0)" id="Delete">Delete</a>
+                                                    </div>
+                                                </div> 
+                                            </td>
+                                            <td>
+                                                Saimun Hasan
+                                                <br>
+                                                02/02/1997
+                                            </td>
+                                            <td>RQID 256</td>
+                                            <td>10/28/2019</td>
+                                            <td>10/28/2019</td>
+                                            <td>
+                                                <label class="bs-label label-danger">Saimun@gmail.com</label>
+                                                <br>
+                                                <label class="bs-label label-danger">9183598960</label>
+                                            </td>
+                                            <td>200$</td>
+                                            <td>Payment successfully made</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Info box -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- End Page Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- End Page Content -->
+                <!-- ============================================================== --> 
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer">
+            ©  2020 RTP Medical Solution
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- Modals Start -->
+
+    <!--Add Staff -->
+    <div class="modal fade align-items-center" id="newptModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal">
+            <div class="modal-content">
+                <div class="modal-header"> 
+                    <h4 class="modal-title" id="myLargeModalLabel">Add Staff</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+
+                <div class="modal-body mb-1 pt-2">
+                    <!-- step1 -->
+                    <div class="tab-pane profile-tab-pane" id="home3" role="tabpanel">
+                    <button class="btn btn-outline-success waves-effect col-12 addStaff">Save</button>
+                    <div class="modal-body">
+                        <form class="floating-labels">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <legend>Staff Information</legend>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <fieldset class="floating-labels">
+                                                <h4 class="font-weight-bold">Staff Name:</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control required" id="" placeholder="Staff Name"><span class="bar"></span>
+                                                </div>
+                                                <h4 class="font-weight-bold">Email:</h4>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control required" id="" placeholder="Email"><span class="bar"></span>
+                                                </div>
+                                                <h4 class="font-weight-bold">phone:</h4>
+                                                <div class="form-group">
+                                                    <input type="tel" class="form-control phone-inputmask required" id="" placeholder="phone"><span class="bar"></span>
+                                                </div>
+                                                <h4 class="font-weight-bold">Upload Image:</h4>
+                                                <div class="form-group">
+                                                    <div class="custom-file mb-4">
+                                                    <input type="file" class="custom-file-input" name="primary_id" id="primary_id" accept="image/*;capture=camera">
+                                                    <label class="custom-file-label required" for="primary_id">Upload Image</label>
+                                                    </div>
+                                                </div>
+                                                <h4 class="font-weight-bold">Description:</h4>
+                                                <textarea class="form-control required" rows="4" id="input7" placeholder="Staff Description"></textarea>
+                                                <span class="bar"></span>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                    <!-- step1 -->
+                </div>
+            </div>
+    <!-- /.modal-content -->
+        </div>
+    <!-- /.modal-dialog -->
+    </div>
+    <!--Add Staff -->
+
+    <!--Update Staff -->
+    <div class="modal fade align-items-center" id="updateStaff" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal">
+            <div class="modal-content">
+                <div class="modal-header"> 
+                    <h4 class="modal-title" id="myLargeModalLabel">Update Staff</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+
+                <div class="modal-body mb-1 pt-2">
+                    <!-- step1 -->
+                    <div class="tab-pane profile-tab-pane" id="home3" role="tabpanel">
+                    <button class="btn btn-outline-success waves-effect col-12 updateStaff">Save</button>
+                    <div class="modal-body">
+                        <form class="floating-labels">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <legend>Staff Information</legend>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <fieldset class="floating-labels">
+                                                <h4 class="font-weight-bold">Staff Name:</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control required" id="" placeholder="Staff Name"><span class="bar"></span>
+                                                </div>
+                                                <h4 class="font-weight-bold">Email:</h4>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control required" id="" placeholder="Email"><span class="bar"></span>
+                                                </div>
+                                                <h4 class="font-weight-bold">phone:</h4>
+                                                <div class="form-group">
+                                                    <input type="tel" class="form-control phone-inputmask required" id="" placeholder="phone"><span class="bar"></span>
+                                                </div>
+                                                <h4 class="font-weight-bold">Upload Image:</h4>
+                                                <div class="form-group">
+                                                    <div class="custom-file mb-4">
+                                                    <input type="file" class="custom-file-input" name="primary_id" id="primary_id" accept="image/*;capture=camera">
+                                                    <label class="custom-file-label required" for="primary_id">Upload Image</label>
+                                                    </div>
+                                                </div>
+                                                <h4 class="font-weight-bold">Description:</h4>
+                                                <textarea class="form-control required" rows="4" id="input7" placeholder="Staff Description"></textarea>
+                                                <span class="bar"></span>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                    <!-- step1 -->
+                </div>
+            </div>
+    <!-- /.modal-content -->
+        </div>
+    <!-- /.modal-dialog -->
+    </div>
+    <!--Update Staff -->
+
+    <!--Alert Action -->
+    <div class="modal fade align-items-center" id="alertAction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal">
+            <div class="modal-content">
+                <div class="modal-header"> 
+                    <h4 class="modal-title" id="myLargeModalLabel">Alert</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+
+                <div class="modal-body mb-1 pt-2">
+                    <!-- step1 -->
+                    <div class="tab-pane profile-tab-pane" id="home3" role="tabpanel">
+                    <button class="btn btn-outline-success waves-effect col-12">Save</button>
+                    <div class="modal-body">
+                        <form class="floating-labels">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <legend>Alert Information</legend>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <fieldset class="floating-labels">
+                                                <h4 class="font-weight-bold"> Name:</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control required" id="" placeholder="Name"><span class="bar"></span>
+                                                </div>
+                                                <h4 class="font-weight-bold">Message:</h4>
+                                                <textarea class="form-control required" rows="4" id="input7" placeholder="Message"></textarea>
+                                                <span class="bar"></span>
+
+                                                <h4 class="font-weight-bold">Start Date:</h4>
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control required" id=""><span class="bar"></span>
+                                                </div>
+
+                                                <h4 class="font-weight-bold">End Date:</h4>
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control required" id=""><span class="bar"></span>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                    <!-- step1 -->
+                </div>
+            </div>
+    <!-- /.modal-content -->
+        </div>
+    <!-- /.modal-dialog -->
+    </div>
+    <!--Alert Action -->
+
+    <!--Add Alert -->
+    <div class="modal fade align-items-center" id="Addalert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal">
+            <div class="modal-content">
+                <div class="modal-header"> 
+                    <h4 class="modal-title" id="myLargeModalLabel">Add Alert</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+
+                <div class="modal-body mb-1 pt-2">
+                    <!-- step1 -->
+                    <div class="tab-pane profile-tab-pane" id="home3" role="tabpanel">
+                    <button class="btn btn-outline-success waves-effect col-12">Save</button>
+                    <div class="modal-body">
+                        <form class="floating-labels">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <legend>Alert Information</legend>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <fieldset class="floating-labels">
+                                                <h4 class="font-weight-bold"> Name:</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control required" id="" placeholder="Name"><span class="bar"></span>
+                                                </div>
+                                                <h4 class="font-weight-bold">Message:</h4>
+                                                <textarea class="form-control required" rows="4" id="input7" placeholder="Message"></textarea>
+                                                <span class="bar"></span>
+
+                                                <h4 class="font-weight-bold">Start Date:</h4>
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control required" id=""><span class="bar"></span>
+                                                </div>
+
+                                                <h4 class="font-weight-bold">End Date:</h4>
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control required" id=""><span class="bar"></span>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                    <!-- step1 -->
+                </div>
+            </div>
+    <!-- /.modal-content -->
+        </div>
+    <!-- /.modal-dialog -->
+    </div>
+    <!--Add Alert -->
+
+    <!-- paymentMethod v2-->
+    <div id="paymentMethodv2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Select A Payment Method</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row text-center">
+                            <div class="col m-2 p-2">
+                            <a href="" data-target="#debit" data-toggle="modal">
+                                <i class="far fa-credit-card fa-5x mb-3 blue-text"></i>
+                                <h4 class="font-weight-bold">Credit Or Debit Card</h4>
+                            </a>
+                            </div>
+            
+                            <div class="col m-2 p-2">
+                            <a href="" data-target="#cash" data-toggle="modal">
+                                <i class="fas fa-hand-holding-usd fa-5x mb-3 blue-text"></i>
+                                <h4 class="font-weight-bold">Cash</h4>
+                            </a>
+                            </div>
+            
+                            <div class="col m-2 p-2">
+                            <a href="" data-target="#cheque" data-toggle="modal">
+                                <i class="fas fa-money-check-alt fa-5x mb-3 blue-text"></i>
+                                <h4 class="font-weight-bold">Cheque</h4>
+                            </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- paymentMethod v2-->
+
+    <!-- Payment Authorize Credit -->
+    <div id="debit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Payment Via Authorize</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="font-weight-bold h4-responsive">Payment Verfication will be Done</h4>
+                    <form class="floating-labels">
+
+                        <h4 class="font-weight-bold">Card Holder Name:</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control required" id="" placeholder="Card Holder Name"><span class="bar"></span>
+                        </div>
+
+                        <h4 class="font-weight-bold">Card Number:</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control required" id="" placeholder="Card Number"><span class="bar"></span>
+                        </div>
+
+                        <h4 class="font-weight-bold">Card CVC:</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control required" id="" placeholder="Card CVC"><span class="bar"></span>
+                        </div>
+
+                        <h4 class="font-weight-bold">Zip:</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control required" id="" placeholder="Zip"><span class="bar"></span>
+                        </div>
+
+                        <h4 class="font-weight-bold">Amount:</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control required" id="" placeholder="Amount"><span class="bar"></span>
+                        </div>
+
+                        <h4 class="font-weight-bold">Comment:</h4>
+                        <textarea class="form-control required" rows="4" id="input7" placeholder="Comment"></textarea>
+                        <span class="bar"></span>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 creditCardPayment">Process</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Payment Authorize Credit  -->
+
+    <!-- Payment Authorize Cash -->
+    <div id="cash" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Cash On The Spot</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <form class="floating-labels">
+
+                        <h4 class="font-weight-bold">Amount(In $):</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control required" id="" placeholder="Amount(In $)"><span class="bar"></span>
+                        </div>
+                        
+                        <h4 class="font-weight-bold">Comment:</h4>
+                        <textarea class="form-control required" rows="4" id="input7" placeholder="Comment"></textarea>
+                        <span class="bar"></span>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 cashPayment">Collect</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Payment Authorize Cash  -->
+
+    <!-- Payment Authorize cheque -->
+    <div id="cheque" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Payment Via Cheque</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <form class="floating-labels">
+
+                        <h4 class="font-weight-bold">Cheque Number:</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control required" id="" placeholder="Cheque Number"><span class="bar"></span>
+                        </div>
+
+                        <h4 class="font-weight-bold">Amount(In $):</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control required" id="" placeholder="Amount(In $)"><span class="bar"></span>
+                        </div>
+
+                        <h4 class="font-weight-bold">Cheque Holder Name:</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control required" id="" placeholder="Cheque Holder Name"><span class="bar"></span>
+                        </div>
+                        
+                        <h4 class="font-weight-bold">Comment:</h4>
+                        <textarea class="form-control required" rows="4" id="input7" placeholder="Comment"></textarea>
+                        <span class="bar"></span>
+                </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 chequePayment">Collect</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Payment Authorize cheque  -->
+
+    <!--Add Payment Request -->
+    <div class="modal fade align-items-center" id="AddpaymentRequest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header"> 
+                    <h4 class="modal-title" id="myLargeModalLabel">Send Payment Request</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+
+                <div class="modal-body mb-1 pt-2">
+                    <!-- step1 -->
+                    <div class="tab-pane profile-tab-pane" id="home3" role="tabpanel">
+                    <button class="btn btn-outline-success waves-effect col-12 Sendrequest">Send Request</button>
+                    <div class="modal-body">
+                        <form class="floating-labels">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                        <fieldset class="floating-labels row">
+                                            <div class="col-6">
+                                                    <h4 class="font-weight-bold">Patient Name:</h4>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control required" id="" placeholder="Patient Name"><span class="bar"></span>
+                                                    </div>                                                    
+                                            </div>
+
+                                            <div class="col-6">
+                                                    <h4 class="font-weight-bold">Date Of Birth:</h4>
+                                                    <div class="form-group">
+                                                        <input type="date" class="form-control required" id=""><span class="bar"></span>
+                                                    </div>                                                    
+                                            </div>  
+
+                                            <div class="col-6">
+                                                    <h4 class="font-weight-bold">Date Of Service:</h4>
+                                                    <div class="form-group">
+                                                        <input type="date" class="form-control required" id=""><span class="bar"></span>
+                                                    </div>                                                    
+                                            </div>
+
+                                            <div class="col-6">
+                                                    <h4 class="font-weight-bold">Amount Requested:</h4>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control required" id="" placeholder="Amount Requested (In $$)"><span class="bar"></span>
+                                                    </div>                                                    
+                                            </div>
+
+                                            <div class="col-6">
+                                                    <h4 class="font-weight-bold">Phone:</h4>
+                                                    <div class="form-group">
+                                                        <input type="tel" class="form-control required" id="" placeholder="Phone"><span class="bar"></span>
+                                                    </div>                                                    
+                                            </div>
+
+                                            <div class="col-6">
+                                                    <h4 class="font-weight-bold">Email:</h4>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control required" id="" placeholder="Email"><span class="bar"></span>
+                                                    </div>                                                    
+                                            </div>
+
+                                            <div class="col-12">
+                                                    <h4 class="font-weight-bold">Notes:</h4>
+                                                    <textarea class="form-control required" rows="4" id="input7" placeholder="Notes"></textarea>
+                                                    <span class="bar"></span>                                                    
+                                            </div>
+                                        </fieldset>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                    <!-- step1 -->
+                </div>
+            </div>
+    <!-- /.modal-content -->
+        </div>
+    <!-- /.modal-dialog -->
+    </div>
+    <!--Add Payment Request -->
+
+    <!-- Modals End -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <script src="assets/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+    <script>
+        $(function () {
+            // responsive table
+            $('#config-table').DataTable({
+                responsive: true
+            });
+            $('#example23').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+            $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+        });
+
+    </script>
+    <!-- ============================================================== -->
+    <!-- Chart JS -->
+    <script src="dist/js/dashboard1.js"></script>
+    <script src="https://desk.zoho.com/portal/api/feedbackwidget/171918000001748149?orgId=642064172&displayType=popout"></script>
+
+    <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
+    <script src="dist/js/pages/toastr.js"></script>
+      
+    <!-- Plugin JavaScript -->
+    <script src="assets/node_modules/moment/moment.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="assets/node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script>
+    // Single Date Range Picker
+    $('.singledate').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true
+    });
+
+    // Always Show Calendar on Ranges
+    $('.shawCalRanges').daterangepicker({
+        ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        alwaysShowCalendars: true,
+    });
+    </script>
+    <!-- Sweet-Alert  -->
+    <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+    <script type="text/javascript">
+        // checkbox turn to green
+        $(document).ready(function(){
+            $(".form-radio").click(function(){
+                $(this).children(".required-label").removeClass("required-label");
+                $(this).siblings().children(".radiolabel").addClass("checkbox-yellow");
+            })
+            $(".form-checkbox").click(function(){
+                $(this).children(".required-label").removeClass("required-label");
+                $(this).siblings().children(".checklabel").addClass("checkbox-yellow");
+            })
+        })
+
+        $(document).ready(function(){
+            $(".required-label").click(function(){
+                $(this).removeClass("checkbox-yellow")
+            })
+        })
+
+        // floating labels
+        $('.floating-labels .form-control').on('focus blur', function (e) {
+            $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+        }).trigger('blur');
+
+        // For Custom File Input
+        $('.custom-file-input').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+
+        // border color change on data filling
+        $('.required').on('keyup', function (ev) {
+            $(this).toggleClass('green-border', !!$(this).val().trim());
+        });
+
+        $('.optional').on('keyup', function (ev) {
+            $(this).toggleClass('green-border', !!$(this).val().trim());
+        });
+
+        $('.required').on('change', function (ev) {
+            $(this).toggleClass('green-border', !!$(this).val().trim());
+        });
+
+        $('.required-upload').on('change', function (ev) {
+            $(this).toggleClass('upload-green-border', !!$(this).val().trim());
+        }); 
+    </script>
+    <script type="text/javascript">
+        $('#punchInButton').click(function() {
+        $(this).hide();
+        $('#punchOutButton').show();
+        });
+
+        $('#punchOutButton').click(function() {
+        $(this).hide();
+        $('#punchInButton').show();
+        });
+
+        $('#punchInButtonProfile').click(function() {
+        $(this).hide();
+        $('#punchOutButtonProfile').show();
+        });
+
+        $('#punchOutButtonProfile').click(function() {
+        $(this).hide();
+        $('#punchInButtonProfile').show();
+        });
+    </script>
+
+</body>
+
+</html>

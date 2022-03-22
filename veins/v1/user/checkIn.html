@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Favicon icon -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+  <title>Veins V1</title>
+
+  <link href="dist/css/pages/icon-page.css" rel="stylesheet">
+  <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+  <link href="dist/css/pages/stylish-tooltip.css" rel="stylesheet">
+  <link href="dist/css/pages/tab-page.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
+  <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/responsive.dataTables.min.css">
+  <link href="dist/css/style.css" rel="stylesheet">
+  <link href="dist/css/custom.css" rel="stylesheet">
+  <link href="dist/css/pages/floating-label.css" rel="stylesheet">
+  <link href="assets/node_modules/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+  <link href="assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/node_modules/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/node_modules/switchery/dist/switchery.min.css" rel="stylesheet" />
+  <link href="assets/node_modules/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+  <link href="assets/node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
+  <link href="assets/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+  <link href="assets/node_modules/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+  <!--alerts CSS -->
+  <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+  <!-- toast CSS -->
+  <link href="assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+  <!-- page css -->
+  <link href="dist/css/pages/other-pages.css" rel="stylesheet">
+  <link href="dist/css/pages/chat-app-page.css" rel="stylesheet">
+  <link href="dist/css/pages/inbox.css" rel="stylesheet">
+  <!-- wysihtml5 CSS -->
+  <link rel="stylesheet" href="assets/node_modules/html5-editor/bootstrap-wysihtml5.css">
+  <link href="dist/css/form.css" rel="stylesheet">
+  <link href="assets/node_modules/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]--> 
+<link href="dist/css/form.css" rel="stylesheet">
+</head>
+<body>
+	<div id="loader"></div>
+
+        <section id="step-0" class="section active m-b-40" style="margin-top: 100px;">
+          <div class="container form-container text-center fadeInDown">
+            <div class="row">
+              <div class="col-xl-6 text-center">
+                <div class="card checkinCard">
+                    <div class="card-body text-center">
+                        <h4 class="font-weight-bold indigo-text">Checkin</h4>
+                        <p>Click on the button below to start</p>
+                        
+                        <a type="button" href="checkIn.html" class="btn btn-outline-success waves-effect">Checkin</a>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-xl-6 text-center">
+                <div class="card checkinCard">
+                    <div class="card-body text-center">
+                        <h4 class="font-weight-bold indigo-text">Veins Express Checkin</h4>
+                        <p>Have a Veins ID?</p>
+                        <a type="button" href="veinsCheckin.html" class="btn btn-outline-success waves-effect">Checkin</a>
+                    </div>
+                </div>
+              </div>              
+            </div>
+
+            <div class="row">
+          
+              <div class="card col" id="backbtncard">
+                <a href="index.html">
+                    <img src="assets/images/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                    <img src="assets/images/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+                </a>
+              </div>
+
+              <div class="card col" id="nextbtncard">
+                  <a href="">
+                    <img src="assets/images/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                    <img src="assets/images/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+                  </a>
+              </div>	
+                
+            </div>
+
+          </div>
+        </section>
+
+
+        <section id="step-1" class="section active m-b-40">
+            
+            <div class="container form-container text-center slide">
+              <div class="container text-center" id="middleFix">
+                <h2 class="font-weight-bold text-uppercase">Select Visit Type</h2>
+                    <!--Checkbox-->
+                    <div class="form-group">
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Walk In</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Appointment</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Telemedicine</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Phone Consult</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">No visit</label>  
+                      </div>
+                    </div>
+                    <!--Checkbox-->
+              </div>
+
+              <div class="row">
+            
+                <div class="card col" id="backbtncard">
+                  <a href="">
+                      <img src="assets/images/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                      <img src="assets/images/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+                  </a>
+                </div>
+        
+                <div class="card col" id="nextbtncard">
+                    <a href="">
+                      <img src="assets/images/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                      <img src="assets/images/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+                    </a>
+                </div>	
+                  
+              </div>
+            </div>
+        </section>
+
+
+        <section id="step-2" class="section active m-b-40">
+            <div class="container form-container text-center slide">
+              <div class="container text-center" id="middleFix">
+                <h2 class="font-weight-bold text-uppercase">Select Visit Reason</h2>
+                    <!--Checkbox-->
+                    <div class="form-group">
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Sick</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Physical</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Allergy test</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">New Patient Sick</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">New Patient Physical</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Med Rifil</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Follow Up</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Fluoride</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Circumcision</label>  
+                      </div>
+
+                      <div class="form-checkbox">
+                      <input required class="radio" type="radio" name="" id="" value="">
+                      <label class="checklabel" for="">Post E.R/ Urgent care</label>  
+                      </div>
+                    </div>
+                    <!--Checkbox-->
+              </div>
+
+              <div class="row">
+            
+                <div class="card col" id="backbtncard">
+                  <a href="">
+                      <img src="assets/images/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                      <img src="assets/images/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+                  </a>
+                </div>
+        
+                <div class="card col" id="nextbtncard">
+                    <a href="">
+                      <img src="assets/images/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                      <img src="assets/images/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+                    </a>
+                </div>	
+                  
+              </div>
+            </div>
+        </section>
+
+
+        <section id="step-3" class="section active m-b-40">
+          <div class="container form-container">
+              <h3 class="font-weight-bold h3Spacing text-center">Basic Details</h3>
+                <form class="floating-labels">
+                      <!-- first row -->
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <!-- first name -->
+                          <div class="form-group focused m-b-40">
+                            <input type="text" class="form-control required" id="filler_name" name="filler_name">
+                            <label for="float-label">First Name</label>
+                          </div>
+                          <!-- first name -->
+                        </div>
+                        <div class="col-lg-12">
+                          <!-- last name -->
+                          <div class="form-group m-b-40">
+                            <input type="text" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                            <label for="">Last Name</label>
+                          </div>
+                          <!-- last name -->
+                        </div>
+                      </div>
+                      <!-- first row -->
+
+                      <!-- second row -->
+                      <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group m-b-40">
+                                <input type="date" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group m-b-40">
+                                <select class="form-control custom-select"tabindex="1">
+                                    <option value="">Choose a Gender</option>                                                            
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                    <option value="">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                      </div>
+                      <!-- second row -->
+
+                      <!-- fourth row -->
+                      <div class="row">
+                            <div class="form-group m-b-40 col-12">
+                                <input type="text" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                                <label for="">Social Security Number</label>
+                            </div>
+                      </div>
+                      <!-- fourth row -->
+                </form>
+
+                <div class="row">
+              
+                  <div class="card col" id="backbtncard">
+                    <a href="">
+                        <img src="assets/images/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                        <img src="assets/images/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+                    </a>
+                  </div>
+          
+                  <div class="card col" id="nextbtncard">
+                      <a href="">
+                        <img src="assets/images/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                        <img src="assets/images/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+                      </a>
+                  </div>	
+                    
+                </div>
+          </div>
+        </section>
+
+
+        <section id="step-4" class="section active m-b-40">
+          <div class="container form-container">                                
+            <h3 class="font-weight-bold h3Spacing text-center">Contact Information</h3>
+            <form class="floating-labels">
+              <!-- third row -->
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="form-group m-b-40">
+                          <input type="tel" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                          <label for="">Phone Number</label>
+                      </div>
+                  </div>
+                  <div class="col-lg-12">
+                      <div class="form-group m-b-40">
+                          <input type="email" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                          <label for="">Email</label>
+                      </div>
+                  </div>
+              </div>
+            <!-- third row -->
+            </form>
+
+            <div class="row">
+					
+              <div class="card col" id="backbtncard">
+                <a href="">
+                    <img src="assets/images/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                    <img src="assets/images/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+                </a>
+              </div>
+      
+              <div class="card col" id="nextbtncard">
+                  <a href="">
+                    <img src="assets/images/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                    <img src="assets/images/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+                  </a>
+              </div>	
+                
+            </div>
+          </div>
+        </section>
+
+
+        <section id="step-5" class="section active m-b-40">
+          <div class="container form-container">
+            <h3 class="font-weight-bold h3Spacing text-center">Address</h3>
+              <form class="floating-labels">
+                <!-- fifth row -->
+                <div class="row">
+                  <div class="col-lg-12">
+                      <div class="form-group m-b-40">
+                          <input type="text" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                          <label for="street">Street</label>
+                      </div>
+                  </div>
+                  <div class="col-lg-12">
+                      <div class="form-group m-b-40">
+                          <input type="text" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                          <label for="city">City</label>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                      <div class="form-group m-b-40">
+                          <input type="text" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                          <label for="zip">Zip</label>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                      <div class="form-group m-b-40">
+                          <select class="form-control custom-select"tabindex="1">
+                              <option value="">Choose State</option>                                                            
+                              <option value="FL">FL</option>
+                              <option value="AL">AL</option>
+                              <option value="AK">AK</option>
+                              <option value="AZ">AZ</option>
+                              <option value="AR">AR</option>
+                              <option value="CA">CA</option>
+                              <option value="CO">CO</option>
+                              <option value="CT">CT</option>
+                              <option value="DE">DE</option>
+                              <option value="GA">GA</option>
+                              <option value="HI">HI</option>
+                              <option value="ID">ID</option>
+                              <option value="IL">IL</option>
+                              <option value="IN">IN</option>
+                              <option value="IA">IA</option>
+                              <option value="KS">KS</option>
+                              <option value="KY">KY</option>
+                              <option value="ME">ME</option>
+                              <option value="MD">MD</option>
+                              <option value="MA">MA</option>
+                              <option value="MI">MI</option>
+                              <option value="MN">MN</option>
+                              <option value="MS">MS</option>
+                              <option value="MO">MO</option>
+                              <option value="MT">MT</option>
+                              <option value="NE">NE</option>
+                              <option value="NV">NV</option>
+                              <option value="NH">NH</option>
+                              <option value="NJ">NJ</option>
+                              <option value="NM">NM</option>
+                              <option value="NY">NY</option>
+                              <option value="NC">NC</option>
+                              <option value="ND">ND</option>
+                              <option value="OH">OH</option>
+                              <option value="OK">OK</option>
+                              <option value="OR">OR</option>
+                              <option value="PA">PA</option>
+                              <option value="RI">RI</option>
+                              <option value="SC">SC</option>
+                              <option value="SD">SD</option>
+                              <option value="TN">TN</option>
+                              <option value="TX">TX</option>
+                              <option value="UT">UT</option>
+                              <option value="VT">VT</option>
+                              <option value="VA">VA</option>
+                              <option value="WA">WA</option>
+                              <option value="WV">WV</option>
+                              <option value="WI">WI</option>
+                              <option value="WY">WY</option>
+                          </select>
+                      </div>
+                  </div>
+                  
+                </div>
+                <!-- fifth row -->
+              </form>
+
+              <div class="row">
+            
+                <div class="card col" id="backbtncard">
+                  <a href="">
+                      <img src="assets/images/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                      <img src="assets/images/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+                  </a>
+                </div>
+        
+                <div class="card col" id="nextbtncard">
+                    <a href="">
+                      <img src="assets/images/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                      <img src="assets/images/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+                    </a>
+                </div>	
+                  
+              </div>
+          </div>
+        </section>
+
+        <section id="step-6" class="section active m-b-40">
+          <div class="container form-container">
+            <h3 class="font-weight-bold h3Spacing text-center">Custom Demo</h3>
+              <form class="floating-labels">  
+                <div class="col-12">
+                    <fieldset class="floating-labels">
+                         <div class="form-group m-b-40">
+                          <input type="text" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                          <label for="street">What Country are you from?</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-12 m-b-40">
+                    <fieldset class="floating-labels">
+                        <div class="form-group" style="margin-bottom: 2px !important;">
+                            <p class="boldText">What are you symptoms (check the options below):</p>
+                        </div> 
+                    </fieldset>
+                    <div class="input-group">
+                            <div class="row">
+                                <div style="margin-right:100px;">
+                                    <input class="input1" type='checkbox' value='3' name='checkbox' id=''/>
+                                    <label for='checkbox1' class="btn btn-outline-info label2">Option O1</label>
+                                </div>
+                                <div>
+                                    <input class="input1" type='checkbox' value='4' name='checkbox' id=''/>
+                                    <label for='checkbox1' class="btn btn-outline-info label2">Option O2</label>
+                                </div>
+                            </div>
+                    </div>                                                
+                </div>
+                
+                <div class="col-12  m-b-40">
+                    <div class="form-group"> 
+                              <p class="boldText">Rate Your experience:</p>
+                        <div class="input-group">
+                                <div class="floating-labels">
+                                    <div class="row">
+                                        <div class="form-group col-1 m-r-40">
+                                            <input class="input1" type='radio' value='1' name='radio' id='radio1'/>
+                                            <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Very Bad">O1</label>
+                                        </div>
+
+                                        <div class="form-group col-1 m-r-40">
+                                            <input class="input1" type='radio' value='2' name='radio' id='radio2'/>
+                                            <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Bad">O2</label>
+                                        </div> 
+                                         
+                                        <div class="form-group col-1 m-r-40">
+                                            <input class="input1" type='radio' value='3' name='radio' id='radio3'/>
+                                            <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Modarate">O3</label>
+                                        </div> 
+                                         
+                                        <div class="form-group col-1 m-r-40">
+                                            <input class="input1" type='radio' value='4' name='radio' id='radio4'/>
+                                            <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Good">O4</label>
+                                        </div>   
+                                         
+                                        <div class="form-group col-1 m-r-40">
+                                            <input class="input1" type='radio' value='5' name='radio' id='radio5'/>
+                                            <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Very Good">O5</label>
+                                        </div>                                              
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12  m-b-40">
+                    <fieldset class="floating-labels">
+                    <div class="form-group"  style="margin-bottom: 2px !important;">
+                        <p class="boldText">What are you symptoms (check the options below):</p>
+                    </div> 
+                    </fieldset>
+                    <div class="input-group">
+                        <div class="row">
+                            <div style="margin-right:100px;">
+                                <input class="input1" type='radio' value='1' name='radio' id='radio1'/>
+                                <label for='radio1' class="btn btn-outline-info label1">Option O1</label>
+                            </div>
+                            <div>
+                                <input class="input1" type='radio' value='2' name='radio' id='radio2'/>
+                                <label for='radio2' class="btn btn-outline-info label1">Option O2</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12  m-b-10">
+                    <fieldset class="floating-labels">
+                    <div class="form-group m-b-40">
+                      <input type="text" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                      <label for="street">Provide your Email Address:</label>
+                    </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-12">
+                    <fieldset class="floating-labels">
+                    <div class="form-group m-b-40">
+                      <input type="tel" class="form-control required phone-inputmask" id="" placeholder=""><span class="bar"></span>
+                      <label for="street">Provide your Phone Number:</label>
+                    </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-12">
+                    <fieldset class="floating-labels">
+                    <div class="form-group"  style="margin-bottom: 2px !important;">
+                        <p class="boldText">Put in your Date of Service:</p>
+                    </div>
+                    <div class="form-group" style="margin-top: -18px;">
+                        <input type="date" class="form-control" id=""><span class="bar"></span>
+                    </div>
+                    </fieldset>
+                </div>
+              </form>
+
+              <div class="row">
+            
+                <div class="card col" id="backbtncard">
+                  <a href="">
+                      <img src="assets/images/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                      <img src="assets/images/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+                  </a>
+                </div>
+        
+                <div class="card col" id="nextbtncard">
+                    <a href="">
+                      <img src="assets/images/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                      <img src="assets/images/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+                    </a>
+                </div>	
+                  
+              </div>
+          </div>
+        </section>
+
+        <section id="step-7" class="section active m-b-40">
+          <div class="container form-container">
+            <h3 class="font-weight-bold h3Spacing text-center">Questionnaire</h3>
+              <form class="floating-labels">  
+                <div class="col-12">
+                    <fieldset class="floating-labels">
+                         <div class="form-group m-b-40">
+                          <input type="text" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                          <label for="street">What Country are you from?</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-12 m-b-40">
+                    <fieldset class="floating-labels">
+                        <div class="form-group" style="margin-bottom: 2px !important;">
+                            <p class="boldText">What are you symptoms (check the options below):</p>
+                        </div> 
+                    </fieldset>
+                    <div class="input-group">
+                            <div class="row">
+                                <div style="margin-right:100px;">
+                                    <input class="input1" type='checkbox' value='3' name='checkbox' id=''/>
+                                    <label for='checkbox1' class="btn btn-outline-info label2">Option O1</label>
+                                </div>
+                                <div>
+                                    <input class="input1" type='checkbox' value='4' name='checkbox' id=''/>
+                                    <label for='checkbox1' class="btn btn-outline-info label2">Option O2</label>
+                                </div>
+                            </div>
+                    </div>                                                
+                </div>
+                
+                <div class="col-12  m-b-40">
+                    <div class="form-group"> 
+                              <p class="boldText">Rate Your experience:</p>
+                        <div class="input-group">
+                                <div class="floating-labels">
+                                    <div class="row">
+                                        <div class="form-group col-1 m-r-40">
+                                            <input class="input1" type='radio' value='1' name='radio' id='radio1'/>
+                                            <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Very Bad">O1</label>
+                                        </div>
+
+                                        <div class="form-group col-1 m-r-40">
+                                            <input class="input1" type='radio' value='2' name='radio' id='radio2'/>
+                                            <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Bad">O2</label>
+                                        </div> 
+                                         
+                                        <div class="form-group col-1 m-r-40">
+                                            <input class="input1" type='radio' value='3' name='radio' id='radio3'/>
+                                            <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Modarate">O3</label>
+                                        </div> 
+                                         
+                                        <div class="form-group col-1 m-r-40">
+                                            <input class="input1" type='radio' value='4' name='radio' id='radio4'/>
+                                            <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Good">O4</label>
+                                        </div>   
+                                         
+                                        <div class="form-group col-1 m-r-40">
+                                            <input class="input1" type='radio' value='5' name='radio' id='radio5'/>
+                                            <label for='radio1' class="btn btn-outline-info label1" data-toggle="tooltip" data-placement="top" title="Very Good">O5</label>
+                                        </div>                                              
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12  m-b-40">
+                    <fieldset class="floating-labels">
+                    <div class="form-group"  style="margin-bottom: 2px !important;">
+                        <p class="boldText">What are you symptoms (check the options below):</p>
+                    </div> 
+                    </fieldset>
+                    <div class="input-group">
+                        <div class="row">
+                            <div style="margin-right:100px;">
+                                <input class="input1" type='radio' value='1' name='radio' id='radio1'/>
+                                <label for='radio1' class="btn btn-outline-info label1">Option O1</label>
+                            </div>
+                            <div>
+                                <input class="input1" type='radio' value='2' name='radio' id='radio2'/>
+                                <label for='radio2' class="btn btn-outline-info label1">Option O2</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12  m-b-10">
+                    <fieldset class="floating-labels">
+                    <div class="form-group m-b-40">
+                      <input type="text" class="form-control required" id="" placeholder=""><span class="bar"></span>
+                      <label for="street">Provide your Email Address:</label>
+                    </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-12">
+                    <fieldset class="floating-labels">
+                    <div class="form-group m-b-40">
+                      <input type="tel" class="form-control required phone-inputmask" id="" placeholder=""><span class="bar"></span>
+                      <label for="street">Provide your Phone Number:</label>
+                    </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-12">
+                    <fieldset class="floating-labels">
+                    <div class="form-group"  style="margin-bottom: 2px !important;">
+                        <p class="boldText">Put in your Date of Service:</p>
+                    </div>
+                    <div class="form-group" style="margin-top: -18px;">
+                        <input type="date" class="form-control" id=""><span class="bar"></span>
+                    </div>
+                    </fieldset>
+                </div>
+              </form>
+
+              <div class="row">
+            
+                <div class="card col" id="backbtncard">
+                  <a href="">
+                      <img src="assets/images/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                      <img src="assets/images/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+                  </a>
+                </div>
+        
+                <div class="card col" id="nextbtncard">
+                    <a href="">
+                      <img src="assets/images/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                      <img src="assets/images/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+                    </a>
+                </div>	
+                  
+              </div>
+          </div>
+        </section>
+        
+        <section id="step-8" class="section active m-b-40">
+          <div class="container form-container slide">
+            <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3"> Patient Information </h4>
+            </div>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th>First Name</th>
+                      <td id="td1">Shakir</td>
+                    </tr>
+                    <tr>
+                      <th>Last Name</th>
+                      <td id="td1">Ansari</td>
+                    </tr>
+                    <tr>
+                  <th>Date of Birth</th>
+                      <td id="td1">20/02/1990</td>
+                    </tr>
+                    <tr>
+                      <th>Sex</th>
+                      <td id="td1">Male</td>
+                    </tr>
+                    <tr>
+                      <th>SSN</th>
+                      <td id="td1">000-000-0000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3"> Contact Information </h4>
+              </div>
+                <table class="table table-striped">
+                <tbody>
+                <tr>
+                  <th>Email Address</th>
+                      <td id="td1">sansarir@gmail.com</td>
+                    </tr>
+                    <tr>
+                  <th>Phone Number</th>
+                      <td id="td1">9153595831</td>
+                    </tr>
+                  </tbody>
+              </table>
+    
+              <div class="col-12" id="strips1">
+            <h4 class="font-weight-bold my-3"> Address </h4>
+              </div>
+                <table class="table table-striped">
+                  <tbody>
+                <tr>
+                      <th>Street</th>
+                      <td id="td1">2717 US-89</td>
+                    </tr>
+                    <tr>
+                      <th>City</th>
+                      <td id="td1">Ogden</td>
+                    </tr>
+                    <tr>
+                      <th>State</th>
+                      <td id="td1">UT</td>
+                </tr>
+                <tr>
+                      <th>Zip</th>
+                      <td id="td1">84414</td>
+                </tr>
+                  </tbody>
+              </table>
+              
+              <div class="col-12" id="strips1">
+              <h4 class="font-weight-bold my-3"> Visit Information </h4>
+            </div>
+                <table class="table table-striped">
+                  <tbody>
+                <tr>
+                      <th>Visit Type</th>
+                      <td id="td1">Walk In</td>
+                </tr>
+                <tr>
+                      <th>Visit Reason</th>
+                      <td id="td1">Sick</td>
+                </tr>
+                  </tbody>
+              </table>
+    
+              <div class="row">
+            
+                <div class="card col" id="backbtncard">
+                  <a href="">
+                      <img src="assets/images/buttons/ba.png" alt="" class="img-fluid btn-start" id="backbtn">
+                      <img src="assets/images/buttons/bahover.png" alt="" class="img-fluid btn-start img-top" id="backbtn">
+                  </a>
+                </div>
+        
+                <div class="card col" id="nextbtncard">
+                    <a href="">
+                      <img src="assets/images/buttons/pi.png" alt="" class="img-fluid btn-start" id="nextbtn">
+                      <img src="assets/images/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="nextbtn">
+                    </a>
+                </div>	
+                  
+              </div>
+                
+          </div>
+        </section>
+
+        <section id="step-9" class="section active m-b-40">
+          <div class="container form-container slide">
+            
+            <h3 class="text-center boldText">THANK YOU FOR VISITING VEINS</h3> 
+                
+          </div>
+        </section>
+
+        <!-- ============================================================== -->
+        <!-- All Jquery -->
+        <!-- ============================================================== -->
+        <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap tether Core JavaScript -->
+        <script src="assets/node_modules/popper/popper.min.js"></script>
+        <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- slimscrollbar scrollbar JavaScript -->
+        <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+        <!--Wave Effects -->
+        <script src="dist/js/waves.js"></script>
+        <!--Menu sidebar -->
+        <script src="dist/js/sidebarmenu.js"></script>
+        <!--stickey kit -->
+        <script src="assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+        <script src="assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+        <!--Custom JavaScript -->
+        <script src="dist/js/custom.min.js"></script>
+
+        <script>
+            // checkbox turn to green
+
+            $(document).ready(function(){
+              $(".form-radio").click(function(){
+                $(this).children(".required-label").removeClass("required-label");
+                $(this).siblings().children(".radiolabel").addClass("checkbox-yellow");
+              })
+              $(".form-checkbox").click(function(){
+                $(this).children(".required-label").removeClass("required-label");
+                $(this).siblings().children(".checklabel").addClass("checkbox-yellow");
+              })
+            })
+
+            $(document).ready(function(){
+              $(".required-label").click(function(){
+                $(this).removeClass("checkbox-yellow")
+              })
+            })
+
+            // floating labels
+
+            $('.floating-labels .form-control').on('focus blur', function (e) {
+                    $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+                }).trigger('blur');
+
+            // For Custom File Input
+                $('.custom-file-input').on('change',function(){
+                    //get the file name
+                    var fileName = $(this).val();
+                    //replace the "Choose a file" label
+                    $(this).next('.custom-file-label').html(fileName);
+                })
+
+            // border color change on data filling
+
+            $('.required').on('keyup', function (ev) {
+                $(this).toggleClass('green-border', !!$(this).val().trim());
+            });
+
+            $('.optional').on('keyup', function (ev) {
+                $(this).toggleClass('green-border', !!$(this).val().trim());
+            });
+
+            $('.required').on('change', function (ev) {
+                $(this).toggleClass('green-border', !!$(this).val().trim());
+            });
+
+            $('.required-upload').on('change', function (ev) {
+                $(this).toggleClass('upload-green-border', !!$(this).val().trim());
+            });
+        </script>
+</body>
+</html>

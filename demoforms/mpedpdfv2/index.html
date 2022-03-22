@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>MPED1 | New Patient Form</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="assest/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assest/css/register.css" rel="stylesheet">
+  <link href="assest/css/typography.css" rel="stylesheet">
+  <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+  <style type="text/css">
+    ul.stepper li .btn-box a
+    {
+      padding: 0.8rem !important;
+    }
+    @media only screen and (min-width: 750px)
+    {
+     #section1a,#section1b,#section1c,#section1d
+     {
+      background-image: url(assest/img/section1.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+  } 
+  #section1a .inner-section
+  {
+    padding-top: 20px;
+  }
+
+  #section1b .inner-section
+  {
+    padding-top: 70px;
+  }
+  .next-btn,
+  .back-btn
+  {
+    height: 40px;
+  }
+
+  .shadow,.shadow2
+  {
+    box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+    padding: 30px 40px;
+    border-radius: 10px 10px 10px 10px;
+    background: white;
+  }
+
+  .top-rtplogo
+  {
+    height: 120px;
+  }
+
+  .btn-start
+  {
+    height: 85px;
+  }
+  @media only screen and (min-width: 750px){
+    #confirmation
+    {
+      background-image: url(assest/img/481.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      min-height: 100vh;
+      background-attachment: fixed;
+    } 
+    #check-logo
+    {
+      height: 100px;
+    } 
+  }
+
+  #confirmation .shadow
+  {
+    background-color: white;
+    border-radius: 40px;
+  }
+  .check-img
+  {
+    margin-top: -75px;
+    height: 150px;
+  }
+  .btn-box
+  {
+    justify-content: flex-end;
+  }
+  @media only screen and (max-width: 750px){
+    #section1a .inner-section
+    {
+      padding-top: 15px;
+    }
+
+    #section1b .inner-section
+    {
+      padding-top: 15px;
+    }
+
+    .shadow
+    {
+      box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+      padding: 10px 25px;
+      border-radius: 10px 10px 10px 10px;
+      background: white;
+    }
+    .shadow
+    {
+      box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3);
+      padding: 20px 15px;
+      border-radius: 10px 10px 10px 10px;
+      background: white;
+    }
+
+    .top-rtplogo,.top-rtplogo2
+    {
+      height: 100px;
+    }
+
+    .btn-start
+    {
+      height: 50px;
+    }
+    .btn-start2
+    {
+      height: 70px;
+      margin: 15px auto !important;
+    }
+
+    .inner-section
+    {
+      background:rgba(255,255,255,1);
+    }
+    #confirmation
+    {
+      background-image: url(assest/img/481.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    } 
+    .check-img
+    {
+      margin-top: -50px;
+      height: 100px;
+    }
+    .next-btn,
+    .back-btn
+    {
+      height: 30px;
+    }
+    #finish-step .next-btn
+    {
+     max-width: 90%;
+   } 
+   .btn-box
+   {
+    justify-content: center;
+  }
+  #confirmation h2
+  {
+    font-size: 22px;
+  }
+  #confirmation h3
+  {
+    font-size: 20px;
+  }
+
+}
+
+.progress
+{
+  background: none !important;
+}
+
+.question
+{
+  font-size: 13px;
+}
+
+/* .answers
+{
+  font-size: 30px !important;
+} */
+
+      .font-12
+      {
+        font-size: 13px;
+      }
+      .font-14
+      {
+        font-size: 14px;
+      }
+      .list-square
+      {
+        list-style-type: square;
+      }
+  </style> 
+</head>
+
+<body data-spy="scroll" data-target="#navbar-menu">
+
+<!-- ======================= new patient form ================================  -->
+<section class="" id="registration-section" style="display: block;">
+  <!-- ======================= container ================================  -->
+  <div class="container mt-5 mb-5" id="">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <img src="assest/img/rtplogo.png" alt="" class="img-fluid" width="500">
+      </div>
+      <div class="col-md-6">
+        <div class="row text-right">
+          <div class="col-md-12">
+            <h1 class="font-weight-bold h1-color">ReviewThatPlace.com</h1>
+          </div>
+          <div class="col-md-12">
+           <p>
+             <strong>7037 Rose Ave, Orlando, FL, 32810</strong>
+             <br>
+             <strong>Tel:</strong> 888-503-1636
+             <strong>Fax:</strong> 888-503-1636
+             <br>
+             <strong>Email:</strong> Info@rtp.com
+             <br>
+             <strong>Page:</strong> 3 of 1
+            </p> 
+            <h1 class="font-weight-bold h1-color">New Patient Form</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-color">
+    <!-- ======================= content ================================  -->
+    <div class="card">
+      <div class="card-body">
+        <form class="" method="post" enctype="multipart/form-data" role="form">
+          <div class="row">
+            <div class="col-sm-12 m-2">
+
+                <section class="form-step active">
+                  <h2 class="font-weight-bold h1-color">Sections 1 - 5: Your Info, Patient Demographics, Emergency Contact, Parent's Informaton, Insurance Detail <hr style="border: 2px solid grey;"></h2>
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                    <!-- Your Information -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                          <table class="table-borderless">
+                            <thead>
+                              <tr>
+                                  <legend class="legend-forms">Your Information</legend>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="font-weight-bold">Your Name:</td>
+                                <td>Shakir Ansari</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Email:</td>
+                                <td>x@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Phone:</td>
+                                <td>111-111-1111</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">ID:</td>
+                                <td><img src="assest/img/rtplogo.png" alt="" width="150" class="img-fluid"></td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Relation:</td>
+                                <td>Self</td>
+                              </tr>  
+                              <tr>
+                                <td class="font-weight-bold">How you did you here about us:</td>
+                                <td>Insurance Company</td>
+                              </tr>  
+                              <tr>
+                                <td class="font-weight-bold">Visitation Reason:</td>
+                                <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
+                              </tr>                          
+                            </tbody>
+                          </table> 
+                      </div>
+                    </div> 
+                    <!-- Your Information -->
+                    
+                    <!-- Patient Demographics -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                          <table class="table-borderless">
+                            <thead>
+                              <tr>
+                                  <legend class="legend-forms">Patient Demographics</legend>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="font-weight-bold">Patient Name:</td>
+                                <td>Shakir</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">DOB:</td>
+                                <td>11/11/80</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Gender:</td>
+                                <td>Male</td>
+                              </tr> 
+                              <tr>
+                                <td class="font-weight-bold">SSN:</td>
+                                <td>Male</td>
+                              </tr>                          
+                            </tbody>
+                          </table>
+                      </div>
+                    </div> 
+                    <!-- Patient Demographics -->
+                    
+                    <!-- Other Information -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                        <table class="table-borderless">
+                          <thead>
+                            <tr>
+                                <legend class="legend-forms">Other Information</legend>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="font-weight-bold">Race:</td>
+                              <td>Black or African American</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">Ethnicity:</td>
+                              <td>Not Hispanic or Latino</td>
+                            </tr>   
+                            <tr>
+                              <td class="font-weight-bold">Language:</td>
+                              <td>English</td>
+                            </tr>   
+                            <tr>
+                              <td class="font-weight-bold">Communication Barriers:</td>
+                              <td>Vision, Hearing</td>
+                            </tr>                      
+                          </tbody>
+                        </table>
+                      </div>
+                    </div> 
+                    <!-- Other Information -->
+                    
+                    <!-- Home Address -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                        <table class="table-borderless">
+                          <thead>
+                            <tr>
+                                <legend class="legend-forms">Home Address</legend>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="font-weight-bold">Address:</td>
+                              <td>12th St</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">City:</td>
+                              <td>FL</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">State:</td>
+                              <td>FL</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">Zipcode:</td>
+                              <td>31233</td>
+                            </tr>                         
+                          </tbody>
+                        </table>
+                      </div>
+                    </div> 
+                    <!-- Home Address -->
+                    
+                    <!-- Contact Information -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                        <table class="table-borderless">
+                          <thead>
+                            <tr>
+                                <legend class="legend-forms">Contact Information</legend>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="font-weight-bold">Home Phone:</td>
+                              <td>111-111-1111</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">Cell Phone:</td>
+                              <td>111-111-1112</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">Email:</td>
+                              <td>x@gmail.com</td>
+                            </tr>                       
+                          </tbody>
+                        </table>
+                      </div>
+                    </div> 
+                    <!-- Contact Information -->
+
+                    <!-- Emergency contact -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                          <table class="table-borderless">
+                            <thead>
+                              <tr>
+                                  <legend class="legend-forms">Emergency contact</legend>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="font-weight-bold">Name:</td>
+                                <td>Shakir Ansari</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Phone:</td>
+                                <td>111-111-1111</td>
+                              </tr>   
+                              <tr>
+                                <td class="font-weight-bold">Relation:</td>
+                                <td>other</td>
+                              </tr>                         
+                            </tbody>
+                          </table> 
+                      </div>
+                    </div> 
+                    <!-- Emergency contact -->
+                    
+                    <!-- Parent's Information -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                          <table class="table-borderless">
+                            <thead>
+                              <tr>
+                                  <legend class="legend-forms">Parent's Information</legend>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="font-weight-bold">Marital Status:</td>
+                                <td>Married</td>
+                              </tr>                         
+                            </tbody>
+                          </table>
+                          
+                      </div>
+                    </div> 
+                    <!-- Parent's Information -->
+                    
+                    <!-- Mom's Information -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                          
+                        <table class="table-borderless">
+                          <thead>
+                            <tr>
+                                <legend class="legend-forms">Mom's Information</legend>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="font-weight-bold">Name:</td>
+                              <td>Heather</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">DOB:</td>
+                              <td>11/11/80</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">SSN:</td>
+                              <td>1111111</td>
+                            </tr>    
+                            <tr>
+                              <td class="font-weight-bold">Phone:</td>
+                              <td>111-111-1111</td>
+                            </tr>     
+                            <tr>
+                              <td class="font-weight-bold">Email:</td>
+                              <td>x@gmail.com</td>
+                            </tr>    
+                            <tr>
+                              <td class="font-weight-bold">Employer:</td>
+                              <td>xyz company</td>
+                            </tr>    
+                            <tr>
+                              <td class="font-weight-bold">Work Phone:</td>
+                              <td>111-111-1111</td>
+                            </tr>    
+                            <tr>
+                              <td class="font-weight-bold">Education:</td>
+                              <td>Bachelor’s degree or higher</td>
+                            </tr>               
+                          </tbody>
+                        </table>
+                      </div>
+                    </div> 
+                    <!-- Mom's Information -->
+                    
+                    <!-- Dad's Information -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                        <table class="table-borderless">
+                          <thead>
+                            <tr>
+                                <legend class="legend-forms">Dad's Information</legend>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="font-weight-bold">Name:</td>
+                              <td>John</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">DOB:</td>
+                              <td>11/11/80</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">SSN:</td>
+                              <td>1111111</td>
+                            </tr>    
+                            <tr>
+                              <td class="font-weight-bold">Phone:</td>
+                              <td>111-111-1111</td>
+                            </tr>     
+                            <tr>
+                              <td class="font-weight-bold">Email:</td>
+                              <td>x@gmail.com</td>
+                            </tr>    
+                            <tr>
+                              <td class="font-weight-bold">Employer:</td>
+                              <td>xyz company</td>
+                            </tr>    
+                            <tr>
+                              <td class="font-weight-bold">Work Phone:</td>
+                              <td>111-111-1111</td>
+                            </tr>    
+                            <tr>
+                              <td class="font-weight-bold">Education:</td>
+                              <td>Bachelor’s degree or higher</td>
+                            </tr>                         
+                          </tbody>
+                        </table>
+                      </div>
+                    </div> 
+                    <!-- Dad's Information -->
+                    
+                    <!-- Insurance Information -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                          <table class="table-borderless">
+                            <thead>
+                              <tr>
+                                  <legend class="legend-forms">Payment Information</legend>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="font-weight-bold">Payment Type:</td>
+                                <td>Insurance</td>
+                              </tr>                         
+                            </tbody>
+                          </table>
+                      </div>
+                    </div> 
+                    <!-- Insurance Information -->
+                    
+                    <!-- Primary Insurance -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                        <table class="table-borderless">
+                          <thead>
+                            <tr>
+                                <legend class="legend-forms">Primary Insurance</legend>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="font-weight-bold">Upload ID:</td>
+                            </tr>
+                            <tr>
+                              <td><img src="assest/img/sign.png" alt="" class="img-fluid" width="150"></td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">Primary Insurance:</td>
+                              <td>X Insurance</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">Policy Number:</td>
+                              <td>11111111</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">Group Number:</td>
+                              <td>111111</td>
+                            </tr>                        
+                          </tbody>
+                        </table>
+                      </div>
+                    </div> 
+                    <!-- Primary Insurance -->
+                    
+                    <!-- Secondary Insurance -->
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                        <table class="table-borderless">
+                          <thead>
+                            <tr>
+                                <legend class="legend-forms">Secondary Insurance</legend>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="font-weight-bold">Upload ID:</td>
+                            </tr>
+                            <tr>
+                              <td><img src="assest/img/sign.png" alt="" class="img-fluid" width="150"></td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">Secondary Insurance:</td>
+                              <td>X Insurance</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">Policy Number:</td>
+                              <td>11111111</td>
+                            </tr>
+                            <tr>
+                              <td class="font-weight-bold">Group Number:</td>
+                              <td>111111</td>
+                            </tr>                        
+                          </tbody>
+                        </table>
+                      </div>
+                    </div> 
+                    <!-- Secondary Insurance -->
+                    </div>
+                  </div>
+                </section>
+
+            </div>
+          </div>
+        </form>
+        </div>
+    </div>
+    <!-- ======================= content ================================  -->
+  </div> 
+
+  <div class="container mt-3" id="">
+    <!-- ======================= content ================================  -->
+    <div class="card">
+      <div class="card-body">
+        <form class="" method="post" enctype="multipart/form-data" role="form">
+          <div class="row">
+            <div class="col-sm-12 m-2">
+              <section class="form-step active">
+                <h2 class="font-weight-bold h1-color">Section 06: Social Information <hr style="border: 2px solid grey;"></h2>
+                <div class="step-content container pr-5">
+                  <div class="row">
+
+                  <div class="col-sm-4">
+                    <div class="row inner-row">
+                        <table class="table-borderless">
+                          <tbody>
+                            <tr>
+                              <td class="font-weight-bold">Lives With:</td>
+                              <td>Grandparents</td>
+                            </tr>  
+                            <tr>
+                              <td class="font-weight-bold">Brothers:</td>
+                              <td>2</td>
+                            </tr> 
+                            <tr>
+                              <td class="font-weight-bold">Sisters:</td>
+                              <td>1</td>
+                            </tr>  
+                            <tr>
+                              <td class="font-weight-bold">Pets:</td>
+                              <td>1</td>
+                            </tr>                       
+                          </tbody>
+                        </table>
+                    </div>
+                    <p class="font-weight-bold">Sibling Names and DOB:</p>
+                    <p class="text-justify mt-n3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi ut similique qui quisquam dolorem amet rerum explicabo beatae, dicta, molestias autem reprehenderit illum fuga illo sapiente optio, distinctio asperiores?</p>
+                  </div> 
+
+                  <div class="col-sm-4">
+                    <div class="row inner-row">
+                      <p class="mb-n1 font-14"><strong>Domestic abuse/violence(If Any):</strong><br> 
+                        <span class="ml-2">
+                          <ul class="mt-n3">
+                            <li class="list-square font-12">Verbal</li>
+                            <li class="list-square font-12">Physical</li>
+                            <li class="list-square font-12">Sexual</li>
+                          </ul>
+                        </span>
+                      </p>
+                      <p class="font-weight-bold">Explain Situation(Domestic abuse/violence):</p>
+                      <p class="text-justify mt-n3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, iste dolor? Dolores itaque vitae laudantium quaerat quia adipisci officiis, ea quae, laborum dolore repellat unde nesciunt vel veniam, quam deleniti.</p>
+                    </div>
+                  </div> 
+
+                  <div class="col-sm-3">
+                    <div class="row inner-row">
+                      <p class="mb-n1 font-14"><strong>Smoker in Household:</strong><br> <span class="ml-2">Yes</span></p>
+                      <ul class="ml-lg-n3">
+                        <li class="list-square font-12 mb-n3"><strong>Who (smoker Name)</strong><br> <span class="ml-2">Jhon Walker</span></p>
+                      </ul>
+                      <p class="mb-n1 font-14"><strong>Alcohol use in Household:</strong><br> <span class="ml-2">Yes</span></p>
+                      <ul class="ml-lg-n3">
+                        <li class="list-square font-12 mb-n3"><strong>Who?</strong><br> <span class="ml-2">Jhon Walker</span></p>
+                      </ul>
+                    </div>
+                  </div> 
+                </div>
+              </section>
+            </div>
+          </div>
+        </form>
+        </div>
+    </div>
+    <!-- ======================= content ================================  -->
+  </div>
+
+  <div class="container mt-3" id="">
+    <!-- ======================= content ================================  -->
+    <div class="card">
+      <div class="card-body">
+        <form class="" method="post" enctype="multipart/form-data" role="form">
+          <div class="row">
+            <div class="col-sm-12 m-2">
+
+                <section class="form-step active">
+                  <h2 class="font-weight-bold h1-color">Section 07: Past History <hr style="border: 2px solid grey;"></h2>
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                  
+                    <div class="col-sm-6">
+                      <p class="mb-n1 font-14"><strong>Any Complication during Pregnancy</strong><br> <span class="ml-2">Yes</span></p>
+                      <ul class="ml-lg-n3">
+                        <li class="list-square font-12 mb-n3"><strong>Explain(Complication during Pregnancy)</strong><br> 
+                          <span class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</span>
+                        </p>
+                      </ul>
+                    </div> 
+                    
+                    <div class="col-sm-6 mb-3">
+                          <table class="table-borderless">
+                            <tbody>
+                              <tr>
+                                <td class="font-weight-bold">Delivery:</td>
+                                <td>C-Section</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Labor:</td>
+                                <td>Lorem ipsum dolor sit</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Birth Weight:</td>
+                                <td>100Lb</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Oxygen:</td>
+                                <td>x Oz</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Hospital Name Child Was Born In:</td>
+                                <td>Power Pediatrics</td>
+                              </tr>  
+                              <tr>
+                                <td class="font-weight-bold">At Birth: Hep B:</td>
+                                <td>No</td>
+                              </tr>   
+                              <tr>
+                                <td class="font-weight-bold">Hearing Screen:</td>
+                                <td>Passed</td>
+                              </tr>                       
+                            </tbody>
+                          </table> 
+                    </div> 
+                  
+                    <div class="col-sm-3">
+                      <p class="mb-n1 font-14"><strong>Any Hospital Admission</strong><br> <span class="ml-2">Yes</span></p>
+                      <ul class="ml-lg-n3">
+                        <li class="list-square font-12 mb-n3"><strong>Explain(Hospital Admission)</strong><br> 
+                          <span class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</span>
+                        </p>
+                      </ul>
+                    </div> 
+                  
+                    <div class="col-sm-3">
+                      <p class="mb-n1 font-14"><strong>Any illness</strong><br> <span class="ml-2">Yes</span></p>
+                      <ul class="ml-lg-n3">
+                        <li class="list-square font-12 mb-n3"><strong>Explain (Illness)</strong><br> 
+                          <span class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</span>
+                        </p>
+                      </ul>
+                    </div>
+                  
+                    <div class="col-sm-3">
+                      <p class="mb-n1 font-14"><strong>Any medication</strong><br> <span class="ml-2">Yes</span></p>
+                      <ul class="ml-lg-n3">
+                        <li class="list-square font-12 mb-n3"><strong>Explain (Medication)</strong><br> 
+                          <span class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</span>
+                        </p>
+                      </ul>
+                    </div>
+                  
+                    <div class="col-sm-3">
+                      <p class="mb-n1 font-14"><strong>Any known allergies</strong><br> <span class="ml-2">Yes</span></p>
+                      <ul class="ml-lg-n3">
+                        <li class="list-square font-12 mb-n3"><strong>Explain (Allergies)</strong><br> 
+                          <span class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</span>
+                        </p>
+                      </ul>
+                    </div>
+
+                  </div>
+                </section>
+
+            </div>
+          </div>
+        </form>
+        </div>
+    </div>
+    <!-- ======================= content ================================  -->
+  </div> 
+
+  <div class="container mt-3" id="">
+    <!-- ======================= content ================================  -->
+    <div class="card">
+      <div class="card-body">
+        <form class="" method="post" enctype="multipart/form-data" role="form">
+          <div class="row">
+            <div class="col-sm-12 m-2">
+
+                <section class="form-step active">
+                  <h2 class="font-weight-bold h1-color">Section 08: Developmental History</h2>
+                  <small>For infants to 24 months child, please review the Developmental Milestones of the child and list the age the milestones was achieved</small>
+                  <hr style="border: 2px solid grey;">
+
+                  <div class="step-content container pr-5">
+                    <div class="row">
+
+                    <div class="col-sm-12">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Developmental Milestones</th>
+                            <th>Expected Dates</th>
+                            <th>List Below Date Developmental Milestone achieved or Age</th>
+                          </tr>                          
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="font-weight-bold">Head up 45 degrees; Lifts head</td>
+                            <td>2 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Smile spontaneously; Smile responsively</td>
+                            <td>2 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Roll over; Sit with head steady</td>
+                            <td>4 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Grasp rattle; Turn to see rattling sound; Laugh</td>
+                            <td>4 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Sit- No Support; Roll over</td>
+                            <td>6 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Feed self; Work to obtain toy that is out of reach</td>
+                            <td>6 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Pull to stand; Stand holding up</td>
+                            <td>9 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Says DADA/MAMA- Nonspecific; Use single syllables</td>
+                            <td>9 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Wave Bye-Bye; Imitates activities</td>
+                            <td>9 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Walks well; Walk Backwards; Stops and Recovers</td>
+                            <td>15 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Speak 1 word; Speak 3 words</td>
+                            <td>15 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Removes clothing; Run; Walks up stairs</td>
+                            <td>18 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Dresses themselves; Combines Words</td>
+                            <td>24 Months</td>
+                            <td>Delayed</td>
+                          </tr>
+                        </tbody>
+
+                      </table>
+                    </div>
+
+                  </div>
+                </section>
+
+            </div>
+          </div>
+        </form>
+        </div>
+    </div>
+    <!-- ======================= content ================================  -->
+  </div> 
+
+  <div class="container mt-3" id="">
+    <!-- ======================= content ================================  -->
+    <div class="card">
+      <div class="card-body">
+        <form class="" method="post" enctype="multipart/form-data" role="form">
+          <div class="row">
+            <div class="col-sm-12 m-2">
+
+                <section class="form-step active">
+                  <h2 class="font-weight-bold h1-color">Section 09: Family History<hr style="border: 2px solid grey;"></h2>
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                  
+                      <div class="col-sm-6 mb-2">
+                        <p class="mb-n1 font-14"><strong>Mother Healthy*</strong><br> <span class="ml-2">No</span></p>
+                        <ul class="ml-lg-n3">
+                          <li class="list-square font-12 mb-n3"><strong>If No Explain(Mother Health)</strong><br> 
+                            <span class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</span>
+                          </p>
+                        </ul>
+                      </div> 
+                  
+                      <div class="col-sm-6 mb-2">
+                        <p class="mb-n1 font-14"><strong>Father Healthy*</strong><br> <span class="ml-2">No</span></p>
+                        <ul class="ml-lg-n3">
+                          <li class="list-square font-12 mb-n3"><strong>If No Explain(Father Health)</strong><br> 
+                            <span class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</span>
+                          </p>
+                        </ul>
+                      </div> 
+
+                      <div class="col-sm-6 mb-2">
+                        <p class="mb-n1 font-14"><strong>Siblings Healthy*</strong><br> <span class="ml-2">No</span></p>
+                        <ul class="ml-lg-n3">
+                          <li class="list-square font-12 mb-n3"><strong>If No Explain(Siblings Health)</strong><br> 
+                            <span class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</span>
+                          </p>
+                        </ul>
+                      </div> 
+
+                      <div class="col-sm-6 mb-2">
+                        <p class="mb-n1 font-14"><strong>Paternal Grandparents Healthy</strong><br> <span class="ml-2">No</span></p>
+                        <ul class="ml-lg-n3">
+                          <li class="list-square font-12 mb-n3"><strong>If No Explain(Paternal Grandparents Health)</strong><br> 
+                            <span class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</span>
+                          </p>
+                        </ul>
+                      </div> 
+
+                      <div class="col-sm-6 mb-2">
+                        <p class="mb-n1 font-14"><strong>Maternal Grandparents Healthy</strong><br> <span class="ml-2">No</span></p>
+                        <ul class="ml-lg-n3">
+                          <li class="list-square font-12 mb-n3"><strong>If No Explain(Maternal Grandparents Healthy)</strong><br> 
+                            <span class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</span>
+                          </p>
+                        </ul>
+                      </div>
+
+                      <div class="col-sm-12 mb-2">
+                        <p class="mb-n1 font-14"><strong>Please explain any family Member’s behavior health problem</strong></p>
+                        <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</p>
+                      </div>
+
+                      <div class="col-sm-12 mb-2">
+                        <p class="mb-n1 font-14"><strong>Please list the child’s health concerns in order of importance. When did it begin?</strong></p>
+                        <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</p>
+                      </div>
+
+                    <!-- <div class="col-sm-3">
+                      <p class="mb-n1"><strong>Do you use any of the following?</strong></p>
+                      <ul class="ml-lg-n3">
+                        <li>None</li>
+                        <li>Oxygen</li>
+                        <li>CPAP</li>
+                        <li>BIPAP</li>
+                        <li>Nebulizer</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p class="mb-n1"><strong>Do you have any of the following?</strong></p>
+                      <ul class="ml-lg-n3">
+                        <li>None</li>
+                        <li>Living will</li>
+                        <li>Advanced Directive</li>
+                        <li>Power of Attorney</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p class="mb-n1"><strong>Do you need aide with walking?</strong></p>
+                      <ul class="ml-lg-n3">
+                        <li>None</li>
+                        <li>Walker</li>
+                        <li>Cane</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p class="mb-n1"><strong>Do you need help with daily living activities-</strong></p>
+                      <ul class="ml-lg-n3">
+                        <li>No</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p class="mb-n1"><strong>How are your Vision?</strong></p>
+                      <ul class="ml-lg-n3">
+                        <li>Contact Lenses</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p class="mb-n1"><strong>How are your Hearing?</strong></p>
+                      <ul class="ml-lg-n3">
+                        <li>Good</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p class="mb-n1"><strong>How are your Touch?</strong></p>
+                      <ul class="ml-lg-n3">
+                        <li>Good</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p class="mb-n1"><strong>How are your Taste?</strong></p>
+                      <ul class="ml-lg-n3">
+                        <li>Good</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-sm-3">
+                      <p class="mb-n1"><strong>How are your Smell?</strong></p>
+                      <ul class="ml-lg-n3">
+                        <li>Good</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <p class="mb-n1"><strong>Is there any pain that you have most of the time?</strong></p>
+                      <ul class="ml-lg-n3">
+                        <li>Yes</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-sm-12">
+                      <p class="mb-n1"><strong>Please list any surgeries/hospitalizations below:</strong></p>
+                      <p class="ml-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit ratione numquam explicabo. Reiciendis quibusdam obcaecati nulla eius quas, molestias sed perspiciatis sapiente asperiores earum ea modi maxime explicabo nostrum necessitatibus.</p>
+                    </div> -->
+
+                  </div>
+
+                  <div class="row mt-n3">
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                          <table class="table-borderless">
+                            <tbody>
+                              <tr>
+                                <td class="font-weight-bold">Traveled outside USA:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Diabetes:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Mood Disord:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">High Blood Pressure:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Exposure to HIV:</td>
+                                <td>Yes</td>
+                              </tr>  
+                              <tr>
+                                <td class="font-weight-bold">Anger:</td>
+                                <td>Yes</td>
+                              </tr>                           
+                            </tbody>
+                          </table> 
+                      </div>
+                    </div> 
+
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                          <table class="table-borderless">
+                            <tbody>
+                              <tr>
+                                <td class="font-weight-bold">Heart Disease:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Exposure to TB:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Schizophrenia:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Coronary Artery Disease:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Bipolar:</td>
+                                <td>Yes</td>
+                              </tr>  
+                              <tr>
+                                <td class="font-weight-bold">Drug Abuse:</td>
+                                <td>Yes</td>
+                              </tr>                           
+                            </tbody>
+                          </table> 
+                      </div>
+                    </div>  
+
+                    <div class="col-sm-4">
+                      <div class="row inner-row">
+                          <table class="table-borderless">
+                            <tbody>
+                              <tr>
+                                <td class="font-weight-bold">Cancere:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">ADHD:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Maternal Depression:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">High Cholesterol:</td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-bold">Behavioral Disorder:</td>
+                                <td>Yes</td>
+                              </tr>                             
+                            </tbody>
+                          </table> 
+                      </div>
+                    </div>                       
+                </div>
+                </section>
+
+            </div>
+          </div>
+        </form>
+        </div>
+    </div>
+    <!-- ======================= content ================================  -->
+  </div> 
+
+  <div class="container mt-3" id="">
+    <!-- ======================= content ================================  -->
+    <div class="card">
+      <div class="card-body">
+        <form class="" method="post" enctype="multipart/form-data" role="form">
+          <div class="row">
+            <div class="col-sm-12 m-2">
+
+                <section class="form-step active mb-3">
+                  <h2 class="font-weight-bold h1-color">Section 10: Family Health Habits</h2><hr style="border: 2px solid grey;">
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                      
+                      <table class="table table-bordered col-sm-6 mr-3">
+                        <tbody>
+                          <tr>
+                            <td class="font-weight-bold">How strong are your family’s religious beliefs or practices?</td>
+                            <td>Moderately Strong</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">How often does your family eat meals together?</td>
+                            <td>Occasionally</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">How often does your child use a seatbelt? (Car seat)?</td>
+                            <td>Sometimes</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Does your child ride a bicycle?</td>
+                            <td>Sometimes</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">If yes, how often he/she use a helmet?</td>
+                            <td>Sometimes</td>
+                          </tr>
+                        </tbody>
+
+                      </table>
+                      
+                      <table class="table table-bordered col-sm-5">
+                        <tbody>
+                          <tr>
+                            <td class="font-weight-bold">What kind of guns are in your home?</td>
+                            <td>Handgun, Shotgun, Rifle, Other</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">If you have a gun at home, is it locked up?</td>
+                            <td>N/A</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Does your child use a toothpaste with fluoride in it?</td>
+                            <td>Yes</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Do you help your child with tooth brushing?</td>
+                            <td>Yes</td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">How often do you brush your teeth?</td>
+                            <td>Less than once a day</td>
+                          </tr>
+                        </tbody>
+
+                      </table>
+
+                      <div class="col-sm-6 mb-2">
+                        <p class="mb-n1 font-14"><strong>What does your family do together for fun?</strong></p>
+                        <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</p>
+                      </div>
+
+                      <div class="col-sm-6 mb-2">
+                        <p class="mb-n1 font-14"><strong>Any Concerns of oral of oral/dental health</strong></p>
+                        <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad optio, exercitationem fuga officia sunt sint tenetur culpa nesciunt neque eos quis praesentium harum molestiae odio ducimus quam aut cum. Debitis.</p>
+                      </div>
+
+                  </div>
+                </section>
+
+                
+                <section class="form-step active mb-3">
+                  <h2 class="font-weight-bold h1-color">Section 11: Financial Responsibility</h2><hr style="border: 2px solid grey;">
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                      <small class="col-sm-12 text-justify">
+                        Thank you for choosing us as your child’s health care provider. We are committed to providing your child comprehensive Pediatric care. Please understand that payment of your child’s bill is considered part of their treatment. The following is a statement of our financial policy which we require you to read and sign prior to any treatment.
+                        <br>
+                       <strong>ALL PARENTS MUST COMPLETE ALL PAPERWORK BEFORE THEIR CHILD IS SEEN.</strong><br>
+                        All professional services rendered are charged to the patient and are due at the time of service, unless other arrangements have been made in advance with our business office. Necessary forms will be completed to file for insurance carrier payments.
+                        
+                        If a check is returned to us for any reason, your child’s account will be charged the amount of the check plus a $ 25.00 returned check fee. Parents will be responsible for any fees incurred from collection agencies and/or legal services hired by POWERS PEDIATRICS to secure payment for services.
+                        <br>
+                        <strong>USUAL & CUSTOMARY RATES</strong><br>
+                        Our practice is committed to providing the best treatment for our patients and we charge what is usual and customary for our area. You are responsible for payment regardless of any insurance company’s arbitrary determination of usual or customary rates.
+                        <br>
+                        <strong>INSURANCE</strong><br>
+                        WE CANNOT BILL YOUR INSURANCE COMPANY UNLESS YOU GIVE US A COPY OF YOUR CHILD’S INSURANCE CARD. Without a copy of the card, you will be responsible for 100% of the charges on that date of service. We will file to your insurance company; however, if you must pay a percentage of the bill, it must be paid at the time of service. All co-pays are due at the time of service.
+                        
+                        The balance is your responsibility whether your insurance company pays or not. Your insurance policy is a contract between you and your insurance company. Please be aware that some, and perhaps all of the services provided may be non-covered services and not considered reasonable according to your insurance policy.
+                        
+                        According to Florida State statutes, an HMO has 45 days to process and pay a correct claim. If your insurance has not paid your child’s claim in full within 6 months, you will be responsible for the bill within 10 days of receipt of your statement.
+                        
+                        We will mail 2 statements to you before the account is turned over to a collection agency. If you are unable to pay the balance in full, we can arrange a payment plan for you which you will sign. A copy of the payment plan will be given to you and copy will be kept in your child’s chart. If you default on your payment plan, the account will be forwarded to a collection agency.
+                        
+                        In the event that your insurance changes, it is your responsibility to notify us as we may be non participating providers. Failure to do so will result in you being responsible for all charges incurred. It is not the responsibility of POWERS PEDIATRICS to ensure we are providers. Our main concern is the health of our patients.
+                        
+                        Regarding HMO, Managed Care and Medicaid plan, you are responsible for making sure that our practice and/or doctors are listed as your child’s Primary Care Physicians. Failure to do so will result in you being responsible for all charges incurred.
+                        <br>
+                        <strong>Assignment of Benefits</strong><br>
+                        I hereby assign all medical, dental and surgical benefits, to include major medical benefits to which I am entitled. I hereby authorize and direct my insurance carrieres), including Medicare, private insurance and any other health/medical and dental plan, to issue payment check(s) directly to POWERS PEDIATRICS for medical and dental services rendered to myself and/or my dependents regardless of my insurance benefits, if any. I understand that I am responsible for any amount not covered by insurance.
+                        <br>
+                        <strong>Authorization to Release Information</strong><br>
+                        I hereby authorize POWERS PEDIATRICS to: (1) release any information necessary to insurance carriers regarding my illness and treatments; (2) process insurance claims generated in the course of examination or treatment; and (3) allow a photocopy of my signature to be used to process insurance claims for the period of lifetime. This order will remain in effect until revoked by me in writing.
+                        
+                        I have requested medical services from POWERS PEDIATRICS on behalf of myself and/or my dependents, and understand that by making this request, I become fully financially responsible for any and all charges incurred in the course of the treatment authorized.
+                        
+                        I further understand that fees are due and payable on the date that services are rendered and agree to pay all such charges incurred in full immediately upon presentation of the appropriate statement. A photocopy of this assignment is to be considered as valid as the original.
+                        <br>
+                        Your Signature Below Confirm that you fully understand POWERS PEDIATRICS financial policy.
+                      </small>
+
+                      <div class="col-sm-12">
+                        <legend class="legend-forms">Signee Info</legend>
+                          <p class="mt-n2"><strong>Do you have trouble affording the care or prescriptions prescribed?:</strong> Yes</p>
+                            <table class="table-borderless mt-n2">
+                              <tbody>
+                                <tr>
+                                  <td class="font-weight-bold">Parent’s name:</td>
+                                  <td>Shakir Ansari</td>
+                                </tr>
+                                <tr>
+                                  <td class="font-weight-bold">Child’s name:</td>
+                                  <td>Dave</td>
+                                </tr>
+                                <tr>
+                                  <td class="font-weight-bold">Date:</td>
+                                  <td>11/11/80</td>
+                                </tr>  
+                                <tr>
+                                  <td class="font-weight-bold">Signature:</td>
+                                  <td><img src="assest/img/rtplogo.png" alt="" width="200" class="img-fluid"></td>
+                                </tr>                       
+                              </tbody>
+                            </table> 
+                      </div> 
+                  </div>
+                </section>
+
+                
+                <section class="form-step active mb-3">
+                  <h2 class="font-weight-bold h1-color">Section 12: HIPAA Patient Questionnaire</h2><hr style="border: 2px solid grey;">
+                  <div class="step-content container pr-5">
+                    <div class="row">
+
+                      <div class="col-sm-6">
+                        <small>1. Please list the family members or other person(s), if any, whom we may inform about your general medical condition and your diagnosis (including treatment, payment and health care operations):</small>
+                        <ul>
+                          <li>
+                           <strong>Name:</strong> Shakir Ansari,
+                           <strong>Phone:</strong> 111-111-1111
+                          </li>
+                          <li>
+                           <strong>Name:</strong> Shakir Ansari,
+                           <strong>Phone:</strong> 111-111-1111
+                          </li>
+                          <li>
+                           <strong>Name:</strong> Shakir Ansari,
+                           <strong>Phone:</strong> 111-111-1111
+                          </li>
+                          <li>
+                           <strong>Name:</strong> Shakir Ansari,
+                           <strong>Phone:</strong> 111-111-1111
+                          </li>
+                          <li>
+                           <strong>Name:</strong> Shakir Ansari,
+                           <strong>Phone:</strong> 111-111-1111
+                          </li>
+                        </ul>
+                      </div> 
+
+                      <div class="col-sm-6">
+                        <small>2. Please list the family members or others, if any, whom we may inform about your medical condition ONLY IN AN EMERGENCY.</small>
+                        <ul>
+                          <li>
+                           <strong>Name:</strong> Shakir Ansari,
+                           <strong>Phone:</strong> 111-111-1111
+                          </li>
+                          <li>
+                           <strong>Name:</strong> Shakir Ansari,
+                           <strong>Phone:</strong> 111-111-1111
+                          </li>
+                          <li>
+                           <strong>Name:</strong> Shakir Ansari,
+                           <strong>Phone:</strong> 111-111-1111
+                          </li>
+                          <li>
+                           <strong>Name:</strong> Shakir Ansari,
+                           <strong>Phone:</strong> 111-111-1111
+                          </li>
+                          <li>
+                           <strong>Name:</strong> Shakir Ansari,
+                           <strong>Phone:</strong> 111-111-1111
+                          </li>
+                        </ul>
+                      </div> 
+
+                      <div class="col-sm-6">
+                        <small>3. Please print the address of where you would like your billing statements and/or correspondence from our office to be sent if other than your home. (Confidential Communications)</small>
+                        <ul>
+                          <li>
+                           12th St, New York, New York, 10001
+                          </li>
+                          <li>
+                           12th St, New York, New York, 10001
+                          </li>
+                          <li>
+                           12th St, New York, New York, 10001
+                          </li>
+                          <li>
+                           12th St, New York, New York, 10001
+                          </li>
+                        </ul>
+                      </div> 
+
+                      <div class="col-sm-6">
+                        <small>4. Please indicate if you want all correspondence from our office sent in a sealed envelope marked “CONFIDENTIAL”.</small>
+                        <ul>
+                          <li>Yes</li>
+                        </ul>
+                      </div> 
+
+                      <div class="col-sm-6">
+                        <small>5. Please print the telephone number or email address where you want to receive calls about your appointments, labs and x-rays results or other health care information:</small>
+                        <ul>
+                          <li>
+                           <strong>Home Phone:</strong> 111-111-1111,
+                           <strong>Email:</strong> x@gmail.com
+                          </li>
+                          <li>
+                           <strong>Home Phone:</strong> 111-111-1111,
+                           <strong>Email:</strong> x@gmail.com
+                          </li>
+                          <li>
+                           <strong>Home Phone:</strong> 111-111-1111,
+                           <strong>Email:</strong> x@gmail.com
+                          </li>
+                          <li>
+                           <strong>Home Phone:</strong> 111-111-1111,
+                           <strong>Email:</strong> x@gmail.com
+                          </li>
+                          <li>
+                           <strong>Home Phone:</strong> 111-111-1111,
+                           <strong>Email:</strong> x@gmail.com
+                          </li>
+                        </ul>
+                      </div> 
+
+                      <div class="col-sm-6">
+                        <small>6. Can confidential messages (ie., appointment reminders) be left on your telephone answering machine or voicemail?</small>
+                        <ul>
+                          <li>Yes</li>
+                        </ul>
+                      </div> 
+
+                      <div class="col-sm-12">
+                        <small>I understand the Privacy Protection Act and have been offered a copy of the Organization’s Notice of Privacy Practices updated for the HITECH Omnibus Rule of 2013.</small>
+                        <ul>
+                          <li>Patient Name: Dave</li>
+                          <li>Date: 11/11/21</li>
+                        </ul>
+                      </div> 
+
+                  </div>
+                </section>
+
+                
+                <section class="form-step active mb-3">
+                  <h2 class="font-weight-bold h1-color">Section 13: Consent for Treatment</h2><hr style="border: 2px solid grey;">
+                  <div class="step-content container pr-5">
+                    <div class="row">
+                      <small class="col-sm-7 text-justify">
+                        I consent to the use of disclosure of my protected health information by Powers Pediatrics for the purpose of diagnosing or providing treatment to me/my child, obtaining payment for me/my child’s health care bills or to conduct health care operations of Powers Pediatrics.
+                        <br>
+                        I have the right to revoke this consent, in writing, at any time, except to the extent that Powers Pediatrics has taken action in reliance on this consent.
+                        <br>
+                        Me/my child’s “protected health information” mean health information, including my demographic information, collected from me and created or received by my physician, another health care provider, a health plan, my employer or a health care clearinghouse. This protected health information relates to me/my child, or there is a reasonable basis to believe the information may identify me/my child.
+                        <br>
+                        POWERS PEDIATRICS has an established privacy policy which is displayed in this office and I can request a printed copy of this policy.
+                      </small>
+
+                      <div class="col-sm-3 mt-n3">
+                        <div class="row inner-row">
+                            <table class="table-borderless">
+                              <thead>
+                                <tr>
+                                    <legend class="legend-forms">Signee Info</legend>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="font-weight-bold">Patient Name:</td>
+                                  <td>Shakir Ansari</td>
+                                </tr>
+                                <tr>
+                                  <td class="font-weight-bold">Date:</td>
+                                  <td>11/11/21</td>
+                                </tr>
+                                <tr>
+                                  <td class="font-weight-bold">Relationship:</td>
+                                  <td>Self</td>
+                                </tr>  
+                                <tr>
+                                  <td class="font-weight-bold">Signature:</td>
+                                  <td><img src="assest/img/rtplogo.png" alt="" width="150" class="img-fluid"></td>
+                                </tr>                      
+                              </tbody>
+                            </table> 
+                        </div>
+                      </div> 
+
+                  </div>
+                </section>
+
+            </div>
+          </div>
+        </form>
+        </div>
+    </div>
+    <!-- ======================= content ================================  -->
+  </div> 
+  <!-- ======================= container ================================  -->
+</section>
+<!-- ======================= new patient form ================================  -->
+
+</body>
+</html>

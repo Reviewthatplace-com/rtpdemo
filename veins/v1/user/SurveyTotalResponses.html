@@ -1,0 +1,2073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Veins V1</title>
+
+    <!-- This page CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/responsive.dataTables.min.css">
+    <link href="dist/css/patientSubmission/patientSubmissionFloatinglabel.css" rel="stylesheet">
+
+    <!-- chartist CSS -->
+    <link href="assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+     <link href="dist/css/patientSubmission/patientSubmission.css" rel="stylesheet">
+
+     <!-- page css -->
+     <link href="dist/css/pages/other-pages.css" rel="stylesheet">
+     <link href="dist/css/pages/chat-app-page.css" rel="stylesheet">
+     <link href="dist/css/pages/inbox.css" rel="stylesheet">
+     <link href="dist/css/pages/tab-page.css" rel="stylesheet">
+
+     
+    <link href="assets/node_modules/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="assets/node_modules/chartist-js/dist/chartist-init.css" rel="stylesheet">
+    <link href="assets/node_modules/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="assets/node_modules/css-chart/css-chart.css" rel="stylesheet">
+    <link href="dist/css/pages/widget-page.css" rel="stylesheet">
+
+     <!--alerts CSS -->
+     <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+     <!-- toast CSS -->
+     <link href="dist/css/form.css" rel="stylesheet">
+
+     <!-- wysihtml5 CSS -->
+     <link rel="stylesheet" href="assets/node_modules/html5-editor/bootstrap-wysihtml5.css">
+
+     <!-- Dropzone css -->
+     <link href="assets/node_modules/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css">
+
+    <!-- signature -->
+    <link href="dist/css/signature/jquery.signaturepad.css" rel="stylesheet">
+
+    <!-- Dashboard 1 Page CSS -->
+    <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+ 
+
+    <style>
+        .pie-legend ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        .pie-legend span {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            margin-right: 16px;
+            margin-bottom: -2px;
+        }
+
+        .pie-legend li {
+            margin-bottom: 10px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .table {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    </style>
+</head>
+
+<body class="skin-blue fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">RTP Medical Solutions</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== --> 
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="assets/images/favicon.ico" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="assets/images/favicon.ico" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="assets/images/rtplogo.png" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                          <img src="assets/images/rtplogo.png" style="height: 75px; margin-left: 35px;" class="light-logo" alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                        <li class="nav-item"><h1 class="dashboardName">Practice Dashboard</h1><p class="boldText text-white">RTP3234 - Powers Pediatrics - 7037 Rose Ave Orlando, FL 32810 - 407-286-2965</p></li>
+                        <!-- ============================================================== -->
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <div class="text-center mt-3">
+                            <input class="btn btn-success punchedIn" id="punchInButtonProfile" type="button" value="Punched In" data-toggle="tooltip" data-html="true"  data-placement="left" title="" data-original-title="02/26/21 6:00am <br> Punched In">
+                            <input class="btn btn-danger punchedOut" id="punchOutButtonProfile" type="button" value="Punched Out" data-toggle="tooltip" data-html="true" data-placement="left" title="" data-original-title="02/26/21 6:00am <br> Punched Out">
+                            <p class="lead output"></p>
+                        </div>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="userDashboard.html" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-home"  data-toggle="tooltip" data-placement="left" title="" data-original-title="User Dashboard"></i>
+                                <div class="notify"> </div>
+                            </a>
+                        </li>
+
+
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-search-location"  data-toggle="tooltip" data-placement="left" title="" data-original-title="My Locations"></i>
+                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown">
+                                <ul>
+                                    <li>
+                                        <div class="drop-title">My Locations</div>
+                                    </li>
+                                    <li>
+                                        <div class="message-center">
+                                            <!-- Message -->
+                                            <a href="index.html">
+                                                <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Powers Pediatrics</h5> <span class="mail-desc">Ornaldo, Florida</span> <span class="time">405-122-1222 | RTP1234</span> </div>
+                                            </a>
+
+                                            <a href="index.html">
+                                                <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Powers Pediatrics</h5> <span class="mail-desc">Ornaldo, Florida</span> <span class="time">405-122-1222 | RTP1234</span> </div>
+                                            </a>
+
+                                            <a href="index.html">
+                                                <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Powers Pediatrics</h5> <span class="mail-desc">Ornaldo, Florida</span> <span class="time">405-122-1222 | RTP1234</span> </div>
+                                            </a>
+
+                                            <a href="index.html">
+                                                <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Powers Pediatrics</h5> <span class="mail-desc">Ornaldo, Florida</span> <span class="time">405-122-1222 | RTP1234</span> </div>
+                                            </a>
+                                          
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center link" href="mylocationsPractice.html"> <strong>View All Locations</strong> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Comment -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Messages -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-bell"  data-toggle="tooltip" data-placement="left" title="" data-original-title="Notifications"></i>
+                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            </a>
+                            <div class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown" aria-labelledby="2">
+                                <ul>
+                                    <li>
+                                        <div class="drop-title">You have 4 new Notification</div>
+                                    </li>
+                                    <li>
+                                        <div class="message-center">
+                                            <!-- Message -->
+                                            <a href="auditLog.html">
+                                                <div class="user-img"> <img src="assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <span class="mail-desc">New Order Recieved</span> 
+                                                    <span class="time">9:30 AM</span> 
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+
+                                            <!-- Message -->
+                                            <a href="auditLog.html">
+                                                <div class="user-img"> <img src="assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <span class="mail-desc">New Order Recieved</span> 
+                                                    <span class="time">9:30 AM</span> 
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+
+                                            <!-- Message -->
+                                            <a href="auditLog.html">
+                                                <div class="user-img"> <img src="assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <span class="mail-desc">New Order Recieved</span> 
+                                                    <span class="time">9:30 AM</span> 
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <!-- Message -->
+                                            <a href="auditLog.html">
+                                                <div class="user-img"> <img src="assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <span class="mail-desc">New Order Recieved</span> 
+                                                    <span class="time">9:30 AM</span> 
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <!-- Message -->
+                                            <a href="auditLog.html">
+                                                <div class="user-img"> <img src="assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <span class="mail-desc">New Order Recieved</span> 
+                                                    <span class="time">9:30 AM</span> 
+                                                </div>
+                                            </a>
+
+                                            <!-- Message -->
+                                           
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center link" href="auditLogUser.html"> <strong>See All</strong> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Messages -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-dark" href="" data-toggle="modal" data-target="#mergev2Modal" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-check" data-toggle="tooltip" data-placement="left" title="" data-original-title="Quick Check-in"></i>
+                                <div class="notify"> </div>
+                            </a>
+                        </li>
+                      
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- User Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class=""> <span class="hidden-md-down">Ravi Agrawal &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <!-- text-->
+                                 <a href="personalSetting.html" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                                <!-- text-->
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-dark" href="lockscreen.html" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-lock"  data-toggle="tooltip" data-placement="left" title="" data-original-title="lockscreen"></i>
+                                <div class="notify"> </div>
+                            </a>
+                        </li>
+
+
+                     
+                        <!-- ============================================================== -->
+                        <!-- End User Profile -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">   
+
+                        <li class="nav-small-cap">Operations</li>
+                        <li> <a class="waves-effect waves-dark" href="checkIn.html" aria-expanded="false"><i class="far fa-check-circle text-danger"></i><span class="hide-menu">Veins Check In</span></a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-file-excel"></i><span class="hide-menu">Veins Tracker<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="stageDisplay.html">Stage Display </a></li>
+                                <li><a href="lobbyDisplay.html">Lobby Display</a></li>
+                                <li><a href="checkOut.html">Check Out</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-clipboard-check"></i><span class="hide-menu">Patient Submission</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">New Patient</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="newptInprogress.html">In Progress</a></li>
+                                        <li class="m-l-10"><a href="newptCompleted.html">Complete</a></li>
+                                        <li class="m-l-10"><a href="newptArchived.html">Archived</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Update Demo</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="updatedemoSubmitted.html">Submitted</a></li>
+                                        <li class="m-l-10"><a href="updatedemoCompleted.html">Complete</a></li>
+                                        <li class="m-l-10"><a href="updatedemoArchived.html">Archived</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Request Form</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="requestformSubmitted.html">Submitted</a></li>
+                                        <li class="m-l-10"><a href="requestformCompleted.html">Complete</a></li>
+                                        <li class="m-l-10"><a href="requestformArchived.html">Archived</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Authorization Release</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="authorizationrleaseSubmitted.html">Submitted</a></li>
+                                        <li class="m-l-10"><a href="authorizationrleaseCompleted.html">Complete</a></li>
+                                        <li class="m-l-10"><a href="authorizationrleaseArchived.html">Archived</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Book Appointments</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="bookappointmentsSubmitted.html">Submitted</a></li>
+                                        <li class="m-l-10"><a href="bookappointmentsCompleted.html">Upcoming</a></li>
+                                        <li class="m-l-10"><a href="bookappointmentsArchived.html">Archived</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Survey</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="SurveyTotalResponses.html">Total Responses</a></li>
+                                        <li class="m-l-10"><a href="SurveyCompleted.html">Complete</a></li>
+                                        <li class="m-l-10"><a href="SurveyArchived.html">Archived</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-phone"></i><span class="hide-menu">Call Lists</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="calllistPending.html">Pending</a></li>
+                                <li><a href="calllistCompleted.html">Completed</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="patientPortal.html" aria-expanded="false"><i class="fas fa-clinic-medical text-danger"></i><span class="hide-menu">Patients</span></a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-cash-register"></i><span class="hide-menu">Payments <span class="badge badge-pill badge-info">25</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="paymentrequest.html">Active Requests</a></li>
+                                <li><a href="paymentpaid.html">Paid</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-small-cap">Internal</li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-user-clock"></i><span class="hide-menu">Clock In/Out</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="timeSheet.html">Time Sheet</a></li>
+                                <li><a href="punchOut.html">Punch</a></li>
+                                <li><a href="InternalTimeoff.html">Time Off</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-copyright"></i><span class="hide-menu">Compliance</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">BAA</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="InternalCBAAActive.html">Active</a></li>
+                                        <li class="m-l-10"><a href="InternalCBAAInactive.html">Inactive</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">HIPAA</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="InternalCHIPAAActive.html">Active</a></li>
+                                        <li class="m-l-10"><a href="InternalCHIPAAInactive.html">Inactive</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Non-Disclosure</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="InternalCNondisclosureActive.html">Active</a></li>
+                                        <li class="m-l-10"><a href="InternalCNondisclosureInactive.html">Inactive</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-clipboard-list"></i><span class="hide-menu">License Management</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="InternalLicensemgtActive.html">Active</a></li>
+                                <li><a href="InternalLicensemgtInactive.html">Inactive</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="auditLog.html" aria-expanded="false"><i class="fas fa-history"></i><span class="hide-menu">Aduit Log</span></a></li>
+
+                        <li class="nav-small-cap">Admin</li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-map"></i><span class="hide-menu">Location</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="demographics.html">Location Info</a></li>
+                                <li><a href="physicians.html">Physicians</a></li>
+                                <li><a href="smsTemplates.html">SMS Template</a></li>
+                                <li><a href="emailTemplates.html">Email Template</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-check-circle text-danger"></i><span class="hide-menu">Veins</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Veins Check-in</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li><a href="visitType.html">Visit Type</a></li>
+                                        <li><a href="intakeDemo.html">Demo</a></li>
+                                        <li><a href="intakeQuestionnaire.html">Questionnaire</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Veins Tracker</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li><a href="stageAndStep.html">Stage And Step</a></li>
+                                        <li><a href="resource.html">Resource</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li> 
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-clipboard-check"></i><span class="hide-menu">Patient Submission</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li class="m-l-10"><a href="adminNewpatient.html">New Patient</a></li>
+                                <li class="m-l-10"><a href="adminRequestForm.html">Request Form</a></li>
+                                <li class="m-l-10"><a href="adminUpdateDemo.html">Update Demo</a></li>
+                                <li class="m-l-10"><a href="adminAuthRlease.html">Authorization Release</a></li>
+                                <li class="m-l-10"><a href="adminAppointments.html">Appointments</a></li>
+                                <li class="m-l-10"><a href="SurveyActive.html">Survey</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-user-clock"></i><span class="hide-menu">Clock In/Out</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="adminclockinoutUsers.html">User</a></li>
+                                <li><a href="adminclockinoutTimeoff.html">Time Off Request</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-phone"></i><span class="hide-menu">Call Lists</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="admincalllistsType.html">Call List Type</a></li>
+                                <li><a href="adminUploadcalllist.html">Generate Call List</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-copyright"></i><span class="hide-menu">Compliance</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="adminCBAA.html">BAA</a></li>
+                                <li><a href="adminCPrivacypolicy.html">Privacy Policy</a></li>
+                                <li><a href="adminCHIPAA.html">HIPAA</a></li>
+                                <li><a href="adminCNondisclosure.html">Non-Disclosure</a></li>
+                            </ul>
+                        </li> 
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-sign-out-alt text-success"></i><span class="hide-menu">Log Out</span></a></li>
+
+                        <li class="nav-small-cap">Reports</li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-list"></i><span class="hide-menu">Reports<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="statisticReport.html">Statistic Reports</a></li>
+                                <li><a href="waitTimeReports.html">Wait Time Reports</a></li>
+                                <li><a href="advancedWaitTime.html">Advanced Wait Time Reports</a></li>
+                                <li>
+                                    <a href="dailyReport.html">Daily Reports</a>
+                                </li>
+                                <li>
+                                    <a href="stepReport.html">Step Reports</a>
+                                </li>
+                                <li>
+                                    <a href="physicianReport.html">Physician Reports</a>
+                                </li>
+                                <li>
+                                    <a href="staffReport.html">Staff Reports</a>
+                                </li>
+                                <li>
+                                    <a href="paymentReport.html">Payment Reports</a>
+                                </li>
+                                <li>
+                                    <a href="checkoutReport.html">Checkout Reports</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Manage Survey</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">Survey</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Info box -->
+                <!-- ============================================================== -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive-xl">
+                                <table id="config-table" class="table display table-bordered table-striped no-wrap text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Status</th>
+                                            <th>Questionnaire ID </th>
+                                            <th>Question Name</th>
+                                            <th>Question Type</th>
+                                            <th>Total responses</th>
+                                            <th>Responses</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="bs-label label-success badgeBorder">Active</span>
+                                            </td>
+                                            <td>QID-1-1</td>
+                                            <td>Question 01</td>
+                                            <td>Text Box</td>
+                                            <td>1/3</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#TextBox">View Responses</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="bs-label label-success badgeBorder">Active</span>
+                                            </td>
+                                            <td>QID-1-1</td>
+                                            <td>Question 01</td>
+                                            <td>Checkbox</td>
+                                            <td>1/2</td>
+                                            <td>
+                                                <h4 class="font-weight-bold">Responses</h4>
+                                                    <div id="m-piechart2" style="width:100%; height:278px"></div>
+                                                    <center>
+                                                        <ul class="list-inline m-t-20">
+                                                            <li>
+                                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-success"></i>Fever</h6> </li>
+                                                            <li>
+                                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-primary"></i>Caugh</h6> </li>
+                                                            <li>
+                                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-danger"></i>Pain</h6> </li>
+                                                        </ul>
+                                                    </center>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="bs-label label-success badgeBorder">Active</span>
+                                            </td>
+                                            <td>QID-1-1</td>
+                                            <td>Question 02</td>
+                                            <td>Rating</td>
+                                            <td>3/5</td>
+                                            <td>
+                                                <h4 class="font-weight-bold">Rating</h4>
+                                                    <div id="m-piechart1" style="width:100%; height:278px"></div>
+                                                    <center>
+                                                        <ul class="list-inline m-t-20">
+                                                            <li>
+                                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-success"></i>05</h6> </li>
+                                                            <li>
+                                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-primary"></i>04</h6> </li>
+                                                            <li>
+                                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-danger"></i>02</h6> </li>
+                                                            <li>
+                                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-muted"></i>03</h6> </li>
+                                                        </ul>
+                                                    </center>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="bs-label label-success badgeBorder">Active</span>
+                                            </td>
+                                            <td>QID-1-1</td>
+                                            <td>Question 03</td>
+                                            <td>Radio</td>
+                                            <td>3/5</td>
+                                            <td>
+                                                <h4 class="font-weight-bold">Responses</h4>
+                                                    <div id="m-piechart" style="width:100%; height:278px"></div>
+                                                    <center>
+                                                        <ul class="list-inline m-t-20">
+                                                            <li>
+                                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-success"></i>Fever</h6> </li>
+                                                            <li>
+                                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-primary"></i>Caugh</h6> </li>
+                                                            <li>
+                                                                <h6 class="text-muted"><i class="fa fa-circle m-r-5 text-danger"></i>Pain</h6> </li>
+                                                        </ul>
+                                                    </center>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="bs-label label-success badgeBorder">Active</span>
+                                            </td>
+                                            <td>QID-1-1</td>
+                                            <td>Question 04</td>
+                                            <td>Email</td>
+                                            <td>1/6</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#EmailQ">View Responses</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="bs-label label-success badgeBorder">Active</span>
+                                            </td>
+                                            <td>QID-1-1</td>
+                                            <td>Question 04</td>
+                                            <td>Phone</td>
+                                            <td>5/6</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#phoneQ">View Responses</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="bs-label label-danger badgeBorder">Archive</span>
+                                            </td>
+                                            <td>QID-1-1</td>
+                                            <td>Question 05</td>
+                                            <td>Date Of Birth</td>
+                                            <td>2/3</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#DOBQ">View Responses</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                <!-- ============================================================== -->
+                <!-- End Info box -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- End Page Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- End Page Content -->
+                <!-- ============================================================== --> 
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== --> 
+        <footer class="footer">
+            © 2020 RTPMedicalSolution.com
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- Modals Start -->
+
+    <!-- New Patients Modal -->
+    <div class="modal fade" id="newptModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal modal-lg">
+            <div class="modal-content">
+                <div class="modal-header"> 
+                    <h4 class="modal-title" id="myLargeModalLabel">Ravi Agrawal - 11/10/1988 - PTID321</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+
+                <div class="modal-body mb-1 pt-2">
+                    <div class="vtabs customvtab">
+                        <ul class="nav nav-tabs tabs-vertical" role="tablist">
+                            <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#home3" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Your Information</span> </a> </li>
+                            <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#step2" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Patient Information</span> </a> </li>
+                            <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#step3" role="tab"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Request Information</span> </a> </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                                                
+                                <!-- step1 -->
+                                <div class="tab-pane profile-tab-pane" id="home3" role="tabpanel">
+                                <button class="btn btn-outline-success waves-effect col-12 demoupdateStage">Save</button>
+                                <div class="modal-body scrollModal">
+                                    <form class="floating-labels">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                                <fieldset class="fieldset-border">
+                                                                <legend>Your Information</legend>
+                                                                <div class="row">
+                                                                <div class="col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label for="s1q1" class="float-label">First Name</label>
+                                                                    <input type="text" class="form-control required" id="s1q1" name="s1q1">
+                                                                </div>
+                                                                </div>
+                                                                <div class="col-lg-4">
+                                                                <div class="form-group">
+                                                                <label for="s1q2" class="float-label">Middle Name</label>
+                                                                <input type="text" class="form-control optional" id="s1q2" name="s1q2">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label for="s1q3" class="float-label">Last Name</label>
+                                                                    <input type="text" class="form-control required" id="s1q3" name="s1q3">
+                                                                </div> 
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="form-group">
+                                                                <label for="s1q4" class="float-label">Date of Birth</label>
+                                                                <input type="text" class="form-control required datepicker" id="s1q4" name="s1q4">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="custom-file mb-4">
+                                                                <input type="file" class="custom-file-input" name="primary_id" id="primary_id" accept="image/*;capture=camera">
+                                                                <label class="custom-file-label" for="primary_id">Upload ID</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="s1q20" class="float-label">Cell Phone</label>
+                                                                <input type="tel" class="form-control optional" id="s1q20" name="s1q20">
+                                                            </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="s1q21" class="float-label">Email</label>
+                                                                <input type="email" class="form-control optional" id="s1q21" name="s1q21">
+                                                            </div>
+                                                            </div> 
+                                                    </div> 
+                                                    </fieldset> 
+                                            </div> 
+                                        </div>
+                                    </form>
+                                </div>
+                                </div>
+                                <!-- step1 -->
+                                                
+                                <!-- step2 -->
+                                <div class="tab-pane profile-tab-pane" id="step2" role="tabpanel">
+                                    <button class="btn btn-outline-success waves-effect col-12 demoupdateStage">Save</button>
+                                    <div class="modal-body scrollModal">
+                                        <form class="floating-labels">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                            <fieldset class="fieldset-border">
+                                                            <legend>Patient Information</legend>
+                                                            <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="s1q1" class="float-label">First Name</label>
+                                                                <input type="text" class="form-control required" id="s1q1" name="s1q1">
+                                                            </div>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                            <label for="s1q2" class="float-label">Middle Name</label>
+                                                            <input type="text" class="form-control optional" id="s1q2" name="s1q2">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <label for="s1q3" class="float-label">Last Name</label>
+                                                            <input type="text" class="form-control required" id="s1q3" name="s1q3">
+                                                        </div> 
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="s9q2" class="float-label">Date of Birth</label>
+                                                                <input type="text" class="form-control required datepicker" id="s9q2" name="s9q2">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="s1q6" class="float-label">Social Security Number</label>
+                                                                <input type="text" class="form-control required ssn" id="s1q6" name="s1q6">
+                                                            </div>
+                                                            </div>
+                                                        </div> 
+                                                            </fieldset> 
+                                                </div> 
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- step2 -->
+    
+                                <!-- step3 -->
+                                <div class="tab-pane profile-tab-pane" id="step3" role="tabpanel">
+                                <button class="btn btn-outline-success waves-effect col-12 demoupdateStage">Save</button>
+                                <div class="modal-body scrollModal">
+                                        <form class="floating-labels">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                <fieldset class="fieldset-border">
+                                                    <legend>Who is sending the records?</legend>
+                                                    <div class="form-radio">
+                                                    <input type="radio" name="s3q0" id="s3q0o1" class="radio" value="1">
+                                                    <label class="radiolabel required-label" for="s3q0o1">RTP Medical Solutions</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                    <input type="radio" name="s3q0" id="s3q0o2" class="radio" value="2">
+                                                    <label class="radiolabel required-label" for="s3q0o2">Somebody Else</label>
+                                                    </div>
+                                                </fieldset>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                <fieldset class="fieldset-border">
+                                                    <legend>How do you want them send?</legend>
+                                                    <div class="form-radio">
+                                                    <input type="radio" name="s3q0" id="s3q0o4" class="radio" value="">
+                                                    <label class="radiolabel required-label" for="s3q0o4">Email</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                    <input type="radio" name="s3q0" id="s3q0o5" class="radio" value="">
+                                                    <label class="radiolabel required-label" for="s3q0o5">Fax</label>
+                                                    </div>
+                                                </fieldset>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                <fieldset class="fieldset-border">
+                                                    <legend>Who is sending the records?</legend>
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="s3q0o6" class="float-label">Name of Practice</label>
+                                                                <input type="text" class="form-control required" id="s3q0o6" name="s3q0">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="s3q0o7" class="float-label">Phone Number</label>
+                                                                <input type="tel" class="form-control required" id="s3q0o7" name="s3q0">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="s3q0o8" class="float-label">Street</label>
+                                                                <input type="text" class="form-control required" id="s3q0o8" name="s3q0">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="s3q0o8" class="float-label">City</label>
+                                                                <input type="text" class="form-control required" id="s3q0o8" name="s3q0">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                            <label for="s3q0o9" class="float-label">State</label>
+                                                            <select class="form-control required" name="s3q0" id="s3q0o9">
+                                                            <option></option>
+                                                            <option value="Alabama">Alabama</option>
+                                                            <option value="Alaska">Alaska</option>
+                                                            <option value="Arizona">Arizona</option>
+                                                            <option value="Arkanas">Arkanas</option>
+                                                            <option value="California">California</option>
+                                                            <option value="Colorado">Colorado</option>
+                                                            <option value="Connecticut">Connecticut</option>
+                                                            <option value="Delaware">Delaware</option>
+                                                            <option value="Florida">Florida</option>
+                                                            <option value="Georgia">Georgia</option>
+                                                            <option value="Hawaii">Hawaii</option>
+                                                            <option value="Idaho">Idaho</option>
+                                                            <option value="Illinois">Illinois</option>
+                                                            <option value="Indiana">Indiana</option>
+                                                            <option value="Lowa">Lowa</option>
+                                                            <option value="Kankas">Kankas</option>
+                                                            <option value="Kentucky">Kentucky</option>
+                                                            <option value="Louisiana">Louisiana</option>
+                                                            <option value="Maine">Maine</option>
+                                                            <option value="Maryland">Maryland</option>
+                                                            <option value="Massachusetts">Massachusetts</option>
+                                                            <option value="Michigan">Michigan</option>
+                                                            <option value="Minnesota">Minnesota</option>
+                                                            <option value="Mississippi">Mississippi</option>
+                                                            <option value="Missouri">Missouri</option>
+                                                            <option value="Montana">Montana</option>
+                                                            <option value="Nebraska">Nebraska</option>
+                                                            <option value="Nevada">Nevada</option>
+                                                            <option value="New Hampshire">New Hampshire</option>
+                                                            <option value="New Jersey">New Jersey</option>
+                                                            <option value="New Mexico">New Mexico</option>
+                                                            <option value="New York">New York</option>
+                                                            <option value="North Carolina">North Carolina</option>
+                                                            <option value="North Dakota">North Dakota</option>
+                                                            <option value="Ohio">Ohio</option>
+                                                            <option value="Oklahoma">Oklahoma</option>
+                                                            <option value="Oregon">Oregon</option>
+                                                            <option value="Pennsylvania">Pennsylvania</option>
+                                                            <option value="Rhode Island">Rhode Island</option>
+                                                            <option value="South Carolina">South Carolina</option>
+                                                            <option value="South Dakota">South Dakota</option>
+                                                            <option value="Tennessee">Tennessee</option>
+                                                            <option value="Texas">Texas</option>
+                                                            <option value="Utah">Utah</option>
+                                                            <option value="Vermont">Vermont</option>
+                                                            <option value="Virginia">Virginia</option>
+                                                            <option value="Washington">Washington</option>
+                                                            <option value="Washington, D.C.(DC)">Washington, D.C.(DC)</option>
+                                                            <option value="West Virginia">West Virginia</option>
+                                                            <option value="Wisconsin">Wisconsin</option>
+                                                            <option value="Wyoming">Wyoming</option>
+                                                            </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="s3q010" class="float-label">Zipcode</label>
+                                                                <input type="text" class="form-control required zip" id="s3q010" name="s3q0">
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </fieldset>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                <fieldset class="fieldset-border">
+                                                    <legend>Where do you want RTPMedicalSolution to send them?</legend>
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="s3q011" class="float-label">Name of Practice</label>
+                                                                <input type="text" class="form-control required" id="s3q011" name="s3q0">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="s3q012" class="float-label">Phone Number</label>
+                                                                <input type="tel" class="form-control required" id="s3q012" name="s3q0">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="s3q013" class="float-label">Street</label>
+                                                                <input type="text" class="form-control required" id="s3q013" name="s3q0">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="s3q014" class="float-label">City</label>
+                                                                <input type="text" class="form-control required" id="s3q014" name="s3q0">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                            <label for="s3q015" class="float-label">State</label>
+                                                            <select class="form-control required" name="s3q0" id="s3q015">
+                                                            <option></option>
+                                                            <option value="Alabama">Alabama</option>
+                                                            <option value="Alaska">Alaska</option>
+                                                            <option value="Arizona">Arizona</option>
+                                                            <option value="Arkanas">Arkanas</option>
+                                                            <option value="California">California</option>
+                                                            <option value="Colorado">Colorado</option>
+                                                            <option value="Connecticut">Connecticut</option>
+                                                            <option value="Delaware">Delaware</option>
+                                                            <option value="Florida">Florida</option>
+                                                            <option value="Georgia">Georgia</option>
+                                                            <option value="Hawaii">Hawaii</option>
+                                                            <option value="Idaho">Idaho</option>
+                                                            <option value="Illinois">Illinois</option>
+                                                            <option value="Indiana">Indiana</option>
+                                                            <option value="Lowa">Lowa</option>
+                                                            <option value="Kankas">Kankas</option>
+                                                            <option value="Kentucky">Kentucky</option>
+                                                            <option value="Louisiana">Louisiana</option>
+                                                            <option value="Maine">Maine</option>
+                                                            <option value="Maryland">Maryland</option>
+                                                            <option value="Massachusetts">Massachusetts</option>
+                                                            <option value="Michigan">Michigan</option>
+                                                            <option value="Minnesota">Minnesota</option>
+                                                            <option value="Mississippi">Mississippi</option>
+                                                            <option value="Missouri">Missouri</option>
+                                                            <option value="Montana">Montana</option>
+                                                            <option value="Nebraska">Nebraska</option>
+                                                            <option value="Nevada">Nevada</option>
+                                                            <option value="New Hampshire">New Hampshire</option>
+                                                            <option value="New Jersey">New Jersey</option>
+                                                            <option value="New Mexico">New Mexico</option>
+                                                            <option value="New York">New York</option>
+                                                            <option value="North Carolina">North Carolina</option>
+                                                            <option value="North Dakota">North Dakota</option>
+                                                            <option value="Ohio">Ohio</option>
+                                                            <option value="Oklahoma">Oklahoma</option>
+                                                            <option value="Oregon">Oregon</option>
+                                                            <option value="Pennsylvania">Pennsylvania</option>
+                                                            <option value="Rhode Island">Rhode Island</option>
+                                                            <option value="South Carolina">South Carolina</option>
+                                                            <option value="South Dakota">South Dakota</option>
+                                                            <option value="Tennessee">Tennessee</option>
+                                                            <option value="Texas">Texas</option>
+                                                            <option value="Utah">Utah</option>
+                                                            <option value="Vermont">Vermont</option>
+                                                            <option value="Virginia">Virginia</option>
+                                                            <option value="Washington">Washington</option>
+                                                            <option value="Washington, D.C.(DC)">Washington, D.C.(DC)</option>
+                                                            <option value="West Virginia">West Virginia</option>
+                                                            <option value="Wisconsin">Wisconsin</option>
+                                                            <option value="Wyoming">Wyoming</option>
+                                                            </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="s3q015" class="float-label">Zipcode</label>
+                                                                <input type="text" class="form-control required zip" id="s3q015" name="s3q0">
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </fieldset>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                <fieldset class="fieldset-border">
+                                                    <legend>What’s the purpose of this request?</legend>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q016" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q016">Changing Practices</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q017" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q017">Email US</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q018" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q018">Continued Medical Care</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q019" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q019">Personal Information</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q20" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q20">Legal</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q21" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q21">Insurance</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q22" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q22">Other</label>
+                                                    </div>
+                                                </fieldset>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                <fieldset class="fieldset-border">
+                                                    <p class="font-weight-bold">By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records, If Such Information And/or Records Exist:</p>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q023" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q023">ALL Records</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q024" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q024">Office Notes and Reports</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q025" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q025">Diagnostic Reports</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q026" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q026">Billing Statements</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q027" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q027">Rx History</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q028" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q028">Transcribed Hospital Reports</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q029" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q029">Laboratory Reports</label>
+                                                    </div>
+                                                </fieldset>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                <fieldset class="fieldset-border">
+                                                    <p class="font-weight-bold">Do you want to restrict disclosure for any records related to the following? If no please continue to next step</p>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q030" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q030">HIV/AIDS</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q031" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q031">TB or Other Communicable Diseases</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q32" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q32">Mental Health Records</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q033" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q033">Domestic Violence</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q034" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q034">Genetic Testing Information</label>
+                                                    </div>
+                                                    <div class="form-radio">
+                                                        <input type="radio" name="s3q0" id="s3q035" class="radio" value="">
+                                                        <label class="radiolabel required-label" for="s3q035">Drug/Alcohol</label>
+                                                    </div>
+                                                    
+                                                    <p class="font-weight-bold">Desribe<br><small>(Federal regulations require a description of how much and what kind of information is to be disclosed.)</small></p>
+                                                    <div class="form-group m-b-5">
+                                                        <label for="" class="float-label">Description</label>
+                                                        <textarea class="form-control" rows="4" id="input7"></textarea>
+                                                        <span class="bar"></span>
+                                                    </div>
+                                                </fieldset>
+                                                </div>
+                                            </div> 
+                                        </form>
+                                </div>
+                                </div>
+                                <!-- step3 -->                 
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- /.modal-content -->
+        </div>
+    <!-- /.modal-dialog -->
+    </div>
+    <!-- New Patients Modal -->
+
+    <!-- Survey Modal -->
+    <div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal modal-lg">
+            <div class="modal-content" style="width: 130% !important;">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Add Questionnaire</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+        <!-- Header -->
+
+        <!-- Body -->
+        <div class="modal-body">
+            <form>
+
+                <!-- select -->
+                <div class="col-xl-12">
+                    <fieldset class="fieldset-border">         
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <h4 class="font-weight-bold">Choose Answer Type</h4>       
+                                            <div class="">            
+                                                <a class="btn  btn-outline-info"  onclick="showQuestionTypeTextbox()">Textbox</a>           
+                                                <a class="btn  btn-outline-info"  onclick="showQuestionTypeCheckbox()">Checkbox</a>            
+                                                <a class="btn  btn-outline-info"  onclick="showQuestionTypeRating()"  >Rating</a>           
+                                                <a class="btn  btn-outline-info"  onclick="showQuestionTypeRadio()"  >Radio Button</a>          
+                                                <a class="btn  btn-outline-info"  onclick="showQuestionTypeEmail()"  >Email</a>           
+                                                <a class="btn  btn-outline-info"  onclick="showQuestionTypePhone()"  >Phone Number</a>           
+                                                <a class="btn  btn-outline-info"  onclick="showQuestionTypeDate()"  >Date</a>        
+                                            </div>    
+                                        </div>
+                                    </div>
+                    </fieldset>
+                </div>
+                <!-- select -->     
+
+                <!-- Textbox -->
+                <div class="col-xl-12 question_type" id="question_type_textbox">
+                                <fieldset class="floating-labels">
+                                    <h4 class="font-weight-bold m-b-20">Textbox</h4>
+                                    <div class="form-group m-b-40">
+                                        <label for="" class="float-label">Question</label>
+                                        <input type="text" class="form-control" id="" name="">
+                                    </div>
+                                    <div class="form-group m-b-40">
+                                        <label for="" class="float-label">Please Type your answer</label>
+                                        <input type="text" class="form-control" id="" name="">
+                                    </div>
+                                </fieldset>
+                </div>
+                <!-- Textbox -->
+                    
+                <!-- Checkbox -->
+                <div class="col-xl-12 question_type" id="question_type_checkbox">
+                                <fieldset class="floating-labels">
+                                    <h4 class="font-weight-bold m-b-20">Checkbox</h4>
+                                <div class="form-group m-b-40">
+                                    <label for="" class="float-label">Question</label>
+                                    <input type="text" class="form-control" id="" name="">
+                                </div> 
+                            </fieldset>
+                            <div id="checkboxDynamic"></div>
+                            <div class="input-group">
+                                <ul class="ul1">
+                                    <div class="row">
+                                        <div class="floating-labels row">
+                                            <div class="form-group m-b-40"> 
+                                                <input type="text" class="form-control" id="" placeholder="Option">
+                                                <span class="bar"></span>
+                                            </div>
+                                        </div>
+                                        <li>
+                                            <button class="btn btn-success m-l-20" type="button" onclick="checkboxDynamic();"><i class="fa fa-plus"></i></button>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
+                </div>
+                <!-- Checkbox -->
+                    
+                <!-- Rating -->
+                <div class="col-xl-12 question_type" id="question_type_rating">
+                    <fieldset class="floating-labels">
+                        <h4 class="font-weight-bold m-b-20">Rating</h4>
+                    <div class="form-group m-b-40">
+                        <label for="" class="float-label">Question</label>
+                        <input type="text" class="form-control" id="" name="">
+                    </div> 
+                </fieldset>
+                    <div class="form-group" id=""> 
+                        <div class="col-sm-6">
+                            <div class="col-xl-12">
+                                <div class="input-group" style="width: 200% !important;">
+                                        <ul class="ul1">
+                                            <fieldset class="floating-labels">
+                                                    <div class="row">
+                                                        <div class="form-group col-2 m-r-20">
+                                                            <input class="input1" type='radio' value='1' name='radio' id='radio1'/>
+                                                            <label for='radio1' class="btn btn-outline-info label1">O1</label>
+                                                        </div>
+                                                        <div class="form-group col-8">
+                                                            <label for="" class="float-label">Option</label>
+                                                            <input type="text" class="form-control" id="" name="">
+                                                        </div> 
+
+                                                        <div class="form-group col-2 m-r-20">
+                                                            <input class="input1" type='radio' value='2' name='radio' id='radio2'/>
+                                                            <label for='radio1' class="btn btn-outline-info label1">O2</label>
+                                                        </div>
+                                                        <div class="form-group col-8">
+                                                            <label for="" class="float-label">Option</label>
+                                                            <input type="text" class="form-control" id="" name="">
+                                                        </div>  
+                                                        
+                                                        <div class="form-group col-2 m-r-20">
+                                                            <input class="input1" type='radio' value='3' name='radio' id='radio3'/>
+                                                            <label for='radio1' class="btn btn-outline-info label1">O3</label>
+                                                        </div>
+                                                        <div class="form-group col-8">
+                                                            <label for="" class="float-label">Option</label>
+                                                            <input type="text" class="form-control" id="" name="">
+                                                        </div>  
+                                                        
+                                                        <div class="form-group col-2 m-r-20">
+                                                            <input class="input1" type='radio' value='4' name='radio' id='radio4'/>
+                                                            <label for='radio1' class="btn btn-outline-info label1">O4</label>
+                                                        </div>
+                                                        <div class="form-group col-8">
+                                                            <label for="" class="float-label">Option</label>
+                                                            <input type="text" class="form-control" id="" name="">
+                                                        </div>    
+                                                        
+                                                        <div class="form-group col-2 m-r-20">
+                                                            <input class="input1" type='radio' value='5' name='radio' id='radio5'/>
+                                                            <label for='radio1' class="btn btn-outline-info label1">O5</label>
+                                                        </div>
+                                                        <div class="form-group col-8">
+                                                            <label for="" class="float-label">Option</label>
+                                                            <input type="text" class="form-control" id="" name="">
+                                                        </div>                                               
+                                                    </div>
+                                            </fieldset>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rating -->
+                    
+                <!-- Radio -->
+                <div class="col-xl-12 question_type" id="question_type_radio">
+                                <fieldset class="floating-labels">
+                                    <h4 class="font-weight-bold m-b-20">Radio</h4>
+                                <div class="form-group m-b-40">
+                                    <label for="" class="float-label">Question</label>
+                                    <input type="text" class="form-control" id="" name="">
+                                </div> 
+                                </fieldset>
+                                <div id="radioDynamic"></div>
+                                <div class="input-group">
+                                        <ul class="ul1">
+                                            <div class="row">
+                                                <div class="floating-labels row">
+                                                    <div class="form-group m-b-40"> 
+                                                        <input type="text" class="form-control" id="" placeholder="Option">
+                                                        <span class="bar"></span>
+                                                    </div>  
+                                                </div>
+                                                <li>
+                                                    <button class="btn btn-success m-l-20" type="button" onclick="radioDynamic();"><i class="fa fa-plus"></i></button>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                </div>
+                </div>
+                <!-- Radio -->
+                
+                <!-- Email -->
+                <div class="col-xl-12 question_type" id="question_type_email">
+                                <fieldset class="floating-labels">
+                                    <h4 class="font-weight-bold m-b-20">Email</h4>
+                                <div class="form-group m-b-40">
+                                    <label for="" class="float-label">Question</label>
+                                    <input type="text" class="form-control" id="" name="">
+                                </div> 
+                                <div class="form-group m-b-40">
+                                    <label for="" class="float-label">Email Address</label>
+                                    <input type="text" class="form-control" id="" name="">
+                                </div> 
+                                </fieldset>
+                </div>
+                <!-- Email -->
+
+                <!-- Phone -->
+                <div class="col-xl-12 question_type" id="question_type_phone">
+                                <fieldset class="floating-labels">
+                                    <h4 class="font-weight-bold m-b-20">Phone Number</h4>
+                                <div class="form-group m-b-40">
+                                    <label for="" class="float-label">Question</label>
+                                    <input type="text" class="form-control" id="" name="">
+                                </div> 
+                                <div class="form-group m-b-40">
+                                    <label for="" class="float-label">Phone Number</label>
+                                    <input type="text" class="form-control phone-inputmask" id="" name="">
+                                </div> 
+                                </fieldset>
+                </div>
+                <!-- Phone -->
+
+                <!-- Date -->
+                <div class="col-xl-12 question_type" id="question_type_date">
+                                <fieldset class="floating-labels">
+                                    <h4 class="font-weight-bold m-b-20">Date</h4>
+                                <div class="form-group ">
+                                    <label for="" class="float-label">Question</label>
+                                    <input type="text" class="form-control" id="" name="">
+                                </div>
+                                <div class="form-group m-b-40">
+                                    <input type="date" class="form-control" id=""><span class="bar"></span>
+                                </div>
+                                </fieldset>
+
+                </div>
+                <!-- Date -->
+                
+                <button class="btn btn-outline-success waves-effect col-12 questionAdd" type="button" >Save</button>
+            </form>
+        </div>
+        <!--body -->
+        </div>
+        </div>
+    </div>
+    <!-- Survey Modal -->
+
+    <!-- TextBox -->
+    <div class="modal fade" id="TextBox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Text</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+        <!-- Header -->
+
+        <!-- Body -->
+        <div class="modal-body">
+            <div class="table-responsive-xl">
+                <table id="example26" class="table display table-bordered table-striped no-wrap">
+                    <thead>
+                        <tr>
+                            <th>Responses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="font-weight-bold">What country are you from?</span>
+                                <br>
+                                USA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="font-weight-bold">What country are you from?</span>
+                                <br>
+                                Canada
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--body -->
+        </div>
+        </div>
+    </div>
+    <!-- TextBox -->
+
+    <!-- CheckBox -->
+    <div class="modal fade" id="CheckBox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Checkbox</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+        <!-- Header -->
+
+        <!-- Body -->
+        <div class="modal-body">
+        </div>
+        <!--body -->
+        </div>
+        </div>
+    </div>
+    <!-- CheckBox -->
+
+    <!-- Rating -->
+    <div class="modal fade" id="Rating" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Rating</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+        <!-- Header -->
+
+        <!-- Body -->
+        <div class="modal-body">
+        </div>
+        <!--body -->
+        </div>
+        </div>
+    </div>
+    <!-- Rating -->
+
+    <!-- Radio -->
+    <div class="modal fade" id="Radio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Radio</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+        <!-- Header -->
+
+        <!-- Body -->
+        <div class="modal-body">
+        </div>
+        <!--body -->
+        </div>
+        </div>
+    </div>
+    <!-- Radio -->
+
+    <!-- EmailQ -->
+    <div class="modal fade" id="EmailQ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Edit</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+        <!-- Header -->
+
+        <!-- Body -->
+        <div class="modal-body">
+            <div class="table-responsive-xl">
+                <table class="table display table-bordered table-striped no-wrap" id="example23">
+                    <thead>
+                        <tr>
+                            <th>Responses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="font-weight-bold">Email</span>
+                                <br>
+                                X@gmail.com
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="font-weight-bold">Email</span>
+                                <br>
+                                Y@gmail.com
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--body -->
+        </div>
+        </div>
+    </div>
+    <!-- EmailQ -->
+
+    <!-- phoneQ -->
+    <div class="modal fade" id="phoneQ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Edit</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+        <!-- Header -->
+
+        <!-- Body -->
+        <div class="modal-body">
+            <div class="table-responsive-xl">
+                <table id="example24" class="table display table-bordered table-striped no-wrap">
+                    <thead>
+                        <tr>
+                            <th>Responses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="font-weight-bold">Phone Number</span>
+                                <br>
+                                9143595670
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="font-weight-bold">Phone Number</span>
+                                <br>
+                                9143595680
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--body -->
+        </div>
+        </div>
+    </div>
+    <!-- phoneQ -->
+
+    <!-- DOBQ -->
+    <div class="modal fade" id="DOBQ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog cascading-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Edit</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >×</button>
+                </div>
+        <!-- Header -->
+
+        <!-- Body -->
+        <div class="modal-body">
+            <div class="table-responsive-xl">
+                <table id="example25" class="table display table-bordered table-striped no-wrap">
+                    <thead>
+                        <tr>
+                            <th>Responses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="font-weight-bold">Service Date</span>
+                                <br>
+                                11/11/2020
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="font-weight-bold">Service Date</span>
+                                <br>
+                                11/12/2020
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--body -->
+        </div>
+        </div>
+    </div>
+    <!-- DOBQ -->
+
+
+
+
+
+    <!-- Modals End -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <script src="assets/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+    <script>
+        $(function () {
+            // responsive table
+            $('#config-table').DataTable({
+                responsive: false
+            });
+            $('#example23').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'excel',
+                ]
+            });
+            $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+
+            
+            $('#example24').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'excel',
+                ]
+            });
+            $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+
+            $('#example25').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'excel',
+                ]
+            });
+            $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+
+            $('#example26').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'excel',
+                ]
+            });
+            $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+        });
+
+    </script>
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="assets/node_modules/morrisjs/morris.min.js"></script>
+    <script src="assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="dist/js/dashboard1.js"></script> 
+
+    <!-- signature -->
+    <script type="text/javascript" src="dist/js/signature/bezier.js"></script>
+    <script type="text/javascript" src="dist/js/signature/jquery.signaturepad.js"></script>
+    <script type="text/javascript" src="dist/js/signature/json2.min.js"></script>
+    <script type="text/javascript" src="dist/js/signature/numeric.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#smoothed1').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed2').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed3').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed4').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed5').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed6').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            $('.textarea_editor').wysihtml5();
+
+        });
+    </script>
+
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <script src="dist/js/register.js"></script>
+    <script src="dist/js/mask.js"></script>
+    <script src="dist/js/pages/toastr.js"></script>
+    <script src="dist/js/pages/chat.js"></script>
+
+    <!-- Sweet-Alert  -->
+    <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+
+    <!-- start - This is for export functionality only -->
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+    <script src="assets/node_modules/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="dist/js/pages/mask.init.js"></script>
+    <script src="assets/node_modules/dff/dff.js" type="text/javascript"></script>
+
+    <!-- end - This is for export functionality only -->
+    <script src="assets/node_modules/dff/dff.js" type="text/javascript"></script>
+    <script src="assets/node_modules/html5-editor/wysihtml5-0.3.0.js"></script>
+    <script src="assets/node_modules/html5-editor/bootstrap-wysihtml5.js"></script>
+    <script src="assets/node_modules/dropzone-master/dist/dropzone.js"></script>
+
+    <script type="text/javascript">
+       // checkbox turn to green
+
+       $(document).ready(function(){
+          $(".form-radio").click(function(){
+            $(this).children(".required-label").removeClass("required-label");
+            $(this).siblings().children(".radiolabel").addClass("checkbox-yellow");
+        })
+          $(".form-checkbox").click(function(){
+            $(this).children(".required-label").removeClass("required-label");
+            $(this).siblings().children(".checklabel").addClass("checkbox-yellow");
+        })
+      })
+
+       $(document).ready(function(){
+          $(".required-label").click(function(){
+            $(this).removeClass("checkbox-yellow")
+        })
+      })
+
+
+// floating labels
+
+$('.floating-labels .form-control').on('focus blur', function (e) {
+    $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+}).trigger('blur');
+
+// For Custom File Input
+$('.custom-file-input').on('change',function(){
+        //get the file name
+        var fileName = $(this).val();
+        //replace the "Choose a file" label
+        $(this).next('.custom-file-label').html(fileName);
+    })
+
+// border color change on data filling
+
+$('.required').on('keyup', function (ev) {
+    $(this).toggleClass('green-border', !!$(this).val().trim());
+});
+
+$('.optional').on('keyup', function (ev) {
+    $(this).toggleClass('green-border', !!$(this).val().trim());
+});
+
+$('.required').on('change', function (ev) {
+    $(this).toggleClass('green-border', !!$(this).val().trim());
+});
+
+$('.required-upload').on('change', function (ev) {
+    $(this).toggleClass('upload-green-border', !!$(this).val().trim());
+}); 
+    </script>
+
+
+    <!-- New PT Tab Start -->
+    <script>
+    function showEmailHistory()
+    {
+            //add active to that tab 
+            $('.profile-tab-pane').removeClass('active');
+            $('.profile-tab-paneV2').removeClass('active');
+            $("#emailHistory").addClass('active');
+            $("#newptModal").modal('show');
+        }
+    </script>
+
+    <script>
+        function showTextHistory()
+        {
+            //add active to that tab 
+            $('.profile-tab-pane').removeClass('active');
+            $('.profile-tab-paneV2').removeClass('active');
+            $("#textHistory3").addClass('active');
+            $("#newptModal").modal('show');
+        }
+    </script>
+
+    <script>
+        function showpaymentHistory2()
+        {
+            //add active to that tab 
+            $('.profile-tab-pane').removeClass('active');
+            $('.profile-tab-paneV2').removeClass('active');
+            $("#paymentHistory3").addClass('active');
+            $("#newptModal").modal('show');
+        }
+    </script>
+
+    <script>
+        function showPaymentHistory()
+        {
+            //add active to that tab 
+            $('.profile-tab-pane').removeClass('active');
+            $('.profile-tab-paneV2').removeClass('active');
+            $("#paymentHistory3").addClass('active');
+            $("#newptModal").modal('show');
+        }
+    </script>
+
+    <script>
+        function showProfilePopup()
+        {
+            //add active to that tab 
+            $('.profile-tab-pane').removeClass('active');
+            $('.profile-tab-paneV2').removeClass('active');
+            $("#home3").addClass('active');
+            $("#newptModal").modal('show');
+        }
+    </script>
+    <!-- New PT Tab End -->
+
+    <!-- Questionnaire Start -->
+    <script>
+        function showQuestionTypeTextbox()
+        {
+          $(".question_type").removeClass('active');
+          $("#question_type_textbox").addClass('active');
+        }
+    </script>
+    
+    <script>
+        function showQuestionTypeCheckbox()
+        {
+          $(".question_type").removeClass('active');
+          $("#question_type_checkbox").addClass('active');
+        }
+    </script>
+    
+    <script>
+        function showQuestionTypeRating()
+        {
+          $(".question_type").removeClass('active');
+          $("#question_type_rating").addClass('active');
+        }
+    </script>
+    
+    <script>
+        function showQuestionTypeRadio()
+        {
+          $(".question_type").removeClass('active');
+          $("#question_type_radio").addClass('active');
+        }
+    </script>
+    
+    <script>
+        function showQuestionTypeEmail()
+        {
+          $(".question_type").removeClass('active');
+          $("#question_type_email").addClass('active');
+        }
+    </script>
+    
+    <script>
+        function showQuestionTypePhone()
+        {
+          $(".question_type").removeClass('active');
+          $("#question_type_phone").addClass('active');
+        }
+    </script>
+    
+    <script>
+        function showQuestionTypeDate()
+        {
+          $(".question_type").removeClass('active');
+          $("#question_type_date").addClass('active');
+        }
+    </script>
+    
+    <script>
+        function addNewQuestion()
+        {
+          $("#Question").append(" <div class='table-responsive step mb-5'> <table class='table' style='margin-bottom: 0rem !important;'> <thead class='bg-info text-center text-white'> <tr> <th class='text-white boldsizeText'>Stage 03</th> <th class='boldText'>Resource</th> <th class='boldText'>Alerts</th> <th class='boldText'>SMS</th> <th class='boldText'>Email</th> <th class='boldText'> <a class='btn-floating btn-sm btn-success up StageOrder' style='font-size: 1.5rem !important'><i class='fas fa-arrow-up text-white'></i></a> <a class='btn-floating btn-sm btn-success down StageOrder' style='font-size: 1.5rem !important' id='down'><i class='fas fa-arrow-down text-white'></i></a> </th> </tr></thead> <tbody class='text-center'> <tr class='bg-grey'> <td class='text-center trSpacing'> <div class='btn-group'> <button type='button' class='btn btn-success' data-toggle='modal' data-target='#addStage'>Edit</button> <button type='button' class='btn btn-success dropdown-toggle dropdown-toggle-split' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'> <span class='sr-only'>Toggle Dropdown</span> </button> <div class='dropdown-menu animated flipInY'> <a class='dropdown-item' href='javascript:void(0)' id='sandsArchive'>Archive</a> </div></div></td><td class='trSpacing'> <span class='bs-label label-success badgeBorder'>Resource 01</span> <span class='bs-label label-danger badgeBorder'>Resource 02</span> </td><td class='trSpacing'> <span class='bs-label label-danger badgeBorder'>5 Minutes</span> </td><td class='trSpacing'> <span class='bs-label label-success badgeBorder'>SMS 02</span> </td><td class='trSpacing'> <span class='bs-label label-success badgeBorder'>Email 05</span> </td><td class='trSpacing'>&nbsp;</td></tr><tr> <td class='text-center boldsizeTextv2'>Step 01<!--<div class='btn-group'> <button type='button' class='btn btn-success' data-toggle='modal' data-target='#'>Action</button> <button type='button' class='btn btn-success dropdown-toggle dropdown-toggle-split' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'> <span class='sr-only'>Toggle Dropdown</span> </button> <div class='dropdown-menu animated flipInY'> <a class='dropdown-item' href='javascript:void(0)' data-toggle='modal' data-target='>Merge Patients</a> </div></div>--> </td><td> <span class='bs-label label-success badgeBorder'>Resource 01</span> <span class='bs-label label-danger badgeBorder'>Resource 01</span> </td><td> <span class='bs-label label-danger badgeBorder'>5 Minutes</span> </td><td> <span class='bs-label label-success badgeBorder'>SMS 02</span> </td><td> <span class='bs-label label-success badgeBorder'>Email 05</span> </td><td>&nbsp;</td></tr><tr> <td class='text-center boldsizeTextv2'>Step 02</td><td>&nbsp;</td><td> <span class='bs-label label-danger badgeBorder'>5 Minutes</span> </td><td> <span class='bs-label label-success badgeBorder'>SMS 02</span> </td><td> <span class='bs-label label-success badgeBorder'>Email 05</span> </td><td>&nbsp;</td></tr><tr> <td class='text-center boldsizeTextv2'>Step 03</td><td> <span class='bs-label label-success badgeBorder'>Resource 01</span> </td><td> <span class='bs-label label-danger badgeBorder'>5 Minutes</span> </td><td> <span class='bs-label label-success badgeBorder'>SMS 02</span> </td><td> <span class='bs-label label-success badgeBorder'>Email 05</span> </td><td>&nbsp;</td></tr></tbody> </table> </div>");
+        }
+    </script>
+    <!-- Questionnaire End -->
+
+    <script src="assets/node_modules/chartist-js/dist/chartist.min.js"></script>
+    <script src="assets/node_modules/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+    <!-- Chart JS -->
+    <script src="assets/node_modules/echarts/echarts-all.js"></script>
+    <!-- Flot Charts JavaScript -->
+    <script src="assets/node_modules/flot/excanvas.js"></script>
+    <script src="assets/node_modules/flot/jquery.flot.js"></script>
+    <script src="assets/node_modules/flot/jquery.flot.time.js"></script>
+    <script src="assets/node_modules/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="dist/js/pages/widget-charts.js"></script>
+    <style type="text/css">
+        #punchInButton,#punchOutButton
+        {
+          font-size: 20px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          padding: 15px;
+        }
+    
+        #punchInButton
+        {
+          display: none;
+        }
+    
+        #punchInButtonProfile,#punchOutButtonProfile
+        {
+          font-size: 15px;
+          font-weight: bold;
+        }
+    
+        #punchInButtonProfile
+        {
+          display: none;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        $('#punchInButton').click(function() {
+          $(this).hide();
+          $('#punchOutButton').show();
+        });
+    
+        $('#punchOutButton').click(function() {
+          $(this).hide();
+          $('#punchInButton').show();
+        });
+    
+        $('#punchInButtonProfile').click(function() {
+          $(this).hide();
+          $('#punchOutButtonProfile').show();
+        });
+    
+        $('#punchOutButtonProfile').click(function() {
+          $(this).hide();
+          $('#punchInButtonProfile').show();
+        });
+    </script>
+
+
+</body>
+
+</html>

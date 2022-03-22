@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Checkin - Enter info</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="../css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/typography.css" rel="stylesheet">
+  <link rel="icon" href="img/logo.png" type="../image/png" sizes="16x16">
+</head>
+
+<body>
+
+
+  <main>
+    <div class="container" id="middleFix" style="max-width: 500px; width: 100%;">
+      <div class="card">
+        <div class="card-body">
+            
+            <h3 class="font-weight-bold dark-grey-text">Please Enter Your Information</h3>
+            <!-- SSN -->
+            <div class="md-form">
+              <input type="text" id="username" class="form-control">
+              <label for="username">Username</label>
+            </div>
+
+
+            <div class="text-center">
+              <button class="btn btn-success waves-effect" id="pfButton">Profile Found</button>
+              <button class="btn btn-danger waves-effect" data-target="#profileNotFound" data-toggle="modal">Profile Not Found</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+
+  <!-- ============================= profile not found modal ======================= -->
+  <div class="modal fade" id="profileNotFound" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title white-text" id="exampleModalLabel">Proflie Not Found</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          "Username not found.Do you wanna Try again?"
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+          <button type="button" class="btn btn-danger" id="notTry">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================= profile not found modal ======================= -->
+ 
+
+
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../js/mdb.min.js"></script>
+
+  <script type="text/javascript">
+    $("#pfButton").click(function(){
+      document.location.href='profileFound.html';
+    });
+
+    $("#notTry").click(function(){
+      document.location.href='profileNotFound.html';
+    });
+  </script>
+
+</body>
+
+</html>

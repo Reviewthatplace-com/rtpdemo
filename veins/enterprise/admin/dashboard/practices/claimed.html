@@ -1,0 +1,1815 @@
+    
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Veins - Patient Portal</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/table.css">
+
+    <link rel="stylesheet" href="../css/datatables.min.css">
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <style type="text/css">
+      .singleSection
+      {
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      .singleSection .form-check
+      {
+        margin-bottom: 10px;
+      }
+      .singleSection .form-check label
+      {
+        font-weight: bold;
+      }
+      .detailsTable tr th
+      {
+        font-weight: bold;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/logo.png" class="img-fluid" id="logo">
+                <span>Admin Panel</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                 <li class="active">
+                    <a href="#practices" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-clinic-medical nav-icon"></i>
+                        <span>Practices</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practices">
+                        <li class="active">
+                            <a href="../practices/claimed.html"><i class="fas fa-check"></i>Claimed</a>
+                        </li>
+                        <li>
+                            <a href="../practices/unclaimed.html"><i class="fas fa-times"></i>Unclaimed</a>
+                        </li>
+                        <li>
+                            <a href="../practices/addRequest.html"><i class="fas fa-user-plus"></i>Request To Add</a>
+                        </li>
+                        <li>
+                            <a href="../practices/claimAccess.html"><i class="fas fa-user-lock"></i>Claim Access</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#billing" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-money-bill nav-icon"></i>
+                        <span>Billing</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="billing">
+                        <li>
+                            <a href="../billing/create.html"><i class="fas fa-plus"></i>Create</a>
+                        </li>
+                        <li>
+                            <a href="../billing/active.html"><i class="fas fa-check-double"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../billing/inactive.html"><i class="far fa-times-circle"></i>Inactive</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="../categories.html">
+                        <i class="fa fa-list nav-icon"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+
+
+                <li>
+
+                    <a href="#rms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-search-location nav-icon"></i>
+                        <span>RMS</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="rms">
+                        <li>
+                            <a href="../rms/reviews.html"><i class="fas fa-search"></i>Reviews</a>
+                        </li>
+                        <li>
+                            <a href="../rms/practices.html"><i class="fas fa-hospital-alt"></i>Practices</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#insurance" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-shield-alt nav-icon"></i>
+                        <span>Insurance</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="insurance">
+                        <li>
+                            <a href="../insurances/active.html"><i class="fas fa-user-shield"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../insurances/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                
+
+                <li>
+                    <a href="#practiceUser" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-user-check nav-icon"></i>
+                        <span>Practice User</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practiceUser">
+                        <li>
+                            <a href="../practiceUser/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../practiceUser/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#patientPortal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-stethoscope nav-icon"></i>
+                        <span>Patient Portal</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="patientPortal">
+                        <li>
+                            <a href="../patientPortal/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../patientPortal/pending.html"><i class="fas fa-user-edit"></i>Pending</a>
+                        </li>
+                        <li>
+                            <a href="../patientPortal/notStarted.html"><i class="fas fa-user-times"></i>Not Started</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../userType.html">
+                        <i class="fa fa-users nav-icon"></i>
+                        <span >User Type</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../reports.html">
+                        <i class="fa fa-file nav-icon"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+        <!-- ================= Sidebar ======================== -->
+
+
+        <!-- ================= Page Content ======================== -->
+        <div id="content">
+            <!-- ================= Navbar ======================== -->
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <!-- <span>Toggle Sidebar</span> -->
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    <h3 class="h3-responsive pageTitle">Practices - Claimed</h3>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                          
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- ================= Navbar ======================== -->
+
+            <!-- ================= Main Content ======================== -->
+            
+            <div class="container-fluid p-0">
+                <!-- card -->
+                <div class="card">
+                    <!-- card body -->
+                    <div class="card-body">  
+                        <div class="table-responsive">
+                            <table class="table table-sm datatables table-bordered">
+                              <thead class="thead-dark">
+                                <tr>
+                                  <th scope="col">RTP ID</th>
+                                  <th scope="col">Location ID</th>
+                                  <th scope="col">Practice Name</th>
+                                  <th scope="col">Category</th>
+                                  <th scope="col">Active</th>
+                                  <th scope="col">Users</th>
+                                  <th scope="col">Patient</th>
+                                  <th scope="col">RMS</th>
+                                  <th scope="col">Details</th>
+                                  <th scope="col">Insurances</th>
+                                  <th scope="col">Access & Allowance</th>
+                                  <th scope="col">Delete</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">RTP1617</th>
+                                  <td>3567321</td>
+                                  <td>Powers Pediatrics</td>
+                                  <td>Pediatrics</td>
+                                  <td>
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#usersPopup"><i class="far fa-eye"></i></a>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#patientPopup"><i class="far fa-eye"></i></a>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#viewrmsPopup"><i class="far fa-eye"></i></a>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#viewPopup"><i class="far fa-eye"></i></a>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#viewInsurancePopup"><i class="far fa-eye"></i></a>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#viewAccessPopup"><i class="far fa-eye"></i></a>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-danger" data-toggle="modal" data-target="#deletePopup"><i class="fas fa-trash"></i></a>
+                                  </td>
+                                </tr>
+
+
+                                
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                </div>
+                <!-- card -->
+            </div>
+            <!-- ================= Main Content ======================== -->
+
+            <!-- ============================= Footer starts here ======================= -->
+            <footer class="page-footer font-small blue fixed-bottom">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                  <a href="#"> Review That Place.com</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+            <!-- ============================= Footer Ends here ======================= -->
+          
+        </div>
+        <!-- ================= Page Content ======================== -->
+    </div>
+    <!-- ================= Ends here ======================== -->
+
+
+    <!-- ============================= access and allowance modal ======================= -->
+    <div class="modal fade" id="viewAccessPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Access & Allowance</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <!-- first row -->
+              <div class="row">
+                <div class="col-xl-6">
+                  <!-- users -->
+                  <div class="md-form">
+                    <input type="number" id="users" class="form-control">
+                    <label for="users">Users</label>
+                  </div>
+                </div>
+
+                <div class="col-xl-6">
+                  <!-- price -->
+                  <div class="md-form">
+                    <input type="number" id="price" class="form-control">
+                    <label for="price">Price</label>
+                  </div>
+                </div>
+
+                <div class="col-xl-6">
+                  <!-- texts -->
+                  <div class="md-form">
+                    <input type="number" id="texts" class="form-control">
+                    <label for="texts">Texts</label>
+                  </div>
+                </div>
+
+                <div class="col-xl-6">
+                  <!-- emails -->
+                  <div class="md-form">
+                    <input type="number" id="emails" class="form-control">
+                    <label for="emails">Emails</label>
+                  </div>
+                </div>
+
+              </div>
+              <!-- first row -->
+
+
+
+              <div class="singleSection">
+                <!-- appointment -->  
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="appointmentScheduler">
+                    <label class="form-check-label" for="appointmentScheduler">Appointment Scheduler</label>
+                </div>
+
+                <div class="row">
+                  <div class="col-xl-6">
+                    <!-- texts -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="texts" class="form-control">
+                      <label for="texts">Texts</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6">
+                    <!-- emails -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="emails" class="form-control">
+                      <label for="emails">Emails</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="singleSection">
+                <!-- rms -->  
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rms">
+                    <label class="form-check-label" for="rms">RMS</label>
+                </div>
+
+                <div class="row">
+                  <div class="col-xl-6">
+                    <!-- texts -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="texts" class="form-control">
+                      <label for="texts">Texts</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6">
+                    <!-- emails -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="emails" class="form-control">
+                      <label for="emails">Emails</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="singleSection">
+                <!-- webdevForms -->  
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="webdevForms">
+                    <label class="form-check-label" for="webdevForms">WebDev Forms</label>
+                </div>
+
+                <div class="row">
+                  <div class="col-xl-6">
+                    <!-- texts -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="texts" class="form-control">
+                      <label for="texts">Texts</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6">
+                    <!-- emails -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="emails" class="form-control">
+                      <label for="emails">Emails</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="singleSection">
+                <!-- Surveys -->  
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="Surveys">
+                    <label class="form-check-label" for="Surveys">Surveys</label>
+                </div>
+
+                <div class="row">
+                  <div class="col-xl-6">
+                    <!-- texts -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="texts" class="form-control">
+                      <label for="texts">Texts</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6">
+                    <!-- emails -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="emails" class="form-control">
+                      <label for="emails">Emails</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="singleSection">
+                <!-- communicationCenter -->  
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="communicationCenter">
+                    <label class="form-check-label" for="communicationCenter">Communication Center</label>
+                </div>
+
+                <div class="row">
+                  <div class="col-xl-6">
+                    <!-- texts -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="texts" class="form-control">
+                      <label for="texts">Texts</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6">
+                    <!-- emails -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="emails" class="form-control">
+                      <label for="emails">Emails</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="singleSection">
+                <!-- clock -->  
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="clock">
+                    <label class="form-check-label" for="clock">Clock-In/Out</label>
+                </div>
+
+                <div class="row">
+                  <div class="col-xl-6">
+                    <!-- texts -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="texts" class="form-control">
+                      <label for="texts">Texts</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6">
+                    <!-- emails -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="emails" class="form-control">
+                      <label for="emails">Emails</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="singleSection">
+                <!-- Payments -->  
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="Payments">
+                    <label class="form-check-label" for="Payments">Payments</label>
+                </div>
+
+                <div class="row">
+                  <div class="col-xl-6">
+                    <!-- texts -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="texts" class="form-control">
+                      <label for="texts">Texts</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6">
+                    <!-- emails -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="emails" class="form-control">
+                      <label for="emails">Emails</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="singleSection">
+                <!-- patientPortal -->  
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="patientPortal">
+                    <label class="form-check-label" for="patientPortal">Patient Portals</label>
+                </div>
+
+                <div class="row">
+                  <div class="col-xl-6">
+                    <!-- texts -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="texts" class="form-control">
+                      <label for="texts">Texts</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6">
+                    <!-- emails -->
+                    <div class="md-form mt-0">
+                      <input type="number" id="emails" class="form-control">
+                      <label for="emails">Emails</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Save Changes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= access and allowance modal ======================= -->
+
+
+    <!-- ============================= users modal ======================= -->
+    <div class="modal fade" id="usersPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Users Associated</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-sm selectTables">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">First Name</th>
+                          <th scope="col">Last Name</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Phone Number</th>
+                          <th scope="col">DOB</th>
+                          <th scope="col">User Type</th>
+                          <th scope="col">Claimed user</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>info@gmail.com</td>
+                          <td>9812718323</td>
+                          <td>12/10/2020</td>
+                          <td>Admin Admin</td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>info@gmail.com</td>
+                          <td>9812718323</td>
+                          <td>12/10/2020</td>
+                          <td>Admin Admin</td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>info@gmail.com</td>
+                          <td>9812718323</td>
+                          <td>12/10/2020</td>
+                          <td>Admin Admin</td>
+                          <td>Claimed</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>info@gmail.com</td>
+                          <td>9812718323</td>
+                          <td>12/10/2020</td>
+                          <td>Admin Admin</td>
+                          <td></td>
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#viewAllUsers">View All</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= users modal ======================= -->
+
+
+    <!-- ============================= view all users modal ======================= -->
+    <div class="modal fade" id="viewAllUsers" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">All Users Associated</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-sm selectTables">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">First Name</th>
+                          <th scope="col">Last Name</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Phone Number</th>
+                          <th scope="col">DOB</th>
+                          <th scope="col">User Type</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>info@gmail.com</td>
+                          <td>9812718323</td>
+                          <td>12/10/2020</td>
+                          <td>Admin Admin</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>info@gmail.com</td>
+                          <td>9812718323</td>
+                          <td>12/10/2020</td>
+                          <td>Admin Admin</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>info@gmail.com</td>
+                          <td>9812718323</td>
+                          <td>12/10/2020</td>
+                          <td>Admin Admin</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>info@gmail.com</td>
+                          <td>9812718323</td>
+                          <td>12/10/2020</td>
+                          <td>Admin Admin</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>info@gmail.com</td>
+                          <td>9812718323</td>
+                          <td>12/10/2020</td>
+                          <td>Admin Admin</td>
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addViewAllUsers">Add</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= view all users modal ======================= -->
+
+
+    <!-- ============================= add view all users modal ======================= -->
+    <div class="modal fade" id="addViewAllUsers" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Adding?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <p>Are you sure want to add all the selected users</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= add view all users modal ======================= -->
+
+
+    <!-- ============================= patient modal ======================= -->
+    <div class="modal fade" id="patientPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Patient Associated</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered table-sm selectTables">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">First Name</th>
+                          <th scope="col">Last Name</th>
+                          <th scope="col">DOB</th>
+                          <th scope="col">Gender</th>
+                          <th scope="col">Phone Number</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">SSN</th>
+                          <th scope="col">Street</th>
+                          <th scope="col">City</th>
+                          <th scope="col">State</th>
+                          <th scope="col">Zip</th>
+                          <th scope="col">Insurance</th>
+                          <th scope="col">Subscriber ID</th>
+                          <th scope="col">Plan Name</th>
+                          <th scope="col">Secondary Insurance</th>
+                          <th scope="col">Secondary Subscriber ID</th>
+                          <th scope="col">Secondary Plan</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>12/10/2020</td>
+                          <td>Male</td>
+                          <td>9812718323</td>
+                          <td>info@gmail.com</td>
+                          <td>1221314123</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>FL</td>
+                          <td>21342 - 5345</td>
+                          <td>Aetna</td>
+                          <td>122131</td>
+                          <td>plan1</td>
+                          <td>Aetna</td>
+                          <td>1221314123</td>
+                          <td>Lorem Ipsum</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#viewAllPatient">View All</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= patient modal ======================= -->
+
+
+    <!-- ============================= all patient modal ======================= -->
+    <div class="modal fade" id="viewAllPatient" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">All Patient Associated</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered table-sm selectTables">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">First Name</th>
+                          <th scope="col">Last Name</th>
+                          <th scope="col">DOB</th>
+                          <th scope="col">Gender</th>
+                          <th scope="col">Phone Number</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">SSN</th>
+                          <th scope="col">Street</th>
+                          <th scope="col">City</th>
+                          <th scope="col">State</th>
+                          <th scope="col">Zip</th>
+                          <th scope="col">Insurance</th>
+                          <th scope="col">Subscriber ID</th>
+                          <th scope="col">Plan Name</th>
+                          <th scope="col">Secondary Insurance</th>
+                          <th scope="col">Secondary Subscriber ID</th>
+                          <th scope="col">Secondary Plan</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>12/10/2020</td>
+                          <td>Male</td>
+                          <td>9812718323</td>
+                          <td>info@gmail.com</td>
+                          <td>1221314123</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>FL</td>
+                          <td>21342 - 5345</td>
+                          <td>Aetna</td>
+                          <td>122131</td>
+                          <td>plan1</td>
+                          <td>Aetna</td>
+                          <td>1221314123</td>
+                          <td>Lorem Ipsum</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addViewAllPatient">Add</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= all patient modal ======================= -->
+
+
+    <!-- ============================= add view all patients modal ======================= -->
+    <div class="modal fade" id="addViewAllPatient" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Adding?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <p>Are you sure want to add all the selected patients?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= add view all patients modal ======================= -->
+
+
+    <!-- ============================= view rms modal ======================= -->
+    <div class="modal fade" id="viewrmsPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">RMS</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <label class="font-weight-bold">Widget</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-describedby="widget" value="">
+                <div class="input-group-append">
+                  <button class="btn btn-md btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="widget">Copy</button>
+                </div>
+              </div>
+
+              <label class="font-weight-bold">Repost link 1</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-describedby="repostLink1" value="">
+                <div class="input-group-append">
+                  <button class="btn btn-md btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="repostLink1">Copy</button>
+                </div>
+              </div>
+
+              <label class="font-weight-bold">Repost link 2</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-describedby="repostLink2" value="">
+                <div class="input-group-append">
+                  <button class="btn btn-md btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="repostLink2">Copy</button>
+                </div>
+              </div>
+
+              <label class="font-weight-bold">Url 1</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-describedby="url1" value="">
+                <div class="input-group-append">
+                  <button class="btn btn-md btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="url1">Copy</button>
+                </div>
+              </div>
+
+              <label class="font-weight-bold">Url 2</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-describedby="url2" value="">
+                <div class="input-group-append">
+                  <button class="btn btn-md btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="url2">Copy</button>
+                </div>
+              </div>
+
+              <label class="font-weight-bold">Url 2</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-describedby="url3" value="">
+                <div class="input-group-append">
+                  <button class="btn btn-md btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="url3">Copy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= view rms modal ======================= -->
+
+
+    <!-- ============================= view modal ======================= -->
+    <div class="modal fade" id="viewPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="text-right">
+                  <button class="btn btn-success waves-effect" data-target="#editViewDetails" data-toggle="modal"><i class="fas fa-pencil-alt pr-2"></i>Edit</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered text-center detailsTable">
+                      <tr>
+                        <th>RTP ID</th>
+                        <td>RTP8721</td>
+                      </tr>
+
+                      <tr>
+                        <th>Location ID</th>
+                        <td>LOC6789</td>
+                      </tr>
+
+                      <tr>
+                        <th>Request Access ID</th>
+                        <td>RC124</td>
+                      </tr>
+
+                      <tr>
+                        <th>Active</th>
+                        <td>Yes</td>
+                      </tr>
+
+                      <tr>
+                        <th>RC Email</th>
+                        <td>info@gmail.com</td>
+                      </tr>
+
+                      <tr>
+                        <th>Practice Name</th>
+                        <td>Powers</td>
+                      </tr>
+
+                      <tr>
+                        <th>Category</th>
+                        <td>Pediatrics</td>
+                      </tr>
+
+                      <tr>
+                        <th>Phone</th>
+                        <td>(123) 456-7890</td>
+                      </tr>
+
+                      <tr>
+                        <th>Fax</th>
+                        <td>1456-78902</td>
+                      </tr>
+
+                      <tr>
+                        <th>Email</th>
+                        <td>info@gmail.com</td>
+                      </tr>
+
+                      <tr>
+                        <th>Street</th>
+                        <td>Rose Eve</td>
+                      </tr>
+
+                      <tr>
+                        <th>City</th>
+                        <td>Ornaldo</td>
+                      </tr>
+
+                      <tr>
+                        <th>State</th>
+                        <td>FL</td>
+                      </tr>
+
+                      <tr>
+                        <th>Zip</th>
+                        <td>1234-56789</td>
+                      </tr>
+                      <tr>
+                        <th>Website</th>
+                        <td>https://powerspediatrics.com</td>
+                      </tr>
+
+                      <tr>
+                        <th>Time Zone</th>
+                        <td>GMT 05:30am</td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- ============================= view modal ======================= -->
+
+
+    <!-- ============================= edit view detials modal ======================= -->
+    <div class="modal fade" id="editViewDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <h4 class="font-weight-bold h4-responsive">Edit</h4>
+              <form>
+                <div class="row">
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">RTP ID</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Location ID</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Request Access ID</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Active</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">RC Email</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Practice Name</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Category</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Phone</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Fax</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Email</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Street</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">City</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <label for="">State</label>
+                    <select class="form-control">
+                      <option selected disabled>Choose State</option>
+                      <option value="FL">FL</option>
+                      <option value="AL">AL</option>
+                      <option value="AK">AK</option>
+                      <option value="AZ">AZ</option>
+                      <option value="AR">AR</option>
+                      <option value="CA">CA</option>
+                      <option value="CO">CO</option>
+                      <option value="CT">CT</option>
+                      <option value="DE">DE</option>
+                      <option value="GA">GA</option>
+                      <option value="HI">HI</option>
+                      <option value="ID">ID</option>
+                      <option value="IL">IL</option>
+                      <option value="IN">IN</option>
+                      <option value="IA">IA</option>
+                      <option value="KS">KS</option>
+                      <option value="KY">KY</option>
+                      <option value="ME">ME</option>
+                      <option value="MD">MD</option>
+                      <option value="MA">MA</option>
+                      <option value="MI">MI</option>
+                      <option value="MN">MN</option>
+                      <option value="MS">MS</option>
+                      <option value="MO">MO</option>
+                      <option value="MT">MT</option>
+                      <option value="NE">NE</option>
+                      <option value="NV">NV</option>
+                      <option value="NH">NH</option>
+                      <option value="NJ">NJ</option>
+                      <option value="NM">NM</option>
+                      <option value="NY">NY</option>
+                      <option value="NC">NC</option>
+                      <option value="ND">ND</option>
+                      <option value="OH">OH</option>
+                      <option value="OK">OK</option>
+                      <option value="OR">OR</option>
+                      <option value="PA">PA</option>
+                      <option value="RI">RI</option>
+                      <option value="SC">SC</option>
+                      <option value="SD">SD</option>
+                      <option value="TN">TN</option>
+                      <option value="TX">TX</option>
+                      <option value="UT">UT</option>
+                      <option value="VT">VT</option>
+                      <option value="VA">VA</option>
+                      <option value="WA">WA</option>
+                      <option value="WV">WV</option>
+                      <option value="WI">WI</option>
+                      <option value="WY">WY</option>
+                    </select>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Zip</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Website</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4">
+                    <div class="md-form">
+                      <input type="text" id="" class="form-control">
+                      <label for="">Time Zone</label>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= edit view detials modal ======================= -->
+
+
+    <!-- ============================= insurance assoc modal ======================= -->
+    <div class="modal fade" id="viewInsurancePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Insurance Associated</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table selectTables table-bordered table-sm">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">Insurance Name</th>
+                          <th scope="col">Insurance Street</th>
+                          <th scope="col">Insurance City</th>
+                          <th scope="col">Insurance State</th>
+                          <th scope="col">Insurance Zip</th>
+                          <th scope="col">Insurance Phone</th>
+                          <th scope="col">Plans</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td>Aetna</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                          <td>4844334</td>
+                          <td>1233421321</td>
+                          <td>
+                            <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#viewInsurancePlan"><i class="far fa-eye"></i></a>
+                          </td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#viewAllInsurance">View All</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= insurance assoc modal ======================= -->
+
+
+    <!-- ============================= view all insurance assoc modal ======================= -->
+    <div class="modal fade" id="viewAllInsurance" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">All Insurance Associated</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table selectTables table-bordered table-sm">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">Insurance Name</th>
+                          <th scope="col">Insurance Street</th>
+                          <th scope="col">Insurance City</th>
+                          <th scope="col">Insurance State</th>
+                          <th scope="col">Insurance Zip</th>
+                          <th scope="col">Insurance Phone</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td>Aetna</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                          <td>4844334</td>
+                          <td>1233421321</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>Aetna</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                          <td>4844334</td>
+                          <td>1233421321</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>Aetna</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                          <td>4844334</td>
+                          <td>1233421321</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>Aetna</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                          <td>4844334</td>
+                          <td>1233421321</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td>Aetna</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>Florida</td>
+                          <td>4844334</td>
+                          <td>1233421321</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addViewAllInsurance">Add</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= view all insurance assoc modal ======================= -->
+
+
+    <!-- ============================= view insurance plan modal ======================= -->
+    <div class="modal fade" id="viewInsurancePlan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Plans</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <div class="container-fluid">
+              <div class="table-responsive">
+                <table class="table table-bordered table-sm selectTables">
+                  <thead class="thead-dark"> 
+                    <tr>
+                      <th></th>
+                      <th>ID</th>
+                      <th>Plan Name</th>
+                      <th>Edit</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>Lorem Ipsum</td>
+                      <td>
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editPlan">Edit</button>
+                      </td>
+                      <td>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletePlan">Delete</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>Lorem Ipsum</td>
+                      <td>
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editPlan">Edit</button>
+                      </td>
+                      <td>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletePlan">Delete</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>Lorem Ipsum</td>
+                      <td>
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editPlan">Edit</button>
+                      </td>
+                      <td>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletePlan">Delete</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>Lorem Ipsum</td>
+                      <td>
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editPlan">Edit</button>
+                      </td>
+                      <td>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletePlan">Delete</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>Lorem Ipsum</td>
+                      <td>
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editPlan">Edit</button>
+                      </td>
+                      <td>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletePlan">Delete</button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" data-target="#viewAllPlan" data-toggle="modal">View All</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= view insurance plan modal ======================= -->
+
+
+    <!-- ============================= view insurance all plan modal ======================= -->
+    <div class="modal fade" id="viewAllPlan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">All Plans</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <div class="container-fluid">
+              <div class="table-responsive">
+                <table class="table table-bordered table-sm selectTables">
+                  <thead class="thead-dark"> 
+                    <tr>
+                      <th></th>
+                      <th>ID</th>
+                      <th>Plan Name</th>
+                      <th>Edit</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>Lorem Ipsum</td>
+                      <td>
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editPlan">Edit</button>
+                      </td>
+                      <td>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletePlan">Delete</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>Lorem Ipsum</td>
+                      <td>
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editPlan">Edit</button>
+                      </td>
+                      <td>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletePlan">Delete</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>Lorem Ipsum</td>
+                      <td>
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editPlan">Edit</button>
+                      </td>
+                      <td>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletePlan">Delete</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>Lorem Ipsum</td>
+                      <td>
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editPlan">Edit</button>
+                      </td>
+                      <td>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletePlan">Delete</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>Lorem Ipsum</td>
+                      <td>
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#editPlan">Edit</button>
+                      </td>
+                      <td>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletePlan">Delete</button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" data-target="#addViewAllPlan" data-toggle="modal">Add</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= view insurance all plan modal ======================= -->
+
+
+    <!-- ============================= add new view all plan modal ======================= -->
+    <div class="modal fade" id="addViewAllPlan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Adding?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <p>Are you sure want to add all the selected plans?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="button" name=""  class="btn btn-success" value="Yes">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= add new view all plan modal ======================= -->
+
+    <!-- ============================= Edit plan modal ======================= -->
+    <div class="modal fade" id="editPlan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="md-form">
+                <label for="planName">Plan Name</label>
+                <input type="text" name="planName" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="button" name=""  class="btn btn-success" value="Save">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= Edit plan modal ======================= -->
+
+    <!-- ============================= delete plan modal ======================= -->
+    <div class="modal fade" id="deletePlan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-danger modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Deleting?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <p>Are You Sure Want to Delete This?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="button" name=""  class="btn btn-success" value="Yes">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= delete plan modal ======================= -->
+
+
+    <!-- ============================= add view all insurance modal ======================= -->
+    <div class="modal fade" id="addViewAllInsurance" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Adding?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <p>Are you sure want to add all the selected insurance?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= add view all insurance modal ======================= -->
+
+
+
+
+    <!-- ============================= delete modal ======================= -->
+    <div class="modal fade" id="deletePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-danger modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Deleting?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <p>Are you sure want to delete this practice?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= delete modal ======================= -->
+
+    
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- sidebar JS -->
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/tableScript.js"></script>
+
+      <script type="text/javascript">
+        $('input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea').each(function (element, i) {
+    if ((element.value !== undefined && element.value.length > 0) || $(this).attr('placeholder') !== null) {
+        $(this).siblings('label').addClass('active');
+    }
+    else {
+        $(this).siblings('label').removeClass('active');
+    }
+});
+    </script>
+</body>
+
+</html>

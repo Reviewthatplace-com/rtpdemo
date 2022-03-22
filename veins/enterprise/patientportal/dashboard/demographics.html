@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html>
+<!-- ====================== head ====================== -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Veins - Patient Portal</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/table.css">
+    <style type="text/css">
+
+    </style>
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<!-- ====================== head ====================== -->
+
+<!-- ====================== body starts here ====================== -->
+<body>
+    <!-- ============================= Page Starts here ======================= -->
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="img/logo.png" class="img-fluid" id="logo">
+                <span>Patient Portal</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#mypractices" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-home nav-icon"></i>
+                        <span>My Practices</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="mypractices">
+                        <li>
+                            <a href="mypractices/practiceAuthorized.html"><i class="fas fa-search-location"></i>Authorized Practices</a>
+                        </li>
+                        
+                        <li>
+                            <a href="mypractices/appointmentRequest.html"><i class="far fa-calendar-plus"></i>Request Appointment</a>
+                        </li>
+
+                        <li>
+                            <a href="mypractices/appointmentUpcoming.html"><i class="far fa-calendar-check"></i>Upcoming Appointment</a>
+                        </li>
+
+                        <li>
+                            <a href="mypractices/myReviews.html"><i class="fas fa-star"></i>My Reviews</a>
+                        </li>
+
+                        <li>
+                            <a href="mypractices/surveys.html"><i class="fas fa-poll"></i>Surveys</a>
+                        </li>
+
+                        <li>
+                            <a href="mypractices/visitHistory.html"><i class="fas fa-business-time"></i>Visit History</a>
+                        </li>
+                        
+                        <li>
+                            <a href="mypractices/communicationCenter.html"><i class="fas fa-comment"></i>Communication Center</a>
+                        </li>
+
+                        <li>
+                            <a href="#mypractice-payments" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Payments</span>
+                            </a>
+                            <ul class="collapse list-unstyled" id="mypractice-payments">
+                                <li>
+                                    <a href="mypractices/payments/paymentRequests.html"><i class="fas fa-money-bill"></i>Payment Requests</a>
+                                </li>
+                                <li>
+                                    <a href="mypractices/payments/paymentCompleted.html"><i class="far fa-credit-card"></i>Payments Completed</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy nav-icon"></i>
+                        <span>My Records</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="myRecords/recordsRequest.html"><i class="fas fa-folder-plus"></i>Request Records</a>
+                        </li>
+                        <li>
+                            <a href="myRecords/recordsSend.html"><i class="fas fa-share-square"></i>Send Records</a>
+                        </li>
+                        <li>
+                            <a href="myRecords/recordsPending.html"><i class="far fa-folder-open"></i>Pending Records</a>
+                        </li>
+                        <li>
+                            <a href="myRecords/recordsAll.html"><i class="far fa-folder"></i>All Records</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="demographics.html" class="active">
+                        <i class="fas fa-info-circle nav-icon"></i>
+                        <span >Demographics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="accessRequest.html">
+                        <i class="fa fa-lock nav-icon"></i>
+                        <span>Access Request</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../login/patientportal.html">
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!-- ============================= navbar  ======================= -->
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid white">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+
+                    
+
+                    <h3 class="h3-responsive pageTitle">Demographics</h3>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html"><i class="fas fa-home"></i>Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="myRecords/recordsRequest.html"><i class="fas fa-folder-plus"></i>Request Records</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="myRecords/recordsSend.html"><i class="fas fa-share-square"></i>Send Records</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="myRecords/recordsSend.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                </div>
+            </nav>
+            <!-- ============================= navbar  ======================= -->
+
+            <!-- ============================= main content starts here ======================= -->
+            <main>
+                <div class="card">
+                    <div class="card-body">
+                    <div class="text-right mb-2">
+                        <button class="btn btn-success" data-target="#sendToPatient" data-toggle="modal">Send Access To Patient</button>
+                        <button class="btn btn-success" data-target="#createLogin" data-toggle="modal">Create Login</button>
+                        <button class="btn btn-info waves-effect" data-target="#editDemo" data-toggle="modal">Edit</button>
+                    </div>
+                    
+                    <div class="table-responsive table-editable" id="table">
+                      <table class="table table-sm table-bordered text-center" cellspacing="0" width="100%">
+                        <tr>
+                            <th class="font-weight-bold">ID Picture</th>
+                            <td>
+                                <img src="img/id.png" class="img-fluid" style="width: 40px; height: 40px;">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th class="font-weight-bold">Full Name</th>
+                            <td>
+                                Ravi Agrawal
+                            </td>
+                        </tr>
+                       
+                        <tr>
+                          <th class="font-weight-bold">PatPid</th>
+                          <td>
+                            PatPID123
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th class="font-weight-bold">Gender</th>
+                          <td>
+                            Male
+                          </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">Date Of Birth</th>
+                            <td>
+                                11/10/1999
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">Email</th>
+                            <td>
+                                agrawalravi.1110@gmail.com
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">Phone Number</th>
+                            <td>
+                                (888) 503-1636 Ext. 151
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">SSN</th>
+                          <td>
+                           123-45-6789
+                          </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">Primary Insurance Name</th>
+                            <td>
+                                Aetna
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">Primary Plan</th>
+                            <td>
+                                Lorem Ipsum
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">Primary Subscriber ID</th>
+                            <td>
+                                123456
+                            </td>
+                        </tr>
+                        
+                        
+
+                        <tr>
+                            <th class="font-weight-bold">Secondary Insurance Name</th>
+                            <td>
+                                Medicad
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">Secondary Plan</th>
+                            <td>
+                                Lorem Ipsum
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">Secondary Subscriber ID</th>
+                            <td>
+                                1234567
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">Street</th>
+                            <td>
+                                Rose eve
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">City</th>
+                            <td>
+                                Orlando
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">State</th>
+                            <td>
+                                FL
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">ZIP</th>
+                            <td>
+                                32321
+                            </td>
+                        </tr>
+
+                        
+
+                        
+
+                        <tr>
+                            <th class="font-weight-bold">Primary Insurance ID</th>
+                            <td>
+                                <img src="img/insurance/medicad.png" class="img-fluid" style="width: 40px; height: 40px;">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th class="font-weight-bold">Secondary Insurance ID</th>
+                            <td>
+                                <img src="img/insurance/medicad.png" class="img-fluid" style="width: 40px; height: 40px;">
+                            </td>
+                        </tr>
+                      
+                      </table>
+
+                      <div class="text-center">
+                        <button class="btn btn-success waves-effect" id="saveInfo" style="display: none;">Save</button>
+                      </div>
+
+                    </div>
+                </div>
+                </div>
+
+
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="font-weight-bold mb-3">Patients with Access to my data</h2>
+                        <div class="table-responsive">
+                            <table class="table datatables table-hover table-bordered table-sm">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Access granted</th>
+                                        <th>Revoke</th>
+                                    </tr>
+                                </thead>
+
+
+                                <tbody>
+                                    <tr>
+                                        <td>Ravi Agrawal</td>
+                                        <td>ravi@reviewthatplace.com</td>
+                                        <td>10/01/2020</td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm" data-target="#revoke" data-toggle="modal">Revoke</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Ravi Agrawal</td>
+                                        <td>ravi@reviewthatplace.com</td>
+                                        <td>10/01/2020</td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm" data-target="#revoke" data-toggle="modal">Revoke</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Ravi Agrawal</td>
+                                        <td>ravi@reviewthatplace.com</td>
+                                        <td>10/01/2020</td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm" data-target="#revoke" data-toggle="modal">Revoke</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Ravi Agrawal</td>
+                                        <td>ravi@reviewthatplace.com</td>
+                                        <td>10/01/2020</td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm" data-target="#revoke" data-toggle="modal">Revoke</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Ravi Agrawal</td>
+                                        <td>ravi@reviewthatplace.com</td>
+                                        <td>10/01/2020</td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm" data-target="#revoke" data-toggle="modal">Revoke</button>
+                                        </td>
+                                    </tr>
+
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- ============================= main content starts here ======================= -->
+
+
+            <!-- ============================= Footer starts here ======================= -->
+            <footer class="page-footer font-small blue fixed-bottom">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                  <a href="#"> Review That Place.com</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+            <!-- ============================= Footer Ends here ======================= -->
+        </div>
+    </div>
+    <!-- ============================= Page Ends here ======================= -->
+
+
+    <!-- ============================= Edit  modal ======================= -->
+    <div class="modal fade" id="editDemo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <h3 class="font-weight-bold">Basic Details</h3>
+                      <!-- first row -->
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <!-- first name -->
+                          <div class="md-form">
+                            <input type="text" id="firstName" class="form-control" value="Ravi">
+                            <label for="firstName">First name</label>
+                          </div>
+                          <!-- first name -->
+                        </div>
+                        <div class="col-lg-6">
+                          <!-- last name -->
+                          <div class="md-form">
+                            <input type="text" id="lastName" class="form-control" value="Agrawal">
+                            <label for="lastName">Last name</label>
+                          </div>
+                          <!-- last name -->
+                        </div>
+                      </div>
+                      <!-- first row -->
+
+                      <!-- second row -->
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <label for="date">Date Of Birth</label>
+                          <div class="md-form mt-0">
+                            <input  type="text" id="date" class="form-control datepicker" value="10/10/1998">
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <label class="pr-3 mt-lg-5">Gender</label>
+                          <!-- Default inline 1-->
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="male" name="inlineDefaultRadiosExample">
+                            <label class="custom-control-label" for="male">Male</label>
+                          </div>
+
+                          <!-- Default inline 2-->
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="female" name="inlineDefaultRadiosExample">
+                            <label class="custom-control-label" for="female">Female</label>
+                          </div>
+
+                          <!-- Default inline 3-->
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="other" name="inlineDefaultRadiosExample">
+                            <label class="custom-control-label" for="other">Other</label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- second row -->
+
+                      <!-- third row -->
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="md-form">
+                            <input type="tel" id="phoneNumber" class="form-control" required="">
+                            <label for="phoneNumber">Phone Number</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="md-form">
+                            <input type="email" id="email" class="form-control">
+                            <label for="email">Email (username)</label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- third row -->
+
+                      <!-- fourth row -->
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="md-form">
+                            <input type="text" id="ssn" class="form-control">
+                            <label for="ssn">Social Security Number</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          
+                        </div>
+                      </div>
+                      <!-- fourth row -->
+
+                      <h3 class="font-weight-bold">Address</h3>
+                      <!-- fifth row -->
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="md-form">
+                            <input type="text" id="street" class="form-control">
+                            <label for="street">street (optional)</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="md-form">
+                            <input type="text" id="city" class="form-control">
+                            <label for="city">city (optional)</label>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="md-form">
+                            <input type="text" id="zip" class="form-control">
+                            <label for="zip">Zip (optional)</label>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <!-- category -->
+                          <label class="font-weight-bold">State</label>
+                          <select class="browser-default custom-select mb-4">
+                              <option value="" selected="">Choose State</option>
+                              <option value="FL">FL</option>
+                              <option value="AL">AL</option>
+                              <option value="AK">AK</option>
+                              <option value="AZ">AZ</option>
+                              <option value="AR">AR</option>
+                              <option value="CA">CA</option>
+                              <option value="CO">CO</option>
+                              <option value="CT">CT</option>
+                              <option value="DE">DE</option>
+                              <option value="GA">GA</option>
+                              <option value="HI">HI</option>
+                              <option value="ID">ID</option>
+                              <option value="IL">IL</option>
+                              <option value="IN">IN</option>
+                              <option value="IA">IA</option>
+                              <option value="KS">KS</option>
+                              <option value="KY">KY</option>
+                              <option value="ME">ME</option>
+                              <option value="MD">MD</option>
+                              <option value="MA">MA</option>
+                              <option value="MI">MI</option>
+                              <option value="MN">MN</option>
+                              <option value="MS">MS</option>
+                              <option value="MO">MO</option>
+                              <option value="MT">MT</option>
+                              <option value="NE">NE</option>
+                              <option value="NV">NV</option>
+                              <option value="NH">NH</option>
+                              <option value="NJ">NJ</option>
+                              <option value="NM">NM</option>
+                              <option value="NY">NY</option>
+                              <option value="NC">NC</option>
+                              <option value="ND">ND</option>
+                              <option value="OH">OH</option>
+                              <option value="OK">OK</option>
+                              <option value="OR">OR</option>
+                              <option value="PA">PA</option>
+                              <option value="RI">RI</option>
+                              <option value="SC">SC</option>
+                              <option value="SD">SD</option>
+                              <option value="TN">TN</option>
+                              <option value="TX">TX</option>
+                              <option value="UT">UT</option>
+                              <option value="VT">VT</option>
+                              <option value="VA">VA</option>
+                              <option value="WA">WA</option>
+                              <option value="WV">WV</option>
+                              <option value="WI">WI</option>
+                              <option value="WY">WY</option>
+                          </select>
+                          <!-- category -->
+                        </div>
+
+                        
+
+                        
+                      </div>
+                      <!-- fifth row -->
+
+                      <h3 class="font-weight-bold mb-4">Insurance Details</h3>
+                      <div class="row">
+                        
+                        
+
+                        <div class="col-lg-6">
+                          <!-- category -->
+                          <label class="font-weight-bold">Primary Insurance</label>
+                          <select class="browser-default custom-select" name="selectInsurance" id="selectInsurance">
+                              <option value="" selected="" disabled="">Choose Options</option>
+
+                              <option value="mineNotListed">Mine Not Listed</option>
+                              <option value="Aetna">Aetna</option>
+                              <option value="Staywell">Staywell</option>
+                              <option value="United">United</option>
+                          </select>
+                          <!-- category -->
+                        </div>
+
+                        <div class="col-lg-6">
+                          <label class="font-weight-bold">Primary Insurance Plan Name</label>
+                          <select class="browser-default custom-select" id="planNameSelect" name="planNameSelect">  
+                            <option value="" disabled="" selected>Choose Plan</option>
+                            <option value="mineNotListed">Mind Not Listed</option>
+                            <option value="option 1">option 1</option>
+                            <option value="option 2">option 1</option>
+                            <option value="option 3">option 1</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- mine not listed insurance section -->
+                      <div class="notListedSection border p-4 mt-3" style="display: none;">
+                        <h4 class="font-weight-bold">Primary Insurance - Manual Entry</h4>
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="md-form">
+                              <input type="text" id="iname" class="form-control">
+                              <label for="iname">Insurance name</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="md-form">
+                              <input type="text" id="istreet" class="form-control">
+                              <label for="istreet">Insurance Street</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="md-form">
+                              <input type="text" id="icity" class="form-control">
+                              <label for="icity">Insurance City</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <!-- category -->
+                          <label class="font-weight-bold">State</label>
+                          <select class="browser-default custom-select mb-4">
+                              <option value="" selected="">Choose State</option>
+                              <option value="FL">FL</option>
+                              <option value="AL">AL</option>
+                              <option value="AK">AK</option>
+                              <option value="AZ">AZ</option>
+                              <option value="AR">AR</option>
+                              <option value="CA">CA</option>
+                              <option value="CO">CO</option>
+                              <option value="CT">CT</option>
+                              <option value="DE">DE</option>
+                              <option value="GA">GA</option>
+                              <option value="HI">HI</option>
+                              <option value="ID">ID</option>
+                              <option value="IL">IL</option>
+                              <option value="IN">IN</option>
+                              <option value="IA">IA</option>
+                              <option value="KS">KS</option>
+                              <option value="KY">KY</option>
+                              <option value="ME">ME</option>
+                              <option value="MD">MD</option>
+                              <option value="MA">MA</option>
+                              <option value="MI">MI</option>
+                              <option value="MN">MN</option>
+                              <option value="MS">MS</option>
+                              <option value="MO">MO</option>
+                              <option value="MT">MT</option>
+                              <option value="NE">NE</option>
+                              <option value="NV">NV</option>
+                              <option value="NH">NH</option>
+                              <option value="NJ">NJ</option>
+                              <option value="NM">NM</option>
+                              <option value="NY">NY</option>
+                              <option value="NC">NC</option>
+                              <option value="ND">ND</option>
+                              <option value="OH">OH</option>
+                              <option value="OK">OK</option>
+                              <option value="OR">OR</option>
+                              <option value="PA">PA</option>
+                              <option value="RI">RI</option>
+                              <option value="SC">SC</option>
+                              <option value="SD">SD</option>
+                              <option value="TN">TN</option>
+                              <option value="TX">TX</option>
+                              <option value="UT">UT</option>
+                              <option value="VT">VT</option>
+                              <option value="VA">VA</option>
+                              <option value="WA">WA</option>
+                              <option value="WV">WV</option>
+                              <option value="WI">WI</option>
+                              <option value="WY">WY</option>
+                          </select>
+                          <!-- category -->
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="md-form">
+                              <input type="text" id="izip" class="form-control">
+                              <label for="izip">Insurance Zip</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="md-form">
+                              <input type="tel" id="iphone" class="form-control">
+                              <label for="iphone">Insurance Phone</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- mine not listed insurance section -->
+
+
+                      <div class="row">
+                        <div class="col-lg-6" style="display: none;" id="notListedPlan">
+                          <div class="md-form">
+                            <input type="text" id="planName" class="form-control">
+                            <label for="planName">Plan Name</label>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="row">
+                        <div class="col-lg-6 mt-4">
+                          <!-- category -->
+                          <label class="font-weight-bold">Secondary Insurance</label>
+                          <select class="browser-default custom-select mb-4" name="selectSecondaryInsurance" id="selectSecondaryInsurance">
+                              <option value="" selected="" disabled="">Choose Options</option>
+                              <option value="mineNotListed">Mine Not Listed</option>
+                              <option value="Aetna">Aetna</option>
+                              <option value="Staywell">Staywell</option>
+                              <option value="United">United</option>
+                          </select>
+                          <!-- category -->
+                        </div>
+
+
+                        <div class="col-lg-6 mt-4">
+                          <label class="font-weight-bold">Secondary Insurance Plan Name</label>
+                          <select class="browser-default custom-select mb-4" id="planNameSecondarySelect" name="planNameSelect">  
+                            <option value="" disabled="" selected>Choose Plan</option>
+                            <option value="mineNotListed">Mind Not Listed</option>
+                            <option value="option 1">option 1</option>
+                            <option value="option 2">option 1</option>
+                            <option value="option 3">option 1</option>
+                          </select>
+                        </div>
+                      </div>
+
+
+                      
+
+                      <!-- mine not listed secondary insurance section -->
+                      <div class="notListedSecondarySection border p-4 mt-3" style="display: none;">
+                        <h4 class="font-weight-bold">Secondary Insurance - Manual Entry</h4>
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="md-form">
+                              <input type="text" id="iname" class="form-control">
+                              <label for="iname">Insurance name</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="md-form">
+                              <input type="text" id="istreet" class="form-control">
+                              <label for="istreet">Insurance Street</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="md-form">
+                              <input type="text" id="icity" class="form-control">
+                              <label for="icity">Insurance City</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <!-- category -->
+                          <label class="font-weight-bold">State</label>
+                          <select class="browser-default custom-select mb-4">
+                              <option value="" selected="">Choose State</option>
+                              <option value="FL">FL</option>
+                              <option value="AL">AL</option>
+                              <option value="AK">AK</option>
+                              <option value="AZ">AZ</option>
+                              <option value="AR">AR</option>
+                              <option value="CA">CA</option>
+                              <option value="CO">CO</option>
+                              <option value="CT">CT</option>
+                              <option value="DE">DE</option>
+                              <option value="GA">GA</option>
+                              <option value="HI">HI</option>
+                              <option value="ID">ID</option>
+                              <option value="IL">IL</option>
+                              <option value="IN">IN</option>
+                              <option value="IA">IA</option>
+                              <option value="KS">KS</option>
+                              <option value="KY">KY</option>
+                              <option value="ME">ME</option>
+                              <option value="MD">MD</option>
+                              <option value="MA">MA</option>
+                              <option value="MI">MI</option>
+                              <option value="MN">MN</option>
+                              <option value="MS">MS</option>
+                              <option value="MO">MO</option>
+                              <option value="MT">MT</option>
+                              <option value="NE">NE</option>
+                              <option value="NV">NV</option>
+                              <option value="NH">NH</option>
+                              <option value="NJ">NJ</option>
+                              <option value="NM">NM</option>
+                              <option value="NY">NY</option>
+                              <option value="NC">NC</option>
+                              <option value="ND">ND</option>
+                              <option value="OH">OH</option>
+                              <option value="OK">OK</option>
+                              <option value="OR">OR</option>
+                              <option value="PA">PA</option>
+                              <option value="RI">RI</option>
+                              <option value="SC">SC</option>
+                              <option value="SD">SD</option>
+                              <option value="TN">TN</option>
+                              <option value="TX">TX</option>
+                              <option value="UT">UT</option>
+                              <option value="VT">VT</option>
+                              <option value="VA">VA</option>
+                              <option value="WA">WA</option>
+                              <option value="WV">WV</option>
+                              <option value="WI">WI</option>
+                              <option value="WY">WY</option>
+                          </select>
+                          <!-- category -->
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="md-form">
+                              <input type="text" id="izip" class="form-control">
+                              <label for="izip">Insurance Zip</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="md-form">
+                              <input type="tel" id="iphone" class="form-control">
+                              <label for="iphone">Insurance Phone</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- mine not listed secondary insurance section -->
+
+                      <div class="row">
+                        <div class="col-lg-6" style="display: none;" id="notListedSecondaryPlan">
+                          <div class="md-form">
+                            <input type="text" id="planName" class="form-control">
+                            <label for="planName">Plan Name</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="md-form">
+                            <input type="text" id="sid" class="form-control">
+                            <label for="sid">Subscriber ID(optional)</label>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="md-form">
+                            <input type="text" id="sid" class="form-control">
+                            <label for="sid">Secondary Subscriber ID(optional)</label>
+                          </div>
+                        </div>
+                       
+                        
+
+                        <div class="col-lg-6" style="display: none;" id="notListedPlanSecondary">
+                          <div class="md-form">
+                            <input type="text" id="planName" class="form-control">
+                            <label for="planName">Plan Name For Secondary Insurance</label>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <h3 class="font-weight-bold mb-4 mt-4">Upload Images</h3>
+
+                      <div class="row mt-2">
+                        <div class="col-lg-6 mb-3">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFileLang">
+                            <label class="custom-file-label" for="customFileLang">Upload Profile Pic</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFileLang">
+                            <label class="custom-file-label" for="customFileLang">Upload Insurance Card</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFileLang">
+                            <label class="custom-file-label" for="customFileLang">Upload ID</label>
+                          </div>
+                        </div>
+                         <div class="col-lg-6 mb-3">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFileLang">
+                            <label class="custom-file-label" for="customFileLang">Upload Secondary Insurance Card</label>
+                          </div>
+                        </div>
+                      </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+            <button type="button" class="btn btn-danger">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= Edit  modal ======================= -->
+
+    
+    <!-- ============================= revoke  modal ======================= -->
+    <div class="modal fade" id="revoke" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-danger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Revoke Access</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Are You sure want to revoke the access?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= revoke  modal ======================= -->
+
+    <!-- ============================= send access modal ======================= -->
+    <div class="modal fade" id="sendToPatient" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Send Access To Patient</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="md-form">
+                <label for="email">Enter Email</label>
+                <input type="email" class="form-control" name="" id="email">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Send</button>
+            <button type="button" class="btn btn-danger">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= send access modal ======================= -->
+
+    <!-- ============================= create login modal ======================= -->
+    <div class="modal fade" id="createLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="md-form">
+                <label for="email">Enter Email</label>
+                <input type="email" class="form-control" name="" id="email">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Send</button>
+            <button type="button" class="btn btn-danger">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= create login modal ======================= -->
+
+
+    <!-- ====================== Scripts ====================== -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/datatables.min.js"></script>
+    <script src="js/tableScript.js"></script>
+    <script src="js/demographics.js"></script>
+    <!-- Your custom scripts (optional) -->
+  <script type="text/javascript">
+    
+    $("#selectInsurance").on("change", function() {     
+        if($(this).val() === "mineNotListed")
+        {
+            $(".notListedSection").show();
+        }
+        else
+        {
+            $(".notListedSection").hide();
+        }
+    });
+
+    $("#selectSecondaryInsurance").on("change", function() {     
+        if($(this).val() === "mineNotListed")
+        {
+            $(".notListedSecondarySection").show();
+        }
+        else
+        {
+            $(".notListedSecondarySection").hide();
+        }
+    });
+
+    $("#planNameSelect").on("change", function() {     
+        if($(this).val() === "mineNotListed")
+        {
+            $("#notListedPlan").show();
+        }
+        else
+        {
+            $("#notListedPlan").hide();
+        }
+    });
+
+    $("#planNameSecondarySelect").on("change", function() {     
+        if($(this).val() === "mineNotListed")
+        {
+            $("#notListedSecondaryPlan").show();
+        }
+        else
+        {
+            $("#notListedSecondaryPlan").hide();
+        }
+    });
+
+
+    $(document).ready(function(){
+        $("input[type='button']").click(function(){
+            alert("Please check email to complete registration");
+            window.open('http://veinspracticesolution.com/','_self');
+        });
+    });
+
+     $( function() {
+      $( ".datepicker" ).datepicker();
+    } );
+  </script>
+    <!-- ====================== Scripts ====================== -->
+</body>
+<!-- ====================== body starts here ====================== -->
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/img/dr.jpeg">
+    <title>UPCOMMING APPOINTMENTS</title>
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- Footable CSS -->
+    <link href="assets/node_modules/footable/css/footable.bootstrap.min.css" rel="stylesheet">
+    <!-- Page CSS -->
+    <link href="dist/css/pages/contact-app-page.css" rel="stylesheet">
+    <link href="dist/css/pages/footable-page.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+    <link href="dist/css/pages/icon-page.css" rel="stylesheet">
+    <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+    <link href="dist/css/pages/floating-label.css" rel="stylesheet">
+    <link href="dist/css/pages/chat-app-page.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+    .topbar .top-navbar .navbar-nav>.nav-item>.nav-link {
+            color: #03a9f3!important;
+        }
+    </style>
+</head>
+
+<body class="skin-blue fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">RTP Medical Solutions</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+       <header class="topbar bg-white">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header bg-white">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--  You can put here icon as well -->
+                            <!--  <i class="wi wi-sunset"></i> -->
+                            <!-- Dark Logo icon -->
+                            <img src="assets/images/veinslogo.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <!--                            <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />-->
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                            <!-- dark Logo text -->
+                            <img src="assets/images/veinslogo.png" alt="homepage" class="dark-logo w-25" />
+                            <!-- Light Logo text -->
+                            <img src="assets/images/veinslogo.png" class="light-logo" alt="homepage" style="height: 75px; margin-left: 35px;"/>
+                        </span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto ">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item text-info"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark text-info" href="javascript:void(0)"><i class="icon-menu text-info"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <!--
+                        <li class="nav-item">
+                            <form class="app-search d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control" placeholder="Search & enter">
+                            </form>
+                        </li>
+-->
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-home text-info"></i>
+                                <!--                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>-->
+                            </a>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Comment -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Messages -->
+                        <!-- ============================================================== -->
+                       
+                        <!-- ============================================================== -->
+                        <!-- End mega menu -->
+
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- User Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic text-info" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class=""> <span class="hidden-md-down">Mark &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <!-- text-->
+                                <a href="index.html" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                                <!-- text-->
+                                <a href="pay_Request.html" class="dropdown-item"><i class="ti-wallet"></i>Open Balance</a> 
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="account_settings.html" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                                <!-- text-->
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End User Profile -->
+                        <!-- ============================================================== -->
+                        <!--                        <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>-->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="far fa-user text-danger"></i><span class="hide-menu">My Profiles</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="profile_discovery.html" aria-expanded="false"><i class="fa fa-users text-danger"></i><span class="hide-menu">Profile Discovery</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="records.html" aria-expanded="false"><i class="fa fa-clipboard-check text-danger"></i><span class="hide-menu">Records</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="authorize_practice.html" aria-expanded="false"><i class="fa fa-map-marker text-danger"></i><span class="hide-menu">My Practices</span></a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-money-bill-alt text-danger"></i><span class="hide-menu">Payment<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="pay_Request.html">Payment Request</a></li>
+                                <li><a href="payment_Complete.html">Payments Completed</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="com_center.html" aria-expanded="false"><i class="fa fa-phone text-danger"></i><span class="hide-menu">Communication</span></a></li>
+                        <!-- temporary dropdown -->
+                        <!--
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-layout-grid2"></i><span class="hide-menu">My Records</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="recordRequest.html">Request Records</a></li>
+                                <li><a href="sendRecords.html">Send Records</a></li>
+                                <li><a href="PendingRecords.html">Pending Records</a></li>
+                                <li><a href="allRecords.html">All Records</a></li>
+
+                            </ul>
+                        </li>
+-->
+                         
+                          <li> <a class="waves-effect waves-dark" href="login.html" aria-expanded="false"><i class="fas fa-sign-in-alt text-danger"></i><span class="hide-menu">Log Out</span></a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+
+                <div class="row page-titles">
+                    <div class="col-md-5 col-sm-5 align-self-center">
+                        <h4 class="text-themecolor">VISIT HISTORY</h4>
+                    </div>
+                    <div class="col-md-7 col-sm-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">HOME</a></li>
+                                <li class="breadcrumb-item active">VISIT HISTORY</li>
+                            </ol>
+
+                        </div>
+                    </div>
+                </div>
+
+
+               
+                <!--table-->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card ">
+                            <div class="card-body">
+                                <div class="tab-content pt-0" id="myTabContent">
+
+                                    <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="table-responsive">
+                                            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                                <!--   -->
+                                                <div class="row">
+                                                    <div class="card col-12">
+                                                        <div class="card-body">
+                                                            <table class="table table-striped table-bordered" id="editable-datatable">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Practice Name</th>
+                                                                        <th>Patient</th>
+                                                                        <th> Date Of Servce</th>
+                                                                        <th>Time</th>
+                                                                        <th>Phisician</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Power Pediatrics</td>
+                                                                        <td>
+                                                                            <span class="font-weight-bold">Shakir Ansari</span>
+                                                                            <br>
+                                                                            11/11/1990
+                                                                        </td>
+                                                                        <td>01/02/2019</td>
+                                                                        <td>01:02pm</td>
+                                                                        <td>Ravi</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Power Pediatrics</td>
+                                                                        <td>
+                                                                            <span class="font-weight-bold">Ravi Agrawal</span>
+                                                                            <br>
+                                                                            11/11/1985
+                                                                        </td>
+                                                                        <td>01/02/2019</td>
+                                                                        <td>01:02pm</td>
+                                                                        <td>Ravi</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Power Pediatrics</td>
+                                                                        <td>
+                                                                            <span class="font-weight-bold">Saimun Hasan</span>
+                                                                            <br>
+                                                                            10/10/1997
+                                                                        </td>
+                                                                        <td>01/02/2019</td>
+                                                                        <td>01:02pm</td>
+                                                                        <td>Ravi</td>
+                                                                    </tr>
+                                                                </tbody>
+
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--table close-->
+
+                <!--  table end -->
+
+
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer">
+            © 2018 Copyright: Review That Place.com
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="assets/node_modules/morrisjs/morris.min.js"></script>
+    <script src="assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!-- Popup message jquery -->
+    <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
+    <!-- Chart JS -->
+    <script src="dist/js/dashboard1.js"></script>
+    <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
+    
+    <!-- Editable -->
+    <script src="assets/node_modules/jquery-datatables-editable/jquery.dataTables.js"></script>
+    <script src="assets/node_modules/datatables/media/js/dataTables.bootstrap.js"></script>
+    <script src="assets/node_modules/tiny-editable/mindmup-editabletable.js"></script>
+    <script src="assets/node_modules/tiny-editable/numeric-input-example.js"></script>
+    <script>
+        $('#mainTable').numericInputExample().find('td:first').focus();
+        $('#editable-datatable').numericInputExample().find('td:first').focus();
+        $(document).ready(function() {
+            $('#editable-datatable').DataTable();
+        });
+
+    </script>
+</body>
+
+</html>

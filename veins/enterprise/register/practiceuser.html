@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Registration - Practice User</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="../css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <style type="text/css">
+
+  </style>
+  
+</head>
+<body>
+  <nav class=" navbar-dark grey">
+    <div class="container">
+      <a class="navbar-brand" href="http://veinspracticesolution.com">
+        <img src="../img/logo.png" class="img-fluid">
+      </a>
+    </div>
+  </nav>
+
+  <!-- Start your project here-->  
+  <section>
+    <!-- form container -->
+    <div class="container-fluid pl-0" id="formArea">
+      
+      <div class="row">
+        <!-- img -->
+        <div class="col-md-4 forDesktop">
+          <img src="https://images.unsplash.com/photo-1476365518243-f738bf58443d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=333&q=80" class="img-fluid sideImg">
+        </div>
+        <!-- img -->
+
+        <!-- form area -->
+        <div class="col-md-8 content">
+          <div class="container pt-4 forMobile">
+            <!-- form -->
+            <form class="p-3">
+              <a href="../"><i class="fas fa-arrow-left pr-2"></i>Go Back</a>
+              <h2 class="heading h2-responsive">Practice User</h2>
+              <div class="alert alert-danger mt-2" role="alert">
+                Username (Email) Already in use. Please check and try again.
+              </div>
+
+              <div class="alert alert-danger mt-2" role="alert">
+                Access Code does not match any active codes at this time. Please re-enter code or leave field blank
+              </div>
+
+              <div class="alert alert-success" role="alert">
+                Please check email to complete registration
+              </div>
+
+              
+              <!-- first row -->
+              <div class="row">
+                <div class="col-lg-6">
+                  <!-- first name -->
+                  <div class="md-form">
+                    <input type="text" id="firstName" class="form-control">
+                    <label for="firstName">First name</label>
+                  </div>
+                  <!-- first name -->
+                </div>
+                <div class="col-lg-6">
+                  <!-- last name -->
+                  <div class="md-form">
+                    <input type="text" id="lastName" class="form-control">
+                    <label for="lastName">Last name</label>
+                  </div>
+                  <!-- last name -->
+                </div>
+              </div>
+              <!-- first row -->
+
+              <!-- second row -->
+              <div class="row">
+
+                <div class="col-lg-6">
+                  <div class="md-form mt-4">
+                    <input type="email" id="email" class="form-control">
+                    <label for="email">Email (username)</label>
+                  </div>
+                </div>
+
+
+                <div class="col-lg-6">
+                  <div class="md-form">
+                    <input type="tel" id="phoneNumber" class="form-control" required="">
+                    <label for="phoneNumber">Phone Number</label>
+                  </div>
+                </div>
+
+                
+              </div>
+              <!-- second row -->
+
+              <!-- third row -->
+              <div class="row">
+                <div class="col-lg-6">
+                  <label for="date">Date Of Birth</label>
+                  <div class="md-form mt-0">
+                    <input placeholder="DOB" type="text" id="date-picker-example" class="form-control datepicker">
+                  </div>
+                </div>
+                
+                <div class="col-lg-6">
+                  <!-- category -->
+                  <label class="font-weight-bold">User Type</label>
+                  <select class="browser-default custom-select mb-4">
+                      <option value="" selected="">Choose Type</option>
+                  </select>
+                  <!-- category -->
+                </div>
+              </div>
+              <!-- third row -->
+
+              <!-- fourth row -->
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="md-form">
+                    <input type="text" id="accessCode" class="form-control">
+                    <label for="accessCode">Access Code (optional)</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  
+                </div>
+              </div>
+              <!-- fourth row -->
+
+                <input type="button" name="" value="Create Account" class="btn btn-success waves-effect ml-0 mt-4">
+
+              <br>
+              <!-- dropdown -->
+              <button class="btn btn-link text-capitalize dropdown-toggle p-0" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="font-size: 15px;">Already Have a Account?</button>
+
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="../login/practiceuser.html">Practice User</a>
+                <a class="dropdown-item" href="../login/patientPortal.html">Patient Portal</a>
+              </div>
+              <!-- dropdown -->
+            </form>
+            <!-- form -->
+          </div>
+        </div>
+        <!-- form area -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- form container -->
+  </section>
+  <!-- End your project here-->
+
+   <!-- Footer -->
+   <footer class="page-footer font-small grey">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-2">© 2018 Copyright:
+      <a href="#"> Review That Place.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../js/mdb.min.js"></script>
+  <script type="text/javascript" src="../js/commanScript.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script type="text/javascript">
+     $(document).ready(function(){
+        $("input[type='button']").click(function(){
+            alert("Please check email to complete registration");
+            window.open('http://veinspracticesolution.com/','_self');
+        });
+    });
+  </script>
+
+</body>
+</html>

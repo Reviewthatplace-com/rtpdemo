@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QM1CH7JSY8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QM1CH7JSY8');
+      </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <title>Authorization Verification</title>
+    <!-- Booststrap css -->
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/bootstrap.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/jquery-ui.min.css">
+    <link rel="stylesheet" rel="preconnect" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="icon" href="assest/img/logo.png" type="image/jpg" sizes="32x32">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/select2.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/select2-bootstrap4.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/form.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/result.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/style.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/typography.min.css">
+    <link rel="stylesheet" href="assest/js/dropzone.css">
+ </head>
+ <body>
+    <div id="loader"></div>
+    <header>
+      <div class="container">
+        <div class="row">
+    
+          <!-- Logo Start-->
+          <div class="col-md-12 text-center mb-3">
+            <img class="img-fluid lazyload" id="logo" alt="rtplogo" src="assest/img/rtplogo.png">  
+          </div>
+          <!-- Logo End-->
+    
+          <!-- Translator Start -->
+
+          <!-- Translator End -->
+    
+          <!-- Form Name Start -->
+          <div class="col-md-12 text-center">
+            <h1><b>Verification</b></h1>
+          </div>
+          <!-- Form Name End -->
+          
+        </div>
+        <!-- select language -->
+        <div class="modal fade" id="selectlanguage" tabindex="-1" aria-labelledby="selectlanguage" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #2487ce;color: white;">
+                <h5 class="modal-title" id="exampleModalLabel">Select language</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+              </div>
+              <div class="modal-body">
+              <select class="form-control" onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|af">Afrikaans</option><option value="en|sq">Albanian</option><option value="en|ar">Arabic</option><option value="en|hy">Armenian</option><option value="en|az">Azerbaijani</option><option value="en|eu">Basque</option><option value="en|be">Belarusian</option><option value="en|bg">Bulgarian</option><option value="en|ca">Catalan</option><option value="en|zh-CN">Chinese (Simplified)</option><option value="en|zh-TW">Chinese (Traditional)</option><option value="en|hr">Croatian</option><option value="en|cs">Czech</option><option value="en|da">Danish</option><option value="en|nl">Dutch</option><option value="en|en">English</option><option value="en|et">Estonian</option><option value="en|tl">Filipino</option><option value="en|fi">Finnish</option><option value="en|fr">French</option><option value="en|gl">Galician</option><option value="en|ka">Georgian</option><option value="en|de">German</option><option value="en|el">Greek</option><option value="en|ht">Haitian Creole</option><option value="en|iw">Hebrew</option><option value="en|hi">Hindi</option><option value="en|hu">Hungarian</option><option value="en|is">Icelandic</option><option value="en|id">Indonesian</option><option value="en|ga">Irish</option><option value="en|it">Italian</option><option value="en|ja">Japanese</option><option value="en|ko">Korean</option><option value="en|lv">Latvian</option><option value="en|lt">Lithuanian</option><option value="en|mk">Macedonian</option><option value="en|ms">Malay</option><option value="en|mt">Maltese</option><option value="en|no">Norwegian</option><option value="en|fa">Persian</option><option value="en|pl">Polish</option><option value="en|pt">Portuguese</option><option value="en|ro">Romanian</option><option value="en|ru">Russian</option><option value="en|sr">Serbian</option><option value="en|sk">Slovak</option><option value="en|sl">Slovenian</option><option value="en|es">Spanish</option><option value="en|sw">Swahili</option><option value="en|sv">Swedish</option><option value="en|th">Thai</option><option value="en|tr">Turkish</option><option value="en|uk">Ukrainian</option><option value="en|ur">Urdu</option><option value="en|vi">Vietnamese</option><option value="en|cy">Welsh</option><option value="en|yi">Yiddish</option></select>
+              <div id="google_translate_element2"></div>
+              <script type="text/javascript">
+                function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+              </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+              <script type="text/javascript">
+                /* <![CDATA[ */
+                eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+                /* ]]> */
+              </script>
+            </div>
+
+          </div>
+        </div>
+        </div>
+        <!-- select language -->
+        <a data-toggle="modal" data-target="#selectlanguage" data-toggle="tooltip" data-placement="top" title="Select language" class="select-language d-flex align-items-center justify-content-center"><i class="fa fa-globe" aria-hidden="true"></i></a>        
+      </div>
+    </header>
+
+    <main>
+
+      <section id="arfstep1" class="section mt-3 active">
+        <div class="container form-container text-center fadeInDown">
+          
+            <!--Confirmation Number-->
+              <div class="form-group">
+              <div class="" id="strips1">
+                  <legend class="font-weight-bold" id="pagetitles">Confirmation Information</legend>
+                </div>
+                  <label for="yourname" class="col-sm-12 control-label">Confirmation Number</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="s1q1" class="" name="yourname" placeholder="Confirmation Number">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide Confirmation Number!
+                    </div>
+                  </div>
+              </div>
+            <!--Confirmation Number-->
+
+            <!--Date-->
+              <div class="form-group">
+                <label id="formlable" for="birthDate" class="col-sm-12 control-label">Date of Birth</label>
+                  <div class="col-sm-12">
+                    <input required type="date" id="s3q2" class="" placeholder="Date of Birth" autofocus>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide your date of birth!
+                    </div>
+                  </div>
+              </div>
+            <!--Date-->
+
+          <div class="card" id="btncard">
+            <a href="#" id="arfsteponenext">
+              <img src="assest/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="btnimg1">
+              <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="btnimg1">
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="arfstep2" class="section mt-3">  
+        <div class="container form-container text-center slide">
+          <div class="col-12" id="strips">
+            <h4 class="font-weight-bold my-3" id="p11t"> Your Information </h4>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+                  <tr>
+                    <th class="text-left">Your Name</th>
+                    <td id="td1">Shakir</td>
+                  </tr>
+                  <tr>
+                    <th class="text-left">Upload ID or Signed Authorization Release</th>
+                    <td id="td1">ID</td>
+                  </tr>
+                  <tr>
+                    <th class="text-left">Phone Number</th>
+                    <td id="td1">9153595831</td>
+                  </tr>
+                  <tr>
+                    <th class="text-left">Email Address</th>
+                    <td id="td1">shakir@gmail.com</td>
+                  </tr>
+            </tbody>
+          </table>
+
+          <div class="col-12" id="strips">
+            <h4 class="font-weight-bold my-3" id="p11t"> Patient Information </h4>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+                <tr>
+                  <th class="text-left">First Name</th>
+                  <td id="td1">Shakir</td>
+                </tr>
+                <tr>
+                  <th class="text-left">Last Name</th>
+                  <td id="td1">Ansari</td>
+                </tr>
+                <tr>
+                  <th class="text-left">Patient Date of Birth</th>
+                  <td id="td1">20/02/1990</td>
+                </tr>
+                <tr>
+                  <th class="text-left">SSN</th>
+                  <td id="td1">22222222222</td>
+                </tr>
+            </tbody>
+          </table>
+          
+          <div class="col-12" id="strips">
+            <h5 class="font-weight-bold my-3" id="p11t">How do you want them sent?</h5>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th class="text-left">Fax</th>
+                <td id="td1">9153595835</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="col-12" id="strips">
+          <h5 class="font-weight-bold my-3" id="p11t">Who is sending the records?</h5>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th class="text-left">Name Of Practice</th>
+                <td id="td1">SIPMD</td>
+              </tr>
+              <tr>
+                <th class="text-left">Phone Number</th>
+                <td id="td1">9153595860</td>
+              </tr>
+              <tr>
+                <th class="text-left">Street</th>
+                <td id="td1">2717 US-89</td>
+              </tr>
+              <tr>
+                <th class="text-left">City</th>
+                <td id="td1">Ogden</td>
+              </tr>
+              <tr>
+                <th class="text-left">State</th>
+                <td id="td1">UT</td>
+              </tr>
+              <tr>
+                <th class="text-left">Zip</th>
+                <td id="td1">84414</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="col-12" id="strips">
+            <h5 class="font-weight-bold my-3" id="p11t">Where do you want RTPMedicalSolution to send them?</h5>
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th class="text-left">Name Of Practice</th>
+                <td id="td1">DJIMD</td>
+              </tr>
+              <tr>
+                <th class="text-left">Phone Number</th>
+                <td id="td1">9153595850</td>
+              </tr>
+              <tr>
+                <th class="text-left">Street</th>
+                <td id="td1">2717 US-89</td>
+              </tr>
+              <tr>
+                <th class="text-left">City</th>
+                <td id="td1">Ogden</td>
+              </tr>
+              <tr>
+                <th class="text-left">State</th>
+                <td id="td1">UT</td>
+              </tr>
+              <tr>
+                <th class="text-left">Zip</th>
+                <td id="td1">84414</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="col-12" id="strips">
+            <h5 class="font-weight-bold my-3" id="p11t">What’s the purpose of this request?</h5>
+          </div>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th id="middata">Changing Practices</th>
+                </tr>
+                <tr>
+                  <th id="middata">Email Us</th>
+                </tr>
+                <tr>
+                  <th id="middata">Continued Medical Care</th>
+                </tr>
+                <tr>
+                  <th id="middata">Personal Information</th>
+                </tr>
+                <tr>
+                  <th id="middata">Legal</th>
+                </tr>
+                <tr>
+                  <th id="middata">Insurance</th>
+                </tr>
+                <tr>
+                  <th id="middata">Other</th>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+              <h5 class="font-weight-bold my-3" id="p11t">Restrict Disclosure</h5>
+            </div>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th id="middata">HIV/AIDS</th>
+                </tr>
+                <tr>
+                  <th id="middata">TB or Other Communicable Diseases</th>
+                </tr>
+                <tr>
+                  <th id="middata">Mental Health Records</th>
+                </tr>
+                <tr>
+                  <th id="middata">Domestic Violence</th>
+                </tr>
+                <tr>
+                  <th id="middata">Genetic Testing Information</th>
+                </tr>
+                <tr>
+                  <th id="middata">Drug/Alcohol</th>
+                </tr>
+                <tr>
+                  <th id="middata">Describe</th>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+              <h5 class="font-weight-bold my-3" id="p11t">Confirm your Information</h5>
+            </div>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th class="text-left">Your Name</th>
+                  <td id="td1">Shakir Ansari</td>
+                </tr>
+                <tr>
+                  <th class="text-left">Date</th>
+                  <td id="td1">07/13/2021 07:56 pm</td>
+                </tr>
+                <tr>
+                  <th class="text-left">Signature</th>
+                  <td id="td1"></td>
+                </tr>
+              </tbody>
+            </table>
+
+          <div class="row">
+            <div class="card  col" id="backbtncard">
+              <a href="#" id="arfsteptwoback">
+                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card  col" id="nextbtncard">
+                <a href="#" id="arfsteptwonext">
+                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                </a>
+            </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="arfstep3" class="section mt-3"> 
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Upload Documents</legend>
+          </div>
+              
+          <!--Upload Documents-->
+            <div class="form-group">
+                <!-- <label for="patientfullname" class="col-sm-12 control-label">Upload Documents</label> -->
+                <div class="col-12">
+                  <form action="#" class="dropzone">
+                      <div class="fallback">
+                          <input name="file" type="file" multiple />
+                      </div>
+                  </form>
+              </div>
+            </div>
+          <!--Upload Documents-->
+
+          <div class="row">
+            <div class="card fadeIn fourth col" id="backbtncard">
+              <a href="#" id="arfstepthreeback">
+                <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card fadeIn fourth col" id="nextbtncard">
+                <a href="#" id="arfstepthreenext">
+                  <img src="assest/img/buttons/se.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                  <img src="assest/img/buttons/sehover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                </a>
+            </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="arfstep4" class="section mt-3">
+        <div class="container-fluid slide">
+            <div class="row px-5 pt-3" id="confirm1">
+              <div class="col-xl-6 offset-xl-3 shadow text-center pb-5">
+                <img src="assest/img/check.png" class="img-fluid  check-img"> 
+                <h2 class="font-weight-bold mt-4 mb-4">Congrats! You have successfully Verified your information</h2>
+                <img src="assest/img/rtplogo.png" class="img-fluid lazyload" id="check-logo">
+              </div>
+          </div>
+        </div> 
+      </section>
+
+      <section class="section active mt-2">
+        <div class="container form-container text-center slide" style="padding: 10px 10px;">
+            <strong>Automated &amp; Powered By:</strong> <a href="https://rtpmedicalsolution.com/" target="_blank">RTPMedicalSolution</a>
+          <br>
+          <small><strong><i class="fas fa-copyright text-success"></i> 2021</strong> <a class="white-text" href="https://rtpmedicalsolution.com/">ReviewThatPlace.com</a> LLC. All rights reserved.</small> 
+        </div>
+      </section>
+
+    </main>
+
+    <script defer src="assest/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <!-- Bootstrap tooltips -->
+    <script defer src="assest/js/popper.min.js" type="text/javascript"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script defer src="assest/js/bootstrap.min.js" type="text/javascript"></script>
+    <script defer src="assest/js/lazysizes.min.js" type="text/javascript"></script>
+    <script defer src="assest/js/custom.min.js" type="text/javascript"></script>
+    <script defer src="assest/js/dropzone.js" type="text/javascript"></script>
+    <script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
+ </body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>RTP Medical Solutions</title>
+    
+    <!-- page css -->
+    <link href="dist/css/pages/login-register-lock.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/style.min.css" rel="stylesheet">
+    
+    
+     
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">RTP Medical Solutions</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <section id="wrapper" class="login-register login-sidebar" style="background-image:url(assets/images/background/login-register.jpg);">
+        <div class="login-box card">
+            <div class="card-body">
+                <form class="form-horizontal form-material text-center" id="loginform">
+                    <a href="javascript:void(0)" class="db"><img src="assets/images/logo-light-text.png" alt="Home" style="height: 100px;" /></a>
+                    <div class="form-group m-t-40">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" required="" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="password" required="" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <div class="d-flex no-block align-items-center">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">Remember me</label>
+                                </div> 
+                                <div class="ml-auto">
+                                    <a href="javascript:void(0)" id="to-recover" class="text-muted"><i class="fas fa-lock m-r-5"></i> Forgot pwd?</a> 
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <a href="javascript:void(0)" class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" id="login1st">Log In</a>
+                        </div>
+                    </div>
+                </form>
+                <form class="form-horizontal" id="recoverform" action="index.html">
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <h3>Recover Password</h3>
+                            <p class="text-muted">Enter your Email and instructions will be sent to you! </p>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" required="" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Reset</button>
+                        </div>
+                    </div>
+                </form>
+                 
+                <form class="form-horizontal" id="login2nd">
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <h3 class="text-center">Please set up your MFA.</h3>
+                            <p class="text-muted text-center">Please choose a method to continue.</p>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <a href="javascript:void(0)" class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" id="phonebtn">Phone</a>
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <a href="javascript:void(0)" class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" id="emailbtn">Email</a>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="form-horizontal" id="phone1st">
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <h5 class="text-center font-weight-bolder">Please enter a phone number to receive an SMS with your code</h5>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" required="" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <a href="javascript:void(0)" class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" id="sendCodePhone">Send Verification Code</a> 
+                        </div>
+                    </div>
+                </form>
+
+                <form class="form-horizontal" id="email1st">
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <h5 class="text-center font-weight-bolder">Please enter an email to receive your code</h5>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" required="" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <a href="javascript:void(0)" class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" id="sendCodeEmail">Send Verification Code</a>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="form-horizontal" id="verify">
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <h5 class="text-center font-weight-bolder">Please enter code to complete MFA setup</h5>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" required="" placeholder="Verification Code">
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <a href="javascript:void(0)" class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" id="completedMFA">Verify</a>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="form-horizontal" id="successMFA" action="index.html">
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <img src="assets/images/check.png" alt="" class="checkImg">
+                            <h2 class="text-center font-weight-bolder">MFA SETUP COMPLETED</h2>
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Go to your Dashboard</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--Custom JavaScript -->
+    <script type="text/javascript">
+        $(function() {
+            $(".preloader").fadeOut();
+        });
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+        // ============================================================== 
+        // Login and Recover Password 
+        // ============================================================== 
+        $('#to-recover').on("click", function() {
+            $("#loginform").slideUp();
+            $("#recoverform").fadeIn();
+        });
+
+        
+        $('#login1st').on("click", function() {
+            $("#loginform").slideUp();
+            $("#login2nd").fadeIn();
+        });
+
+        $('#phonebtn').on("click", function() {
+            $("#login2nd").slideUp();
+            $("#phone1st").fadeIn();
+        });
+
+                
+        $('#sendCodePhone').on("click", function() {
+            $("#phone1st").slideUp();
+            $("#verify").fadeIn();
+        });
+
+                
+        $('#emailbtn').on("click", function() {
+            $("#login2nd").slideUp();
+            $("#email1st").fadeIn();
+        });
+
+                
+        $('#sendCodeEmail').on("click", function() {
+            $("#email1st").slideUp();
+            $("#verify").fadeIn();
+        });
+
+                
+        $('#completedMFA').on("click", function() {
+            $("#verify").slideUp();
+            $("#successMFA").fadeIn();
+        });
+    </script>
+    
+</body>
+
+</html>

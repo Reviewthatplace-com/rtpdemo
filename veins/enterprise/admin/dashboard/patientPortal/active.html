@@ -1,0 +1,1073 @@
+    
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Veins - Patient Portal</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/table.css">
+
+    <link rel="stylesheet" href="../css/datatables.min.css">
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">  
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/logo.png" class="img-fluid" id="logo">
+                <span>Admin Panel</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                 <li>
+                    <a href="#practices" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-clinic-medical nav-icon"></i>
+                        <span>Practices</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practices">
+                        <li>
+                            <a href="../practices/claimed.html"><i class="fas fa-check"></i>Claimed</a>
+                        </li>
+                        <li>
+                            <a href="../practices/unclaimed.html"><i class="fas fa-times"></i>Unclaimed</a>
+                        </li>
+                        <li>
+                            <a href="../practices/addRequest.html"><i class="fas fa-user-plus"></i>Request To Add</a>
+                        </li>
+                        <li>
+                            <a href="../practices/claimAccess.html"><i class="fas fa-user-lock"></i>Claim Access</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#billing" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-money-bill nav-icon"></i>
+                        <span>Billing</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="billing">
+                        <li>
+                            <a href="../billing/create.html"><i class="fas fa-plus"></i>Create</a>
+                        </li>
+                        <li>
+                            <a href="../billing/active.html"><i class="fas fa-check-double"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../billing/inactive.html"><i class="far fa-times-circle"></i>Inactive</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="../categories.html">
+                        <i class="fa fa-list nav-icon"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+
+
+                <li>
+
+                    <a href="#rms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-search-location nav-icon"></i>
+                        <span>RMS</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="rms">
+                        <li>
+                            <a href="../rms/reviews.html"><i class="fas fa-search"></i>Reviews</a>
+                        </li>
+                        <li>
+                            <a href="../rms/practices.html"><i class="fas fa-hospital-alt"></i>Practices</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#insurance" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-shield-alt nav-icon"></i>
+                        <span>Insurance</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="insurance">
+                        <li>
+                            <a href="../insurances/active.html"><i class="fas fa-user-shield"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../insurances/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                
+
+                <li>
+                    <a href="#practiceUser" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-user-check nav-icon"></i>
+                        <span>Practice User</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practiceUser">
+                        <li>
+                            <a href="../practiceUser/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../practiceUser/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="#patientPortal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-stethoscope nav-icon"></i>
+                        <span>Patient Portal</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="patientPortal">
+                        <li class="active">
+                            <a href="../patientPortal/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../patientPortal/pending.html"><i class="fas fa-user-edit"></i>Pending</a>
+                        </li>
+                        <li>
+                            <a href="../patientPortal/notStarted.html"><i class="fas fa-user-times"></i>Not Started</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../userType.html">
+                        <i class="fa fa-users nav-icon"></i>
+                        <span >User Type</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../reports.html">
+                        <i class="fa fa-file nav-icon"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+        <!-- ================= Sidebar ======================== -->
+
+
+        <!-- ================= Page Content ======================== -->
+        <div id="content">
+            <!-- ================= Navbar ======================== -->
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <!-- <span>Toggle Sidebar</span> -->
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    <h3 class="h3-responsive pageTitle">Patient portal - Active</h3>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                          
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- ================= Navbar ======================== -->
+
+            <!-- ================= Main Content ======================== -->
+            
+            <main>
+                <!-- card -->
+                <div class="card">
+                    <!-- card body -->
+                    <div class="card-body">  
+                        <div class="table-responsive">
+                            <table class="table datatables table-bordered table-sm">
+                              <thead class="thead-dark">
+                                <tr>
+                                  <th scope="col">PatPID</th>
+                                  <th scope="col">First Name</th>
+                                  <th scope="col">Last Name</th>
+                                  <th scope="col">DOB</th>
+                                  <th scope="col">Gender</th>
+                                  <th scope="col">Username (Email)</th>
+                                  <th scope="col">Password Reset</th>
+                                  <th scope="col">Security Questions</th>
+                                  <th scope="col">Details</th>
+                                  <th scope="col">Practices</th>
+                                  <th scope="col">Map a patient</th>
+                                  <th scope="col">Message</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>Ravi</td>
+                                  <td>Agrawal</td>
+                                  <td>10/11/1999</td>
+                                  <td>Male</td>
+                                  <td>ravi@reviewthatplace.com</td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#resetPopup"><i class="fas fa-unlock"></i></a>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#questionPopup"><i class="far fa-eye white-text"></i></a>
+                                  </td>
+                                  <td>
+                                      <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#viewPopup"><i class="far fa-eye white-text"></i></a>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#viewPracticesPopup"><i class="far fa-eye white-text"></i></a>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#mapPatient"><i class="far fa-eye white-text"></i></a>
+                                  </td>
+                                  <td class="text-nowrap">
+                                    <a class="btn-floating btn-sm btn-danger" data-toggle="modal" data-target="#emailPopup"><i class="fas fa-envelope white-text"></i></a>
+                                    <a class="btn-floating btn-sm btn-primary" data-toggle="modal" data-target="#textPopup"><i class="fas fa-mobile"></i></a>
+                                  </td>
+                                </tr>
+
+                                
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                </div>
+                <!-- card -->
+            </main>
+            <!-- ================= Main Content ======================== -->
+
+            <!-- ============================= Footer starts here ======================= -->
+            <footer class="page-footer font-small blue fixed-bottom">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                  <a href="#"> Review That Place.com</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+            <!-- ============================= Footer Ends here ======================= -->
+          
+        </div>
+        <!-- ================= Page Content ======================== -->
+    </div>
+    <!-- ================= Ends here ======================== -->
+
+
+    
+
+
+    <!-- ============================= view details modal ======================= -->
+    <div class="modal fade" id="viewPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-sm">
+                      <tr>
+                        <th>Profile Pic</th>
+                        <td>
+                          <img src="../img/practice/id.png" class="img-fluid practiceImg">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Picture of ID</th>
+                        <td>
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRrmzn2D2IkC8j0_fvKTDfO7IJ_64AGb-_1vS0r8l1dLIl83RPs" class="img-fluid practiceImg">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Phone Number</th>
+                        <td>(123) 456-7890</td>
+                      </tr>
+
+                      <tr>
+                        <th>Social Security Number</th>
+                        <td>1234-56789</td>
+                      </tr>
+
+                      <tr>
+                        <th>Street</th>
+                        <td>Rose eve</td>
+                      </tr>
+
+                      <tr>
+                        <th>City</th>
+                        <td>ornaldo</td>
+                      </tr>
+
+                      <tr>
+                        <th>State</th>
+                        <td>FL</td>
+                      </tr>
+
+                      <tr>
+                        <th>Zip</th>
+                        <td>123345365</td>
+                      </tr>
+
+
+                      <tr>
+                        <th>Primary Insurance</th>
+                        <td>medicad</td>
+                      </tr>
+                      <tr>
+                        <th>Primary Insurance Plan</th>
+                        <td>plan1</td>
+                      </tr>
+                      <tr>
+                        <th>Primary Insurance Subscriber ID</th>
+                        <td>1224348923</td>
+                      </tr>
+
+                       <tr>
+                        <th>Secondary Insurance</th>
+                        <td>medicad</td>
+                      </tr>
+                      <tr>
+                        <th>Secondary Insurance Plan</th>
+                        <td>plan1</td>
+                      </tr>
+                      <tr>
+                        <th>Secondary Insurance Subscriber ID</th>
+                        <td>1224348923</td>
+                      </tr>
+
+                      <tr>
+                        <th>Primary Insurance Manual Entry</th>
+                        <td>
+                          <button class="btn btn-info btn-sm" data-target="#manualEntryPopup" data-toggle="modal">View</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Secondary Insurance Manual Entry</th>
+                        <td>
+                          <button class="btn btn-info btn-sm" data-target="#manualEntryPopup" data-toggle="modal">View</button>
+                        </td>
+                      </tr>
+
+
+                      <tr>
+                        <th>Picture of Primary Insurance ID</th>
+                        <td>
+                          <img src="../img/insurance/medicad.png" class="img-fluid insuranceImg">
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th>Picture of Secondary Insurance ID</th>
+                        <td>
+                          <img src="../img/insurance/medicad.png" class="img-fluid insuranceImg">
+                        </td>
+                      </tr>
+                     
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= view modal ======================= -->
+
+
+    <!-- ============================= question modal ======================= -->
+    <div class="modal fade" id="questionPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Security Questions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <tr>
+                        <th scope="col">What was the house no and street name you lived as a child?</th>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra facilisis eros ut consectetur.</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="col">What was the house no and street name you lived as a child?</th>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra facilisis eros ut consectetur.</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="col">What was the house no and street name you lived as a child?</th>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra facilisis eros ut consectetur.</td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editSecurityPopup">Edit</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= question modal ======================= -->
+
+    <!-- ============================= edit question modal ======================= -->
+    <div class="modal fade" id="editSecurityPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <!-- s1 -->
+              <label>Security Question 1</label>
+              <select class="browser-default custom-select mb-4">
+                  <option value="" selected="">Choose option</option>
+                  <option value="1">What was the house number and street name youlived in as a child?</option>
+                  <option value="2">What were the last four digits of your childhoodtelephone number?</option>
+                  <option value="3">What primary school did you attend?</option>
+                  <option value="4">In what town or city was your first full timejob?</option>
+                  <option value=" In what town or city did you meet yourspouse/partner?"> In what town or city did you meet yourspouse/partner?</option>
+                  <option value="What is the middle name of your oldest child?">What is the middle name of your oldest child?</option>
+                  <option value="What are the last five digits of your driver's licensenumber?">What are the last five digits of your driver's licensenumber?</option>
+                  <option value="What is your grandmother's (on your mother'sside) maiden name?">What is your grandmother's (on your mother'sside) maiden name?</option>
+                  <option value="What is your spouse or partner's mother's maidenname?">What is your spouse or partner's mother's maidenname?</option>
+                  <option value="In what town or city did your mother and fathermeet?">In what town or city did your mother and fathermeet?</option>
+                  <option value="What time of the day were you born? (hh:mm)">What time of the day were you born? (hh:mm)</option>
+                  <option value="What time of the day was your first child born?(hh:mm)">What time of the day was your first child born?(hh:mm)</option>
+              </select>
+              <!-- s1 -->
+
+              <!-- s1 answer -->
+              <div class="md-form mt-0">
+                  <input type="text" id="Question1anser" class="form-control">
+                  <label for="Question1anser">Security Answer 1</label>
+                  <small class="form-text text-muted mb-4">Security answer must be longer than 5 characters.</small>
+              </div>
+
+
+              <!-- s1 -->
+              <label>Security Question 2</label>
+              <select class="browser-default custom-select mb-4">
+                  <option value="" selected="">Choose option</option>
+                  <option value="1">What was the house number and street name youlived in as a child?</option>
+                  <option value="2">What were the last four digits of your childhoodtelephone number?</option>
+                  <option value="3">What primary school did you attend?</option>
+                  <option value="4">In what town or city was your first full timejob?</option>
+                  <option value=" In what town or city did you meet yourspouse/partner?"> In what town or city did you meet yourspouse/partner?</option>
+                  <option value="What is the middle name of your oldest child?">What is the middle name of your oldest child?</option>
+                  <option value="What are the last five digits of your driver's licensenumber?">What are the last five digits of your driver's licensenumber?</option>
+                  <option value="What is your grandmother's (on your mother'sside) maiden name?">What is your grandmother's (on your mother'sside) maiden name?</option>
+                  <option value="What is your spouse or partner's mother's maidenname?">What is your spouse or partner's mother's maidenname?</option>
+                  <option value="In what town or city did your mother and fathermeet?">In what town or city did your mother and fathermeet?</option>
+                  <option value="What time of the day were you born? (hh:mm)">What time of the day were you born? (hh:mm)</option>
+                  <option value="What time of the day was your first child born?(hh:mm)">What time of the day was your first child born?(hh:mm)</option>
+              </select>
+              <!-- s1 -->
+
+              <!-- s1 answer -->
+              <div class="md-form mt-0">
+                  <input type="text" id="Question2anser" class="form-control">
+                  <label for="Question2anser">Security Answer 2</label>
+                  <small class="form-text text-muted mb-4">Security answer must be longer than 5 characters.</small>
+              </div>
+
+
+
+              <!-- s1 -->
+              <label>Security Question 3</label>
+              <select class="browser-default custom-select mb-4">
+                  <option value="" selected="">Choose option</option>
+                  <option value="1">What was the house number and street name youlived in as a child?</option>
+                  <option value="2">What were the last four digits of your childhoodtelephone number?</option>
+                  <option value="3">What primary school did you attend?</option>
+                  <option value="4">In what town or city was your first full timejob?</option>
+                  <option value=" In what town or city did you meet yourspouse/partner?"> In what town or city did you meet yourspouse/partner?</option>
+                  <option value="What is the middle name of your oldest child?">What is the middle name of your oldest child?</option>
+                  <option value="What are the last five digits of your driver's licensenumber?">What are the last five digits of your driver's licensenumber?</option>
+                  <option value="What is your grandmother's (on your mother'sside) maiden name?">What is your grandmother's (on your mother'sside) maiden name?</option>
+                  <option value="What is your spouse or partner's mother's maidenname?">What is your spouse or partner's mother's maidenname?</option>
+                  <option value="In what town or city did your mother and fathermeet?">In what town or city did your mother and fathermeet?</option>
+                  <option value="What time of the day were you born? (hh:mm)">What time of the day were you born? (hh:mm)</option>
+                  <option value="What time of the day was your first child born?(hh:mm)">What time of the day was your first child born?(hh:mm)</option>
+              </select>
+              <!-- s1 -->
+
+              <!-- s1 answer -->
+              <div class="md-form mt-0">
+                  <input type="text" id="Question3anser" class="form-control">
+                  <label for="Question3anser">Security Answer 3</label>
+                  <small class="form-text text-muted mb-4">Security answer must be longer than 5 characters.</small>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= edit question modal ======================= -->
+
+
+    <!-- ============================= Manual Entry modal ======================= -->
+    <div class="modal fade" id="manualEntryPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Manual Entry</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table datatables table-bordered table-sm">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Insurance Name</th>
+                          <th scope="col">Insurance Street</th>
+                          <th scope="col">Insurance City</th>
+                          <th scope="col">Insurance State</th>
+                          <th scope="col">Insurance Zip</th>
+                          <th scope="col">Insurance Phone</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Tata</th>
+                          <td>Mukherjee chowk</td>
+                          <td>kotma</td>
+                          <td>madhya</td>
+                          <td>4844334</td>
+                          <td>1233421321</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= Manual Entry modal ======================= -->
+
+    <!-- ============================= password reset modal ======================= -->
+    <div class="modal fade" id="resetPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Reset</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="md-form">
+                  <label for="password1">Password</label>
+                  <input type="password" class="form-control" id="password1">
+                </div>
+
+                <div class="md-form">
+                  <label for="confirmPass">Confirm Password</label>
+                  <input type="password" class="form-control" id="confirmPass">
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Reset</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= password reset modal ======================= -->
+
+
+
+    <!-- ============================= practices view modal ======================= -->
+        <div class="modal fade" id="viewPracticesPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Practice Associated</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="table-responsive">
+                        <table class="table selectTables table-bordered table-hover table-sm">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th></th>
+                              <th scope="col">RTPID</th>
+                              <th scope="col">Practice Name</th>
+                              <th scope="col">Email</th>
+                              <th scope="col">Phone Number</th>
+                              <th scope="col">Fax</th>
+                              <th scope="col">Street</th>
+                              <th scope="col">City</th>
+                              <th scope="col">State</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td>RTP234</td>
+                              <td>Powers Pediatrics</td>
+                              <td>ravi@reviewthatplace.com</td>
+                              <td>987217202</td>
+                              <td>987217202</td>
+                              <td>Rose Eve</td>
+                              <td>Ornaldo</td>
+                              <td>Florida</td>
+                            </tr>
+
+                            <tr>
+                              <td></td>
+                              <td>RTP234</td>
+                              <td>Powers Pediatrics</td>
+                              <td>ravi@reviewthatplace.com</td>
+                              <td>987217202</td>
+                              <td>987217202</td>
+                              <td>Rose Eve</td>
+                              <td>Ornaldo</td>
+                              <td>Florida</td>
+                            </tr>
+
+                            <tr>
+                              <td></td>
+                              <td>RTP234</td>
+                              <td>Powers Pediatrics</td>
+                              <td>ravi@reviewthatplace.com</td>
+                              <td>987217202</td>
+                              <td>987217202</td>
+                              <td>Rose Eve</td>
+                              <td>Ornaldo</td>
+                              <td>Florida</td>
+                            </tr>
+
+                            <tr>
+                              <td></td>
+                              <td>RTP234</td>
+                              <td>Powers Pediatrics</td>
+                              <td>ravi@reviewthatplace.com</td>
+                              <td>987217202</td>
+                              <td>987217202</td>
+                              <td>Rose Eve</td>
+                              <td>Ornaldo</td>
+                              <td>Florida</td>
+                            </tr>
+
+                            <tr>
+                              <td></td>
+                              <td>RTP234</td>
+                              <td>Powers Pediatrics</td>
+                              <td>ravi@reviewthatplace.com</td>
+                              <td>987217202</td>
+                              <td>987217202</td>
+                              <td>Rose Eve</td>
+                              <td>Ornaldo</td>
+                              <td>Florida</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-success" data-target="#viewAllPractice" data-toggle="modal">View All</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================= practices view modal ======================= -->
+
+
+        <!-- ============================= All practices view modal ======================= -->
+        <div class="modal fade" id="viewAllPractice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-info modal-xl modal-notify" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">All Practice Associated</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="table-responsive">
+                        <table class="table selectTables table-bordered table-hover table-sm">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th></th>
+                              <th scope="col">RTPID</th>
+                              <th scope="col">Practice Name</th>
+                              <th scope="col">Email</th>
+                              <th scope="col">Phone Number</th>
+                              <th scope="col">Fax</th>
+                              <th scope="col">Street</th>
+                              <th scope="col">City</th>
+                              <th scope="col">State</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td>RTP234</td>
+                              <td>Powers Pediatrics</td>
+                              <td>ravi@reviewthatplace.com</td>
+                              <td>987217202</td>
+                              <td>987217202</td>
+                              <td>Rose Eve</td>
+                              <td>Ornaldo</td>
+                              <td>Florida</td>
+                            </tr>
+
+                            <tr>
+                              <td></td>
+                              <td>RTP234</td>
+                              <td>Powers Pediatrics</td>
+                              <td>ravi@reviewthatplace.com</td>
+                              <td>987217202</td>
+                              <td>987217202</td>
+                              <td>Rose Eve</td>
+                              <td>Ornaldo</td>
+                              <td>Florida</td>
+                            </tr>
+
+                            <tr>
+                              <td></td>
+                              <td>RTP234</td>
+                              <td>Powers Pediatrics</td>
+                              <td>ravi@reviewthatplace.com</td>
+                              <td>987217202</td>
+                              <td>987217202</td>
+                              <td>Rose Eve</td>
+                              <td>Ornaldo</td>
+                              <td>Florida</td>
+                            </tr>
+
+                            <tr>
+                              <td></td>
+                              <td>RTP234</td>
+                              <td>Powers Pediatrics</td>
+                              <td>ravi@reviewthatplace.com</td>
+                              <td>987217202</td>
+                              <td>987217202</td>
+                              <td>Rose Eve</td>
+                              <td>Ornaldo</td>
+                              <td>Florida</td>
+                            </tr>
+
+                            <tr>
+                              <td></td>
+                              <td>RTP234</td>
+                              <td>Powers Pediatrics</td>
+                              <td>ravi@reviewthatplace.com</td>
+                              <td>987217202</td>
+                              <td>987217202</td>
+                              <td>Rose Eve</td>
+                              <td>Ornaldo</td>
+                              <td>Florida</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-success" data-target="#addPracticeConfirm" data-toggle="modal">Add</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================= All practices view modal ======================= -->
+
+
+        <!-- ============================= confirm add practices modal ======================= -->
+        <div class="modal fade" id="addPracticeConfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-info modal-notify" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Adding?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  Are you sure want to add all selected practices?
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================= confirm add practices modal ======================= -->
+
+
+    <!-- ============================= Map patient modal ======================= -->
+    <div class="modal fade" id="mapPatient" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Map Patient</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table datatables table-bordered table-sm">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th>Select</th>
+                          <th scope="col">PatPID</th>
+                          <th scope="col">First Name</th>
+                          <th scope="col">Last Name</th>
+                          <th scope="col">DOB</th>
+                          <th scope="col">Phone</th>
+                          <th scope="col">SSN</th>
+                          <th scope="col">Street</th>
+                          <th scope="col">City</th>
+                          <th scope="col">State</th>
+                          <th scope="col">Zip</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <a class="btn-floating btn-sm btn-primary" data-dismiss="modal"><i class="far fa-check-square checkIcon white-text"></i></a>
+                          </td>
+                          <td>PAT123</td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>11/10/1998</td>
+                          <td>(123) 456-7890</td>
+                          <td>1233421321</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>FL</td>
+                          <td>12324567</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a class="btn-floating btn-sm btn-primary" data-dismiss="modal"><i class="far fa-check-square checkIcon white-text"></i></a>
+                          </td>
+                          <td>PAT123</td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>11/10/1998</td>
+                          <td>(123) 456-7890</td>
+                          <td>1233421321</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>FL</td>
+                          <td>12324567</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a class="btn-floating btn-sm btn-primary" data-dismiss="modal"><i class="far fa-check-square checkIcon white-text"></i></a>
+                          </td>
+                          <td>PAT123</td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>11/10/1998</td>
+                          <td>(123) 456-7890</td>
+                          <td>1233421321</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>FL</td>
+                          <td>12324567</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a class="btn-floating btn-sm btn-primary" data-dismiss="modal"><i class="far fa-check-square checkIcon white-text"></i></a>
+                          </td>
+                          <td>PAT123</td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>11/10/1998</td>
+                          <td>(123) 456-7890</td>
+                          <td>1233421321</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>FL</td>
+                          <td>12324567</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a class="btn-floating btn-sm btn-primary" data-dismiss="modal"><i class="far fa-check-square checkIcon white-text"></i></a>
+                          </td>
+                          <td>PAT123</td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>11/10/1998</td>
+                          <td>(123) 456-7890</td>
+                          <td>1233421321</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>FL</td>
+                          <td>12324567</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a class="btn-floating btn-sm btn-primary" data-dismiss="modal"><i class="far fa-check-square checkIcon white-text"></i></a>
+                          </td>
+                          <td>PAT123</td>
+                          <td>Ravi</td>
+                          <td>Agrawal</td>
+                          <td>11/10/1998</td>
+                          <td>(123) 456-7890</td>
+                          <td>1233421321</td>
+                          <td>Rose Ave</td>
+                          <td>Ornaldo</td>
+                          <td>FL</td>
+                          <td>12324567</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= Map patient modal ======================= -->
+
+
+    <!-- ============================= email modal ======================= -->
+    <div class="modal fade" id="emailPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Send Email</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="md-form">
+                  <textarea id="textarea-char-counter" class="form-control md-textarea" length="80" rows="2"></textarea>
+                  <label for="textarea-char-counter">Write your Message</label>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="button" name=""  class="btn btn-success" value="Send">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= email modal ======================= -->
+
+
+    <!-- ============================= text modal ======================= -->
+    <div class="modal fade" id="textPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Send Text</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="md-form">
+                  <textarea id="textarea-char-counter" class="form-control md-textarea" length="80" rows="2"></textarea>
+                  <label for="textarea-char-counter">Write your Message</label>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="button" name=""  class="btn btn-success" value="Send">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= text modal ======================= -->
+
+    
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- sidebar JS -->
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/tableScript.js"></script>
+</body>
+
+</html>

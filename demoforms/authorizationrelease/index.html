@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+      <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-QM1CH7JSY8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QM1CH7JSY8');
+      </script> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NH6J654');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <title>Authorization Release</title>
+    <!-- Booststrap css -->
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/bootstrap.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/jquery-ui.min.css">
+    <link rel="stylesheet" rel="preconnect" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="icon" href="assest/img/logo.png" type="image/jpg" sizes="32x32">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/select2.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/select2-bootstrap4.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/form.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/result.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/style.min.css">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/forms/typography.min.css">
+    <link href="assest/css/signature/jquery.signaturepad.css" rel="stylesheet" rel="prefetch">
+    <link rel="stylesheet" rel="prefetch" type="text/css" href="assest/css/stylish-tooltip.css">
+    <style>
+      /* Orange */
+      .btn-outline-orange {
+        border-color: #ff621f;
+        color: #ff621f;
+      }
+
+      .btn-outline-orange:hover {
+        background: #ff621f;
+        color: white;
+      }
+      .separator {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .separator::before,
+      .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #000;
+      }
+
+      .separator:not(:empty)::before {
+        margin-right: .25em;
+      }
+
+      .separator:not(:empty)::after {
+        margin-left: .25em;
+      }
+    </style>
+ </head>
+ <body>
+    <div id="loader"></div>
+    <header>
+      <div class="container">
+        <div class="row">
+    
+          <!-- Logo Start-->
+          <div class="col-md-12 text-center mb-3">
+            <img class="img-fluid lazyload" id="logo" alt="rtplogo" src="assest/img/rtplogo.png">  
+          </div>
+          <!-- Logo End-->
+    
+          <!-- Translator Start -->
+
+          <!-- Translator End -->
+    
+          <!-- Form Name Start -->
+          <div class="col-md-12 text-center">
+            <h1><b>Authorization Release</b></h1>
+          </div>
+          <!-- Form Name End -->
+          <div class="col-md-12 text-center mt-n2 mb-3">
+            <small class="text-danger"><i class="fas fa-circle"></i> Required</small>
+            <small class="text-warning"><i class="fas fa-circle"></i> Optional</small>
+            <small class="text-success"><i class="fas fa-circle"></i> Completed</small>
+          </div>
+          
+        </div>
+        <!-- select language -->
+        <div class="modal fade" id="selectlanguage" tabindex="-1" aria-labelledby="selectlanguage" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #2487ce;color: white;">
+                <h5 class="modal-title" id="exampleModalLabel">Select language</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+              </div>
+              <div class="modal-body">
+              <select class="form-control" onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|af">Afrikaans</option><option value="en|sq">Albanian</option><option value="en|ar">Arabic</option><option value="en|hy">Armenian</option><option value="en|az">Azerbaijani</option><option value="en|eu">Basque</option><option value="en|be">Belarusian</option><option value="en|bg">Bulgarian</option><option value="en|ca">Catalan</option><option value="en|zh-CN">Chinese (Simplified)</option><option value="en|zh-TW">Chinese (Traditional)</option><option value="en|hr">Croatian</option><option value="en|cs">Czech</option><option value="en|da">Danish</option><option value="en|nl">Dutch</option><option value="en|en">English</option><option value="en|et">Estonian</option><option value="en|tl">Filipino</option><option value="en|fi">Finnish</option><option value="en|fr">French</option><option value="en|gl">Galician</option><option value="en|ka">Georgian</option><option value="en|de">German</option><option value="en|el">Greek</option><option value="en|ht">Haitian Creole</option><option value="en|iw">Hebrew</option><option value="en|hi">Hindi</option><option value="en|hu">Hungarian</option><option value="en|is">Icelandic</option><option value="en|id">Indonesian</option><option value="en|ga">Irish</option><option value="en|it">Italian</option><option value="en|ja">Japanese</option><option value="en|ko">Korean</option><option value="en|lv">Latvian</option><option value="en|lt">Lithuanian</option><option value="en|mk">Macedonian</option><option value="en|ms">Malay</option><option value="en|mt">Maltese</option><option value="en|no">Norwegian</option><option value="en|fa">Persian</option><option value="en|pl">Polish</option><option value="en|pt">Portuguese</option><option value="en|ro">Romanian</option><option value="en|ru">Russian</option><option value="en|sr">Serbian</option><option value="en|sk">Slovak</option><option value="en|sl">Slovenian</option><option value="en|es">Spanish</option><option value="en|sw">Swahili</option><option value="en|sv">Swedish</option><option value="en|th">Thai</option><option value="en|tr">Turkish</option><option value="en|uk">Ukrainian</option><option value="en|ur">Urdu</option><option value="en|vi">Vietnamese</option><option value="en|cy">Welsh</option><option value="en|yi">Yiddish</option></select>
+              <div id="google_translate_element2"></div>
+              <script type="text/javascript">
+                function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+              </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+              <script type="text/javascript">
+                /* <![CDATA[ */
+                eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+                /* ]]> */
+              </script>
+            </div>
+
+          </div>
+        </div>
+        </div>
+        <!-- select language -->
+        <a data-toggle="modal" data-target="#selectlanguage" data-toggle="tooltip" data-placement="top" title="Select language" class="select-language d-flex align-items-center justify-content-center"><i class="fa fa-globe" aria-hidden="true"></i></a>        
+      </div>
+    </header>
+
+    <main>
+
+      <section class="section mt-3 arfstep1 active" id="auth_1">
+        <div class="container form-container text-center fadeInDown">
+            <!--Your Name-->
+              <div class="form-group">
+                <div class="" id="strips1">
+                  <legend class="font-weight-bold" id="pagetitles">Your Information</legend>
+                </div>
+                  <label for="yourname" class="col-sm-12 control-label">Your Name</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="s1q1" class="" name="yourname" placeholder="Your Name">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide your name!
+                    </div>
+                  </div>
+              </div>
+            <!--Your Name-->
+          
+            <!--Phone Number-->
+              <div class="form-group">
+                  <label for="yourname" class="col-sm-12 control-label">
+                    Phone
+                    <small class="mytooltip tooltip-effect-2">
+                      <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
+                      <span class="tooltip-content clearfix"> 
+                        <span class="tooltip-text font-weight-bold"> We will send you SMS notifications to the phone number provided.</span> 
+                      </span> 
+                    </small>
+                  </label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="s1q1" class="" name="yourname" placeholder="Phone">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide Phone Number!
+                    </div>
+                  </div>
+              </div>
+            <!--Phone Number-->
+          
+            <!--Email-->
+              <div class="form-group">
+                <label for="yourname" class="col-sm-12 control-label">
+                  Email
+                  <small class="mytooltip tooltip-effect-2">
+                    <i class="fas fa-question-circle text-danger" class="tooltip-item"></i>
+                    <span class="tooltip-content clearfix"> 
+                      <span class="tooltip-text font-weight-bold"> We will email you notifications to the email provided.</span> 
+                    </span> 
+                  </small>
+                </label>
+                <div class="col-sm-12">
+                  <input required type="text" id="s1q1" class="" name="yourname" placeholder="Email">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide Email!
+                  </div>
+                </div>
+              </div>
+            <!--Email-->
+          
+            <!--Relationship To Patient-->
+              <div class="form-group text-center">
+                <label for="yourname" class="col-sm-12 control-label">Relationship To Patient</label>
+                <div class="col-sm-12">
+                  <select name="" placeholder="Relationship" class="form-control required" style="width: 85%; margin-left: 30px;">
+                      <option value="" selected="">Choose Relationship</option>
+                      <option value="Self">Self</option>
+                      <option value="Spouse">Spouse</option>
+                      <option value="Step Child">Step Child</option>
+                      <option value="Foster Child">Foster Child</option>
+                      <option value="Ward of the court">Ward of the court</option>
+                      <option value="Employee">Employee</option>
+                      <option value="Handicaped dependent">Handicaped dependent</option>
+                      <option value="Organ Donar">Organ Donar</option>
+                      <option value="Cadever Donar">Cadever Donar</option>
+                      <option value="Grandchild">Grandchild</option>
+                      <option value="Niece/Nephew">Niece/Nephew</option>
+                      <option value="Injured Plaintiff">Injured Plaintiff</option>
+                      <option value="Sponsored Dependent">Sponsored Dependent</option>
+                      <option value="Parent">Parent</option>
+                      <option value="Grandparent">Grandparent</option>
+                      <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+            <!--Relationship To Patient-->
+
+            <!--Upload ID-->
+              <div class="form-group">
+                      <label id="formlable" for="fileToUpload" class="col-sm-12 control-label">Upload ID or Signed Authorization Release</label>
+                      <div class="col-sm-12">
+                        <input required type="file" id="s1q2" class="" placeholder="Upload ID" autofocus>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                          Please upload your ID!
+                        </div>
+                    </div>
+              </div>
+            <!--Upload ID-->
+
+          <div class="card" id="btncard">
+            <a href="#" class="arfsteponenext">
+              <img src="assest/img/buttons/pi.png" alt="" class="img-fluid btn-start" id="btnimg1">
+              <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid btn-start img-top" id="btnimg1">
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section mt-3 arfstep2" id="auth_2">  
+        <div class="container form-container text-center slide">
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Patient Information</legend>
+          </div>
+              
+          <!--First Name-->
+            <div class="form-group">
+                <label for="patientfullname" class="col-sm-12 control-label">First Name</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="s3q1" class="" name="patientfullname" placeholder="First Name">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide First name!
+                  </div>
+                </div>
+            </div>
+          <!--First Name-->
+              
+          <!--Last Name-->
+            <div class="form-group">
+              <label for="patientfullname" class="col-sm-12 control-label">Last Name</label>
+              <div class="col-sm-12">
+                <input required type="text" id="s3q1" class="" name="patientfullname" placeholder="Last Name">
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please Provide Last name!
+                </div>
+              </div>
+            </div>
+          <!--Last Name-->
+
+          <!--Date-->
+            <div class="form-group">
+              <label id="formlable" for="birthDate" class="col-sm-12 control-label">Date of Birth</label>
+                <div class="col-sm-12">
+                  <input required type="date" id="s3q2" class="" placeholder="Date of Birth" autofocus>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide your date of birth!
+                  </div>
+                </div>
+            </div>
+          <!--Date-->
+
+          <!--SSN-->
+            <div class="form-group">
+                <label for="SSN" class="col-sm-12 control-label">SSN</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="s3q3" class="" name="SSN" placeholder="SSN">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide your social security number!
+                  </div>
+                </div>
+            </div>
+          <!--SSN-->
+
+          <div class="row">
+            <div class="card  col" id="backbtncard">
+              <a href="#" class="arfsteptwoback">
+                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card  col" id="nextbtncard">
+                <a href="#" class="arfsteptwonext">
+                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                </a>
+            </div>  
+          </div>
+        </div>
+      </section>
+
+      <section class="section mt-3 arfstep3" id="auth_3"> 
+        <div class="container form-container text-center slide">
+
+          <div class="" id="strips1">
+            <legend class="font-weight-bold" id="pagetitles">Who is sending the records?</legend>
+          </div>
+
+          <div class="form-checkbox">
+            <input required class="form-check-input checkbox rtp_somebody" type="radio" name="s4" id="s4q1">
+            <label class="checklabel" for="s4q1">
+             <!-- <h4 class="font-weight-bold mb-n2">RTP Medical Solutions</h4> --> <img src="assest/img/rtplogo.png" alt="" width="200"> <br><small style="font-size: 12px;">Sending Practice</small><br>
+              <i class="fas fa-arrow-down text-success font-weight-bold fa-2x"></i>
+              <h4 class="font-weight-bold mb-n2">Somebody Else</h4> <small style="font-size: 12px;">Receiving Practice</small>
+            </label>  
+          </div>
+
+          <div class="separator font-weight-bold" style="font-size: 30px;">or</div>
+
+          <div class="form-checkbox">
+            <input required class="form-check-input checkbox somebody_rtp" type="radio" name="s4" id="s4q2">
+            <label class="checklabel" for="s4q2">
+              <h4 class="font-weight-bold mb-n2">Somebody Else</h4> <small style="font-size: 12px;">Sending Practice</small><br>
+               <i class="fas fa-arrow-down text-success font-weight-bold fa-2x"></i>
+               <!-- <h4 class="font-weight-bold mb-n2">RTP Medical Solutions</h4> --><br><img src="assest/img/rtplogo.png" alt="" width="200"> <br><small style="font-size: 12px;">Receiving Practice</small>
+            </label>  
+          </div>
+
+          <div class="row">
+            <div class="card col" id="backbtncard">
+              <a href="#" class="arfstepthreeback">
+                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card col" id="nextbtncard">
+                <a href="#" class="rtp_flow" id="rtp_next">
+                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                </a>
+
+                <a href="#" class="somebody_flow" id="somebody_next">
+                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                </a>
+            </div>  
+          </div>
+        </div>
+      </section>
+
+      <!-- rtpmed flow -->
+        <section class="section mt-3 arfstep4" id="auth_4">
+          <div class="container form-container text-center slide">
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Send Records Via</legend>
+            </div>
+
+            <div class="form-checkbox">
+              <input required class="form-check-input checkbox" type="radio" name="s5" id="s5q1" value="">
+              <label class="checklabel" for="s5q1" onclick="faxType()">Fax</label>  
+            </div>
+
+            <div class="form-checkbox">
+              <input required class="form-check-input checkbox" type="radio" name="s5" id="s5q2" value="">
+              <label class="checklabel" for="s5q2" onclick="emailType()">Email</label>  
+            </div>
+            
+            <div class="form-checkbox">
+              <input required class="form-check-input checkbox" type="radio" name="s5" id="s5q3" value="">
+              <label class="checklabel" for="s5q3" >Not Sure</label>  
+            </div>
+
+            <div class="col-lg-12 slide" id="emailType" style="display: none;">
+              <div class="form-group">
+                <label id="formlable" for="email" class="col-sm-12 control-label">Email Address</label>
+                    <div class="col-sm-12">
+                      <input required type="text" id="text" class="" placeholder="Enter Email Address" class="form-control" autofocus>
+                    </div>
+              </div>
+            </div> 
+
+            <div class="col-lg-12 slide" id="faxType" style="display: none;">
+              <div class="form-group">
+                <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Fax Number</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="phonenumber" class="" name="phoneNumber" placeholder="fax Number">
+                  </div>
+              </div>
+            </div> 
+
+            <div class="row">
+            <div class="card  col" id="backbtncard">
+              <a href="#" class="arfstepfourback">
+                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card  col" id="nextbtncard">
+                <a href="#" class="arfstepfournext">
+                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                </a>
+              </div>  
+            </div>
+          </div>
+        </section>  
+        
+        <section class="section mt-3 arfstep5" id="auth_5">
+          <div class="container form-container text-center slide">
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Receiving Practice Information</legend>
+            </div>
+            <!--Name Of Practice-->
+              <div class="form-group">
+                <label for="practicename" class="col-sm-12 control-label">Name Of Practice</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="s6q1" class="" name="" placeholder="Name Of Practice">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide the name of the practice!
+                  </div>
+                </div>
+              </div>
+            <!--Name Of Practice-->
+
+            <!--Phone Number-->
+              <div class="form-group">
+                <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Phone Number</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="s6q2" class="" name="" placeholder="Phone Number">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide the phone number of the practice!
+                  </div>
+                </div>
+              </div>
+            <!--Phone Number-->
+
+            <!--Street-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">Street</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="s6q3" class="" name="" placeholder="Street">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide the street address!
+                    </div>
+                  </div>
+              </div>
+            <!--Street-->
+
+            <!--City-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">City</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="s6q4" class="" name="" placeholder="City">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide the city!
+                    </div>
+                  </div>
+              </div>
+            <!--City-->
+              
+            <!--State-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">State</label>
+                  <div class="col-sm-12">
+                    <select required="" class="form-control required" id="practice2_state" name="practice2_state" placeholder="State" style="width: 85%; margin-left: 30px;">
+                      <option value="">Select State</option>
+                      <option value="Alabama">Alabama</option>
+                      <option value="Alaska">Alaska</option>
+                      <option value="Arizona">Arizona</option>
+                      <option value="Arkanasas">Arkanasas</option>
+                      <option value="California">California</option>
+                      <option value="Colorado">Colorado</option>
+                      <option value="Connecticut">Connecticut</option>
+                      <option value="Delaware">Delaware</option>
+                      <option value="Florida">Florida</option>
+                      <option value="Georgia">Georgia</option>
+                      <option value="Hawaii">Hawaii</option>
+                      <option value="Idaho">Idaho</option>
+                      <option value="Illinois">Illinois</option>
+                      <option value="Indiana">Indiana</option>
+                      <option value="Iowa">Iowa</option>
+                      <option value="Kankas">Kankas</option>
+                      <option value="Kentucky">Kentucky</option>
+                      <option value="Louisiana">Louisiana</option>
+                      <option value="Maine">Maine</option>
+                      <option value="Maryland">Maryland</option>
+                      <option value="Massachusetts">Massachusetts</option>
+                      <option value="Michigan">Michigan</option>
+                      <option value="Minnesota">Minnesota</option>
+                      <option value="Mississippi">Mississippi</option>
+                      <option value="Missouri">Missouri</option>
+                      <option value="Montana">Montana</option>
+                      <option value="Nebraska">Nebraska</option>
+                      <option value="Nevada">Nevada</option>
+                      <option value="New Hampshire">New Hampshire</option>
+                      <option value="New Jersey">New Jersey</option>
+                      <option value="New Mexico">New Mexico</option>
+                      <option value="New York">New York</option>
+                      <option value="North Carolina">North Carolina</option>
+                      <option value="North Dakota">North Dakota</option>
+                      <option value="Ohio">Ohio</option>
+                      <option value="Oklahoma">Oklahoma</option>
+                      <option value="Oregon">Oregon</option>
+                      <option value="Pennsylvania">Pennsylvania</option>
+                      <option value="Rhode Island">Rhode Island</option>
+                      <option value="South Carolina">South Carolina</option>
+                      <option value="South Dakota">South Dakota</option>
+                      <option value="Tennessee">Tennessee</option>
+                      <option value="Texas">Texas</option>
+                      <option value="Utah">Utah</option>
+                      <option value="Vermont">Vermont</option>
+                      <option value="Virginia">Virginia</option>
+                      <option value="Washington">Washington</option>
+                      <option value="Washington,D.C.(DC)">Washington,D.C.(DC)</option>
+                      <option value="West Virginia">West Virginia</option>
+                      <option value="Wisconsin">Wisconsin</option>
+                      <option value="Wyoming">Wyoming</option>
+                    </select>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide the state!
+                    </div>
+                  </div>
+              </div>
+            <!--State-->
+              
+            <!--Zip-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">Zip</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="s6q6" class="" name="" placeholder="zip">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide the zip!
+                    </div>
+                  </div>
+              </div>
+            <!--Zip-->
+
+            <div class="row">
+              <div class="card  col" id="backbtncard">
+                <a href="#" class="arfstepfiveback">
+                    <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                </a>
+              </div>
+
+              <div class="card  col" id="nextbtncard">
+                  <a href="#" class="arfstepfivenext">
+                    <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                    <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                  </a>
+              </div>  
+            </div>
+          </div>
+        </section>
+
+        <section class="section mt-3 arfstep6" id="auth_6">
+          <div class="container form-container text-center slide">
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">What’s the purpose of this request?</legend>
+            </div>
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s8" id="s8q1" value="">
+                <label class="checklabel" for="s8q1">Purpose of request 01</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s8" id="s8q2" value="">
+                <label class="checklabel" for="s8q2">Purpose of request 02</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s8" id="s8q3" value="">
+                <label class="checklabel" for="s8q3">Purpose of request 03</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s8" id="s8q4" value="">
+                <label class="checklabel" for="s8q4">Purpose of request 04</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s8" id="s8q5" value="">
+                <label class="checklabel" for="s8q5">Purpose of request 05</label>  
+            </div> 
+
+            <div class="form-checkbox">
+                  <input class="form-check-input checkbox" type="radio" name="s8" id="s8q6" value="">
+                  <label class="checklabel" for="s8q6">Purpose of request 06</label>  
+            </div>
+
+            <div class="form-checkbox">
+                  <input class="form-check-input checkbox" type="radio" name="s8" id="s8q7" value="">
+                  <label class="checklabel" for="s8q7">Purpose of request 07</label>  
+            </div>
+
+            <div class="row">
+              <div class="card col" id="backbtncard">
+                <a href="#" class="arfstepsixback">
+                    <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                </a>
+              </div>
+
+              <div class="card col" id="nextbtncard">
+                  <a href="#" class="arfstepsixnext">
+                    <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                    <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                  </a>
+              </div> 
+            </div>
+          </div>
+        </section>
+
+        <section class="section mt-3 arfstep7" id="auth_7">
+          <div class="container form-container text-center slide">
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Authorization of Usage and Disclosure</legend>
+            </div>
+            <p>By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records, <br> If Such Information And/or Records Exist:</p>
+            
+            <div class="form-checkbox">
+              <input class="form-check-input checkbox" type="radio" name="s9" id="s9q0" value="">
+              <label class="checklabel" for="s9q0">Select All</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q1" value="">
+                <label class="checklabel" for="s9q1">Authorization of usage and Disclosure 1</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q2" value="">
+                <label class="checklabel" for="s9q2">Authorization of usage and Disclosure 2</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q3" value="">
+                <label class="checklabel" for="s9q3">Authorization of usage and Disclosure 3</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q4" value="">
+                <label class="checklabel" for="s9q4">Authorization of usage and Disclosure 4</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q5" value="">
+                <label class="checklabel" for="s9q5">Authorization of usage and Disclosure 5</label>  
+            </div> 
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q6" value="">
+                <label class="checklabel" for="s9q6">Authorization of usage and Disclosure 6</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q7" value="">
+                <label class="checklabel" for="s9q7">Authorization of usage and Disclosure 7</label>  
+            </div>
+
+              <div class="row">
+                <div class="card  col" id="backbtncard">
+                  <a href="#" class="arfstepsevenback">
+                      <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                      <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                  </a>
+                </div>
+
+                <div class="card  col" id="nextbtncard">
+                    <a href="#" class="arfstepsevennext">
+                      <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                      <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                    </a>
+                </div> 
+              </div>
+          </div>
+        </section>
+
+        <section class="section mt-3 arfstep8" id="auth_8">
+          <div class="container form-container text-center slide">
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Restrict Disclosure</legend>
+            </div>
+            <p>Do you want to restrict disclosure for any records related to the following?</p>
+            <legend class="font-weight-bold text-danger">If no please continue to next step</legend>
+            
+            <div class="form-checkbox ">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q1" value="">
+                <label class="checklabel" for="s10q1">Restrict disclosure 1</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q2" value="">
+                <label class="checklabel" for="s10q2">Restrict disclosure 2</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q3" value="">
+                <label class="checklabel" for="s10q3">Restrict disclosure 3</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q4" value="">
+                <label class="checklabel" for="s10q4">Restrict disclosure 4</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q5" value="">
+                <label class="checklabel" for="s10q5">Restrict disclosure 5</label>  
+            </div> 
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q6" value="">
+                <label class="checklabel" for="s10q7">Restrict disclosure 6</label>  
+            </div>
+
+            <!--Describe-->
+                <div class="form-group">
+                      <label for="comment" class="col-sm-12 control-label">Describe</label>
+                      <h6>(Federal regulations require a description of how much and <br> what kind of information is to be disclosed.) </h6>
+                      <div class="col-sm-12">
+                        <textarea name="describe" class="form-control" id="s10q7" required="" rows="3"></textarea>
+                      </div>
+                </div>
+            <!--Describe-->
+
+            <div class="row">
+              <div class="card  col" id="backbtncard">
+                <a href="#" class="arfstepeightback">
+                    <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                </a>
+              </div>
+
+              <div class="card  col" id="nextbtncard">
+                  <a href="#" class="arfstepeightnext">
+                    <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                    <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                  </a>
+              </div>    
+            </div>
+          </div>
+        </section>
+
+        <section class="section mt-3 arfstep9" id="auth_9">
+          <div class="container form-container text-center slide">
+
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Consent</legend>
+            </div>
+
+            <div class="container text-justify" style="overflow-x: scroll; height: 475px;">
+              <p><strong>I understand that</strong>, if the person or entity receiving the information is not a health care provider or health plan covered by federal privacy regulations, the information described above may be re-disclosed and no longer protected by HIPAA and other federal and state regulations. However, the recipient may be prohibited from disclosing substance abuse information under the Federal Substance Abuse Confidentiality Requirements</p>
+              <p><strong>I also understand that</strong>, the person I am authorizing to use and/or disclose the information may not receive compensation for doing so.</p>
+              <p><strong>I, further understand</strong> that I may refuse to sign this authorization and that my refusal to sign will not affect my ability to obtain treatment or payment of my eligibility for benefits. I may inspect or copy any information to be used and/or disclosed under this authorization</p>
+              <p><strong>Finally, I understand, </strong> that <u>I may revoke this authorization</u>, in writing, at any time, provided that I do so in writing, except to the extent that action has been taken in reliance upon this authorization</p>
+            </div>
+
+            <div class="row">
+                  <div class="card  col" id="backbtncard">
+                    <a href="#" class="arfstepnineback">
+                        <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                        <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                    </a>
+                  </div>
+
+                  <div class="card  col" id="nextbtncard">
+                      <a href="#" class="arfstepninenext">
+                        <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                        <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                      </a>
+                  </div>  
+            </div>
+          </div>
+        </section>
+
+        <section class="section mt-3 arfstep10" id="auth_10">
+          <div class="container form-container text-center slide">
+            <div class="col-12" id="strips">
+                    <h4 class="font-weight-bold my-3" id="p11t"> Your Information </h4>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                          <tr>
+                            <th class="text-left">Your Name</th>
+                            <td id="td1">Shakir</td>
+                          </tr>
+                          <tr>
+                            <th class="text-left">Phone</th>
+                            <td id="td1">9143595588</td>
+                          </tr>
+                          <tr>
+                            <th class="text-left">Email</th>
+                            <td id="td1">shakir@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <th class="text-left">Relationship To Patient</th>
+                            <td id="td1">Self</td>
+                          </tr>
+                          <tr>
+                            <th class="text-left">Upload ID</th>
+                            <td id="td1">ID</td>
+                          </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+                    <h4 class="font-weight-bold my-3" id="p11t"> Patient Information </h4>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                          <th class="text-left">First Name</th>
+                          <td id="td1">Shakir</td>
+                        </tr>
+                        <tr>
+                          <th class="text-left">Last Name</th>
+                          <td id="td1">Ansari</td>
+                        </tr>
+                        <tr>
+                          <th class="text-left">Date of Birth</th>
+                          <td id="td1">20/02/1990</td>
+                        </tr>
+                        <tr>
+                          <th class="text-left">SSN</th>
+                          <td id="td1">22222222222</td>
+                        </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">Send Records Via</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="text-left">Email</th>
+                        <td id="td1">Shakir@gmail.com</td>
+                      </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+              <h5 class="font-weight-bold my-3" id="p11t">Sending Practice Information</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="text-left">Name Of Practice</th>
+                        <td id="td1">RTPMedicalSolutions</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Phone Number</th>
+                        <td id="td1">9153595850</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Street</th>
+                        <td id="td1">2717 US-89</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">City</th>
+                        <td id="td1">Ogden</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">State</th>
+                        <td id="td1">UT</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Zip</th>
+                        <td id="td1">84414</td>
+                      </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">Receiving Practice Information</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="text-left">Name Of Practice</th>
+                        <td id="td1">Somebody Else</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Phone Number</th>
+                        <td id="td1">9153595850</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Street</th>
+                        <td id="td1">2717 US-89</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">City</th>
+                        <td id="td1">Ogden</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">State</th>
+                        <td id="td1">UT</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Zip</th>
+                        <td id="td1">84414</td>
+                      </tr>
+                    </tbody>
+            </table>
+                
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">What’s the purpose of this request?</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th id="middata">Purpose of request 1</th>
+                      </tr>
+                    </tbody>
+            </table>
+            
+            <div class="col-12" id="strips">
+                <h5 class="font-weight-bold my-3" id="p11t">Authorization of Usage and Disclosure </h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td>
+                            <p>
+                                By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records,
+                                If Such Information And/or Records Exist:
+                            </p>
+                        </td>
+                    </tr>
+                      <tr>
+                        <th id="middata">Authorization of usage and Disclosure 1</th>
+                      </tr>
+                    </tbody>
+            </table>
+            
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">Restrict Disclosure</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td>
+                            <p>
+                                Do you want to restrict disclosure for any records related to the following?
+                                If no please continue to next step
+                            </p>
+                        </td>
+                    </tr>
+                      <tr>
+                        <th id="middata">Restrict disclosure 1</th>
+                      </tr>
+                    </tbody>
+            </table>
+            
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">Consent</h5>
+            </div>
+            <div class="container text-justify">
+                    <small><strong>I understand that</strong>, if the person or entity receiving the information is not a health care provider or health plan covered by federal privacy regulations, the information described above may be re-disclosed and no longer protected by HIPAA and other federal and state regulations. However, the recipient may be prohibited from disclosing substance abuse information under the Federal Substance Abuse Confidentiality Requirements</small>
+                    <br>
+                    <small><strong>I also understand that</strong>, the person I am authorizing to use and/or disclose the information may not receive compensation for doing so.</small>
+                    <br>
+                    <small><strong>I, further understand</strong> that I may refuse to sign this authorization and that my refusal to sign will not affect my ability to obtain treatment or payment of my eligibility for benefits. I may inspect or copy any information to be used and/or disclosed under this authorization</small>
+                    <br>
+                    <small><strong>Finally, I understand, </strong> that <u>I may revoke this authorization</u>, in writing, at any time, provided that I do so in writing, except to the extent that action has been taken in reliance upon this authorization</small>
+            </div>
+            
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">Confirm your Information</h5>
+            </div>
+            <div class="col-12 mb-2">
+              <h5 class="font-weight-bold text-center">Unless revoked earlier,  this<br> authorization will expire</h5>
+            </div>
+
+            <div class="col-12 mt-n4">
+              <!--Date-->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                      <input required type="date" id="s3q2" class="" placeholder="Insert date" autofocus>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please Provide your Insert date!
+                      </div>
+                    </div>
+                </div>
+              <!--Date-->
+            
+              <!--Your Name-->
+                <div class="form-group">
+                    <label for="yourname" class="col-sm-12 control-label">Your Name</label>
+                    <div class="col-sm-12">
+                      <input required type="text" id="s1q1" class="" name="yourname" placeholder="Your Name">
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please Provide your name!
+                      </div>
+                    </div>
+                </div>
+              <!--Your Name-->
+                  
+              <div class="form-group">
+                <label for="" class="col-sm-12 control-label">Signature</label>
+                <div class="col-lg-12">
+                      <div class="sigPad" style="width:404px;" id="smoothed7">
+                          <ul class="sigNav">
+                            <li class="drawIt"><a href="#draw-it">Do your Signature</a></li>
+                            <li class="clearButton"><a href="#clear">Clear</a></li>
+                          </ul>
+                          <div class="sig sigWrapper" style="height:auto;">
+                            <div class="typed"></div>
+                            <canvas class="pad" width="400" height="250"></canvas>
+                            <input type="hidden" name="sign5" class="output" id="sign5">
+                          </div>
+                          <span class="error-span" id="error_sign5"></span>
+                      </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+                  <div class="card col" id="backbtncard">
+                    <a href="#" class="arfsteptenback">
+                        <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                        <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                    </a>
+                  </div>
+
+                  <div class="card col" id="nextbtncard">
+                      <a href="#" class="arfsteptennext">
+                        <img src="assest/img/buttons/se.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                        <img src="assest/img/buttons/sehover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                      </a>
+                  </div>  
+            </div>
+          </div>
+        </section>
+      <!-- rtpmed flow -->
+
+      <!-- Somebody flow -->
+        <section class="section mt-3 alt_step-4" id="alt_auth_4">
+          <div class="container form-container text-center slide">
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Send Request Via</legend>
+            </div>
+
+            <div class="form-checkbox">
+              <input required class="form-check-input checkbox" type="radio" name="s5" id="s5q1" value="">
+              <label class="checklabel" for="s5q1" onclick="alt_faxType()">Fax</label>  
+            </div>
+
+            <div class="form-checkbox">
+              <input required class="form-check-input checkbox" type="radio" name="s5" id="s5q2" value="">
+              <label class="checklabel" for="s5q2" onclick="alt_emailType()">Email</label>  
+            </div>
+            
+            <div class="form-checkbox">
+              <input required class="form-check-input checkbox" type="radio" name="s5" id="s5q3" value="">
+              <label class="checklabel" for="s5q3" >Not Sure</label>  
+            </div>
+
+            <div class="col-lg-12 slide" id="alt_emailType" style="display: none;">
+              <div class="form-group">
+                <label id="formlable" for="email" class="col-sm-12 control-label">Email Address</label>
+                    <div class="col-sm-12">
+                      <input required type="text" id="text" class="" placeholder="Enter Email Address" class="form-control" autofocus>
+                    </div>
+              </div>
+            </div> 
+
+            <div class="col-lg-12 slide" id="alt_faxType" style="display: none;">
+              <div class="form-group">
+                <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Fax Number</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="phonenumber" class="" name="phoneNumber" placeholder="fax Number">
+                  </div>
+              </div>
+            </div> 
+
+            <div class="row">
+            <div class="card  col" id="backbtncard">
+              <a href="#" class="arfstepfourback">
+                  <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                  <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+              </a>
+            </div>
+
+            <div class="card  col" id="nextbtncard">
+                <a href="#" class="alt_step-4next">
+                  <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                  <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                </a>
+              </div>  
+            </div>
+          </div>
+        </section> 
+        
+        <section class="section mt-3 alt_step-5" id="alt_auth_5">
+          <div class="container form-container text-center slide">
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Sending Practice Information</legend>
+            </div>
+            <!--Name Of Practice-->
+              <div class="form-group">
+                <label for="practicename" class="col-sm-12 control-label">Name Of Practice</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="s6q1" class="" name="" placeholder="Name Of Practice">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide the name of the practice!
+                  </div>
+                </div>
+              </div>
+            <!--Name Of Practice-->
+
+            <!--Phone Number-->
+              <div class="form-group">
+                <label id="formlable" for="phonenumber" class="col-sm-12 control-label">Phone Number</label>
+                <div class="col-sm-12">
+                  <input required type="text" id="s6q2" class="" name="" placeholder="Phone Number">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Provide the phone number of the practice!
+                  </div>
+                </div>
+              </div>
+            <!--Phone Number-->
+
+            <!--Street-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">Street</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="s6q3" class="" name="" placeholder="Street">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide the street address!
+                    </div>
+                  </div>
+              </div>
+            <!--Street-->
+
+            <!--City-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">City</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="s6q4" class="" name="" placeholder="City">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide the city!
+                    </div>
+                  </div>
+              </div>
+            <!--City-->
+              
+            <!--State-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">State</label>
+                  <div class="col-sm-12">
+                    <select required="" class="form-control required" id="practice2_state" name="practice2_state" placeholder="State" style="width: 85%; margin-left: 30px;">
+                      <option value="">Select State</option>
+                      <option value="Alabama">Alabama</option>
+                      <option value="Alaska">Alaska</option>
+                      <option value="Arizona">Arizona</option>
+                      <option value="Arkanasas">Arkanasas</option>
+                      <option value="California">California</option>
+                      <option value="Colorado">Colorado</option>
+                      <option value="Connecticut">Connecticut</option>
+                      <option value="Delaware">Delaware</option>
+                      <option value="Florida">Florida</option>
+                      <option value="Georgia">Georgia</option>
+                      <option value="Hawaii">Hawaii</option>
+                      <option value="Idaho">Idaho</option>
+                      <option value="Illinois">Illinois</option>
+                      <option value="Indiana">Indiana</option>
+                      <option value="Iowa">Iowa</option>
+                      <option value="Kankas">Kankas</option>
+                      <option value="Kentucky">Kentucky</option>
+                      <option value="Louisiana">Louisiana</option>
+                      <option value="Maine">Maine</option>
+                      <option value="Maryland">Maryland</option>
+                      <option value="Massachusetts">Massachusetts</option>
+                      <option value="Michigan">Michigan</option>
+                      <option value="Minnesota">Minnesota</option>
+                      <option value="Mississippi">Mississippi</option>
+                      <option value="Missouri">Missouri</option>
+                      <option value="Montana">Montana</option>
+                      <option value="Nebraska">Nebraska</option>
+                      <option value="Nevada">Nevada</option>
+                      <option value="New Hampshire">New Hampshire</option>
+                      <option value="New Jersey">New Jersey</option>
+                      <option value="New Mexico">New Mexico</option>
+                      <option value="New York">New York</option>
+                      <option value="North Carolina">North Carolina</option>
+                      <option value="North Dakota">North Dakota</option>
+                      <option value="Ohio">Ohio</option>
+                      <option value="Oklahoma">Oklahoma</option>
+                      <option value="Oregon">Oregon</option>
+                      <option value="Pennsylvania">Pennsylvania</option>
+                      <option value="Rhode Island">Rhode Island</option>
+                      <option value="South Carolina">South Carolina</option>
+                      <option value="South Dakota">South Dakota</option>
+                      <option value="Tennessee">Tennessee</option>
+                      <option value="Texas">Texas</option>
+                      <option value="Utah">Utah</option>
+                      <option value="Vermont">Vermont</option>
+                      <option value="Virginia">Virginia</option>
+                      <option value="Washington">Washington</option>
+                      <option value="Washington,D.C.(DC)">Washington,D.C.(DC)</option>
+                      <option value="West Virginia">West Virginia</option>
+                      <option value="Wisconsin">Wisconsin</option>
+                      <option value="Wyoming">Wyoming</option>
+                    </select>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide the state!
+                    </div>
+                  </div>
+              </div>
+            <!--State-->
+              
+            <!--Zip-->
+              <div class="form-group">
+                  <label for="address" class="col-sm-12 control-label">Zip</label>
+                  <div class="col-sm-12">
+                    <input required type="text" id="s6q6" class="" name="" placeholder="zip">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please Provide the zip!
+                    </div>
+                  </div>
+              </div>
+            <!--Zip-->
+
+            <div class="row">
+              <div class="card  col" id="backbtncard">
+                <a href="#" class="alt_step-5back">
+                    <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                </a>
+              </div>
+
+              <div class="card  col" id="nextbtncard">
+                  <a href="#" class="alt_step-5next">
+                    <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                    <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                  </a>
+              </div>  
+            </div>
+          </div>
+        </section>
+
+        <section class="section mt-3 alt_step-6" id="alt_auth_6">
+          <div class="container form-container text-center slide">
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">What’s the purpose of this request?</legend>
+            </div>
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s8" id="s8q1" value="">
+                <label class="checklabel" for="s8q1">Purpose of request 01</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s8" id="s8q2" value="">
+                <label class="checklabel" for="s8q2">Purpose of request 02</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s8" id="s8q3" value="">
+                <label class="checklabel" for="s8q3">Purpose of request 03</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s8" id="s8q4" value="">
+                <label class="checklabel" for="s8q4">Purpose of request 04</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s8" id="s8q5" value="">
+                <label class="checklabel" for="s8q5">Purpose of request 05</label>  
+            </div> 
+
+            <div class="form-checkbox">
+                  <input class="form-check-input checkbox" type="radio" name="s8" id="s8q6" value="">
+                  <label class="checklabel" for="s8q6">Purpose of request 06</label>  
+            </div>
+
+            <div class="form-checkbox">
+                  <input class="form-check-input checkbox" type="radio" name="s8" id="s8q7" value="">
+                  <label class="checklabel" for="s8q7">Purpose of request 07</label>  
+            </div>
+
+            <div class="row">
+              <div class="card col" id="backbtncard">
+                <a href="#" class="alt_step-6back">
+                    <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                </a>
+              </div>
+
+              <div class="card col" id="nextbtncard">
+                  <a href="#" class="alt_step-6next">
+                    <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                    <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                  </a>
+              </div> 
+            </div>
+          </div>
+        </section>
+
+        <section class="section mt-3 alt_step-7" id="alt_auth_7">
+          <div class="container form-container text-center slide">
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Authorization of Usage and Disclosure</legend>
+            </div>
+            <p>By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records, <br> If Such Information And/or Records Exist:</p>
+            
+            <div class="form-checkbox">
+              <input class="form-check-input checkbox" type="radio" name="s9" id="s9q0" value="">
+              <label class="checklabel" for="s9q0">Select All</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q1" value="">
+                <label class="checklabel" for="s9q1">Authorization of usage and Disclosure 1</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q2" value="">
+                <label class="checklabel" for="s9q2">Authorization of usage and Disclosure 2</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q3" value="">
+                <label class="checklabel" for="s9q3">Authorization of usage and Disclosure 3</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q4" value="">
+                <label class="checklabel" for="s9q4">Authorization of usage and Disclosure 4</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q5" value="">
+                <label class="checklabel" for="s9q5">Authorization of usage and Disclosure 5</label>  
+            </div> 
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q6" value="">
+                <label class="checklabel" for="s9q6">Authorization of usage and Disclosure 6</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s9" id="s9q7" value="">
+                <label class="checklabel" for="s9q7">Authorization of usage and Disclosure 7</label>  
+            </div>
+
+              <div class="row">
+                <div class="card  col" id="backbtncard">
+                  <a href="#" class="alt_step-7back">
+                      <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                      <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                  </a>
+                </div>
+
+                <div class="card  col" id="nextbtncard">
+                    <a href="#" class="alt_step-7next">
+                      <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                      <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                    </a>
+                </div> 
+              </div>
+          </div>
+        </section>
+
+        <section class="section mt-3 alt_step-8" id="alt_auth_8">
+          <div class="container form-container text-center slide">
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Restrict Disclosure</legend>
+            </div>
+            <p>Do you want to restrict disclosure for any records related to the following?</p>
+            <legend class="font-weight-bold text-danger">If no please continue to next step</legend>
+            
+            <div class="form-checkbox ">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q1" value="">
+                <label class="checklabel" for="s10q1">Restrict disclosure 1</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q2" value="">
+                <label class="checklabel" for="s10q2">Restrict disclosure 2</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q3" value="">
+                <label class="checklabel" for="s10q3">Restrict disclosure 3</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q4" value="">
+                <label class="checklabel" for="s10q4">Restrict disclosure 4</label>  
+            </div>
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q5" value="">
+                <label class="checklabel" for="s10q5">Restrict disclosure 5</label>  
+            </div> 
+
+            <div class="form-checkbox">
+                <input class="form-check-input checkbox" type="radio" name="s10" id="s10q6" value="">
+                <label class="checklabel" for="s10q7">Restrict disclosure 6</label>  
+            </div>
+
+            <!--Describe-->
+                <div class="form-group">
+                      <label for="comment" class="col-sm-12 control-label">Describe</label>
+                      <h6>(Federal regulations require a description of how much and <br> what kind of information is to be disclosed.) </h6>
+                      <div class="col-sm-12">
+                        <textarea name="describe" class="form-control" id="s10q7" required="" rows="3"></textarea>
+                      </div>
+                </div>
+            <!--Describe-->
+
+            <div class="row">
+              <div class="card  col" id="backbtncard">
+                <a href="#" class="alt_step-8back">
+                    <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                    <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                </a>
+              </div>
+
+              <div class="card  col" id="nextbtncard">
+                  <a href="#" class="alt_step-8next">
+                    <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                    <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                  </a>
+              </div>    
+            </div>
+          </div>
+        </section>
+
+        <section class="section mt-3 alt_step-9" id="alt_auth_9">
+          <div class="container form-container text-center slide">
+
+            <div class="" id="strips1">
+              <legend class="font-weight-bold" id="pagetitles">Consent</legend>
+            </div>
+            
+            <div class="container text-justify" style="overflow-x: scroll; height: 475px;">
+              <p><strong>I understand that</strong>, if the person or entity receiving the information is not a health care provider or health plan covered by federal privacy regulations, the information described above may be re-disclosed and no longer protected by HIPAA and other federal and state regulations. However, the recipient may be prohibited from disclosing substance abuse information under the Federal Substance Abuse Confidentiality Requirements</p>
+              <p><strong>I also understand that</strong>, the person I am authorizing to use and/or disclose the information may not receive compensation for doing so.</p>
+              <p><strong>I, further understand</strong> that I may refuse to sign this authorization and that my refusal to sign will not affect my ability to obtain treatment or payment of my eligibility for benefits. I may inspect or copy any information to be used and/or disclosed under this authorization</p>
+              <p><strong>Finally, I understand, </strong> that <u>I may revoke this authorization</u>, in writing, at any time, provided that I do so in writing, except to the extent that action has been taken in reliance upon this authorization</p>
+            </div>
+
+            <div class="row">
+                  <div class="card  col" id="backbtncard">
+                    <a href="#" class="alt_step-9back">
+                        <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                        <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                    </a>
+                  </div>
+
+                  <div class="card  col" id="nextbtncard">
+                      <a href="#" class="alt_step-9next">
+                        <img src="assest/img/buttons/pi.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                        <img src="assest/img/buttons/pihover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                      </a>
+                  </div>  
+            </div>
+          </div>
+        </section>
+
+        <section class="section mt-3 alt_step-10" id="alt_auth_10">
+          <div class="container form-container text-center slide">
+            <div class="col-12" id="strips">
+                    <h4 class="font-weight-bold my-3" id="p11t"> Your Information </h4>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                          <tr>
+                            <th class="text-left">Your Name</th>
+                            <td id="td1">Shakir</td>
+                          </tr>
+                          <tr>
+                            <th class="text-left">Phone</th>
+                            <td id="td1">9143595588</td>
+                          </tr>
+                          <tr>
+                            <th class="text-left">Email</th>
+                            <td id="td1">shakir@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <th class="text-left">Relationship To Patient</th>
+                            <td id="td1">Self</td>
+                          </tr>
+                          <tr>
+                            <th class="text-left">Upload ID</th>
+                            <td id="td1">ID</td>
+                          </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+                    <h4 class="font-weight-bold my-3" id="p11t"> Patient Information </h4>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                          <th class="text-left">First Name</th>
+                          <td id="td1">Shakir</td>
+                        </tr>
+                        <tr>
+                          <th class="text-left">Last Name</th>
+                          <td id="td1">Ansari</td>
+                        </tr>
+                        <tr>
+                          <th class="text-left">Date of Birth</th>
+                          <td id="td1">20/02/1990</td>
+                        </tr>
+                        <tr>
+                          <th class="text-left">SSN</th>
+                          <td id="td1">22222222222</td>
+                        </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+              <h5 class="font-weight-bold my-3" id="p11t">Send Request Via</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="text-left">Email</th>
+                        <td id="td1">Shakir@gmail.com</td>
+                      </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">Sending Practice Information</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="text-left">Name Of Practice</th>
+                        <td id="td1">Somebody Else</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Phone Number</th>
+                        <td id="td1">9153595850</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Street</th>
+                        <td id="td1">2717 US-89</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">City</th>
+                        <td id="td1">Ogden</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">State</th>
+                        <td id="td1">UT</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Zip</th>
+                        <td id="td1">84414</td>
+                      </tr>
+                    </tbody>
+            </table>
+
+            <div class="col-12" id="strips">
+              <h5 class="font-weight-bold my-3" id="p11t">Recieving Practice Information</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th class="text-left">Name Of Practice</th>
+                        <td id="td1">RTPMedicalSolutions</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Phone Number</th>
+                        <td id="td1">9153595850</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Street</th>
+                        <td id="td1">2717 US-89</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">City</th>
+                        <td id="td1">Ogden</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">State</th>
+                        <td id="td1">UT</td>
+                      </tr>
+                      <tr>
+                        <th class="text-left">Zip</th>
+                        <td id="td1">84414</td>
+                      </tr>
+                    </tbody>
+            </table>
+                
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">What’s the purpose of this request?</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <th id="middata">Purpose of request 1</th>
+                      </tr>
+                    </tbody>
+            </table>
+            
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">Authorization of Usage and Disclosure</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td>
+                            <p>
+                                By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records,
+                                If Such Information And/or Records Exist:
+                            </p>
+                        </td>
+                    </tr>
+                      <tr>
+                        <th id="middata">Authorization of usage and Disclosure 1</th>
+                      </tr>
+                    </tbody>
+            </table>
+            
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">Restrict Disclosure</h5>
+            </div>
+            <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td>
+                            <p>
+                                Do you want to restrict disclosure for any records related to the following?
+                                If no please continue to next step
+                            </p>
+                        </td>
+                    </tr>
+                      <tr>
+                        <th id="middata">Restrict disclosure 1</th>
+                      </tr>
+                    </tbody>
+            </table>
+            
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">Consent</h5>
+            </div>
+            <div class="container text-justify">
+                    <small><strong>I understand that</strong>, if the person or entity receiving the information is not a health care provider or health plan covered by federal privacy regulations, the information described above may be re-disclosed and no longer protected by HIPAA and other federal and state regulations. However, the recipient may be prohibited from disclosing substance abuse information under the Federal Substance Abuse Confidentiality Requirements</small>
+                    <br>
+                    <small><strong>I also understand that</strong>, the person I am authorizing to use and/or disclose the information may not receive compensation for doing so.</small>
+                    <br>
+                    <small><strong>I, further understand</strong> that I may refuse to sign this authorization and that my refusal to sign will not affect my ability to obtain treatment or payment of my eligibility for benefits. I may inspect or copy any information to be used and/or disclosed under this authorization</small>
+                    <br>
+                    <small><strong>Finally, I understand, </strong> that <u>I may revoke this authorization</u>, in writing, at any time, provided that I do so in writing, except to the extent that action has been taken in reliance upon this authorization</small>
+            </div>
+            
+            <div class="col-12" id="strips">
+                    <h5 class="font-weight-bold my-3" id="p11t">Confirm your Information</h5>
+            </div>
+            <div class="col-12">
+              <h5 class="font-weight-bold text-center">Unless revoked earlier,  this<br> authorization will expire</h5>
+            </div>
+            <div class="container mt-n4">
+              <!--Date-->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                      <input required type="date" id="s3q2" class="" placeholder="Insert date" autofocus>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please Provide your Insert date!
+                      </div>
+                    </div>
+                </div>
+              <!--Date-->
+            
+              <!--Your Name-->
+                <div class="form-group">
+                    <label for="yourname" class="col-sm-12 control-label">Your Name</label>
+                    <div class="col-sm-12">
+                      <input required type="text" id="s1q1" class="" name="yourname" placeholder="Your Name">
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please Provide your name!
+                      </div>
+                    </div>
+                </div>
+              <!--Your Name-->
+            
+
+                <div class="form-group">
+                  <label for="" class="col-sm-12 control-label">Signature</label>
+                  <div class="col-md-12">
+                        <div class="sigPad" style="width:404px;" id="smoothed8">
+                          <ul class="sigNav">
+                              <li class="drawIt"><a href="#draw-it">Do your Signature</a></li>
+                              <li class="clearButton"><a href="#clear">Clear</a></li>
+                          </ul>
+                          <div class="sig sigWrapper" style="height:auto; display: block;">
+                              <div class="typed"></div>
+                              <canvas class="pad" width="400" height="250"></canvas>
+                              <input type="hidden" name="sign5" class="output" id="sign5">
+                          </div>
+                          <span class="error-span" id="error_sign5"></span>
+                        </div>
+                  </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                  <div class="card col" id="backbtncard">
+                    <a href="#" class="alt_step-10back">
+                        <img src="assest/img/buttons/ba.png" alt="" class="img-fluid  btn-start" id="backbtn">
+                        <img src="assest/img/buttons/bahover.png" alt="" class="img-fluid  btn-start img-top" id="backbtn">
+                    </a>
+                  </div>
+
+                  <div class="card col" id="nextbtncard">
+                      <a href="#" class="alt_step-10next">
+                        <img src="assest/img/buttons/se.png" alt="" class="img-fluid  btn-start" id="nextbtn">
+                        <img src="assest/img/buttons/sehover.png" alt="" class="img-fluid  btn-start img-top" id="nextbtn">
+                      </a>
+                  </div>  
+            </div>
+          </div>
+        </section>
+
+      <!-- Somebody flow -->
+
+      <section class="section mt-3 arfstep11" id="auth_11">
+        <!-- <div class="row  px-5 pt-3">
+          <div class="col-xl-6 offset-xl-3 shadow text-center pb-5">
+            <img src="assest/img/check.png" class="img-fluid  check-img"> 
+            <h2 class="font-weight-bold mt-4 mb-4">Congrats! <br> You have successfully completed your authorization release paperwork!</h2>
+            <h3 class="font-weight-bold text-success">Your confirmation number: XXXXXX</h3>
+
+              <a type="button" class="btn btn-outline-danger font-weight-bold mb-3 mt-3 ml-3" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank"><i class="fas fa-desktop mr-2"></i><span style="font-size: 25px;">Update Demo</span></a>
+              <a type="button" class="btn btn-outline-danger font-weight-bold mb-3 mt-3 ml-3" href="https://rtpmedsol.rtpdemo.com/demoforms/requestform" target="_blank"><i class="fab fa-wpforms mr-2"></i><span style="font-size: 25px;">Request Form</span></a>
+              <a type="button" class="btn btn-outline-danger font-weight-bold mb-3 mt-3 ml-3" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank"><i class="far fa-calendar-alt mr-2"></i><span style="font-size: 25px;">Take Survey</span></a>
+
+          </div>
+        </div> -->
+        <div class="container slide" style="max-width: 900px; padding: 0px; margin-top: -95px;">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+              <div class="wrapper">
+                <div class="row no-gutters">
+
+                  <div class="col-md-7 d-flex align-items-stretch ml-lg-n5">
+                    <div class="contact-wrap w-100 p-md-5 p-4 text-center">
+                      <p class="font-weight-bold mb-4 mt-3"><span class="text-success" style="font-size: 50px;">Congrats!</span> <br> You have successfully completed your authorization release paperwork!</p>
+                      <h5 class="font-weight-bold text-success">Your confirmation number: <span class="" style="font-size: 50px;">XXXXXX</span></h5>
+                      <form method="POST" id="contactForm" name="contactForm" class="mt-n5">
+
+                        <div class="row mt-5">
+
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/1.png" alt="" width="40"> Update Demo</h4>
+                              <p style="font-size: 14px; text-align: left;">If you need to update your demographics informations; email, phone, address, etc. </p> 
+                              <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank">Let's start</a>
+                            </div>
+                          </div>
+
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/2.png" alt="" width="40"> Book Appointment</h4>
+                              <p style="font-size: 14px; text-align: left;">Do you need to book an appointment?</p> 
+                              <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/bookappointment" target="_blank">Let's start</a>
+                            </div>
+                          </div>
+
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <h4 class="font-weight-bold"><img src="assest/img/resourcecenter/3.png" alt="" width="40"> Survey</h4>
+                              <p style="font-size: 14px; text-align: left;">Please tell us how we are doing!</p>  
+                              <a type="button" class="btn btn-outline-orange font-weight-bold mb-3 col-12" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank">Let's start</a>
+                            </div>
+                          </div>
+
+                        </div>
+
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="col-md-5 d-flex align-items-stretch"><img src="assest/img/confirm.jpg" alt="" style="margin-left: -45px; margin-top: 20px; width: 800px ;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="section mt-3 arfstep12">
+        <div class="container-fluid slide">
+          <div class="row" id="confirm2">
+            <div class="col-xl-6 offset-xl-3 shadow text-center">
+              <div class="row justify-content-center">
+
+                <div class="col-xl-12 text-center shadow2 mb-40">
+                  <h3 class="font-weight-bold"><i class="fas fa-desktop mr-2"></i>Update Demo</h3>
+                  <p class="lead">Update your demo now!</p> 
+                  <a type="button" class="btn btn-outline-success font-weight-bold mb-3" href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank">Let's start</a>
+                </div>
+
+                <div class="col-xl-12 text-center shadow2 mb-40">
+                  <h3 class="font-weight-bold"><i class="fab fa-wpforms mr-2"></i>Request Form</h3>
+                  <p class="lead">Hae you filled out the request form yet?</p> 
+                  <a type="button" class="btn btn-outline-success font-weight-bold mb-3" href="https://rtpmedsol.rtpdemo.com/demoforms/requestform" target="_blank">Let's start</a>
+                </div>
+
+                <div class="col-xl-12 text-center shadow2 mb-40">
+                  <h3 class="font-weight-bold"><i class="far fa-calendar-alt mr-2"></i>Survey</h3>
+                  <p class="lead">Please take this Survey</p> 
+                  <a type="button" class="btn btn-outline-success font-weight-bold mb-3" href="https://rtpmedsol.rtpdemo.com/demoforms/survey" target="_blank">Let's start</a>
+                </div>
+
+              </div> 
+            </div> 
+          </div> 
+        </div>
+      </section> -->
+
+        <section class="section active mt-2">
+          <div class="container form-container text-center slide" style="padding: 10px 10px;">
+              <strong>Automated &amp; Powered By:</strong> <a href="https://rtpmedicalsolution.com/" target="_blank">RTPMedicalSolution</a>
+            <br>
+            <small><strong><i class="fas fa-copyright text-success"></i> 2021</strong> <a class="white-text" href="https://rtpmedicalsolution.com/">ReviewThatPlace.com</a> LLC. All rights reserved.</small> 
+          </div>
+        </section>
+    </main>
+
+    <script defer src="assest/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <!-- Bootstrap tooltips -->
+    <script defer src="assest/js/popper.min.js" type="text/javascript"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script defer src="assest/js/bootstrap.min.js" type="text/javascript"></script>
+    <script defer src="assest/js/lazysizes.min.js" type="text/javascript"></script>
+    <script defer src="assest/js/custom.min.js" type="text/javascript"></script>
+    <!-- signature -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer type="text/javascript" src="assest/js/signature/bezier.js"></script>
+    <script defer type="text/javascript" src="assest/js/signature/jquery.signaturepad.js"></script>
+    <script defer type="text/javascript" src="assest/js/signature/json2.min.js"></script>
+    <script defer type="text/javascript" src="assest/js/signature/numeric.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          $('#smoothed1').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+          $('#smoothed2').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+          $('#smoothed3').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+          $('#smoothed4').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+          $('#smoothed5').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+          $('#smoothed6').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+          $('#smoothed7').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+          $('#smoothed8').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+          $('#smoothed9').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+          $('#smoothed10').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+          $('#smoothed11').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+          $('#smoothed12').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+      });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            $('.textarea_editor').wysihtml5();
+
+        });
+    </script>
+    <script>
+      function subcontractors() {
+        var x = document.getElementById("subcontractors");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      };
+    </script>
+    <!-- signature -->
+    <script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
+ </body>
+</html>

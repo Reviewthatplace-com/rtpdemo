@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        /* Loading Spinner */
+        .spinner{margin:0;width:70px;height:18px;margin:-35px 0 0 -9px;position:absolute;top:50%;left:50%;text-align:center}.spinner > div{width:18px;height:18px;background-color:#333;border-radius:100%;display:inline-block;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both}.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}@-webkit-keyframes bouncedelay{0%,80%,100%{-webkit-transform:scale(0.0)}40%{-webkit-transform:scale(1.0)}}@keyframes bouncedelay{0%,80%,100%{transform:scale(0.0);-webkit-transform:scale(0.0)}40%{transform:scale(1.0);-webkit-transform:scale(1.0)}}
+    </style>
+
+
+    <meta charset="UTF-8">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<title> Huy Project </title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Favicons -->
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/icons/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/icons/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/icons/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/images/icons/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="assets/images/logo-light-icon.png">
+
+
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+
+
+<!-- HELPERS -->
+
+<link rel="stylesheet" type="text/css" href="assets/helpers/animate.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/backgrounds.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/boilerplate.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/border-radius.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/grid.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/page-transitions.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/spacing.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/typography.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/utils.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/colors.css">
+
+<!-- ELEMENTS -->
+
+<link rel="stylesheet" type="text/css" href="assets/elements/badges.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/buttons.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/content-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/dashboard-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/forms.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/images.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/info-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/invoice.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/loading-indicators.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/menus.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/panel-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/response-messages.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/responsive-tables.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/ribbon.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/social-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/tables.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/tile-box.css">
+<link rel="stylesheet" type="text/css" href="assets/elements/timeline.css">
+
+<!-- ICONS -->
+
+<link rel="stylesheet" type="text/css" href="assets/icons/fontawesome/fontawesome.css">
+<link rel="stylesheet" type="text/css" href="assets/icons/linecons/linecons.css">
+<link rel="stylesheet" type="text/css" href="assets/icons/spinnericon/spinnericon.css">
+
+
+<!-- WIDGETS -->
+
+<link rel="stylesheet" type="text/css" href="assets/widgets/accordion-ui/accordion.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/calendar/calendar.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/carousel/carousel.css">
+
+<link rel="stylesheet" type="text/css" href="assets/widgets/charts/justgage/justgage.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/charts/morris/morris.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/charts/piegage/piegage.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/charts/xcharts/xcharts.css">
+
+<link rel="stylesheet" type="text/css" href="assets/widgets/chosen/chosen.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/colorpicker/colorpicker.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/datatable/datatable.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/datepicker/datepicker.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/datepicker-ui/datepicker.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/daterangepicker/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/dialog/dialog.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/dropdown/dropdown.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/dropzone/dropzone.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/file-input/fileinput.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch-alt.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/ionrangeslider/ionrangeslider.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/jcrop/jcrop.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/jgrowl-notifications/jgrowl.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/loading-bar/loadingbar.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/maps/vector-maps/vectormaps.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/markdown/markdown.css">
+ 
+<link rel="stylesheet" type="text/css" href="assets/widgets/multi-select/multiselect.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/multi-upload/fileupload.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/nestable/nestable.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/noty-notifications/noty.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/popover/popover.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/pretty-photo/prettyphoto.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/progressbar/progressbar.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/range-slider/rangeslider.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/slidebars/slidebars.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/slider-ui/slider.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/summernote-wysiwyg/summernote-wysiwyg.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/tabs-ui/tabs.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/theme-switcher/themeswitcher.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/timepicker/timepicker.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/tocify/tocify.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/tooltip/tooltip.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/touchspin/touchspin.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/uniform/uniform.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/wizard/wizard.css">
+<link rel="stylesheet" type="text/css" href="assets/widgets/xeditable/xeditable.css">
+
+<!-- SNIPPETS -->
+
+<link rel="stylesheet" type="text/css" href="assets/snippets/chat.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/files-box.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/login-box.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/notification-box.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/progress-box.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/todo.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/user-profile.css">
+<link rel="stylesheet" type="text/css" href="assets/snippets/mobile-navigation.css">
+
+<!-- APPLICATIONS -->
+
+<link rel="stylesheet" type="text/css" href="assets/applications/mailbox.css">
+
+<!-- Admin theme -->
+
+<link rel="stylesheet" type="text/css" href="assets/themes/admin/layout.css">
+<link rel="stylesheet" type="text/css" href="assets/themes/admin/color-schemes/default.css">
+
+<!-- Components theme -->
+
+<link rel="stylesheet" type="text/css" href="assets/themes/components/default.css">
+<link rel="stylesheet" type="text/css" href="assets/themes/components/border-radius.css">
+
+<!-- Admin responsive -->
+
+<link rel="stylesheet" type="text/css" href="assets/helpers/responsive-elements.css">
+<link rel="stylesheet" type="text/css" href="assets/helpers/admin-responsive.css">
+
+    <!-- JS Core -->
+
+    <script type="text/javascript" src="assets/js-core/jquery-core.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-core.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-widget.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-mouse.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-ui-position.js"></script>
+    <!--<script type="text/javascript" src="assets/js-core/transition.js"></script>-->
+    <script type="text/javascript" src="assets/js-core/modernizr.js"></script>
+    <script type="text/javascript" src="assets/js-core/jquery-cookie.js"></script>
+
+
+
+
+
+    <script type="text/javascript">
+        $(window).load(function(){
+            setTimeout(function() {
+                $('#loading').fadeOut( 400, "linear" );
+            }, 300);
+        });
+    </script>
+
+
+
+</head>
+
+
+    <body>
+    <div id="sb-site">
+    <div id="loading">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div id="page-wrapper">
+        <div id="page-header" class="bg-gradient-9">
+            <div id="mobile-navigation">
+                <button id="nav-toggle" class="collapsed" data-toggle="collapse" data-target="#page-sidebar"><span></span></button>
+                <a href="index.html" class="logo-content-small" title="MonarchUI"></a>
+            </div>
+            <div id="header-logo" class="logo-bg">
+                <a href="index.html" class="" >
+                    <img src="assets/image-resources/logo.png" alt="" class="logoimg">
+                    <br>
+                    <label for="">Huy Project</label>
+                </a>
+                <a href="index.html" class="logo-content-small" title="MonarchUI">
+                    <img src="assets/image-resources/logo.png" alt="" class="logoimg">
+                    <br>
+                    <label for="">Huy Project</label>
+                </a>
+                <a id="close-sidebar" href="#" title="Close sidebar">
+                    <i class="glyph-icon icon-angle-left"></i>
+                </a>
+            </div>
+            <div id="header-nav-left">
+                <label for=""class="text-white networklabel" ><h1 class="font-weight-bold">Huy's Dashboard</h1></label>
+            </div><!-- #header-nav-left -->
+        
+            <div id="header-nav-right">
+                <a class="header-btn" id="logout-btn" href="javascript:void(0)" data-toggle="modal" data-target="#QR">
+                   <img src="assets/images/whitebarcode.png" alt="" style="height: 38px; margin-top: -3px;">
+                </a>
+                <div class="dropdown" id="dashnav-btn">
+                    <a href="#" data-toggle="dropdown" data-placement="bottom" class="popover-button-header tooltip-button" title="Dashboard Quick Menu">
+                        <i class="glyph-icon icon-linecons-cog"></i>
+                    </a>
+                    <div class="dropdown-menu float-right">
+                        <div class="box-sm">
+                            <div class="pad5T pad5B pad10L pad10R dashboard-buttons clearfix">
+                                <a href="networks.html" class="btn vertical-button remove-border btn-blue-alt" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-sitemap opacity-80 font-size-20"></i>
+                                    </span>
+                                    Network
+                                </a>
+                                <a href="patients.html" class="btn vertical-button remove-border btn-success" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-users opacity-80 font-size-20"></i>
+                                    </span>
+                                    Patients
+                                </a>
+                                <a href="editprofile.html" class="btn vertical-button remove-border btn-azure" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-user opacity-80 font-size-20"></i>
+                                    </span>
+                                    Edit Profile
+                                </a>
+                                <a href="" class="btn vertical-button remove-border btn-primary" data-toggle="modal" data-target="#signModal">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-lock opacity-80 font-size-20"></i>
+                                    </span>
+                                    Upload Signature
+                                </a>
+                                <a href="" class="btn vertical-button remove-border btn-danger" title="">
+                                    <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                        <i class="glyph-icon icon-sign-out opacity-80 font-size-20"></i>
+                                    </span>
+                                    Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="header-btn" id="logout-btn" href="lockscreen-3.html" title="Lockscreen page example">
+                    <i class="glyph-icon icon-linecons-lock"></i>
+                </a>
+            </div><!-- #header-nav-right -->
+        
+        </div>
+
+
+
+ 
+
+        <div id="page-sidebar">
+            <div class="scroll-sidebar">
+            
+                <ul id="sidebar-menu">
+                    <li class="header">
+                        <span>Administration</span>
+                    </li>
+                    <li>
+                        <a href="networks.html" title="Elements">
+                            <i class="glyph-icon icon-sitemap"></i>
+                            <span>Networks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" >
+                            <i class="glyph-icon icon-cog"></i>
+                            <span>Operations Settings</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li><a href="workstation.html" ><span>Work Station</span></a></li>
+                                <!-- <li><a href="products.html" ><span>Products</span></a></li>
+                                <li><a href="consents.html" ><span>Consents</span></a></li>
+                                <li><a href="paymenttypes.html" ><span>Payment Types</span></a></li>
+                                <li><a href="demo.html" ><span>Demo</span></a></li>
+                                <li><a href="questionnaire.html" ><span>Questionnaire</span></a></li>
+                                <li><a href="lab.html" ><span>Labs</span></a></li> -->
+                                <li><a href="emailconfirmation.html" ><span>Products</span></a></li>
+                                <!-- <li><a href="resultDelivery.html" ><span>Result Delivery</span></a></li> -->
+                                 <li><a href="parts.html" ><span>Parts</span></a></li>
+                            </ul>
+                        </div> 
+                    </li>
+                    <!--<li>
+                        <a href="followUp.html" title="Elements">
+                            <i class="glyph-icon icon-clipboard"></i>
+                            <span>Follow Up</span>
+                        </a>
+                    </li>--> 
+                    <!-- <li>
+                        <a href="" >
+                            <i class="glyph-icon icon-cog"></i>
+                            <span>Soap Notes</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li><a href="soapNotes.html" ><span>Soap Notes</span></a></li>
+                                <li><a href="questionnaireQuestion.html" ><span>Questionnaire Questions</span></a></li>
+                                <li><a href="physicalExam.html" ><span>Physical Exam</span></a></li>
+                                <li><a href="assessment.html" ><span>Assessment</span></a></li>
+                                <li><a href="planofCare.html" ><span>Plan of Care</span></a></li>
+                                <li><a href="cpt.html" ><span>CPT</span></a></li>
+                                <li><a href="icd.html" ><span>ICD</span></a></li>
+                                <li><a href="modifiers.html" ><span>Modifiers</span></a></li>
+                            </ul>
+                        </div> 
+                    </li> -->
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-cogs"></i>
+                            <span>Settings</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                            <ul>
+                                <li><a href="users.html" ><span>Users</span></a></li>
+                                <li><a href="roles.html" ><span>Roles</span></a></li>
+                                <!-- <li><a href="uploadHere.html" ><span>Upload Here</span></a></li>
+                                <li><a href="uploadhistory.html" ><span>Upload History</span></a></li> -->
+                                <li><a href="auditlog.html" ><span>Audit Log</span></a></li>
+                            </ul>
+                        </div> 
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-sign-out"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+        
+                    <li class="header"><span>Operations</span></li>
+                    <li>
+                        <a href="index.html" title="Admin Dashboard">
+                            <i class="glyph-icon icon-tachometer"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="patients.html" >
+                            <i class="glyph-icon icon-users"></i>
+                            <span>Patients</span>
+                            <span class="bs-badge badge-success">68</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-calendar"></i>
+                            <span>Check-In</span>
+                            <span class="bs-badge badge-info">53</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="onsiteactivation.html" >
+                                        <span class="font-weight-bold">Onsite Activation</span>
+                                        <span class="bs-badge badge-danger" >3</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="checkedIn.html" >
+                                        <span>Checked-In</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="missed.html" >
+                                        <span>Missed</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="cancelled.html" >
+                                        <span>Cancelled</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div> 
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-calendar"></i>
+                            <span>Soap Note</span>
+                            <span class="bs-badge badge-info">53</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="clinicalassessment.html" >
+                                        <span>Clinical Assessment</span>
+                                        <span class="bs-badge badge-danger" >3</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="clinicianreview.html" >
+                                        <span>Clinical Review</span>
+                                        <span class="bs-badge badge-danger" >3</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signedoff.html" >
+                                        <span>Signed Off</span>
+                                        <span class="bs-badge badge-danger" >3</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="subsignedoff.html" >
+                                        <span>Sup Signed Off</span>
+                                        <span class="bs-badge badge-success">5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div> 
+                    </li>
+
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-bitbucket"></i>
+                            <span>Result Delivery</span>
+                            <span class="bs-badge badge-yellow">33</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li><a href="kitassignment.html" ><span>Kit Assignment</span><span class="bs-badge badge-danger">5</span><span class="bs-badge badge-yellow">8</span></a></li>
+                                <li><a href="waitingQueue.html" ><span>Waiting Queue</span><span class="bs-badge badge-danger">5</span><span class="bs-badge badge-yellow">8</span></a></li>
+                                <li><a href="tobesent.html" ><span>To Be Sent</span><span class="bs-badge badge-danger">3</span><span class="bs-badge badge-yellow">3</span></a></li>
+                                <li><a href="waitingresults.html" ><span>Waiting Results</span><span class="bs-badge badge-yellow">23</span></a></li>
+                                <li><a href="pendingnotification.html" ><span>Pending Notification</span><span class="bs-badge badge-danger">3</span></a></li>
+                                <li><a href="retest.html" ><span>Re-Test</span></a></li>
+                                <li><a href="notdetected1.html" ><span>Not Detected</span></a></li>
+                                <li><a href="detected.html" ><span>Detected</span></a></li>
+                            </ul>
+                
+                        </div> 
+                    </li>
+                    
+                    <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-warning"></i>
+                            <span>Follow Up</span>
+                            <span class="bs-badge badge-yellow">33</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li><a href="fuscheduled.html" ><span>FU Scheduled</span></a></li>
+                                <li><a href="fuMiss.html" ><span>FU Missed</span></a></li>
+                                <li><a href="fucancelled.html" ><span>FU Cancelled</span></a></li>
+                                <li><a href="fusignedoff.html" ><span>FU Signed off</span></a></li>
+                                <li><a href="fusupsignedoff.html" ><span>FU Sup Signed off</span></a></li>
+                            </ul>
+                
+                        </div> 
+                    </li> -->
+                    <li>
+                      <a href="partstracking.html" title="Elements">
+                          <i class="glyph-icon icon-database"></i>
+                          <span>Parts Tracking</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="workstationx.html" title="Elements">
+                          <i class="glyph-icon icon-wrench"></i>
+                          <span>Workstaion 1</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="workstationx.html" title="Elements">
+                          <i class="glyph-icon icon-wrench"></i>
+                          <span>Workstaion 2</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="workstationx.html" title="Elements">
+                          <i class="glyph-icon icon-wrench"></i>
+                          <span>Workstaion 3</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="workstationx.html" title="Elements">
+                          <i class="glyph-icon icon-wrench"></i>
+                          <span>Workstaion 4</span>
+                          <span class="bs-badge badge-yellow">33</span>
+                      </a>
+                    </li>
+                    <!-- <li>
+                        <a href="#" >
+                            <i class="glyph-icon icon-money"></i>
+                            <span>Billing</span>
+                            <span class="bs-badge badge-yellow">33</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li><a href="workstationx.html" ><span>Ready To Bill</span></a></li>
+                                <li><a href="missinginformation.html" ><span>Missing Information</span></a></li>
+                                <li><a href="cleanandclear.html" ><span>Clean & Clear</span></a></li>
+                                <li><a href="submittedclaims.html" ><span>Submitted Claims</span></a></li>
+                                <li><a href="followupneeded.html" ><span>Follow up Needed</span></a></li>
+                                <li><a href="patientresponsibility.html" ><span>Patient Responsibility</span></a></li>
+                                <li><a href="denied.html" ><span>Denied</span></a></li>
+                                <li><a href="paid.html" ><span>Paid</span></a></li>
+                            </ul>
+                
+                        </div>
+                    </li> -->
+
+                    <!-- <li class="header"><span>Reports</span></li>  
+                    <li>
+                        <a href="" title="">
+                            <i class="glyph-icon icon-sitemap"></i>
+                            <span>Network</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="networksdailyreports.html" >
+                                        <span class="">Daily Reports</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="networksdailypaymentreports.html" >
+                                        <span class="">Daily Payment Report </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="netpatients.html">
+                                        <span>Patients</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointmentsdailylocationtotal.html" >
+                                        <span class="">Daily Location Total</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointments12monthlocationtotal.html" >
+                                        <span class="">12 Month Location Total</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <i class="glyph-icon icon-calendar"></i>
+                            <span>Appointments</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="appointmentsdailyreports.html" >
+                                        <span class="">Daily Reports</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointmentsdailyphysiciantotal.html" >
+                                        <span class="">Daily Physician Total</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointments12monthphysiciantotal.html" >
+                                        <span class="">12 Month Physician Total</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointmentsdailyoutstandingcharts.html" >
+                                        <span class="">Daily Outstanding Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointments12monthoutstandingcharts.html" >
+                                        <span class="">12 Month Outstanding Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointmentsdailymissingcharts.html" >
+                                        <span class="">Daily Missing Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointments12monthmissingcharts.html" >
+                                        <span class="">12 Month Missing Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="appointmentsstagesum.html" >
+                                        <span class="">Stage Summary</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <i class="glyph-icon icon-bitbucket"></i>
+                            <span>Result Delivery</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="rddailyreports.html" >
+                                        <span class="">Daily Reports</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rddailydeliverytotalproducts.html" >
+                                        <span class="">Daily Delivery Total/Product</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rd12monthdeliverytotalproducts.html" >
+                                        <span class="">12 Month Delivery Total/Product</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rddailydeliverytotalresults.html" >
+                                        <span class="">Daily Delivery Total/Result</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rd12monthdeliverytotalresults.html" >
+                                        <span class="">12 Month Delivery Total/Result</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rdstagesum.html" >
+                                        <span class="">Stage Summary</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <i class="glyph-icon icon-warning"></i>
+                            <span>Follow up</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="fudailyreports.html" >
+                                        <span class="">Daily Reports</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followupdailyphysiciantotal.html" >
+                                        <span class="">Daily Physician Total</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followup12monthphysiciantotal.html" >
+                                        <span class="">12 Month Physician Total</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followupdailyoutstandingcharts.html" >
+                                        <span class="">Daily Outstanding Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followup12monthoutstandingcharts.html" >
+                                        <span class="">12 Month Outstanding Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followupdailymissingcharts.html" >
+                                        <span class="">Daily Missing Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="followup12monthmissingcharts.html" >
+                                        <span class="">12 Month Missing Charts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="fustagesum.html" >
+                                        <span class="">Stage Summary</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <i class="glyph-icon icon-money"></i>
+                            <span>Billing</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                
+                            <ul>
+                                <li>
+                                    <a href="bsdailyreports.html" >
+                                        <span class="">Daily Reports</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="bsstagesum.html" >
+                                        <span class="">Stage Summary</span>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                        </div>
+                    </li> -->
+
+                </ul><!-- #sidebar-menu -->
+            
+            
+            </div>
+        </div>
+
+
+
+
+
+
+        
+        <div id="page-content-wrapper">
+            <div id="page-content">
+
+                    <div class="container">
+
+
+<!-- Data tables -->
+
+<!--<link rel="stylesheet" type="text/css" href="assets/widgets/datatable/datatable.css">-->
+<script type="text/javascript" src="assets/widgets/datatable/datatable.js"></script>
+<script type="text/javascript" src="assets/widgets/datatable/datatable-bootstrap.js"></script>
+<script type="text/javascript" src="assets/widgets/datatable/datatable-responsive.js"></script>
+<script type="text/javascript" src="assets/widgets/datatable/datatable-tabletools.js"></script>
+
+<script type="text/javascript">
+
+    /* Datatables responsive */
+
+    $(document).ready(function() {
+        $('#datatable-responsive').DataTable( {
+            responsive: true
+            
+        } );
+    } );
+
+    $(document).ready(function() {
+        $('.dataTables_filter input').attr("placeholder", "Search...");
+    });
+
+</script>
+
+<div id="page-title">
+<legend class="font-weight-bold">Modifiers</legend>
+</div>
+
+<div class="panel">
+<div class="panel-body">
+<div class="example-box-wrapper">
+    <!--Add Account Button-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col modalbutton">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success float-right plus" data-toggle="modal" data-target="#AddModal">
+                    +
+                </button>
+                <!-- Button trigger modal -->
+            </div>
+        </div>
+    </div>
+    <!--Add Account Button-->
+<table id="datatable-responsive" class="table table-striped table-bordered responsive no-wrap" cellspacing="0" width="100%"> 
+
+    <thead>
+        <tr>
+            <th>Action</th>
+            <th>Status</th>
+            <th>Modifiers</th>
+            <th>Description</th>
+            <th>Products</th>
+        </tr>
+    </thead>
+        
+    <tfoot>
+        <tr>
+            <th>Action</th>
+            <th>Status</th>
+            <th>Modifiers</th>
+            <th>Description</th>
+            <th>Products</th>
+        </tr>
+    </tfoot>
+        
+    <tbody>
+
+        <tr>
+            <td>
+                <div class="btn-group">
+                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" data-toggle="modal" data-target="#UpdateModal">Edit</a></li>
+                        <li><a href="#" class="questionnaire-archive-started questionnaire-archive-success questionnaire-archive-failed">Archive</a></li>
+                    </ul>
+               </div>
+            </td>
+            <td>
+                <span class="bs-label label-success">Active</span>
+            </td>
+            <td>Question 01</td>
+            <td>Description</td>
+            <td>
+                <span class="bs-label label-danger">Covid-19</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="btn-group">
+                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" data-toggle="modal" data-target="#UpdateModal">Edit</a></li>
+                        <li><a href="#" class="questionnaire-active-started questionnaire-active-success questionnaire-active-failed">Active</a></li>
+                    </ul>
+               </div>
+            </td>
+            <td>
+                <span class="bs-label label-danger">Archive</span>
+            </td>
+            <td>Question 02</td>
+            <td>Description</td>
+            <td>
+                <span class="bs-label label-primary">Flu</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="btn-group">
+                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" data-toggle="modal" data-target="#UpdateModal">Edit</a></li>
+                        <li><a href="#" class="questionnaire-archive-started questionnaire-archive-success questionnaire-archive-failed">Archive</a></li>
+                    </ul>
+               </div>
+            </td>
+            <td>
+                <span class="bs-label label-success">Active</span>
+            </td>
+            <td>Question 03</td>
+            <td>Description</td>
+            <td>
+                <span class="bs-label label-danger">Covid-19</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="btn-group">
+                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" data-toggle="modal" data-target="#UpdateModal">Edit</a></li>
+                        <li><a href="#" class="questionnaire-active-started questionnaire-active-success questionnaire-active-failed">Active</a></li>
+                    </ul>
+               </div>
+            </td>
+            <td>
+                <span class="bs-label label-danger">Archive</span>
+            </td>
+            <td>Question 04</td>
+            <td>Description</td>
+            <td>
+                <span class="bs-label label-primary">Flu</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="btn-group">
+                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" data-toggle="modal" data-target="#UpdateModal">Edit</a></li>
+                        <li><a href="#" class="questionnaire-archive-started questionnaire-archive-success questionnaire-archive-failed">Archive</a></li>
+                    </ul>
+               </div>
+            </td>
+            <td>
+                <span class="bs-label label-success">Active</span>
+            </td>
+            <td>Question 05</td>
+            <td>Description</td>
+            <td>
+                <span class="bs-label label-danger">Covid-19</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="btn-group">
+                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" data-toggle="modal" data-target="#UpdateModal">Edit</a></li>
+                        <li><a href="#" class="questionnaire-active-started questionnaire-active-success questionnaire-active-failed">Active</a></li>
+                    </ul>
+               </div>
+            </td>
+            <td>
+                <span class="bs-label label-danger">Archive</span>
+            </td>
+            <td>Question 06</td>
+            <td>Description</td>
+            <td>
+                <span class="bs-label label-primary">Flu</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="btn-group">
+                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action</button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" data-toggle="modal" data-target="#UpdateModal">Edit</a></li>
+                        <li><a href="#" class="questionnaire-archive-started questionnaire-archive-success questionnaire-archive-failed">Archive</a></li>
+                    </ul>
+               </div>
+            </td>
+            <td>
+                <span class="bs-label label-success">Active</span>
+            </td>
+            <td>Question 07</td>
+            <td>Description</td>
+            <td>
+                <span class="bs-label label-danger">Covid-19</span>
+            </td>
+        </tr>
+
+    </tbody>
+        
+
+</table>
+</div>
+</div>
+</div>
+
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Modal -->
+    <div class="modal fade" id="AddModal" tabindex="-1" role="dialog" aria-labelledby="AddModalLabel">
+        <div class="modal-dialog generalmodalws" role="document">
+          <div class="modal-content generalmodalws">
+            <!-- Header -->
+          <div class="modal-header light-blue darken-3 white-text">
+            <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Modifiers</h4>
+            <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+              <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+            </button>
+          </div>
+          <!-- Header -->
+    
+          <!-- Body -->
+          <div class="modal-body">
+            
+            <form enctype="multipart/form-data" method="post" siq_id="">
+    
+                            <!-- Add -->
+                            <div class="col-xl-12">
+                                <fieldset class="fieldset-border">
+                                <div class="form-group">
+                                    <label for="question">Name</label>
+                                    <input name="question" class="form-control" id="question" required="" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label for="answer">description</label>
+                                    <textarea name="answer" class="form-control" id="answer" required="" type="text"></textarea>
+                                </div>
+                                <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover"><span >Add Modifiers</span><i class="glyph-icon icon-arrow-right"></i></button> 
+                                </fieldset>
+                            </div>
+                            <!-- Add -->
+            </form>
+          </div>
+          <!--body -->
+          </div>
+        </div>
+    </div>
+    <!-- Add Modal -->
+
+    <!-- Update Modal -->
+    <div class="modal fade" id="UpdateModal" tabindex="-1" role="dialog" aria-labelledby="UpdateModalLabel">
+        <div class="modal-dialog generalmodalws" role="document">
+          <div class="modal-content generalmodalws">
+            <!-- Header -->
+          <div class="modal-header light-blue darken-3 white-text">
+            <h4 class="modalh4"><i class="fab fa-wpforms"></i>Update Modifiers</h4>
+            <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+              <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+            </button>
+          </div>
+          <!-- Header -->
+    
+          <!-- Body -->
+          <div class="modal-body">
+            
+            <form enctype="multipart/form-data" method="post" siq_id="">
+    
+                            <!-- Update -->
+                            <div class="col-xl-12">
+                                <fieldset class="fieldset-border">
+                                <div class="form-group">
+                                    <label for="question">Name</label>
+                                    <input name="question" class="form-control" id="question" required="" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label for="answer">description</label>
+                                    <textarea name="answer" class="form-control" id="answer" required="" type="text"></textarea>
+                                </div>
+                                <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover"><span >Update Modifiers</span><i class="glyph-icon icon-arrow-right"></i></button> 
+                                </fieldset>
+                            </div>
+                            <!-- Update -->
+            </form>
+          </div>
+          <!--body -->
+          </div>
+        </div>
+    </div>
+    <!-- Update Modal -->
+
+    <!-- Questionnaire Modal -->
+    <div class="modal fade" id="questionnaireModal" tabindex="-1" role="dialog" aria-labelledby="questionnaireModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <!-- Header -->
+          <div class="modal-header light-blue darken-3 white-text">
+            <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Questionnaire</h4>
+            <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+              <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+            </button>
+          </div>
+          <!-- Header -->
+    
+          <!-- Body -->
+          <div class="modal-body">
+            
+            <form enctype="multipart/form-data" method="post" siq_id="">
+    
+                            <!-- select -->
+                            <div class="col-xl-12">
+                                <fieldset class="fieldset-border">         
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label>
+                                                Choose Answer Type: 
+                                            </label><br>       
+                                            <div class="">            
+                                                <a class="btn  btn-default" onclick="showQuestionTypeTextbox()">Textbox</a>           
+                                                <a class="btn  btn-default" onclick="showQuestionTypeCheckbox()">Checkbox</a>            
+                                                <a class="btn  btn-default" onclick="showQuestionTypeRating()">Rating</a>           
+                                                <a class="btn  btn-default" onclick="showQuestionTypeRadio()">Radio Button</a>          
+                                                <a class="btn  btn-default" onclick="showQuestionTypeEmail()">Email</a>           
+                                                <a class="btn  btn-default" onclick="showQuestionTypePhone()">Phone Number</a>           
+                                                <a class="btn  btn-default" onclick="showQuestionTypeDate()">Date</a>        
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- select -->
+    
+                            <div class="col-sm-12">        
+    
+                            <!-- Textbox -->
+                            <div class="col-xl-12 question_type" id="question_type_textbox">
+                                <fieldset class="fieldset-border">
+                                <legend class="legendtitle">Textbox</legend>
+                                <div class="form-group">
+                                    <label for="question">Question:</label>
+                                    <input name="question" class="form-control" id="question" required="" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label for="answer">Please Type Your Answer::</label>
+                                    <input name="answer" class="form-control" id="answer" required="" type="text">
+                                </div> 
+                                </fieldset>
+                            </div>
+                            <!-- Textbox -->
+    
+                            <!-- Checkbox -->
+                            <div class="col-xl-12 question_type" id="question_type_checkbox">
+                                <fieldset class="fieldset-border">
+                                <legend class="legendtitle">Checkbox</legend>
+                                <div class="form-group">
+                                    <label for="question">Question:</label>
+                                    <input name="question" class="form-control" id="question" required="" type="text">
+                                </div>
+                                <div class="form-group" id="">                               
+                                    <div class="col-sm-3">
+                                        <div class="input-group">                                  
+                                         <span class="input-group-addon">                                      
+                                            <input type="checkbox">                                    
+                                         </span>                
+                                         <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                        </div>       
+                                    </div>                               
+                                    <div class="col-sm-3">
+                                        <div class="input-group">                                  
+                                         <span class="input-group-addon">                                      
+                                            <input type="checkbox">                                    
+                                         </span>                
+                                         <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                        </div>       
+                                    </div>                               
+                                    <div class="col-sm-3">
+                                        <div class="input-group">                                  
+                                         <span class="input-group-addon">                                      
+                                            <input type="checkbox">                                    
+                                         </span>                
+                                         <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                        </div>       
+                                    </div>                               
+                                    <div class="col-sm-3">
+                                        <div class="input-group">                                  
+                                         <span class="input-group-addon">                                      
+                                            <input type="checkbox">                                    
+                                         </span>                
+                                         <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                        </div>       
+                                    </div>
+                                </div>
+                                </fieldset>
+                            </div>
+                            <!-- Checkbox -->
+    
+                            <!-- Rating -->
+                            <div class="col-xl-12 question_type" id="question_type_rating">
+                                <fieldset class="fieldset-border">
+                                <legend class="legendtitle">Rating</legend>
+                                <div class="form-group">
+                                    <label for="question">Question:</label>
+                                    <input name="question" class="form-control" id="question" required="" type="text">
+                                </div>
+                                <div class="form-group" id=""> 
+                                    <div class="col-sm-6">       
+                                        <label>Kindly Rate:</label><br>          
+                                        <div class="col-sm-12">
+                                            <div class="rating"> 
+                                                <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> 
+                                                <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> 
+                                                <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> 
+                                                <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> 
+                                                <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                                         </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </fieldset>
+                            </div>
+                            <!-- Rating -->
+    
+                            <!-- Radio -->
+                            <div class="col-xl-12 question_type" id="question_type_radio">
+                                <fieldset class="fieldset-border">
+                                <legend class="legendtitle">Radio</legend>
+                                <div class="form-group">
+                                    <label for="question">Question:</label>
+                                    <input name="question" class="form-control" id="question" required="" type="text">
+                                </div>
+                                <div class="form-group" id="">                               
+                                    <div class="col-sm-3">
+                                        <div class="input-group">                                  
+                                         <span class="input-group-addon">                                      
+                                            <input type="radio">                                    
+                                         </span>                
+                                         <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                        </div>       
+                                    </div>                               
+                                    <div class="col-sm-3">
+                                        <div class="input-group">                                  
+                                         <span class="input-group-addon">                                      
+                                            <input type="radio">                                    
+                                         </span>                
+                                         <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                        </div>       
+                                    </div>                               
+                                    <div class="col-sm-3">
+                                        <div class="input-group">                                  
+                                         <span class="input-group-addon">                                      
+                                            <input type="radio">                                    
+                                         </span>                
+                                         <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                        </div>       
+                                    </div>                               
+                                    <div class="col-sm-3">
+                                        <div class="input-group">                                  
+                                         <span class="input-group-addon">                                      
+                                            <input type="radio">                                    
+                                         </span>                
+                                         <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                        </div>       
+                                    </div>
+                                </div>
+                                </fieldset>
+                            </div>
+                            <!-- Radio -->
+                            
+                            <!-- Email -->
+                            <div class="col-xl-12 question_type" id="question_type_email">
+                                <fieldset class="fieldset-border">
+                                <legend class="legendtitle">Email</legend>
+                                <div class="form-group">
+                                    <label for="question">Question:</label>
+                                    <input name="question" class="form-control" id="question" required="" type="text">
+                                </div>
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input name="email" class="form-control" id="email" required="" type="text">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- Email -->
+    
+                            <!-- Phone Number -->
+                            <div class="col-xl-12 question_type" id="question_type_phone">
+                                <fieldset class="fieldset-border">
+                                <legend class="legendtitle">Phone Number</legend>
+                                <div class="form-group">
+                                    <label for="question">Question:</label>
+                                    <input name="question" class="form-control" id="question" required="" type="text">
+                                </div>
+                                    <div class="form-group">
+                                        <label for="phoneNumber">Phone Number</label>
+                                        <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- Phone Number -->
+    
+                            <!-- Date -->
+                            <div class="col-xl-12 question_type" id="question_type_date">
+                                <fieldset class="fieldset-border">
+                                <legend class="legendtitle">Date</legend>
+                                <div class="form-group">
+                                    <label for="question">Question:</label>
+                                    <input name="question" class="form-control" id="question" required="" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Select Date*</label>
+                                    <input type="date" class="form-control" name="date" id="date" placeholder="mm-dd-yyyy" required="">
+                                    <span id="error_sc_date"></span>
+                                </div>
+                                <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover questionnaire-add-started questionnaire-add-success questionnaire-add-failed"><span >Add Questionnaire</span><i class="glyph-icon icon-arrow-right"></i></button>
+                                </fieldset>
+                            </div>
+                            <!-- Date -->
+                            </div>
+    
+            </form>
+          </div>
+          <!--body -->
+          </div>
+        </div>
+    </div>
+    <!-- Questionnaire Modal -->
+
+<!-- textbox Modal -->
+<div class="modal fade" id="textboxModal" tabindex="-1" role="dialog" aria-labelledby="textboxModalLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Question</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        
+        <form enctype="multipart/form-data" method="post" siq_id="">
+
+                        <!-- Textbox -->
+                        <div class="col-xl-12">
+                            <fieldset class="fieldset-border">
+                            <legend class="legendtitle">Textbox</legend>
+                            <div class="form-group">
+                                <label for="question">Question:</label>
+                                <input name="question" class="form-control" id="question" required="" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="answer">Please Type Your Answer::</label>
+                                <input name="answer" class="form-control" id="answer" required="" type="text">
+                            </div>
+                            <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover questionnaire-field-started questionnaire-field-success questionnaire-field-failed"><span >Add Question</span><i class="glyph-icon icon-arrow-right"></i></button> 
+                            </fieldset>
+                        </div>
+                        <!-- Textbox -->
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- textbox Modal -->
+
+<!-- checkbox Modal -->
+<div class="modal fade" id="checkboxModal" tabindex="-1" role="dialog" aria-labelledby="checkboxModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Question</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+       
+        <form enctype="multipart/form-data" method="post" siq_id="">     
+
+                        <!-- Checkbox -->
+                        <div class="col-xl-12">
+                            <fieldset class="fieldset-border">
+                            <legend class="legendtitle">Checkbox</legend>
+                            <div class="form-group">
+                                <label for="question">Question:</label>
+                                <input name="question" class="form-control" id="question" required="" type="text">
+                            </div>
+                            <div class="form-group" id="">                               
+                                <div class="col-sm-3">
+                                    <div class="input-group">                                  
+                                     <span class="input-group-addon">                                      
+                                        <input type="checkbox">                                    
+                                     </span>                
+                                     <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                    </div>       
+                                </div>                               
+                                <div class="col-sm-3">
+                                    <div class="input-group">                                  
+                                     <span class="input-group-addon">                                      
+                                        <input type="checkbox">                                    
+                                     </span>                
+                                     <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                    </div>       
+                                </div>                               
+                                <div class="col-sm-3">
+                                    <div class="input-group">                                  
+                                     <span class="input-group-addon">                                      
+                                        <input type="checkbox">                                    
+                                     </span>                
+                                     <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                    </div>       
+                                </div>                               
+                                <div class="col-sm-3">
+                                    <div class="input-group">                                  
+                                     <span class="input-group-addon">                                      
+                                        <input type="checkbox">                                    
+                                     </span>                
+                                     <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                    </div>       
+                                </div>
+                            </div>
+                            <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover questionnaire-field-started questionnaire-field-success questionnaire-field-failed"><span >Add Question</span><i class="glyph-icon icon-arrow-right"></i></button>
+                            </fieldset>
+                        </div>
+                        <!-- Checkbox -->
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+  </div>
+<!-- checkbox Modal -->
+
+<!-- rating Modal -->
+<div class="modal fade" id="ratingModal" tabindex="-1" role="dialog" aria-labelledby="ratingModalLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Question</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        
+        <form enctype="multipart/form-data" method="post" siq_id="">
+
+                        <!-- Rating -->
+                        <div class="col-xl-12">
+                            <fieldset class="fieldset-border">
+                            <legend class="legendtitle">Rating</legend>
+                            <div class="form-group">
+                                <label for="question">Question:</label>
+                                <input name="question" class="form-control" id="question" required="" type="text">
+                            </div>
+                            <div class="form-group" id=""> 
+                                <div class="col-sm-6">       
+                                    <label>Kindly Rate:</label><br>          
+                                    <div class="col-sm-12">
+                                        <div class="rating"> 
+                                            <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> 
+                                            <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> 
+                                            <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> 
+                                            <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> 
+                                            <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                                     </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover questionnaire-field-started questionnaire-field-success questionnaire-field-failed"><span >Add Question</span><i class="glyph-icon icon-arrow-right"></i></button>
+                            </fieldset>
+                        </div>
+                        <!-- Rating -->
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- rating Modal -->
+
+<!-- radio Modal -->
+<div class="modal fade" id="radioModal" tabindex="-1" role="dialog" aria-labelledby="radioModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Question</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        
+        <form enctype="multipart/form-data" method="post" siq_id="">   
+
+                        <!-- Radio -->
+                        <div class="col-xl-12">
+                            <fieldset class="fieldset-border">
+                            <legend class="legendtitle">Radio</legend>
+                            <div class="form-group">
+                                <label for="question">Question:</label>
+                                <input name="question" class="form-control" id="question" required="" type="text">
+                            </div>
+                            <div class="form-group" id="">                               
+                                <div class="col-sm-3">
+                                    <div class="input-group">                                  
+                                     <span class="input-group-addon">                                      
+                                        <input type="radio">                                    
+                                     </span>                
+                                     <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                    </div>       
+                                </div>                               
+                                <div class="col-sm-3">
+                                    <div class="input-group">                                  
+                                     <span class="input-group-addon">                                      
+                                        <input type="radio">                                    
+                                     </span>                
+                                     <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                    </div>       
+                                </div>                               
+                                <div class="col-sm-3">
+                                    <div class="input-group">                                  
+                                     <span class="input-group-addon">                                      
+                                        <input type="radio">                                    
+                                     </span>                
+                                     <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                    </div>       
+                                </div>                               
+                                <div class="col-sm-3">
+                                    <div class="input-group">                                  
+                                     <span class="input-group-addon">                                      
+                                        <input type="radio">                                    
+                                     </span>                
+                                     <input type="text" class="form-control" placeholder="Enter your options ..." id="">            
+                                    </div>       
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover questionnaire-field-started questionnaire-field-success questionnaire-field-failed"><span >Add Question</span><i class="glyph-icon icon-arrow-right"></i></button>
+                            </fieldset>
+                        </div>
+                        <!-- Radio -->
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- radio Modal -->
+
+<!-- email Modal -->
+<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Question</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        
+        <form enctype="multipart/form-data" method="post" siq_id="">   
+                        
+                        <!-- Email -->
+                        <div class="col-xl-12">
+                            <fieldset class="fieldset-border">
+                            <legend class="legendtitle">Email</legend>
+                            <div class="form-group">
+                                <label for="question">Question:</label>
+                                <input name="question" class="form-control" id="question" required="" type="text">
+                            </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input name="email" class="form-control" id="email" required="" type="text">
+                                </div>
+                                <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover questionnaire-field-started questionnaire-field-success questionnaire-field-failed"><span >Add Question</span><i class="glyph-icon icon-arrow-right"></i></button>
+                            </fieldset>
+                        </div>
+                        <!-- Email -->
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- email Modal -->
+
+<!-- phone Modal -->
+<div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="phoneModalLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Question</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        
+        <form enctype="multipart/form-data" method="post" siq_id="">
+
+                        <!-- Phone Number -->
+                        <div class="col-xl-12">
+                            <fieldset class="fieldset-border">
+                            <legend class="legendtitle">Phone Number</legend>
+                            <div class="form-group">
+                                <label for="question">Question:</label>
+                                <input name="question" class="form-control" id="question" required="" type="text">
+                            </div>
+                                <div class="form-group">
+                                    <label for="phoneNumber">Phone Number</label>
+                                    <input name="phoneNumber" class="form-control" id="phoneNumber" required="" type="text">
+                                </div>
+                                <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover questionnaire-field-started questionnaire-field-success questionnaire-field-failed"><span >Add Question</span><i class="glyph-icon icon-arrow-right"></i></button>
+                            </fieldset>
+                        </div>
+                        <!-- Phone Number -->
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </di generalmodalwsv>
+</div>
+</div>
+<!-- phone Modal -->
+
+<!-- date Modal -->
+<div class="modal fade" id="dateModal" tabindex="-1" role="dialog" aria-labelledby="dateModalLabel">
+    <div class="modal-dialog generalmodalws" role="document">
+      <div class="modal-content generalmodalws">
+        <!-- Header -->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="modalh4"><i class="fab fa-wpforms"></i>Add Question</h4>
+        <button class="close waves-effect waves-light" aria-label="Close" type="button" data-dismiss="modal">
+          <span class="white-text xbuttonmodal" aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!-- Header -->
+
+      <!-- Body -->
+      <div class="modal-body">
+        
+        <form enctype="multipart/form-data" method="post" siq_id="">
+
+                        <!-- Date -->
+                        <div class="col-xl-12">
+                            <fieldset class="fieldset-border">
+                            <legend class="legendtitle">Date</legend>
+                            <div class="form-group">
+                                <label for="question">Question:</label>
+                                <input name="question" class="form-control" id="question" required="" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Select Date*</label>
+                                <input type="date" class="form-control" name="date" id="date" placeholder="mm-dd-yyyy" required="">
+                                <span id="error_sc_date"></span>
+                            </div>
+                            <button class="btn btn-border btn-alt border-blue-alt btn-link font-blue-alt col-12 btnfont btn-hover questionnaire-field-started questionnaire-field-success questionnaire-field-failed"><span >Add Question</span><i class="glyph-icon icon-arrow-right"></i></button>
+                            </fieldset>
+                        </div>
+                        <!-- Date -->
+                        
+        </form>
+      </div>
+      <!--body -->
+      </div>
+    </div>
+</div>
+<!-- date Modal -->
+
+<!-- Input switch -->
+<link rel="stylesheet" type="text/css" href="assets/widgets/input-switch/inputswitch.css">
+<script type="text/javascript" src="assets/widgets/input-switch/inputswitch.js"></script>
+<script type="text/javascript">
+    /* Input switch */
+
+    $(function() { "use strict";
+        $('.input-switch').bootstrapSwitch();
+    });
+</script>
+<!-- Input switch -->
+
+<!-- Multi select -->
+<script type="text/javascript" src="assets/widgets/multi-select/multiselect.js"></script>
+<script type="text/javascript">
+    /* Multiselect inputs */
+
+    $(function() { "use strict";
+        $(".multi-select").multiSelect();
+        $(".ms-container").append('<i class="glyph-icon icon-exchange"></i>');
+    });
+</script>
+<!-- Multi select -->
+
+<!-- menu retractoff -->
+<script type="text/javascript">
+
+    $('.menu-open').click(function(e) {
+        e.stopPropagation();
+        $('li > .sidebar-submenu').hide();
+        $('.menu-open > .sidebar-submenu').toggle();
+    });
+</script>
+<!-- menu retractoff -->
+
+<!-- Chosen -->
+<script type="text/javascript" src="assets/widgets/chosen/chosen.js"></script>
+<script type="text/javascript" src="assets/widgets/chosen/chosen-demo.js"></script>
+<!-- Chosen -->
+
+    <!-- WIDGETS -->
+<script type="text/javascript" src="assets/tether/js/tether.js"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="assets/widgets/jgrowl-notifications/jgrowl.css">-->
+<script type="text/javascript" src="assets/widgets/jgrowl-notifications/jgrowl.js"></script>
+<script type="text/javascript" src="assets/widgets/jgrowl-notifications/jgrowl-demo.js"></script>
+
+<!-- Bootstrap Dropdown -->
+
+<!-- <script type="text/javascript" src="assets/widgets/dropdown/dropdown.js"></script> -->
+
+<!-- Bootstrap Tooltip -->
+
+<!-- <script type="text/javascript" src="assets/widgets/tooltip/tooltip.js"></script> -->
+
+<!-- Bootstrap Popover -->
+
+<!-- <script type="text/javascript" src="assets/widgets/popover/popover.js"></script> -->
+
+<!-- Bootstrap Progress Bar -->
+
+<script type="text/javascript" src="assets/widgets/progressbar/progressbar.js"></script>
+
+<!-- Bootstrap Buttons -->
+
+<!-- <script type="text/javascript" src="assets/widgets/button/button.js"></script> -->
+
+<!-- Bootstrap Collapse -->
+
+<!-- <script type="text/javascript" src="assets/widgets/collapse/collapse.js"></script> -->
+
+<!-- Superclick -->
+
+<script type="text/javascript" src="assets/widgets/superclick/superclick.js"></script>
+
+<!-- Input switch alternate -->
+
+<script type="text/javascript" src="assets/widgets/input-switch/inputswitch-alt.js"></script>
+
+<!-- Slim scroll -->
+
+<script type="text/javascript" src="assets/widgets/slimscroll/slimscroll.js"></script>
+
+<!-- Slidebars -->
+
+<script type="text/javascript" src="assets/widgets/slidebars/slidebars.js"></script>
+<script type="text/javascript" src="assets/widgets/slidebars/slidebars-demo.js"></script>
+
+<!-- PieGage -->
+
+<script type="text/javascript" src="assets/widgets/charts/piegage/piegage.js"></script>
+<script type="text/javascript" src="assets/widgets/charts/piegage/piegage-demo.js"></script>
+
+<!-- Screenfull -->
+
+<script type="text/javascript" src="assets/widgets/screenfull/screenfull.js"></script>
+
+<!-- Content box -->
+
+<script type="text/javascript" src="assets/widgets/content-box/contentbox.js"></script>
+
+<!-- Overlay -->
+
+<script type="text/javascript" src="assets/widgets/overlay/overlay.js"></script>
+
+<!-- Widgets init for demo -->
+
+<script type="text/javascript" src="assets/js-init/widgets-init.js"></script>
+
+<!-- Theme layout -->
+
+<script type="text/javascript" src="assets/themes/admin/layout.js"></script>
+
+<!-- Theme switcher -->
+
+<script type="text/javascript" src="assets/widgets/theme-switcher/themeswitcher.js"></script>
+
+<script type="text/javascript">
+    /* Datatable row highlight */
+
+    $(document).ready(function() {
+        var table = $('#datatable-row-highlight').DataTable();
+
+        $('#datatable-row-highlight tbody').on( 'click', 'tr', function () {
+            $(this).toggleClass('tr-selected');
+        } );
+    });
+
+
+
+    $(document).ready(function() {
+        $('.dataTables_filter input').attr("placeholder", "Search...");
+    });
+
+</script>
+
+<script>
+    function showQuestionTypeTextbox()
+    {
+      $(".question_type").removeClass('active');
+      $("#question_type_textbox").addClass('active');
+    }
+</script>
+
+<script>
+    function showQuestionTypeCheckbox()
+    {
+      $(".question_type").removeClass('active');
+      $("#question_type_checkbox").addClass('active');
+    }
+</script>
+
+<script>
+    function showQuestionTypeRating()
+    {
+      $(".question_type").removeClass('active');
+      $("#question_type_rating").addClass('active');
+    }
+</script>
+
+<script>
+    function showQuestionTypeRadio()
+    {
+      $(".question_type").removeClass('active');
+      $("#question_type_radio").addClass('active');
+    }
+</script>
+
+<script>
+    function showQuestionTypeEmail()
+    {
+      $(".question_type").removeClass('active');
+      $("#question_type_email").addClass('active');
+    }
+</script>
+
+<script>
+    function showQuestionTypePhone()
+    {
+      $(".question_type").removeClass('active');
+      $("#question_type_phone").addClass('active');
+    }
+</script>
+
+<script>
+    function showQuestionTypeDate()
+    {
+      $(".question_type").removeClass('active');
+      $("#question_type_date").addClass('active');
+    }
+</script>
+
+</div>
+</body>
+</html>

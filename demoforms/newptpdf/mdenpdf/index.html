@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>MDEN1 | New Patient Form</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="icon" href="assest/img/logo.png" type="image/png" sizes="16x16">
+  <!-- Bootstrap core CSS -->
+  <link href="assest/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="assest/css/register.css">
+  <link href="assest/css/typography.css" rel="stylesheet">
+  <style type="text/css">
+    @media only screen and (min-width: 750px) {
+
+      #section1a,
+      #section1b,
+      #section1c,
+      #section1d {
+        background-image: url(assest/img/section1.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        background-attachment: fixed;
+      }
+    }
+
+    #section1a .inner-section {
+      padding-top: 20px;
+    }
+
+    #section1b .inner-section {
+      padding-top: 70px;
+    }
+
+    .shadow,
+    .shadow2 {
+      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+      padding: 30px 40px;
+      border-radius: 10px 10px 10px 10px;
+      background: white;
+    }
+
+    .top-rtplogo {
+      height: 120px;
+    }
+
+    .btn-start {
+      height: 85px;
+    }
+
+    @media only screen and (max-width: 750px) {
+      #section1a .inner-section {
+        padding-top: 15px;
+      }
+
+      #section1b .inner-section {
+        padding-top: 15px;
+      }
+
+      .shadow {
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+        padding: 10px 25px;
+        border-radius: 10px 10px 10px 10px;
+        background: white;
+      }
+
+      .shadow {
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
+        padding: 20px 15px;
+        border-radius: 10px 10px 10px 10px;
+        background: white;
+      }
+
+      .top-rtplogo,
+      .top-rtplogo2 {
+        height: 100px;
+      }
+
+      .btn-start {
+        height: 50px;
+      }
+
+      .btn-start2 {
+        height: 70px;
+        margin: 15px auto !important;
+      }
+
+      .inner-section {
+        background: rgba(255, 255, 255, 1);
+      }
+    }
+
+    .progress {
+      background: none !important;
+    }
+
+    @media only screen and (min-width: 750px) {
+      #confirmation {
+        background-image: url(assest/img/481.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        background-attachment: fixed;
+      }
+
+      #check-logo {
+        height: 100px;
+      }
+    }
+
+    #confirmation .shadow {
+      background-color: white;
+      border-radius: 40px;
+    }
+
+    .check-img {
+      margin-top: -75px;
+      height: 150px;
+    }
+
+    @media only screen and (max-width: 750px) {
+      #confirmation {
+        background-image: url(assest/img/481.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      .check-img {
+        margin-top: -50px;
+        height: 100px;
+      }
+
+      #finish-step .next-btn {
+        max-width: 90%;
+      }
+
+      #confirmation h2 {
+        font-size: 22px;
+      }
+
+      #confirmation h3 {
+        font-size: 20px;
+      }
+    }
+    .question
+    {
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======================= new patient form ================================  -->
+  <section class="" id="registration-section" style="display: block;">
+    <!-- ======================= container ================================  -->
+    <div class="container" id="form-container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h1 class="section-heading">New Patient Registration</h1>
+        </div>
+      </div>
+      <!-- ======================= content ================================  -->
+      <div class="card">
+        <div class="card-body">
+          <form class="" method="post" enctype="multipart/form-data" role="form">
+            <div class="row">
+              <div class="col-sm-12 stepper stepper-vertical">
+              
+                  <!-- Initial Step -->
+                  <section class="form-step active" id="initial-step">
+                    <a>
+                      <span class="circle" id="step-zero-cirle">0</span>
+                      <span class="label">Form Filled By:</span>
+                    </a>
+
+                <!-- Filler Information -->
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-12">
+                        <fieldset class="fieldset-outer">
+                          <legend class="custom-legend text-center">Filler Information</legend>
+                          
+                          <div class="row inner-row">
+                            <div class="col-sm-2">
+                              <div class="form-group">
+                                <label for="s1q1" class="font-weight-bold mb-n2 question">Your Name</label>
+                                <P class="answers">Shakir Ansari</P>
+                              </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                              <div class="form-group">
+                                <label for="s1q1" class="font-weight-bold mb-n2 question">Email</label>
+                                <P class="answers">Shakir@gmail.com</P>
+                              </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                              <div class="form-group">
+                                <label for="s1q1" class="font-weight-bold mb-n2 question">Phone</label>
+                                <P class="answers">914566650</P>
+                              </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                              <div class="form-group">
+                                <label for="s1q1" class="font-weight-bold mb-n2 question">Relation to patient</label>
+                                <P class="answers checklabel required-label">Self</P>
+                              </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                              <div class="form-group">
+                                <label for="s1q1" class="font-weight-bold mb-n2 question">Pin</label>
+                                <P class="answers">WJ3YN4</P>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset> 
+                        </div> 
+                      </div>
+                    </div>
+                <!-- Filler Information -->
+                  </section>
+                  <!-- Initial Step -->
+
+                  <!-- 1st Step -->
+                  <section class="form-step active" id="first-step">
+                    <a>
+                      <span class="circle" id="step-one-cirle">1</span>
+                      <span class="label">Patient Information</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Patient Information</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q1" class="font-weight-bold mb-n2 question">First Name</label>
+                                  <p class="answers">Shakir</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q2" class="font-weight-bold mb-n2 question">Last Name</label>
+                                  <p class="answers">Ansari</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q3" class="font-weight-bold mb-n2 question">Date of Birth</label>
+                                  <p class="answers">12/21/98</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q4" class="font-weight-bold mb-n2 question">Sex</label>
+                                  <p class="answers">Male</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Patient Address</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q5" class="font-weight-bold mb-n2 question">Street Address</label>
+                                  <p class="answers">16th St</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q6" class="font-weight-bold mb-n2 question">City</label>
+                                  <p class="answers">New York</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q7" class="font-weight-bold mb-n2 question">State</label>
+                                  <p class="answers">NY</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q8" class="font-weight-bold mb-n2 question">Zipcode</label>
+                                  <p class="answers">95123</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Patient Contact Information</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q9" class="font-weight-bold mb-n2 question">Phone#</label>
+                                  <p class="answers">9511596655</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <label for="s1q10" class="font-weight-bold mb-n2 question">Cell#</label>
+                                  <p class="answers">9511598855</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s1q11" class="font-weight-bold mb-n2 question">Email</label>
+                                  <p class="answers">Shakir@gmail.com</p>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Other</legend>
+                            <div class="col-sm-12 inner-row">
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <label for="s1q1" class="font-weight-bold mb-n2 question">How were you referred to find us?</label>
+                                    <p class="answers">Sibling/Friend</p>
+                                  </div>
+                                </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+
+                  </section>
+                  <!-- 1st Step -->
+
+                  <!-- 2nd step -->
+                  <section class="form-step active" id="second-step">
+                    <!-- title -->
+                    <a>
+                      <span class="circle" id="step-second-cirle">2</span>
+                      <span class="label">Emergency contact</span>
+                    </a>
+
+                    <!-- Section Description -->
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Emergency Contact</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s2q1" class="font-weight-bold mb-n2 question">Name</label>
+                                  <p class="answers">Ravi Agrawal</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s2q2" class="font-weight-bold mb-n2 question">Relationship</label>
+                                  <p class="answers">Employee</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Emergency Contact Info</legend>
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s2q3" class="font-weight-bold mb-n2 question">Phone#</label>
+                                  <p class="answers">9511584455</p>
+                                </div>
+                              </div>
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s2q4" class="font-weight-bold mb-n2 question">Cell#</label>
+                                  <p class="answers">8745874455</p>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+
+                      <!-- row -->
+
+
+                    </div>
+                    <!-- container -->
+                  </section>
+                  <!-- 2nd step -->
+
+                  <!-- 3rd Step -->
+                  <section class="form-step active" id="third-step">
+                    <a>
+                      <span class="circle" id="step-third-circle">3</span>
+                      <span class="label">Insurance Information</span>
+                    </a>
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Select Type</legend>
+                            <div class="inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="form-group">
+                                  <label for="s2q1" class="font-weight-bold mb-n2 question">Select Type</label>
+                                  <p class="answers">Insurance</p>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12" id="insurancetype">
+                          <div class="row">
+                            <!-- primary insurance -->
+                            <div class="col-sm-6">
+                              <div class="row px-3">
+                                <fieldset class="fieldset-outer">
+                                  <legend class="custom-legend text-center">Primary Insurance</legend>
+                                  <div class="inner-row">
+                                    <div class="row">
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0a1" class="font-weight-bold mb-n2 question">Insurance Company</label>
+                                          <p class="answers">X Company</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0b1" class="font-weight-bold mb-n2 question">Phone#</label>
+                                          <p class="answers">6544566655</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0c1" class="font-weight-bold mb-n2 question">Id#</label>
+                                          <p class="answers">9514</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0d1" class="font-weight-bold mb-n2 question">Group#</label>
+                                          <p class="answers">X group</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0e1" class="font-weight-bold mb-n2 question">Subscriber Name</label>
+                                          <p class="answers">Shakir Ansari</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0f1" class="font-weight-bold mb-n2 question">Subscriber Birthdate</label>
+                                          <p class="answers">12/21/98</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0g1" class="font-weight-bold mb-n2 question">SS Number</label>
+                                          <p class="answers">95115954845</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0h1" class="font-weight-bold mb-n2 question">Relationship</label>
+                                          <p class="answers">Self</p>
+                                        </div>
+                                      </div>  
+
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+                            <!-- primary insurance -->
+
+                            <!-- secondary insurance -->
+                            <div class="col-sm-6">
+                              <div class="row px-3">
+                                <fieldset class="fieldset-outer">
+                                  <legend class="custom-legend text-center">Secondary Insurance</legend>
+                                  <div class="inner-row">
+                                    <div class="row">
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0a2" class="font-weight-bold mb-n2 question">Insurance Company</label>
+                                          <p class="answers">Y Company</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0b2" class="font-weight-bold mb-n2 question">Phone#</label>
+                                          <p class="answers">6548845877</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0c2" class="font-weight-bold mb-n2 question">Id#</label>
+                                          <p class="answers">9514</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0d2" class="font-weight-bold mb-n2 question">Group#</label>
+                                          <p class="answers">Y Group</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0e2" class="font-weight-bold mb-n2 question">Subscriber Name</label>
+                                          <p class="answers">Ravi Agrawal</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0f2" class="font-weight-bold mb-n2 question">Subscriber Birthdate</label>
+                                          <p class="answers">12/31/98</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0g2" class="font-weight-bold mb-n2 question">SS Number</label>
+                                          <p class="answers">9511456987</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                        <div class="form-group">
+                                          <label for="s3q0h2" class="font-weight-bold mb-n2 question">Relationship</label>
+                                          <p class="answers">Employee</p>
+                                        </div>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+                            <!-- secondary insurance -->
+                          </div>
+                        </div>
+                        <div class="col-sm-12 pt-3">
+                          <small>I certify that I, and/or my dependent(s), have insurance coverage with the above named
+                            Insurance Company and assign
+                            directly to Dr. Dental all insurance benefits, if any, for services rendered. I understand
+                            that I am financially responsible for
+                            all charges whether or not paid by insurance. I authorize the use of my signature on all
+                            insurance submissions.</small>
+                          <small>The above named medical facility may use my healthcare information and may disclose such
+                            information to the above
+                            named insurance company(ies) and their agents for the purpose of obtaining payment for
+                            services and determining
+                            insurance benefits or benefits payable for related services. This consent will stay in
+                            effect as long as I am a patient with
+                            the above named medical facility.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- 3rd Step -->
+
+                  <!-- 4th step -->
+                  <section class="form-step active" id="fourth-step">
+                    <a>
+                      <span class="circle" id="step-fourth-circle">4</span>
+                      <span class="label">Adult Medical History</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="py-2"><b>Medical History</b></h4>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Are you under the care of a physician?</legend>
+                            <div class="inner-row">
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label class="checklabel required-label" for="s4q1o1">Yes</label>
+                                </div>
+                              </div>
+                              <div class="row">
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label for="s4q1a" class="font-weight-bold mb-n2 question">Physician</label>
+                                    <p class="answers">Dr. Jamal</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                  <div class="form-group">
+                                    <label for="s4q1b" class="font-weight-bold mb-n2 question">Address</label>
+                                    <p class="answers">15th St, New York, NY - 10001</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label for="s4q1c" class="font-weight-bold mb-n2 question">Last examination?</label>
+                                    <p class="answers">12/25/21</p>
+                                  </div>
+                                </div>  
+
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Are you presently taking any
+                              medications/drugs/pills/herbals/supplements?</legend>
+                            <div class="inner-row">
+                              <div class="row">
+
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">If yes, please list:</label>
+                                    <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique iste error nihil dignissimos?</p>
+                                  </div>
+                                </div>                                
+                              </div>
+
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-4">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Is there a chance you are pregnant(Women)?</legend>
+                            <div class="inner-row">
+                              <div class="row">
+
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">If yes, anticipated due date?</label>
+                                    <p class="answers">12/21/21</p>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-4">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Do you take oral contraceptives?</legend>
+                            <div class="inner-row">
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label class="checklabel required-label" for="">Yes</label>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-4">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Are you allergic/sensitive to:</legend>
+                            <div class="inner-row">
+                              <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label class="checklabel required-label" for="">Local Anesthetic</label>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Do you smoke, chew tobacco, or use E-cigarettes?</legend>
+                            <div class="inner-row">
+                              <div class="row">
+
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Please indicate which one(s)</label>
+                                    <p class="answers">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim rem eius, facilis hic earum consequatur, adipisci sit placeat eos qui autem minus beatae tenetur quis architecto debitis unde veniam perferendis?</p>
+                                  </div>
+                                </div>
+
+
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Do you have Diabetes?</legend>
+                              <div class="inner-row">
+                                <div class="row">
+
+                                  <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label class="checklabel required-label" for="">Yes</label>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label class="checklabel required-label" for="">Type1</label>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label class="font-weight-bold mb-n2 question" for="">Last HbA1c Date</label>
+                                      <p class="answers">12/21/21</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-6">
+                                    <div class="form-group">
+                                      <label class="font-weight-bold mb-n2 question" for="">Last HbA1c Level</label>
+                                      <p class="answers">10</p>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <h4 class="my-2 text-center"><b>Do you have, or have you ever had:</b></h4>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <div class="inner-row">
+                              <div class="row">
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Abnormal blood pressure?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Anemia</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Arthritis</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Artificial heart valve/stent/graft</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Artificial heart valve/stent/graft</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Artificial joint replacements</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Asthma</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Cancer</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Cancer</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Chemical dependency</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Chemotherapy/radiation</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Congenital heart defects</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Corticosteroid treatment</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Epilepsy/seizures</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Excessive or prolonged bleeding</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Fainting spells</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Glaucoma</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Hearing impaired</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Heart murmur</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Heart pacemaker</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Heart surgery</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Heart trouble</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Hepatitis</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">HIV positive/AIDS</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Jaundice</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Kidney trouble/Dialysis</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Leukemia</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Oral herpetic lesions</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Osteoporosis/Bisphosphonates</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Psychiatric care</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Rheumatic fever</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Sexually transmitted disease</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Sinus trouble</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Stroke</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Thyroid problem</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Ulcers/GERD</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <div class="inner-row">
+                              <div class="row">
+
+                                <div class="col-sm-6">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Do you take pre-medication for anything?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">If you pre-medicate, what for?</label>
+                                    <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aliquam, earum expedita quae odit esse minima accusantium atque saepe pariatur totam dolor nam non animi iure officiis delectus beatae suscipit.</p>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <div class="inner-row">
+                              <div class="row">
+
+                                <div class="col-sm-6">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Have you had any other serious illness, hospitalization or
+                                      accident?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">If yes, please explain:</label>
+                                    <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aliquam, earum expedita quae odit esse minima accusantium atque saepe pariatur totam dolor nam non animi iure officiis delectus beatae suscipit.</p>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </section>
+                  <!-- 4th step -->
+
+                  <!-- 5th Step -->
+                  <section class="form-step active" id="fifth-step">
+                    <a>
+                      <span class="circle" id="step-fifth-circle">5</span>
+                      <span class="label">Dental History</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Have you seen a dentist before?</legend>
+                            <div class="inner-row">
+                              <div class="row">
+
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <fieldset class="fieldset-outer">
+                                  <legend class="custom-legend text-center">Former Dentist</legend>
+                                  <div class="row inner-row">
+                                    <div class="row">
+                                      
+                                      <div class="col-sm-4">
+                                        <div class="form-group">
+                                          <label class="font-weight-bold mb-n2 question" for="">Former Dentist</label>
+                                          <p class="answers">Dr. X</p>
+                                        </div>
+                                      </div> 
+                                      
+                                      <div class="col-sm-4">
+                                        <div class="form-group">
+                                          <label class="font-weight-bold mb-n2 question" for="">Address</label>
+                                          <p class="answers">15th St, NY, NY-10001</p>
+                                        </div>
+                                      </div> 
+                                      
+                                      <div class="col-sm-4">
+                                        <div class="form-group">
+                                          <label for="s5q0c" class="font-weight-bold mb-n2 question">When did you last visit a dentist?</label>
+                                          <p class="answers">12/21/21</p>
+                                        </div>
+                                      </div> 
+
+                                      <div class="col-sm-4">
+                                        <div class="form-group">
+                                          <label for="s5q0d" class="font-weight-bold mb-n2 question">When was your last cleaning?</label>
+                                          <p class="answers">12/21/21</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-4">
+                                        <div class="form-group">
+                                          <label for="s5q0f" class="font-weight-bold mb-n2 question">What was done at your last visit?</label>
+                                          <p class="answers">Cleaning</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-4">
+                                        <div class="form-group">
+                                          <label for="s5q0g" class="font-weight-bold mb-n2 question">Why did you leave that dentist?</label>
+                                          <p class="answers">x reason</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-4">
+                                        <div class="form-group">
+                                          <label for="s5q0h" class="font-weight-bold mb-n2 question">Has any dental treatment been recommended to you that you have not had done?</label>
+                                          <p class="answers">Yes</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-4">
+                                        <div class="form-group">
+                                          <label for="s5q0h" class="font-weight-bold mb-n2 question">X-Rays Taken</label>
+                                          <label class="checklabel required-label" for="s5q0eo1">Yes</label>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-sm-4">
+                                        <div class="form-group">
+                                          <label for="s5q0h" class="font-weight-bold mb-n2 question">If yes then which one?</label>
+                                          <label class="checklabel required-label" for="s5q0eo1">Full Mouth Series</label>
+                                        </div>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </fieldset>
+
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Are you aware of any dental problems?</legend>
+                            <div class="inner-row">
+                              <div class="row">
+
+                                <div class="col-sm-4  ">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Are you aware of any dental problems?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">If yes, please explain:</label>
+                                    <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Please rate the present condition of your mouth:</label>
+                                    <label class="checklabel required-label" for="">10</label>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <fieldset class="fieldset-outer">
+                            <legend class="custom-legend text-center">Have you ever been treated for gum disease?</legend>
+                            <div class="inner-row">
+                              <div class="row">
+
+                                <div class="col-sm-6">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Have you ever been treated for gum disease?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">If yes, what was done?</label>
+                                    <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <fieldset class="fieldset-outer">
+                            <div class="inner-row">
+                              <div class="row">
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Do you have well water?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Is your water fluoridated?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Are your teeth sensitive to:</label>
+                                    <label class="checklabel required-label" for="">Pressure</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Please rate the appearance of your smile:</label>
+                                    <label class="checklabel required-label" for="">01</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Would you like a whiter smile?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Would you like straighter teeth?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Have you had your teeth straightened/worn braces?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Are you concerned with bad breath (malodor)?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Are you concerned with snoring or sleep apnea?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Do you wear a bite guard?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Are you interested in sleep/sedation dentistry?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Are you concerned with grinding or clenching your teeth (bruxism)?</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Are you aware of possible TMJ problems? (Does your jaw joint make noise, lock up, or create pain?)</label>
+                                    <label class="checklabel required-label" for="">Yes</label>
+                                  </div>
+                                </div>
+
+                                <div class="col-sm-8">
+                                  <div class="form-group">
+                                    <label class="font-weight-bold mb-n2 question" for="">Is there anything else that would be valuable for your dentist to know to best care for you?</label>
+                                    <p class="answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque minima omnis sequi fugiat! Sunt quia nemo omnis quo, iure a, voluptatem consequuntur autem minima exercitationem ad incidunt vitae atque sequi?</p>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-sm-12 my-3">
+                          <small>I authorize the dentist to perform diagnostic procedures and treatment as may be necessary
+                            for proper dental care.<br>I authorize the release of any information concerning my (or my
+                            child’s) healthcare, advice, and treatment to another dentist.<br>I have accurately advised
+                            my dental care provider of my current health status and any dietary or herbal supplements,
+                            medications, and/or drugs (including recreational and over the counter) that I am taking or
+                            have taken in the last week.</small>
+                        </div>
+
+                      </div>
+                    </div>
+
+
+                  </section>
+                  <!-- 5th Step -->
+
+                  <!-- 6th Step -->
+                  <section class="form-step active" id="sixth-step">
+                    <a>
+                      <span class="circle" id="step-sixth-circle">6</span>
+                      <span class="label">General Consent</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h6 class="text-center pb-3 font-weight-bold"><b>Please read this form carefully. Should you have any
+                              questions,our staff will be happy to help you.</b></h6>
+
+                          <small>I hereby authorize and direct the dentist and/or dental auxiliaries to perform dental
+                            treatment with the use of any
+                            necessary or advisable radiographs (x-rays) and/or any other diagnostic aids in order to
+                            complete a thorough
+                            diagnosis and treatment plan.</small>
+
+                          <small>I understand x-rays, photographs, models of the mouth, and/or other diagnostic aids used
+                            for an accurate diagnosis
+                            and treatment planning are the property of the doctors but copies of certain aids are
+                            available upon request for a
+                            fee.</small>
+
+                          <small>In general terms, the dental procedure(s) can include but not limited to:</small>
+
+                          <h6 class="font-weight-bold">Comprehensive oral examination, radiographs, cleaning of the teeth, and the application of
+                            topical fluoride.</h6>
+
+                          <h6 class="font-weight-bold">Application of resin “sealants” to the grooves of the teeth.</h6>
+
+                          <h6 class="font-weight-bold">Treatment of diseased, or injured teeth with dental restorations (fillings).</h6>
+                          
+                          <h6 class="font-weight-bold">Treatment of diseased or injured oral tissue secondary to traumatic injuries and/or
+                            accidents and/or Infections</h6>
+                          <small>I understand that the doctor is not responsible for previous dental treatment performed in
+                            other offices. I
+                            understand that, in the course of treatment, this previously existing dentistry may need
+                            adjustment and/or
+                            replacement. I realize that guarantees of results or absolute satisfaction are not always
+                            possible in dental health
+                            service.</small>
+                          <small>I certify that if I, and/or my dependents have insurance coverage I assign directly to the
+                            dentist all insurance
+                            benefits for services rendered. I understand that I am financially responsible for all
+                            charges whether or not paid by
+                            insurance. I authorize the use of my signature on all insurance submissions.</small>
+                          <small>I have answered all of the questions about me or my dependent’s medical history and present
+                            health condition fully
+                            and truthfully. I have told the dentist or other office personnel about all medical
+                            conditions, including allergies. I
+                            also understand if my dependent or I ever have any changes in health status or any changes
+                            in medication(s), I will
+                            inform the doctor at the next appointment.</small>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <small class="font-weight-bold mt-3">I hereby acknowledge that I have read and understand this consent and the
+                            meaning of its contents. All questions have
+                            been answered in a satisfactory manner and I believe I have sufficient information to give
+                            this informed consent. I
+                            further understand that this consent shall remain in effect until terminated by me.</small>
+
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="row">
+        
+                                  <div class="col-sm-12">
+                                    <fieldset class="fieldset-outer">
+                                    <legend class="custom-legend text-center">Signee Info</legend>
+                                      <div class="row inner-row">
+        
+                                        <div class="col-sm-6">
+                                          <div class="form-group">
+                                            <label for="s6q1" class="font-weight-bold mb-n2 question">Patient Name</label>
+                                            <p class="answers">Shakir Ansari</p>
+                                          </div>
+                                        </div>
+        
+                                        <div class="col-sm-4">
+                                          <div class="form-group">
+                                            <label for="s6q2" class="font-weight-bold mb-n2 question">Date of Birth</label>
+                                            <p class="answers">12/21/98</p>
+                                          </div>
+                                        </div>
+        
+                                        <div class="col-sm-4">
+                                          <div class="form-group">
+                                            <label for="s6q3" class="font-weight-bold mb-n2 question">Your Name</label>
+                                            <p class="answers">Shakir Ansari</p>
+                                          </div>
+                                        </div> 
+        
+                                        <div class="col-sm-4">
+                                          <div class="form-group">
+                                            <label for="s6q4" class="font-weight-bold mb-n2 question">Relationship</label>
+                                            <label class="radiolabel required-label" for="s6q4o1">Self</label>
+                                          </div>
+                                        </div> 
+        
+                                      </div> 
+                                    </fieldset> 
+                                  </div> 
+        
+                                </div> 
+                              </div>
+        
+                              <div class="col-sm-6">
+                                <label for="s6q5" class="font-weight-bold mb-n2 question">Signature</label>
+                                <img src="assest/img/sign.png" alt="" width="500">
+                              </div>
+
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </section>
+                  <!-- 6th Step -->
+
+                  <!-- 7th Step -->
+                  <section class="form-step active" id="seventh-step">
+                    <a>
+                      <span class="circle" id="step-seventh-circle">7</span>
+                      <span class="label">Informed Consent form</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <p><small><span class="font-weight-bold">Drugs and Medications:</span><br>
+                            I understand that antibiotics and analgesics and other medications
+                            can cause allergic reactions causing redness and swelling of tissues,
+                            pain, itching, vomiting and/or anaphylactic shock (severe allergic
+                            reaction).</small></p>
+
+                          <p><small><span class="font-weight-bold">Changes In Treatment Plan:</span><br>
+                            I understand that during treatment it may be necessary to change or
+                            add procedures because of conditions found while working on the
+                            teeth that were not discovered during examination, the most
+                            common being root canal therapy following routine restorative
+                            procedures. I give my permission to the dentist to make any/all
+                            changes and additions as necessary once they’ve been discovered
+                            and discussed.</small></p>
+
+                          <p><small><span class="font-weight-bold">Removal Of Teeth:</span><br>
+                            Alternatives to removal will be explained to me (root canal therapy,
+                            crowns, dentures and periodontal surgery, etc.) and I will have the
+                            choice of the best procedure for me. I understand removing teeth
+                            does not always remove all the infection, if present, and it may be
+                            necessary to have further treatment. I understand the risks involved
+                            in having teeth removed, some which are pain, swelling, spread of
+                            infection, dry socket, loss of feeling in my teeth, lips, tongue and
+                            surrounding tissue (paresthesia) that can last for an indefinite period
+                            of time (days or months), or fractured jaw. I understand I may need
+                            further treatment by a specialist or even hospitalization if
+                            complications arise during or following treatment, the cost of which
+                            is my responsibility.</small></p>
+
+                          <p><small><span class="font-weight-bold">Crowns and Bridges:</span><br>
+                            I understand that sometimes it is not possible to match the color of
+                            natural teeth exactly with artificial teeth. I further understand that I
+                            may be wearing temporary crowns, which may come off easily and
+                            that I must be careful to ensure that they are kept on until the
+                            permanent crowns are delivered. I realize the final opportunity to
+                            make changes in my new crown/bridge (including shape, fit, size,
+                            color) will be before cementation.</small></p>
+
+                          <p><small><span class="font-weight-bold">Endodontic Treatment (Root Canal Therapy):</span><br>
+                            I realize there is no guarantee that root canal treatment will save my
+                            tooth, and that complications can occur from the treatment, and
+                            that occasionally metal objects are cemented in the tooth or extend
+                            through the root, which does not necessarily affect the success of
+                            the treatment, I understand that occasionally additional surgical
+                            procedures may be necessary following root canal treatment
+                            (apicoectomy).</small></p>
+
+                          <p><small><span class="font-weight-bold">Periodontal Loss (Tissue & Bone):</span><br>
+                            I understand that periodontal disease is a serious condition, causing
+                            gum and bone infection or loss and that it can lead to loss of my
+                            teeth. Alternative treatment plans will be explained to me, including
+                            gum surgery, replacements and/or extractions. I understand that
+                            undertaking any dental procedures may have a future adverse effect
+                            on my periodontal condition.</small></p>
+
+                          <p><small><span class="font-weight-bold">X-Rays:</span><br>
+                            Understand x-rays are needed for proper diagnosis and
+                            treatment.</small></p>
+
+                          <p><small><span class="font-weight-bold">Dentures, Complete or Partials:</span><br>
+                            I realize that full or partial dentures are artificial, constructed of
+                            plastic, metal, and/or porcelain. The problems with wearing these
+                            appliances has been explained to me, including, looseness, soreness
+                            and possible breakage. I realize the final opportunity to make
+                            changes to my new dentures (including, shape, fit, size, placement &
+                            color) will be the “teeth in wax” try-in visit. I understand that most
+                            dentures require relining approximately three to twelve months
+                            after initial placement. The cost for these procedures are not
+                            included in the initial denture fees. I understand wearing dentures is
+                            difficult & there are common problems such as sore spots, altered
+                            speech & difficulty eating. Immediate dentures (placement of
+                            dentures immediately after extractions) may be painful, will require
+                            considerable adjustments & several relines and a permanent reline
+                            will be needed later; this is NOT included in the denture fee. It is
+                            important to make all necessary impression, try-in & delivery
+                            appointments, failure to make these appointments can result in
+                            poorly fitting dentures and the need to remake them, resulting in
+                            additional charges.</small></p>
+
+                          <p><small><span class="font-weight-bold">Fillings:</span><br>
+                            I understand that care must be exercised in chewing on fillings
+                            especially during the first 24 hours to avoid breakage. I understand
+                            that a more expensive filling may be required due to additional
+                            decay than what could be seen by the x-ray and that significant
+                            sensitivity is a common after effect of a newly place filling.</small></p>
+                        </div>
+
+                        <div class="col-sm-12 mt-3">
+                          <p><small>I understand that dentistry is not an exact science and that,
+                            therefore, reputable practitioners cannot fully guarantee results. I
+                            acknowledge that no guarantee or assurance has been made by
+                            anyone regarding the dental treatment which I have requested and
+                            authorized. I have had the opportunity to read this form and ask
+                            questions. My questions have been answered to my satisfaction. I
+                            consent to the proposed treatment.</small></p>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="row inner-row">
+
+                              <div class="col-sm-6">
+                                <div class="row">
+        
+                                  <div class="col-sm-12">
+                                    <fieldset class="fieldset-outer">
+                                    <legend class="custom-legend text-center">Signee Info</legend>
+                                      <div class="row inner-row">
+        
+                                        <div class="col-sm-6">
+                                          <div class="form-group">
+                                            <label for="s7q1" class="font-weight-bold mb-n2 question">Name of Patient</label>
+                                            <p class="answers">Shakir Ansari</p>
+                                          </div>
+                                        </div>
+        
+                                        <div class="col-sm-4">
+                                          <div class="form-group">
+                                            <label for="s7q2" class="font-weight-bold mb-n2 question">Date of Birth</label>
+                                            <p class="answers">12/21/98</p>
+                                          </div>
+                                        </div>
+        
+                                        <div class="col-sm-4">
+                                          <div class="form-group">
+                                            <label for="s7q3" class="font-weight-bold mb-n2 question">Your Name</label>
+                                            <p class="answers">Shakir Ansari</p>
+                                          </div>
+                                        </div> 
+        
+                                        <div class="col-sm-4">
+                                          <div class="form-group">
+                                            <label for="s7q4" class="font-weight-bold mb-n2 question">Relationship</label>
+                                            <label class="radiolabel required-label" for="s7q4o1">Self</label>
+                                          </div>
+                                        </div> 
+        
+                                      </div> 
+                                    </fieldset> 
+                                  </div> 
+        
+                                </div> 
+                              </div>
+        
+                              <div class="col-sm-6">
+                                <label for="s7q5" class="font-weight-bold mb-n2 question">Signature</label>
+                                <img src="assest/img/sign.png" alt="" width="500">
+                              </div>
+
+                            </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- {{-- container --}} -->
+                  </section>
+                  <!-- 7th Step -->
+
+                  <!-- 8th Step -->
+                  <section class="form-step active" id="eighth-step">
+                    <a>
+                      <span class="circle" id="step-eighth-step">8</span>
+                      <span class="label">Privacy Practices Acknowledgement</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h5><b>ACKNOWLEDGEMENT FORM</b></h5>
+                          <p class="pt-2">I have received the<b>“Notice of Privacy Practices”</b> and have been provided
+                            an opportunity to review it.</p>
+                        </div>
+
+                        <div class="col-sm-12">
+                              <div class="row inner-row">
+  
+                                <div class="col-sm-6">
+                                  <div class="row">
+          
+                                    <div class="col-sm-12">
+                                      <fieldset class="fieldset-outer">
+                                      <legend class="custom-legend text-center">Signee Info</legend>
+                                        <div class="row inner-row">
+          
+                                          <div class="col-sm-6">
+                                            <div class="form-group">
+                                              <label for="s8q1" class="font-weight-bold mb-n2 question">Patient Name</label>
+                                              <p class="answers">Shakir Ansari</p>
+                                            </div>
+                                          </div>
+          
+                                          <div class="col-sm-4">
+                                            <div class="form-group">
+                                              <label for="s8q2" class="font-weight-bold mb-n2 question">Date of Birth</label>
+                                              <p class="answers">12/21/98</p>
+                                            </div>
+                                          </div>
+          
+                                          <div class="col-sm-4">
+                                            <div class="form-group">
+                                              <label for="s8q3" class="font-weight-bold mb-n2 question">Your Name</label>
+                                              <p class="answers">Shakir Ansari</p>
+                                            </div>
+                                          </div> 
+          
+                                          <div class="col-sm-4">
+                                            <div class="form-group">
+                                              <label for="s8q4" class="font-weight-bold mb-n2 question">Relationship</label>
+                                              <label class="radiolabel required-label" for="s8q4o1">Self</label>
+                                            </div>
+                                          </div> 
+          
+                                        </div> 
+                                      </fieldset> 
+                                    </div> 
+          
+                                  </div> 
+                                </div>
+          
+                                <div class="col-sm-6">
+                                  <label for="s8q5" class="font-weight-bold mb-n2 question">Signature</label>
+                                  <img src="assest/img/sign.png" alt="" width="500">
+                                </div>
+  
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </section>
+                  <!-- 8th Step -->
+
+                  <!-- 9th Step -->
+                  <section class="form-step active active" id="ninth-step">
+                    <a>
+                      <span class="circle" id="step-ninth-circle">9</span>
+                      <span class="label">Patient Treatment and Financial Policy</span>
+                    </a>
+
+                    <div class="step-content container pr-5">
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <p><small><span class="font-weight-bold">Thank you for choosing our office as your dental healthcare provider. We are committed
+                              to
+                              providing you with the highest quality dental care and your optimum oral health.</span></small></p>
+                          <p><small>The following is a statement of our Financial Policy. We require that you read, agree to
+                            and sign
+                            prior to any treatment.</small></p>
+                          <p><small>Please note: Payment is due at the time service is provided. Our office accepts cash,
+                            personal checks,
+                            MasterCard, Visa, Discover, American Express and CareCredit. Additional fees will be applied
+                            for
+                            returned checks. All account balances over 90 days are subject to a $35.00 late fee.</small></p>
+                          <p><small>If you have insurance:</small></p>
+                          <p><small>As a courtesy to you, we will help you process all of your dental insurance claims. We will
+                            provide an insurance estimate to you. Please understand, it is not a guarantee that your
+                            insurance will pay exactly as estimated. Insurance coverage is subject to limitations,
+                            exclusions,
+                            waiting periods, frequency, age restrictions, deductibles and maximums which are your
+                            responsibility.</small></p>
+                          <p><small>All charges you incur are your responsibility, regardless of your insurance coverage. Our
+                            practice
+                            is committed to providing the best treatment for our patients and we charge what is usual
+                            and
+                            customary for our area</small></p>
+                          <p><small>We ask that you sign this form and/or any other necessary documents that may be required by
+                            your insurance company. This form instructs your insurance company to make payment directly
+                            to our office. You authorize the release of any information concerning your (or your
+                            dependent’s)
+                            health care advice and treatment provided for the purpose of evaluating and administering
+                            claims for insurance benefits.</small></p>
+                          <p><small>Deductible, co-payment and co-insurance, which is the estimated amount not covered by your
+                            insurance company, is due at the time we provide the service(s) to you.</small></p>
+                          <p><small>Insurance payments are ordinarily received within 45-60 days from the time of filing a
+                            claim. If
+                            your insurance company has not made payment within 60 days, we will ask that you contact
+                            your
+                            insurance company to make sure payment is expected.</small></p>
+                          <p><small>If payment is not received or your claim is denied, you will be responsible for paying the
+                            full
+                            amount at that time.</small></p>
+                          <p><small>We will cooperate fully with the regulations and requests of your insurance company that
+                            may
+                            assist in the claim being paid. Our office will not, however, enter into a dispute with your
+                            insurance company over any claim.</small></p>
+                          <p><small><span class="font-weight-bold">Minors accompanied by the parent or legal guardian:</span> The parent or legal guardian
+                            accompanying a
+                            minor, who has consented to treatment, are responsible for full payment at time of service.
+                          </small></p>
+                          <p><small><span class="font-weight-bold">Unaccompanied Minors:</span> The parent or legal guardian is responsible for full payment
+                            at time of service.
+                            Treatment consents and payment arrangements with the parent or legal guardian must be made
+                            prior to
+                            appointment or non-emergency treatment may be denied.</small></p>
+                          <p><small><span class="font-weight-bold">Missed Appointment (s) and Cancellations:</span> Our goal is to provide treatment in a
+                            timely manner with as few visits as necessary. In order to provide
+                            the best services to our patients, we require at least a 24 hour notice for cancellations or
+                            for
+                            re-scheduling your appointments. We understand that unforeseen circumstances may arise,
+                            which may
+                            result in canceling or missing your appointment. A charge may be assessed for multiple
+                            missed, short
+                            notice or cancelled appointments. Multiple failed appointments may result in being dismissed
+                            from the
+                            dental practice.</small></p>
+                          <p><small><span class="font-weight-bold">Consent:</span> I have read, understand and agree to the above terms and conditions. I
+                            authorize my insurance company
+                            to pay my dental benefits directly to my dental office. I understand responsibility for
+                            payment for dental
+                            services provided in this office for myself or my dependents is mine, due and paid at the
+                            time services
+                            are rendered.</small></p>
+                          <p><small><span class="font-weight-bold">Communications with you:</span> In order to enhance patients' care and experience with us,
+                            we may contact
+                            you after your visit in order to request feedback on your experience by phone call, SMS text
+                            message,
+                            e-mail, voicemail, or mobile application, some of which may be via automated means. We may
+                            also
+                            listen to and record phone conversations with us for training purposes or to evaluate the
+                            quality of our
+                            service. By signing below you understand and agree to be contacted in this manner with
+                            communications
+                            related to this visit, and any future visits. In the future, you may opt-out of receiving
+                            text messages by
+                            notifying us in writing (including responding via text message). Standard telephone minute
+                            and text
+                            charges may apply if we contact you.</small></p>
+                          <p></p>
+                        </div>
+
+                        <div class="col-sm-12">
+                              <div class="row inner-row">
+  
+                                <div class="col-sm-6">
+                                  <div class="row">
+          
+                                    <div class="col-sm-12">
+                                      <fieldset class="fieldset-outer">
+                                      <legend class="custom-legend text-center">Signee Info</legend>
+                                        <div class="row inner-row">
+          
+                                          <div class="col-sm-6">
+                                            <div class="form-group">
+                                              <label for="s9q1" class="font-weight-bold mb-n2 question">Patient Name</label>
+                                              <p class="answers">Shakir Ansari</p>
+                                            </div>
+                                          </div>
+          
+                                          <div class="col-sm-4">
+                                            <div class="form-group">
+                                              <label for="s9q2" class="font-weight-bold mb-n2 question">Date of Birth</label>
+                                              <p class="answers">12/21/98</p>
+                                            </div>
+                                          </div>
+          
+                                          <div class="col-sm-4">
+                                            <div class="form-group">
+                                              <label for="s9q3" class="font-weight-bold mb-n2 question">Your Name</label>
+                                              <p class="answers">Shakir Ansari</p>
+                                            </div>
+                                          </div> 
+          
+                                          <div class="col-sm-4">
+                                            <div class="form-group">
+                                              <label for="s9q4" class="font-weight-bold mb-n2 question">Relationship</label>
+                                              <label class="radiolabel required-label" for="s9q4o1">Self</label>
+                                            </div>
+                                          </div> 
+          
+                                        </div> 
+                                      </fieldset> 
+                                    </div> 
+          
+                                  </div> 
+                                </div>
+          
+                                <div class="col-sm-6">
+                                  <label for="s9q5" class="font-weight-bold mb-n2 question">Signature</label>
+                                  <img src="assest/img/sign.png" alt="" width="500">
+                                </div>
+  
+                              </div>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                  </section>
+                  <!-- 9th Step -->
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- ======================= content ================================  -->
+
+    </div>
+    <!-- ======================= container ================================  -->
+  </section>
+  <!-- ======================= new patient form ================================  -->
+
+</body>
+
+</html>

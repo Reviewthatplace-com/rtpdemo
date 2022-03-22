@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Veins V1</title>
+
+    <!-- This page CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/datatables.net-bs4/css/responsive.dataTables.min.css">
+    <link href="dist/css/patientSubmission/patientSubmissionFloatinglabel.css" rel="stylesheet">
+
+    <!-- chartist CSS -->
+    <link href="assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+     <link href="dist/css/patientSubmission/patientSubmission.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="dist/css/pages/dashboard1.css" rel="stylesheet"> 
+</head>
+
+<body class="skin-blue fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">RTP Medical Solutions</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                             
+                            <!-- Light Logo icon -->
+                             
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="assets/images/rtplogo.png" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                           <img src="assets/images/rtplogo.png" style="height: 75px; margin-left: 35px;" class="light-logo" alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                        <li class="nav-item"><h1 class="dashboardName">User Dashboard</h1></li>
+                        <!-- ============================================================== -->
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <div class="text-center mt-3">
+                            <input class="btn btn-success punchOutUser" id="punchInButtonProfile" type="button" value="Punch In" data-toggle="tooltip" data-html="true"  data-placement="left" title="" data-original-title="02/26/21 6:00am <br> Punched In">
+                            <input class="btn btn-outline-danger punchInUser" id="punchOutButtonProfile" type="button" value="Punch Out" data-toggle="tooltip" data-html="true" data-placement="left" title="" data-original-title="02/26/21 6:00am <br> Punched Out">
+                            <p class="lead output"></p>
+                        </div>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="userDashboard.html" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-home"  data-toggle="tooltip" data-placement="left" title="" data-original-title="User Dashboard"></i>
+                                <div class="notify"> </div>
+                            </a>
+                        </li>
+
+
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-search-location"  data-toggle="tooltip" data-placement="left" title="" data-original-title="My Locations"></i>
+                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown">
+                                <ul>
+                                    <li>
+                                         <div class="drop-title">My Locations</div>
+                                    </li>
+                                    <li>
+                                        <div class="message-center">
+                                            <!-- Message -->
+                                            <a href="index.html">
+                                                <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Powers Pediatrics</h5> <span class="mail-desc">Ornaldo, Florida</span> <span class="time">405-122-1222 | RTP1234</span> </div>
+                                            </a>
+
+                                            <a href="index.html">
+                                                <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Powers Pediatrics</h5> <span class="mail-desc">Ornaldo, Florida</span> <span class="time">405-122-1222 | RTP1234</span> </div>
+                                            </a>
+
+                                            <a href="index.html">
+                                                <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Powers Pediatrics</h5> <span class="mail-desc">Ornaldo, Florida</span> <span class="time">405-122-1222 | RTP1234</span> </div>
+                                            </a>
+
+                                            <a href="index.html">
+                                                <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Powers Pediatrics</h5> <span class="mail-desc">Ornaldo, Florida</span> <span class="time">405-122-1222 | RTP1234</span> </div>
+                                            </a>
+                                          
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center link" href="mylocationsPractice.html"> <strong>View All Locations</strong> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Comment -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Messages -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-bell"  data-toggle="tooltip" data-placement="left" title="" data-original-title="Notifications"></i>
+                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            </a>
+                            <div class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown" aria-labelledby="2">
+                                <ul>
+                                    <li>
+                                        <div class="drop-title">You have 4 new Notification</div>
+                                    </li>
+                                    <li>
+                                        <div class="message-center">
+                                            <!-- Message -->
+                                            <a href="auditLog.html">
+                                                <div class="user-img"> <img src="assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <span class="mail-desc">New Order Recieved</span> 
+                                                    <span class="time">9:30 AM</span> 
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+
+                                            <!-- Message -->
+                                            <a href="auditLog.html">
+                                                <div class="user-img"> <img src="assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <span class="mail-desc">New Order Recieved</span> 
+                                                    <span class="time">9:30 AM</span> 
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+
+                                            <!-- Message -->
+                                            <a href="auditLog.html">
+                                                <div class="user-img"> <img src="assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <span class="mail-desc">New Order Recieved</span> 
+                                                    <span class="time">9:30 AM</span> 
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <!-- Message -->
+                                            <a href="auditLog.html">
+                                                <div class="user-img"> <img src="assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <span class="mail-desc">New Order Recieved</span> 
+                                                    <span class="time">9:30 AM</span> 
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <!-- Message -->
+                                            <a href="auditLog.html">
+                                                <div class="user-img"> <img src="assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <span class="mail-desc">New Order Recieved</span> 
+                                                    <span class="time">9:30 AM</span> 
+                                                </div>
+                                            </a>
+
+                                            <!-- Message -->
+                                           
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center link" href="auditLogUser.html"> <strong>See All</strong> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Messages -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                      
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- User Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class=""> <span class="hidden-md-down">Ravi Agrawal &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <!-- text-->
+                                <a href="personalSetting.html" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                                <!-- text-->
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-dark" href="lockscreen.html" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-lock"  data-toggle="tooltip" data-placement="left" title="" data-original-title="lockscreen"></i>
+                                <div class="notify"> </div>
+                            </a>
+                        </li>
+
+
+                     
+                        <!-- ============================================================== -->
+                        <!-- End User Profile -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+         <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap">Administration</li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-play"></i><span class="hide-menu">Getting Started</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)" id="requestAccess">Request Access</a></li>
+                                <li>
+                                    <a href="addnewPractice.html">Add New Practices</a>
+                                </li>
+                                <li>
+                                    <a href="pendingtransferPractice.html">Pending Transfer</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="locationmgtPractice.html"><i class="fas fa-map-marked"></i>Manage Locations</a></li>
+                        <li><a href="billingPractice.html"><i class="fas fa-cash-register"></i>Billing</a></li>
+                        <li><a href="auditLogUser.html"><i class="fas fa-clipboard"></i>Audit Log</a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-tv"></i><span class="hide-menu">Content Management</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="alert.html">Alert</a></li>
+                                <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Blogs</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li class="m-l-10"><a href="blogsCategories.html">Catagory</a></li>
+                                        <li class="m-l-10"><a href="blogsTags.html">Tags</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="stuffHighlights.html">Staff Highlights</a></li>
+                                <li><a href="userdashInsurance.html">Insurance</a></li>
+                                <li><a href="userdashSocialMedia.html">Social Media</a></li>
+                                <li><a href="userdashServices.html">Services</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-play"></i><span class="hide-menu">Patient Submissions</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="userdashboardNewPatient.html">New Patient</a></li>
+                                <li><a href="userdashboardRequestForm.html">Request Form</a></li>
+                                <li><a href="userdashboardUpdateDemo.html">Update Demo</a></li>
+                                <li><a href="userdashboardAuthorizationRelease.html">Authorization Release</a></li>
+                                <li><a href="userdashboardAppointments.html">Appointments</a></li>
+                                <li><a href="userdashboardSurvey.html">Survey</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-play"></i><span class="hide-menu">Compliance</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="userdashboardBAA.html">BAA</a></li>
+                                <li><a href="userdashboardHIPAA.html">HIPAA</a></li>
+                                <li><a href="userdashboardND.html">Non-Disclosure</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-small-cap">My Practices</li>
+                        <li><a href="mylocationsPractice.html"><i class="fas fa-map"></i>My Locations</a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-clipboard"></i><span class="hide-menu">Reports</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="statisticreportPractice.html">Statistic Reports</a></li>
+                                <li>
+                                    <a href="dailyreportPractice.html">Daily Reports</a>
+                                </li>
+                                <li>
+                                    <a href="physicianreportPractice.html">Physician Reports</a>
+                                </li>
+                                <li>
+                                    <a href="staffreportPractice.html">Staff Reports</a>
+                                </li>
+                                <li>
+                                    <a href="paymentreportPractice.html">Payment Reports</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-cogs"></i><span class="hide-menu">System</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)" class="has-arrow">User</a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li><a href="authorizedUsers.html">Authorized Users</a></li>
+                                        <li><a href="pendingRequest.html">Pending Request</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)" class="has-arrow">Security Profiles</a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li><a href="createSP.html">Create</a></li>
+                                        <li><a href="activeSP.html">Active</a></li> 
+                                    </ul>
+                                </li>
+
+                                 
+                            </ul>
+                        </li>
+
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-sign-out-alt text-success"></i><span class="hide-menu">Log Out</span></a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+         </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Manage Catagories</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">Manage Catagories</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Info box -->
+                <!-- ============================================================== -->
+                    <div class="text-right">
+                        <button type="button" class="btn waves-effect waves-light btn-primary mb-2">Create Category</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive-xl">
+                                <table id="config-table" class="table display table-bordered table-striped no-wrap">
+                                    <thead>
+                                        <tr>
+                                            <th>Action</th>
+                                            <th>Title</th>
+                                            <th>Slug</th>
+                                            <th>Created At</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editModal">Edit</button>
+                                                <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="javascript:void(0)">Delete</a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>Category1</td>
+                                            <td>category1</td>
+                                            <td>2 weeks ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editModal">Edit</button>
+                                                <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="javascript:void(0)">Delete</a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>Category1</td>
+                                            <td>category1</td>
+                                            <td>2 weeks ago</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                <!-- ============================================================== -->
+                <!-- End Info box -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- End Page Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- End Page Content -->
+                <!-- ============================================================== --> 
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer">
+            ©  2020 RTP Medical Solution
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <script src="assets/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+    <script>
+        $(function () {
+            // responsive table
+            $('#config-table').DataTable({
+                responsive: false
+            });
+            $('#example23').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+            $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+        });
+
+    </script>
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="assets/node_modules/morrisjs/morris.min.js"></script>
+    <script src="assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!-- Chart JS -->
+    <script src="dist/js/dashboard1.js"></script>
+<script src="https://desk.zoho.com/portal/api/feedbackwidget/171918000001748149?orgId=642064172&displayType=popout"></script>
+
+<style type="text/css">
+    #punchInButton,#punchOutButton
+    {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: 15px;
+    }
+
+    #punchInButton
+    {
+      display: none;
+    }
+
+    #punchInButtonProfile,#punchOutButtonProfile
+    {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    #punchInButtonProfile
+    {
+      display: none;
+    }
+</style>
+
+<script type="text/javascript">
+    $('#punchInButton').click(function() {
+      $(this).hide();
+      $('#punchOutButton').show();
+    });
+
+    $('#punchOutButton').click(function() {
+      $(this).hide();
+      $('#punchInButton').show();
+    });
+
+    $('#punchInButtonProfile').click(function() {
+      $(this).hide();
+      $('#punchOutButtonProfile').show();
+    });
+
+    $('#punchOutButtonProfile').click(function() {
+      $(this).hide();
+      $('#punchInButtonProfile').show();
+    });
+</script>
+    
+</body>
+
+</html>

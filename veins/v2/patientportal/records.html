@@ -1,0 +1,2815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/img/dr.jpeg">
+    <title>Records</title>
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+    <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="dist/css/pages/icon-page.css" rel="stylesheet">
+    <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+    <link href="dist/css/pages/icon-page.css" rel="stylesheet">
+    <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+    <link href="dist/css/pages/floating-label.css" rel="stylesheet">
+    <link href="dist/css/pages/chat-app-page.css" rel="stylesheet">
+    <link href="dist/css/pages/contact-app-page.css" rel="stylesheet">
+    <link href="dist/css/pages/footable-page.css" rel="stylesheet">
+    <link href="dist/css/signature/jquery.signaturepad.css" rel="stylesheet">
+    <link href="assets/node_modules/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+     <!-- Page plugins css -->
+     <link href="assets/node_modules/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
+     <!-- Color picker plugins css -->
+     <link href="assets/node_modules/jquery-asColorPicker-master/dist/css/asColorPicker.css" rel="stylesheet">
+     <!-- Date picker plugins css -->
+     <link href="assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+     <!-- Daterange picker plugins css -->
+     <link href="assets/node_modules/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+     <link href="assets/node_modules/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+     <link href="assets/node_modules/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css" />
+     <link href="assets/node_modules/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
+     <link href="assets/node_modules/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+     <link href="assets/node_modules/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <style>
+        .card-body {
+            padding: 0rem;
+        }
+
+        .asColorPicker-trigger {
+            position: absolute;
+            top: 0px;
+            left: 220px;
+            height: 38px;
+            width: 37px;
+            border: 0; }
+        
+
+            .form-checkbox, .form-radio {
+            padding:2px;
+            max-width: 100% !important;
+            display: inline-block;
+            margin-right: 8px;
+            background:white;
+            }
+            .checklabel,.radiolabel{
+            display:block;
+            width: 430px;
+            border:2px solid #FF7062;
+            background: white;
+            border-radius:12px;
+            text-align:center;
+            padding:10px 2em;
+            font-size:1.2rem;
+            font-weight: bold;
+            box-shadow:0 0 1px 1px rgba(0,0,0,0.2);
+            }
+            .label-center-section .checklabel,.label-center-section .radiolabel
+            {
+            text-align:left;
+            }
+            .checklabel:hover, .radiolabel:hover {
+            background:#ddd;
+            }
+            .checkbox, .radio {
+            display: none;
+            }
+            .checkbox:focus + label, .radio:focus + label{
+            border-color:#FF7062;
+            } 
+            .checkbox:active + label {
+            background-color: #ddd;
+            }
+            .checkbox:checked + label, .radio:checked + label {
+            background-position: 0 0;
+            background-color: #FF7062;
+            color: white;
+            }
+            .checkbox, .radio {
+                    display: none;
+                }
+                .label-offwhite {
+                    background-color: #f5f5f5;
+                }
+                .active-page
+                {
+                    color: #fb9678 !important;
+                }
+                /* Customize the label (the container) */
+                .container-custom {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                }
+
+                /* Hide the browser's default checkbox */
+                .container-custom input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+                }
+
+                /* Create a custom checkbox */
+                .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                margin-left: 15px;
+                background-color:grey;
+                }
+
+                /* On mouse-over, add a grey background color */
+                .container-custom:hover input ~ .checkmark {
+                background-color: rgb(169, 165, 165);
+                }
+
+                /* When the checkbox is checked, add a blue background */
+                .container-custom input:checked ~ .checkmark {
+                background-color: #2196F3;
+                }
+
+                /* Create the checkmark/indicator (hidden when not checked) */
+                .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+                }
+
+                /* Show the checkmark when checked */
+                .container-custom input:checked ~ .checkmark:after {
+                display: block;
+                }
+
+                /* Style the checkmark/indicator */
+                .container-custom .checkmark:after {
+                left: 9px;
+                top: 5px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                }
+                
+                /* .modal-content .NO {
+                    width: 150% !important;
+                }
+                
+                .modal-body .NO {
+                    width: 84% !important;
+                } */
+
+    </style>
+</head>
+
+<body class="skin-blue fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">RTP Medical Solutions</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar bg-white">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header bg-white">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--  You can put here icon as well -->
+                            <!--  <i class="wi wi-sunset"></i> -->
+                            <!-- Dark Logo icon -->
+                            <img src="assets/images/veinslogo.png" alt="homepage" class="dark-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                            <!-- dark Logo text -->
+                            <img src="assets/images/veinslogo.png" alt="homepage" class="dark-logo w-25" />
+                            <!-- Light Logo text -->
+                            <img src="assets/images/veinslogo.png" class="light-logo" alt="homepage" style="height: 75px; margin-left: 35px;"/>
+                        </span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto ">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item text-info"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark text-info" href="javascript:void(0)"><i class="icon-menu text-info"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-home text-info"></i>
+                            </a>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Comment -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                      
+                        <!-- ============================================================== -->
+                        <!-- End mega menu -->
+
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- User Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic text-info" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class=""> <span class="hidden-md-down">Mark &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <!-- text-->
+                                <a href="index.html" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                                <!-- text-->
+                                <a href="pay_Request.html" class="dropdown-item"><i class="ti-wallet"></i>Open Balance</a> 
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="account_settings.html" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                                <!-- text-->
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End User Profile -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="far fa-user text-danger"></i><span class="hide-menu">My Profiles</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="profile_discovery.html" aria-expanded="false"><i class="fa fa-users text-danger"></i><span class="hide-menu">Profile Discovery</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="records.html" aria-expanded="false"><i class="fa fa-clipboard-check text-danger"></i><span class="hide-menu">Records</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="authorize_practice.html" aria-expanded="false"><i class="fa fa-map-marker text-danger"></i><span class="hide-menu">My Practices</span></a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-money-bill-alt text-danger"></i><span class="hide-menu">Payment<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="pay_Request.html">Payment Request</a></li>
+                                <li><a href="payment_Complete.html">Payments Completed</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="com_center.html" aria-expanded="false"><i class="fa fa-phone text-danger"></i><span class="hide-menu">Communication</span></a></li> 
+                          <li> <a class="waves-effect waves-dark" href="login.html" aria-expanded="false"><i class="fas fa-sign-in-alt text-danger"></i><span class="hide-menu">Log Out</span></a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+
+                <div class="row page-titles">
+                    <div class="col-xl-1 col-md-2 align-self-center">
+                        <h4 class="text-themecolor">Records</h4>
+                    </div>
+                    <div class="col-xl-3 col-md-3 align-self-center">
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Shakir Ansari, 11-29-1986
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="javascript:void(0)">Ravi Agrawal, 12-30-1990</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Ali Reza, 01-05-1995</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-3 align-self-center"></div>
+                    <div class="col-xl-3 col-md-3 align-self-center">
+                        <label for="">Filter</label> <br>
+                        <select class="select2 m-b-10 select2-multiple" style="width: 90%" multiple="multiple" data-placeholder="Choose">
+                            <optgroup label="Folders">
+                                <option value="">Dr. Kent - Primary Care</option>
+                                <option value="">Radiology</option>
+                                <option value="">Dentist</option>
+                                <option value="">ER - Visit</option>
+                            </optgroup>
+                            <optgroup label="Tags">
+                                <option value="t01">Broken Arm</option>
+                                <option value="t02">ER 2012</option>
+                                <option value="t02">2010</option>
+                                <option value="t02">Stomach Cancer</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="col-xl-1 col-md-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">HOME</a></li>
+                                <li class="breadcrumb-item active">Records</li>
+                            </ol>
+                             
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <!-- .left-right-aside-column-->
+                            <div class="contact-page-aside">
+                                <!-- .left-aside-column-->
+                                <div class="left-aside bg-light-part">
+                                    <ul class="list-style-none">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti-settings"></i></button>
+                                            <div class="dropdown-menu animated flipInX">
+                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#add_folder">Add Folder</a>
+                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#manage_folder">Manage Folders</a>
+                                            </div>
+                                        </div>
+                                        <li class="box-label"><a href="records.html" class="active-page">All Records<span>123</span></a></li>
+                                        <li class="box-label"><a href="records_pending.html">Unassigned Pending<span>13</span></a></li>
+                                        <li class="box-label"><a href="records_requestsent.html">Requests Sent<span>23</span></a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="DrKentPrimaryCare.html">Dr. Kent - Primary Care <span>103</span></a></li>
+                                        <li><a href="radiology.html">Radiology <span>19</span></a></li>
+                                        <li><a href="dentist.html">Dentist <span>623</span></a></li>
+                                        <li><a href="ervisit.html">ER - Visit <span>53</span></a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.left-aside-column-->
+                                <div class="right-aside ">
+                                    <div class="right-page-header">
+                                        <div class="d-flex">
+                                            <div class="align-self-center">
+                                                <h4 class="card-title m-t-10">All Records </h4>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <input type="text" id="demo-input-search2" placeholder="search contacts" class="form-control"> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-info btn-rounded m-t-10 float-right ml-2" data-toggle="modal" data-target="#add-contact">Upload Record</button>
+                                    <button type="button" class="btn btn-info btn-rounded m-t-10 float-right ml-2" data-toggle="modal" data-target="#request_record">Request Records</button>
+                                    <button type="button" class="btn btn-info btn-rounded m-t-10 float-right" data-toggle="modal" data-target="#send_records">Send Records</button>
+
+                                    <div class="table-responsive">
+                                        <table id="clmtable1"
+                                            class="table no-wrap table-bordered m-t-30 table-hover contact-list"
+                                            data-paging="true" data-paging-size="7">
+                                            <thead>
+                                                <tr>
+                                                    <th>Action</th>
+                                                    <th>Name of file</th>
+                                                    <th>Date</th>
+                                                    <th>From</th>
+                                                    <th>Folder</th>
+                                                    <th>Tags</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-info">View</button>
+                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#update_record">Update</a>
+                                                                <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>X.pdf</td>
+                                                    <td>05-29-21</td>
+                                                    <td>
+                                                        4072862965
+                                                        <br>
+                                                        04/10/2021, 01:12 PM
+                                                    </td>
+                                                    <td><span class="label label-danger">Dr. Kent - Primary Care</span> </td>
+                                                    <td><span class="label label-offwhite text-dark">Broken Arm</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-info">View</button>
+                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#update_record">Update</a>
+                                                                <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>Y.pdf</td>
+                                                    <td>05-29-21</td>
+                                                    <td>
+                                                        info@powerspediatrics.com
+                                                        <br>
+                                                        08/29/2021, 05:12 PM
+                                                    </td>
+                                                    <td><span class="label label-info">Radiology</span> </td>
+                                                    <td><span class="label label-offwhite text-dark">ER 2012</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-info">View</button>
+                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#update_record">Update</a>
+                                                                <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>Z.pdf</td>
+                                                    <td>05-29-21</td>
+                                                    <td>
+                                                        Shakir Ansari via Portal <br>
+                                                        12/25/2021, 01:01 AM
+                                                    </td>
+                                                    <td><span class="label label-success">Dentist</span></td>
+                                                    <td><span class="label label-offwhite text-dark">2010</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-info">View</button>
+                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#update_record">Update</a>
+                                                                <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>X.pdf</td>
+                                                    <td>05-29-21</td>
+                                                    <td>
+                                                        info@powerspediatrics.com
+                                                        <br>
+                                                        08/29/2021, 05:12 PM
+                                                    </td>
+                                                    <td><span class="label label-inverse">ER - Visit</span></td>
+                                                    <td><span class="label label-offwhite text-dark">Stomach Cancer</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-info">View</button>
+                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#update_record">Update</a>
+                                                                <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>W.pdf</td>
+                                                    <td>05-29-21</td>
+                                                    <td>
+                                                        4072862965
+                                                        <br>
+                                                        04/10/2021, 01:12 PM
+                                                    </td>
+                                                    <td><span class="label label-danger">Dr. Kent - Primary Care</span> </td>
+                                                    <td><span class="label label-offwhite text-dark">Broken Arm</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-info">View</button>
+                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#update_record">Update</a>
+                                                                <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>X.pdf</td>
+                                                    <td>05-29-21</td>
+                                                    <td>
+                                                        Kate via Portal <br>
+                                                        12/25/2021, 01:01 AM
+                                                    </td>
+                                                    <td><span class="label label-inverse">ER - Visit</span></td>
+                                                    <td><span class="label label-offwhite text-dark">Broken Arm</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-info">View</button>
+                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#update_record">Update</a>
+                                                                <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>X.pdf</td>
+                                                    <td>05-29-21</td>
+                                                    <td>
+                                                        4072862965
+                                                        <br>
+                                                        04/10/2021, 01:12 PM
+                                                    </td>
+                                                    <td><span class="label label-danger">Dr. Kent - Primary Care</span> </td>
+                                                    <td><span class="label label-offwhite text-dark">2021</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-info">View</button>
+                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#update_record">Update</a>
+                                                                <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>X.pdf</td>
+                                                    <td>05-29-21</td>
+                                                    <td>
+                                                        info@powerspediatrics.com
+                                                        <br>
+                                                        08/29/2021, 05:12 PM
+                                                    </td>
+                                                    <td><span class="label label-danger">Dr. Kent - Primary Care</span></td>
+                                                    <td><span class="label label-offwhite text-dark">ER 2012<</span>/td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-info">View</button>
+                                                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="sr-only">Toggle Dropdown</span>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#update_record">Update</a>
+                                                                <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>X.pdf</td>
+                                                    <td>05-29-21</td>
+                                                    <td>
+                                                        Ravi Agrawal via Portal <br>
+                                                        12/25/2021, 01:01 AM
+                                                    </td>
+                                                    <td><span class="label label-danger">Dr. Kent - Primary Care</span></td>
+                                                    <td><span class="label label-offwhite text-dark">ER 2012</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- .left-aside-column-->
+                                </div>
+                                <!-- /.left-right-aside-column-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade none-border bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="reviews">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Leave Your Review</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="white-text">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <label>Leave review for</label>
+                            <select class="form-control">
+                                <option selected="" disabled="">Choose Practice</option>
+                                <option>Powers Pediatrics</option>
+                                <option>Woimedicine</option>
+                            </select>
+
+
+
+                            <div class="md-form md-outline mt-2">
+                                <textarea id="message" class="md-textarea form-control" placeholder="Submit Your Review" rows="3"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Submit</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------->
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer">
+            © 2020 Eliteadmin by themedesigner.in
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    
+        <!-- Add Record Popup Model -->
+            <div id="add-contact" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Upload Record</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Name of File"> 
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="date" class="form-control"> 
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <textarea class="col-md-12" name="" placeholder="Description"></textarea>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <select required="" class="form-control required" id="practice2_state" name="practice2_state" placeholder="<span class="ai-folder-open"></span>">
+                                            <option value="">Select Folder</option>
+                                            <option value="Folder 01">Dr. Kent - Primary Care</option>
+                                            <option value="Folder 02">Radiology</option>
+                                            <option value="Folder 02">Dentist</option>
+                                            <option value="Folder 02">ER - Visit</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <label for="">Tags</label> <br>
+                                        <select class="select2 m-b-10 select2-multiple" style="width: 90%" multiple="multiple" data-placeholder="Choose">
+                                            <option value="t01">Broken Arm</option>
+                                            <option value="t02">ER 2012</option>
+                                            <option value="t02">2010</option>
+                                            <option value="t02">Stomach Cancer</option>
+                                        </select>
+                                        <button class="btn btn-sm btn-success ml-2" data-toggle="modal" data-target="#add-tag"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <form action="#" class="dropzone">
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </from>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info waves-effect"
+                                data-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-default waves-effect"
+                            data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        <!-- Add Record Popup Model -->
+    
+        <!-- Add Record Popup Model -->
+            <div id="update_record" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Update Record</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Name of File"> 
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="date" class="form-control"> 
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <textarea class="col-md-12" name="" placeholder="Description"></textarea>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <select required="" class="form-control required" id="practice2_state" name="practice2_state" placeholder="<span class="ai-folder-open"></span>">
+                                            <option value="">Select Folder</option>
+                                            <option value="Folder 01">Dr. Kent - Primary Care</option>
+                                            <option value="Folder 02">Radiology</option>
+                                            <option value="Folder 02">Dentist</option>
+                                            <option value="Folder 02">ER - Visit</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <label for="">Tags</label> <br>
+                                        <select class="select2 m-b-10 select2-multiple" style="width: 90%" multiple="multiple" data-placeholder="Choose">
+                                            <option value="t01">Broken Arm</option>
+                                            <option value="t02">ER 2012</option>
+                                            <option value="t02">2010</option>
+                                            <option value="t02">Stomach Cancer</option>
+                                        </select>
+                                        <button class="btn btn-sm btn-success ml-2" data-toggle="modal" data-target="#add-tag"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <form action="#" class="dropzone">
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </from>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info waves-effect"
+                                data-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-default waves-effect"
+                            data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        <!-- Add Record Popup Model -->
+    
+        <!-- Request Record Modal -->
+            <div id="request_record" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Request Records</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+
+                            <section id="arfstep0" class="section mt-3 active">
+                                <legend class="text-center font-weight-bold">Lets Start</legend>
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="radio" type="radio" name="letsstart" id="letsstart0" value="1">
+                                                <label class="checklabel required-label arfstepzeronext" for="letsstart0">New Practice</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="radio" type="radio" name="letsstart" id="letsstart1" value="1">
+                                                <label class="checklabel required-label arfstepzeronext" for="letsstart1">Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via 407-617-2692</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="radio" type="radio" name="letsstart" id="letsstart2" value="1">
+                                                <label class="checklabel required-label arfstepzeronext" for="letsstart2">Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via info@powerspediatrics.com</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="radio" type="radio" name="letsstart" id="letsstart2" value="1">
+                                                <label class="checklabel required-label arfstepzeronext" for="letsstart2"><i class="fas fa-check-circle text-success"></i> Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via Veins Portal</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </from>
+                            </section>
+
+                            <section id="arfstep1" class="section mt-3" style="display: none;">
+                                <legend class="text-center font-weight-bold">Your Information</legend>
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Your Name"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide your name!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Phone Number">
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide your phone number!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Email"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide your email!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <select name="relation" placeholder="Relationship" class="form-control" required="required" id="relation">
+                                                <option value="" selected="">Choose Relationship</option>
+                                                <option value="Self">Self</option>
+                                                <option value="Spouse">Spouse</option>
+                                                <option value="Step Child">Step Child</option>
+                                                <option value="Foster Child">Foster Child</option>
+                                                <option value="Ward of the court">Ward of the court</option>
+                                                <option value="Employee">Employee</option>
+                                                <option value="Handicaped dependent">Handicaped dependent</option>
+                                                <option value="Organ Donar">Organ Donar</option>
+                                                <option value="Cadever Donar">Cadever Donar</option>
+                                                <option value="Grandchild">Grandchild</option>
+                                                <option value="Niece/Nephew">Niece/Nephew</option>
+                                                <option value="Injured Plaintiff">Injured Plaintiff</option>
+                                                <option value="Sponsored Dependent">Sponsored Dependent</option>
+                                                <option value="Parent">Parent</option>
+                                                <option value="Grandparent">Grandparent</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide your relationship to patient!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </from>
+                                <a href="#" id="arfsteponeback" class="btn btn-lg btn-info col-xl-5 float-left">Back</a>
+                                <a href="#" id="arfsteponenext" class="btn btn-lg btn-info col-xl-5 float-right">Next</a>
+                            </section>
+
+                            <section id="arfstep2" class="section mt-3" style="display: none;">
+                                <legend class="text-center font-weight-bold">Patient Information</legend>
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="First Name"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide First Name!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Last Name"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide Last Name!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <label for="">Date of Birth</label>
+                                            <input type="date" class="form-control"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide your date of birth!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="SSN"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide SSN!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </from>
+                                <a href="#" id="arfsteptwoback" class="btn btn-lg btn-info col-xl-5 float-left">Back</a>
+                                <a href="#" id="arfsteptwonext" class="btn btn-lg btn-info col-xl-5 float-right">Next</a>
+                            </section>
+
+                            <section id="arfstep3" class="section mt-3" style="display: none;">
+                                <legend class="text-center font-weight-bold">Send Request Via</legend>
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="fax_number" id="fax_number1" value="1">
+                                                <label class="checklabel required-label" for="fax_number1" onclick="faxType()">Fax</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="email" id="email1" value="1">
+                                                <label class="checklabel required-label" for="email1" onclick="emailType()">Email</label>
+                                            </div>
+                                        </div>
+                              
+                                        <div class="col-lg-12 slide" id="faxType" style="display: none;">
+                                          <div class="form-group">
+                                            <div class="col-md-12 m-b-20">
+                                                <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Fax Number">
+                                                <div class="valid-feedback">
+                                                  Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                  Please Provide Fax number!
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div> 
+
+                                        <div class="col-lg-12 slide" id="emailType" style="display: none;">
+                                            <div class="form-group">
+                                              <div class="col-md-12 m-b-20">
+                                                  <input type="text" class="form-control" placeholder="Email Number"> 
+                                                  <div class="valid-feedback">
+                                                    Looks good!
+                                                  </div>
+                                                  <div class="invalid-feedback">
+                                                    Please Provide Email!
+                                                  </div>
+                                              </div>
+                                            </div>
+                                        </div> 
+
+                                    </div>
+                                </from>
+                                <a href="#" id="arfstepthreeback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepthreenext" class="btn btn-lg btn-info col-xl-5  float-right">Next</a>
+                            </section>
+
+                            <section id="arfstep4" class="section mt-3" style="display: none;">
+                                <legend class="text-center font-weight-bold">Sending Practice Information</legend>
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Name of Practice"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide name of practice!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Phone Number"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide Phone Number!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Street"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide Street!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="City"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide City!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <select required="" class="form-control required" id="practice2_state" name="practice2_state" placeholder="State">
+                                                <option value="">Select State</option>
+                                                <option value="Alabama">Alabama</option>
+                                                <option value="Alaska">Alaska</option>
+                                                <option value="Arizona">Arizona</option>
+                                                <option value="Arkanasas">Arkanasas</option>
+                                                <option value="California">California</option>
+                                                <option value="Colorado">Colorado</option>
+                                                <option value="Connecticut">Connecticut</option>
+                                                <option value="Delaware">Delaware</option>
+                                                <option value="Florida">Florida</option>
+                                                <option value="Georgia">Georgia</option>
+                                                <option value="Hawaii">Hawaii</option>
+                                                <option value="Idaho">Idaho</option>
+                                                <option value="Illinois">Illinois</option>
+                                                <option value="Indiana">Indiana</option>
+                                                <option value="Iowa">Iowa</option>
+                                                <option value="Kankas">Kankas</option>
+                                                <option value="Kentucky">Kentucky</option>
+                                                <option value="Louisiana">Louisiana</option>
+                                                <option value="Maine">Maine</option>
+                                                <option value="Maryland">Maryland</option>
+                                                <option value="Massachusetts">Massachusetts</option>
+                                                <option value="Michigan">Michigan</option>
+                                                <option value="Minnesota">Minnesota</option>
+                                                <option value="Mississippi">Mississippi</option>
+                                                <option value="Missouri">Missouri</option>
+                                                <option value="Montana">Montana</option>
+                                                <option value="Nebraska">Nebraska</option>
+                                                <option value="Nevada">Nevada</option>
+                                                <option value="New Hampshire">New Hampshire</option>
+                                                <option value="New Jersey">New Jersey</option>
+                                                <option value="New Mexico">New Mexico</option>
+                                                <option value="New York">New York</option>
+                                                <option value="North Carolina">North Carolina</option>
+                                                <option value="North Dakota">North Dakota</option>
+                                                <option value="Ohio">Ohio</option>
+                                                <option value="Oklahoma">Oklahoma</option>
+                                                <option value="Oregon">Oregon</option>
+                                                <option value="Pennsylvania">Pennsylvania</option>
+                                                <option value="Rhode Island">Rhode Island</option>
+                                                <option value="South Carolina">South Carolina</option>
+                                                <option value="South Dakota">South Dakota</option>
+                                                <option value="Tennessee">Tennessee</option>
+                                                <option value="Texas">Texas</option>
+                                                <option value="Utah">Utah</option>
+                                                <option value="Vermont">Vermont</option>
+                                                <option value="Virginia">Virginia</option>
+                                                <option value="Washington">Washington</option>
+                                                <option value="Washington,D.C.(DC)">Washington,D.C.(DC)</option>
+                                                <option value="West Virginia">West Virginia</option>
+                                                <option value="Wisconsin">Wisconsin</option>
+                                                <option value="Wyoming">Wyoming</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Zip Code"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide Zip Code!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </from>
+                                <a href="#" id="arfstepfourback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepfournext" class="btn btn-lg btn-info col-xl-5  float-right">Next</a>
+                            </section>
+
+                            <section id="arfstep5" class="section mt-3" style="display: none;">
+                                <legend class="text-center font-weight-bold">Authorization of Usage and Disclosure</legend>
+                                <p class="text-center">By Selecting, I Specifically Authorize the Use and/or Disclosure of the Following Health Information And/or Medical Records,
+                                    If Such Information And/or Records Exist:</p>
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization0" value="1">
+                                                <label class="checklabel required-label" for="Authorization0">All Records</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization1" value="1">
+                                                <label class="checklabel required-label" for="Authorization1">Office Notes and Reports</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization2" value="1">
+                                                <label class="checklabel required-label" for="Authorization2">Diagnostic Reports</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization3" value="1">
+                                                <label class="checklabel required-label" for="Authorization3">Billing Statements</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization4" value="1">
+                                                <label class="checklabel required-label" for="Authorization4">Rx History</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization5" value="1">
+                                                <label class="checklabel required-label" for="Authorization5">Transcribed Hospital Reports</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization6" value="1">
+                                                <label class="checklabel required-label" for="Authorization6">Laboratory Reports</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="Authorization" id="Authorization7" value="1">
+                                                <label class="checklabel required-label" for="Authorization7">Others Listed Here:</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </from>
+                                <a href="#" id="arfstepfiveback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepfivenext" class="btn btn-lg btn-info col-xl-5  float-right">Next</a>
+                            </section>
+
+                            <section id="arfstep6" class="section mt-3" style="display: none;">
+                                <legend class="text-center font-weight-bold">Restrict Disclosure</legend>
+                                <p class="text-center">Do you want to restrict disclosure for any records related to the following? <br> <span class="font-weight-bold text-danger font-16">If no please continue to next step</span></p>
+                                <p class="text-center">(Federal regulations require a description of how much and what kind of information is to be disclosed.)</p>
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="restrictdisclosure" id="restrictdisclosure1" value="1">
+                                                <label class="checklabel required-label" for="restrictdisclosure1">HIV/AIDS relate information and/or records HBV, TB or Other Communicable Diseases</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="restrictdisclosure" id="restrictdisclosure2" value="1">
+                                                <label class="checklabel required-label" for="restrictdisclosure2">Mental Health Information</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="restrictdisclosure" id="restrictdisclosure3" value="1">
+                                                <label class="checklabel required-label" for="restrictdisclosure3">Domestic Violence</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="restrictdisclosure" id="restrictdisclosure4" value="1">
+                                                <label class="checklabel required-label" for="restrictdisclosure4">Genetic Testing Information</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <div class="form-checkbox ">
+                                                <input required="" class="checkbox" type="checkbox" name="restrictdisclosure" id="restrictdisclosure5" value="1">
+                                                <label class="checklabel required-label" for="restrictdisclosure5">Drug/Alcohol diagnosis, treatment or referral information</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <textarea name="describe" class="optional form-control" id="describe" required="" rows="3" placeholder="Other"></textarea>
+                                        </div>
+                                    </div>
+                                </from>
+                                <a href="#" id="arfstepsixback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepsixnext" class="btn btn-lg btn-info col-xl-5  float-right">Next</a>
+                            </section>
+
+                            <section id="arfstep7" class="section mt-3" style="display: none;">
+                                <div class="container text-justify-center">
+                                  <p><strong>I understand that</strong>, if the person or entity receiving the information is not a health care provider or health plan covered by federal privacy regulations, the information described above may be re-disclosed and no longer protected by HIPAA and other federal and state regulations. However, the recipient may be prohibited from disclosing substance abuse information under the Federal Substance Abuse Confidentiality Requirements</p>
+                                  <p><strong>I also understand that</strong>, the person I am authorizing to use and/or disclose the information may not receive compensation for doing so.</p>
+                                  <p><strong>I, further understand</strong> that I may refuse to sign this authorization and that my refusal to sign will not affect my ability to obtain treatment or payment of my eligibility for benefits. I may inspect or copy any information to be used and/or disclosed under this authorization</p>
+                                  <p><strong>Finally, I understand, </strong> that <u>I may revoke this authorization</u>, in writing, at any time, provided that I do so in writing, except to the extent that action has been taken in reliance upon this authorization</p>
+                                </div>
+
+                                <a href="#" id="arfstepsevenback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                                <a href="#" id="arfstepsevennext" class="btn btn-lg btn-info col-xl-5  float-right">I Agree</a>
+                            </section>
+
+                            <section id="arfstep8" class="section mt-3" style="display: none;">
+                                <div class="container form-container slide">
+                                  <div class="col-12">
+                                    <h4 class="font-weight-bold my-3 text-center"> Your Information </h4>
+                                  </div>
+                                  <table class="table table-striped">
+                                    <tbody>
+                                          <tr>
+                                            <th class="float-left">Your Name</th>
+                                            <td class="float-right">Shakir</td>
+                                          </tr>
+                                          <tr>
+                                            <th class="float-left">Upload ID</th>
+                                            <td class="float-right">ID</td>
+                                          </tr>
+                                          <tr>
+                                            <th class="float-left">Phone Number</th>
+                                            <td class="float-right">9153595831</td>
+                                          </tr>
+                                          <tr>
+                                            <th class="float-left">Email Address</th>
+                                            <td class="float-right">heather@gmail.com</td>
+                                          </tr>
+                                    </tbody>
+                                  </table>
+                        
+                                  <div class="col-12" id="strips">
+                                    <h4 class="font-weight-bold my-3 text-center"> Patient Information </h4>
+                                  </div>
+                                  <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                          <th class="float-left">Patient Name</th>
+                                          <td class="float-right">Heather</td>
+                                        </tr>
+                                        <tr>
+                                          <th class="float-left">Patient Date of Birth</th>
+                                          <td class="float-right">20/02/1990</td>
+                                        </tr>
+                                        <tr>
+                                          <th class="float-left">SSN</th>
+                                          <td class="float-right">22222222222</td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                        
+                                  <div class="col-12" id="strips">
+                                    <h5 class="font-weight-bold my-3 text-center">Sending Practice Information</h5>
+                                  </div>
+                                  <table class="table table-striped">
+                                    <tbody>
+                                      <tr>
+                                        <th class="float-left">Name Of Practice</th>
+                                        <td class="float-right">SIPMD</td>
+                                      </tr>
+                                      <tr>
+                                        <th class="float-left">Phone Number</th>
+                                        <td class="float-right">9153595860</td>
+                                      </tr>
+                                      <tr>
+                                        <th class="float-left">Street</th>
+                                        <td class="float-right">2717 US-89</td>
+                                      </tr>
+                                      <tr>
+                                        <th class="float-left">City</th>
+                                        <td class="float-right">Ogden</td>
+                                      </tr>
+                                      <tr>
+                                        <th class="float-left">State</th>
+                                        <td class="float-right">UT</td>
+                                      </tr>
+                                      <tr>
+                                        <th class="float-left">Zip</th>
+                                        <td class="float-right">84414</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  
+                                  <div class="col-12" id="strips">
+                                    <h5 class="font-weight-bold my-3 text-center">Sending Via</h5>
+                                  </div>
+                                  <table class="table table-striped">
+                                    <tbody>
+                                      <tr>
+                                        <th class="float-left">Fax</th>
+                                        <td class="float-right">9153595835</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  
+                                  <div class="col-12" id="strips">
+                                    <h5 class="font-weight-bold my-3 text-center">What’s the purpose of this request?</h5>
+                                  </div>
+                                    <table class="table table-striped">
+                                      <tbody>
+                                        <tr>
+                                          <th class="text-center">Personal Records</th>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                        
+                                    <div class="col-12" id="strips">
+                                      <h5 class="font-weight-bold my-3 text-center">Authorization of Usage and Disclosure</h5>
+                                    </div>
+                                    <table class="table table-striped">
+                                      <tbody>
+                                        <tr>
+                                          <th class="text-center">All Records</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Office Notes and Reports</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Diagnostic Reports</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Billing Statements</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Rx History</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Transcribed Hospital Reports</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Laboratory Reports</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Others Listed Here:</th>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                        
+                                    <div class="col-12" id="strips">
+                                      <h5 class="font-weight-bold my-3 text-center">Restrict Disclosure</h5>
+                                    </div>
+                                    <table class="table table-striped">
+                                      <tbody>
+                                        <tr>
+                                          <th class="text-center">HIV/AIDS relate information and/or records HBV, TB or Other Communicable Diseases</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Mental Health Information</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Domestic Violence</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Genetic Testing Information</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-center">Drug/Alcohol diagnosis, treatment or referral information</th>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                        
+                                    <div class="col-12" id="strips">
+                                        <p class="font-weight-bold">I give authorization to the provider listed below to disclose a copy of the specific health/medical information identified below: Unless Revoked Earlier, this Authorization will expire on</p>
+                                        
+                                        <from class="form-horizontal form-material">
+                                            <div class="col-md-12 m-b-20">
+                                                <label for="yourname" class="font-weight-bold">Insert Date:</label>
+                                                <input type="date" class="form-control"> 
+                                                <div class="valid-feedback">
+                                                Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                Please Provide your Insert Expiry Date!
+                                                </div>
+                                            </div>
+                                        </from>
+                                    </div>
+
+                                    <from class="form-horizontal form-material">
+                                        <div class="form-group">
+                                            <div class="col-md-12 m-b-20">
+                                                <input type="text" class="form-control" placeholder="Your Name"> 
+                                                <div class="valid-feedback">
+                                                Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                Please Provide your name!
+                                                </div>
+                                            </div>
+        
+                                            <h3 for="" class="font-weight-bold text-center">Signature</h3>
+                                            <div class="col-12">
+                                                <div class="sigPad" style="width:404px;" id="smoothed1">
+                                                    <ul class="sigNav">
+                                                        <li class="drawIt"><a href="#draw-it">Do your Signature</a></li>
+                                                        <li class="clearButton"><a href="#clear">Clear</a></li>
+                                                    </ul>
+                                                    <div class="sig sigWrapper" style="height:auto;">
+                                                        <div class="typed"></div>
+                                                        <canvas class="pad" width="400" height="250"></canvas>
+                                                        <input type="hidden" name="sign5" class="output" id="sign5">
+                                                    </div>
+                                                    <span class="error-span" id="error_sign5"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </from>
+                                </div>
+                                <a href="#" id="arfstepeightback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                                <a href="#" id="" class="btn btn-lg btn-info col-xl-5  float-right">Submit</a>
+                            </section>
+
+                            <!-- <section id="arfstep9" class="section mt-3" style="display: none;">
+                                <a href="#" id="arfstepnineback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                                <a href="#" id="" class="btn btn-lg btn-info col-xl-5  float-right">Submit</a>
+                            </section> -->
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        <!-- Request Record Modal -->
+
+        <!-- Add Folder -->
+        <div id="add_folder" class="modal fade in" tabindex="-2" role="dialog"aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Add Folder</h4>
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <from class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-md-12">Folder Name</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" placeholder="Folder name"> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Choose Folder Color</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="colorpicker form-control" value="#7ab2fa" /> 
+                                </div>
+                            </div>
+                        </from>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info waves-effect"
+                            data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-default waves-effect"
+                            data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+        <!-- Add Folder -->
+    
+        <!-- Manage Folders -->
+            <div id="manage_folder" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Manage Folders</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive">
+                                <table id="config-table " class="table display table-bordered table-striped no-wrap text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Action</th>
+                                            <th>Folder Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#update_folder">Update</button>
+                                                    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Dr. Kent - Primary Care</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#update_folder">Update</button>
+                                                    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Radiology</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#update_folder">Update</button>
+                                                    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Dentist</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#update_folder">Update</button>
+                                                    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item delete" href="javascript:void(0)">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>ER - Visitt</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info waves-effect"
+                                data-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-default waves-effect"
+                            data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        <!-- Manage Folders -->
+
+        <!-- Update Folder -->
+        <div id="update_folder" class="modal fade in" tabindex="-2" role="dialog"aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Update Folder</h4>
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <from class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-md-12">Folder Name</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" placeholder="Folder name"> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Choose Folder Color</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="colorpicker form-control" value="#7ab2fa" /> 
+                                </div>
+                            </div>
+                        </from>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info waves-effect"
+                            data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-default waves-effect"
+                            data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+        <!-- Update Folder -->
+
+        <!-- Send Records -->
+        <div id="send_records" class="modal fade in" tabindex="-2" role="dialog"aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Send Records</h4>
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <section id="sr0" class="section mt-3 active text-center">
+                            <legend class="text-center font-weight-bold">Lets Start</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="radio" type="radio" name="letsstart" id="letsstart0" value="1">
+                                            <label class="checklabel required-label srzeronext" for="letsstart0">New Practice</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="radio" type="radio" name="letsstart" id="letsstart1" value="1">
+                                            <label class="checklabel required-label srzeronext" for="letsstart1">Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via 407-617-2692</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="radio" type="radio" name="letsstart" id="letsstart2" value="1">
+                                            <label class="checklabel required-label srzeronext" for="letsstart2">Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via info@powerspediatrics.com</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="radio" type="radio" name="letsstart" id="letsstart2" value="1">
+                                            <label class="checklabel required-label srzeronext" for="letsstart2"><i class="fas fa-check-circle text-success"></i> Powers Pediatrics <br> 7037 Rose Ave, Orlando, FL, 32810 Via Veins Portal</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </from>
+                        </section>
+
+                        <section id="sr1" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Send Request Via</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group text-center">
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="fax_number" id="fax_number1" value="1">
+                                            <label class="checklabel required-label" for="fax_number1" onclick="fax()">Fax</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="email" id="email1" value="1">
+                                            <label class="checklabel required-label" for="email1" onclick="email()">Email</label>
+                                        </div>
+                                    </div>
+                          
+                                    <div class="col-lg-12 slide" id="fax" style="display: none;">
+                                      <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Fax Number">
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide Fax number!
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div> 
+
+                                    <div class="col-lg-12 slide" id="email" style="display: none;">
+                                        <div class="form-group">
+                                          <div class="col-md-12 m-b-20">
+                                              <input type="text" class="form-control" placeholder="Email Number"> 
+                                              <div class="valid-feedback">
+                                                Looks good!
+                                              </div>
+                                              <div class="invalid-feedback">
+                                                Please Provide Email!
+                                              </div>
+                                          </div>
+                                        </div>
+                                    </div> 
+
+                                </div>
+                            </from>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-left sroneback">Back</a>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-right sronenext">Next</a>
+                        </section>
+
+                        <section id="email" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Enter Email</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                <div class="col-md-12 m-b-20">
+                                    <input type="text" class="form-control" placeholder="Email"> 
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please Provide Email!
+                                    </div>
+                                </div>
+                                </div>
+                            </from>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-left sroneback">Back</a>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-right sronenext">Next</a>
+                        </section>
+
+                        <section id="sr2" class="section mt-3 NO" style="display: none;">
+                            <legend class="text-center font-weight-bold">Sending Practice Information</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Name of Practice"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide name of practice!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Phone Number"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Phone Number!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Street"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Street!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="City"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide City!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <select required="" class="form-control required" id="practice2_state" name="practice2_state" placeholder="State">
+                                            <option value="">Select State</option>
+                                            <option value="Alabama">Alabama</option>
+                                            <option value="Alaska">Alaska</option>
+                                            <option value="Arizona">Arizona</option>
+                                            <option value="Arkanasas">Arkanasas</option>
+                                            <option value="California">California</option>
+                                            <option value="Colorado">Colorado</option>
+                                            <option value="Connecticut">Connecticut</option>
+                                            <option value="Delaware">Delaware</option>
+                                            <option value="Florida">Florida</option>
+                                            <option value="Georgia">Georgia</option>
+                                            <option value="Hawaii">Hawaii</option>
+                                            <option value="Idaho">Idaho</option>
+                                            <option value="Illinois">Illinois</option>
+                                            <option value="Indiana">Indiana</option>
+                                            <option value="Iowa">Iowa</option>
+                                            <option value="Kankas">Kankas</option>
+                                            <option value="Kentucky">Kentucky</option>
+                                            <option value="Louisiana">Louisiana</option>
+                                            <option value="Maine">Maine</option>
+                                            <option value="Maryland">Maryland</option>
+                                            <option value="Massachusetts">Massachusetts</option>
+                                            <option value="Michigan">Michigan</option>
+                                            <option value="Minnesota">Minnesota</option>
+                                            <option value="Mississippi">Mississippi</option>
+                                            <option value="Missouri">Missouri</option>
+                                            <option value="Montana">Montana</option>
+                                            <option value="Nebraska">Nebraska</option>
+                                            <option value="Nevada">Nevada</option>
+                                            <option value="New Hampshire">New Hampshire</option>
+                                            <option value="New Jersey">New Jersey</option>
+                                            <option value="New Mexico">New Mexico</option>
+                                            <option value="New York">New York</option>
+                                            <option value="North Carolina">North Carolina</option>
+                                            <option value="North Dakota">North Dakota</option>
+                                            <option value="Ohio">Ohio</option>
+                                            <option value="Oklahoma">Oklahoma</option>
+                                            <option value="Oregon">Oregon</option>
+                                            <option value="Pennsylvania">Pennsylvania</option>
+                                            <option value="Rhode Island">Rhode Island</option>
+                                            <option value="South Carolina">South Carolina</option>
+                                            <option value="South Dakota">South Dakota</option>
+                                            <option value="Tennessee">Tennessee</option>
+                                            <option value="Texas">Texas</option>
+                                            <option value="Utah">Utah</option>
+                                            <option value="Vermont">Vermont</option>
+                                            <option value="Virginia">Virginia</option>
+                                            <option value="Washington">Washington</option>
+                                            <option value="Washington,D.C.(DC)">Washington,D.C.(DC)</option>
+                                            <option value="West Virginia">West Virginia</option>
+                                            <option value="Wisconsin">Wisconsin</option>
+                                            <option value="Wyoming">Wyoming</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Zip Code"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Zip Code!
+                                        </div>
+                                    </div>
+                                </div>
+                            </from>
+                            <a href="#" id="srtwoback" class="btn btn-lg btn-info col-xl-5 float-left">Back</a>
+                            <a href="#" id="srtwonext" class="btn btn-lg btn-info col-xl-5 float-right">Next</a>
+                        </section>
+
+                        <section id="sr3" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Choose Records</legend>
+                            <div class="table-responsive">
+                                <table id="clmtable1"
+                                    class="table no-wrap table-bordered m-t-30 table-hover contact-list"
+                                    data-paging="true" data-paging-size="7">
+                                    <thead>
+                                        <tr>
+                                            <th>Action</th>
+                                            <th>Name of file</th>
+                                            <th>Date</th>
+                                            <th>From</th>
+                                            <th>Folder</th>
+                                            <th>Tags</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="container-custom">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </td>
+                                            <td>X.pdf</td>
+                                            <td>05-29-21</td>
+                                            <td>
+                                                4072862965
+                                                <br>
+                                                04/10/2021, 01:12 PM
+                                            </td>
+                                            <td><span class="label label-danger">Dr. Kent - Primary Care</span> </td>
+                                            <td><span class="label label-offwhite text-dark">Broken Arm</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="container-custom">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </td>
+                                            <td>Y.pdf</td>
+                                            <td>05-29-21</td>
+                                            <td>
+                                                info@powerspediatrics.com
+                                                <br>
+                                                08/29/2021, 05:12 PM
+                                            </td>
+                                            <td><span class="label label-info">Radiology</span> </td>
+                                            <td><span class="label label-offwhite text-dark">ER 2012</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="container-custom">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </td>
+                                            <td>Z.pdf</td>
+                                            <td>05-29-21</td>
+                                            <td>
+                                                Shakir Ansari via Portal <br>
+                                                12/25/2021, 01:01 AM
+                                            </td>
+                                            <td><span class="label label-success">Dentist</span></td>
+                                            <td><span class="label label-offwhite text-dark">2010</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="container-custom">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </td>
+                                            <td>X.pdf</td>
+                                            <td>05-29-21</td>
+                                            <td>
+                                                info@powerspediatrics.com
+                                                <br>
+                                                08/29/2021, 05:12 PM
+                                            </td>
+                                            <td><span class="label label-inverse">ER - Visit</span></td>
+                                            <td><span class="label label-offwhite text-dark">Stomach Cancer</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="container-custom">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </td>
+                                            <td>W.pdf</td>
+                                            <td>05-29-21</td>
+                                            <td>
+                                                4072862965
+                                                <br>
+                                                04/10/2021, 01:12 PM
+                                            </td>
+                                            <td><span class="label label-danger">Dr. Kent - Primary Care</span> </td>
+                                            <td><span class="label label-offwhite text-dark">Broken Arm</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a href="#" id="srthreeback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                            <a href="#" id="srthreenext" class="btn btn-lg btn-info col-xl-5  float-right">Next</a>
+                        </section>
+
+                        <section id="sr4" class="section mt-3" style="display: none;">
+                            <div class="container form-container slide">
+                              <div class="col-12">
+                                <h4 class="font-weight-bold my-3 text-center"> Send Records To </h4>
+                              </div>
+                              <table class="table table-striped">
+                                <tbody>
+                                      <tr>
+                                        <th class="float-left">Email</th>
+                                        <td class="float-right">Shakir@gmail.com</td>
+                                      </tr>
+                                </tbody>
+                              </table>
+                        
+                              <div class="col-12" id="strips">
+                                <h5 class="font-weight-bold my-3 text-center">Sending Practice Information</h5>
+                              </div>
+                              <table class="table table-striped">
+                                <tbody>
+                                  <tr>
+                                    <th class="float-left">Name Of Practice</th>
+                                    <td class="float-right">SIPMD</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="float-left">Phone Number</th>
+                                    <td class="float-right">9153595860</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="float-left">Street</th>
+                                    <td class="float-right">2717 US-89</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="float-left">City</th>
+                                    <td class="float-right">Ogden</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="float-left">State</th>
+                                    <td class="float-right">UT</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="float-left">Zip</th>
+                                    <td class="float-right">84414</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                    
+                              <div class="col-12" id="strips">
+                                <h4 class="font-weight-bold my-3 text-center"> Choosen Records </h4>
+                              </div>
+                              <table class="table table-striped">
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td>X.pdf</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Y.pdf</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Z.pdf</td>
+                                    </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <a href="#" id="srfourback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                            <a href="#" id="" class="btn btn-lg btn-info col-xl-5  float-right send_records">Send</a>
+                        </section>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+        <!-- Send Records -->
+    
+        <!-- Add Tagsl -->
+            <div id="add-tag" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="background: rgba(0, 0, 0, 0.5);">
+                <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">Add Tag</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Tag Name"> 
+                                        </div>
+                                    </div>
+                                </from>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info waves-effect"
+                                    data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-default waves-effect"
+                                data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+            </div>
+        <!-- Add Tagsl -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
+    <script src="dist/js/pages/toastr.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- Sweet-Alert  -->
+    <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+    <script src="assets/node_modules/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="dist/js/pages/mask.init.js"></script>
+
+    <!-- alert JavaScript -->
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!-- Editable -->
+    <script src="assets/node_modules/jquery-datatables-editable/jquery.dataTables.js"></script>
+    <script src="assets/node_modules/datatables/media/js/dataTables.bootstrap.js"></script>
+    <script src="assets/node_modules/tiny-editable/mindmup-editabletable.js"></script>
+    <script src="assets/node_modules/tiny-editable/numeric-input-example.js"></script>
+    <!-- This is data table -->
+    <script src="assets/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+    <!-- start - This is for export functionality only -->
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+    <!-- end - This is for export functionality only -->
+    <script>
+        $('#mainTable').numericInputExample().find('td:first').focus();
+        $('#editable-datatable').numericInputExample().find('td:first').focus();
+        $(document).ready(function() {
+            $('#editable-datatable').DataTable();
+        });
+        
+        $('#clmtable1').DataTable({
+                scrollCollapse: true,
+                bLengthChange: false,
+                searching: false,
+            });
+        
+        $('#clmtable2').DataTable({
+                scrollCollapse: true,
+                bLengthChange: false,
+                searching: false,
+            });
+    </script>
+    <script>
+        $(function() {
+            $('#myTable').DataTable();
+            var table = $('#example').DataTable({
+                "columnDefs": [{
+                    "visible": false,
+                    "targets": 2
+                }],
+                "order": [
+                    [2, 'asc']
+                ],
+                "displayLength": 25,
+                "drawCallback": function(settings) {
+                    var api = this.api();
+                    var rows = api.rows({
+                        page: 'current'
+                    }).nodes();
+                    var last = null;
+                    api.column(2, {
+                        page: 'current'
+                    }).data().each(function(group, i) {
+                        if (last !== group) {
+                            $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
+                            last = group;
+                        }
+                    });
+                }
+            });
+            // Order by the grouping
+            $('#example tbody').on('click', 'tr.group', function() {
+                var currentOrder = table.order()[0];
+                if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                    table.order([2, 'desc']).draw();
+                } else {
+                    table.order([2, 'asc']).draw();
+                }
+            });
+            // responsive table
+            $('#config-table').DataTable({
+                responsive: true
+            });
+            // responsive table
+            $('#config-table1').DataTable({
+                responsive: true
+            });
+            $('#example23').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+            $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+        });
+
+    </script>
+    <!-- Plugin JavaScript -->
+    <script src="assets/node_modules/moment/moment.js"></script>
+    <script src="assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script src="assets/node_modules/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="assets/node_modules/jquery-asColor/dist/jquery-asColor.js"></script>
+    <script src="assets/node_modules/jquery-asGradient/dist/jquery-asGradient.js"></script>
+    <script src="assets/node_modules/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="assets/node_modules/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="assets/node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script>
+    // MAterial Date picker    
+    $('#mdate').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+    $('#timepicker').bootstrapMaterialDatePicker({ format: 'HH:mm', time: true, date: false });
+    $('#date-format').bootstrapMaterialDatePicker({ format: 'dddd DD MMMM YYYY - HH:mm' });
+
+    $('#min-date').bootstrapMaterialDatePicker({ format: 'DD/MM/YYYY HH:mm', minDate: new Date() });
+    // Clock pickers
+    $('#single-input').clockpicker({
+        placement: 'bottom',
+        align: 'left',
+        autoclose: true,
+        'default': 'now'
+    });
+    $('.clockpicker').clockpicker({
+        donetext: 'Done',
+    }).find('input').change(function() {
+        console.log(this.value);
+    });
+    $('#check-minutes').click(function(e) {
+        // Have to stop propagation here
+        e.stopPropagation();
+        input.clockpicker('show').clockpicker('toggleView', 'minutes');
+    });
+    if (/mobile/i.test(navigator.userAgent)) {
+        $('input').prop('readOnly', true);
+    }
+    // Colorpicker
+    $(".colorpicker").asColorPicker();
+    $(".complex-colorpicker").asColorPicker({
+        mode: 'complex'
+    });
+    $(".gradient-colorpicker").asColorPicker({
+        mode: 'gradient'
+    });
+    // Date Picker
+    jQuery('.mydatepicker, #datepicker').datepicker();
+    jQuery('#datepicker-autoclose').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });
+    jQuery('#date-range').datepicker({
+        toggleActive: true
+    });
+    jQuery('#datepicker-inline').datepicker({
+        todayHighlight: true
+    });
+    // -------------------------------
+	// Start Date Range Picker
+	// -------------------------------
+
+    // Basic Date Range Picker
+    $('.daterange').daterangepicker();
+
+    // Date & Time
+    $('.datetime').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+            format: 'MM/DD/YYYY h:mm A'
+        }
+    });
+
+    //Calendars are not linked
+    $('.timeseconds').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        timePicker24Hour: true,
+        timePickerSeconds: true,
+        locale: {
+            format: 'MM-DD-YYYY h:mm:ss'
+        }
+    });
+
+    // Single Date Range Picker
+    $('.singledate').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true
+    });
+
+    // Auto Apply Date Range
+    $('.autoapply').daterangepicker({
+        autoApply: true,
+    });
+
+    // Calendars are not linked
+    $('.linkedCalendars').daterangepicker({
+        linkedCalendars: false,
+    });
+
+    // Date Limit
+    $('.dateLimit').daterangepicker({
+        dateLimit: {
+            days: 7
+        },
+    });
+
+    // Show Dropdowns
+    $('.showdropdowns').daterangepicker({
+        showDropdowns: true,
+    });
+
+    // Show Week Numbers
+    $('.showweeknumbers').daterangepicker({
+        showWeekNumbers: true,
+    });
+
+     $('.dateranges').daterangepicker({
+        ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    });
+
+    // Always Show Calendar on Ranges
+    $('.shawCalRanges').daterangepicker({
+        ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        alwaysShowCalendars: true,
+    });
+
+    // Top of the form-control open alignment
+    $('.drops').daterangepicker({
+        drops: "up" // up/down
+    });
+
+    // Custom button options
+    $('.buttonClass').daterangepicker({
+        drops: "up",
+        buttonClasses: "btn",
+        applyClass: "btn-info",
+        cancelClass: "btn-danger"
+    });
+
+	jQuery('#date-range').datepicker({
+        toggleActive: true
+    });
+    jQuery('#datepicker-inline').datepicker({
+        todayHighlight: true
+    });
+
+    // Daterange picker
+    $('.input-daterange-datepicker').daterangepicker({
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-daterange-timepicker').daterangepicker({
+        timePicker: true,
+        format: 'MM/DD/YYYY h:mm A',
+        timePickerIncrement: 30,
+        timePicker12Hour: true,
+        timePickerSeconds: false,
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-limit-datepicker').daterangepicker({
+        format: 'MM/DD/YYYY',
+        minDate: '06/01/2015',
+        maxDate: '06/30/2015',
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse',
+        dateLimit: {
+            days: 6
+        }
+    });
+    </script>
+    <script>
+        // AuthorizationRelease Steps Start
+        $(document).ready(function(){
+            $('#arfstep0').css({'display':'block'});
+            $(".arfstepzeronext").click(function(){
+                $('#arfstep0').css({'display':'none'});
+                $('#arfstep1').css({'display':'block'});
+            });
+            $("#arfsteponenext").click(function(){
+                $('#arfstep1').css({'display':'none'});
+                $('#arfstep2').css({'display':'block'});
+            });
+            $("#arfsteponeback").click(function(){
+                $('#arfstep1').css({'display':'none'});
+                $('#arfstep0').css({'display':'block'});
+            });
+            $("#arfsteptwoback").click(function(){
+                $('#arfstep2').css({'display':'none'});
+                $('#arfstep1').css({'display':'block'});
+            });
+            $("#arfsteptwonext").click(function(){
+                $('#arfstep2').css({'display':'none'});
+                $('#arfstep3').css({'display':'block'});
+            });
+            $("#arfstepthreeback").click(function(){
+                $('#arfstep3').css({'display':'none'});
+                $('#arfstep2').css({'display':'block'});
+            });
+            $("#arfstepthreenext").click(function(){
+                $('#arfstep3').css({'display':'none'});
+                $('#arfstep4').css({'display':'block'});
+            });
+            $("#arfstepfourback").click(function(){
+                $('#arfstep4').css({'display':'none'});
+                $('#arfstep3').css({'display':'block'});
+            });
+            $("#arfstepfournext").click(function(){
+                $('#arfstep4').css({'display':'none'});
+                $('#arfstep5').css({'display':'block'});
+            });
+            $("#arfstepfiveback").click(function(){
+                $('#arfstep5').css({'display':'none'});
+                $('#arfstep4').css({'display':'block'});
+            });
+            $("#arfstepfivenext").click(function(){
+                $('#arfstep5').css({'display':'none'});
+                $('#arfstep6').css({'display':'block'});
+            });
+            $("#arfstepsixback").click(function(){
+                $('#arfstep6').css({'display':'none'});
+                $('#arfstep5').css({'display':'block'});
+            });
+            $("#arfstepsixnext").click(function(){
+                $('#arfstep6').css({'display':'none'});
+                $('#arfstep7').css({'display':'block'});
+            });
+            $("#arfstepsevenback").click(function(){
+                $('#arfstep7').css({'display':'none'});
+                $('#arfstep6').css({'display':'block'});
+            });
+            $("#arfstepsevennext").click(function(){
+                $('#arfstep7').css({'display':'none'});
+                $('#arfstep8').css({'display':'block'});
+            });
+            $("#arfstepeightback").click(function(){
+                $('#arfstep8').css({'display':'none'});
+                $('#arfstep7').css({'display':'block'});
+            });
+            $("#arfstepeightnext").click(function(){
+                $('#arfstep8').css({'display':'none'});
+                $('#arfstep9').css({'display':'block'});
+            });
+            $("#arfstepnineback").click(function(){
+                $('#arfstep9').css({'display':'none'});
+                $('#arfstep8').css({'display':'block'});
+            });
+            $("#arfstepninenext").click(function(){
+                $('#arfstep9').css({'display':'none'});
+                $('#arfstep10').css({'display':'block'});
+            });
+            $("#arfsteptenback").click(function(){
+                $('#arfstep10').css({'display':'none'});
+                $('#arfstep9').css({'display':'block'});
+            });
+            $("#arfsteptennext").click(function(){
+                $('#arfstep10').css({'display':'none'});
+                $('#arfstep11').css({'display':'block'});
+            });
+            $("#arfstepelevenback").click(function(){
+                $('#arfstep11').css({'display':'none'});
+                $('#arfstep10').css({'display':'block'});
+            });
+            $("#arfstepelevennext").click(function(){
+                $('#arfstep11').css({'display':'none'});
+                $('#arfstep12').css({'display':'block'});
+            });
+            $("#arfsteptwelveback").click(function(){
+                $('#arfstep12').css({'display':'none'});
+                $('#arfstep11').css({'display':'block'});
+            });
+            $("#arfsteptwelvenext").click(function(){
+                $('#arfstep12').css({'display':'none'});
+                $('#arfstep13').css({'display':'block'});
+            });
+            $("#arfstepthirteenenext").click(function(){
+                $('#arfstep13').css({'display':'none'});
+                $('#arfstep14').css({'display':'block'});
+            });
+        })
+
+        // show and hide for Email
+        function emailType() {
+            var x = document.getElementById("emailType");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function faxType() {
+            var x = document.getElementById("faxType");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Email
+        function email() {
+            var x = document.getElementById("email");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function fax() {
+            var x = document.getElementById("fax");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+    </script>
+    <script>
+        // AuthorizationRelease Steps Start
+        $(document).ready(function(){
+            $('#sr0').css({'display':'block'});
+            $(".srzeronext").click(function(){
+                $('#sr0').css({'display':'none'});
+                $('#sr1').css({'display':'block'});
+            });
+            $(".emailnext").click(function(){
+                $('#sr0').css({'display':'none'});
+                $('#email').css({'display':'block'});
+            });
+            $(".sronenext").click(function(){
+                $('#sr1').css({'display':'none'});
+                $('#sr2').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $(".sroneback").click(function(){
+                $('#sr1').css({'display':'none'});
+                $('#sr0').css({'display':'block'});
+            });
+            $("#srtwoback").click(function(){
+                $('#sr2').css({'display':'none'});
+                $('#sr1').css({'display':'block'});
+            });
+            $("#srtwonext").click(function(){
+                $('#sr2').css({'display':'none'});
+                $('#sr3').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $("#srthreeback").click(function(){
+                $('#sr3').css({'display':'none'});
+                $('#sr2').css({'display':'block'});
+            });
+            $("#srthreenext").click(function(){
+                $('#sr3').css({'display':'none'});
+                $('#sr4').css({'display':'block'});
+            });
+            $("#srfourback").click(function(){
+                $('#sr4').css({'display':'none'});
+                $('#sr3').css({'display':'block'});
+            });
+            $("#srfournext").click(function(){
+                $('#sr4').css({'display':'none'});
+                $('#sr5').css({'display':'block'});
+            });
+            $("#srfiveback").click(function(){
+                $('#sr5').css({'display':'none'});
+                $('#sr4').css({'display':'block'});
+            });
+            $("#srfivenext").click(function(){
+                $('#sr5').css({'display':'none'});
+                $('#sr6').css({'display':'block'});
+            });
+            $("#srsixback").click(function(){
+                $('#sr6').css({'display':'none'});
+                $('#sr5').css({'display':'block'});
+            });
+            $("#srsixnext").click(function(){
+                $('#sr6').css({'display':'none'});
+                $('#sr7').css({'display':'block'});
+            });
+            $("#srsevenback").click(function(){
+                $('#sr7').css({'display':'none'});
+                $('#sr6').css({'display':'block'});
+            });
+            $("#srsevennext").click(function(){
+                $('#sr7').css({'display':'none'});
+                $('#sr8').css({'display':'block'});
+            });
+            $("#sreightback").click(function(){
+                $('#sr8').css({'display':'none'});
+                $('#sr7').css({'display':'block'});
+            });
+            $("#sreightnext").click(function(){
+                $('#sr8').css({'display':'none'});
+                $('#sr9').css({'display':'block'});
+            });
+            $("#srnineback").click(function(){
+                $('#sr9').css({'display':'none'});
+                $('#sr8').css({'display':'block'});
+            });
+            $("#srninenext").click(function(){
+                $('#sr9').css({'display':'none'});
+                $('#sr10').css({'display':'block'});
+            });
+            $("#srtenback").click(function(){
+                $('#sr10').css({'display':'none'});
+                $('#sr9').css({'display':'block'});
+            });
+            $("#srtennext").click(function(){
+                $('#sr10').css({'display':'none'});
+                $('#sr11').css({'display':'block'});
+            });
+            $("#srelevenback").click(function(){
+                $('#sr11').css({'display':'none'});
+                $('#sr10').css({'display':'block'});
+            });
+            $("#srelevennext").click(function(){
+                $('#sr11').css({'display':'none'});
+                $('#sr12').css({'display':'block'});
+            });
+            $("#srtwelveback").click(function(){
+                $('#sr12').css({'display':'none'});
+                $('#sr11').css({'display':'block'});
+            });
+            $("#srtwelvenext").click(function(){
+                $('#sr12').css({'display':'none'});
+                $('#sr13').css({'display':'block'});
+            });
+            $("#srthirteenenext").click(function(){
+                $('#sr13').css({'display':'none'});
+                $('#sr14').css({'display':'block'});
+            });
+        })
+
+        // show and hide for Email
+        function email() {
+            var x = document.getElementById("email");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function fax() {
+            var x = document.getElementById("fax");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+    </script>
+    <script src="dist/js/signature/bezier.js"></script>
+    <script src="dist/js/signature/jquery.signaturepad.js"></script>
+    <script src="dist/js/signature/json2.min.js"></script>
+    <script src="dist/js/signature/numeric.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#smoothed1').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed2').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed3').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed4').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed5').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed6').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed7').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed8').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed9').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed10').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed11').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+        $('#smoothed12').signaturePad({drawOnly:true, drawBezierCurves:true, lineTop:200});
+    });
+    </script>
+    <!-- Dropzone Plugin JavaScript -->
+    <script src="assets/node_modules/dropzone-master/dist/dropzone.js"></script>
+    <script src="assets/node_modules/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="assets/node_modules/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/node_modules/multiselect/js/jquery.multi-select.js"></script>
+    <script>
+        $(function () {
+            // Switchery
+            var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+            $('.js-switch').each(function () {
+                new Switchery($(this)[0], $(this).data());
+            });
+            // For select 2
+            $(".select2").select2();
+            $('.selectpicker').selectpicker();
+            //Bootstrap-TouchSpin
+            $(".vertical-spin").TouchSpin({
+                verticalbuttons: true
+            });
+            var vspinTrue = $(".vertical-spin").TouchSpin({
+                verticalbuttons: true
+            });
+            if (vspinTrue) {
+                $('.vertical-spin').prev('.bootstrap-touchspin-prefix').remove();
+            }
+            $("input[name='tch1']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 0.1,
+                decimals: 2,
+                boostat: 5,
+                maxboostedstep: 10,
+                postfix: '%'
+            });
+            $("input[name='tch2']").TouchSpin({
+                min: -1000000000,
+                max: 1000000000,
+                stepinterval: 50,
+                maxboostedstep: 10000000,
+                prefix: '$'
+            });
+            $("input[name='tch3']").TouchSpin();
+            $("input[name='tch3_22']").TouchSpin({
+                initval: 40
+            });
+            $("input[name='tch5']").TouchSpin({
+                prefix: "pre",
+                postfix: "post"
+            });
+            // For multiselect
+            $('#pre-selected-options').multiSelect();
+            $('#optgroup').multiSelect({
+                selectableOptgroup: true
+            });
+            $('#public-methods').multiSelect();
+            $('#select-all').click(function () {
+                $('#public-methods').multiSelect('select_all');
+                return false;
+            });
+            $('#deselect-all').click(function () {
+                $('#public-methods').multiSelect('deselect_all');
+                return false;
+            });
+            $('#refresh').on('click', function () {
+                $('#public-methods').multiSelect('refresh');
+                return false;
+            });
+            $('#add-option').on('click', function () {
+                $('#public-methods').multiSelect('addOption', {
+                    value: 42,
+                    text: 'test 42',
+                    index: 0
+                });
+                return false;
+            });
+            $(".ajax").select2({
+                ajax: {
+                    url: "https://api.github.com/search/repositories",
+                    dataType: 'json',
+                    delay: 250,
+                    data: function (params) {
+                        return {
+                            q: params.term, // search term
+                            page: params.page
+                        };
+                    },
+                    processResults: function (data, params) {
+                        // parse the results into the format expected by Select2
+                        // since we are using custom formatting functions we do not need to
+                        // alter the remote JSON data, except to indicate that infinite
+                        // scrolling can be used
+                        params.page = params.page || 1;
+                        return {
+                            results: data.items,
+                            pagination: {
+                                more: (params.page * 30) < data.total_count
+                            }
+                        };
+                    },
+                    cache: true
+                },
+                escapeMarkup: function (markup) {
+                    return markup;
+                }, // let our custom formatter work
+                minimumInputLength: 1,
+                //templateResult: formatRepo, // omitted for brevity, see the source of this page
+                //templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+            });
+        });
+    </script>
+</body>
+
+</html>

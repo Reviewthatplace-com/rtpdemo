@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Coyomed</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/login2.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="assets/css/select2/dist/css/select2index.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+  <style>
+    #mapmarkimg
+    {
+      height: 40px;
+      margin-top: -80px;
+      margin-left: 345px;
+    }
+  </style>
+
+  <!-- =======================================================
+   * Template Name: Coyomed - v1.0
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- Register -->
+  <div class="modal fade" id="register" tabindex="-1" aria-labelledby="ReviewLabel" aria-hidden="true" style="z-index: 1051 !important;">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 125%;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ReviewLabel">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container text-center">
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Name</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="" class="form-control loginInput" id="name" required="">
+                  </div>
+            </div>
+  
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Email</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="" class="form-control loginInput" id="name" required="">
+                  </div>
+            </div>
+  
+            <div class="form-group">
+              <label id="formlable" for="birthDate" class="col-sm-12 font-weight-3 slide">Date of Birth</label>
+                <div class="col-sm-12">
+                  <input required type="date" id="birthDate" class=" slide" placeholder="Date of Birth" autofocus>
+                </div>
+            </div>
+  
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Password</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="" class="form-control loginInput" id="name" required="">
+                  </div>
+            </div>
+  
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Confirm Password</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="" class="form-control loginInput" id="name" required="">
+                  </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-12">
+                <button class="btn gradient-button gradient-button-1 font-weight-1 slide" id="rastepthreenext">Register</button> 
+              </div>
+            </div>
+            
+  
+            <hr>
+            <button class="loginBtn loginBtn--facebook slide">
+            Sign Up With with Facebook
+            </button>
+            
+            <button class="loginBtn loginBtn--google slide">
+            Sign Up With with Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Register -->
+  
+  <!-- Patient Login -->
+  <div class="modal fade" id="patientLogin" tabindex="-1" aria-labelledby="ReviewLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 125%;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ReviewLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container text-center">
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Username</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="" class="form-control loginInput" id="name" required="">
+                  </div>
+            </div>
+  
+            <div class="form-group">
+                  <label for="patientfullname" class="col-sm-12 font-weight-3 slide">Password</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="" class="form-control loginInput" id="name" required="">
+                  </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-12">
+                <button class="btn gradient-button gradient-button-1 font-weight-1 slide" id="">Login</button> 
+              </div>
+            </div>
+            
+            <small class="text-center slide">Not registered yet? <a href="#" data-bs-toggle="modal" data-bs-target="#register" class="font-weight-1 text-black">Register</a></small>
+            <hr>
+            <button class="loginBtn loginBtn--facebook slide">
+            Sign In with Facebook
+            </button>
+            
+            <button class="loginBtn loginBtn--google slide">
+            Sign In with Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Patient Login -->
+  
+  <!-- patientorpractice -->
+  <div class="modal fade" id="patientorpractice" tabindex="-1" aria-labelledby="ReviewLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 125%;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ReviewLabel">Are You...</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-md-12">
+                <button class="btn gradient-button gradient-button-1 font-weight-1 slide" onClick="parent.location='practiceRegister.html'">Practice User</button> 
+              </div>
+              <div class="col-md-12">
+                <button class="btn gradient-button gradient-button-1 font-weight-1 slide" data-bs-target="#register" data-bs-toggle="modal">Patient User</button> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- patientorpractice -->
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>Coyomed</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <ul>
+            <li class="dropdown"><a href="#"><span>Login</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a href="practiceLogin.html">Practice Login</a></li>
+                <li><a href="#" data-bs-target="#patientLogin" data-bs-toggle="modal">Patient Login</a></li>
+                <li><a href="#" data-bs-target="#patientorpractice" data-bs-toggle="modal">Register</a></li>
+              </ul>
+            </li>
+          </ul>
+          <li><a class="nav-link scrollto" href="allBlogs.html">Blogs</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4 mb-5">
+
+          <div class="col-lg-9">
+            <div class="portfolio-info">
+              <h3>Blog 01</h3>
+                <div id="social-links" class="my-2">
+                  <ul>
+                    <li>
+                      <li><a href=""><i class="bi bi-facebook fa-2x"></i></a></a></li>
+                      <li><a href=""><i class="bi bi-twitter fa-2x"></i></a></li>
+                      <li><a href=""><i class="bi bi-linkedin fa-2x"></i></a></li>
+                    </ul>
+                      <label class="bs-label label-success badgeBorder">Covid - 19</label>
+                      <label class="bs-label label-success badgeBorder">Physical</label>
+                      <label class="bs-label label-success badgeBorder">Winterpark</label>  
+                      <label class="bs-label label-success badgeBorder">orlando</label>
+                </div>
+              <p><i class="fa fa-calendar"></i> Created At 2 weeks ago</p>
+            </div>
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="portfolio-description">
+              <h2>This is an example of a blog post</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="portfolio-info">
+              <h4 class="font-weight-bold"><i class="fa fa-tags"></i> Popular Tags:</h4>
+                <div id="tags" class="my-2">
+                  <div class="row">
+                    <div class="col-6"><label class="bs-label label-success badgeBorder mt-3">Covid - 19</label></div>
+                    <div class="col-6"><label class="bs-label label-success badgeBorder mt-3">Physical</label></div>
+                    <div class="col-6"><label class="bs-label label-success badgeBorder mt-3">Winterpark</label></div>  
+                    <div class="col-6"><label class="bs-label label-success badgeBorder mt-3">orlando</label></div>                
+                  </div>
+                </div>
+            </div>
+            <div class="portfolio-info">
+              <h4 class="font-weight-bold"><i class="fa fa-tags"></i> Categories:</h4>
+                <div id="tags" class="my-2">
+                  <div class="row">
+                    <div class="col-6"><label class="bs-label label-success badgeBorder mt-3">Physical</label></div>
+                    <div class="col-6"><label class="bs-label label-success badgeBorder mt-3">Pediatrics</label></div>
+                    <div class="col-6"><label class="bs-label label-success badgeBorder mt-3">Chiropractor</label></div>  
+                    <div class="col-6"><label class="bs-label label-success badgeBorder mt-3">Medicine</label></div>           
+                  </div>
+
+                </div>
+            </div>
+            <div class="portfolio-info">
+              <h4 class="font-weight-bold"><i class="fa fa-tags"></i>Recent Blogs:</h4>
+                <div id="tags" class="my-2">
+                  <div class="row">
+                    <div class="col-12"><a href="demoBlog.html">Demo Blog</a></div>
+                    <div class="col-12"><a href="demoBlog.html">Demo Blog</a></div>
+                    <div class="col-12"><a href="demoBlog.html">Demo Blog</a></div>
+                    <div class="col-12"><a href="demoBlog.html">Demo Blog</a></div>         
+                  </div>
+
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Squadfree</h3>
+              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Squadfree</span></strong>. All Rights Reserved
+      </div>
+      
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+     $('#rastep1').css({'display':'block'});
+     $("#rasteponenext").click(function(){
+      $('#rastep1').css({'display':'none'});
+      $('#rastep2').css({'display':'block'});
+    });
+    $("#rasteptwoback").click(function(){
+      $('#rastep2').css({'display':'none'});
+      $('#rastep1').css({'display':'block'});
+    });
+    $("#rasteptwonext").click(function(){
+      $('#rastep2').css({'display':'none'});
+      $('#rastep3').css({'display':'block'});
+      $('#rastep0').css({'display':'none'});
+    });
+    $("#rastepthreeback").click(function(){
+      $('#rastep3').css({'display':'none'});
+      $('#rastep2').css({'display':'block'});
+      $('#rastep0').css({'display':'block'});
+    });
+    $("#rastepthreenext").click(function(){
+      $('#rastep3').css({'display':'none'});
+      $('#rastep4').css({'display':'block'});
+    });
+    $("#rastepfourback").click(function(){
+      $('#rastep4').css({'display':'none'});
+      $('#rastep3').css({'display':'block'});
+    });
+    $("#rastepfournext").click(function(){
+      $('#rastep4').css({'display':'none'});
+      $('#rastep5').css({'display':'block'});
+    });
+    $("#rastepfiveback").click(function(){
+      $('#rastep5').css({'display':'none'});
+      $('#rastep4').css({'display':'block'});
+    });
+    $("#rastepfivenext").click(function(){
+      $('#rastep5').css({'display':'none'});
+      $('#rastep6').css({'display':'block'});
+    });
+    $("#rastepsixback").click(function(){
+      $('#rastep6').css({'display':'none'});
+      $('#rastep5').css({'display':'block'});
+    });
+    })
+  </script>
+
+</body>
+
+</html>

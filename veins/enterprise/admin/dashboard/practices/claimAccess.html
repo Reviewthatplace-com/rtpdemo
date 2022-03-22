@@ -1,0 +1,437 @@
+    
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Veins - Patient Portal</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/table.css">
+
+    <link rel="stylesheet" href="../css/datatables.min.css">
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <style type="text/css">
+      .practiceTable tr th
+      {
+        font-weight: bold;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/logo.png" class="img-fluid" id="logo">
+                <span>Admin Panel</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                 <li class="active">
+                    <a href="#practices" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-clinic-medical nav-icon"></i>
+                        <span>Practices</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practices">
+                        <li>
+                            <a href="../practices/claimed.html"><i class="fas fa-check"></i>Claimed</a>
+                        </li>
+                        <li>
+                            <a href="../practices/unclaimed.html"><i class="fas fa-times"></i>Unclaimed</a>
+                        </li>
+                        <li>
+                            <a href="../practices/addRequest.html"><i class="fas fa-user-plus"></i>Request To Add</a>
+                        </li>
+                        <li class="active">
+                            <a href="../practices/claimAccess.html"><i class="fas fa-user-lock"></i>Claim Access</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#billing" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-money-bill nav-icon"></i>
+                        <span>Billing</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="billing">
+                        <li>
+                            <a href="../billing/create.html"><i class="fas fa-plus"></i>Create</a>
+                        </li>
+                        <li>
+                            <a href="../billing/active.html"><i class="fas fa-check-double"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../billing/inactive.html"><i class="far fa-times-circle"></i>Inactive</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="../categories.html">
+                        <i class="fa fa-list nav-icon"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+
+
+                <li>
+
+                    <a href="#rms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-search-location nav-icon"></i>
+                        <span>RMS</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="rms">
+                        <li>
+                            <a href="../rms/reviews.html"><i class="fas fa-search"></i>Reviews</a>
+                        </li>
+                        <li>
+                            <a href="../rms/practices.html"><i class="fas fa-hospital-alt"></i>Practices</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#insurance" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-shield-alt nav-icon"></i>
+                        <span>Insurance</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="insurance">
+                        <li>
+                            <a href="../insurances/active.html"><i class="fas fa-user-shield"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../insurances/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                
+
+                <li>
+                    <a href="#practiceUser" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-user-check nav-icon"></i>
+                        <span>Practice User</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practiceUser">
+                        <li>
+                            <a href="../practiceUser/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../practiceUser/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#patientPortal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-stethoscope nav-icon"></i>
+                        <span>Patient Portal</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="patientPortal">
+                        <li>
+                            <a href="../patientPortal/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../patientPortal/pending.html"><i class="fas fa-user-edit"></i>Pending</a>
+                        </li>
+                        <li>
+                            <a href="../patientPortal/notStarted.html"><i class="fas fa-user-times"></i>Not Started</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../userType.html">
+                        <i class="fa fa-users nav-icon"></i>
+                        <span >User Type</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../reports.html">
+                        <i class="fa fa-file nav-icon"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+        <!-- ================= Sidebar ======================== -->
+
+
+        <!-- ================= Page Content ======================== -->
+        <div id="content">
+            <!-- ================= Navbar ======================== -->
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <!-- <span>Toggle Sidebar</span> -->
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    <h3 class="h3-responsive pageTitle">Practices - claim access</h3>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                          
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- ================= Navbar ======================== -->
+
+            <!-- ================= Main Content ======================== -->
+            
+            <main>
+                <!-- card -->
+                <div class="card">
+                    <!-- card body -->
+                    <div class="card-body">  
+                        <div class="table-responsive">
+                            <table class="table table-sm table-bordered datatables">
+                              <thead class="thead-dark">
+                                <tr>
+                                  <th scope="col">PracUID</th>
+                                  <th scope="col">Full Name</th>
+                                  <th scope="col">Email (username)</th>
+                                  <th scope="col">RTP ID</th>
+                                  <th scope="col">Practice Name</th>
+                                  <th scope="col">Approve / Deny</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1234324</td>
+                                  <td>Powers</td>
+                                  <td>info@gmail.com</td>
+                                  <td>RTP1234</td>
+                                  <td>
+                                    <button class="btn btn-info btn-sm" data-target="#practiceInfo" data-toggle="modal">Powers Pediatrics</button>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-success" data-toggle="modal" data-target="#approvePopup"><i class="fas fa-check"></i></a>
+                                    <a class="btn-floating btn-sm btn-danger" data-toggle="modal" data-target="#denyPopup"><i class="fas fa-times"></i></a>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>1234324</td>
+                                  <td>Powers</td>
+                                  <td>info@gmail.com</td>
+                                  <td>RTP1234</td>
+                                  <td>
+                                    <button class="btn btn-info btn-sm" data-target="#practiceInfo" data-toggle="modal">Powers Pediatrics</button>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-success" data-toggle="modal" data-target="#approvePopup"><i class="fas fa-check"></i></a>
+                                    <a class="btn-floating btn-sm btn-danger" data-toggle="modal" data-target="#denyPopup"><i class="fas fa-times"></i></a>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>1234324</td>
+                                  <td>Powers</td>
+                                  <td>info@gmail.com</td>
+                                  <td>RTP1234</td>
+                                  <td>
+                                    <button class="btn btn-info btn-sm" data-target="#practiceInfo" data-toggle="modal">Powers Pediatrics</button>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-success" data-toggle="modal" data-target="#approvePopup"><i class="fas fa-check"></i></a>
+                                    <a class="btn-floating btn-sm btn-danger" data-toggle="modal" data-target="#denyPopup"><i class="fas fa-times"></i></a>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>1234324</td>
+                                  <td>Powers</td>
+                                  <td>info@gmail.com</td>
+                                  <td>RTP1234</td>
+                                  <td>
+                                    <button class="btn btn-info btn-sm" data-target="#practiceInfo" data-toggle="modal">Powers Pediatrics</button>
+                                  </td>
+                                  <td>
+                                    <a class="btn-floating btn-sm btn-success" data-toggle="modal" data-target="#approvePopup"><i class="fas fa-check"></i></a>
+                                    <a class="btn-floating btn-sm btn-danger" data-toggle="modal" data-target="#denyPopup"><i class="fas fa-times"></i></a>
+                                  </td>
+                                </tr>
+                              
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                </div>
+                <!-- card -->
+            </main>
+            <!-- ================= Main Content ======================== -->
+
+            <!-- ============================= Footer starts here ======================= -->
+            <footer class="page-footer font-small blue fixed-bottom">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                  <a href="#"> Review That Place.com</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+            <!-- ============================= Footer Ends here ======================= -->
+          
+        </div>
+        <!-- ================= Page Content ======================== -->
+    </div>
+    <!-- ================= Ends here ======================== -->
+
+
+    <!-- ============================= approve modal ======================= -->
+    <div class="modal fade" id="approvePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Approve</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <p>Are you sure want to approve this request?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= approve modal ======================= -->
+
+
+    <!-- ============================= deny modal ======================= -->
+    <div class="modal fade" id="denyPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-danger modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Deny Request</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+               <p>Are you sure want to approve this request?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= deny modal ======================= -->
+
+    <!-- ============================= practices view modal ======================= -->
+    <div class="modal fade" id="practiceInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info modal-lg modal-notify" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Practice Associated</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table datatables table-bordered table-hover table-sm practiceTable">
+                      <tr>
+                        <th>RTPID</th>
+                        <td>RTP234</td>
+                      </tr>
+
+                      <tr>
+                        <th>Practice Name</th>
+                        <td>Powers Pediatrics</td>
+                      </tr>
+
+                      <tr>
+                        <th>Email</th>
+                        <td>ravi@reviewthatplace.com</td>
+                      </tr>
+
+                      <tr>
+                        <th>Phone Number</th>
+                        <td>987217202</td>
+                      </tr>
+
+                      <tr>
+                        <th>Fax</th>
+                        <td>987217202</td>
+                      </tr>
+
+                      <tr>
+                        <th>Street</th>
+                        <td>Rose Eve</td>
+                      </tr>
+
+                      <tr>
+                        <th>City</th>
+                        <td>Ornaldo</td>
+                      </tr>
+
+                      <tr>
+                        <th>State</th>
+                        <td>Florida</td>
+                      </tr>
+
+                      <tr>
+                        <th>Claim Status</th>
+                        <td>Claimed</td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================= practices view modal ======================= -->
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- sidebar JS -->
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/mdb.min.js"></script>
+    <script src="../js/tableScript.js"></script>
+</body>
+
+</html>

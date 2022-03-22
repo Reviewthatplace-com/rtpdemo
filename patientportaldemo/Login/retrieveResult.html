@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>RTP Medical Solutions</title>
+    
+    <!-- page css -->
+    <link href="dist/css/pages/login-register-lock.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/style.min.css" rel="stylesheet">
+
+    <style>
+        #pagetitles{color: #FF7062;}
+    </style>
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">RTP Medical Solutions</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <section id="wrapper" class="login-register login-sidebar" style="background-image:url(assets/images/background/login-register.jpg);">
+        <div class="login-box card">
+            <div class="card-body">
+                
+                <!--Confirmation Number-->
+                <form class="form-horizontal needs-validation form-material" id="confirmationNumber" novalidate>
+                    <div class="col-md-12 mb-3 text-center">
+                        <a href="javascript:void(0)" class="db"><img src="assets/images/logo0.png" alt="Home" height="70"/></a>
+                        <h3 class="font-weight-bold text-center mt-2 mb-3" id="pagetitles">RETRIEVE COVID-19 RESULTS</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <h4 for="s1q1" class="form-label font-weight-bold mb-2">Confirmation Number</h4>
+                        <input type="text" class="form-control" id="s1q1" value="" required  placeholder="Confirmation Number">
+                        <div class="valid-feedback mb-2">Looks good!</div>
+                        <div class="invalid-feedback mb-2">Please provide a Confirmation Number</div>
+                    </div> 
+
+                    <div class="col-md-12 mb-3">
+                        <button class="btn btn-info btn-lg btn-block text-uppercase mt-3" type="submit" id="portalSignup">NEXT</button>
+                    </div>
+                </form>
+                <!--Confirmation Number-->
+                 
+                
+                <!--Without Portal-->
+                <form class="form-horizontal needs-validation form-material" id="login2nd" novalidate>
+                    <div class="col-md-12 mb-3 text-center">
+                        <a href="javascript:void(0)" class="db"><img src="assets/images/logo0.png" alt="Home" height="70"/></a>
+                        <h3 class="font-weight-bold text-center mt-2 mb-3" id="pagetitles">RETRIEVE COVID-19 RESULTS</h3>
+                    </div>
+                    <!--Username-->
+                    <div class="col-md-12 mb-3">
+                        <h4 for="s2q1" class="form-label font-weight-bold mb-2">Username<strong class="text-danger">*</strong></h4>
+                        <input type="text" class="form-control" id="s2q1" value="" required  placeholder="Username">
+                        <div class="valid-feedback mb-2">Looks good!</div>
+                        <div class="invalid-feedback mb-2">Please provide a Username</div>
+                    </div>
+                    <!--Username-->
+            
+                    <!--Password-->
+                    <div class="col-md-12 mb-3">
+                        <h4 for="s2q2" class="form-label font-weight-bold mb-2">Password<strong class="text-danger">*</strong></h4>
+                        <input type="text" class="form-control" id="s2q2" value="" required  placeholder="Password">
+                        <div class="valid-feedback mb-2">Looks good!</div>
+                        <div class="invalid-feedback mb-2">Please provide a Password</div>
+                    </div>
+                    <!--Password-->
+            
+                    <!--Confirm Password-->
+                    <div class="col-md-12 mb-3">
+                        <h4 for="s2q3" class="form-label font-weight-bold mb-2">Confirm Password<strong class="text-danger">*</strong></h4>
+                        <input type="text" class="form-control" id="s2q3" value="" required  placeholder="Confirm Password">
+                        <div class="valid-feedback mb-2">Looks good!</div>
+                        <div class="invalid-feedback mb-2">Please Confirm Password</div>
+                    </div>
+                    <!--Confirm Password-->
+                    <div class="col-md-12 mb-3">
+                        <button class="btn btn-info btn-lg btn-block text-uppercase mt-3" type="submit">NEXT</button>
+                    </div>
+                </form>
+                <!--Without Portal-->
+                
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--Custom JavaScript -->
+    <script type="text/javascript">
+        $(function() {
+            $(".preloader").fadeOut();
+        });
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+
+        // ============================================================== 
+        // Confirmation Page & Portal Sign up 
+        // ============================================================== 
+        $('#to-recover').on("click", function() {
+            $("#confirmationNumber").slideUp();
+        });
+
+        
+        $('#portalSignup').on("click", function() {
+            $("#confirmationNumber").slideUp();
+            $("#login2nd").fadeIn();
+        });
+    </script>
+
+    <script>
+    (function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/img/dr.jpeg">
+    <title>Profile Discovery</title>
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
+    <link href="dist/css/pages/icon-page.css" rel="stylesheet">
+    <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+    <link href="dist/css/pages/icon-page.css" rel="stylesheet">
+    <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+    <link href="dist/css/pages/floating-label.css" rel="stylesheet">
+    <link href="dist/css/pages/chat-app-page.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <style>
+        .card-body {
+            padding: 0rem;
+        }
+
+.form-checkbox, .form-radio {
+    padding:2px;
+    max-width: 100% !important;
+    display: inline-block;
+    margin-right: 8px;
+    background:white;
+    }
+    .checklabel,.radiolabel{
+    display:block;
+    width: 430px;
+    border:2px solid #FF7062;
+    background: white;
+    border-radius:12px;
+    text-align:center;
+    padding:10px 2em;
+    font-size:1.2rem;
+    font-weight: bold;
+    box-shadow:0 0 1px 1px rgba(0,0,0,0.2);
+    }
+    .label-center-section .checklabel,.label-center-section .radiolabel
+    {
+    text-align:left;
+    }
+    .checklabel:hover, .radiolabel:hover {
+    background:#ddd;
+    }
+    .checkbox, .radio {
+    display: none;
+    }
+    .checkbox:focus + label, .radio:focus + label{
+    border-color:#FF7062;
+    } 
+    .checkbox:active + label {
+    background-color: #ddd;
+    }
+    .checkbox:checked + label, .radio:checked + label {
+    background-position: 0 0;
+    background-color: #FF7062;
+    color: white;
+    }
+    .checkbox, .radio {
+            display: none;
+        }
+
+        
+
+        /*
+    @media screen and (min-width:400px){
+        .none{
+                display: none;
+                }
+    }
+*/
+
+    </style>
+</head>
+
+<body class="skin-blue fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">RTP Medical Solutions</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar bg-white">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header bg-white">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--  You can put here icon as well -->
+                            <!--  <i class="wi wi-sunset"></i> -->
+                            <!-- Dark Logo icon -->
+                            <img src="dist/img/rtplogo.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <!--                            <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />-->
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                            <!-- dark Logo text -->
+                            <img src="dist/img/rtplogo.png" alt="homepage" class="dark-logo w-25" />
+                            <!-- Light Logo text -->
+                            <img src="dist/img/rtplogo.png" class="light-logo" alt="homepage" style="height: 75px; margin-left: 35px;"/>
+                        </span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto ">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item text-info"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark text-info" href="javascript:void(0)"><i class="icon-menu text-info"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <!--
+                        <li class="nav-item">
+                            <form class="app-search d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control" placeholder="Search & enter">
+                            </form>
+                        </li>
+-->
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-home text-info"></i>
+                                <!--                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>-->
+                            </a>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Comment -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                      
+                        <!-- ============================================================== -->
+                        <!-- End mega menu -->
+
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- User Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic text-info" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class=""> <span class="hidden-md-down">Mark &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                
+                                <!-- <a href="index.html" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                                
+                                <a href="pay_Request.html" class="dropdown-item"><i class="ti-wallet"></i>Open Balance</a> --> 
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="account_settings.html" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                                <!-- text-->
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End User Profile -->
+                        <!-- ============================================================== -->
+                        <!--                        <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>-->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><img src="assets/images/navbar/myprofile.png" class="mb-1 mr-1" alt="My Profiles" height="20"><span class="hide-menu">My Profiles</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="profile_discovery.html" aria-expanded="false"><img src="assets/images/navbar/profilediscovery.png" class="mb-1 mr-1" alt="Profile Discovery" height="20"><span class="hide-menu">Profile Discovery</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="records.html" aria-expanded="false"><img src="assets/images/navbar/records.png" class="mb-1 mr-1" alt="Records" height="20"><span class="hide-menu">Records <span class="badge badge-pill badge-danger ml-auto">4</span></span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="authorize_practice.html" aria-expanded="false"><img src="assets/images/navbar/mypractices.png" class="mb-1 mr-1" alt="My Practices" height="20"><span class="hide-menu">My Practices</span></a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><img src="assets/images/navbar/payments.png" class="mb-1 mr-1" alt="Payments" height="20"><span class="hide-menu">Payment<span class="badge badge-pill badge-cyan ml-auto">4</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="pay_Request.html">Payment Request</a></li>
+                                <li><a href="payment_Complete.html">Payments Completed</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="com_center.html" aria-expanded="false"><img src="assets/images/navbar/communication.png" class="mb-1 mr-1" alt="Communication" height="20"><span class="hide-menu">Communication</span></a></li>
+                        <!-- temporary dropdown -->
+                        <!--
+                        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-layout-grid2"></i><span class="hide-menu">My Records</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="recordRequest.html">Request Records</a></li>
+                                <li><a href="sendRecords.html">Send Records</a></li>
+                                <li><a href="PendingRecords.html">Pending Records</a></li>
+                                <li><a href="allRecords.html">All Records</a></li>
+
+                            </ul>
+                        </li>
+-->
+                         
+                          <li> <a class="waves-effect waves-dark" href="login.html" aria-expanded="false"><img src="assets/images/navbar/logout.png" class="mb-1 mr-1" alt="Logout" height="20"><span class="hide-menu">Log Out</span></a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Profile Discovery</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">HOME</a></li>
+                                <li class="breadcrumb-item active">Profile Discovery</li>
+                            </ol>
+                             
+                        </div>
+                    </div>
+                </div>
+                <!--Modal-->
+                <div class="modal fade none-border bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="addPractice">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+
+                            <div class="modal-header bg-info text-white">
+                                <h5 class="modal-title" id="exampleModalLabel">Add Practice</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true" class="white-text">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="text-right mb-2">
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 p-0">
+                                        <div class="card mt-0 p-0">
+                                            <div class="card-body p-0">
+                                                <div class="tab-content pt-0" id="myTabContent">
+
+                                                    <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                                        <div class="table-responsive">
+                                                            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                                                <!--   -->
+                                                                <div class="row">
+                                                                    <div class="card col-12">
+                                                                        <div class="card-body">
+                                                                            <table class="table table-hover table-bordered selectTables dataTable no-footer" id="editable-datatable clmtable1" role="grid" aria-describedby="example_info">
+                                                                                <thead class="thead-dark">
+                                                                                    <tr role="row ">
+                                                                                        <th scope="col" class="select-checkbox sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 0px;"></th>
+                                                                                        <th scope="col" class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="RTPID: activate to sort column descending" style="width: 0px;">RTPID</th>
+                                                                                        <th scope="col" class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Pracitce Name: activate to sort column ascending" style="width: 0px;">Pracitce Name</th>
+                                                                                        <th scope="col" class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Category: activate to sort column ascending" style="width: 0px;">Category</th>
+                                                                                        <th scope="col" class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Street: activate to sort column ascending" style="width: 0px;">Street</th>
+                                                                                        <th scope="col" class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="City: activate to sort column ascending" style="width: 0px;">City</th>
+                                                                                        <th scope="col" class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="State: activate to sort column ascending" style="width: 0px;">State</th>
+                                                                                        <th scope="col" class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Zip: activate to sort column ascending" style="width: 0px;">Zip</th>
+                                                                                        <th scope="col" class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Phone: activate to sort column ascending" style="width: 0px;">Phone</th>
+                                                                                        <th scope="col" class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Rating: activate to sort column ascending" style="width: 0px;">Rating</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody >
+
+                                                                                    <tr role="row" class="odd">
+                                                                                        <td class=""><input type="checkbox"></td>
+                                                                                        <td class="sorting_1">temp</td>
+                                                                                        <td>Powers Pediatrics</td>
+                                                                                        <td>Pediatrics</td>
+                                                                                        <td>Rose Eve 78202</td>
+                                                                                        <td>Ornaldo</td>
+                                                                                        <td>FL</td>
+                                                                                        <td>1233-21892</td>
+                                                                                        <td>(123) 331-2192</td>
+                                                                                        <td>4.5/5</td>
+                                                                                    </tr>
+                                                                                    <tr role="row" class="even">
+                                                                                        <td> <input type="checkbox"></td>
+                                                                                        <td class="sorting_1">RTP1234</td>
+                                                                                        <td>Powers Pediatrics</td>
+                                                                                        <td>Pediatrics</td>
+                                                                                        <td>Rose Eve 78202</td>
+                                                                                        <td>Ornaldo</td>
+                                                                                        <td>FL</td>
+                                                                                        <td>1233-21892</td>
+                                                                                        <td>(123) 331-2192</td>
+                                                                                        <td>4.5/5</td>
+                                                                                    </tr>
+                                                                                    <tr role="row" class="odd">
+                                                                                        <td> <input type="checkbox"></td>
+                                                                                        <td class="sorting_1">RTP1234</td>
+                                                                                        <td>Powers Pediatrics</td>
+                                                                                        <td>Pediatrics</td>
+                                                                                        <td>Rose Eve 78202</td>
+                                                                                        <td>Ornaldo</td>
+                                                                                        <td>FL</td>
+                                                                                        <td>1233-21892</td>
+                                                                                        <td>(123) 331-2192</td>
+                                                                                        <td>4.5/5</td>
+                                                                                    </tr>
+                                                                                    <tr role="row" class="even">
+                                                                                        <td> <input type="checkbox"></td>
+                                                                                        <td class="sorting_1">RTP1234</td>
+                                                                                        <td>Powers Pediatrics</td>
+                                                                                        <td>Pediatrics</td>
+                                                                                        <td>Rose Eve 78202</td>
+                                                                                        <td>Ornaldo</td>
+                                                                                        <td>FL</td>
+                                                                                        <td>1233-21892</td>
+                                                                                        <td>(123) 331-2192</td>
+                                                                                        <td>4.5/5</td>
+                                                                                    </tr>
+                                                                                    <tr role="row" class="odd">
+                                                                                        <td> <input type="checkbox"></td>
+                                                                                        <td class="sorting_1">RTP1234</td>
+                                                                                        <td>Powers Pediatrics</td>
+                                                                                        <td>Pediatrics</td>
+                                                                                        <td>Rose Eve 78202</td>
+                                                                                        <td>Ornaldo</td>
+                                                                                        <td>FL</td>
+                                                                                        <td>1233-21892</td>
+                                                                                        <td>(123) 331-2192</td>
+                                                                                        <td>4.5/5</td>
+                                                                                    </tr>
+                                                                                    <tr role="row" class="even">
+                                                                                        <td> <input type="checkbox"></td>
+                                                                                        <td class="sorting_1">RTP1234</td>
+                                                                                        <td>Powers Pediatrics</td>
+                                                                                        <td>Pediatrics</td>
+                                                                                        <td>Rose Eve 78202</td>
+                                                                                        <td>Ornaldo</td>
+                                                                                        <td>FL</td>
+                                                                                        <td>1233-21892</td>
+                                                                                        <td>(123) 331-2192</td>
+                                                                                        <td>4.5/5</td>
+                                                                                    </tr>
+                                                                                    <tr role="row" class="odd">
+                                                                                        <td> <input type="checkbox"></td>
+                                                                                        <td class="sorting_1">RTP1234</td>
+                                                                                        <td>Powers Pediatrics</td>
+                                                                                        <td>Pediatrics</td>
+                                                                                        <td>Rose Eve 78202</td>
+                                                                                        <td>Ornaldo</td>
+                                                                                        <td>FL</td>
+                                                                                        <td>1233-21892</td>
+                                                                                        <td>(123) 331-2192</td>
+                                                                                        <td>4.5/5</td>
+                                                                                    </tr>
+                                                                                    <tr role="row" class="even">
+                                                                                        <td> <input type="checkbox"></td>
+                                                                                        <td class="sorting_1">RTP1234</td>
+                                                                                        <td>Powers Pediatrics</td>
+                                                                                        <td>Pediatrics</td>
+                                                                                        <td>Rose Eve 78202</td>
+                                                                                        <td>Ornaldo</td>
+                                                                                        <td>FL</td>
+                                                                                        <td>1233-21892</td>
+                                                                                        <td>(123) 331-2192</td>
+                                                                                        <td>4.5/5</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success" data-target="#giveAuth" data-toggle="modal">Give Authorization</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!------------------------------------------------------>
+                <!------------------------------------------------------>
+                <!--table-->
+                <div class="row">
+                    <!--Add Account Button-->
+                      <div class="container-fluid">
+                          <div class="row">
+                              <div class="col">
+                                  <!-- Button trigger modal -->
+                                  <button type="button" class="btn btn-success float-right plus" data-toggle="modal" data-target="#add_profile">
+                                      +
+                                  </button>
+                                  <!-- Button trigger modal -->
+                              </div>
+                          </div>
+                      </div>
+                    <!--Add Account Button-->
+                    <div class="col-12">
+                        <div class="card p-20">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="config-table " class="table display table-bordered table-striped no-wrap">
+                                        <thead>
+                                            <tr>
+                                                <th>Action</th>
+                                                <th>Email</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Action
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <a type="button" class="dropdown-item btn  waves-effect waves-light none" id="sa-passparameter" alt="alert" href="#"> Revoke Access</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>x@gmail.com</td>
+                                                <td>
+                                                    <label class="bs-label label-success">Active</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Action
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <a type="button" class="dropdown-item btn  waves-effect waves-light none enterKey"  alt="alert" href="#"> Enter Key</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>x@gmail.com</td>
+                                                <td>
+                                                    <label class="bs-label label-warning">Pending</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Action
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <a type="button" class="dropdown-item btn  waves-effect waves-light none activePatient" alt="alert" href="#">Active</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>x@gmail.com</td>
+                                                <td>
+                                                    <label class="bs-label label-danger">Inactive</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--table close-->
+                <!--  table end -->
+
+            </div>
+        </div>
+        <!-- Modal-->
+
+        <div class="modal fade none-border bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="reviews">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Leave Your Review</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="white-text">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <label>Leave review for</label>
+                            <select class="form-control">
+                                <option selected="" disabled="">Choose Practice</option>
+                                <option>Powers Pediatrics</option>
+                                <option>Woimedicine</option>
+                            </select>
+
+
+
+                            <div class="md-form md-outline mt-2">
+                                <textarea id="message" class="md-textarea form-control" placeholder="Submit Your Review" rows="3"></textarea>
+                                <!--                                    <label for="message" class="active">Submit Review</label>-->
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Submit</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------->
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer">
+            © 2020 Eliteadmin by themedesigner.in
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Modal -->
+
+        <!-- Add Profile -->
+        <div id="add_profile" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Profile</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+
+                        <section id="arfstep0" class="section mt-3 active">
+                            <legend class="text-center font-weight-bold">Choose Verification Method</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="fax_number" id="fax_number1" value="1">
+                                            <label class="checklabel required-label arfstepzeronext" for="fax_number1">Phone</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="email" id="email1" value="1">
+                                            <label class="checklabel required-label emailnext" for="email1">Email</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </from>
+                        </section>
+
+                        <section id="call_text" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Choose Verification Method</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="fax_number" id="call_me" value="1">
+                                            <label class="checklabel required-label call_textnext" for="call_me">Call Me</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <div class="form-checkbox ">
+                                            <input required="" class="checkbox" type="checkbox" name="email" id="text_me" value="1">
+                                            <label class="checklabel required-label call_textnext" for="text_me">Text Me</label>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-lg btn-info col-xl-12 arfsteponeback">Back</a>
+                                </div>
+                            </from>
+                        </section>
+
+                        <section id="arfstep1" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Enter Phone Number</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Phone Number">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide Fax number!
+                                      </div>
+                                  </div>
+                                </div>
+                            </from>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-left call_textback">Back</a>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-right arfsteponenext">Next</a>
+                        </section>
+
+                        <section id="email" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Enter Email</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                <div class="col-md-12 m-b-20">
+                                    <input type="text" class="form-control" placeholder="Email"> 
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please Provide Email!
+                                    </div>
+                                </div>
+                                </div>
+                            </from>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-left arfsteponeback">Back</a>
+                            <a href="#" class="btn btn-lg btn-info col-xl-5 float-right arfsteponenext">Next</a>
+                        </section>
+
+                        <section id="arfstep2" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Enter OTP</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control" placeholder="Enter OTP"> 
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide OTP!
+                                      </div>
+                                  </div>
+                                </div>
+                            </from>
+                            <a href="#" id="arfsteptwoback" class="btn btn-lg btn-info col-xl-5 float-left">Back</a>
+                            <a href="#" id="" class="btn btn-lg btn-info col-xl-5 float-right verify">Verify</a>
+                        </section>
+
+                        <section id="arfstep3" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Contact Information</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control phone-inputmask" id="phone-mask" placeholder="Phone Number">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide Phone number!
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control" placeholder="Email">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide Email!
+                                      </div>
+                                  </div>
+                                </div>
+                            </from>
+                            <a href="#" id="arfstepthreeback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                            <a href="#" id="arfstepthreenext" class="btn btn-lg btn-info col-xl-5  float-right">Next</a>
+                        </section>
+
+                        <section id="arfstep4" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Basic Details</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control" placeholder="First Name">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide First Name!
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control" placeholder="Last Name">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide Last Name!
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12 m-b-20">
+                                      <label for="">Date of Birth</label>
+                                      <input type="date" class="form-control" placeholder="date of birth">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide date of birth!
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12 m-b-20">
+                                    <select required="" class="form-control required" id="Gender" name="Gender" placeholder="Choose a Gender">
+                                        <option value="">Choose a Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-12 m-b-20">
+                                      <input type="text" class="form-control" placeholder="Social Security Number">
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        Please Provide Social Security Number!
+                                      </div>
+                                  </div>
+                                </div>
+                            </from>
+                            <a href="#" id="arfstepfourback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                            <a href="#" id="arfstepfournext" class="btn btn-lg btn-info col-xl-5  float-right">Next</a>
+                        </section>
+
+                        <section id="arfstep5" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Address</legend>
+                                <from class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Street"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide Street!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="City"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide City!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <select required="" class="form-control required" id="practice2_state" name="practice2_state" placeholder="State">
+                                                <option value="">Select State</option>
+                                                <option value="Alabama">Alabama</option>
+                                                <option value="Alaska">Alaska</option>
+                                                <option value="Arizona">Arizona</option>
+                                                <option value="Arkanasas">Arkanasas</option>
+                                                <option value="California">California</option>
+                                                <option value="Colorado">Colorado</option>
+                                                <option value="Connecticut">Connecticut</option>
+                                                <option value="Delaware">Delaware</option>
+                                                <option value="Florida">Florida</option>
+                                                <option value="Georgia">Georgia</option>
+                                                <option value="Hawaii">Hawaii</option>
+                                                <option value="Idaho">Idaho</option>
+                                                <option value="Illinois">Illinois</option>
+                                                <option value="Indiana">Indiana</option>
+                                                <option value="Iowa">Iowa</option>
+                                                <option value="Kankas">Kankas</option>
+                                                <option value="Kentucky">Kentucky</option>
+                                                <option value="Louisiana">Louisiana</option>
+                                                <option value="Maine">Maine</option>
+                                                <option value="Maryland">Maryland</option>
+                                                <option value="Massachusetts">Massachusetts</option>
+                                                <option value="Michigan">Michigan</option>
+                                                <option value="Minnesota">Minnesota</option>
+                                                <option value="Mississippi">Mississippi</option>
+                                                <option value="Missouri">Missouri</option>
+                                                <option value="Montana">Montana</option>
+                                                <option value="Nebraska">Nebraska</option>
+                                                <option value="Nevada">Nevada</option>
+                                                <option value="New Hampshire">New Hampshire</option>
+                                                <option value="New Jersey">New Jersey</option>
+                                                <option value="New Mexico">New Mexico</option>
+                                                <option value="New York">New York</option>
+                                                <option value="North Carolina">North Carolina</option>
+                                                <option value="North Dakota">North Dakota</option>
+                                                <option value="Ohio">Ohio</option>
+                                                <option value="Oklahoma">Oklahoma</option>
+                                                <option value="Oregon">Oregon</option>
+                                                <option value="Pennsylvania">Pennsylvania</option>
+                                                <option value="Rhode Island">Rhode Island</option>
+                                                <option value="South Carolina">South Carolina</option>
+                                                <option value="South Dakota">South Dakota</option>
+                                                <option value="Tennessee">Tennessee</option>
+                                                <option value="Texas">Texas</option>
+                                                <option value="Utah">Utah</option>
+                                                <option value="Vermont">Vermont</option>
+                                                <option value="Virginia">Virginia</option>
+                                                <option value="Washington">Washington</option>
+                                                <option value="Washington,D.C.(DC)">Washington,D.C.(DC)</option>
+                                                <option value="West Virginia">West Virginia</option>
+                                                <option value="Wisconsin">Wisconsin</option>
+                                                <option value="Wyoming">Wyoming</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12 m-b-20">
+                                            <input type="text" class="form-control" placeholder="Zip Code"> 
+                                            <div class="valid-feedback">
+                                              Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                              Please Provide Zip Code!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </from>
+                            <a href="#" id="arfstepfiveback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                            <a href="#" id="arfstepfivenext" class="btn btn-lg btn-info col-xl-5  float-right">Next</a>
+                        </section>
+
+                        <section id="arfstep6" class="section mt-3" style="display: none;">
+                            <legend class="text-center font-weight-bold">Primary Insurance</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Primary Insurance"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Primary Insurance!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Primary Insurance Number"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Primary Insurance Number!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Primary Insurance group ID"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Primary Insurance group ID!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <form action="#" class="dropzone">
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </from>
+                            <legend class="text-center font-weight-bold">Secondary Insurance</legend>
+                            <from class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Secondary Insurance"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Secondary Insurance!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Secondary Insurance Number"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Secondary Insurance Number!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <input type="text" class="form-control" placeholder="Secondary Insurance group ID"> 
+                                        <div class="valid-feedback">
+                                          Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please Provide Secondary Insurance group ID!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 m-b-20">
+                                        <form action="#" class="dropzone">
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </from>
+                            <a href="#" id="arfstepsixback" class="btn btn-lg btn-info col-xl-5  float-left">Back</a>
+                            <a href="#" id="" class="btn btn-lg btn-info col-xl-5  float-right add_profile">Add</a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Profile  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="assets/node_modules/morrisjs/morris.min.js"></script>
+    <script src="assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!-- Popup message jquery -->
+    <!-- Chart JS -->
+    <script src="dist/js/dashboard1.js"></script>
+    <!-- Editable -->
+    <script src="assets/node_modules/jquery-datatables-editable/jquery.dataTables.js"></script>
+    <script src="assets/node_modules/datatables/media/js/dataTables.bootstrap.js"></script>
+    <script src="assets/node_modules/tiny-editable/mindmup-editabletable.js"></script>
+    <script src="assets/node_modules/tiny-editable/numeric-input-example.js"></script>
+    <!-- This is data table -->
+    <script src="assets/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/node_modules/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+    <!-- start - This is for export functionality only -->
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+    <script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/node_modules/sweetalert2/sweet-alert.init.js"></script>
+    <!-- end - This is for export functionality only -->
+    <script>
+        $('#mainTable').numericInputExample().find('td:first').focus();
+        $('#editable-datatable').numericInputExample().find('td:first').focus();
+        $(document).ready(function() {
+            $('#editable-datatable').DataTable();
+        });
+        
+        $('#clmtable1').DataTable({
+                scrollY:        "50vh",
+                scrollX:        true,
+                scrollCollapse: true,
+            });
+    </script>
+    <script>
+        $(function() {
+            $('#myTable').DataTable();
+            var table = $('#example').DataTable({
+                "columnDefs": [{
+                    "visible": false,
+                    "targets": 2
+                }],
+                "order": [
+                    [2, 'asc']
+                ],
+                "displayLength": 25,
+                "drawCallback": function(settings) {
+                    var api = this.api();
+                    var rows = api.rows({
+                        page: 'current'
+                    }).nodes();
+                    var last = null;
+                    api.column(2, {
+                        page: 'current'
+                    }).data().each(function(group, i) {
+                        if (last !== group) {
+                            $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
+                            last = group;
+                        }
+                    });
+                }
+            });
+            // Order by the grouping
+            $('#example tbody').on('click', 'tr.group', function() {
+                var currentOrder = table.order()[0];
+                if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                    table.order([2, 'desc']).draw();
+                } else {
+                    table.order([2, 'asc']).draw();
+                }
+            });
+            // responsive table
+            $('#config-table').DataTable({
+                responsive: true
+            });
+            $('#example23').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+            $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+        });
+
+    </script>
+    <script>
+        // AuthorizationRelease Steps Start
+        $(document).ready(function(){
+            $('#arfstep0').css({'display':'block'});
+            $(".arfstepzeronext").click(function(){
+                $('#arfstep0').css({'display':'none'});
+                $('#call_text').css({'display':'block'});
+            });
+            $(".call_textnext").click(function(){
+                $('#arfstep0').css({'display':'none'});
+                $('#arfstep1').css({'display':'block'});
+                $('#call_text').css({'display':'none'});
+            });
+            $(".call_textback").click(function(){
+                $('#arfstep1').css({'display':'none'});
+                $('#call_text').css({'display':'block'});
+            });
+            $(".emailnext").click(function(){
+                $('#arfstep0').css({'display':'none'});
+                $('#email').css({'display':'block'});
+            });
+            $(".arfsteponenext").click(function(){
+                $('#arfstep1').css({'display':'none'});
+                $('#arfstep2').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $(".arfsteponeback").click(function(){
+                $('#arfstep1').css({'display':'none'});
+                $('#arfstep0').css({'display':'block'});
+                $('#email').css({'display':'none'});
+                $('#call_text').css({'display':'none'});
+            });
+            $("#arfsteptwoback").click(function(){
+                $('#arfstep2').css({'display':'none'});
+                $('#arfstep1').css({'display':'block'});
+            });
+            $("#arfsteptwonext").click(function(){
+                $('#arfstep2').css({'display':'none'});
+                $('#arfstep3').css({'display':'block'});
+                $('#email').css({'display':'none'});
+            });
+            $("#arfstepthreeback").click(function(){
+                $('#arfstep3').css({'display':'none'});
+                $('#arfstep2').css({'display':'block'});
+            });
+            $("#arfstepthreenext").click(function(){
+                $('#arfstep3').css({'display':'none'});
+                $('#arfstep4').css({'display':'block'});
+            });
+            $("#arfstepfourback").click(function(){
+                $('#arfstep4').css({'display':'none'});
+                $('#arfstep3').css({'display':'block'});
+            });
+            $("#arfstepfournext").click(function(){
+                $('#arfstep4').css({'display':'none'});
+                $('#arfstep5').css({'display':'block'});
+            });
+            $("#arfstepfiveback").click(function(){
+                $('#arfstep5').css({'display':'none'});
+                $('#arfstep4').css({'display':'block'});
+            });
+            $("#arfstepfivenext").click(function(){
+                $('#arfstep5').css({'display':'none'});
+                $('#arfstep6').css({'display':'block'});
+            });
+            $("#arfstepsixback").click(function(){
+                $('#arfstep6').css({'display':'none'});
+                $('#arfstep5').css({'display':'block'});
+            });
+            $("#arfstepsixnext").click(function(){
+                $('#arfstep6').css({'display':'none'});
+                $('#arfstep7').css({'display':'block'});
+            });
+            $("#arfstepsevenback").click(function(){
+                $('#arfstep7').css({'display':'none'});
+                $('#arfstep6').css({'display':'block'});
+            });
+            $("#arfstepsevennext").click(function(){
+                $('#arfstep7').css({'display':'none'});
+                $('#arfstep8').css({'display':'block'});
+            });
+            $("#arfstepeightback").click(function(){
+                $('#arfstep8').css({'display':'none'});
+                $('#arfstep7').css({'display':'block'});
+            });
+            $("#arfstepeightnext").click(function(){
+                $('#arfstep8').css({'display':'none'});
+                $('#arfstep9').css({'display':'block'});
+            });
+            $("#arfstepnineback").click(function(){
+                $('#arfstep9').css({'display':'none'});
+                $('#arfstep8').css({'display':'block'});
+            });
+            $("#arfstepninenext").click(function(){
+                $('#arfstep9').css({'display':'none'});
+                $('#arfstep10').css({'display':'block'});
+            });
+            $("#arfsteptenback").click(function(){
+                $('#arfstep10').css({'display':'none'});
+                $('#arfstep9').css({'display':'block'});
+            });
+            $("#arfsteptennext").click(function(){
+                $('#arfstep10').css({'display':'none'});
+                $('#arfstep11').css({'display':'block'});
+            });
+            $("#arfstepelevenback").click(function(){
+                $('#arfstep11').css({'display':'none'});
+                $('#arfstep10').css({'display':'block'});
+            });
+            $("#arfstepelevennext").click(function(){
+                $('#arfstep11').css({'display':'none'});
+                $('#arfstep12').css({'display':'block'});
+            });
+            $("#arfsteptwelveback").click(function(){
+                $('#arfstep12').css({'display':'none'});
+                $('#arfstep11').css({'display':'block'});
+            });
+            $("#arfsteptwelvenext").click(function(){
+                $('#arfstep12').css({'display':'none'});
+                $('#arfstep13').css({'display':'block'});
+            });
+            $("#arfstepthirteenenext").click(function(){
+                $('#arfstep13').css({'display':'none'});
+                $('#arfstep14').css({'display':'block'});
+            });
+        })
+
+        // show and hide for Email
+        function emailType() {
+            var x = document.getElementById("emailType");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function faxType() {
+            var x = document.getElementById("faxType");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Email
+        function email() {
+            var x = document.getElementById("email");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+
+        // show and hide for Phone
+        function fax() {
+            var x = document.getElementById("fax");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        };
+    </script>
+
+<script src="https://kit.fontawesome.com/78e9e48f87.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

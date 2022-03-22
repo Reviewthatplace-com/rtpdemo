@@ -1,0 +1,456 @@
+    
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Veins - Patient Portal</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/table.css">
+
+    <link rel="stylesheet" href="../css/datatables.min.css">
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <!-- Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <style type="text/css">
+      .requestedBytable tr th
+      {
+        font-weight: bold;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../img/logo.png" class="img-fluid" id="logo">
+                <span>Admin Panel</span>
+            </div>
+
+            <ul class="list-unstyled components">
+                 <li class="active">
+                    <a href="#practices" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-clinic-medical nav-icon"></i>
+                        <span>Practices</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practices">
+                        <li class="active">
+                            <a href="practices/addNewPractice.html"><i class="fas fa-plus"></i>Add New Practice</a>
+                        </li>
+                        <li>
+                            <a href="../practices/claimed.html"><i class="fas fa-check"></i>Claimed</a>
+                        </li>
+                        <li>
+                            <a href="../practices/unclaimed.html"><i class="fas fa-times"></i>Unclaimed</a>
+                        </li>
+                        <li>
+                            <a href="../practices/addRequest.html"><i class="fas fa-user-plus"></i>Request To Add</a>
+                        </li>
+                        <li>
+                            <a href="../practices/claimAccess.html"><i class="fas fa-user-lock"></i>Claim Access</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#billing" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-money-bill nav-icon"></i>
+                        <span>Billing</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="billing">
+                        <li>
+                            <a href="../billing/create.html"><i class="fas fa-plus"></i>Create</a>
+                        </li>
+                        <li>
+                            <a href="../billing/active.html"><i class="fas fa-check-double"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../billing/inactive.html"><i class="far fa-times-circle"></i>Inactive</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="../categories.html">
+                        <i class="fa fa-list nav-icon"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+
+
+                <li>
+
+                    <a href="#rms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-search-location nav-icon"></i>
+                        <span>RMS</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="rms">
+                        <li>
+                            <a href="../rms/reviews.html"><i class="fas fa-search"></i>Reviews</a>
+                        </li>
+                        <li>
+                            <a href="../rms/practices.html"><i class="fas fa-hospital-alt"></i>Practices</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#insurance" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-shield-alt nav-icon"></i>
+                        <span>Insurance</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="insurance">
+                        <li>
+                            <a href="../insurances/active.html"><i class="fas fa-user-shield"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../insurances/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                
+
+                <li>
+                    <a href="#practiceUser" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-user-check nav-icon"></i>
+                        <span>Practice User</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="practiceUser">
+                        <li>
+                            <a href="../practiceUser/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../practiceUser/pending.html"><i class="fas fa-user-plus"></i>Pending</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#patientPortal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-stethoscope nav-icon"></i>
+                        <span>Patient Portal</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="patientPortal">
+                        <li>
+                            <a href="../patientPortal/active.html"><i class="fas fa-user-check"></i>Active</a>
+                        </li>
+                        <li>
+                            <a href="../patientPortal/pending.html"><i class="fas fa-user-edit"></i>Pending</a>
+                        </li>
+                        <li>
+                            <a href="../patientPortal/notStarted.html"><i class="fas fa-user-times"></i>Not Started</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../userType.html">
+                        <i class="fa fa-users nav-icon"></i>
+                        <span >User Type</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../reports.html">
+                        <i class="fa fa-file nav-icon"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+        <!-- ================= Sidebar ======================== -->
+
+
+        <!-- ================= Page Content ======================== -->
+        <div id="content">
+            <!-- ================= Navbar ======================== -->
+            <nav class="navbar navbar-expand-lg navbar-light white fixed-top">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    <h3 class="h3-responsive pageTitle">Practices - Add New Practice</h3>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                          
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- ================= Navbar ======================== -->
+
+            <!-- ================= Main Content ======================== -->
+            
+            <main>
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-xl-4">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Update Current</span>
+                          </div>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                              aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Update New</span>
+                          </div>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                              aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xl-4">
+                        <button class="btn btn-success mt-0 p-2 px-4"><i class="fas fa-upload pr-2"></i>Upload</button>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+                <!-- card -->
+                <div class="card">
+                    <!-- card body -->
+                    <div class="card-body">  
+                      <form>
+                        <div class="row">
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">RTP ID</label>
+                            </div>
+                          </div>
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">Location ID</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">Request Access ID</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">Active</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">RC Email</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">Practice Name</label>
+                            </div>
+                          </div>
+
+
+                          <div class="col-xl-4">
+                            <label>Category</label>
+                            <select class="form-control">
+                              <option selected="" disabled="">Choose Category</option>
+                              <option>Cat 1</option>
+                              <option>Cat 2</option>
+                              <option>Cat 3</option>
+                            </select>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">Phone</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">Fax</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">Email</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">Street</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">City</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <label>State</label>
+                            <select class="form-control">
+                                <option value="" selected="">Choose State</option>
+                                <option value="FL">FL</option>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DE">DE</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                            </select>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">Zip</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">Website</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-4">
+                            <div class="md-form">
+                              <input type="text" id="" class="form-control">
+                              <label for="">Time Zone</label>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <input type="button" name="" class="btn btn-success" value="Add">
+                      </form>  
+                    </div>
+                    <!-- card body -->
+                </div>
+                <!-- card -->
+            </main>
+            <!-- ================= Main Content ======================== -->
+
+            <!-- ============================= Footer starts here ======================= -->
+            <footer class="page-footer font-small blue fixed-bottom">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                  <a href="#"> Review That Place.com</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+            <!-- ============================= Footer Ends here ======================= -->
+          
+        </div>
+        <!-- ================= Page Content ======================== -->
+    </div>
+    <!-- ================= Ends here ======================== -->
+
+
+
+
+    
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- sidebar JS -->
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/mdb.min.js"></script>
+    <script src="../js/tableScript.js"></script>
+</body>
+
+</html>
