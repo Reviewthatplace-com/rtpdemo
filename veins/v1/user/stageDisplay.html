@@ -306,6 +306,7 @@
                                     <ul aria-expanded="false" class="collapse">
                                         <li><a href="stageAndStep.html">Stage And Step</a></li>
                                         <li><a href="resource.html">Resource</a></li>
+                                        <li><a href="taskstodo.html">Tasks To-Do</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="smsTemplates.html">SMS Template</a></li>
@@ -1749,6 +1750,19 @@
                                                                 <span class="tooltip-text3">
                                                                     <span class="tooltip-inner2">
                                                                         <span style="font-weight: 700;">Mapping</span>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="col-1 m-1">
+                                                        <a href="" data-toggle="modal" data-target="#taskidmodal" class="mytooltip" >
+                                                            <i class="fas fa-check text-danger fa-lg"></i>
+                                                            <span class="tooltip-content5">
+                                                                <span class="tooltip-text3">
+                                                                    <span class="tooltip-inner2">
+                                                                        <span style="font-weight: 700;">Tasks To-do</span>
                                                                     </span>
                                                                 </span>
                                                             </span>
@@ -5582,6 +5596,88 @@
         <!-- /.modal-dialog -->
     </div>
     <!-- Resource ID Modal -->
+
+    <!-- task ID Modal -->
+    <div class="modal bs-example-modal-lg fade" id="taskidmodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Tasks To-do</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+
+                <div class="modal-body mb-1 pt-2">
+                    <div class="table-responsive">
+                      <table id="clmtable2" class="table display table-bordered table-striped no-wrap">
+                          <thead class="thead-dark">
+                              <tr>
+                                  <th>Action</th>
+                                  <th>Task Name</th>
+                                  <th>Task ID</th>
+                                  <th>Assigned</th>
+                                  <th>Completed</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                <td>
+                                  <div class="col-lg-3 switchery-demo">
+                                      <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                  </div>
+                                </td>
+                                  <td>1</td>
+                                  <td>Task 01</td>
+                                  <td>
+                                    <span class="bs-label label-success m-1 p-2x text-white">Assigned</span>
+                                  </td>
+                                  <td>
+                                    <span class="bs-label label-success m-1 p-2x text-white">Completed</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="col-lg-3 switchery-demo">
+                                      <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                  </div>
+                                </td>
+                                  <td>1</td>
+                                  <td>Task 02</td>
+                                  <td>
+                                    <span class="bs-label label-warning m-1 p-2x text-white">Assigned</span>
+                                  </td>
+                                  <td>
+                                    <span class="bs-label label-warning m-1 p-2x text-white">Pending</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="col-lg-3 switchery-demo">
+                                      <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                  </div>
+                                </td>
+                                  <td>1</td>
+                                  <td>Task 03</td>
+                                  <td>
+                                    <span class="bs-label label-danger m-1 p-2x text-white">Unassigned</span>
+                                  </td>
+                                  <td>
+                                    <span class="bs-label label-danger m-1 p-2x text-white">Pending</span>
+                                </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success waves-effect col-12 taskupdateStage">Update Taks</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- task ID Modal -->
 
     <!-- confirmation alert for my patient -->
     <div id="newptModalalert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">

@@ -450,6 +450,38 @@ $(function() {
           });
      });
 
+     $(".taskupdateStage").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Ravi Agrawal Updated task for a Patient Visit',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+     });
+     
+          $.toast({
+          heading: '',
+          text: 'Ravi Agrawal Updated task for a Patient Visit',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Ravi Agrawal Updated task for a Patient Visit',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
      $(".demoupdateStage").click(function(){
           $.toast({
           heading: '',
@@ -1452,6 +1484,72 @@ $(function() {
           });
      });
      //Resource End
+
+     //tasktodo Start
+     $(".task-Add").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Ravi Agrawal Added a task',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+          });
+          
+          $.toast({
+          heading: '',
+          text: 'Ravi Agrawal Added a task',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Ravi Agrawal Added a task',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+
+     $(".task-Update").click(function(){
+          $.toast({
+          heading: '',
+          text: 'Ravi Agrawal Updated a task',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'warning',
+          hideAfter: 3500, 
+          stack: 6
+          });
+          
+          $.toast({
+          heading: '',
+          text: 'Ravi Agrawal Updated a task',
+          position: 'top-right',
+          loaderBg:'#ff6849',
+          icon: 'success',
+          hideAfter: 3500, 
+          stack: 6
+     });
+
+          $.toast({
+               heading: '',
+               text: 'Ravi Agrawal Updated a task',
+               position: 'top-right',
+               loaderBg:'#ff6849',
+               icon: 'error',
+               hideAfter: 3500, 
+               stack: 6
+          });
+     });
+     //tasktodo End
 
      //SMS Template Start
      $(".smstempAdd").click(function(){
