@@ -307,9 +307,9 @@
                                     <ul aria-expanded="false" class="collapse">
                                         <li><a href="stageAndStep.html">Stage And Step</a></li>
                                         <li><a href="resource.html">Resource</a></li>
-                                        <li><a href="taskstodo.html">Tasks To-Do</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="taskstodo.html">Tasks To-do</a></li>
                                 <li><a href="smsTemplates.html">SMS Template</a></li>
                                 <li><a href="emailTemplates.html">Email Template</a></li>
                             </ul>
@@ -415,6 +415,7 @@
                             <tr>
                               <th>Action</th>
                               <th>Task Name</th>
+                              <th>Task Descrition</th>
                               <th>Task ID</th>
                             </tr>
                         </thead>
@@ -428,12 +429,12 @@
                                             <span class="sr-only">Toggle Dropdown</span>
                                         </button>
                                         <div class="dropdown-menu animated flipInY">
-                                            <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#resourcePatients">Patients</a>
                                             <a class="dropdown-item task-todo-Archive" href="javascript:void(0)">Archive</a>
                                         </div>
                                     </div>
                                 </td>
                                 <td>Task 1</td>
+                                <td>Creating Account</td>
                                 <td>2548</td>
                             </tr>
 
@@ -445,12 +446,12 @@
                                             <span class="sr-only">Toggle Dropdown</span>
                                         </button>
                                         <div class="dropdown-menu animated flipInY">
-                                            <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#resourcePatients">Patients</a>
                                             <a class="dropdown-item task-todo-Archive" href="javascript:void(0)">Archive</a>
                                         </div>
                                     </div>
                                 </td>
                                 <td>Task 2</td>
+                                <td>Archive Account</td>
                                 <td>2548</td>
                             </tr>
 
@@ -462,12 +463,12 @@
                                             <span class="sr-only">Toggle Dropdown</span>
                                         </button>
                                         <div class="dropdown-menu animated flipInY">
-                                            <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#resourcePatients">Patients</a>
                                             <a class="dropdown-item task-todo-Archive" href="javascript:void(0)">Archive</a>
                                         </div>
                                     </div>
                                 </td>
                                 <td>Task 3</td>
+                                <td>Remove Account</td>
                                 <td>2548</td>
                             </tr>
 
@@ -4079,13 +4080,13 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Add Tasks</h4>
+                    <h4 class="modal-title">Add Task</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
                     <form class="floating-labels m-t-40">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 m-2">
                             <!-- Task To-do Add Name -->
                             <div class="form-group">
                                 <label for="">Task Name</label>
@@ -4093,19 +4094,19 @@
                             </div>
                             <!-- Task To-do Add Name -->  
                             </div>
-                            <div class="col">
-                                <!-- Task To-do Add ID -->
+                            <div class="col-12 m-2">
+                                <!-- Task To-do description -->
                                  <div class="form-group">
-                                  <label for="">Task ID</label>
-                                  <input name="" class="form-control" id="" required="" type="text">
+                                    <label for="">Task Description</label>
+                                    <input name="" class="form-control" id="" required="" type="text">
                                  </div>
-                                <!-- Task To-do Add ID -->
+                                <!-- Task To-do description -->
                             </div>
                         </div> 
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 task-Add">Create Task List</button>
+                    <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 task-Add">Create Task</button>
                 </div>
             </div>
         </div>
@@ -4117,13 +4118,13 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Update Task List</h4>
+                    <h4 class="modal-title">Update Task</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
                     <form class="floating-labels m-t-40">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12 m-2">
                             <!-- Task To-do edit Name -->
                             <div class="form-group">
                                 <label for="">Task Name</label>
@@ -4131,19 +4132,19 @@
                             </div>
                             <!-- Task To-do edit Name -->  
                             </div>
-                            <div class="col">
-                                <!-- Task To-do edit ID -->
+                            <div class="col-12 m-2">
+                                <!-- Task To-do description -->
                                  <div class="form-group">
-                                  <label for="">Task ID</label>
-                                  <input name="" class="form-control" id="" required="" type="text">
+                                    <label for="">Task Description</label>
+                                    <input name="" class="form-control" id="" required="" type="text">
                                  </div>
-                                <!-- Task To-do edit ID -->
+                                <!-- Task To-do description -->
                             </div>
                         </div> 
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 task-Update">Update Task List</button>
+                    <button type="button" class="btn btn-outline-success waves-effect waves-light col-12 task-Update">Update Task</button>
                 </div>
             </div>
         </div>

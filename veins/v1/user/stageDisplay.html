@@ -306,9 +306,9 @@
                                     <ul aria-expanded="false" class="collapse">
                                         <li><a href="stageAndStep.html">Stage And Step</a></li>
                                         <li><a href="resource.html">Resource</a></li>
-                                        <li><a href="taskstodo.html">Tasks To-Do</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="taskstodo.html">Tasks To-do</a></li>
                                 <li><a href="smsTemplates.html">SMS Template</a></li>
                                 <li><a href="emailTemplates.html">Email Template</a></li>
                             </ul>
@@ -2412,6 +2412,7 @@
                             <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#collect_payment" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">Collect Payment</span></a> </li>
                             <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#request_payment" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">Request Payment</span></a> </li>
                             <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#assign_physician" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">Assign Physician</span></a> </li>
+                            <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#task-todo" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">Tasks To-Do</span></a> </li>
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content" style="width: 950px;">
@@ -3218,6 +3219,99 @@
                                                   <td>9872712063</td>
                                               </tr>
                                           </tbody>
+                                      </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane active-tab" id="task-todo" role="tabpanel">
+                                <h3 class="font-weight-bold h3Spacing">Tasks To-do</h3>
+                                <div class="modal-body">
+                                    <div class="table-responsive">
+                                      <table id="config-table10" class="table display table-bordered table-striped no-wrap">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th>Action</th>
+                                                <th>Task Name</th>
+                                                <th>Task ID</th>
+                                                <th>Assigned</th>
+                                                <th>Completed</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                              <td>
+                                                <div class="col-lg-3 switchery-demo">
+                                                    <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                </div>
+                                              </td>
+                                                <td>1</td>
+                                                <td>Task 01</td>
+                                                <td>
+                                                  Shakir Ansari
+                                                  <br>
+                                                  05/12/2022
+                                                  <br>
+                                                  07:37PM
+                                                </td>
+                                                <td>
+                                                  <span class="text-left">
+                                                      Shakir Ansari
+                                                      <br>
+                                                      05/12/2022
+                                                      <br>
+                                                      07:37PM
+                                                  </span>
+                                                </td>
+                                            </tr>
+              
+                                            <tr>
+                                              <td>
+                                                <div class="col-lg-3 switchery-demo">
+                                                    <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                </div>
+                                              </td>
+                                                <td>1</td>
+                                                <td>Task 02</td>
+                                                <td>
+                                                  Shakir Ansari
+                                                  <br>
+                                                  05/12/2022
+                                                  <br>
+                                                  07:37PM
+                                                </td>
+                                                <td>
+                                                  <button class="btn btn-outline-danger">
+                                                      Mark As Completed
+                                                      <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                  </button>
+                                                </td>
+                                            </tr>
+              
+                                            <tr>
+                                              <td>
+                                                <div class="col-lg-3 switchery-demo">
+                                                    <input type="checkbox" checked class="js-switch" data-color="#00C292" />
+                                                </div>
+                                              </td>
+                                                <td>1</td>
+                                                <td>Task 03</td>
+                                                <td>
+                                                  Shakir Ansari
+                                                  <br>
+                                                  05/12/2022
+                                                  <br>
+                                                  07:37PM
+                                                </td>
+                                                <td>
+                                                  <button class="btn btn-outline-danger" disabled>
+                                                      Mark As Completed
+                                                      <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                  </button>
+                                              </td>
+                                            </tr>
+              
+                                        </tbody>
                                       </table>
                                     </div>
                                 </div>
@@ -5628,12 +5722,23 @@
                                   <td>1</td>
                                   <td>Task 01</td>
                                   <td>
-                                    <span class="bs-label label-success m-1 p-2x text-white">Assigned</span>
+                                    Shakir Ansari
+                                    <br>
+                                    05/12/2022
+                                    <br>
+                                    07:37PM
                                   </td>
                                   <td>
-                                    <span class="bs-label label-success m-1 p-2x text-white">Completed</span>
-                                </td>
+                                    <span class="text-left">
+                                        Shakir Ansari
+                                        <br>
+                                        05/12/2022
+                                        <br>
+                                        07:37PM
+                                    </span>
+                                  </td>
                               </tr>
+
                               <tr>
                                 <td>
                                   <div class="col-lg-3 switchery-demo">
@@ -5643,12 +5748,20 @@
                                   <td>1</td>
                                   <td>Task 02</td>
                                   <td>
-                                    <span class="bs-label label-warning m-1 p-2x text-white">Assigned</span>
+                                    Shakir Ansari
+                                    <br>
+                                    05/12/2022
+                                    <br>
+                                    07:37PM
                                   </td>
                                   <td>
-                                    <span class="bs-label label-warning m-1 p-2x text-white">Pending</span>
-                                </td>
+                                    <button class="btn btn-outline-danger">
+                                        Mark As Completed
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    </button>
+                                  </td>
                               </tr>
+
                               <tr>
                                 <td>
                                   <div class="col-lg-3 switchery-demo">
@@ -5658,12 +5771,20 @@
                                   <td>1</td>
                                   <td>Task 03</td>
                                   <td>
-                                    <span class="bs-label label-danger m-1 p-2x text-white">Unassigned</span>
+                                    Shakir Ansari
+                                    <br>
+                                    05/12/2022
+                                    <br>
+                                    07:37PM
                                   </td>
                                   <td>
-                                    <span class="bs-label label-danger m-1 p-2x text-white">Pending</span>
+                                    <button class="btn btn-outline-danger" disabled>
+                                        Mark As Completed
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    </button>
                                 </td>
                               </tr>
+
                           </tbody>
                       </table>
                     </div>
@@ -7050,6 +7171,10 @@
                             
         // responsive table2
         $('#config-table9').DataTable({
+            responsive: true
+        });               
+        // responsive table2
+        $('#config-table10').DataTable({
             responsive: true
         });
         $('#example31').DataTable({
