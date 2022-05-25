@@ -2439,6 +2439,7 @@
                             <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#request_payment" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">Request Payment</span></a> </li>
                             <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#assign_physician" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">Assign Physician</span></a> </li>
                             <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#task-todo" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">Tasks To-Do</span></a> </li>
+                            <li class="nav-item"> <a class="nav-link text-nowrap" data-toggle="tab" href="#history-tab" role="tab"><span class="hidden-sm-up"><i class="ti-eye"></i></span> <span class="hidden-xs-down">History</span></a> </li>
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content" style="width: 950px;">
@@ -3333,6 +3334,463 @@
                                         </tbody>
                                       </table>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane active-tab profile-tab-pane" id="history-tab" role="tabpanel">
+                                <h3 class="font-weight-bold h3Spacing">History</h3>
+                                <div class="modal-body">
+                                    <ul class="timeline timeline-history">
+                                        <!-- <p>
+                                            <ul>
+                                                <li>Username: <span class="text-info">Blue</span></li>
+                                                <br>
+                                                <li>Physican Name: <span class="text-warning">Yellow</span></li>
+                                                <br>
+                                                <li>Patient Name: <span class="text-danger">red</span></li>
+                                                <li>Patient ID: <span class="text-danger">red</span></li>
+                                                <br>
+                                                <li>Visit Reason: <span class="text-success">green</span></li>
+                                                <li>Visit Type: <span class="text-success">green</span></li>
+                                                <li>Visit ID: <span class="text-success">green</span></li>
+                                                <br>
+                                                <li>Date of Service: <span class="text-purple">purple</span></li>
+                                                <br>
+                                                <li>Step Name: <span class="text-cyan">Cyan</span></li>
+                                                <li>Stage Name: <span class="text-cyan">Cyan</span></li>
+                                            </ul>
+                                        </p> -->
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge danger">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-danger">Jhon Doe</span> 
+                                                        Checked In on DOS 
+                                                        <span class="font-weight-bold text-purple">05/26/22</span> 
+                                                         for
+                                                        <span class="font-weight-bold text-success">Visit Type 01</span> 
+                                                         - 
+                                                        <span class="font-weight-bold text-success">Visit Reason 01</span>
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        Checked In 
+                                                        <span class="font-weight-bold text-danger">PT01</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jhon Doe</span> 
+                                                         on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span> 
+                                                         for
+                                                        <span class="font-weight-bold text-success">Visit Type 01</span> 
+                                                         - 
+                                                        <span class="font-weight-bold text-success">Visit Reason 01</span>
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge danger">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-danger">Jhon Doe</span> 
+                                                        Checked In on DOS 
+                                                        <span class="font-weight-bold text-purple">05/26/22</span> 
+                                                         for
+                                                        <span class="font-weight-bold text-success">Visit Type 01</span> 
+                                                         - 
+                                                        <span class="font-weight-bold text-success">Visit Reason 01</span>
+                                                        with Visit ID:
+                                                        <span class="font-weight-bold text-success">VID1</span>
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        Checked In 
+                                                        <span class="font-weight-bold text-danger">PT01</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jhon Doe</span> 
+                                                         on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span> 
+                                                         for Visit ID:
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        with
+                                                        <span class="font-weight-bold text-success">Visit Type 01</span> 
+                                                          - 
+                                                        <span class="font-weight-bold text-success">Visit Reason 01</span>
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        deleted in-active visit record Visit ID:
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span> 
+                                                        for
+                                                        <span class="font-weight-bold text-danger">PT02</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jhon Doe</span> 
+                                                         with
+                                                        <span class="font-weight-bold text-success">Visit Type 01</span> 
+                                                          - 
+                                                        <span class="font-weight-bold text-success">Visit Reason 01</span>
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        deleted active visit record Visit ID:
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span> 
+                                                        for
+                                                        <span class="font-weight-bold text-danger">PT02</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jhon Doe</span> 
+                                                         with
+                                                        <span class="font-weight-bold text-success">Visit Type 01</span> 
+                                                          - 
+                                                        <span class="font-weight-bold text-success">Visit Reason 01</span>
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        assigned:
+                                                        <span class="font-weight-bold text-danger">Jhon Doe</span> 
+                                                        to
+                                                        <span class="font-weight-bold text-danger">PT02</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jane Doe</span> 
+                                                        for Visit ID: 
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span> 
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        created a new profile for 
+                                                        <span class="font-weight-bold text-danger">Jhon Doe</span> 
+                                                        to
+                                                        <span class="font-weight-bold text-danger">PT02</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jane Doe</span> 
+                                                        for Visit ID: 
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span> 
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        assigned physician
+                                                        <span class="font-weight-bold text-warning">Ravi</span> 
+                                                        to
+                                                        <span class="font-weight-bold text-danger">PT02</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jane Doe</span> 
+                                                        for Visit ID: 
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span> 
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        re-assigned physician
+                                                        <span class="font-weight-bold text-warning">Ravi</span> 
+                                                        to
+                                                        <span class="font-weight-bold text-danger">PT02</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jane Doe</span> 
+                                                        for Visit ID: 
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span> 
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        started step
+                                                        <span class="font-weight-bold text-cyan">Step 01</span>
+                                                        for Visit ID: 
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span>  
+                                                        for
+                                                        <span class="font-weight-bold text-danger">PT02</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jane Doe</span> 
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        completed step
+                                                        <span class="font-weight-bold text-cyan">Step 01</span>
+                                                        for Visit ID: 
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span>  
+                                                        for
+                                                        <span class="font-weight-bold text-danger">PT02</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jane Doe</span> 
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        re-started step
+                                                        <span class="font-weight-bold text-cyan">Step 01</span>
+                                                        for Visit ID: 
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span>  
+                                                        for
+                                                        <span class="font-weight-bold text-danger">PT02</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jane Doe</span> 
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        canceled step
+                                                        <span class="font-weight-bold text-cyan">Step 01</span>
+                                                        for Visit ID: 
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        on DOS
+                                                        <span class="font-weight-bold text-purple">05/26/22</span>  
+                                                        for
+                                                        <span class="font-weight-bold text-danger">PT02</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jane Doe</span> 
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge danger">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-danger">PT01</span>
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jhon Doe</span> 
+                                                        entered initial stage
+                                                        <span class="font-weight-bold text-cyan">Stage Name</span> 
+                                                         for
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                         on DOS
+                                                        <span class="font-weight-bold text-purple">05-26-22</span>
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-inverted history-li">
+
+                                            <div class="timeline-badge history-badge info">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+
+                                            <div class="timeline-panel history-panel">
+                                                <div class="timeline-body">
+                                                    <p>
+                                                        <span class="font-weight-bold text-info">Shakir Ansari</span> 
+                                                        moved
+                                                        <span class="font-weight-bold text-success">VID01</span> 
+                                                        to
+                                                        <span class="font-weight-bold text-cyan">Stage 01</span> 
+                                                        on DOS
+                                                       <span class="font-weight-bold text-purple">05/26/22</span>
+                                                       for
+                                                        <span class="font-weight-bold text-danger">PT01</span> 
+                                                        -
+                                                        <span class="font-weight-bold text-danger">Jhon Doe</span>  
+                                                    </p>
+                                                    <p><small style="color:grey;" class="mt-2">05-26-22 01:47 AM</small></p>
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -5414,11 +5872,11 @@
                     <!-- Nav tabs -->
                     <ul class="nav md-tabs tabs-2 light-blue darken-3" role="tablist">
                         <li class="nav-item">
-                          <a class="nav-link white-text active show" data-toggle="tab" href="#veinsPanel" role="tab" aria-selected="false"><i class="fas fa-user-plus mr-1"></i>
+                          <a class="btn btn-outline-custom m-2 nav-link white-text active show" data-toggle="tab" href="#veinsPanel" role="tab" aria-selected="false"><i class="fas fa-user-plus mr-1 "></i>
                           Suggested</a>
                         </li>
                       <li class="nav-item">
-                        <a class="nav-link white-text" data-toggle="tab" href="#myPatientPanel" role="tab" aria-selected="true"><i class="fas fa-user mr-1"></i>
+                        <a class="btn btn-outline-custom m-2 nav-link white-text" data-toggle="tab" href="#myPatientPanel" role="tab" aria-selected="true"><i class="fas fa-user mr-1 "></i>
                         All Patients</a>
                       </li>
                     </ul>

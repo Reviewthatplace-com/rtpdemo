@@ -43,17 +43,16 @@ Timeline page
   margin-left: -1.5px;
   background-color: #e9ecef; }
 
+  .timeline-history:before {
+    left: 1% !important;
+   }
+
 .timeline > li {
   position: relative;
   margin-bottom: 20px; }
 
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table; }
-
-.timeline > li:after {
-  clear: both; }
+  .timeline > .history-li {
+    margin-bottom: 0px !important; }
 
 .timeline > li:before,
 .timeline > li:after {
@@ -62,6 +61,25 @@ Timeline page
 
 .timeline > li:after {
   clear: both; }
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table; }
+
+.timeline > li:after {
+  clear: both; }
+
+
+  .timeline > li > .history-panel {
+    left: 25px !important;
+    top: 6.5px !important;
+    width: 100% !important;
+    padding: 10px !important;
+    border: 0px !important;
+    -webkit-box-shadow: 0 1px 6px rgb(0 0 0 / 0%) !important;
+    box-shadow: 0 1px 6px rgb(0 0 0 / 0%) !important;
+  }
 
 .timeline > li > .timeline-panel {
   float: left;
@@ -109,6 +127,14 @@ Timeline page
   line-height: 50px;
   color: #fff;
   overflow: hidden; }
+
+  .timeline > li > .history-badge {
+    top: 10px !important;
+    left: 1.5% !important;
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+  }
 
 .timeline > li.timeline-inverted > .timeline-panel {
   float: right; }
