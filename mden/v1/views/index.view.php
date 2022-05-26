@@ -288,7 +288,7 @@
                   <div class="single-service">
                      <img src="https://cdn4.iconfinder.com/data/icons/medical-yellow/60/medical-yellow-063-tooth-implant-512.png" class="img-fluid serviceImg" alt="Tooth Replacement">
                      <h3>Tooth Replacement</h3>
-                     <p>Dr. Khan's background in restorative dentistry allows him to develop solutions for every scenario. </p>
+                     <p>The best doctors in restorative dentistry allows them to develop solutions for every scenario. </p>
                   </div>
                </div>
                <div class="col-xl-4 col-md-6">

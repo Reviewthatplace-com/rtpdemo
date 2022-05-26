@@ -70,7 +70,8 @@
   <link href="assets/css/style.min.css" rel="stylesheet">
   <link href="assets/css/widget.min.css" rel="stylesheet">
   <link href="assets/css/result2.min.css" rel="stylesheet">
-</head>
+    <link href="assets/css/select2.min.css" rel="stylesheet" rel="prefetch">
+ </head>
 
 <body>
 
@@ -78,12 +79,12 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:rtpdemo@gmail.com">rtpdemo@gmail.com</a>
+        <i class="bi bi-envelope"></i> <a href="mailto:support@reviewthatplace.com">support@reviewthatplace.com</a>
         <i class="bi bi-phone"></i> <a href="tel:888-503-1636">888-503-1636</a>
       </div>
       <div class="d-none d-lg-flex align-items-center">
        <div class="contact-info d-flex align-items-center">
-         <i class="bi bi-clock"></i> <a href="#">Mon-Fri:9:00AM - 05:00PM</a>
+         <i class="bi bi-clock"></i> <a href="javascript:(void)">Mon-Fri:9:00AM - 05:00PM</a>
        </div>
       </div>
     </div>
@@ -160,7 +161,7 @@
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-images"></i>
                     <h4><a onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/survey', '_blank'); return false;">Survey</a></h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    <p>We’d love to hear about your experience with us.</p>
                   </div>
                 </div>
               </div>
@@ -183,23 +184,25 @@
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center pt-2 pb-5 px-lg-5">
             <h4>ABOUT US</h4>
             <h3>WELCOME TO RTP MEDICAL SOLUTION</h3>
-            <p>We check for your current health issues and decide your treatment. Our specialists will take care of your health with dedication.</p>
+            <p>We are a leading medical solutions expert in the United States.
+              The idea behind RTP Medical Solution was to develop a long term concept which aims to improve people’s medical care.
+              </p>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Trained Physician</a></h4>
+              <h4 class="title"><a href="javascript:(void)">Trained Physician</a></h4>
               <p class="description">Our highly trained physicians and front of office carry out only the highest quality medical services that are of the finest standard</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Extra Care</a></h4>
+              <h4 class="title"><a href="javascript:(void)">Extra Care</a></h4>
               <p class="description">We pride ourselves on getting to see our patients FAST – taking extra care to ensure you land a same-day appointment with a short waiting time</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">24 X 7 Support</a></h4>
+              <h4 class="title"><a href="javascript:(void)">24 X 7 Support</a></h4>
               <p class="description">Please feel free to view our range of insurance options. We also offer a 24-hour service for out of hour questions and emergency services</p>
             </div>
 
@@ -257,13 +260,23 @@
       <div class="section-title">
         <h2 class="mb-0">Helpful Resources</h2>
       </div> 
-      <div class="well text-center">
-        @foreach ($categories as $category)
-        <a href="{{ route('category', $category->slug) }}" class="mr-3">
-          <span>{{ $category->name }}</span>
-        </a> 
-        @endforeach
-      </div>
+      <div class="well">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                <option value="Physical">Physical</option>
+                <option value="Fever">Fever</option>
+                <option value="Sports Physical">Sports Physical</option>
+                <option value="Camp Physical">Camp Physical</option>
+                <option value="EKG">EKG</option>
+            </select>          
+          </div>
+          <div class="col-12 text-center">
+            <button class="btn btn-primary col-3 mt-3" type="button">Search</button>
+          </div>
+        </div>
+      </div> 
     </div> 
     </section>
 
@@ -295,7 +308,7 @@
     </section><!-- End Clients Section -->
 
     <!-- ======= strip Section ======= -->
-    <section id="impressed-strip" class="strip">
+    <!-- <section id="impressed-strip" class="strip">
       <div class="container-fluid strip-container" data-aos="zoom-in">
        <div class="row justify-content-center">
         <div class="col-lg-8 col-11 text-center">
@@ -304,7 +317,7 @@
         </div> 
        </div>
       </div>
-    </section><!-- End strip Section -->
+    </section> --><!-- End strip Section -->
 
     <!-- ======= Patient Resource Center Section ======= -->
     <section id="resources" class="resources">
@@ -344,10 +357,9 @@
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>Request Forms</h3>
                     <p>Save time and request any type of form you need from our office online</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
                     <a href="https://rtpmedsol.rtpdemo.com/demoforms/requestform" target="_blank" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.1.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.1.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -355,11 +367,10 @@
                 <div class="row">
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>Update Demo</h3>
-                    <p>Update your demographics; Address, Phone, Email, ect</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
+                    <p>Update your demographics; Address, Phone, Email, etc.</p>
                     <a href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.2.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.2.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -368,10 +379,9 @@
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>Authorization Release</h3>
                     <p>This forms gives us the ability to obtain or release your medical records</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
                     <a href="https://rtpmedsol.rtpdemo.com/demoforms/authorizationrelease" target="_blank" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.3.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.3.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -380,10 +390,9 @@
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>New Patient Forms</h3>
                     <p>If you are a new patient and save time on your first visit by filling out the New Patient Packet here</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
                     <a href="https://rtpmedsol.rtpdemo.com/demoforms/mfamnewpt" target="_blank" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.4.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.4.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -392,10 +401,9 @@
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>Book Appointments</h3>
                     <p>Skip the waiting on the phone and simply request an appointment online</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
                     <a href="https://rtpmedsol.rtpdemo.com/demoforms/bookappointment" target="_blank" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.5.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.5.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -404,10 +412,9 @@
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>Patient Portal</h3>
                     <p>Access for current patients to their Patient Portal. Access your medical records and much more</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
                     <a href="#" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.6.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.6.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -471,21 +478,10 @@
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>Sports Physicals</h3>
                  <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                 </ul>
-                 <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
+                  Seeing your doctor for routine well-child visits and sports physicals helps keep your child's medical records and health history up to date. 
                  </p>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image1.webp);">
+               <div class="col-lg-12 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image1.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -494,22 +490,10 @@
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>Camp Physicals</h3>
                  <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
+                  Also called pre-participation physicals, camp physical examinations are an essential part of registering children for camps.
                  </p>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                 </ul>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image2.webp);">
+               <div class="col-lg-12 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image2.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -518,21 +502,10 @@
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>Including Gyn Services</h3>
                  <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                 </ul>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
+                  Our OB/GYNs offer expert care for women of all ages. Whether you're pregnant or need specialized gynecological treatment.
                  </p>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image3.webp);">
+               <div class="col-lg-12 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image3.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -541,21 +514,10 @@
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>School Physicals</h3>
                  <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
+                  School physicals are wellness checkups that are required by most schools before a student can participate in sports and other activities.
                  </p>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                 </ul>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image4.webp);">
+               <div class="col-lg-12 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image4.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -596,21 +558,10 @@
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>FAA exams</h3>
                  <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                 </ul>
-                 <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
+                  An AME who knows you well is more likely to answer questions for you over the phone. Understand the three possible outcomes of an FAA medical examination.
                  </p>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image5.webp);">
+               <div class="col-lg-12 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image5.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -619,22 +570,10 @@
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>Laboratory Services</h3>
                  <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
+                  Learn about medical tests, including what the tests are used for, why a doctor may order a test, how a test will feel, and what the results may mean.
                  </p>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                 </ul>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image6.webp);">
+               <div class="col-lg-12 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image6.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -643,21 +582,10 @@
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>EKG’s</h3>
                  <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                 </ul>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
+                  Your doctor may suggest you get an electrocardiogram also called an EKG or ECG to check for signs of heart disease.
                  </p>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image7.webp);">
+               <div class="col-lg-12 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image7.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -666,21 +594,10 @@
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>Well Child Care</h3>
                  <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
+                  Parents know who they should go to when their child is sick. But pediatrician visits are just as important for healthy children
                  </p>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                 </ul>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image8.webp);">
+               <div class="col-lg-12 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image8.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -716,8 +633,8 @@
 
       <!-- Insurance Tabs -->
       <div class="row feture-tabs" data-aos="fade-up">
-
-       <div class="col-lg-6">
+        <div class="col-lg-1"></div>
+       <div class="col-lg-4">
          <img data-src="assets/img/medicalinsurance.webp" class="img-fluid insurance-bg lazyload" alt="insurance">
        </div>
        <!-- Tab Content -->
@@ -836,6 +753,7 @@
           <!-- tab3 -->
         </div> 
        </div><!-- Tab Content -->
+       <div class="col-lg-1"></div>
       </div>
      </div>
     </section><!-- End Insurances Section -->
@@ -870,22 +788,21 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="#">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+                Less Than 15% of Medical Sites Meet CORE WEB VITALS Scores
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="#">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="#"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="javascript:(void)">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="javascript:(void)"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta zena prista maraeda talan mas indera.
-                </p>
+                  Data from a recent study shows less than 15% of websites are optimized well enough to pass a Core Web Vitals assessment.
                 <div class="read-more">
-                  <a href="blog.html">Read More</a>
+                  <a href="blog.html" target="_blank">Read More</a>
                 </div>
               </div>
 
@@ -900,22 +817,22 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="#">Nisi magni odit consequatur autem nulla dolorem</a>
+                8 Silly but Harmful SEO Mistakes Medical Sites Make
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="#">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="#"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="javascript:(void)">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="javascript:(void)"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias.
+                  A whole lot of things can go wrong in SEO. In this article, I'll highlight eight damaging mistakes SEO medical websites should look out for.
                 </p>
                 <div class="read-more">
-                  <a href="blog.html">Read More</a>
+                  <a href="blog.html" target="_blank">Read More</a>
                 </div>
               </div>
 
@@ -930,22 +847,22 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="#">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</a>
+                Don't Let Your Medical Web Site Listings be Sabotaged
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="#">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="#"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="javascript:(void)">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="javascript:(void)"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis tara kero pakla metaruna nedore stan.
+                  An SEO company reportedly sabotaged a client’s website after getting into a disagreement regards a work contact.
                 </p>
                 <div class="read-more">
-                  <a href="blog.html">Read More</a>
+                  <a href="blog.html" target="_blank">Read More</a>
                 </div>
               </div>
 
@@ -957,11 +874,14 @@
         <div class="blog-pagination" data-aos="fade-up">
           <ul class="justify-content-center">
             <li class="disabled"><i class="icofont-rounded-left"></i></li>
-            <li><a href="#">1</a></li>
-            <li class="active"><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
+            <li><a href="javascript:(void)">1</a></li>
+            <li class="active"><a href="javascript:(void)">2</a></li>
+            <li><a href="javascript:(void)">3</a></li>
+            <li><a href="javascript:(void)"><i class="icofont-rounded-right"></i></a></li>
           </ul>
+        </div>
+        <div class="col-lg-12 text-center">
+          <a href="blog.html" target="_blank" class="btn btn-lg btn-primary">All Blogs</a>
         </div>
 
       </div>
@@ -995,12 +915,11 @@
               <div class="member-info">
                 <h4>Walter White</h4>
                 <span>Chief Medical Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="javascript:(void)"><i class="ri-twitter-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-facebook-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-instagram-fill"></i></a>
+                  <a href="javascript:(void)"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -1012,12 +931,11 @@
               <div class="member-info">
                 <h4>Sarah Jhonson</h4>
                 <span>Anesthesiologist</span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="javascript:(void)"><i class="ri-twitter-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-facebook-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-instagram-fill"></i></a>
+                  <a href="javascript:(void)"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -1029,12 +947,11 @@
               <div class="member-info">
                 <h4>William Anderson</h4>
                 <span>Cardiology</span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="javascript:(void)"><i class="ri-twitter-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-facebook-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-instagram-fill"></i></a>
+                  <a href="javascript:(void)"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -1046,12 +963,11 @@
               <div class="member-info">
                 <h4>Amanda Jepson</h4>
                 <span>Neurosurgeon</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="javascript:(void)"><i class="ri-twitter-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-facebook-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-instagram-fill"></i></a>
+                  <a href="javascript:(void)"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -1097,7 +1013,7 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>rtpdemo@gmail.com</p>
+                <p>support@reviewthatplace.com</p>
               </div>
 
               <div class="phone">
@@ -1124,13 +1040,23 @@
       <div class="section-title">
         <h2 class="mb-0"><i class="fa fa-tags"></i>Popular Tags</h2>
       </div> 
-      <div class="well text-center">
-        @foreach ($tags as $tag)
-        <a href="{{ route('tag', $tag->slug) }}" class="mr-3">
-          <span>{{ $tag->name }}</span>
-        </a> 
-        @endforeach
-      </div>
+      <div class="well">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                <option value="Physical">Physical</option>
+                <option value="Fever">Fever</option>
+                <option value="Sports Physical">Sports Physical</option>
+                <option value="Camp Physical">Camp Physical</option>
+                <option value="EKG">EKG</option>
+            </select>          
+          </div>
+          <div class="col-12 text-center">
+            <button class="btn btn-primary col-3 mt-3" type="button">Search</button>
+          </div>
+        </div>
+      </div> 
     </div> 
     </section>
 
@@ -1150,17 +1076,17 @@
               B Orlando<br>
               FL 32810 <br>
               <strong>Phone:</strong> 888-503-1636<br>
-              <strong>Email:</strong> rtpdemo@gmail.com<br>
+              <strong>Email:</strong> support@reviewthatplace.com<br>
             </p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Resources</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="javascript:(void)">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="javascript:(void)">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="javascript:(void)">Resources</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="javascript:(void)">Services</a></li>
             </ul>
           </div>
 
@@ -1175,7 +1101,7 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>Subscribe To Our Newsletter Now!</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
@@ -1189,7 +1115,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; 2021 Copyright: <strong><span><a style="color: #124265;" href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a></span></strong>
+          &copy; 2022 Copyright: <strong><span><a style="color: #124265;" href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a></span></strong>
         </div>
         
       </div>
@@ -1710,7 +1636,15 @@
   });
   </script>
 <script src="assets/js/lazysizes.min.js" type="text/javascript" defer></script>
-<script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
+
+    <script type="text/javascript" src="assets/js/select2.min.js"></script>    
+    <script>
+      $(function () {
+          // For select 2
+          $(".select2").select2();
+      });
+    </script>
+    <script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
 </body>
 
 </html>

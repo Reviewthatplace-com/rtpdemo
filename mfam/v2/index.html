@@ -70,7 +70,8 @@
       <link href="assest/css/rtp.min.css" rel="stylesheet" rel="prefetch">
       <!-- Font Awesome -->
       <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" rel="prefetch">
-    </head>
+        <link href="assest/css/select2.min.css" rel="stylesheet" rel="prefetch">
+ </head>
 
     <body>
       <div class="alert alert-success text-md-center" style="margin-bottom: 1px; z-index: 1001;">
@@ -112,9 +113,9 @@
           <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
           <div class="contact-detail mt-3">
            <ul style="list-style: none;padding-left: 0;">
-            <li class="mb-1"><a href="#"><i class="fas fa-map-marker-alt mr-1"></i> <span>7037 Rose Ave Orlando FL 32810</span></a></li>
-              <li class="mb-1"><a href="#"><i class="fas fa-envelope mr-1"></i> <span>rtpdemo@gmail.com</span></a></li>
-              <li class="mb-1"><a href="#"><i class="fas fa-phone mr-1"></i> <span>888-503-1636</span></a></li> 
+            <li class="mb-1"><a href="javascript:(void)"><i class="fas fa-map-marker-alt mr-1"></i> <span>7037 Rose Ave Orlando FL 32810</span></a></li>
+              <li class="mb-1"><a href="javascript:(void)"><i class="fas fa-envelope"></i> <span>support@reviewthatplace.com</span></a></li>
+              <li class="mb-1"><a href="javascript:(void)"><i class="fas fa-phone mr-1"></i> <span>888-503-1636</span></a></li> 
            </ul>
           </div>
         </div>
@@ -150,13 +151,18 @@
           <div class="section-title">
               <h2 class="mb-0">Helpful Resources</h2>
             </div>
-            <div class="well text-center" data-aos="fade-up">
-                 @foreach ($categories as $category)
-                 <a href="{{ route('category', $category->slug) }}" class="mr-3">
-                   <span>{{ $category->name }}</span>
-                 </a> 
-                 @endforeach
-            </div> 
+            <div class="well row">
+              <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                  <option value="Physical">Physical</option>
+                  <option value="Fever">Fever</option>
+                  <option value="Sports Physical">Sports Physical</option>
+                  <option value="Camp Physical">Camp Physical</option>
+                  <option value="EKG">EKG</option>
+              </select>
+              <div class="col-3"></div>
+              <button class="btn btn-portal col-6 mt-3" type="button">Search</button>
+              <div class="col-3"></div>
+            </div>
          </div> 
         </section>
         
@@ -184,13 +190,19 @@
                 
                 <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                   <div class="icon"><i class="fas fa-users-cog fa-2x"></i></div>
-                  <h4 class="title"><a href="">Trained Physician</a></h4>
+                  <h4 class="title"><a href="javascript:(void)">Trained Physician</a></h4>
                   <p class="description">Our highly trained physicians and front of office carry out only the highest quality medical services that are of the finest standard</p>
                 </div>
 
                 <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <div class="icon"><i class="icofont-heart"></i></div>
+                  <h4 class="title"><a href="javascript:(void)">Extra Care</a></h4>
+                  <p class="description">We pride ourselves on getting to see our patients FAST – taking extra care to ensure you land a same-day appointment with a short waiting time.</p>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
                   <div class="icon"><i class="icofont-phone"></i></div>
-                  <h4 class="title"><a href="">24 X 7 Support</a></h4>
+                  <h4 class="title"><a href="javascript:(void)">24 X 7 Support</a></h4>
                   <p class="description">Please feel free to view our range of insurance options. We also offer a 24-hour service for out of hour questions and emergency services</p>
                 </div>
 
@@ -318,12 +330,12 @@
         </section>
         <!-- review section -->
 
-        <section class="strips py-3" data-aos="fade-up">
+        <!-- <section class="strips py-3" data-aos="fade-up">
          <div class="container-fluid text-center" data-aos="fade-up">
                   <h4><b>Impressed yet? Wait we still have more!</b></h4>
                   <a href="https://rtpmedsol.rtpdemo.com/demoadmin/mfamadmin" target="_blank" ><button id="asbtn" class="btn btn-portal" type="button" data-toggle="modal">Show me the Dashboard!</button></a>
               </div> 
-        </section>
+        </section> -->
 
         <!-- ======= Patient resource Section ======= -->
         <section id="resources" class="resources">
@@ -336,7 +348,7 @@
             <div class="row">
               <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
                 <div class="icon"><i class="fab fa-wpforms fa-2x portal-icon"></i></div>
-                <h4 class="title"><a href="">Request Forms</a></h4>
+                <h4 class="title"><a href="javascript:(void)">Request Forms</a></h4>
                 <p class="description">Save time and request any type of form you need from our office online.<br>
                 <button class="btn btn-portal" type="button" onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/requestform', '_blank'); return false;" data-toggle="modal">Click Here</button>
                 </p>
@@ -344,35 +356,35 @@
               </div>
               <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon"><i class="fas fa-desktop fa-2x portal-icon"></i></div>
-                <h4 class="title"><a href="">Update Demo</a></h4>
-                <p class="description">Update your demographics; Address, Phone, Email, ect.<br>
+                <h4 class="title"><a href="javascript:(void)">Update Demo</a></h4>
+                <p class="description">Update your demographics; Address, Phone, Email, etc.<br>
                 <button class="btn btn-portal" type="button" onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/updatedemo', '_blank'); return false;" data-toggle="modal">Click Here</button>
               </p>
               </div>
               <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon"><i class="fas fa-receipt fa-2x portal-icon"></i></div>
-                <h4 class="title"><a href="">Authorization Release</a></h4>
+                <h4 class="title"><a href="javascript:(void)">Authorization Release</a></h4>
                 <p class="description">This forms gives us the ability to obtain or release your medical records.<br>
                 <button class="btn btn-portal" type="button" onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/authorizationrelease', '_blank'); return false;">Click Here</button>
               </p>
               </div>
               <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon"><i class="fas fa-info fa-2x portal-icon"></i></div>
-                <h4 class="title"><a href="">New Patient Forms</a></h4>
+                <h4 class="title"><a href="javascript:(void)">New Patient Forms</a></h4>
                 <p class="description">If you are a new patient and save time on your first visit by filling out the New Patient Packet here.<br>
                 <button class="btn btn-portal" type="button" onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/mfamnewpt', '_blank'); return false;" data-toggle="modal">Click Here</button>
               </p>
               </div>
               <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon"><i class="far fa-calendar-alt fa-2x portal-icon"></i></div>
-                <h4 class="title"><a href="">Book Appointments</a></h4>
+                <h4 class="title"><a href="javascript:(void)">Book Appointments</a></h4>
                 <p class="description">Skip the waiting on the phone and simply request an appointment online.<br>
                  <button class="btn btn-portal" type="button" onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/bookappointment', '_blank'); return false;" data-toggle="modal">Click Here</button> 
                 </p>
               </div>
               <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
                 <div class="icon"><i class="fas fa-users-cog fa-2x portal-icon"></i></div>
-                <h4 class="title"><a href="">Patient Portal</a></h4>
+                <h4 class="title"><a href="javascript:(void)">Patient Portal</a></h4>
                 <p class="description">Access for current patients to their Patient Portal. Access your medical records and much more.<br>
                 <button class="btn btn-portal" type="button" data-target="#" data-toggle="modal">Click Here</button>
               </p>
@@ -400,56 +412,56 @@
               <div class="col-lg-4 col-md-6" data-aos="fade-up">
                 <div class="icon-box">
                   <img class="lazyload" alt="Sports Physicals" data-src="assest/img/service/sportphysician.png"> 
-                  <h4><a href="">Sports Physicals</a></h4>
+                  <h4>Sports Physicals</h4>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon-box">
                   <img class="lazyload" alt="Camp Physicals" data-src="assest/img/service/camp.png"> 
-                  <h4><a href="">Camp Physicals</a></h4>
+                  <h4>Camp Physicals</h4>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
                   <img class="lazyload" alt="Including Gyn Services" data-src="assest/img/service/gyn.png"> 
-                  <h4><a href="">Including Gyn Services</a></h4>
+                  <h4>Including Gyn Services</h4>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                   <img class="lazyload" alt="School Physicals" data-src="assest/img/service/school physician.png"> 
-                  <h4><a href="">School Physicals</a></h4>
+                  <h4>School Physicals</h4>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box">
                   <img class="lazyload" alt="FAA exams" data-src="assest/img/service/faaexams.png"> 
-                  <h4><a href="">FAA exams</a></h4>
+                  <h4>FAA exams</h4>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="500">
                 <div class="icon-box">
                   <img class="lazyload" alt="Laboratory Services" data-src="assest/img/service/laboratory.png"> 
-                  <h4><a href="">Laboratory Services</a></h4>
+                  <h4>Laboratory Services</h4>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                 <div class="icon-box">
                   <img class="lazyload" alt="EKG’" data-src="assest/img/service/ekgs.png"> 
-                  <h4><a href="">EKG’s</a></h4>
+                  <h4>EKG’s</h4>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
                 <div class="icon-box">
                   <img class="lazyload" alt="Well Child Care" data-src="assest/img/service/childcare.png"> 
-                  <h4><a href="">Well Child Care</a></h4>
+                  <h4>Well Child Care</h4>
                 </div>
               </div>
 
@@ -472,73 +484,55 @@
               <h2>Insurance</h2>
             </div>
 
-            <div class="row" data-aos="fade-up">
+            <!-- <div class="row" data-aos="fade-up">
               <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="portfolio-flters">
                   <li data-filter="*" class="filter-active">All</li>
                   <li data-filter=".filter-app">Primary</li>
-                  <!-- <li data-filter=".filter-card">Card</li> -->
+                  <li data-filter=".filter-card">Card</li>
                   <li data-filter=".filter-web">Secondary</li>
                 </ul>
               </div>
-            </div>
+            </div> -->
 
-            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row portfolio-container">
 
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img data-src="assest/img/insurance/aetna.png" class="img-fluid lazyload" alt="aetna">
-                </div>
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                <img data-src="assest/img/insurance/aetna.webp" class="img-fluid lazyload" alt="aetna">
               </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img data-src="assest/img/insurance/ambetter.png" class="img-fluid lazyload" alt="ambetter">
-                </div>
+        
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                <img data-src="assest/img/insurance/ambetter.png" class="img-fluid lazyload" alt="ambetter">
               </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img data-src="assest/img/insurance/ambetter-florida-logo.jpg" class="img-fluid lazyload" alt="ambetter-florida">
-                </div>
+        
+              <!-- <div class="col-lg-4 col-md-6 portfolio-item">
+                <img data-src="assest/img/insurance/ambetter-florida-logo.webp" class="img-fluid lazyload" alt="ambetter-florida">
+              </div> -->
+        
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                <img data-src="assest/img/insurance/avmed.webp" class="img-fluid lazyload" alt="avmed">
               </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img data-src="assest/img/insurance/avmed.png" class="img-fluid lazyload" alt="avmed">
-                </div>
+        
+              <!-- <div class="col-lg-4 col-md-6 portfolio-item">
+                <img data-src="assest/img/insurance/blue-cross-blue-shield-vector-logo.webp" class="img-fluid lazyload" alt="bluecross">
+              </div> -->
+        
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                <img data-src="assest/img/insurance/cigna-logo-1.webp" class="img-fluid lazyload" alt="cigna">
               </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img data-src="assest/img/insurance/bluecross.jpg" class="img-fluid lazyload" alt="bluecross">
-                </div>
+        
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                <img data-src="assest/img/insurance/florida-blue-logo.webp" class="img-fluid lazyload" alt="florida-blue">
               </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img data-src="assest/img/insurance/blue-cross-blue-shield-vector-logo.png" class="img-fluid lazyload" alt="bluecross">
-                </div>
+        
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                <img data-src="assest/img/insurance/humana.webp" class="img-fluid lazyload" alt="humana">
               </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img data-src="assest/img/insurance/cigna-logo-1.jpg" class="img-fluid lazyload" alt="cigna">
-                </div>
+        
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                <img data-src="assest/img/insurance/bluecross.webp" class="img-fluid lazyload" alt="bluecross">
               </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img data-src="assest/img/insurance/florida-blue-logo.jpg" class="img-fluid lazyload" alt="florida-blue">
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img data-src="assest/img/insurance/humana.png" class="img-fluid lazyload" alt="humana">
-                </div>
-              </div>
-
+        
             </div>
 
           </div>
@@ -561,40 +555,29 @@
             <div class="owl-carousel testimonials-carousel">
 
               <div class="testimonial-item" data-aos="fade-up">
-               <img data-src="assest/img/blog.png" class="img-fluid lazyload">
-               <h3>Blog Heading1</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-               <a href="blog.html" class="btn btn-primary text-center mt-2"> Read More</a>
+               <img data-src="assest/img/blog/blog-1.webp" class="img-fluid lazyload">
+               <h3>Less Than 15% of Medical Sites Meet CORE WEB VITALS Scores</h3>
+               <p>Data from a recent study shows less than 15% of websites are optimized well enough to pass a Core Web Vitals assessment.</p>
+               <a href="blog-single1.html" target="_blank" class="btn btn-portal text-center mt-2"> Read More</a>
               </div>
 
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-               <img data-src="assest/img/blog.png" class="img-fluid lazyload">
-               <h3>Blog Heading2</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-               <a href="blog.html" class="btn btn-primary text-center mt-2"> Read More</a>
+               <img data-src="assest/img/blog/blog-2.webp" class="img-fluid lazyload">
+               <h3>8 Silly But Harmful SEO Mistakes Medical Sites Make</h3>
+               <p>A whole lot of things can go wrong in SEO. I'll highlight eight damaging mistakes SEO medical websites should look for.</p>
+               <a href="blog-single2.html" target="_blank" class="btn btn-portal text-center mt-2"> Read More</a>
               </div>
 
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-               <img data-src="assest/img/blog.png" class="img-fluid lazyload">
-               <h3>Blog Heading3</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-               <a href="blog.html" class="btn btn-primary text-center mt-2"> Read More</a>
+               <img data-src="assest/img/blog/blog-3.webp" class="img-fluid lazyload">
+               <h3>Don't Let Your Medical Web Site Listings be Sabotaged</h3>
+               <p>An SEO company reportedly sabotaged a clients website after getting into a disagreement regards a work contact.</p>
+               <a href="blog-single3.html" target="_blank" class="btn btn-portal text-center mt-2"> Read More</a>
               </div>
 
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-               <img data-src="assest/img/blog.png" class="img-fluid lazyload">
-               <h3>Blog Heading4</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-               <a href="blog.html" class="btn btn-primary text-center mt-2"> Read More</a>
-              </div>
-
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-               <img data-src="assest/img/blog.png" class="img-fluid lazyload">
-               <h3>Blog Heading5</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-               <a href="blog.html" class="btn btn-primary text-center mt-2"> Read More</a>
-              </div>
-
+            </div>
+            <div class="col-lg-12 text-center">
+              <a href="blog.html" target="_blank" class="btn btn-portal"><h3 class="font-weight-bold">All Blogs</h3></a>
             </div>
 
           </div>
@@ -622,12 +605,11 @@
                   <div class="member-info">
                     <h4>Walter White</h4>
                     <span>Chief Medical Officer</span>
-                    <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
                     <div class="social">
-                      <a href=""><i class="bx bxl-twitter"></i></a>
-                      <a href=""><i class="bx bxl-facebook"></i></a>
-                      <a href=""><i class="bx bxl-instagram"></i></a>
-                      <a href=""><i class="bx bxl-linkedin"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-twitter"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-facebook"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-instagram"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -639,12 +621,11 @@
                   <div class="member-info">
                     <h4>Sarah Jhonson</h4>
                     <span>Anesthesiologist</span>
-                    <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
                     <div class="social">
-                      <a href=""><i class="bx bxl-twitter"></i></a>
-                      <a href=""><i class="bx bxl-facebook"></i></a>
-                      <a href=""><i class="bx bxl-instagram"></i></a>
-                      <a href=""><i class="bx bxl-linkedin"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-twitter"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-facebook"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-instagram"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -656,12 +637,11 @@
                   <div class="member-info">
                     <h4>William Anderson</h4>
                     <span>Cardiology</span>
-                    <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
                     <div class="social">
-                      <a href=""><i class="bx bxl-twitter"></i></a>
-                      <a href=""><i class="bx bxl-facebook"></i></a>
-                      <a href=""><i class="bx bxl-instagram"></i></a>
-                      <a href=""><i class="bx bxl-linkedin"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-twitter"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-facebook"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-instagram"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -673,12 +653,11 @@
                   <div class="member-info">
                     <h4>Amanda Jepson</h4>
                     <span>Neurosurgeon</span>
-                    <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                     <div class="social">
-                      <a href=""><i class="bx bxl-twitter"></i></a>
-                      <a href=""><i class="bx bxl-facebook"></i></a>
-                      <a href=""><i class="bx bxl-instagram"></i></a>
-                      <a href=""><i class="bx bxl-linkedin"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-twitter"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-facebook"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-instagram"></i></a>
+                      <a href="javascript:(void)"><i class="bx bxl-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -694,13 +673,18 @@
           <div class="section-title">
               <h2 class="mb-0"><i class="fa fa-tags"></i>Popular Tags</h2>
             </div> 
-            <div class="well text-center">
-                @foreach ($tags as $tag)
-                <a href="{{ route('tag', $tag->slug) }}" class="mr-3">
-                  <span>{{ $tag->name }}</span>
-                </a> 
-              @endforeach
-              </div>
+            <div class="well row">
+              <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                  <option value="Physical">Physical</option>
+                  <option value="Fever">Fever</option>
+                  <option value="Sports Physical">Sports Physical</option>
+                  <option value="Camp Physical">Camp Physical</option>
+                  <option value="EKG">EKG</option>
+              </select>
+              <div class="col-3"></div>
+              <button class="btn btn-portal col-6 mt-3" type="button">Search</button>
+              <div class="col-3"></div>
+            </div>
          </div> 
         </section>
         
@@ -711,7 +695,7 @@
       <footer id="footer">
         <div class="container">
           <div class="copyright">
-            &copy; 2021 Copyright: <span><a href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a></span>
+            &copy; 2022 Copyright: <span><a href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a></span>
           </div>
         </div>
       </footer><!-- End  Footer -->
@@ -789,13 +773,21 @@
     <script src="assest/vendor/jquery.easing/jquery.easing.min.js" defer></script>
     <script src="assest/vendor/waypoints/jquery.waypoints.min.js" defer></script>
     <script src="assest/vendor/counterup/counterup.min.js" defer></script>
-    <script src="assest/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+    <script src="assest/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assest/vendor/owl.carousel/owl.carousel.min.js" defer></script>
     <script src="assest/vendor/aos/aos.js" defer></script>
     <!-- Template Main JS File -->
     <script src="assest/js/main.min.js" defer></script>
     <script src="assest/js/custom.min.js" defer></script>
     <script src="assest/js/lazysizes.min.js" defer></script>
+    
+    <script type="text/javascript" src="assest/js/select2.min.js"></script>    
+    <script>
+      $(function () {
+          // For select 2
+          $(".select2").select2();
+      });
+    </script>
     <script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
     </body>
   </html>

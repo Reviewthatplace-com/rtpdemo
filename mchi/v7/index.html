@@ -70,7 +70,8 @@
   <link href="assets/css/style.min.css" rel="stylesheet">
   <link href="assets/css/widget.min.css" rel="stylesheet">
   <link href="assets/css/result2.min.css" rel="stylesheet">
-</head>
+    <link href="assets/css/select2.min.css" rel="stylesheet" rel="prefetch">
+ </head>
 
 <body>
 
@@ -78,12 +79,12 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:rtpdemo@gmail.com">rtpdemo@gmail.com</a>
+        <i class="bi bi-envelope"></i> <a href="mailto:support@reviewthatplace.com">support@reviewthatplace.com</a>
         <i class="bi bi-phone"></i> <a href="tel:888-503-1636">888-503-1636</a>
       </div>
       <div class="d-none d-lg-flex align-items-center">
        <div class="contact-info d-flex align-items-center">
-         <i class="bi bi-clock"></i> <a href="#">Mon-Fri:9:00AM - 05:00PM</a>
+         <i class="bi bi-clock"></i> <a href="javascript:(void)">Mon-Fri:9:00AM - 05:00PM</a>
        </div>
       </div>
     </div>
@@ -160,7 +161,7 @@
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-images"></i>
                     <h4><a onclick=" window.open('https://rtpmedsol.rtpdemo.com/demoforms/survey', '_blank'); return false;">Survey</a></h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    <p>We’d love to hear about your experience with us.</p>
                   </div>
                 </div>
               </div>
@@ -187,19 +188,19 @@
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Trained Physician</a></h4>
+              <h4 class="title"><a href="javascript:(void)">Trained Physician</a></h4>
               <p class="description">Our highly trained physicians and front of office carry out only the highest quality medical services that are of the finest standard</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Extra Care</a></h4>
+              <h4 class="title"><a href="javascript:(void)">Extra Care</a></h4>
               <p class="description">We pride ourselves on getting to see our patients FAST – taking extra care to ensure you land a same-day appointment with a short waiting time</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">24 X 7 Support</a></h4>
+              <h4 class="title"><a href="javascript:(void)">24 X 7 Support</a></h4>
               <p class="description">Please feel free to view our range of insurance options. We also offer a 24-hour service for out of hour questions and emergency services</p>
             </div>
 
@@ -257,13 +258,23 @@
       <div class="section-title">
         <h2 class="mb-0">Helpful Resources</h2>
       </div> 
-      <div class="well text-center">
-        @foreach ($categories as $category)
-        <a href="{{ route('category', $category->slug) }}" class="mr-3">
-          <span>{{ $category->name }}</span>
-        </a> 
-        @endforeach
-      </div>
+      <div class="well">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                <option value="Physical">Physical</option>
+                <option value="Fever">Fever</option>
+                <option value="Sports Physical">Sports Physical</option>
+                <option value="Camp Physical">Camp Physical</option>
+                <option value="EKG">EKG</option>
+            </select>          
+          </div>
+          <div class="col-12 text-center">
+            <button class="btn btn-primary col-3 mt-3" type="button">Search</button>
+          </div>
+        </div>
+      </div> 
     </div> 
     </section>
 
@@ -344,10 +355,9 @@
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>Request Forms</h3>
                     <p>Save time and request any type of form you need from our office online</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
                     <a href="https://rtpmedsol.rtpdemo.com/demoforms/requestform" target="_blank" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.1.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.1.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -355,11 +365,10 @@
                 <div class="row">
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>Update Demo</h3>
-                    <p>Update your demographics; Address, Phone, Email, ect</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
+                    <p>Update your demographics; Address, Phone, Email, etc.</p>
                     <a href="https://rtpmedsol.rtpdemo.com/demoforms/updatedemo" target="_blank" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.2.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.2.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -368,10 +377,9 @@
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>Authorization Release</h3>
                     <p>This forms gives us the ability to obtain or release your medical records</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
                     <a href="https://rtpmedsol.rtpdemo.com/demoforms/authorizationrelease" target="_blank" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.3.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.3.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -380,10 +388,9 @@
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>New Patient Forms</h3>
                     <p>If you are a new patient and save time on your first visit by filling out the New Patient Packet here</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
                     <a href="https://rtpmedsol.rtpdemo.com/demoforms/mchinewpt" target="_blank" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.4.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.4.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -392,10 +399,9 @@
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>Book Appointments</h3>
                     <p>Skip the waiting on the phone and simply request an appointment online</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
                     <a href="https://rtpmedsol.rtpdemo.com/demoforms/bookappointment" target="_blank" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.5.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.5.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -404,10 +410,9 @@
                   <div class="col-lg-6 details order-2 order-lg-1">
                     <h3>Patient Portal</h3>
                     <p>Access for current patients to their Patient Portal. Access your medical records and much more</p>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit</p>
                     <a href="#" class="resource-btn">Click Here</a>
                   </div>
-                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.6.webp);">
+                  <div class="col-lg-6 text-center order-1 order-lg-2 resource-bg" style="background-image: url(assets/img/resources/section8.6.webp);height: 335px;">
                   </div>
                 </div>
               </div>
@@ -470,22 +475,9 @@
              <div class="row">
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>Chiropractic Care</h3>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                 </ul>
-                 <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
-                 </p>
+                 <p>Chiropractors can develop and carry out a comprehensive treatment plan, recommend therapeutic exercise and other non-invasive therapies, and provide nutritional, dietary and lifestyle counselling.</p>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image1.webp);">
+               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image1.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -493,23 +485,9 @@
              <div class="row">
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>Corrective Exercises</h3>
-                 <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
-                 </p>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                 </ul>
+                 <p>Understand what Corrective Exercise is, why it is important and how it can benefit personal trainers, health and fitness professionals.</p>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image2.webp);">
+               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image2.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -517,22 +495,9 @@
              <div class="row">
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>Lifestyle Advice</h3>
-                 <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                 </ul>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
+                 <p>Small changes in life can make a big difference - and our Lifestyle Advice and Wellbeing Coaches, provided by Onside Advocacy, are here to support you.</p>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image3.webp);">
+               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image3.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -540,22 +505,9 @@
              <div class="row">
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>Nutritional Counseling</h3>
-                 <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
-                 </p>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                 </ul>
+                 <p>We consider not just the nutritional CONTENT of food, but also, the QUALITY of food.</p>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image4.webp);">
+               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image4.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -583,22 +535,9 @@
              <div class="row">
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>Spinal & Postural Screenings</h3>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                 </ul>
-                 <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
-                 </p>
+                 <p>Spinal and postural screening are essential tools that can help uncover posture and spinal alignment issues that can lead to chronic neck and back pain.</p>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image5.webp);">
+               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image5.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -606,23 +545,9 @@
              <div class="row">
                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                  <h3>Physiotherapy</h3>
-                 <p>
-                   Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                   culpa qui officia deserunt mollit anim id est laborum
-                 </p>
-                 <p class="font-italic">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                   magna aliqua.
-                 </p>
-                 <ul>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                   <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                   <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                   <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                 </ul>
+                 <p>It uses physical approaches to promote, maintain and restore physical, psychological and social well-being, taking into account variations in health status.</p>
                </div>
-               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image6.webp);">
+               <div class="col-lg-6 order-1 order-lg-2 text-center service-bg" style="background-image: url(assets/img/service/image6.webp);height:500px;">
                </div>
              </div>
            </div>
@@ -651,150 +576,137 @@
 
     <!-- ======= Insurance Section ======= -->
     <section id="insurances" class="insurances section-bg">
-     <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2>Medical Insurance</h2>
-      </div>
-
-      <!-- Insurance Tabs -->
-      <div class="row feture-tabs" data-aos="fade-up">
-       <!-- Tabs -->
-       <div class="col-lg-12 mb-5">
-        <ul class="nav nav-pills">
-           <li>
-             <a class="nav-link active" data-bs-toggle="pill" href="#insurance1">All</a>
-           </li>
-           <li>
-             <a class="nav-link" data-bs-toggle="pill" href="#insurance2">Primary</a>
-           </li>
-           <li>
-             <a class="nav-link" data-bs-toggle="pill" href="#insurance3">Secondary</a>
-           </li>
-         </ul> 
-       </div><!-- End Tabs -->
-
-       <div class="col-lg-6">
-         <img data-src="assets/img/medicalinsurance.webp" class="img-fluid lazyload insurance-bg" alt="">
+      <div class="container" data-aos="fade-up">
+       <div class="section-title">
+         <h2>Medical Insurance</h2>
        </div>
-       <!-- Tab Content -->
-       <div class="col-lg-6">
-        <div class="tab-content">
-          <!-- tab1 -->
-          <div class="tab-pane fade show active" id="insurance1">
-           <div class="row align-self-center gy-4">
-                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-                          <div class="insurance-box d-flex align-items-center">
-                           <img data-src="assets/img/insurance/aetna.webp" class="img-fluid lazyload">
-                         </div>
-                       </div>
-
-                       <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-                        <div class="insurance-box d-flex align-items-center">
-                         <img data-src="assets/img/insurance/Ambetter.png" class="img-fluid lazyload">
-                       </div>
-                     </div>
-
-                     <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-                      <div class="insurance-box d-flex align-items-center">
-                       <img data-src="assets/img/insurance/avmed.webp" class="img-fluid lazyload">
-                     </div>
-                   </div>
-
-                   <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-                    <div class="insurance-box d-flex align-items-center">
-                     <img data-src="assets/img/insurance/cigna-logo-1.webp" class="img-fluid lazyload">
-                   </div>
-                 </div>
-
-                 <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+ 
+       <!-- Insurance Tabs -->
+       <div class="row feture-tabs" data-aos="fade-up">
+         <div class="col-lg-1"></div>
+        <div class="col-lg-4">
+          <img data-src="assets/img/medicalinsurance.webp" class="img-fluid insurance-bg lazyload" alt="insurance">
+        </div>
+        <!-- Tab Content -->
+        <div class="col-lg-6">
+         <div class="tab-content">
+           <!-- tab1 -->
+           <div class="tab-pane fade show active" id="insurance1">
+            <div class="row align-self-center gy-4">
+                         <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                           <div class="insurance-box d-flex align-items-center">
+                            <img data-src="assets/img/insurance/aetna.webp" class="img-fluid lazyload">
+                          </div>
+                        </div>
+ 
+                        <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                         <div class="insurance-box d-flex align-items-center">
+                          <img data-src="assets/img/insurance/Ambetter.png" class="img-fluid lazyload">
+                        </div>
+                      </div>
+ 
+                      <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                       <div class="insurance-box d-flex align-items-center">
+                        <img data-src="assets/img/insurance/avmed.webp" class="img-fluid lazyload">
+                      </div>
+                    </div>
+ 
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                     <div class="insurance-box d-flex align-items-center">
+                      <img data-src="assets/img/insurance/cigna-logo-1.webp" class="img-fluid lazyload">
+                    </div>
+                  </div>
+ 
+                  <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                   <div class="insurance-box d-flex align-items-center">
+                    <img data-src="assets/img/insurance/humana.webp" class="img-fluid lazyload">
+                  </div>
+                </div>
+ 
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+                 <div class="insurance-box d-flex align-items-center">
+                  <img data-src="assets/img/insurance/medicaid.webp" class="img-fluid lazyload">
+                </div>
+              </div>
+ 
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="800">
+               <div class="insurance-box d-flex align-items-center">
+                <img data-src="assets/img/insurance/simply.webp" class="img-fluid lazyload">
+              </div>
+             </div>
+ 
+             <div class="col-md-6" data-aos="zoom-out" data-aos-delay="900">
+               <div class="insurance-box d-flex align-items-center">
+                <img data-src="assets/img/insurance/sunshine.webp" class="img-fluid lazyload">
+              </div>
+             </div> 
+            </div> 
+           </div>
+           <!-- tab1 -->
+           <!-- tab2 -->
+           <div class="tab-pane fade show" id="insurance2">
+            <div class="row align-self-center gy-4">
+                <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
                   <div class="insurance-box d-flex align-items-center">
-                   <img data-src="assets/img/insurance/humana.webp" class="img-fluid lazyload">
+                   <img data-src="assets/img/insurance/aetna.webp" class="img-fluid lazyload">
                  </div>
                </div>
-
-               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+ 
+               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
                 <div class="insurance-box d-flex align-items-center">
-                 <img data-src="assets/img/insurance/medicaid.webp" class="img-fluid lazyload">
+                 <img data-src="assets/img/insurance/avmed.webp" class="img-fluid lazyload">
                </div>
              </div>
-
+ 
+             <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+              <div class="insurance-box d-flex align-items-center">
+               <img data-src="assets/img/insurance/humana.webp" class="img-fluid lazyload">
+             </div>
+             </div>
+ 
              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="800">
               <div class="insurance-box d-flex align-items-center">
                <img data-src="assets/img/insurance/simply.webp" class="img-fluid lazyload">
              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="900">
-              <div class="insurance-box d-flex align-items-center">
-               <img data-src="assets/img/insurance/sunshine.webp" class="img-fluid lazyload">
-             </div>
+             </div> 
             </div> 
-           </div> 
-          </div>
-          <!-- tab1 -->
-          <!-- tab2 -->
-          <div class="tab-pane fade show" id="insurance2">
-           <div class="row align-self-center gy-4">
-               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+           </div>
+           <!-- tab2 -->
+           <!-- tab3 -->
+           <div class="tab-pane fade show" id="insurance3">
+            <div class="row align-self-center gy-4">
+               <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
                  <div class="insurance-box d-flex align-items-center">
-                  <img data-src="assets/img/insurance/aetna.webp" class="img-fluid lazyload">
+                  <img data-src="assets/img/insurance/Ambetter.webp" class="img-fluid lazyload">
                 </div>
               </div>
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+ 
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
                <div class="insurance-box d-flex align-items-center">
-                <img data-src="assets/img/insurance/avmed.webp" class="img-fluid lazyload">
+                <img data-src="assets/img/insurance/cigna-logo-1.webp" class="img-fluid lazyload">
               </div>
-            </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-             <div class="insurance-box d-flex align-items-center">
-              <img data-src="assets/img/insurance/humana.webp" class="img-fluid lazyload">
-            </div>
-            </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="800">
-             <div class="insurance-box d-flex align-items-center">
-              <img data-src="assets/img/insurance/simply.webp" class="img-fluid lazyload">
-            </div>
+             </div>
+ 
+             <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+               <div class="insurance-box d-flex align-items-center">
+                <img data-src="assets/img/insurance/medicaid.webp" class="img-fluid lazyload">
+              </div>
+             </div>
+ 
+             <div class="col-md-6" data-aos="zoom-out" data-aos-delay="900">
+               <div class="insurance-box d-flex align-items-center">
+                <img data-src="assets/img/insurance/sunshine.webp" class="img-fluid lazyload">
+              </div>
+             </div> 
             </div> 
-           </div> 
-          </div>
-          <!-- tab2 -->
-          <!-- tab3 -->
-          <div class="tab-pane fade show" id="insurance3">
-           <div class="row align-self-center gy-4">
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-                <div class="insurance-box d-flex align-items-center">
-                 <img data-src="assets/img/insurance/Ambetter.png" class="img-fluid lazyload">
-               </div>
-             </div>
-
-             <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-              <div class="insurance-box d-flex align-items-center">
-               <img data-src="assets/img/insurance/cigna-logo-1.webp" class="img-fluid lazyload">
-             </div>
-            </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
-              <div class="insurance-box d-flex align-items-center">
-               <img data-src="assets/img/insurance/medicaid.webp" class="img-fluid lazyload">
-             </div>
-            </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="900">
-              <div class="insurance-box d-flex align-items-center">
-               <img data-src="assets/img/insurance/sunshine.webp" class="img-fluid lazyload">
-             </div>
-            </div> 
-           </div> 
-          </div>
-          <!-- tab3 -->
-        </div> 
-       </div><!-- Tab Content -->
+           </div>
+           <!-- tab3 -->
+         </div> 
+        </div><!-- Tab Content -->
+        <div class="col-lg-1"></div>
+       </div>
       </div>
-     </div>
-    </section><!-- End Insurances Section -->
+     </section><!-- End Insurances Section -->
 
     <!-- ======= strip Section ======= -->
     <section id="package-strip" class="strip">
@@ -822,26 +734,25 @@
             <article class="entry">
 
               <div class="entry-img">
-                <img data-src="assets/img/blog/blog-1.webp" alt="" class="img-fluid lazyload">
+                <img data-src="assets/img/blog/blog-1.webp" alt="blogs-1" class="img-fluid lazyload">
               </div>
 
               <h2 class="entry-title">
-                <a href="#">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+                Less Than 15% of Medical Sites Meet CORE WEB VITALS Scores
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="#">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="#"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="javascript:(void)">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="javascript:(void)"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta zena prista maraeda talan mas indera.
-                </p>
+                  Data from a recent study shows less than 15% of websites are optimized well enough to pass a Core Web Vitals assessment.
                 <div class="read-more">
-                  <a href="blog.html">Read More</a>
+                  <a href="blog.html" target="_blank">Read More</a>
                 </div>
               </div>
 
@@ -852,26 +763,26 @@
             <article class="entry">
 
               <div class="entry-img">
-                <img data-src="assets/img/blog/blog-2.webp" alt="" class="img-fluid lazyload">
+                <img data-src="assets/img/blog/blog-2.webp" alt="blogs-2" class="img-fluid lazyload">
               </div>
 
               <h2 class="entry-title">
-                <a href="#">Nisi magni odit consequatur autem nulla dolorem</a>
+                8 Silly but Harmful SEO Mistakes Medical Sites Make
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="#">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="#"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="javascript:(void)">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="javascript:(void)"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias.
+                  A whole lot of things can go wrong in SEO. In this article, I'll highlight eight damaging mistakes SEO medical websites should look out for.
                 </p>
                 <div class="read-more">
-                  <a href="blog.html">Read More</a>
+                  <a href="blog.html" target="_blank">Read More</a>
                 </div>
               </div>
 
@@ -882,26 +793,26 @@
             <article class="entry">
 
               <div class="entry-img">
-                <img data-src="assets/img/blog/blog-3.webp" alt="" class="img-fluid lazyload">
+                <img data-src="assets/img/blog/blog-3.webp" alt="blogs-3" class="img-fluid lazyload">
               </div>
 
               <h2 class="entry-title">
-                <a href="#">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</a>
+                Don't Let Your Medical Web Site Listings be Sabotaged
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="#">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="#"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="javascript:(void)">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="javascript:(void)"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis tara kero pakla metaruna nedore stan.
+                  An SEO company reportedly sabotaged a client’s website after getting into a disagreement regards a work contact.
                 </p>
                 <div class="read-more">
-                  <a href="blog.html">Read More</a>
+                  <a href="blog.html" target="_blank">Read More</a>
                 </div>
               </div>
 
@@ -913,11 +824,14 @@
         <div class="blog-pagination" data-aos="fade-up">
           <ul class="justify-content-center">
             <li class="disabled"><i class="icofont-rounded-left"></i></li>
-            <li><a href="#">1</a></li>
-            <li class="active"><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
+            <li><a href="javascript:(void)">1</a></li>
+            <li class="active"><a href="javascript:(void)">2</a></li>
+            <li><a href="javascript:(void)">3</a></li>
+            <li><a href="javascript:(void)"><i class="icofont-rounded-right"></i></a></li>
           </ul>
+        </div>
+        <div class="col-lg-12 text-center">
+          <a href="blog.html" target="_blank" class="btn btn-lg btn-primary">All Blogs</a>
         </div>
 
       </div>
@@ -947,16 +861,15 @@
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img data-src="assets/img/doctors/doctors-1.webp" class="img-fluid lazyload" alt=""></div>
+              <div class="pic"><img data-src="assets/img/doctors/doctors-1.webp" class="img-fluid lazyload" alt="doctor-1"></div>
               <div class="member-info">
                 <h4>Walter White</h4>
                 <span>Chief Medical Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="javascript:(void)"><i class="ri-twitter-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-facebook-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-instagram-fill"></i></a>
+                  <a href="javascript:(void)"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -964,16 +877,15 @@
 
           <div class="col-lg-6 mt-4 mt-lg-0">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img data-src="assets/img/doctors/doctors-2.webp" class="img-fluid lazyload" alt=""></div>
+              <div class="pic"><img data-src="assets/img/doctors/doctors-2.webp" class="img-fluid lazyload" alt="doctor-2"></div>
               <div class="member-info">
                 <h4>Sarah Jhonson</h4>
                 <span>Anesthesiologist</span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="javascript:(void)"><i class="ri-twitter-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-facebook-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-instagram-fill"></i></a>
+                  <a href="javascript:(void)"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -981,16 +893,15 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img data-src="assets/img/doctors/doctors-3.webp" class="img-fluid lazyload" alt=""></div>
+              <div class="pic"><img data-src="assets/img/doctors/doctors-3.webp" class="img-fluid lazyload" alt="doctor-3"></div>
               <div class="member-info">
                 <h4>William Anderson</h4>
                 <span>Cardiology</span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="javascript:(void)"><i class="ri-twitter-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-facebook-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-instagram-fill"></i></a>
+                  <a href="javascript:(void)"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -998,16 +909,15 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img data-src="assets/img/doctors/doctors-4.webp" class="img-fluid lazyload" alt=""></div>
+              <div class="pic"><img data-src="assets/img/doctors/doctors-4.webp" class="img-fluid lazyload" alt="doctor-4"></div>
               <div class="member-info">
                 <h4>Amanda Jepson</h4>
                 <span>Neurosurgeon</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="javascript:(void)"><i class="ri-twitter-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-facebook-fill"></i></a>
+                  <a href="javascript:(void)"><i class="ri-instagram-fill"></i></a>
+                  <a href="javascript:(void)"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -1053,7 +963,7 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>rtpdemo@gmail.com</p>
+                <p>support@reviewthatplace.com</p>
               </div>
 
               <div class="phone">
@@ -1080,13 +990,23 @@
       <div class="section-title">
         <h2 class="mb-0"><i class="fa fa-tags"></i>Popular Tags</h2>
       </div> 
-      <div class="well text-center">
-        @foreach ($tags as $tag)
-        <a href="{{ route('tag', $tag->slug) }}" class="mr-3">
-          <span>{{ $tag->name }}</span>
-        </a> 
-        @endforeach
-      </div>
+      <div class="well">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                <option value="Physical">Physical</option>
+                <option value="Fever">Fever</option>
+                <option value="Sports Physical">Sports Physical</option>
+                <option value="Camp Physical">Camp Physical</option>
+                <option value="EKG">EKG</option>
+            </select>          
+          </div>
+          <div class="col-12 text-center">
+            <button class="btn btn-primary col-3 mt-3" type="button">Search</button>
+          </div>
+        </div>
+      </div> 
     </div> 
     </section>
 
@@ -1106,17 +1026,17 @@
               B Orlando<br>
               FL 32810 <br>
               <strong>Phone:</strong> 888-503-1636<br>
-              <strong>Email:</strong> rtpdemo@gmail.com<br>
+              <strong>Email:</strong> support@reviewthatplace.com<br>
             </p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Resources</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="javascript:(void)">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="javascript:(void)">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="javascript:(void)">Resources</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="javascript:(void)">Services</a></li>
             </ul>
           </div>
 
@@ -1131,7 +1051,7 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>Subscribe To Our Newsletter Now!</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
@@ -1145,7 +1065,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; 2021 Copyright: <strong><span><a style="color: #124265;" href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a></span></strong>
+          &copy; 2022 Copyright: <strong><span><a style="color: #124265;" href="https://rtpmedicalsolution.com/">RTPMedicalSolution.com</a></span></strong>
         </div>
         
       </div>
@@ -1153,7 +1073,7 @@
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+         
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
@@ -1667,7 +1587,15 @@
   </script>
 <script src="assets/js/lazysizes.min.js" type="text/javascript" defer></script>
 <script type="text/javascript" src="assets/js/custom.min.js" defer></script>
-<script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
+
+    <script type="text/javascript" src="assets/js/select2.min.js"></script>    
+    <script>
+      $(function () {
+          // For select 2
+          $(".select2").select2();
+      });
+    </script>
+    <script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/171918000004226176?orgId=642064172" defer></script>
 </body>
 
 </html>

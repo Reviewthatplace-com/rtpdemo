@@ -148,7 +148,7 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2021 Copyright: <a class="white-text" href="https://rtpdemo.com">Review That Place.com</a>
+    <div class="footer-copyright text-center py-3">© 2022 Copyright: <a class="white-text" href="https://rtpdemo.com">Review That Place.com</a>
     </div>
     <!-- Copyright -->
 
